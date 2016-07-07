@@ -14,10 +14,22 @@ This is a Project Euler attempt. The catch is that every challenge will be compl
 * File: problem2.bf
 * Language: Brainf**k
 * Compiler / Interpreter [copy.sh](https://copy.sh/brainfuck/)
-* Notes: Code written with the help of a Lisp translator program
+* Notes: This code was written with the help of a Lisp translator program.
 
 ### Euler 3
 * File: problem3.ijs
 * Language: J
 * Compiler / Interpreter: [The de facto standard](http://jsoftware.com/)
+* Notes: (None)
+
+### Euler 4
+* File: problem4.bat
+* Language: Batch
+* Compiler / Interpreter: Windows CMD
+* Notes: This one is really slow. Interestingly, it seems to be not the palindrome check but the multiplication that slows it down.
+
+### Euler 5
+* File: problem5.jelly
+* Language: Jelly
+* Compiler / Interpreter: [tryitonline.net](http://jelly.tryitonline.net/)
 * Notes: (None)
