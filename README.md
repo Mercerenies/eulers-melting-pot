@@ -2,6 +2,17 @@
 
 This is a Project Euler attempt. The catch is that every challenge will be completed in a different programming language.
 
+## Languages Used
+
+Full details of the various solutions are listed below, but for the sake of easy reference, here is an alphabetized
+list of the languages that have been used in these challenges so far.
+* Batch
+* Brainf**k
+* Golfscript
+* Hexagony
+* J
+* Jelly
+
 ## Completed Challenges
 
 ### Euler 1
@@ -13,7 +24,7 @@ This is a Project Euler attempt. The catch is that every challenge will be compl
 ### Euler 2
 * File: problem2.bf
 * Language: Brainf**k
-* Compiler / Interpreter [copy.sh](https://copy.sh/brainfuck/)
+* Compiler / Interpreter: [copy.sh](https://copy.sh/brainfuck/)
 * Notes: This code was written with the help of a Lisp translator program.
 
 ### Euler 3
@@ -39,3 +50,9 @@ This is a Project Euler attempt. The catch is that every challenge will be compl
 * Language: Hexagony
 * Compiler / Interpreter: [The reference implementation](https://github.com/m-ender/hexagony)
 * Notes: (None)
+
+## Final Notes
+
+You'll notice that I'm not using many of the mainstream languages so far. This is not because I'm trying to make this challenge harder
+than it is; this is a purely strategic decision. The later Project Euler problems are more difficult, so I am saving the powerful
+and easy-to-use languages for them and using obscure, esoteric languages for the easier problems.
