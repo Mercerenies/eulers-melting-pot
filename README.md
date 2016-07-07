@@ -33,3 +33,9 @@ This is a Project Euler attempt. The catch is that every challenge will be compl
 * Language: Jelly
 * Compiler / Interpreter: [tryitonline.net](http://jelly.tryitonline.net/)
 * Notes: (None)
+
+### Euler 6
+* File: problem6.hxg
+* Language: Hexagony
+* Compiler / Interpreter: [The reference implementation](https://github.com/m-ender/hexagony)
+* Notes: (None)
