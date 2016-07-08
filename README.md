@@ -10,6 +10,7 @@ list of the languages that have been used in these challenges so far.
 * Brainf**k
 * Golfscript
 * Hexagony
+* Io
 * J
 * Jelly
 * Whitespace
@@ -57,6 +58,12 @@ list of the languages that have been used in these challenges so far.
 * Language: Whitespace
 * Compiler / Interpreter: [tryitonline.net](http://whitespace.tryitonline.net/)
 * Notes: This code was written with the help of a Lisp translator program.
+
+### Euler 8
+* File: problem8.io
+* Language: Io
+* Compiler / Interpreter: [The official implementation](http://iolanguage.org/binaries.html)
+* Notes: (None)
 
 ## Final Notes
 
