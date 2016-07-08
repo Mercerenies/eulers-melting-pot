@@ -12,6 +12,7 @@ list of the languages that have been used in these challenges so far.
 * Hexagony
 * J
 * Jelly
+* Whitespace
 
 ## Completed Challenges
 
@@ -50,6 +51,12 @@ list of the languages that have been used in these challenges so far.
 * Language: Hexagony
 * Compiler / Interpreter: [The reference implementation](https://github.com/m-ender/hexagony)
 * Notes: (None)
+
+### Euler 7
+* File: problem7.ws
+* Language: Whitespace
+* Compiler / Interpreter: [tryitonline.net](http://whitespace.tryitonline.net/)
+* Notes: This code was written with the help of a Lisp translator program.
 
 ## Final Notes
 
