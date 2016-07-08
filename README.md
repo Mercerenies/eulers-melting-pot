@@ -13,6 +13,7 @@ list of the languages that have been used in these challenges so far.
 * Io
 * J
 * Jelly
+* Shakespeare
 * Whitespace
 
 ## Completed Challenges
@@ -63,6 +64,12 @@ list of the languages that have been used in these challenges so far.
 * File: problem8.io
 * Language: Io
 * Compiler / Interpreter: [The official implementation](http://iolanguage.org/binaries.html)
+* Notes: (None)
+
+## Euler 9
+* File: problem9.spl
+* Language: Shakespeare
+* Compiler / Interpreter: [Lingua::Shakespeare](http://search.cpan.org/dist/Lingua-Shakespeare/lib/Lingua/Shakespeare.pod)
 * Notes: (None)
 
 ## Final Notes
