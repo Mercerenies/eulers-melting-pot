@@ -8,6 +8,7 @@ Full details of the various solutions are listed below, but for the sake of easy
 list of the languages that have been used in these challenges so far.
 * Batch
 * Brainf**k
+* CJam
 * Golfscript
 * Hexagony
 * Io
