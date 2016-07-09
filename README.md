@@ -72,6 +72,12 @@ list of the languages that have been used in these challenges so far.
 * Compiler / Interpreter: [Lingua::Shakespeare](http://search.cpan.org/dist/Lingua-Shakespeare/lib/Lingua/Shakespeare.pod)
 * Notes: (None)
 
+## Euler 10
+* File: problem10.cjam
+* Language: CJam
+* Compiler / Interpreter: [tryitonline.net](http://cjam.tryitonline.net/)
+* Notes: (None)
+
 ## Final Notes
 
 You'll notice that I'm not using many of the mainstream languages so far. This is not because I'm trying to make this challenge harder
