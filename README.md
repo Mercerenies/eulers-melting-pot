@@ -97,7 +97,7 @@ list of the languages that have been used in these challenges so far.
 * Files: problem13.sed
 * Language: sed
 * Compiler / Interpreter: GNU sed
-* Notes: Must pipe ./files/problem13.txt in as input.
+* Notes: Must supply ./files/problem13.txt as input.
 
 ## Final Notes
 
