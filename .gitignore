@@ -1,2 +1,5 @@
 *~
 vendor/*
+*.o
+*.exe
+*.out
