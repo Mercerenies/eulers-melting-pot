@@ -16,6 +16,7 @@ list of the languages that have been used in these challenges so far.
 * Io
 * J
 * Jelly
+* sed
 * Shakespeare
 * Whitespace
 
