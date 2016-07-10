@@ -6,6 +6,7 @@ This is a Project Euler attempt. The catch is that every challenge will be compl
 
 Full details of the various solutions are listed below, but for the sake of easy reference, here is an alphabetized
 list of the languages that have been used in these challenges so far.
+* 05AB1E
 * ASM
 * Batch
 * Brainf**k
@@ -81,10 +82,16 @@ list of the languages that have been used in these challenges so far.
 * Notes: (None)
 
 ## Euler 11
-* File: Problem11.s
+* File: problem11.s
 * Language: ASM
 * Compiler / Interpreter: NASM + GCC Linker
 * Notes: 64-bit architectures, only.
+
+## Euler 12
+* File: problem12.ab
+* Language: 05AB1E
+* Compiler / Interpreter: [tryitonline.net](http://05ab1e.tryitonline.net/)
+* Notes: (None)
 
 ## Final Notes
 
