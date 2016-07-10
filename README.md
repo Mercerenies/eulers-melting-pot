@@ -93,6 +93,12 @@ list of the languages that have been used in these challenges so far.
 * Compiler / Interpreter: [tryitonline.net](http://05ab1e.tryitonline.net/)
 * Notes: (None)
 
+## Euler 13
+* Files: problem13.sed
+* Language: sed
+* Compiler / Interpreter: GNU sed
+* Notes: Must pipe ./files/problem13.txt in as input.
+
 ## Final Notes
 
 You'll notice that I'm not using many of the mainstream languages so far. This is not because I'm trying to make this challenge harder
