@@ -260,7 +260,7 @@ t start
 
 :main
 N
-/\n0$/ {
+/\n0\+$/ {
   b end
 }
 s/\n/+/g
