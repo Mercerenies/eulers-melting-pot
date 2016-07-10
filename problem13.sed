@@ -47,6 +47,8 @@ s/(c/(1/g
 t start
 s/+c/+1/g
 t start
+s/^c/1/g
+t start
 
 # If we ran out of digits, fix it
 s#(+#(0+#g
