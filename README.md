@@ -6,6 +6,7 @@ This is a Project Euler attempt. The catch is that every challenge will be compl
 
 Full details of the various solutions are listed below, but for the sake of easy reference, here is an alphabetized
 list of the languages that have been used in these challenges so far.
+* ASM
 * Batch
 * Brainf**k
 * CJam
@@ -78,6 +79,12 @@ list of the languages that have been used in these challenges so far.
 * Language: CJam
 * Compiler / Interpreter: [tryitonline.net](http://cjam.tryitonline.net/)
 * Notes: (None)
+
+## Euler 11
+* File: Problem11.s
+* Language: ASM
+* Compiler / Interpreter: NASM + GCC Linker
+* Notes: 64-bit architectures, only.
 
 ## Final Notes
 
