@@ -1,0 +1,66 @@
+///
+Ada
+APL
+ASM
+ASP
+AWK
+Bash
+Batch **
+Befunge
+Brainf**k **
+C
+C#
+C++
+Ceylon
+CJam **
+Clojure
+Coffeescript
+Common Lisp
+Csh
+D
+Delphi
+ELisp
+Elixir
+Elm
+Erlang
+F#
+Fortran
+GML
+Go
+Golfscript **
+Groovy
+Haskell
+Hexagony **
+Io **
+J **
+Java
+Javascript
+Jelly **
+Lua
+Make
+Mathematica
+OCaml
+Pascal
+Perl
+PHP
+Piet
+Pizza
+Prolog
+Pyth
+Python
+QBASIC
+R
+Racket
+Ruby
+Scala
+Scratch
+sed
+Self
+Shakespeare **
+Smalltalk
+SML
+Squeak
+Tcl
+Visual Basic
+Whitespace **
+Zsh
