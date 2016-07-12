@@ -16,6 +16,7 @@ list of the languages that have been used in these challenges so far.
 * Io
 * J
 * Jelly
+* Prolog
 * sed
 * Shakespeare
 * Smalltalk
@@ -106,6 +107,12 @@ list of the languages that have been used in these challenges so far.
 * Language: Smalltalk
 * Compiler / Interpreter: [tutorialspoint.com](http://www.tutorialspoint.com/execute_smalltalk_online.php)
 * Notes: The interpreter seems to run faster in Google Chrome.
+
+## Euler 15
+* File: euler15.pl
+* Language: Prolog
+* Compiler / Interpreter: SWI Prolog
+* Notes: Uses some SWI-specific database features; may not work in other Prolog implementations.
 
 ## Final Notes
 
