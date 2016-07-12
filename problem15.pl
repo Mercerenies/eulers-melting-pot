@@ -1,3 +1,5 @@
+% -*-Prolog-*-
+
 :- dynamic grid/3.
 
 grid(0,_,1).
