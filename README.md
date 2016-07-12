@@ -16,6 +16,7 @@ list of the languages that have been used in these challenges so far.
 * Io
 * J
 * Jelly
+* Labyrinth
 * Prolog
 * sed
 * Shakespeare
@@ -109,10 +110,16 @@ list of the languages that have been used in these challenges so far.
 * Notes: The interpreter seems to run faster in Google Chrome.
 
 ## Euler 15
-* File: euler15.pl
+* File: problem15.pl
 * Language: Prolog
 * Compiler / Interpreter: SWI Prolog
 * Notes: Uses some SWI-specific database features; may not work in other Prolog implementations.
+
+## Euler 16
+* File: problem16.lab
+* Language: Labyrinth
+* Compiler / Interpreter: [tryitonline.net](http://labyrinth.tryitonline.net/)
+* Notes: (None)
 
 ## Final Notes
 

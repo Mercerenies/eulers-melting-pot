@@ -1,5 +1,6 @@
 ///
 05AB1E **
+><>
 Ada
 APL
 ASM **
@@ -32,11 +33,13 @@ Golfscript **
 Groovy
 Haskell
 Hexagony **
+INTERCAL
 Io **
 J **
 Java
 Javascript
 Jelly **
+Labyrinth **
 Lua
 Make
 Mathematica
@@ -62,6 +65,7 @@ Smalltalk **
 SML
 Squeak
 Tcl
+Unlambda
 Visual Basic
 Whitespace **
 Zsh
