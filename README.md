@@ -18,6 +18,7 @@ list of the languages that have been used in these challenges so far.
 * Jelly
 * sed
 * Shakespeare
+* Smalltalk
 * Whitespace
 
 ## Completed Challenges
@@ -95,10 +96,16 @@ list of the languages that have been used in these challenges so far.
 * Notes: (None)
 
 ## Euler 13
-* Files: problem13.sed
+* File: problem13.sed
 * Language: sed
 * Compiler / Interpreter: GNU sed
 * Notes: Other sed implementations may not work. Must supply ./files/problem13.txt as input.
+
+## Euler 14
+* File: problem14.st
+* Language: Smalltalk
+* Compiler / Interpreter: [tutorialspoint.com](http://www.tutorialspoint.com/execute_smalltalk_online.php)
+* Notes: The interpreter seems to run faster in Google Chrome.
 
 ## Final Notes
 

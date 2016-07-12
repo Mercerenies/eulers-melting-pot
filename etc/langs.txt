@@ -58,7 +58,7 @@ Scratch
 sed **
 Self
 Shakespeare **
-Smalltalk
+Smalltalk **
 SML
 Squeak
 Tcl
