@@ -46,7 +46,7 @@ Perl
 PHP
 Piet
 Pizza
-Prolog
+Prolog **
 Pyth
 Python
 QBASIC
