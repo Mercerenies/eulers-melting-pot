@@ -121,6 +121,12 @@ list of the languages that have been used in these challenges so far.
 * Compiler / Interpreter: [tryitonline.net](http://labyrinth.tryitonline.net/)
 * Notes: (None)
 
+## Euler 17
+* File: problem17.slsh
+* Language: ///
+* Compiler / Interpreter: [The included Perl script](https://esolangs.org/wiki////)
+* Notes: A surprisingly efficient solution, given the choice of language.
+
 ## Final Notes
 
 You'll notice that I'm not using many of the mainstream languages so far. This is not because I'm trying to make this challenge harder
