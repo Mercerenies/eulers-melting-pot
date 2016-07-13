@@ -128,6 +128,18 @@ list of the languages that have been used in these challenges so far.
 * Compiler / Interpreter: [The included Perl script](https://esolangs.org/wiki////)
 * Notes: A surprisingly efficient solution, given the choice of language.
 
+## Valid Languages
+
+Mostly, I am just using common sense to determine what constitutes a "language". In particular, a language does not have to be
+Turing-complete in order for me to consider using it for this challenge. Here are just a few of the guidelines I am following.
+These are in no way permanent or binding and will change as I progress.
+* All Assembly languages are the same. Assembly will appear exactly once total.
+* BF-derivatives and BF-clones are considered identical to Brainf**k and will not be used.
+* Lisp derivatives are considered distinct, but Scheme and its derivatives all fall under the umbrella of Scheme. That is,
+  there will be a Racket/Scheme, a Common Lisp, and an ELisp, which are all distinct languages.
+* Sufficiently different BASIC dialects will be considered distinct. That is, Visual BASIC, Liberty BASIC, and QBASIC are
+  distinct languages, but Liberty BASIC and JustBASIC are one and the same.
+
 ## Final Notes
 
 You'll notice that I'm not using many of the mainstream languages so far. This is not because I'm trying to make this challenge harder
