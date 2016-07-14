@@ -18,6 +18,7 @@ list of the languages that have been used in these challenges so far.
 * J
 * Jelly
 * Labyrinth
+* Make
 * Prolog
 * sed
 * Shakespeare
@@ -128,6 +129,12 @@ list of the languages that have been used in these challenges so far.
 * Compiler / Interpreter: [The included Perl script](https://esolangs.org/wiki////)
 * Notes: A surprisingly efficient solution, given the choice of language.
 
+## Euler 18
+* File: problem18.mk
+* Language: Make
+* Compiler / Interpreter: GNU Make
+* Notes: Other Make implementations may not work.
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular, a language does not have to be
@@ -139,6 +146,7 @@ These are in no way permanent or binding and will change as I progress.
   there will be a Racket/Scheme, a Common Lisp, and an ELisp, which are all distinct languages.
 * Sufficiently different BASIC dialects will be considered distinct. That is, Visual BASIC, Liberty BASIC, and QBASIC are
   distinct languages, but Liberty BASIC and JustBASIC are one and the same.
+* The result should be in a normal, human readable form. For example, in BF it is insufficient to print the ASCII character associated with the integer result; it is required to print the result as a number. There is no specific required format, as some languages may include some garbage around the answer, so long as the answer as outputted is clear and readable.
 
 ## Final Notes
 

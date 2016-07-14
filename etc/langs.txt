@@ -41,7 +41,7 @@ Javascript
 Jelly **
 Labyrinth **
 Lua
-Make
+Make **
 Mathematica
 OCaml
 Pascal
