@@ -1,10 +1,16 @@
 /// **
 05AB1E **
 ><>
+ActionScript
 Ada
+Agda
+ALGOL
+Alice
 APL
 ASM **
 ASP
+AutoHotkey
+AutoLISP
 AWK
 Bash
 Batch **
@@ -14,8 +20,10 @@ C
 C#
 C++
 Ceylon
+Chef
 CJam **
 Clojure
+COBOL
 Coffeescript
 Common Lisp
 Csh
@@ -26,6 +34,7 @@ Elixir
 Elm
 Erlang
 F#
+Forth
 Fortran
 GML
 Go
@@ -35,6 +44,7 @@ Haskell
 Hexagony **
 INTERCAL
 Io **
+Ioke
 J **
 Java
 Javascript
@@ -42,15 +52,20 @@ Jelly **
 Labyrinth **
 Lua
 Make **
+Maple
 Mathematica
+MATLAB
+Modula
+NewLISP
 OCaml
+P"
 Pascal
 Perl
 PHP
 Piet
 Pizza
 Prolog **
-Pyth
+Pyth **
 Python
 QBASIC **
 R
@@ -68,4 +83,5 @@ Tcl
 Unlambda
 Visual Basic
 Whitespace **
+XSLT
 Zsh
