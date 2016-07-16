@@ -6,7 +6,7 @@ Ada
 Agda
 ALGOL
 Alice
-APL
+APL **
 ASM **
 ASP
 AutoHotkey

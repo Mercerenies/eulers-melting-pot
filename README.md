@@ -148,6 +148,12 @@ list of the languages that have been used in these challenges so far.
 * Compiler / Interpreter: [tryitonline.net](http://pyth.tryitonline.net/)
 * Notes: (None)
 
+## Euler 21
+* File: problem21.apl
+* Language: APL
+* Compiler / Interpreter: [tryapl.org](http://tryapl.org/)
+* Notes: (None)
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular, a language does not have to be
