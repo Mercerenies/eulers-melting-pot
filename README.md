@@ -20,6 +20,7 @@ list of the languages that have been used in these challenges so far.
 * Labyrinth
 * Make
 * Prolog
+* QBASIC
 * sed
 * Shakespeare
 * Smalltalk
@@ -134,6 +135,12 @@ list of the languages that have been used in these challenges so far.
 * Language: Make
 * Compiler / Interpreter: GNU Make
 * Notes: Other Make implementations may not work.
+
+## Euler 19
+* File: problem19.bas
+* Language: QBASIC
+* Compiler / Interpreter: [repl.it](https://repl.it/Cc8a)
+* Notes: (None)
 
 ## Valid Languages
 

@@ -52,7 +52,7 @@ Pizza
 Prolog **
 Pyth
 Python
-QBASIC
+QBASIC **
 R
 Racket
 Ruby
