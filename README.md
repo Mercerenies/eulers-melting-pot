@@ -79,7 +79,7 @@ list of the languages that have been used in these challenges so far.
 * Compiler / Interpreter: [The official implementation](http://iolanguage.org/binaries.html)
 * Notes: (None)
 
-## Euler 9
+### Euler 9
 * File: problem9.spl
 * Language: Shakespeare
 * Compiler / Interpreter: [Lingua::Shakespeare](http://search.cpan.org/dist/Lingua-Shakespeare/lib/Lingua/Shakespeare.pod)
