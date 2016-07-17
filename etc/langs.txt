@@ -28,9 +28,10 @@ Coffeescript
 Common Lisp
 Csh
 D
+Dash
 Delphi
 ELisp
-Elixir
+Elixir **
 Elm
 Erlang
 F#

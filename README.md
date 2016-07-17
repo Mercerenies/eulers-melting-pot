@@ -8,10 +8,11 @@ Full details of the various solutions are listed below, but for the sake of easy
 list of the languages that have been used in these challenges so far.
 * ///
 * 05AB1E
-* ASM
+* APL
 * Batch
 * Brainf**k
 * CJam
+* Elixir
 * Golfscript
 * Hexagony
 * Io
@@ -19,7 +20,9 @@ list of the languages that have been used in these challenges so far.
 * Jelly
 * Labyrinth
 * Make
+* NASM
 * Prolog
+* Pyth
 * QBASIC
 * sed
 * Shakespeare
@@ -90,7 +93,7 @@ list of the languages that have been used in these challenges so far.
 
 ## Euler 11
 * File: problem11.s
-* Language: ASM
+* Language: NASM
 * Compiler / Interpreter: NASM + GCC Linker
 * Notes: 64-bit architectures, only.
 
@@ -154,21 +157,32 @@ list of the languages that have been used in these challenges so far.
 * Compiler / Interpreter: [tryapl.org](http://tryapl.org/)
 * Notes: (None)
 
+## Euler 22
+* File: problem22.exs
+* Language: Elixir
+* Compiler / Interpreter: [The standard compiler](http://elixir-lang.org/install.html)
+* Notes: Depends on ./files/p022_names.txt.
+
 ## Valid Languages
 
-Mostly, I am just using common sense to determine what constitutes a "language". In particular, a language does not have to be
-Turing-complete in order for me to consider using it for this challenge. Here are just a few of the guidelines I am following.
-These are in no way permanent or binding and will change as I progress.
-* All Assembly languages are the same. Assembly will appear exactly once total.
+Mostly, I am just using common sense to determine what constitutes a "language". In particular,
+a language does not have to be Turing-complete in order for me to consider using it for this challenge.
+Here are just a few of the guidelines I am following. These are in no way permanent or binding and will
+change as I progress.
+* ~~All Assembly languages are the same. Assembly will appear exactly once total.~~
 * BF-derivatives and BF-clones are considered identical to Brainf**k and will not be used.
-* Lisp derivatives are considered distinct, but Scheme and its derivatives all fall under the umbrella of Scheme. That is,
-  there will be a Racket/Scheme, a Common Lisp, and an ELisp, which are all distinct languages.
-* Sufficiently different BASIC dialects will be considered distinct. That is, Visual BASIC, Liberty BASIC, and QBASIC are
-  distinct languages, but Liberty BASIC and JustBASIC are one and the same.
-* The result should be in a normal, human readable form. For example, in BF it is insufficient to print the ASCII character associated with the integer result; it is required to print the result as a number. There is no specific required format, as some languages may include some garbage around the answer, so long as the answer as outputted is clear and readable.
+* Lisp derivatives are considered distinct~~, but Scheme and its derivatives all fall under the umbrella of
+  Scheme~~. That is, there will be a Racket, a Common Lisp, and an ELisp, which are all distinct languages.
+* Sufficiently different BASIC dialects will be considered distinct. That is, Visual BASIC, Liberty BASIC, and
+  QBASIC are distinct languages, but Liberty BASIC and JustBASIC are one and the same.
+* The result should be in a normal, human readable form. For example, in BF it is insufficient to print the
+  ASCII character associated with the integer result; it is required to print the result as a number. There is
+  no specific required format, as some languages may include some garbage around the answer, so long as the
+  answer as outputted is clear and readable.
 
 ## Final Notes
 
-You'll notice that I'm not using many of the mainstream languages so far. This is not because I'm trying to make this challenge harder
-than it is; this is a purely strategic decision. The later Project Euler problems are more difficult, so I am saving the powerful
-and easy-to-use languages for them and using obscure, esoteric languages for the easier problems.
+You'll notice that I'm not using many of the mainstream languages so far. This is not because I'm trying to
+make this challenge harder than it is; this is a purely strategic decision. The later Project Euler problems
+are more difficult, so I am saving the powerful and easy-to-use languages for them and using obscure, esoteric
+languages for the easier problems.
