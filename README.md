@@ -85,79 +85,79 @@ list of the languages that have been used in these challenges so far.
 * Compiler / Interpreter: [Lingua::Shakespeare](http://search.cpan.org/dist/Lingua-Shakespeare/lib/Lingua/Shakespeare.pod)
 * Notes: (None)
 
-## Euler 10
+### Euler 10
 * File: problem10.cjam
 * Language: CJam
 * Compiler / Interpreter: [tryitonline.net](http://cjam.tryitonline.net/)
 * Notes: (None)
 
-## Euler 11
+### Euler 11
 * File: problem11.s
 * Language: NASM
 * Compiler / Interpreter: NASM + GCC Linker
 * Notes: 64-bit architectures, only.
 
-## Euler 12
+### Euler 12
 * File: problem12.ab
 * Language: 05AB1E
 * Compiler / Interpreter: [tryitonline.net](http://05ab1e.tryitonline.net/)
 * Notes: (None)
 
-## Euler 13
+### Euler 13
 * File: problem13.sed
 * Language: sed
 * Compiler / Interpreter: GNU sed
 * Notes: Other sed implementations may not work. Must supply ./files/problem13.txt as input.
 
-## Euler 14
+### Euler 14
 * File: problem14.st
 * Language: Smalltalk
 * Compiler / Interpreter: [tutorialspoint.com](http://www.tutorialspoint.com/execute_smalltalk_online.php)
 * Notes: The interpreter seems to run faster in Google Chrome.
 
-## Euler 15
+### Euler 15
 * File: problem15.pl
 * Language: Prolog
 * Compiler / Interpreter: SWI Prolog
 * Notes: Uses some SWI-specific database features; may not work in other Prolog implementations.
 
-## Euler 16
+### Euler 16
 * File: problem16.lab
 * Language: Labyrinth
 * Compiler / Interpreter: [tryitonline.net](http://labyrinth.tryitonline.net/)
 * Notes: (None)
 
-## Euler 17
+### Euler 17
 * File: problem17.slsh
 * Language: ///
 * Compiler / Interpreter: [The included Perl script](https://esolangs.org/wiki////)
 * Notes: A surprisingly efficient solution, given the choice of language.
 
-## Euler 18
+### Euler 18
 * File: problem18.mk
 * Language: Make
 * Compiler / Interpreter: GNU Make
 * Notes: Other Make implementations may not work.
 
-## Euler 19
+### Euler 19
 * File: problem19.bas
 * Language: QBASIC
 * Compiler / Interpreter: [repl.it](https://repl.it/Cc8a)
 * Notes: (None)
 
-## Euler 20
+### Euler 20
 * File: problem20.pyth
 * Language: Pyth
 * Compiler / Interpreter: [tryitonline.net](http://pyth.tryitonline.net/)
 * Notes: (None)
 
-## Euler 21
+### Euler 21
 * File: problem21.apl
 * Language: APL
 * Compiler / Interpreter: [tryapl.org](http://tryapl.org/)
 * Notes: (None)
 
-## Euler 22
+### Euler 22
 * File: problem22.exs
 * Language: Elixir
 * Compiler / Interpreter: [The standard compiler](http://elixir-lang.org/install.html)
