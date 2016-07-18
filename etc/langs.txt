@@ -65,7 +65,7 @@ P"
 Pascal
 Perl
 PHP
-Piet
+Piet **
 Pizza
 Prolog **
 Pyth **

@@ -23,6 +23,7 @@ list of the languages that have been used in these challenges so far.
 * Labyrinth
 * Make
 * NASM
+* Piet
 * Prolog
 * Pyth
 * QBASIC
@@ -176,6 +177,12 @@ list of the languages that have been used in these challenges so far.
 * Language: Csh
 * Compiler / Interpreter: Tcsh
 * Notes: Uses a rather unusual algorithm to manually generate each digit.
+
+## Euler 25
+* File: problem25.png
+* Language: Piet
+* Compiler / Interpreter: [rpiet](https://github.com/enebo/rpiet/)
+* Notes: Piet interpreter must have bignum integers, not fixed size.
 
 ## Valid Languages
 
