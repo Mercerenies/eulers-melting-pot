@@ -12,6 +12,7 @@ list of the languages that have been used in these challenges so far.
 * Batch
 * Brainf**k
 * CJam
+* Csh
 * Elixir
 * Go
 * Golfscript
@@ -169,6 +170,12 @@ list of the languages that have been used in these challenges so far.
 * Language: Go
 * Compiler / Interpreter: [The standard compiler](https://golang.org/doc/install)
 * Notes: (None)
+
+## Euler 24
+* File: problem24.sh
+* Language: Csh
+* Compiler / Interpreter: Tcsh
+* Notes: Uses a rather unusual algorithm to manually generate each digit.
 
 ## Valid Languages
 
