@@ -31,6 +31,7 @@ list of the languages that have been used in these challenges so far.
 * Shakespeare
 * Smalltalk
 * Whitespace
+* Zsh
 
 ## Completed Challenges
 
@@ -183,6 +184,12 @@ list of the languages that have been used in these challenges so far.
 * Language: Piet
 * Compiler / Interpreter: [rpiet](https://github.com/enebo/rpiet/)
 * Notes: Piet interpreter must have bignum integers, not fixed size.
+
+## Euler 26
+* File: problem26.sh
+* Language: Zsh
+* Compiler / Interpreter: Zsh
+* Notes: (None)
 
 ## Valid Languages
 

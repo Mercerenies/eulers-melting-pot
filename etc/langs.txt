@@ -83,10 +83,11 @@ Shakespeare **
 Smalltalk **
 SML
 Squeak
+Stuck
 Teascript
 Tcl
 Unlambda
 Visual Basic
 Whitespace **
 XSLT
-Zsh
+Zsh **
