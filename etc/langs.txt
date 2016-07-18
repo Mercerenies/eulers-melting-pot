@@ -15,6 +15,7 @@ AWK
 Bash
 Batch **
 Befunge
+Brachylog
 Brainf**k **
 C
 C#
@@ -55,6 +56,7 @@ Lua
 Make **
 Maple
 Mathematica
+MATL
 MATLAB
 Modula
 NewLISP
@@ -76,10 +78,12 @@ Scala
 Scratch
 sed **
 Self
+Seriously
 Shakespeare **
 Smalltalk **
 SML
 Squeak
+Teascript
 Tcl
 Unlambda
 Visual Basic

@@ -13,6 +13,7 @@ list of the languages that have been used in these challenges so far.
 * Brainf**k
 * CJam
 * Elixir
+* Go
 * Golfscript
 * Hexagony
 * Io
@@ -162,6 +163,12 @@ list of the languages that have been used in these challenges so far.
 * Language: Elixir
 * Compiler / Interpreter: [The standard compiler](http://elixir-lang.org/install.html)
 * Notes: Depends on ./files/p022_names.txt.
+
+## Euler 23
+* File: problem23.go
+* Language: Go
+* Compiler / Interpreter: [The standard compiler](https://golang.org/doc/install)
+* Notes: (None)
 
 ## Valid Languages
 
