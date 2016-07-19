@@ -30,6 +30,7 @@ Csh **
 D
 Dash
 Delphi
+Eiffel
 ELisp
 Elixir **
 Elm
@@ -43,6 +44,7 @@ Golfscript **
 Groovy
 Haskell
 Hexagony **
+Icon
 INTERCAL
 Io **
 Ioke
@@ -82,6 +84,7 @@ Seriously
 Shakespeare **
 Smalltalk **
 SML
+SNOBOL
 Squeak
 Stuck
 Teascript
