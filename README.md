@@ -191,6 +191,12 @@ list of the languages that have been used in these challenges so far.
 * Compiler / Interpreter: Zsh
 * Notes: (None)
 
+## Euler 27
+* File: problem27.ik
+* Language: Ioke
+* Compiler / Interpreter: [Ioke for the JVM](https://ioke.org/download.html)
+* Notes: A fairly slow solution.
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular,

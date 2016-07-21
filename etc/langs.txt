@@ -47,7 +47,7 @@ Hexagony **
 Icon
 INTERCAL
 Io **
-Ioke
+Ioke **
 J **
 Java
 Javascript
