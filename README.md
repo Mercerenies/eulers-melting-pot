@@ -10,6 +10,7 @@ list of the languages that have been used in these challenges so far.
 * 05AB1E
 * APL
 * Batch
+* Befunge
 * Brainf**k
 * CJam
 * Csh
@@ -18,6 +19,7 @@ list of the languages that have been used in these challenges so far.
 * Golfscript
 * Hexagony
 * Io
+* Ioke
 * J
 * Jelly
 * Labyrinth
@@ -196,6 +198,12 @@ list of the languages that have been used in these challenges so far.
 * Language: Ioke
 * Compiler / Interpreter: [Ioke for the JVM](https://ioke.org/download.html)
 * Notes: A fairly slow solution.
+
+## Euler 28
+* File: problem28.bf
+* Language: Befunge
+* Compiler / Interpreter: [quirkster.com](http://www.quirkster.com/iano/js/befunge.html)
+* Notes: The immediate shift on the first row is necessary; the first row is used for storage in this program.
 
 ## Valid Languages
 

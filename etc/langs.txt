@@ -13,7 +13,7 @@ AutoLISP
 AWK
 Bash
 Batch **
-Befunge
+Befunge **
 Brachylog
 Brainf**k **
 C
