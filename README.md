@@ -30,6 +30,7 @@ list of the languages that have been used in these challenges so far.
 * Pyth
 * QBASIC
 * sed
+* Seriously
 * Shakespeare
 * Smalltalk
 * Whitespace
@@ -204,6 +205,12 @@ list of the languages that have been used in these challenges so far.
 * Language: Befunge
 * Compiler / Interpreter: [quirkster.com](http://www.quirkster.com/iano/js/befunge.html)
 * Notes: The immediate shift on the first row is necessary; the first row is used for storage in this program.
+
+## Euler 29
+* File: problem29.srs
+* Language: Seriously
+* Compiler / Interpreter: [tryitonline.net](http://seriously.tryitonline.net/)
+* Notes: The seemingly pointless union with the empty list at the end serves to remove duplicates.
 
 ## Valid Languages
 

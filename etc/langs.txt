@@ -80,7 +80,7 @@ Scala
 Scratch
 sed **
 Self
-Seriously
+Seriously **
 Shakespeare **
 Smalltalk **
 SML
