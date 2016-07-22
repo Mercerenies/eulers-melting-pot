@@ -170,43 +170,43 @@ list of the languages that have been used in these challenges so far.
 * Compiler / Interpreter: [The standard compiler](http://elixir-lang.org/install.html)
 * Notes: Depends on ./files/p022_names.txt.
 
-## Euler 23
+### Euler 23
 * File: problem23.go
 * Language: Go
 * Compiler / Interpreter: [The standard compiler](https://golang.org/doc/install)
 * Notes: (None)
 
-## Euler 24
+### Euler 24
 * File: problem24.sh
 * Language: Csh
 * Compiler / Interpreter: Tcsh
 * Notes: Uses a rather unusual algorithm to manually generate each digit.
 
-## Euler 25
+### Euler 25
 * File: problem25.png
 * Language: Piet
 * Compiler / Interpreter: [rpiet](https://github.com/enebo/rpiet/)
 * Notes: Piet interpreter must have bignum integers, not fixed size.
 
-## Euler 26
+### Euler 26
 * File: problem26.sh
 * Language: Zsh
 * Compiler / Interpreter: Zsh
 * Notes: (None)
 
-## Euler 27
+### Euler 27
 * File: problem27.ik
 * Language: Ioke
 * Compiler / Interpreter: [Ioke for the JVM](https://ioke.org/download.html)
 * Notes: A fairly slow solution.
 
-## Euler 28
+### Euler 28
 * File: problem28.bf
 * Language: Befunge
 * Compiler / Interpreter: [quirkster.com](http://www.quirkster.com/iano/js/befunge.html)
 * Notes: The immediate shift on the first row is necessary; the first row is used for storage in this program.
 
-## Euler 29
+### Euler 29
 * File: problem29.srs
 * Language: Seriously
 * Compiler / Interpreter: [tryitonline.net](http://seriously.tryitonline.net/)
