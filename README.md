@@ -228,6 +228,8 @@ change as I progress.
   ASCII character associated with the integer result; it is required to print the result as a number. There is
   no specific required format, as some languages may include some garbage around the answer, so long as the
   answer as outputted is clear and readable.
+* I have written a few programming languages. At least one of them is in a usable state right now. For fairness,
+  I will not be using any language that I myself wrote.
 
 ## Final Notes
 
