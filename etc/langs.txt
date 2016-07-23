@@ -83,7 +83,7 @@ Self
 Seriously **
 Shakespeare **
 Smalltalk **
-SML
+SML **
 SNOBOL
 Squeak
 Stuck **

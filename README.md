@@ -33,6 +33,7 @@ list of the languages that have been used in these challenges so far.
 * Seriously
 * Shakespeare
 * Smalltalk
+* SML
 * Stuck
 * Whitespace
 * Zsh
@@ -218,6 +219,12 @@ list of the languages that have been used in these challenges so far.
 * Language: Stuck
 * Compiler / Interpreter: [The official interpreter](https://github.com/kade-robertson/stuck)
 * Notes: The interpreter seems to require some minor modification to work with Unicode on some systems.
+
+### Euler 31
+* File: problem31.sml
+* Language: SML
+* Compiler / Interpreter: [tutorialspoint.con](http://www.tutorialspoint.com/execute_smlnj_online.php)
+* Notes: (None)
 
 ## Valid Languages
 
