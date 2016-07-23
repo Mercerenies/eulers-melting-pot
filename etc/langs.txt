@@ -86,7 +86,7 @@ Smalltalk **
 SML
 SNOBOL
 Squeak
-Stuck
+Stuck **
 Teascript
 Tcl
 Unlambda

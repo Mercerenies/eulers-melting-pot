@@ -33,6 +33,7 @@ list of the languages that have been used in these challenges so far.
 * Seriously
 * Shakespeare
 * Smalltalk
+* Stuck
 * Whitespace
 * Zsh
 
@@ -211,6 +212,12 @@ list of the languages that have been used in these challenges so far.
 * Language: Seriously
 * Compiler / Interpreter: [tryitonline.net](http://seriously.tryitonline.net/)
 * Notes: The seemingly pointless union with the empty list at the end serves to remove duplicates.
+
+### Euler 30
+* File: problem30.stk
+* Language: Stuck
+* Compiler / Interpreter: [The official interpreter](https://github.com/kade-robertson/stuck)
+* Notes: The interpreter seems to require some minor modification to work with Unicode on some systems.
 
 ## Valid Languages
 
