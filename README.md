@@ -42,187 +42,187 @@ list of the languages that have been used in these challenges so far.
 
 ### Euler 1
 * File: problem1.golf
-* Language: Golfscript
+* Language: [Golfscript](http://www.golfscript.com/golfscript/)
 * Compiler / Interpreter: [copy.sh](https://copy.sh/golfscript/)
 * Notes: (None)
 
 ### Euler 2
 * File: problem2.bf
-* Language: Brainf**k
+* Language: [Brainf**k](https://en.wikipedia.org/wiki/Brainfuck)
 * Compiler / Interpreter: [copy.sh](https://copy.sh/brainfuck/)
 * Notes: This code was written with the help of a Lisp translator program.
 
 ### Euler 3
 * File: problem3.ijs
-* Language: J
+* Language: [J](http://jsoftware.com/)
 * Compiler / Interpreter: [The de facto standard](http://jsoftware.com/)
 * Notes: (None)
 
 ### Euler 4
 * File: problem4.bat
-* Language: Batch
+* Language: [Batch](https://en.wikipedia.org/wiki/Batch_file)
 * Compiler / Interpreter: Windows CMD
 * Notes: This one is really slow. Interestingly, it seems to be not the palindrome check but the multiplication that slows it down.
 
 ### Euler 5
 * File: problem5.jelly
-* Language: Jelly
+* Language: [Jelly](https://github.com/DennisMitchell/jelly)
 * Compiler / Interpreter: [tryitonline.net](http://jelly.tryitonline.net/)
 * Notes: (None)
 
 ### Euler 6
 * File: problem6.hxg
-* Language: Hexagony
+* Language: [Hexagony](https://github.com/m-ender/hexagony)
 * Compiler / Interpreter: [The reference implementation](https://github.com/m-ender/hexagony)
 * Notes: (None)
 
 ### Euler 7
 * File: problem7.ws
-* Language: Whitespace
+* Language: [Whitespace](http://compsoc.dur.ac.uk/whitespace/tutorial.html)
 * Compiler / Interpreter: [tryitonline.net](http://whitespace.tryitonline.net/)
 * Notes: This code was written with the help of a Lisp translator program.
 
 ### Euler 8
 * File: problem8.io
-* Language: Io
+* Language: [Io](http://iolanguage.org/)
 * Compiler / Interpreter: [The official implementation](http://iolanguage.org/binaries.html)
 * Notes: (None)
 
 ### Euler 9
 * File: problem9.spl
-* Language: Shakespeare
+* Language: [Shakespeare](http://shakespearelang.sourceforge.net/)
 * Compiler / Interpreter: [Lingua::Shakespeare](http://search.cpan.org/dist/Lingua-Shakespeare/lib/Lingua/Shakespeare.pod)
 * Notes: (None)
 
 ### Euler 10
 * File: problem10.cjam
-* Language: CJam
+* Language: [CJam](https://sourceforge.net/projects/cjam/)
 * Compiler / Interpreter: [tryitonline.net](http://cjam.tryitonline.net/)
 * Notes: (None)
 
 ### Euler 11
 * File: problem11.s
-* Language: NASM
+* Language: [NASM](http://www.nasm.us/)
 * Compiler / Interpreter: NASM + GCC Linker
 * Notes: 64-bit architectures, only.
 
 ### Euler 12
 * File: problem12.ab
-* Language: 05AB1E
+* Language: [05AB1E](https://github.com/Adriandmen/05AB1E/)
 * Compiler / Interpreter: [tryitonline.net](http://05ab1e.tryitonline.net/)
 * Notes: (None)
 
 ### Euler 13
 * File: problem13.sed
-* Language: sed
+* Language: [sed](http://linux.die.net/man/1/sed)
 * Compiler / Interpreter: GNU sed
 * Notes: Other sed implementations may not work. Must supply ./files/problem13.txt as input.
 
 ### Euler 14
 * File: problem14.st
-* Language: Smalltalk
+* Language: [Smalltalk](https://en.wikipedia.org/wiki/Smalltalk)
 * Compiler / Interpreter: [tutorialspoint.com](http://www.tutorialspoint.com/execute_smalltalk_online.php)
 * Notes: The interpreter seems to run faster in Google Chrome.
 
 ### Euler 15
 * File: problem15.pl
-* Language: Prolog
+* Language: [Prolog](https://en.wikipedia.org/wiki/Prolog)
 * Compiler / Interpreter: SWI Prolog
 * Notes: Uses some SWI-specific database features; may not work in other Prolog implementations.
 
 ### Euler 16
 * File: problem16.lab
-* Language: Labyrinth
+* Language: [Labyrinth](https://github.com/m-ender/labyrinth)
 * Compiler / Interpreter: [tryitonline.net](http://labyrinth.tryitonline.net/)
 * Notes: (None)
 
 ### Euler 17
 * File: problem17.slsh
-* Language: ///
+* Language: [///](https://esolangs.org/wiki////)
 * Compiler / Interpreter: [The included Perl script](https://esolangs.org/wiki////)
 * Notes: A surprisingly efficient solution, given the choice of language.
 
 ### Euler 18
 * File: problem18.mk
-* Language: Make
+* Language: [Make](https://www.gnu.org/software/make/)
 * Compiler / Interpreter: GNU Make
 * Notes: Other Make implementations may not work.
 
 ### Euler 19
 * File: problem19.bas
-* Language: QBASIC
+* Language: [QBASIC](https://en.wikipedia.org/wiki/QBasic)
 * Compiler / Interpreter: [repl.it](https://repl.it/Cc8a)
 * Notes: (None)
 
 ### Euler 20
 * File: problem20.pyth
-* Language: Pyth
+* Language: [Pyth](https://github.com/isaacg1/pyth)
 * Compiler / Interpreter: [tryitonline.net](http://pyth.tryitonline.net/)
 * Notes: (None)
 
 ### Euler 21
 * File: problem21.apl
-* Language: APL
+* Language: [APL](https://en.wikipedia.org/wiki/APL_(programming_language))
 * Compiler / Interpreter: [tryapl.org](http://tryapl.org/)
 * Notes: (None)
 
 ### Euler 22
 * File: problem22.exs
-* Language: Elixir
+* Language: [Elixir](http://elixir-lang.org/)
 * Compiler / Interpreter: [The standard compiler](http://elixir-lang.org/install.html)
 * Notes: Depends on ./files/p022_names.txt.
 
 ### Euler 23
 * File: problem23.go
-* Language: Go
+* Language: [Go](https://golang.org/)
 * Compiler / Interpreter: [The standard compiler](https://golang.org/doc/install)
 * Notes: (None)
 
 ### Euler 24
 * File: problem24.sh
-* Language: Csh
+* Language: [Csh](https://en.wikipedia.org/wiki/C_shell)
 * Compiler / Interpreter: Tcsh
 * Notes: Uses a rather unusual algorithm to manually generate each digit.
 
 ### Euler 25
 * File: problem25.png
-* Language: Piet
+* Language: [Piet](http://www.dangermouse.net/esoteric/piet.html)
 * Compiler / Interpreter: [rpiet](https://github.com/enebo/rpiet/)
 * Notes: Piet interpreter must have bignum integers, not fixed size.
 
 ### Euler 26
 * File: problem26.sh
-* Language: Zsh
+* Language: [Zsh](https://en.wikipedia.org/wiki/Z_shell)
 * Compiler / Interpreter: Zsh
 * Notes: (None)
 
 ### Euler 27
 * File: problem27.ik
-* Language: Ioke
+* Language: [Ioke](https://ioke.org/)
 * Compiler / Interpreter: [Ioke for the JVM](https://ioke.org/download.html)
 * Notes: A fairly slow solution.
 
 ### Euler 28
 * File: problem28.bf
-* Language: Befunge
+* Language: [Befunge](https://esolangs.org/wiki/Befunge)
 * Compiler / Interpreter: [quirkster.com](http://www.quirkster.com/iano/js/befunge.html)
 * Notes: The immediate shift on the first row is necessary; the first row is used for storage in this program.
 
 ### Euler 29
 * File: problem29.srs
-* Language: Seriously
+* Language: [Seriously](https://github.com/Mego/Seriously)
 * Compiler / Interpreter: [tryitonline.net](http://seriously.tryitonline.net/)
 * Notes: The seemingly pointless union with the empty list at the end serves to remove duplicates.
 
 ### Euler 30
 * File: problem30.stk
-* Language: Stuck
+* Language: [Stuck](https://github.com/kade-robertson/stuck)
 * Compiler / Interpreter: [The official interpreter](https://github.com/kade-robertson/stuck)
 * Notes: The interpreter seems to require some minor modification to work with Unicode on some systems.
 
 ### Euler 31
 * File: problem31.sml
-* Language: SML
+* Language: [SML](https://en.wikipedia.org/wiki/Standard_ML)
 * Compiler / Interpreter: [tutorialspoint.con](http://www.tutorialspoint.com/execute_smlnj_online.php)
 * Notes: (None)
 
