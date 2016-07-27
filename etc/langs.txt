@@ -23,7 +23,7 @@ Ceylon
 Chef
 CJam **
 Clojure
-COBOL
+COBOL **
 Coffeescript
 Common Lisp
 Csh **

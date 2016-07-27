@@ -13,6 +13,7 @@ list of the languages that have been used in these challenges so far.
 * Befunge
 * Brainf**k
 * CJam
+* COBOL
 * Csh
 * Elixir
 * Go
@@ -223,7 +224,13 @@ list of the languages that have been used in these challenges so far.
 ### Euler 31
 * File: problem31.sml
 * Language: [SML](https://en.wikipedia.org/wiki/Standard_ML)
-* Compiler / Interpreter: [tutorialspoint.con](http://www.tutorialspoint.com/execute_smlnj_online.php)
+* Compiler / Interpreter: [tutorialspoint.com](http://www.tutorialspoint.com/execute_smlnj_online.php)
+* Notes: (None)
+
+### Euler 32
+* File: problem32.cbl
+* Language: [COBOL](https://en.wikipedia.org/wiki/COBOL)
+* Compiler / Interpreter: [tutorialspoint.com](http://www.tutorialspoint.com/compile_cobol_online.php)
 * Notes: (None)
 
 ## Valid Languages
