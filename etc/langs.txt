@@ -69,12 +69,14 @@ Perl
 PHP
 Piet **
 Pizza
+Pony
 Prolog **
 Pyth **
 Python
 QBASIC **
 R
 Racket
+Roy
 Ruby
 Scala
 Scratch
@@ -92,5 +94,5 @@ Tcl
 Unlambda
 Visual Basic
 Whitespace **
-XSLT
+XSLT **
 Zsh **

@@ -37,6 +37,7 @@ list of the languages that have been used in these challenges so far.
 * SML
 * Stuck
 * Whitespace
+* XSLT
 * Zsh
 
 ## Completed Challenges
@@ -117,7 +118,7 @@ list of the languages that have been used in these challenges so far.
 * File: problem13.sed
 * Language: [sed](http://linux.die.net/man/1/sed)
 * Compiler / Interpreter: GNU sed
-* Notes: Other sed implementations may not work. Must supply ./files/problem13.txt as input.
+* Notes: Other sed implementations may not work. Must supply `./files/problem13.txt` as input.
 
 ### Euler 14
 * File: problem14.st
@@ -171,7 +172,7 @@ list of the languages that have been used in these challenges so far.
 * File: problem22.exs
 * Language: [Elixir](http://elixir-lang.org/)
 * Compiler / Interpreter: [The standard compiler](http://elixir-lang.org/install.html)
-* Notes: Depends on ./files/p022_names.txt.
+* Notes: Depends on `./files/p022_names.txt`.
 
 ### Euler 23
 * File: problem23.go
@@ -232,6 +233,12 @@ list of the languages that have been used in these challenges so far.
 * Language: [COBOL](https://en.wikipedia.org/wiki/COBOL)
 * Compiler / Interpreter: [tutorialspoint.com](http://www.tutorialspoint.com/compile_cobol_online.php)
 * Notes: (None)
+
+### Euler 33
+* File: problem33.xsl
+* Language: [XSLT](http://www.w3schools.com/xsl/)
+* Compiler / Interpreter: [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
+* Notes: Load `./files/p33.xml` to run the XSLT code; requires disabling `security.fileuri.strict_origin_policy` on Firefox due to local system security constraints.
 
 ## Valid Languages
 
