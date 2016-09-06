@@ -16,6 +16,7 @@ list of the languages that have been used in these challenges so far.
 * COBOL
 * Csh
 * Elixir
+* Fortran
 * Go
 * Golfscript
 * Hexagony
@@ -239,6 +240,12 @@ list of the languages that have been used in these challenges so far.
 * Language: [XSLT](http://www.w3schools.com/xsl/)
 * Compiler / Interpreter: [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
 * Notes: Load `./files/p33.xml` to run the XSLT code; requires disabling `security.fileuri.strict_origin_policy` on Firefox due to local system security constraints.
+
+### Euler 34
+* File: problem34.f95
+* Language: [Fortran](https://en.wikipedia.org/wiki/Fortran)
+* Compiler / Interpreter: [tutorialspoint.com](http://www.tutorialspoint.com/compile_fortran_online.php)
+* Notes: (None)
 
 ## Valid Languages
 

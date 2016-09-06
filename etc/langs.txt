@@ -37,7 +37,7 @@ Elm
 Erlang
 F#
 Forth
-Fortran
+Fortran **
 GML
 Go **
 Golfscript **
