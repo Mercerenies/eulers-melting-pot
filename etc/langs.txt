@@ -51,6 +51,7 @@ INTERCAL
 Io **
 Ioke **
 J **
+Jasmin
 Java
 Javascript
 Jelly **
@@ -93,6 +94,7 @@ Squeak
 Stuck **
 Teascript
 Tcl
+TI BASIC
 Unlambda
 Visual Basic
 Whitespace **
