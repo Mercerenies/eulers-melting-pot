@@ -22,6 +22,7 @@ C++
 Ceylon
 Chef
 CJam **
+Clean
 Clojure
 COBOL **
 Coffeescript
@@ -30,6 +31,7 @@ Csh **
 D
 Dash
 Delphi
+E
 Eiffel
 ELisp
 Elixir **
@@ -62,7 +64,7 @@ MATLAB
 Modula
 NASM **
 NewLISP
-OCaml
+OCaml **
 P"
 Pascal
 Perl

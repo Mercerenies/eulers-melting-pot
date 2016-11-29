@@ -27,6 +27,7 @@ list of the languages that have been used in these challenges so far.
 * Labyrinth
 * Make
 * NASM
+* OCaml
 * Piet
 * Prolog
 * Pyth
@@ -245,6 +246,12 @@ list of the languages that have been used in these challenges so far.
 * File: problem34.f95
 * Language: [Fortran](https://en.wikipedia.org/wiki/Fortran)
 * Compiler / Interpreter: [tutorialspoint.com](http://www.tutorialspoint.com/compile_fortran_online.php)
+* Notes: (None)
+
+### Euler 35
+* File: problem35.ml
+* Language [OCaml](http://www.ocaml.org/)
+* Compiler / Interpreter: [OCaml on Windows](http://protz.github.io/ocaml-installer/)
 * Notes: (None)
 
 ## Valid Languages
