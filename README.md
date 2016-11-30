@@ -16,6 +16,7 @@ list of the languages that have been used in these challenges so far.
 * COBOL
 * Csh
 * Elixir
+* Forth
 * Fortran
 * Go
 * Golfscript
@@ -254,22 +255,28 @@ list of the languages that have been used in these challenges so far.
 * Compiler / Interpreter: [OCaml on Windows](http://protz.github.io/ocaml-installer/)
 * Notes: (None)
 
+### Euler 36
+* File: problem36.fth
+* Language: [Forth](https://en.wikipedia.org/wiki/Forth_(programming_language))
+* Compiler / Interpreter: [repl.it](https://repl.it/languages/forth)
+* Notes: (None)
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular,
 a language does not have to be Turing-complete in order for me to consider using it for this challenge.
 Here are just a few of the guidelines I am following. These are in no way permanent or binding and will
 change as I progress.
-* ~~All Assembly languages are the same. Assembly will appear exactly once total.~~
 * BF-derivatives and BF-clones are considered identical to Brainf**k and will not be used.
-* Lisp derivatives are considered distinct~~, but Scheme and its derivatives all fall under the umbrella of
-  Scheme~~. That is, there will be a Racket, a Common Lisp, and an ELisp, which are all distinct languages.
+* Lisp derivatives are considered distinct. That is, there will be a Racket, a Common Lisp, and an ELisp,
+  which are all distinct languages.
 * Sufficiently different BASIC dialects will be considered distinct. That is, Visual BASIC, Liberty BASIC, and
   QBASIC are distinct languages, but Liberty BASIC and JustBASIC are one and the same.
 * The result should be in a normal, human readable form. For example, in BF it is insufficient to print the
   ASCII character associated with the integer result; it is required to print the result as a number. There is
   no specific required format, as some languages may include some garbage around the answer, so long as the
-  answer as outputted is clear and readable.
+  answer as outputted is clear and readable. If the language is incapable of outputting a human readable
+  value, whatever is considered acceptable output within the language will be acceptable.
 * I have written a few programming languages. At least one of them is in a usable state right now. For fairness,
   I will not be using any language that I myself wrote.
 
