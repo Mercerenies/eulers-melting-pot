@@ -38,8 +38,10 @@ Elixir **
 Elm
 Erlang
 F#
+Fission
 Forth **
 Fortran **
+Fourier
 GML
 Go **
 Golfscript **
@@ -55,6 +57,7 @@ Jasmin
 Java
 Javascript
 Jelly **
+JSF**k **
 Labyrinth **
 Lua
 Make **
@@ -73,6 +76,7 @@ PHP
 Piet **
 Pizza
 Pony
+Potassco
 Prolog **
 Pyth **
 Python

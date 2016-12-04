@@ -11,7 +11,7 @@ list of the languages that have been used in these challenges so far.
 * APL
 * Batch
 * Befunge
-* Brainf**k
+* Brainf\*\*k
 * CJam
 * COBOL
 * Csh
@@ -25,6 +25,7 @@ list of the languages that have been used in these challenges so far.
 * Ioke
 * J
 * Jelly
+* JSF\*\*k
 * Labyrinth
 * Make
 * NASM
@@ -53,7 +54,7 @@ list of the languages that have been used in these challenges so far.
 
 ### Euler 2
 * File: problem2.bf
-* Language: [Brainf**k](https://en.wikipedia.org/wiki/Brainfuck)
+* Language: [Brainf\*\*k](https://en.wikipedia.org/wiki/Brainfuck)
 * Compiler / Interpreter: [copy.sh](https://copy.sh/brainfuck/)
 * Notes: This code was written with the help of a Lisp translator program.
 
@@ -261,13 +262,19 @@ list of the languages that have been used in these challenges so far.
 * Compiler / Interpreter: [repl.it](https://repl.it/languages/forth)
 * Notes: (None)
 
+### Euler 37
+* File: problem37.jsf
+* Language: [JSF\*\*k](http://www.jsfuck.com/)
+* Compiler / Interpreter [The provided runner](http://www.jsfuck.com/)
+* Notes: Code was generated with the help of the official website's translator
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular,
 a language does not have to be Turing-complete in order for me to consider using it for this challenge.
 Here are just a few of the guidelines I am following. These are in no way permanent or binding and will
 change as I progress.
-* BF-derivatives and BF-clones are considered identical to Brainf**k and will not be used.
+* BF-derivatives and BF-clones are considered identical to Brainf\*\*k and will not be used.
 * Lisp derivatives are considered distinct. That is, there will be a Racket, a Common Lisp, and an ELisp,
   which are all distinct languages.
 * Sufficiently different BASIC dialects will be considered distinct. That is, Visual BASIC, Liberty BASIC, and
