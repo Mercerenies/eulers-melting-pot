@@ -1,6 +1,7 @@
 /// **
 05AB1E **
 ><>
+*><>
 ActionScript
 Ada
 Agda
@@ -58,6 +59,7 @@ Java
 Javascript
 Jelly **
 JSF**k **
+JustBASIC **
 Labyrinth **
 Lua
 Make **

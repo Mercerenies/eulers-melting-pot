@@ -26,6 +26,7 @@ list of the languages that have been used in these challenges so far.
 * J
 * Jelly
 * JSF\*\*k
+* JustBASIC
 * Labyrinth
 * Make
 * NASM
@@ -265,8 +266,14 @@ list of the languages that have been used in these challenges so far.
 ### Euler 37
 * File: problem37.jsf
 * Language: [JSF\*\*k](http://www.jsfuck.com/)
-* Compiler / Interpreter [The provided runner](http://www.jsfuck.com/)
+* Compiler / Interpreter: [The provided runner](http://www.jsfuck.com/)
 * Notes: Code was generated with the help of the official website's translator
+
+### Euler 38
+* File: problem38.bas
+* Language: [JustBASIC](http://justbasic.com/)
+* Compiler / Interpreter: [The provided IDE](http://justbasic.com/download.html)
+* Notes: (None)
 
 ## Valid Languages
 
