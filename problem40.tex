@@ -1,0 +1,112 @@
+\documentclass{article}
+\begin{document}
+
+\newcount \accum
+\newcount \value \newcount \digital \newcount \temp
+\newcount \datan \newcount \datai \newcount \datas
+\newcount \topof \newcount \topofx \newcount \looper \newcount \looperx
+
+\newcommand{\hgrab}{
+  % Pass in argument through \value and number of times to \digital
+  % Returns in \value
+  \let\gnext=\hgrab
+  \ifnum \digital=0
+    \let\gnext=\relax
+  \else
+    \divide \value by 10
+    \advance \digital by -1
+  \fi
+  \gnext
+}
+
+\newcommand{\grab}[2]{
+  % Returns \value
+  \value=#1
+  \digital=#2
+  \hgrab
+}
+
+\newcommand{\hup}{
+  % Pass in argument through \value and number of times to \digital
+  % Returns in \value
+  \let\pnext=\hup
+  \ifnum \digital=0
+    \let\pnext=\relax
+  \else
+    \multiply \value by 10
+    \advance \digital by -1
+  \fi
+  \pnext
+}
+
+\newcommand{\gohup}[2]{
+  % Returns \value
+  \value=#1
+  \digital=#2
+  \hup
+}
+
+\newcommand{\helper}{
+  % Call as \helper with \datan, \datai, \datas, \topof, \topofx, \looper, \looperx
+  % Returns result in \value
+  % Where n is the current number, i is the number of remaining indices, s is the buffered string
+  % \looperx is the number of digits remaining, \looper is the number of digits starting
+  % \topofx is the number of times this digit count remains, \topof is the number starting for \topofx
+  \let\hnext=\helper
+  \ifnum \looperx=0
+    \datas=\datan
+    \advance \topofx by -1
+    \ifnum \topofx=0
+      \multiply \topof by 10
+      \topofx=\topof
+      \advance \looper by 1
+    \fi
+    \looperx=\looper
+    \advance \datan by 1
+  \else
+    \advance \looperx by -1
+    \grab{\datas}{\looperx}
+    \ifnum \datai=0
+      \let\hnext=\relax
+    \else
+      \temp=\value
+      \gohup{1}{\looperx}
+      \multiply \value by \temp
+      \advance \datai by -1
+      \advance \datas by -\value
+    \fi
+  \fi
+  \hnext
+}
+
+\newcommand{\digitof}[1]{
+  \datan=2
+  \datai=#1
+  \advance \datai by -1 % Use 1-indexing
+  \datas=1
+  \looperx=1
+  \looper=1
+  \topof=9
+  \topofx=9
+  \helper
+}
+
+\accum=1
+\digitof{1}
+\multiply \accum by \value
+\digitof{10}
+\multiply \accum by \value
+\digitof{100}
+\multiply \accum by \value
+\digitof{1000}
+\multiply \accum by \value
+\digitof{10000}
+\multiply \accum by \value
+\digitof{100000}
+\multiply \accum by \value
+\digitof{1000000}
+\multiply \accum by \value
+
+\the\accum
+
+\end{document}

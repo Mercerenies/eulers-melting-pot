@@ -29,6 +29,7 @@ list of the languages that have been used in these challenges so far.
 * JSF\*\*k
 * JustBASIC
 * Labyrinth
+* LaTeX
 * Make
 * NASM
 * OCaml
@@ -281,6 +282,12 @@ list of the languages that have been used in these challenges so far.
 * Language: [Ada](https://en.wikipedia.org/wiki/Ada_(programming_language))
 * Compiler / Interpreter [tutorialspoint.com](https://www.tutorialspoint.com/compile_ada_online.php)
 * Notes: (None)
+
+### Euler 40
+* File: [problem40.tex](problem40.tex)
+* Language: [LaTeX](https://en.wikipedia.org/wiki/LaTeX)
+* Compiler / Interpreter [MiKTeX](https://miktex.org/)
+* Notes: May have to increase the memory limit, depending on OS
 
 ## Valid Languages
 

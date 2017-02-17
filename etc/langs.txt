@@ -61,6 +61,7 @@ Jelly **
 JSF**k **
 JustBASIC **
 Labyrinth **
+LaTeX **
 Lua
 Make **
 Maple
