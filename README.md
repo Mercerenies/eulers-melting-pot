@@ -8,6 +8,7 @@ Full details of the various solutions are listed below, but for the sake of easy
 list of the languages that have been used in these challenges so far.
 * ///
 * 05AB1E
+* Ada
 * APL
 * Batch
 * Befunge
@@ -273,6 +274,12 @@ list of the languages that have been used in these challenges so far.
 * File: [problem38.bas](problem38.bas)
 * Language: [JustBASIC](http://justbasic.com/)
 * Compiler / Interpreter: [The provided IDE](http://justbasic.com/download.html)
+* Notes: (None)
+
+### Euler 39
+* File: [problem39.adb](problem39.adb)
+* Language: [Ada](https://en.wikipedia.org/wiki/Ada_(programming_language))
+* Compiler / Interpreter [tutorialspoint.com](https://www.tutorialspoint.com/compile_ada_online.php)
 * Notes: (None)
 
 ## Valid Languages
