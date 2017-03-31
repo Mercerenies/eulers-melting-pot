@@ -55,7 +55,7 @@ INTERCAL
 Io **
 Ioke **
 J **
-Jasmin
+Jasmin **
 Java
 Javascript
 Jelly **

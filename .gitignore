@@ -4,3 +4,4 @@ vendor/*
 *.exe
 *.out
 *.obj
+*.class

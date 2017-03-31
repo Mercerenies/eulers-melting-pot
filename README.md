@@ -25,6 +25,7 @@ list of the languages that have been used in these challenges so far.
 * Io
 * Ioke
 * J
+* Jasmin
 * Jelly
 * JSF\*\*k
 * JustBASIC
@@ -295,6 +296,12 @@ list of the languages that have been used in these challenges so far.
 * Language: [MASM](https://en.wikipedia.org/wiki/Microsoft_Macro_Assembler)
 * Compiler / Interpreter: [MASM32](http://www.masm32.com/)
 * Notes: A somewhat slow solution.
+
+### Euler 42
+* File: [problem42.j](problem42.j)
+* Language: [Jasmin](http://jasmin.sourceforge.net/about.html)
+* Compiler / Interpreter: [The standard assembler](http://jasmin.sourceforge.net/)
+* Notes: (None)
 
 ## Valid Languages
 
