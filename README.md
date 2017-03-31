@@ -31,6 +31,7 @@ list of the languages that have been used in these challenges so far.
 * Labyrinth
 * LaTeX
 * Make
+* MASM
 * NASM
 * OCaml
 * Piet
@@ -269,7 +270,7 @@ list of the languages that have been used in these challenges so far.
 * File: [problem37.jsf](problem37.jsf)
 * Language: [JSF\*\*k](http://www.jsfuck.com/)
 * Compiler / Interpreter: [The provided runner](http://www.jsfuck.com/)
-* Notes: Code was generated with the help of the official website's translator
+* Notes: Code was generated with the help of the official website's translator.
 
 ### Euler 38
 * File: [problem38.bas](problem38.bas)
@@ -280,14 +281,20 @@ list of the languages that have been used in these challenges so far.
 ### Euler 39
 * File: [problem39.adb](problem39.adb)
 * Language: [Ada](https://en.wikipedia.org/wiki/Ada_(programming_language))
-* Compiler / Interpreter [tutorialspoint.com](https://www.tutorialspoint.com/compile_ada_online.php)
+* Compiler / Interpreter: [tutorialspoint.com](https://www.tutorialspoint.com/compile_ada_online.php)
 * Notes: (None)
 
 ### Euler 40
 * File: [problem40.tex](problem40.tex)
 * Language: [LaTeX](https://en.wikipedia.org/wiki/LaTeX)
-* Compiler / Interpreter [MiKTeX](https://miktex.org/)
-* Notes: May have to increase the memory limit, depending on OS
+* Compiler / Interpreter: [MiKTeX](https://miktex.org/)
+* Notes: May have to increase the memory limit, depending on OS.
+
+### Euler 41
+* File: [problem41.asm](problem41.asm)
+* Language: [MASM](https://en.wikipedia.org/wiki/Microsoft_Macro_Assembler)
+* Compiler / Interpreter: [MASM32](http://www.masm32.com/)
+* Notes: A somewhat slow solution.
 
 ## Valid Languages
 

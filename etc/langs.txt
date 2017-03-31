@@ -38,6 +38,7 @@ ELisp
 Elixir **
 Elm
 Erlang
+Euler
 F#
 Fission
 Forth **
@@ -60,18 +61,22 @@ Javascript
 Jelly **
 JSF**k **
 JustBASIC **
+Kotlin
 Labyrinth **
 LaTeX **
 Lua
 Make **
 Maple
 Mathematica
+MASM **
 MATL
 MATLAB
 Modula
+Modula-2
 NASM **
 NewLISP
 OCaml **
+Oasis
 P"
 Pascal
 Perl
