@@ -301,7 +301,7 @@ list of the languages that have been used in these challenges so far.
 * File: [problem42.j](problem42.j)
 * Language: [Jasmin](http://jasmin.sourceforge.net/about.html)
 * Compiler / Interpreter: [The standard assembler](http://jasmin.sourceforge.net/)
-* Notes: (None)
+* Notes: Depends on `./files/p042_words.txt`.
 
 ## Valid Languages
 
