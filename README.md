@@ -45,6 +45,7 @@ list of the languages that have been used in these challenges so far.
 * Smalltalk
 * SML
 * Stuck
+* Tcl
 * Whitespace
 * XSLT
 * Zsh
@@ -302,6 +303,12 @@ list of the languages that have been used in these challenges so far.
 * Language: [Jasmin](http://jasmin.sourceforge.net/about.html)
 * Compiler / Interpreter: [The standard assembler](http://jasmin.sourceforge.net/)
 * Notes: Depends on `./files/p042_words.txt`.
+
+### Euler 43
+* File: [problem43.tcl](problem43.tcl)
+* Language: [Tcl](http://wiki.tcl.tk/299)
+* Compiler / Interpreter: [The standard interpreter](http://tcl.tk/)
+* Notes: (None)
 
 ## Valid Languages
 
