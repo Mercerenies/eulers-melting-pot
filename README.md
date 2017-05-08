@@ -46,6 +46,7 @@ list of the languages that have been used in these challenges so far.
 * SML
 * Stuck
 * Tcl
+* VBA
 * Whitespace
 * XSLT
 * Zsh
@@ -309,6 +310,12 @@ list of the languages that have been used in these challenges so far.
 * Language: [Tcl](http://wiki.tcl.tk/299)
 * Compiler / Interpreter: [The standard interpreter](http://tcl.tk/)
 * Notes: (None)
+
+### Euler 44
+* File: [problem44.xlsm](problem44.xlsm)
+* Language: [VBA](https://en.wikipedia.org/wiki/Visual_Basic_for_Applications)
+* Compiler / Interpreter: [Microsoft Excel 2013](https://products.office.com/en-us/microsoft-excel-2013)
+* Notes: Run the macro `Sheet1.Euler44`.
 
 ## Valid Languages
 

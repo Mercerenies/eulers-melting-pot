@@ -109,6 +109,7 @@ Teascript
 Tcl **
 TI BASIC
 Unlambda
+VBA **
 Visual Basic
 Whitespace **
 XSLT **
