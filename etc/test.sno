@@ -1,0 +1,6 @@
+START     VAR = 1
+LOOP      OUTPUT = VAR
+          VAR = VAR + 1
+          LT(VAR,10)    :S(LOOP)
+          OUTPUT = "Done"
+END
