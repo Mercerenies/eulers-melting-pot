@@ -7,6 +7,7 @@ This is a Project Euler attempt. The catch is that every challenge will be compl
 Full details of the various solutions are listed below, but for the sake of easy reference, here is an alphabetized
 list of the languages that have been used in these challenges so far.
 * ///
+* ><>
 * 05AB1E
 * Ada
 * APL
@@ -316,6 +317,12 @@ list of the languages that have been used in these challenges so far.
 * Language: [VBA](https://en.wikipedia.org/wiki/Visual_Basic_for_Applications)
 * Compiler / Interpreter: [Microsoft Excel 2013](https://products.office.com/en-us/microsoft-excel-2013)
 * Notes: Run the macro `Sheet1.Euler44`.
+
+### Euler 45
+* File: [problem45.fish](problem45.fish)
+* Language: [><>](https://esolangs.org/wiki/Fish)
+* Compiler / Interpreter: [fish.py](https://gist.github.com/anonymous/6392418)
+* Notes: (None)
 
 ## Valid Languages
 
