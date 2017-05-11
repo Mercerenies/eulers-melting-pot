@@ -1,7 +1,7 @@
+*><>
 /// **
 05AB1E **
 ><>
-*><>
 ActionScript
 Ada **
 Agda
@@ -20,6 +20,7 @@ Brainf**k **
 C
 C#
 C++
+CandleScript
 Ceylon
 Chef
 CJam **
@@ -40,6 +41,7 @@ Elm
 Erlang
 Euler
 F#
+Fancy
 Fission
 Forth **
 Fortran **
@@ -67,25 +69,27 @@ LaTeX **
 Lua
 Make **
 Maple
-Mathematica
 MASM **
+Mathematica
 MATL
 MATLAB
 Modula
 Modula-2
 NASM **
 NewLISP
-OCaml **
 Oasis
+OCaml **
 Ohm
 P"
 Pascal
 Perl
 PHP
 Piet **
+Pikt
 Pizza
 Pony
 Potassco
+PPL
 Prolog **
 Pyth **
 Python
@@ -105,12 +109,13 @@ SML **
 SNOBOL
 Squeak
 Stuck **
-Teascript
 Tcl **
+Teascript
 TI BASIC
 Unlambda
 VBA **
 Visual Basic
 Whitespace **
+Wren
 XSLT **
 Zsh **
