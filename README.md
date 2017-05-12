@@ -34,6 +34,7 @@ list of the languages that have been used in these challenges so far.
 * LaTeX
 * Make
 * MASM
+* MATL
 * NASM
 * OCaml
 * Piet
@@ -322,6 +323,12 @@ list of the languages that have been used in these challenges so far.
 * File: [problem45.fish](problem45.fish)
 * Language: [><>](https://esolangs.org/wiki/Fish)
 * Compiler / Interpreter: [fish.py](https://gist.github.com/anonymous/6392418)
+* Notes: (None)
+
+### Euler 46
+* File: [problem46.matl](problem46.matl)
+* Language: [MATL](https://esolangs.org/wiki/MATL)
+* Compiler / Interpreter: [The official interpreter](https://github.com/lmendo/MATL/)
 * Notes: (None)
 
 ## Valid Languages
