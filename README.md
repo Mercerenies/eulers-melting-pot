@@ -320,7 +320,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem44.xlsm](problem44.xlsm)
 * Language: [VBA](https://en.wikipedia.org/wiki/Visual_Basic_for_Applications)
 * Compiler / Interpreter: [Microsoft Excel 2013](https://products.office.com/en-us/microsoft-excel-2013)
-* Notes: Run the macro `Sheet1.Euler44`.
+* Notes: Run the macro `Sheet1.Euler44`; code is available at [etc/problem44.bas](etc/problem44.bas).
 
 ### Euler 45
 * File: [problem45.fish](problem45.fish)
@@ -344,7 +344,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem48.sb2](problem48.sb2)
 * Language: [Scratch](https://scratch.mit.edu/)
 * Compiler / Interpreter: [The project editor](https://scratch.mit.edu/projects/editor/)
-* Notes: (None)
+* Notes: Screenshot is available at [etc/Scratch/problem48.png](etc/Scratch/problem48.png).
 
 ## Valid Languages
 
