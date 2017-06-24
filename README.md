@@ -42,6 +42,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Prolog
 * Pyth
 * QBASIC
+* Scratch
 * sed
 * Seriously
 * Shakespeare
@@ -338,6 +339,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [SNOBOL](http://www.snobol4.org/)
 * Compiler / Interpreter: [CSNOBOL4](http://www.snobol4.org/csnobol4/curr/)
 * Notes: A very slow solution.
+
+### Euler 48
+* File: [problem48.sb2](problem48.sb2)
+* Language: [Scratch](https://scratch.mit.edu/)
+* Compiler / Interpreter: [The project editor](https://scratch.mit.edu/projects/editor/)
+* Notes: (None)
 
 ## Valid Languages
 

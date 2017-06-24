@@ -98,7 +98,7 @@ Racket
 Roy
 Ruby
 Scala
-Scratch
+Scratch **
 sed **
 Self
 Seriously **
