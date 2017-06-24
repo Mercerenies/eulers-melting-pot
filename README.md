@@ -1,11 +1,12 @@
 # Euler's Melting Pot
 
-This is a Project Euler attempt. The catch is that every challenge will be completed in a different programming language.
+This is a Project Euler attempt. The catch is that every challenge will be completed in a different
+programming language.
 
 ## Languages Used
 
-Full details of the various solutions are listed below, but for the sake of easy reference, here is an alphabetized
-list of the languages that have been used in these challenges so far.
+Full details of the various solutions are listed below, but for the sake of easy reference, here is an
+alphabetized list of the languages that have been used in these challenges so far.
 * ///
 * \>\<\>
 * 05AB1E
@@ -46,6 +47,7 @@ list of the languages that have been used in these challenges so far.
 * Shakespeare
 * Smalltalk
 * SML
+* SNOBOL
 * Stuck
 * Tcl
 * VBA
@@ -331,6 +333,12 @@ list of the languages that have been used in these challenges so far.
 * Compiler / Interpreter: [The official interpreter](https://github.com/lmendo/MATL/)
 * Notes: (None)
 
+### Euler 47
+* File: [problem47.sno](problem47.sno)
+* Language: [SNOBOL](http://www.snobol4.org/)
+* Compiler / Interpreter: [CSNOBOL4](http://www.snobol4.org/csnobol4/curr/)
+* Notes: A very slow solution.
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular,
@@ -338,21 +346,22 @@ a language does not have to be Turing-complete in order for me to consider using
 Here are just a few of the guidelines I am following. These are in no way permanent or binding and will
 change as I progress.
 * BF-derivatives and BF-clones are considered identical to Brainf\*\*k and will not be used.
-* Lisp derivatives are considered distinct. That is, there will be a Racket, a Common Lisp, and an ELisp,
-  which are all distinct languages.
-* Sufficiently different BASIC dialects will be considered distinct. That is, Visual BASIC, Liberty BASIC, and
-  QBASIC are distinct languages, but Liberty BASIC and JustBASIC are one and the same.
-* The result should be in a normal, human readable form. For example, in BF it is insufficient to print the
-  ASCII character associated with the integer result; it is required to print the result as a number. There is
-  no specific required format, as some languages may include some garbage around the answer, so long as the
-  answer as outputted is clear and readable. If the language is incapable of outputting a human readable
-  value, whatever is considered acceptable output within the language will be acceptable.
-* I have written a few programming languages. At least one of them is in a usable state right now. For fairness,
-  I will not be using any language that I myself wrote.
+* Lisp derivatives are considered distinct. That is, there will be a Racket, a Common Lisp, and an
+  ELisp, which are all distinct languages.
+* Sufficiently different BASIC dialects will be considered distinct. That is, Visual BASIC, Liberty
+  BASIC, and QBASIC are distinct languages, but Liberty BASIC and JustBASIC are one and the same.
+* The result should be in a normal, human readable form. For example, in BF it is insufficient to
+  print the ASCII character associated with the integer result; it is required to print the result as
+  a number. There is no specific required format, as some languages may include some garbage around
+  the answer, so long as the answer as outputted is clear and readable. If the language is incapable
+  of outputting a human readable value, whatever is considered acceptable output within the language
+  will be acceptable.
+* I have written a few programming languages. At least one of them is in a usable state right now.
+  For fairness, I will not be using any language that I myself wrote.
 
 ## Final Notes
 
-You'll notice that I'm not using many of the mainstream languages so far. This is not because I'm trying to
-make this challenge harder than it is; this is a purely strategic decision. The later Project Euler problems
-are more difficult, so I am saving the powerful and easy-to-use languages for them and using obscure, esoteric
-languages for the easier problems.
+You'll notice that I'm not using many of the mainstream languages so far. This is not because I'm
+trying to make this challenge harder than it is; this is a purely strategic decision. The later
+Project Euler problems are more difficult, so I am saving the powerful and easy-to-use languages
+for them and using obscure, esoteric languages for the easier problems.

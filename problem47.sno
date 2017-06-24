@@ -1,0 +1,28 @@
+START     MATCHES = 0
+          LENGTH = 4
+          COUNTER = 2
+LOOP      DISTINCT = 0
+          INNER = 2
+          ACCUM = 1
+COUNTING  EQ(REMDR(COUNTER,INNER),0)    :F(NOMATCH)
+          FACTOR = 2
+PRIMALITY GT(FACTOR,SQRT(INNER))        :S(PRIME)
+          EQ(REMDR(INNER,FACTOR),0)     :S(NOMATCH)
+          FACTOR = FACTOR + 1           : (PRIMALITY)
+PRIME     DISTINCT = DISTINCT + 1
+SUMMING   ACCUM = ACCUM * INNER
+          EQ(REMDR(COUNTER,ACCUM),0)    :S(SUMMING)
+          ACCUM = ACCUM / INNER
+          GE(ACCUM,COUNTER)             :S(FINAL)
+          GT(DISTINCT, LENGTH)          :S(RESET)
+NOMATCH   INNER = INNER + 1
+          LT(INNER,COUNTER)             :S(COUNTING)
+FINAL     LT(DISTINCT,LENGTH)           :S(RESET)
+          MATCHING = MATCHING + 1
+          EQ(MATCHING,LENGTH)           :S(FINISH)
+          COUNTER = COUNTER + 1         : (LOOP)
+RESET     MATCHING = 0
+          EQ(REMDR(COUNTER,1000),0)     :F(SKIP)
+SKIP      COUNTER = COUNTER + 1         : (LOOP)
+FINISH    OUTPUT = COUNTER - LENGTH + 1
+END

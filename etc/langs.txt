@@ -105,7 +105,8 @@ Seriously **
 Shakespeare **
 Smalltalk **
 SML **
-SNOBOL
+Snails
+SNOBOL **
 Squeak
 Stuck **
 Tcl **
