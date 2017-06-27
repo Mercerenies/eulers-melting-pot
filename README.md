@@ -15,6 +15,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Batch
 * Befunge
 * Brainf\*\*k
+* CIL
 * CJam
 * COBOL
 * Csh
@@ -345,6 +346,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Scratch](https://scratch.mit.edu/)
 * Compiler / Interpreter: [The project editor](https://scratch.mit.edu/projects/editor/)
 * Notes: Screenshot is available at [etc/Scratch/problem48.png](etc/Scratch/problem48.png).
+
+### Euler 49
+* File: [problem49.il](problem49.il)
+* Language: [CIL](https://en.wikipedia.org/wiki/Common_Intermediate_Language)
+* Compiler / Interpreter: [Mono](http://www.mono-project.com/)
+* Notes: (None)
 
 ## Valid Languages
 
