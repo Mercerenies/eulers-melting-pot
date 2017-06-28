@@ -11,6 +11,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * \>\<\>
 * 05AB1E
 * Ada
+* ALGOL 68
 * APL
 * Batch
 * Befunge
@@ -351,6 +352,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem49.il](problem49.il)
 * Language: [CIL](https://en.wikipedia.org/wiki/Common_Intermediate_Language)
 * Compiler / Interpreter: [Mono](http://www.mono-project.com/)
+* Notes: (None)
+
+### Euler 50
+* File: [problem50.alg](problem50.alg)
+* Language: [ALGOL 68](https://en.wikipedia.org/wiki/ALGOL_68)
+* Compiler / Interpreter: [tutorialspoint.com](https://www.tutorialspoint.com/execute_algol_online.php)
 * Notes: (None)
 
 ## Valid Languages

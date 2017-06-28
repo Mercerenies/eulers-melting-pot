@@ -5,7 +5,7 @@
 ActionScript
 Ada **
 Agda
-ALGOL
+ALGOL 68 **
 Alice
 APL **
 ASP
