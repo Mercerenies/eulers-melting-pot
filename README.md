@@ -20,6 +20,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * CJam
 * COBOL
 * Csh
+* D
 * Elixir
 * Forth
 * Fortran
@@ -358,6 +359,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem50.alg](problem50.alg)
 * Language: [ALGOL 68](https://en.wikipedia.org/wiki/ALGOL_68)
 * Compiler / Interpreter: [tutorialspoint.com](https://www.tutorialspoint.com/execute_algol_online.php)
+* Notes: (None)
+
+### Euler 51
+* File: [problem51.d](problem51.d)
+* Language: [D](https://dlang.org/)
+* Compiler / Interpreter: [DMD](https://dlang.org/download.html)
 * Notes: (None)
 
 ## Valid Languages

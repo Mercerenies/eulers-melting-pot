@@ -31,7 +31,7 @@ COBOL **
 Coffeescript
 Common Lisp
 Csh **
-D
+D **
 Dash
 Delphi
 E
