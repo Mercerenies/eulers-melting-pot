@@ -98,6 +98,7 @@ R
 Racket
 Roy
 Ruby
+Rust
 Scala
 Scratch **
 sed **
