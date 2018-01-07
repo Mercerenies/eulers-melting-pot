@@ -118,6 +118,6 @@ Unlambda
 VBA **
 Visual Basic
 Whitespace **
-Wren
+Wren **
 XSLT **
 Zsh **

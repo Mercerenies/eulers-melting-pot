@@ -56,6 +56,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Tcl
 * VBA
 * Whitespace
+* Wren
 * XSLT
 * Zsh
 
@@ -365,6 +366,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem51.d](problem51.d)
 * Language: [D](https://dlang.org/)
 * Compiler / Interpreter: [DMD](https://dlang.org/download.html)
+* Notes: (None)
+
+### Euler 52
+* File: [problem52.wren](problem52.wren)
+* Language: [Wren](http://wren.io/)
+* Compiler / Interpreter: [The reference implementation](https://github.com/munificent/wren)
 * Notes: (None)
 
 ## Valid Languages
