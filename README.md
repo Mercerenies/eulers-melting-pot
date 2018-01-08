@@ -7,9 +7,10 @@ programming language.
 
 Full details of the various solutions are listed below, but for the sake of easy reference, here is an
 alphabetized list of the languages that have been used in these challenges so far.
+* \*\>\<\>
 * ///
-* \>\<\>
 * 05AB1E
+* \>\<\>
 * Ada
 * ALGOL 68
 * APL
@@ -372,6 +373,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem52.wren](problem52.wren)
 * Language: [Wren](http://wren.io/)
 * Compiler / Interpreter: [The reference implementation](https://github.com/munificent/wren)
+* Notes: (None)
+
+### Euler 53
+* File: [problem53.sfish](problem53.sfish)
+* Language: [*><>](http://esolangs.org/wiki/Starfish)
+* Compiler / Interpreter: [The official interpreter](https://github.com/redstarcoder/go-starfish/releases)
 * Notes: (None)
 
 ## Valid Languages
