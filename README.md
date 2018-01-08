@@ -46,6 +46,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Prolog
 * Pyth
 * QBASIC
+* Rust
 * Scratch
 * sed
 * Seriously
@@ -379,6 +380,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem53.sfish](problem53.sfish)
 * Language: [*><>](http://esolangs.org/wiki/Starfish)
 * Compiler / Interpreter: [The official interpreter](https://github.com/redstarcoder/go-starfish/releases)
+* Notes: (None)
+
+### Euler 54
+* File: [problem54.rs](problem54.rs)
+* Language: [Rust](https://www.rust-lang.org/)
+* Compiler / Interpreter: [The standard compiler](https://www.rust-lang.org/en-US/install.html)
 * Notes: (None)
 
 ## Valid Languages
