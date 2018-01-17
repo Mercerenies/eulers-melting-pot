@@ -42,6 +42,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * MATL
 * NASM
 * OCaml
+* Pascal
 * Piet
 * Prolog
 * Pyth
@@ -386,6 +387,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem54.rs](problem54.rs)
 * Language: [Rust](https://www.rust-lang.org/)
 * Compiler / Interpreter: [The standard compiler](https://www.rust-lang.org/en-US/install.html)
+* Notes: (None)
+
+### Euler 55
+* File: [problem55.pas](problem55.pas)
+* Language: [Pascal](https://en.wikipedia.org/wiki/Pascal_(programming_language))
+* Compiler / Interpreter: [tutorialspoint.com](https://www.tutorialspoint.com/compile_pascal_online.php)
 * Notes: (None)
 
 ## Valid Languages

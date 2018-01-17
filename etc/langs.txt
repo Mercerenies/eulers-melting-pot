@@ -82,7 +82,7 @@ Oasis
 OCaml **
 Ohm
 P"
-Pascal
+Pascal **
 Perl
 PHP
 Piet **
