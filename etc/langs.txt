@@ -14,6 +14,7 @@ AutoLISP
 AWK
 Bash
 Batch **
+bc **
 Befunge **
 Brachylog
 Brainf**k **
@@ -111,6 +112,7 @@ SML **
 Snails
 SNOBOL **
 Squeak
+Streem
 Stuck **
 Tcl **
 Teascript

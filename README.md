@@ -15,6 +15,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * ALGOL 68
 * APL
 * Batch
+* bc
 * Befunge
 * Brainf\*\*k
 * CIL
@@ -393,6 +394,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem55.pas](problem55.pas)
 * Language: [Pascal](https://en.wikipedia.org/wiki/Pascal_(programming_language))
 * Compiler / Interpreter: [tutorialspoint.com](https://www.tutorialspoint.com/compile_pascal_online.php)
+* Notes: (None)
+
+### Euler 56
+* File: [problem56.bc](problem56.bc)
+* Language: [bc](https://en.wikipedia.org/wiki/Bc_(programming_language))
+* Compiler / Interpreter: GNU bc
 * Notes: (None)
 
 ## Valid Languages
