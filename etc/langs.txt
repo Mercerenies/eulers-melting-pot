@@ -43,7 +43,7 @@ Elm
 Erlang
 Euler
 F#
-Factor
+Factor **
 Fancy
 Fission
 Forth **
@@ -87,6 +87,7 @@ Pascal **
 Perl
 PHP
 Piet **
+Pike
 Pikt
 Pizza
 Pony

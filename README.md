@@ -24,6 +24,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Csh
 * D
 * Elixir
+* Factor
 * Forth
 * Fortran
 * Go
@@ -400,6 +401,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem56.bc](problem56.bc)
 * Language: [bc](https://en.wikipedia.org/wiki/Bc_(programming_language))
 * Compiler / Interpreter: GNU bc
+* Notes: (None)
+
+### Euler 57
+* File: [problem57.fctr](problem57.fctr)
+* Language: [Factor](http://factorcode.org/)
+* Compiler / Interpreter: [The official interpreter](http://factorcode.org/#downloads)
 * Notes: (None)
 
 ## Valid Languages
