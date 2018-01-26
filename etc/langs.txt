@@ -37,7 +37,7 @@ Dash
 Delphi
 E
 Eiffel
-ELisp
+ELisp **
 Elixir **
 Elm
 Enchilada

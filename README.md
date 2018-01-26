@@ -23,6 +23,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * COBOL
 * Csh
 * D
+* ELisp
 * Elixir
 * Factor
 * Forth
@@ -408,6 +409,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Factor](http://factorcode.org/)
 * Compiler / Interpreter: [The official interpreter](http://factorcode.org/#downloads)
 * Notes: (None)
+
+### Euler 58
+* File: [problem58.el](problem58.el)
+* Language: [ELisp](https://www.gnu.org/software/emacs/manual/html_node/elisp/)
+* Compiler / Interpreter: [GNU Emacs](https://www.gnu.org/software/emacs/)
+* Notes: A somewhat slow solution.
 
 ## Valid Languages
 
