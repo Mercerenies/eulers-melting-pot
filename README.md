@@ -47,6 +47,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * OCaml
 * Pascal
 * Piet
+* Pike
 * Prolog
 * Pyth
 * QBASIC
@@ -415,6 +416,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [ELisp](https://www.gnu.org/software/emacs/manual/html_node/elisp/)
 * Compiler / Interpreter: [GNU Emacs](https://www.gnu.org/software/emacs/)
 * Notes: A somewhat slow solution.
+
+## Euler 59
+* File: [problem59.pike](problem59.pike)
+* Language: [Pike](http://pike.lysator.liu.se/)
+* Compiler / Interpreter: [The official interpreter](http://pike.lysator.liu.se/download/)
+* Notes: (None)
 
 ## Valid Languages
 
