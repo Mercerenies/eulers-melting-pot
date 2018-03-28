@@ -1,4 +1,6 @@
 
+(require 'calc-ext)
+
 (let ((num 0)
       (den 1)
       (v 1)
