@@ -22,6 +22,7 @@ C
 C#
 C++
 CandleScript
+Cecil
 Ceylon
 Chef
 CIL **
@@ -50,7 +51,7 @@ Fission
 Forth **
 Fortran **
 Fourier
-GML
+GML **
 Go **
 Golfscript **
 Groovy

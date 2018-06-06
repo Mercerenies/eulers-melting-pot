@@ -28,6 +28,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Factor
 * Forth
 * Fortran
+* GML
 * Go
 * Golfscript
 * Hexagony
@@ -422,6 +423,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Pike](http://pike.lysator.liu.se/)
 * Compiler / Interpreter: [The official interpreter](http://pike.lysator.liu.se/download/)
 * Notes: (None)
+
+## Euler 60
+* File: [problem60.gml](problem60.gml)
+* Language: [Game Maker Language](https://docs.yoyogames.com/source/dadiospice/002_reference/001_gml%20language%20overview/)
+* Compiler / Interpreter: [GMLive](https://yal.cc/r/gml/)
+* Notes: The interpreter seems to run faster in Google Chrome.
 
 ## Valid Languages
 
