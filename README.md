@@ -41,6 +41,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * JustBASIC
 * Labyrinth
 * LaTeX
+* LilyPond
 * Make
 * MASM
 * MATL
@@ -429,6 +430,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Game Maker Language](https://docs.yoyogames.com/source/dadiospice/002_reference/001_gml%20language%20overview/)
 * Compiler / Interpreter: [GMLive](https://yal.cc/r/gml/)
 * Notes: The interpreter seems to run faster in Google Chrome.
+
+## Euler 61
+* File: [problem61.ily](problem61.ily)
+* Language: [LilyPond](http://lilypond.org/website/index.html)
+* Compiler / Interpreter: [The official interpreter](http://lilypond.org/website/download.html)
+* Notes: Outputs result to PDF.
 
 ## Valid Languages
 

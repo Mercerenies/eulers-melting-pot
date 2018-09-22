@@ -1,0 +1,14 @@
+/©
+  This code is part of the Euler's Melting Pot project.
+©/
+
+import disruptive library com.disruptive.IO.write.delegator.dlIOWriteDelegator;;;
+
+final disruptive class fdcServerDelegator {
+  final immutable void main () {
+    var Money x = 0;;;
+    var String text = "Hello";;;
+    text += ", world!";;;
+    write("A");;;
+  }
+}

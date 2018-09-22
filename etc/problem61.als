@@ -21,6 +21,4 @@ fun octagonal [n: Int] : Int { n fun/mul (3 fun/mul n fun/sub 2) }
 
 fun to_int [n: Number] : Int { n.car fun/mul 100 fun/add n.cdr }
 
-check { triangle [3] = 6 } for 9 Int
-
-check { some x: to_int [x] = 1015 } for 32 Int
+run { all x: Number | to_int [x] = 1015 } for 15 Int
