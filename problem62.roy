@@ -1,0 +1,63 @@
+
+let is_permutation a b =
+  let a1 = (a.toString()).split("")
+  let b1 = (b.toString()).split("")
+  ((a1.sort()).toString()) == ((b1.sort()).toString())
+
+let NUMBER = 5
+
+let sorted x =
+  let y = (x.toString()).split("")
+  y.sort()
+  y.join("")
+
+data List = Null | Cons Number List
+
+data BST = Empty | Branch String Number BST BST
+
+let modify x y f bst =
+  match bst
+    case Empty = Branch x y (Empty()) (Empty())
+    case (Branch a b l r) = if x < a then
+                              Branch a b (modify x y f l) r
+                            else
+                              if x > a then
+                                Branch a b l (modify x y f r)
+                              else
+                                Branch a (f b) l r
+
+let access x y bst =
+  match bst
+    case Empty = y
+    case (Branch a b l r) = if x < a then
+                              access x y l
+                            else
+                              if x > a then
+                                access x y r
+                              else
+                                b
+
+let shift x y = Cons x y
+
+let reverse xs =
+  let rev a b = match b
+    case Null = a
+    case (Cons x y) = rev (Cons x a) y
+  rev (Null()) xs
+
+let find_match p xs =
+  match xs
+    case Null = null
+    case (Cons x xs) = if p x then x else find_match p xs
+
+let try_num xs bst n =
+  let i = Math.pow n 3
+  let i1 = sorted i
+  let xs1 = shift i xs
+  let bst1 = modify i1 1 (\j -> j + 1) bst
+  if (access i1 0 bst1) == NUMBER then
+    find_match (\x -> is_permutation x i) (reverse xs1)
+  else
+    try_num xs1 bst1 (n + 1)
+
+console.log(try_num (Null()) (Empty()) 1)

@@ -28,6 +28,7 @@ Ceylon
 Chef
 CIL **
 CJam **
+Clasp.py
 Clean
 Clojure
 COBOL **
@@ -88,7 +89,7 @@ NewLISP
 Oasis
 OCaml **
 Ohm
-P"
+Oz
 Pascal **
 Perl
 PHP
@@ -106,7 +107,7 @@ QBASIC **
 R
 Racket
 Rockstar
-Roy
+Roy **
 Ruby
 Rust **
 Scala

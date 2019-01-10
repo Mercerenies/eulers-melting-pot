@@ -53,6 +53,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Prolog
 * Pyth
 * QBASIC
+* Roy
 * Rust
 * Scratch
 * sed
@@ -436,6 +437,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [LilyPond](http://lilypond.org/website/index.html)
 * Compiler / Interpreter: [The official interpreter](http://lilypond.org/website/download.html)
 * Notes: Outputs result to PDF.
+
+## Euler 62
+* File: [problem62.roy](problem62.roy)
+* Language: [Roy](http://roy.brianmckenna.org/)
+* Compiler / Interpreter: [The provided compiler](http://roy.brianmckenna.org/)
+* Notes: May have to increase maximum stack size to run.
 
 ## Valid Languages
 
