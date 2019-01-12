@@ -1,0 +1,22 @@
+N=1
+
+:: filter
+{s f=[0] s [{a=[a]}] * 1 @ s f * 2 @ | [*] * 1 @ [+] * | .}
+
+:: le
+{n m=n m & n ?}
+
+:: ge
+{n m=n m & n ?}
+
+:: pow
+{a b=[1] [a *] b * | .}
+
+:: length
+{a=22 ~ [{i=1 a + 10 i pow ge}] filter [0] & .}
+
+:: countn
+{n=10 ~ [n pow] * [{x=x length n ?}] filter}
+
+:: main
+[0] 22 ~ [countn] * [+] * + . #

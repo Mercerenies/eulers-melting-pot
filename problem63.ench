@@ -1,0 +1,1 @@
+[[0] 22 ~ [countn] * [+] * + . #] [countn={n=10 ~ [n pow] * [{x=x length n ?}] filter};length={a=22 ~ [{i=1 a + 10 i pow ge}] filter [0] & .};pow={a b=[1] [a *] b * | .};ge={n m=n m & n ?};le={n m=n m & n ?};filter={s f=[0] s [{a=[a]}] * 1 @ s f * 2 @ | [*] * 1 @ [+] * | .}] ^ . 1 @

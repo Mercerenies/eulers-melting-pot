@@ -25,6 +25,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * D
 * ELisp
 * Elixir
+* Enchilada
 * Factor
 * Forth
 * Fortran
@@ -443,6 +444,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Roy](http://roy.brianmckenna.org/)
 * Compiler / Interpreter: [The provided compiler](http://roy.brianmckenna.org/)
 * Notes: May have to increase maximum stack size to run.
+
+## Euler 63
+* File: [problem63.ench](problem63.ench)
+* Language: [Enchilada](http://www.enchiladacode.nl/)
+* Compiler / Interpreter: [The official interpreter](http://www.enchiladacode.nl/download.html)
+* Notes: This code was compiled with the help of a Perl translator program.
 
 ## Valid Languages
 

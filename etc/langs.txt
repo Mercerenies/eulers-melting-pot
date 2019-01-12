@@ -44,7 +44,7 @@ Eiffel
 ELisp **
 Elixir **
 Elm
-Enchilada
+Enchilada **
 Erlang
 Euler
 F#
