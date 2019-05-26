@@ -23,6 +23,7 @@ C
 C#
 C++
 CandleScript
+Cat
 Cecil
 Ceylon
 Chef
@@ -32,6 +33,7 @@ Clasp.py
 Clean
 Clojure
 COBOL **
+Coconut
 Coffeescript
 Common Lisp
 Csh **
@@ -50,6 +52,7 @@ Euler
 F#
 Factor **
 Fancy
+Fennel
 Fission
 Forth **
 Fortran **
@@ -75,6 +78,7 @@ Kotlin
 Labyrinth **
 LaTeX **
 LilyPond **
+Logtalk
 Lua
 Make **
 Maple
@@ -89,7 +93,9 @@ NewLISP
 Oasis
 OCaml **
 Ohm
+Orc
 Oz
+Paperscript
 Pascal **
 Perl
 PHP
@@ -121,11 +127,14 @@ SML **
 Snails
 SNOBOL **
 Squeak
+Squirrel
 Streem
 Stuck **
+Sweet.js
 Tcl **
 Teascript
 TI BASIC
+Typescript
 Unlambda
 VBA **
 Visual Basic
@@ -133,4 +142,5 @@ Whitespace **
 Wren **
 XSLT **
 XY
+zkl
 Zsh **

@@ -1,0 +1,149 @@
+
+* LANGUAGES
+** UNCLASSIFIED
+*** *><>                                                               :used:
+*** ///                                                                :used:
+*** 05AB1E                                                             :used:
+*** ><>                                                                :used:
+*** ActionScript
+*** Ada                                                                :used:
+*** Agda
+*** ALGOL 68                                                           :used:
+*** Alice
+*** Alloy
+*** APL                                                                :used:
+*** ASP
+*** AutoHotkey
+*** AutoLISP
+*** AWK
+*** Bash
+*** Batch                                                              :used:
+*** bc                                                                 :used:
+*** Befunge                                                            :used:
+*** Brachylog
+*** Brainf**k                                                          :used:
+*** C
+*** C#
+*** C++
+*** CandleScript
+*** Cat
+*** Cecil
+*** Ceylon
+*** Chef
+*** CIL                                                                :used:
+*** CJam                                                               :used:
+*** Clasp.py
+*** Clean
+*** Clojure
+*** COBOL                                                              :used:
+*** Coconut
+*** Coffeescript
+*** Common Lisp
+*** Csh                                                                :used:
+*** Crystal
+*** D                                                                  :used:
+*** Dash
+*** Delphi
+*** E
+*** Eiffel
+*** ELisp                                                              :used:
+*** Elixir                                                             :used:
+*** Elm
+*** Enchilada                                                          :used:
+*** Erlang
+*** Euler
+*** F#
+*** Factor                                                             :used:
+*** Fancy
+*** Fennel
+*** Fission
+*** Forth                                                              :used:
+*** Fortran                                                            :used:
+*** Fourier
+*** GAP
+*** GML                                                                :used:
+*** Go                                                                 :used:
+*** Golfscript                                                         :used:
+*** Groovy
+*** Haskell
+*** Hexagony                                                           :used:
+*** Icon
+*** Io                                                                 :used:
+*** Ioke                                                               :used:
+*** J                                                                  :used:
+*** Jasmin                                                             :used:
+*** Java
+*** Javascript
+*** Jelly                                                              :used:
+*** JSF**k                                                             :used:
+*** JustBASIC                                                          :used:
+*** Kotlin
+*** Labyrinth                                                          :used:
+*** LaTeX                                                              :used:
+*** LilyPond                                                           :used:
+*** Logtalk
+*** Lua
+*** Make                                                               :used:
+*** Maple
+*** MASM                                                               :used:
+*** Mathematica
+*** MATL                                                               :used:
+*** MATLAB
+*** Modula
+*** Modula-2
+*** NASM                                                               :used:
+*** NewLISP
+*** Oasis
+*** OCaml                                                              :used:
+*** Ohm
+*** Orc
+*** Oz
+*** Paperscript
+*** Pascal                                                             :used:
+*** Perl
+*** PHP
+*** Piet                                                               :used:
+*** Pike                                                               :used:
+*** Pikt
+*** Pizza
+*** Pony
+*** Potassco
+*** PPL
+*** Prolog                                                             :used:
+*** Pyth                                                               :used:
+*** Python
+*** QBASIC                                                             :used:
+*** R
+*** Racket
+*** Rockstar
+*** Roy                                                                :used:
+*** Ruby
+*** Rust                                                               :used:
+*** Scala
+*** Scratch                                                            :used:
+*** sed                                                                :used:
+*** Self
+*** Seriously                                                          :used:
+*** Shakespeare                                                        :used:
+*** Smalltalk                                                          :used:
+*** SML                                                                :used:
+*** Snails
+*** SNOBOL                                                             :used:
+*** Squeak
+*** Squirrel
+*** Streem
+*** Stuck                                                              :used:
+*** Sweet.js
+*** Tcl                                                                :used:
+*** Teascript
+*** TI BASIC
+*** Typescript
+*** Unlambda
+*** VBA                                                                :used:
+*** Visual Basic
+*** Whitespace                                                         :used:
+*** Wren                                                               :used:
+*** XSLT                                                               :used:
+*** XY
+*** zkl
+*** Zsh                                                                :used:
