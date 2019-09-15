@@ -44,4 +44,4 @@ ifelse(eval($1 < 10000), 1, `loop(eval($1 + 1))')dnl
 dnl
 define(`total', 0)dnl
 loop(1)dnl
-total`'
+total
