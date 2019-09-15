@@ -74,6 +74,7 @@
 *** J                                                                  :used:
 *** LaTeX                                                              :used:
 *** LilyPond                                                           :used:
+*** m4                                                                 :used:
 *** Make                                                               :used:
 *** Pike                                                               :used:
 *** Potassco

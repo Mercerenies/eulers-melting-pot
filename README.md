@@ -43,6 +43,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Labyrinth
 * LaTeX
 * LilyPond
+* m4
 * Make
 * MASM
 * MATL
@@ -450,6 +451,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Enchilada](http://www.enchiladacode.nl/)
 * Compiler / Interpreter: [The official interpreter](http://www.enchiladacode.nl/download.html)
 * Notes: This code was compiled with the help of a Perl translator program.
+
+## Euler 64
+* File: [problem64.m4](problem64.m4)
+* Language: [m4](https://en.wikipedia.org/wiki/M4_(computer_language))
+* Compiler / Interpreter: [GNU m4](https://www.gnu.org/software/m4/m4.html)
+* Notes: Other m4 implementations may not work.
 
 ## Valid Languages
 
