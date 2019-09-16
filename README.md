@@ -29,6 +29,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Factor
 * Forth
 * Fortran
+* Funciton
 * GML
 * Go
 * Golfscript
@@ -457,6 +458,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [m4](https://en.wikipedia.org/wiki/M4_(computer_language))
 * Compiler / Interpreter: [GNU m4](https://www.gnu.org/software/m4/m4.html)
 * Notes: Other m4 implementations may not work.
+
+## Euler 65
+* File: [problem65.fnc](problem65.fnc)
+* Language: [Funciton](https://esolangs.org/wiki/Funciton)
+* Compiler / Interpreter: [The official interpreter](https://github.com/Timwi/Funciton)
+* Notes: A somewhat slow solution.
 
 ## Valid Languages
 
