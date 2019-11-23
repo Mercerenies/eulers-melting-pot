@@ -423,43 +423,43 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Compiler / Interpreter: [GNU Emacs](https://www.gnu.org/software/emacs/)
 * Notes: A somewhat slow solution.
 
-## Euler 59
+### Euler 59
 * File: [problem59.pike](problem59.pike)
 * Language: [Pike](http://pike.lysator.liu.se/)
 * Compiler / Interpreter: [The official interpreter](http://pike.lysator.liu.se/download/)
 * Notes: (None)
 
-## Euler 60
+### Euler 60
 * File: [problem60.gml](problem60.gml)
 * Language: [Game Maker Language](https://docs.yoyogames.com/source/dadiospice/002_reference/001_gml%20language%20overview/)
 * Compiler / Interpreter: [GMLive](https://yal.cc/r/gml/)
 * Notes: The interpreter seems to run faster in Google Chrome.
 
-## Euler 61
+### Euler 61
 * File: [problem61.ily](problem61.ily)
 * Language: [LilyPond](http://lilypond.org/website/index.html)
 * Compiler / Interpreter: [The official interpreter](http://lilypond.org/website/download.html)
 * Notes: Outputs result to PDF.
 
-## Euler 62
+### Euler 62
 * File: [problem62.roy](problem62.roy)
 * Language: [Roy](http://roy.brianmckenna.org/)
 * Compiler / Interpreter: [The provided compiler](http://roy.brianmckenna.org/)
 * Notes: May have to increase maximum stack size to run.
 
-## Euler 63
+### Euler 63
 * File: [problem63.ench](problem63.ench)
 * Language: [Enchilada](http://www.enchiladacode.nl/)
 * Compiler / Interpreter: [The official interpreter](http://www.enchiladacode.nl/download.html)
 * Notes: This code was compiled with the help of a Perl translator program.
 
-## Euler 64
+### Euler 64
 * File: [problem64.m4](problem64.m4)
 * Language: [m4](https://en.wikipedia.org/wiki/M4_(computer_language))
 * Compiler / Interpreter: [GNU m4](https://www.gnu.org/software/m4/m4.html)
 * Notes: Other m4 implementations may not work.
 
-## Euler 65
+### Euler 65
 * File: [problem65.fnc](problem65.fnc)
 * Language: [Funciton](https://esolangs.org/wiki/Funciton)
 * Compiler / Interpreter: [The official interpreter](https://github.com/Timwi/Funciton)
