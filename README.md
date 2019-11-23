@@ -412,7 +412,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Notes: (None)
 
 ### Euler 57
-* File: [problem57.fctr](problem57.fctr)
+* File: [problem57.fctr](problem57.factor)
 * Language: [Factor](http://factorcode.org/)
 * Compiler / Interpreter: [The official interpreter](http://factorcode.org/#downloads)
 * Notes: (None)
