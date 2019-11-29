@@ -103,7 +103,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 ### Euler 5
 * File: [problem5.jelly](problem5.jelly)
 * Language: [Jelly](https://github.com/DennisMitchell/jelly)
-* Compiler / Interpreter: [tryitonline.net](http://jelly.tryitonline.net/)
+* Compiler / Interpreter: [TIO Nexus](http://tio.run/#jelly)
 * Notes: (None)
 
 ### Euler 6
@@ -115,7 +115,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 ### Euler 7
 * File: [problem7.ws](problem7.ws)
 * Language: [Whitespace](http://compsoc.dur.ac.uk/whitespace/tutorial.html)
-* Compiler / Interpreter: [tryitonline.net](http://whitespace.tryitonline.net/)
+* Compiler / Interpreter: [TIO Nexus](http://tio.run/#whitespace)
 * Notes: This code was written with the help of a Lisp translator program.
 
 ### Euler 8
@@ -133,7 +133,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 ### Euler 10
 * File: [problem10.cjam](problem10.cjam)
 * Language: [CJam](https://sourceforge.net/projects/cjam/)
-* Compiler / Interpreter: [tryitonline.net](http://cjam.tryitonline.net/)
+* Compiler / Interpreter: [TIO Nexus](http://tio.run/#cjam)
 * Notes: (None)
 
 ### Euler 11
@@ -145,7 +145,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 ### Euler 12
 * File: [problem12.ab](problem12.ab)
 * Language: [05AB1E](https://github.com/Adriandmen/05AB1E/)
-* Compiler / Interpreter: [tryitonline.net](http://05ab1e.tryitonline.net/)
+* Compiler / Interpreter: [TIO Nexus](http://tio.run/#05ab1e)
 * Notes: (None)
 
 ### Euler 13
@@ -169,7 +169,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 ### Euler 16
 * File: [problem16.lab](problem16.lab)
 * Language: [Labyrinth](https://github.com/m-ender/labyrinth)
-* Compiler / Interpreter: [tryitonline.net](http://labyrinth.tryitonline.net/)
+* Compiler / Interpreter: [TIO Nexus](http://tio.run/#labyrinth)
 * Notes: (None)
 
 ### Euler 17
@@ -193,7 +193,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 ### Euler 20
 * File: [problem20.pyth](problem20.pyth)
 * Language: [Pyth](https://github.com/isaacg1/pyth)
-* Compiler / Interpreter: [tryitonline.net](http://pyth.tryitonline.net/)
+* Compiler / Interpreter: [TIO Nexus](http://TIO.run/#pyth)
 * Notes: (None)
 
 ### Euler 21
@@ -247,7 +247,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 ### Euler 29
 * File: [problem29.srs](problem29.srs)
 * Language: [Seriously](https://github.com/Mego/Seriously)
-* Compiler / Interpreter: [tryitonline.net](http://seriously.tryitonline.net/)
+* Compiler / Interpreter: [TIO Nexus](http://tio.run/#seriously)
 * Notes: The seemingly pointless union with the empty list at the end serves to remove duplicates.
 
 ### Euler 30
