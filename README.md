@@ -34,6 +34,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * GML
 * Go
 * Golfscript
+* Grocery List
 * Hexagony
 * Io
 * Ioke
@@ -471,6 +472,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [BeanShell](https://beanshell.github.io/)
 * Compiler / Interpreter: [TIO Nexus](https://tio.run/#beanshell)
 * Notes: (None)
+
+### Euler 67
+* File: [problem67.gl](problem67.gl)
+* Language: [Grocery List](https://esolangs.org/wiki/Grocery_List)
+* Compiler / Interpreter: [Archived interpreter](https://web.archive.org/web/20160404194506/https://bpaste.net/show/50974d4c80f8)
+* Notes: Pipe `./files/p067_triangle.txt` as standard input.
 
 ## Valid Languages
 

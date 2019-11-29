@@ -114,6 +114,7 @@
 *** FALSE
 *** Funciton                                                           :used:
 *** Golfscript                                                         :used:
+*** Grocery List                                                       :used:
 *** Hexagony                                                           :used:
 *** Javagrid
 *** Jelly                                                              :used:
@@ -122,6 +123,7 @@
 *** MATL                                                               :used:
 *** Piet                                                               :used:
 *** Pyth                                                               :used:
+*** Retina
 *** Seriously                                                          :used:
 *** Shakespeare                                                        :used:
 *** Stuck                                                              :used:
