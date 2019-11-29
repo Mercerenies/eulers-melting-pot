@@ -70,6 +70,7 @@
 *** APL                                                                :used:
 *** AutoHotkey
 *** bc                                                                 :used:
+*** BeanShell                                                          :used:
 *** GAP
 *** J                                                                  :used:
 *** LaTeX                                                              :used:
@@ -79,6 +80,7 @@
 *** Pike                                                               :used:
 *** Potassco
 *** Prolog                                                             :used:
+*** Rio
 *** Roy                                                                :used:
 *** Scratch                                                            :used:
 *** sed                                                                :used:
@@ -113,6 +115,7 @@
 *** Funciton                                                           :used:
 *** Golfscript                                                         :used:
 *** Hexagony                                                           :used:
+*** Javagrid
 *** Jelly                                                              :used:
 *** JSF**k                                                             :used:
 *** Labyrinth                                                          :used:
@@ -122,6 +125,8 @@
 *** Seriously                                                          :used:
 *** Shakespeare                                                        :used:
 *** Stuck                                                              :used:
+*** Taxi
+*** TRANSCRIPT
 *** Whitespace                                                         :used:
 ** UNUSABLE
 *** Clasp.py

@@ -1,0 +1,56 @@
+
+{
+ ///// Can't find a bignum-supported FALSE interpreter :(
+ maxd e
+ maxx y
+ d (global) d
+ x (global) x
+ m m
+ d (inner) f
+ a0 (inner) b
+ a a
+ n2 r
+ n1 s
+ n0 t
+ d2 u
+ d1 v
+ d0 w
+}
+
+0 e: 0 y: 2 d: 2 b:
+
+[ 1001 d; > ][
+
+  b;$* d;= $ [
+    b; 1+ b:
+  ]?~[
+
+    0 m: 1 f: b; 1- a: 1 s: a; t: 0 v: 1 w:
+
+    [ t;$* d;w;$** 1+ =~ ][
+      f;a;*m;- m:
+      d;m;$*-f;/ f:
+      b;1-m;+f;/ a:
+
+      s; r:
+      t; s:
+      v; u:
+      w; v:
+
+      a;s;*r;+ t:
+      a;v;*u;+ w:
+    ]#
+
+    t; y; > [
+      t; y:
+      d; e:
+    ]?
+
+  ]?
+
+  d; 1+ d:
+]#
+
+y; .
+32 ,
+e; .

@@ -16,6 +16,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * APL
 * Batch
 * bc
+* BeanShell
 * Befunge
 * Brainf\*\*k
 * CIL
@@ -412,7 +413,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Notes: (None)
 
 ### Euler 57
-* File: [problem57.fctr](problem57.factor)
+* File: [problem57.factor](problem57.factor)
 * Language: [Factor](http://factorcode.org/)
 * Compiler / Interpreter: [The official interpreter](http://factorcode.org/#downloads)
 * Notes: (None)
@@ -464,6 +465,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Funciton](https://esolangs.org/wiki/Funciton)
 * Compiler / Interpreter: [The official interpreter](https://github.com/Timwi/Funciton)
 * Notes: A somewhat slow solution.
+
+### Euler 66
+* File: [problem66.bean](problem66.bean)
+* Language: [BeanShell](https://beanshell.github.io/)
+* Compiler / Interpreter: [TIO Nexus](https://tio.run/#beanshell)
+* Notes: (None)
 
 ## Valid Languages
 
