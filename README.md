@@ -477,7 +477,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem67.gl](problem67.gl)
 * Language: [Grocery List](https://esolangs.org/wiki/Grocery_List)
 * Compiler / Interpreter: [Archived interpreter](https://web.archive.org/web/20160404194506/https://bpaste.net/show/50974d4c80f8)
-* Notes: Pipe `./files/p067_triangle.txt` as standard input. File must have Unix line endings.
+* Notes: Code was written with the help of a Lisp translator program. Pipe `./files/p067_triangle.txt` as standard input. File must have Unix line endings.
 
 ## Valid Languages
 

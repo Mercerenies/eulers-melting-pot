@@ -73,6 +73,7 @@
 *** BeanShell                                                          :used:
 *** GAP
 *** J                                                                  :used:
+*** Joy
 *** LaTeX                                                              :used:
 *** LilyPond                                                           :used:
 *** m4                                                                 :used:
