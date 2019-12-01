@@ -33,6 +33,7 @@
 *** Elixir                                                             :used:
 *** Elm
 *** Erlang
+*** GDScript
 *** Go                                                                 :used:
 *** JustBASIC                                                          :used:
 *** Kotlin
@@ -94,8 +95,10 @@
 ** ASSEMBLY
 *** CIL                                                                :used:
 *** Jasmin                                                             :used:
+*** LLVM IR                                                            :used:
 *** MASM                                                               :used:
 *** NASM                                                               :used:
+*** WASM
 ** SHELL
 *** Bash
 *** Batch                                                              :used:
