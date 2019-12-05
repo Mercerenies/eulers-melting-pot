@@ -72,6 +72,7 @@
 *** AutoHotkey
 *** bc                                                                 :used:
 *** BeanShell                                                          :used:
+*** Commodore BASIC
 *** GAP
 *** J                                                                  :used:
 *** Joy
@@ -82,6 +83,7 @@
 *** Pike                                                               :used:
 *** Potassco
 *** Prolog                                                             :used:
+*** PROMAL
 *** Rio
 *** Roy                                                                :used:
 *** Scratch                                                            :used:
@@ -112,10 +114,12 @@
 *** ><>                                                                :used:
 *** Befunge                                                            :used:
 *** Brainf**k                                                          :used:
+*** Brat
 *** Chef
 *** CJam                                                               :used:
 *** Enchilada                                                          :used:
 *** FALSE
+*** Fourier
 *** Funciton                                                           :used:
 *** Golfscript                                                         :used:
 *** Grocery List                                                       :used:
@@ -125,6 +129,7 @@
 *** JSF**k                                                             :used:
 *** Labyrinth                                                          :used:
 *** MATL                                                               :used:
+*** Noether
 *** Piet                                                               :used:
 *** Pyth                                                               :used:
 *** Retina
@@ -161,7 +166,6 @@
 *** Fancy
 *** Fennel
 *** Fission
-*** Fourier
 *** Groovy
 *** Icon
 *** Logtalk
@@ -177,6 +181,7 @@
 *** Pony
 *** PPL
 *** Rockstar
+*** Simula
 *** Snails
 *** Squirrel
 *** Sweet.js
