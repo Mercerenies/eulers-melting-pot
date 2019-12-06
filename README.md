@@ -52,6 +52,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * MASM
 * MATL
 * NASM
+* Objective-C
 * OCaml
 * Pascal
 * Piet
@@ -484,6 +485,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem68.ll](problem68.ll)
 * Language: [LLVM IR](https://llvm.org/docs/LangRef.html)
 * Compiler / Interpreter: [The official compiler](http://releases.llvm.org/download.html#6.0.0)
+* Notes: (None)
+
+### Euler 69
+* File: [problem69.m](problem69.m)
+* Language: [Objective-C](https://en.wikipedia.org/wiki/Objective-C)
+* Compiler / Interpreter: GCC
 * Notes: (None)
 
 ## Valid Languages

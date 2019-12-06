@@ -57,6 +57,7 @@
 *** Julia
 *** Maple
 *** MATLAB
+*** Objective-C                                                        :used:
 *** Pascal                                                             :used:
 *** PHP
 *** QBASIC                                                             :used:
@@ -85,6 +86,7 @@
 *** Prolog                                                             :used:
 *** PROMAL
 *** Rio
+*** Quite BASIC
 *** Roy                                                                :used:
 *** Scratch                                                            :used:
 *** sed                                                                :used:
