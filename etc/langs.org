@@ -57,6 +57,7 @@
 *** Julia
 *** Maple
 *** MATLAB
+*** Oberon-07                                                          :used:
 *** Objective-C                                                        :used:
 *** Pascal                                                             :used:
 *** PHP
@@ -66,6 +67,7 @@
 *** Smalltalk                                                          :used:
 *** SML                                                                :used:
 *** Squeak
+*** Swift
 *** Visual Basic
 ** BRONZE
 *** Agda

@@ -52,6 +52,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * MASM
 * MATL
 * NASM
+* Oberon-07
 * Objective-C
 * OCaml
 * Pascal
@@ -492,6 +493,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Objective-C](https://en.wikipedia.org/wiki/Objective-C)
 * Compiler / Interpreter: GCC
 * Notes: (None)
+
+### Euler 70
+* File: [problem70.Mod](problem70.Mod)
+* Language: [Oberon-07](http://oberon07.com/)
+* Compiler / Interpreter: [OBNC](https://miasap.se/obnc/)
+* Notes: A somewhat slow solution.
 
 ## Valid Languages
 
