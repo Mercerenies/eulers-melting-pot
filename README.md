@@ -71,6 +71,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * SML
 * SNOBOL
 * Stuck
+* Taxi
 * Tcl
 * VBA
 * Whitespace
@@ -499,6 +500,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Oberon-07](http://oberon07.com/)
 * Compiler / Interpreter: [OBNC](https://miasap.se/obnc/)
 * Notes: A somewhat slow solution.
+
+### Euler 71
+* File: [problem71.taxi](problem71.taxi)
+* Language: [Taxi](https://bigzaphod.github.io/Taxi/)
+* Compiler / Interpreter: [The provided interpreter](https://bigzaphod.github.io/Taxi/taxi.cpp)
+* Notes: A very slow solution.
 
 ## Valid Languages
 

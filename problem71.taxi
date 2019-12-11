@@ -1,0 +1,151 @@
+
+0 is waiting at Starchild Numerology.
+1 is waiting at Starchild Numerology.
+Go to Starchild Numerology: west 1st left, 2nd right, 1st left, 1st left, 2nd left.
+Pickup a passenger going to Joyless Park.
+Pickup another passenger going to Joyless Park.
+Go to Joyless Park: west 1st right, 2nd right, 1st right, 2nd left, 4th right.
+1 is waiting at Starchild Numerology.
+Go to Fueler Up: west 1st left.
+Go to Starchild Numerology: south 2nd right, 1st left, 1st left, 2nd left.
+Pickup a passenger going to Cyclone.
+Go to Cyclone: west 1st right, 3rd left, 1st right.
+
+[main loop]
+Pickup a passenger going to Magic Eight.
+1000001 is waiting at Starchild Numerology.
+Go to Starchild Numerology: south 2nd left, 1st right, 1st left.
+Pickup a passenger going to Magic Eight.
+Go to Magic Eight: west 1st right, 2nd right, 1st right.
+Switch to plan "head back home" if no one is waiting.
+Pickup a passenger going to Multiplication Station.
+3 is waiting at Starchild Numerology.
+7 is waiting at Starchild Numerology.
+Go to Starchild Numerology: north 1st left, 1st left, 2nd left.
+Pickup a passenger going to Multiplication Station.
+Go to Multiplication Station: west 1st right, 2nd right, 1st right, 4th left.
+Pickup a passenger going to Divide and Conquer.
+Go to Starchild Numerology: south 1st right, 2nd left, 1st left, 2nd left.
+Pickup a passenger going to Divide and Conquer.
+Go to Divide and Conquer: west 1st right, 2nd right, 1st right, 2nd left, 3rd left.
+Pickup a passenger going to Trunkers.
+Go to Trunkers: east 1st right, 3rd right, 1st left.
+Pickup a passenger going to Cyclone.
+Go to Cyclone: west 2nd right.
+Pickup a passenger going to Cyclone.
+Pickup a passenger going to Multiplication Station.
+Go to Cyclone: south 1st left, 1st left, 1st left.
+7 is waiting at Starchild Numerology.
+3 is waiting at Starchild Numerology.
+Go to Go More: south 2nd left.
+Go to Starchild Numerology: east 1st right, 1st left.
+Pickup a passenger going to Multiplication Station.
+Pickup a passenger going to Trunkers.
+Go to Multiplication Station: west 1st right, 2nd right, 1st right, 4th left.
+Pickup a passenger going to Equal's Corner.
+Go to Trunkers: south 1st right, 2nd left.
+Go to Cyclone: west 2nd right.
+Pickup a passenger going to Trunkers.
+Pickup a passenger going to Multiplication Station.
+Go to Trunkers: south 1st left.
+Pickup a passenger going to Multiplication Station.
+Go to Multiplication Station: east 1st right, 4th left.
+Pickup a passenger going to Equal's Corner.
+Go to Equal's Corner: south 1st right, 2nd left, 1st left.
+Switch to plan "perform iteration" if no one is waiting.
+Pickup a passenger going to Riverview Bridge.
+Go to Go More: north 1st left.
+Go to Trunkers: east 1st left, 1st right.
+Pickup a passenger going to Riverview Bridge.
+Go to Riverview Bridge: west 1st right, 1st right, 1st right.
+Go to Cyclone: west 2nd left.
+Pickup a passenger going to Addition Alley.
+1 is waiting at Starchild Numerology.
+Go to Starchild Numerology: south 2nd left, 1st right, 1st left.
+Pickup a passenger going to Addition Alley.
+Go to Addition Alley: west 1st right, 1st left, 1st right, 3rd right, 1st right.
+Pickup a passenger going to Cyclone.
+Go to Zoom Zoom: west 1st left, 1st right.
+Go to Cyclone: west.
+Switch to plan "main loop".
+
+[perform iteration]
+Go to Trunkers: north 3rd right.
+Pickup a passenger going to Rob's Rest.
+Go to Rob's Rest: west 1st left, 1st right, 1st right.
+Go to Cyclone: south 1st left, 1st left, 1st left, 1st right.
+Pickup a passenger going to Cyclone.
+Go to Cyclone: south 1st left, 1st left, 1st left.
+Pickup a passenger going to Multiplication Station.
+Pickup a passenger going to Bird's Bench.
+Go to Joyless Park: south 1st left, 2nd right, 2nd left, 4th right.
+Pickup a passenger going to Cyclone.
+Go to Bird's Bench: west 1st left, 2nd right, 1st left, 1st left, 1st right, 1st leftl.
+Go to Cyclone: north 1st right, 1st left, 1st left, 1st right.
+Pickup a passenger going to Multiplication Station.
+Pickup a passenger going to Joyless Park.
+Go to Multiplication Station: south 1st left, 2nd right, 4th left.
+Pickup a passenger going to Magic Eight.
+Go to Joyless Park: north 2nd left, 1st right, 1st right.
+Pickup a passenger going to Cyclone.
+Go to Cyclone: west 1st left, 2nd right, 1st left, 2nd right.
+Pickup a passenger going to Multiplication Station.
+Go to Rob's Rest: south 1st left, 1st right, 1st right, 1st right.
+Pickup a passenger going to Cyclone.
+Go to Cyclone: south 1st left, 1st left, 1st left, 1st right.
+Pickup a passenger going to Rob's Rest.
+Go to Rob's Rest: south 1st left, 1st right, 1st right, 1st right.
+Go to Cyclone: south 1st left, 1st left, 1st left, 1st right.
+Pickup a passenger going to Multiplication Station.
+Go to Multiplication Station: south 1st left, 2nd right, 4th left.
+Pickup a passenger going to Magic Eight.
+Go to Magic Eight: south 1st right.
+Switch to plan "ignore this iteration" if no one is waiting.
+Pickup a passenger going to Riverview Bridge.
+Go to Rob's Rest: north 1st left, 1st left, 1st right, 1st right.
+Pickup a passenger going to Riverview Bridge.
+Go to Joyless Park: south 1st left, 1st left, 1st right, 1st right, 2nd left, 4th right.
+Pickup a passenger going to Riverview Bridge.
+Go to Riverview Bridge: west 1st right, 2nd left.
+Go to Zoom Zoom: west 1st right.
+Go to Cyclone: west.
+Pickup a passenger going to Joyless Park.
+Go to Bird's Bench: south 1st left, 1st right, 1st right, 1st left.
+Pickup a passenger going to Cyclone.
+Go to Cyclone: north 1st right, 1st left, 1st left, 1st right.
+Pickup a passenger going to Joyless Park.
+Pickup a passenger going to Addition Alley.
+Go to Joyless Park: south 1st left, 2nd right, 2nd left, 4th right.
+1 is waiting at Starchild Numerology.
+Go to Starchild Numerology: west 1st left, 2nd right, 1st left, 1st left, 2nd left.
+Pickup a passenger going to Addition Alley.
+Go to Addition Alley: west 1st right, 3rd right, 1st right, 1st right.
+Pickup a passenger going to Cyclone.
+Go to Cyclone: north 1st left, 1st left.
+Switch to plan "main loop".
+
+[ignore this iteration]
+Go to Rob's Rest: north 1st left, 1st left, 1st right, 1st right.
+Pickup a passenger going to Joyless Park.
+Go to Cyclone: south 1st left, 1st left, 1st left, 1st right.
+Pickup a passenger going to Riverview Bridge.
+Go to Zoom Zoom: north.
+Go to Riverview Bridge: west 1st left.
+Go to Joyless Park: east 1st right, 2nd left.
+Go to Bird's Bench: west 1st left, 2nd right, 1st left, 1st left, 1st right, 1st left.
+Pickup a passenger going to Addition Alley.
+1 is waiting at Starchild Numerology.
+Go to Starchild Numerology: north 1st right, 1st right, 2nd left.
+Pickup a passenger going to Addition Alley.
+Go to Addition Alley: west 1st right, 3rd right, 1st right, 1st right.
+Pickup a passenger going to Cyclone.
+Go to Cyclone: north 1st left, 1st left.
+Switch to plan "main loop".
+
+[head back home]
+Go to Joyless Park: south 2nd left, 4th right.
+Pickup a passenger going to The Babelfishery.
+Go to The Babelfishery: west 1st left.
+Pickup a passenger going to the Post Office.
+Go to the Post Office: north 1st left, 1st right.
+Go to the Taxi Garage: north 1st right, 1st left, 1st right.
