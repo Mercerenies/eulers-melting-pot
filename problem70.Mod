@@ -2,49 +2,13 @@
 MODULE problem70;
 IMPORT Out;
 VAR
-     primes: ARRAY 10000001 OF BOOLEAN;
+     phi: ARRAY 10000001 OF REAL;
      i: INTEGER;
      j: INTEGER;
      min: INTEGER;
      minratio: REAL;
      value: INTEGER;
      ratio: REAL;
-
-(* Note: This Phi function suffers from the same issue as
- * problem69.m, in that it systematically produces an erroneously
- * large value for some inputs. In this case, we're trying to
- * minimize n / Phi(n), thus we want a large enough Phi(n). By
- * a similar argument to that of problem69.m, we know that the
- * desired result should be a product of a small number of distinct
- * primes (a single prime will never be permutable to its phi value).
- * By direct inspection, there exist pairs of primes satisfying this
- * constraint, hence the solution will be one of them, and this Phi
- * function will not overcount far enough to corrupt the solution.
- *)
-PROCEDURE Phi(n: INTEGER): INTEGER;
-VAR
-     result: INTEGER;
-     prod: REAL;
-     p: INTEGER;
-BEGIN
-     IF primes[n] THEN
-          result := n - 1;
-     ELSE
-          p := 2;
-          prod := FLT(n);
-          WHILE p * p <= n DO
-               IF primes[p] & (n MOD p = 0) THEN
-                    prod := prod * (1.0 - 1.0 / FLT(p));
-                    IF (p * p # n) & primes[n DIV p] THEN
-                         prod := prod * (1.0 - FLT(p) / FLT(n));
-                    END;
-               END;
-               p := p + 1;
-          END;
-          result := FLOOR(prod);
-     END;
-     RETURN result
-END Phi;
 
 PROCEDURE IntToString(n: INTEGER; VAR arr: ARRAY OF CHAR; pos: INTEGER);
 BEGIN
@@ -99,16 +63,14 @@ BEGIN
 END IsPerm;
 
 BEGIN
-     primes[0] := FALSE;
-     primes[1] := FALSE;
      FOR i := 2 TO 10000000 DO
-          primes[i] := TRUE;
+          phi[i] := FLT(i);
      END;
      FOR i := 2 TO 10000000 DO
-          IF primes[i] THEN
-               j := i + i;
+          IF phi[i] = FLT(i) THEN
+               j := i;
                WHILE j <= 10000000 DO
-                    primes[j] := FALSE;
+                    phi[j] := phi[j] * (1.0 - 1.0 / FLT(i));
                     j := j + i;
                END;
           END;
@@ -116,7 +78,7 @@ BEGIN
      min := 0;
      minratio := 99999999.0;
      FOR j := 2 TO 10000000 DO
-          value := Phi(j);
+          value := FLOOR(phi[j]);
           IF IsPerm(value, j) THEN
                ratio := FLT(j) / FLT(value);
                IF ratio < minratio THEN
