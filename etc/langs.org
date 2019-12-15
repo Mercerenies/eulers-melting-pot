@@ -77,6 +77,7 @@
 *** BeanShell                                                          :used:
 *** Commodore BASIC
 *** GAP
+*** IntercalScript
 *** J                                                                  :used:
 *** Joy
 *** LaTeX                                                              :used:
