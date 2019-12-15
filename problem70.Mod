@@ -10,6 +10,17 @@ VAR
      value: INTEGER;
      ratio: REAL;
 
+(* Note: This Phi function suffers from the same issue as
+ * problem69.m, in that it systematically produces an erroneously
+ * large value for some inputs. In this case, we're trying to
+ * minimize n / Phi(n), thus we want a large enough Phi(n). By
+ * a similar argument to that of problem69.m, we know that the
+ * desired result should be a product of a small number of distinct
+ * primes (a single prime will never be permutable to its phi value).
+ * By direct inspection, there exist pairs of primes satisfying this
+ * constraint, hence the solution will be one of them, and this Phi
+ * function will not overcount far enough to corrupt the solution.
+ *)
 PROCEDURE Phi(n: INTEGER): INTEGER;
 VAR
      result: INTEGER;

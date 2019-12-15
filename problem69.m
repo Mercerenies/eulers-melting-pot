@@ -4,6 +4,14 @@
 
 char primes[1000001];
 
+// Note: This phi function risks undercounting primes (and thus
+// producing too large a value) in some cases where there are
+// duplicate prime factors. However, we can safely ignore this, as it
+// is a basic mathematical argument
+// (https://blog.dreamshire.com/project-euler-69-solution/) to show
+// that the correct answer to this problem must be a product of
+// distinct primes, so the values where this error occurs are
+// irrelevant.
 int phi(int n) {
   if (primes[n]) {
     return n - 1;
