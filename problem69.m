@@ -1,57 +1,29 @@
 
 #import <Foundation/Foundation.h>
 #import <math.h>
+#import <stdio.h>
 
-char primes[1000001];
-
-// Note: This phi function risks undercounting primes (and thus
-// producing too large a value) in some cases where there are
-// duplicate prime factors. However, we can safely ignore this, as it
-// is a basic mathematical argument
-// (https://blog.dreamshire.com/project-euler-69-solution/) to show
-// that the correct answer to this problem must be a product of
-// distinct primes, so the values where this error occurs are
-// irrelevant.
-int phi(int n) {
-  if (primes[n]) {
-    return n - 1;
-  }
-  double prod = n;
-  int p;
-  for (p = 2; p <= sqrt(n); p++) {
-    if (primes[p]) {
-      if (n % p == 0) {
-        prod = prod * (1 - 1.0 / p);
-        if (p * p != n && (primes[n / p])) {
-          prod = prod * (1 - ((double)p) / n);
-        }
-      }
-    }
-  }
-  return (int)prod;
-}
+double phi[1000001];
 
 int main(int argc, const char* argv[]) {
   NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
-  primes[0] = 0;
-  primes[1] = 0;
   int n, i;
-  for (n = 2; n <= 1000000; n++) {
-    primes[n] = 1;
+  for (i = 0; i <= 1000000; i++) {
+    phi[i] = i;
   }
   for (i = 2; i <= 1000000; i++) {
-    if (primes[i]) {
-      n = i + i;
+    if (phi[i] == i) {
+      n = i;
       while (n <= 1000000) {
-        primes[n] = 0;
-        n = n + i;
+        phi[n] = phi[n] * (1 - 1 / (double)i);
+        n += i;
       }
     }
   }
   int max = 0;
   double maxratio = 0;
   for (n = 1; n <= 1000000; n++) {
-    int val = phi(n);
+    int val = phi[n];
     double ratio = ((double)n) / val;
     if (ratio > maxratio) {
       max = n;
