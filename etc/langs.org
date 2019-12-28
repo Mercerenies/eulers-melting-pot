@@ -35,7 +35,6 @@
 *** Erlang
 *** GDScript
 *** Go                                                                 :used:
-*** JustBASIC                                                          :used:
 *** Kotlin
 *** Lua
 *** OCaml                                                              :used:
@@ -61,21 +60,18 @@
 *** Objective-C                                                        :used:
 *** Pascal                                                             :used:
 *** PHP
-*** QBASIC                                                             :used:
 *** R
 *** Self
 *** Smalltalk                                                          :used:
 *** SML                                                                :used:
 *** Squeak
 *** Swift
-*** Visual Basic
 ** BRONZE
 *** Agda
 *** APL                                                                :used:
 *** AutoHotkey
 *** bc                                                                 :used:
 *** BeanShell                                                          :used:
-*** Commodore BASIC
 *** GAP
 *** IntercalScript
 *** J                                                                  :used:
@@ -89,14 +85,12 @@
 *** Prolog                                                             :used:
 *** PROMAL
 *** Rio
-*** Quite BASIC
 *** Roy                                                                :used:
 *** Scratch                                                            :used:
 *** sed                                                                :used:
 *** SNOBOL                                                             :used:
 *** Streem
-*** TI BASIC
-*** VBA                                                                :used:
+*** Vala
 *** Wren                                                               :used:
 *** XSLT                                                               :used:
 ** ASSEMBLY
@@ -112,6 +106,15 @@
 *** Csh                                                                :used:
 *** Dash
 *** Zsh                                                                :used:
+** BASIC
+*** Commodore BASIC
+*** JustBASIC                                                          :used:
+*** Microsoft SmallBasic
+*** QBASIC                                                             :used:
+*** Quite BASIC
+*** TI BASIC
+*** VBA                                                                :used:
+*** Visual Basic
 ** ESOTERIC
 *** *><>                                                               :used:
 *** ///                                                                :used:
