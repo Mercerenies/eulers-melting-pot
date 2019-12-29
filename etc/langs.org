@@ -56,6 +56,7 @@
 *** Julia
 *** Maple
 *** MATLAB
+*** Nim                                                                :used:
 *** Oberon-07                                                          :used:
 *** Objective-C                                                        :used:
 *** Pascal                                                             :used:
@@ -72,6 +73,7 @@
 *** AutoHotkey
 *** bc                                                                 :used:
 *** BeanShell                                                          :used:
+*** Dylan
 *** GAP
 *** IntercalScript
 *** J                                                                  :used:
@@ -143,8 +145,9 @@
 *** Retina
 *** Seriously                                                          :used:
 *** Shakespeare                                                        :used:
+*** Snowman
 *** Stuck                                                              :used:
-*** Taxi
+*** Taxi                                                               :used:
 *** TRANSCRIPT
 *** Whitespace                                                         :used:
 ** UNUSABLE

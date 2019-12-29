@@ -52,6 +52,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * MASM
 * MATL
 * NASM
+* Nim
 * Oberon-07
 * Objective-C
 * OCaml
@@ -506,6 +507,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Taxi](https://bigzaphod.github.io/Taxi/)
 * Compiler / Interpreter: [The provided interpreter](https://bigzaphod.github.io/Taxi/taxi.cpp)
 * Notes: A very slow solution.
+
+### Euler 72
+* File: [problem72.nim](problem72.nim)
+* Language: [Nim](https://nim-lang.org/)
+* Compiler / Interpreter: [The official compiler](https://nim-lang.org/install.html)
+* Notes: (None)
 
 ## Valid Languages
 
