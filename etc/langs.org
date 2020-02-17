@@ -54,6 +54,7 @@
 *** Io                                                                 :used:
 *** Ioke                                                               :used:
 *** Julia
+*** Lunar
 *** Maple
 *** MATLAB
 *** Nim                                                                :used:
