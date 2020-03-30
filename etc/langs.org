@@ -104,6 +104,8 @@
 *** LLVM IR                                                            :used:
 *** MASM                                                               :used:
 *** NASM                                                               :used:
+*** Parrot IR
+*** PASM                                                               :used:
 *** WASM
 ** SHELL
 *** Bash

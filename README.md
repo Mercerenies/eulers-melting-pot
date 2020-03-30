@@ -58,6 +58,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Objective-C
 * OCaml
 * Pascal
+* PASM
 * Piet
 * Pike
 * Prolog
@@ -520,6 +521,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [🆒](https://esolangs.org/wiki/%F0%9F%86%92)
 * Compiler / Interpreter: [The official interpreter](https://gitlab.com/fogity/squared-cool)
 * Notes: A very slow solution. Screenshot is available at [etc/problem73_screenshot.png](etc/problem73_screenshot.png).
+
+### Euler 74
+* File: [problem74.pasm](problem74.pasm)
+* Language: [PASM](https://en.wikipedia.org/wiki/Parrot_assembly_language)
+* Compiler / Interpreter: [The Parrot VM](https://github.com/parrot/parrot)
+* Notes: (None)
 
 ## Valid Languages
 
