@@ -74,8 +74,10 @@
 *** AutoHotkey
 *** bc                                                                 :used:
 *** BeanShell                                                          :used:
+*** 🆒                                                                 :used:
 *** Dylan
 *** GAP
+*** Glava
 *** IntercalScript
 *** J                                                                  :used:
 *** Joy
@@ -123,6 +125,7 @@
 *** ///                                                                :used:
 *** 05AB1E                                                             :used:
 *** ><>                                                                :used:
+*** Basis
 *** Befunge                                                            :used:
 *** Brainf**k                                                          :used:
 *** Brat
