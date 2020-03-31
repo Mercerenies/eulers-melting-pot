@@ -1,6 +1,4 @@
 
-# Too slow right now. What optimization am I missing?
-
 import math
 
 total = 0

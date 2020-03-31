@@ -148,11 +148,13 @@
 *** JSF**k                                                             :used:
 *** Labyrinth                                                          :used:
 *** MATL                                                               :used:
+*** Mouse-2002                                                         :used:
 *** Noether
 *** Piet                                                               :used:
 *** Pyth                                                               :used:
 *** Retina
 *** Rockstar
+*** Secretary
 *** Seriously                                                          :used:
 *** Shakespeare                                                        :used:
 *** Snowman

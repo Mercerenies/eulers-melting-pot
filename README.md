@@ -52,6 +52,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Make
 * MASM
 * MATL
+* Mouse-2002
 * NASM
 * Nim
 * Oberon-07
@@ -527,6 +528,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [PASM](https://en.wikipedia.org/wiki/Parrot_assembly_language)
 * Compiler / Interpreter: [The Parrot VM](https://github.com/parrot/parrot)
 * Notes: (None)
+
+### Euler 75
+* File: [problem75.mou](problem75.mou)
+* Language: [Mouse-2002](http://mouse.davidgsimpson.com/mouse2002/index.html)
+* Compiler / Interpreter: [The provided interpreter](http://mouse.davidgsimpson.com/mouse2002/mouse_c.txt)
+* Notes: Interpreter requires a bit of tweaking to work with modern compilers. Will need to increase the `ARRAYSIZE` to run.
 
 ## Valid Languages
 
