@@ -1,0 +1,36 @@
+;; This buffer is for text that is not saved, and for Lisp evaluation.
+;; To create a file, visit it with C-x C-f and enter text in its buffer.
+
+Big loop start:
+X
+
+Little loop start:
+X Y
+
+Littler loop start:
+X Y T I
+
+Final loop start:
+FINAL
+
+Curr:
+FINAL%10 FINAL/10
+
+After littler loop:
+X Y T
+
+After final loop:
+...
+
+I at (0,2)
+Y at (0,1)
+X at (0,0)
+
+Encoding:
+(X+1, 2Y) is the lower two "bytes"
+(X+1, 2Y+1) is the upper two "bytes"
+
+Encoding is in base 40,000
+
+190569291
+190569291

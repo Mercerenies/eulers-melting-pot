@@ -131,6 +131,7 @@
 *** 05AB1E                                                             :used:
 *** ><>                                                                :used:
 *** Basis
+*** Befalse                                                            :used:
 *** Befunge                                                            :used:
 *** Brainf**k                                                          :used:
 *** Brat
@@ -202,6 +203,7 @@
 *** PPL
 *** Simula
 *** Snails
+*** SNUSP
 *** Squirrel
 *** Sweet.js
 *** Teascript

@@ -17,6 +17,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Batch
 * bc
 * BeanShell
+* Befalse
 * Befunge
 * Brainf\*\*k
 * CIL
@@ -534,6 +535,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Mouse-2002](http://mouse.davidgsimpson.com/mouse2002/index.html)
 * Compiler / Interpreter: [The provided interpreter](http://mouse.davidgsimpson.com/mouse2002/mouse_c.txt)
 * Notes: Interpreter requires a bit of tweaking to work with modern compilers. Will need to increase the `ARRAYSIZE` to run.
+
+### Euler 76
+* File: [problem76.befalse](problem76.befalse)
+* Language: [Befalse](https://esolangs.org/wiki/Befalse)
+* Compiler / Interpreter: [quirkster.com](http://www.quirkster.com/iano/js/befalse.html)
+* Notes: Scroll down; the first 202 lines are used for storage.
 
 ## Valid Languages
 
