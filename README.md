@@ -30,6 +30,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Elixir
 * Enchilada
 * Factor
+* FALSE
 * Forth
 * Fortran
 * Funciton
@@ -541,6 +542,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Befalse](https://esolangs.org/wiki/Befalse)
 * Compiler / Interpreter: [quirkster.com](http://www.quirkster.com/iano/js/befalse.html)
 * Notes: Scroll down; the first 202 lines are used for storage.
+
+### Euler 77
+* File: [problem77.false](problem77.false)
+* Language: [FALSE](https://esolangs.org/wiki/FALSE)
+* Compiler / Interpreter: [quirkster.com](http://www.quirkster.com/iano/js/false-js.html)
+* Notes: Lightly commented code is available at [etc/problem77_commented.false](etc/problem77_commented.false).
 
 ## Valid Languages
 
