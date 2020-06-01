@@ -79,6 +79,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Stuck
 * Taxi
 * Tcl
+* Vala
 * VBA
 * Whitespace
 * Wren
@@ -548,6 +549,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [FALSE](https://esolangs.org/wiki/FALSE)
 * Compiler / Interpreter: [quirkster.com](http://www.quirkster.com/iano/js/false-js.html)
 * Notes: Lightly commented code is available at [etc/problem77_commented.false](etc/problem77_commented.false).
+
+### Euler 78
+* File: [problem78.vala](problem78.vala)
+* Language: [Vala](https://wiki.gnome.org/Projects/Vala)
+* Compiler / Interpreter: [valac](https://wiki.gnome.org/Projects/Vala/ValaPlatforms)
+* Notes: (None)
 
 ## Valid Languages
 

@@ -80,9 +80,11 @@
 *** 🆒                                                                 :used:
 *** Dylan
 *** GAP
+*** Genie
 *** Glava
 *** IntercalScript
 *** J                                                                  :used:
+*** Javagony
 *** Joy
 *** LaTeX                                                              :used:
 *** LilyPond                                                           :used:
@@ -98,7 +100,7 @@
 *** sed                                                                :used:
 *** SNOBOL                                                             :used:
 *** Streem
-*** Vala
+*** Vala                                                               :used:
 *** Wren                                                               :used:
 *** XSLT                                                               :used:
 ** ASSEMBLY
@@ -137,8 +139,10 @@
 *** Brat
 *** Chef
 *** CJam                                                               :used:
+*** Emoji
 *** Enchilada                                                          :used:
 *** FALSE                                                              :used:
+*** FiM++
 *** Fourier
 *** Funciton                                                           :used:
 *** Golfscript                                                         :used:
@@ -161,6 +165,7 @@
 *** Snowman
 *** Stuck                                                              :used:
 *** Taxi                                                               :used:
+*** Tome
 *** TRANSCRIPT
 *** Underload
 *** Whitespace                                                         :used:
