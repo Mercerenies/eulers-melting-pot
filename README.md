@@ -64,6 +64,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * PASM
 * Piet
 * Pike
+* Potassco
 * Prolog
 * Pyth
 * QBASIC
@@ -555,6 +556,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Vala](https://wiki.gnome.org/Projects/Vala)
 * Compiler / Interpreter: [valac](https://wiki.gnome.org/Projects/Vala/ValaPlatforms)
 * Notes: (None)
+
+### Euler 79
+* File: [problem79.lp](problem79.lp)
+* Language: [Potassco](https://potassco.org/)
+* Compiler / Interpreter: [clingo](https://potassco.org/clingo/)
+* Notes: The answer outputs `pos(N, X)`, where `X` is the `N`th digit in the result.
 
 ## Valid Languages
 

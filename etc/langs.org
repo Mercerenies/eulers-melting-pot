@@ -91,7 +91,7 @@
 *** m4                                                                 :used:
 *** Make                                                               :used:
 *** Pike                                                               :used:
-*** Potassco
+*** Potassco                                                           :used:
 *** Prolog                                                             :used:
 *** PROMAL
 *** Rio
