@@ -1,0 +1,31 @@
+
+require stdout
+
+def digitsOfSqrt(square : Int, count : Int) : Int
+  digitsOfSqrtAcc(count, 0, 0, square)
+
+def digitsOfSqrtAcc(count : Int, digitsum : Int, p : Int, c : Int) : Int
+  if (count <= 0)
+    digitsum
+   else
+     val x = calculateX(p, c, 9)
+     val y = x * (20 * p + x)
+     digitsOfSqrtAcc(count - 1, digitsum + x, p * 10 + x, 100 * (c - y))
+
+def calculateX(p : Int, c : Int, x : Int) : Int
+  if (x * (20 * p + x) <= c)
+    x
+   else
+     calculateX(p, c, x - 1)
+
+def exec(perf : Int, finalsum : Int, i : Int) : Int
+  if (i >= 100)
+    finalsum
+   elif (perf * perf == i)
+     exec(perf + 1, finalsum, i + 1)
+   else
+     exec(perf, finalsum + digitsOfSqrt(i, 100), i + 1)
+
+val finalsum: Int = exec(1, 0, 1)
+stdout.printInt(finalsum)
+stdout.print("\n")

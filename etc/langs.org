@@ -78,6 +78,7 @@
 *** bc                                                                 :used:
 *** BeanShell                                                          :used:
 *** 🆒                                                                 :used:
+*** Dip
 *** Dylan
 *** GAP
 *** Genie
@@ -102,6 +103,7 @@
 *** Streem
 *** Vala                                                               :used:
 *** Wren                                                               :used:
+*** Wyvern                                                             :used:
 *** XSLT                                                               :used:
 ** ASSEMBLY
 *** CIL                                                                :used:
@@ -145,6 +147,7 @@
 *** FiM++
 *** Fourier
 *** Funciton                                                           :used:
+*** Gibberish
 *** Golfscript                                                         :used:
 *** Grocery List                                                       :used:
 *** Hexagony                                                           :used:
@@ -152,6 +155,7 @@
 *** Jelly                                                              :used:
 *** JSF**k                                                             :used:
 *** Labyrinth                                                          :used:
+*** MagiStack
 *** MATL                                                               :used:
 *** Mouse-2002                                                         :used:
 *** Noether

@@ -84,6 +84,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * VBA
 * Whitespace
 * Wren
+* Wyvern
 * XSLT
 * Zsh
 
@@ -562,6 +563,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Potassco](https://potassco.org/)
 * Compiler / Interpreter: [clingo](https://potassco.org/clingo/)
 * Notes: The answer outputs `pos(N, X)`, where `X` is the `N`th digit in the result.
+
+### Euler 80
+* File: [problem80.wyv](problem80.wyv)
+* Language: [Wyvern](https://wyvernlang.github.io/)
+* Compiler / Interpreter: [The provided interpreter](https://github.com/wyvernlang/wyvern)
+* Notes: (None)
 
 ## Valid Languages
 
