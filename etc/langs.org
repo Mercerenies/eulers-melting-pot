@@ -104,6 +104,7 @@
 *** Streem
 *** Vala                                                               :used:
 *** Vale
+*** Vimscript
 *** Wren                                                               :used:
 *** Wyvern                                                             :used:
 *** XSLT                                                               :used:
@@ -199,6 +200,7 @@
 *** Delphi
 *** E
 *** Eiffel
+*** 𝔼𝕊𝕄𝕚𝕟
 *** Euler
 *** Fancy
 *** Fission
@@ -222,3 +224,27 @@
 *** Teascript
 *** XY
 *** zkl
+* RESOURCES
+** LISTS OF LANGUAGES
+  Here are several online resources that I've found to be useful for finding various languages.
+
+  + Esolang
+    - https://esolangs.org/wiki/Main_Page
+  + What programming languages have been created by PPCG users? - Code
+    Golf Meta Stack Exchange
+    - https://codegolf.meta.stackexchange.com/questions/6918/what-programming-languages-have-been-created-by-ppcg-users
+  + Wikipedia Lists of Programming Languages
+    - https://en.wikipedia.org/wiki/Lists_of_programming_languages
+  + Github Linguist ~languages.yml~
+    - https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+** ONLINE INTERPRETERS
+   Some online interpreters that are free to use and very handy for tasks like this.
+
+   + TIO.run
+     - https://tio.run/
+   + Tutorialspoint Codingground
+     - https://www.tutorialspoint.com/codingground.htm
+   + repl.it
+     - https://repl.it/
+   + IDEOne
+     - https://ideone.com/
