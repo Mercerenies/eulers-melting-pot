@@ -80,6 +80,7 @@
 *** chomksi (pep)
 *** 🆒                                                                 :used:
 *** Dip
+*** Dogescript
 *** Dylan
 *** GAP
 *** Genie

@@ -27,6 +27,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * 🆒
 * Csh
 * D
+* Dogescript
 * ELisp
 * Elixir
 * Enchilada
@@ -583,6 +584,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [AWK](https://en.wikipedia.org/wiki/AWK)
 * Compiler / Interpreter: [mawk](https://invisible-island.net/mawk/)
 * Notes: Pass `./files/p082_matrix.txt` as input.
+
+### Euler 83
+* File: [problem83.djs](problem83.djs)
+* Language: [Dogescript](https://dogescript.io/)
+* Compiler / Interpreter: [The provided compiler](https://github.com/dogescript/dogescript/)
+* Notes: (None)
 
 ## Valid Languages
 
