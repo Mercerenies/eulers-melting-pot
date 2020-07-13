@@ -582,7 +582,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem82.awk](problem82.awk)
 * Language: [AWK](https://en.wikipedia.org/wiki/AWK)
 * Compiler / Interpreter: [mawk](https://invisible-island.net/mawk/)
-* Notes: (None)
+* Notes: Pass `./files/p082_matrix.txt` as input.
 
 ## Valid Languages
 
