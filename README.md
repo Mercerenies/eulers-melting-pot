@@ -80,6 +80,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Stuck
 * Taxi
 * Tcl
+* V
 * Vala
 * VBA
 * Whitespace
@@ -569,6 +570,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Wyvern](https://wyvernlang.github.io/)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/wyvernlang/wyvern)
 * Notes: (None)
+
+### Euler 81
+* File: [problem81.v](problem81.v)
+* Language: [V](https://esolangs.org/wiki/V_(DJMcMayhem))
+* Compiler / Interpreter: [The provided interpreter](https://github.com/DJMcMayhem/V)
+* Notes: Supply `./files/p081_matrix.txt` as input; the source file contains control characters that may or may not render correctly in various text editors. Screenshot is available at [etc/problem71_screenshot.png](etc/problem81_screenshot.png).
 
 ## Valid Languages
 
