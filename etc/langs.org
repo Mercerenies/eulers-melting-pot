@@ -45,7 +45,7 @@
 *** Ada                                                                :used:
 *** ALGOL 68                                                           :used:
 *** ASP
-*** AWK
+*** AWK                                                                :used:
 *** COBOL                                                              :used:
 *** F#
 *** Factor                                                             :used:
@@ -92,6 +92,7 @@
 *** LilyPond                                                           :used:
 *** m4                                                                 :used:
 *** Make                                                               :used:
+*** MoonScript
 *** Pike                                                               :used:
 *** Potassco                                                           :used:
 *** Prolog                                                             :used:
@@ -208,6 +209,7 @@
 *** Icon
 *** Logtalk
 *** NewLISP
+*** Nit
 *** Oasis
 *** Ohm
 *** Orc
