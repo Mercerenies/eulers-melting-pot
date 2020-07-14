@@ -147,6 +147,7 @@
 *** Brat
 *** Chef
 *** CJam                                                               :used:
+*** Cubix                                                              :used:
 *** Emoji
 *** Enchilada                                                          :used:
 *** FALSE                                                              :used:

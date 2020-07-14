@@ -26,6 +26,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * COBOL
 * 🆒
 * Csh
+* Cubix
 * D
 * Dogescript
 * Eiffel
@@ -597,6 +598,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Eiffel](https://www.eiffel.org/)
 * Compiler / Interpreter: [The provided compiler](https://www.eiffel.org/downloads)
 * Notes: `./etc/build84.sh` may be helpful in compiling the source.
+
+### Euler 85
+* File: [problem85.cub](problem85.cub)
+* Language: [Cubix](https://esolangs.org/wiki/Cubix)
+* Compiler / Interpreter: [The provided interpreter](http://ethproductions.github.io/cubix/)
+* Notes: A somewhat slow solution.
 
 ## Valid Languages
 
