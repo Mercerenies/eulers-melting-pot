@@ -28,6 +28,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Csh
 * D
 * Dogescript
+* Eiffel
 * ELisp
 * Elixir
 * Enchilada
@@ -590,6 +591,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Dogescript](https://dogescript.io/)
 * Compiler / Interpreter: [The provided compiler](https://github.com/dogescript/dogescript/)
 * Notes: (None)
+
+### Euler 84
+* File: [problem84.e](problem84.e)
+* Language: [Eiffel](https://www.eiffel.org/)
+* Compiler / Interpreter: [The provided compiler](https://www.eiffel.org/downloads)
+* Notes: `./etc/build84.sh` may be helpful in compiling the source.
 
 ## Valid Languages
 
