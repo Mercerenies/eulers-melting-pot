@@ -163,6 +163,7 @@
 *** JSF**k                                                             :used:
 *** Labyrinth                                                          :used:
 *** MagiStack
+*** Math++
 *** MATL                                                               :used:
 *** Mouse-2002                                                         :used:
 *** Noether

@@ -1,0 +1,29 @@
+0>t
+1>i
+1>b
+i*i+b*b>z
+sqrt z>d
+d-_d>z
+!!z>z
+9+5*z>$
+b-1>y
+y/i>r
+!!_r*i+!_r*y>z
+b/2+0.75>y
+t+z-_y+1>t
+b+1>b
+2*i+1>y
+b-y>r
+!!r>z
+19-15*z>$
+t-1000000>y
+y-abs y>r
+!r>z
+25-2*z>$
+i>out
+0>$
+99999999>out
+i>out
+t>out
+i+1>i
+3>$
