@@ -140,6 +140,7 @@
 *** ///                                                                :used:
 *** 05AB1E                                                             :used:
 *** ><>                                                                :used:
+*** Aya                                                                :used:
 *** Basis
 *** Befalse                                                            :used:
 *** Befunge                                                            :used:

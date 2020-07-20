@@ -15,6 +15,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * ALGOL 68
 * APL
 * AWK
+* Aya
 * Batch
 * bc
 * BeanShell
@@ -604,6 +605,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Cubix](https://esolangs.org/wiki/Cubix)
 * Compiler / Interpreter: [The provided interpreter](http://ethproductions.github.io/cubix/)
 * Notes: A somewhat slow solution.
+
+### Euler 86
+* File: [problem86.aya](problem86.aya)
+* Language: [Aya](https://esolangs.org/wiki/Aya)
+* Compiler / Interpreter: [The provided interpreter](https://github.com/nick-paul/aya-lang)
+* Notes: (None)
 
 ## Valid Languages
 

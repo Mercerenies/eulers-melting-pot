@@ -1,0 +1,16 @@
+
+0 :total;
+0 :i;
+while { total 1000000 :< } {
+  i 1 + :i;
+  i 2 * 1 + R
+  # {
+    :bc 2 ^ i 2 ^ + Mq
+    if (_ .\ =) {
+      if (i bc 1 - <) { i } { bc 1 - }
+      bc 2 / ./ - 1 + total + :total;
+    } {}
+    bc
+  };
+}
+i :P
