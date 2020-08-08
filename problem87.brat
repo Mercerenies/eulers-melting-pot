@@ -1,0 +1,64 @@
+
+composites = 1.to(7073).map { x | false }
+composites[0] = true
+composites[1] = true
+
+2.to 7072 { i |
+  false? composites[i]
+    {
+      j = 2 * i
+      while { j < 7073 } {
+        composites[j] = true
+        j = j + i
+      }
+    }
+}
+
+prime_count = 0
+2.to 7072 { i |
+  false? composites[i]
+    {
+      prime_count = prime_count + 1
+    }
+}
+primes = 1.to(prime_count).map { x | 0 }
+i = 0
+2.to 7072 { j |
+  false? composites[j]
+    {
+      primes[i] = j
+      i = i + 1
+    }
+}
+
+all_values = 1.to(50000000).map { x | false }
+ai = 0
+asent = true
+while { (ai < prime_count) && asent } {
+  a = primes[ai]
+  true? a > 85
+    { asent = false }
+    {
+      bi = 0
+      bsent = true
+      while { (bi < prime_count) && bsent } {
+        b = primes[bi]
+        true? b > 370
+          { bsent = false }
+          {
+            ci = 0
+            while { ci < prime_count } {
+              c = primes[ci]
+              value = a * a * a * a + b * b * b + c * c
+              true? value < 50000000
+                { all_values[value] = true }
+              ci = ci + 1
+            }
+            bi = bi + 1
+          }
+      }
+      ai = ai + 1
+    }
+}
+
+p all_values.select({ x | x }).length

@@ -1,0 +1,65 @@
+
+compositesName = "{composites}"
+composites0 = 1
+composites1 = 1
+loop i = 2 | i < 7073 | i ++ |
+  ( asCode ( compositesName + i ) ) = 0
+}
+loop i = 2 | i < 7073 | i ++ |
+  if ( asCode ( compositesName + i ) == 0 )
+    loop j = ( 2 * i ) | j < 7073 | j += i |
+      ( asCode ( compositesName + j ) ) = 1
+    }
+  }
+}
+
+primesName = "{primes}"
+primeCount = 0
+loop j = 2 | j < 7073 | j ++ |
+  if ( asCode ( compositesName + j ) == 0 )
+    ( asCode ( primesName + primeCount ) ) = j
+    primeCount ++
+  }
+}
+
+allValuesName = "{allValues}"
+abreak = false
+loop ai = 0 | abreak == false | ai ++ |
+  a = ( asCode ( primesName + ai ) )
+  print a
+  if ( a < 86 )
+    bbreak = false
+    loop bi = 0 | bbreak == false | bi ++ |
+      b = ( asCode ( primesName + bi ) )
+      if ( b < 371 )
+        loop ci = 0 | ci < primeCount | ci ++ |
+          c = ( asCode ( primesName + ci ) )
+          value = ( a * a * a * a ) + ( b * b * b ) + ( c * c )
+          if ( value < 50000000 )
+            ( asCode ( allValues + value ) ) = 1
+          }
+        }
+      }
+      if ( b > 370 )
+        bbreak = true
+      }
+      if ( bi > ( primeCount - 2 ) )
+        bbreak = true
+      }
+    }
+  }
+  if ( a > 85 )
+    abreak = true
+  }
+  if ( ai > ( primeCount - 2 ) )
+    abreak = true
+  }
+}
+
+result = 0
+loop i = 0 | i < 50000000 | i ++ |
+  if ( ( asCode ( allValues + i ) ) == 1 )
+    result ++
+  }
+}
+print result

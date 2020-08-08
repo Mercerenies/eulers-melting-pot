@@ -22,6 +22,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Befalse
 * Befunge
 * Brainf\*\*k
+* Brat
 * CIL
 * CJam
 * COBOL
@@ -610,6 +611,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem86.aya](problem86.aya)
 * Language: [Aya](https://esolangs.org/wiki/Aya)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/nick-paul/aya-lang)
+* Notes: (None)
+
+### Euler 87
+* File: [problem87.brat](problem87.brat)
+* Language: [Brat](http://brat-lang.org/)
+* Compiler / Interpreter: [The provided interpreter](https://try.brat-lang.org/#)
 * Notes: (None)
 
 ## Valid Languages
