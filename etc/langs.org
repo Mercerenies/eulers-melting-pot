@@ -83,6 +83,7 @@
 *** Dip
 *** Dogescript                                                         :used:
 *** Dylan
+*** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
 *** GAP
 *** Genie
 *** Glava
@@ -206,7 +207,6 @@
 *** Crystal
 *** Delphi
 *** E
-*** 𝔼𝕊𝕄𝕚𝕟
 *** Euler
 *** Fancy
 *** Fission

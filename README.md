@@ -35,6 +35,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * ELisp
 * Elixir
 * Enchilada
+* 𝔼𝕊𝕄𝕚𝕟
 * Factor
 * FALSE
 * Forth
@@ -617,6 +618,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem87.brat](problem87.brat)
 * Language: [Brat](http://brat-lang.org/)
 * Compiler / Interpreter: [The provided interpreter](https://try.brat-lang.org/#)
+* Notes: (None)
+
+### Euler 88
+* File: [problem88.esmin](problem88.esmin)
+* Language: [𝔼𝕊𝕄𝕚𝕟](https://bennyboy.tech/ESMin/)
+* Compiler / Interpreter: [The provided interpreter](https://bennyboy.tech/ESMin/interpreter3.html)
 * Notes: (None)
 
 ## Valid Languages

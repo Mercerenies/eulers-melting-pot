@@ -1,0 +1,41 @@
+// -*- Javascript -*- (It helps... kinda)
+
+_all_prods↛{
+  if (a == 1) {
+    ᶉ[[]]
+  }
+  var arr = []
+  ⩤(b,a)ⓜ{
+    d = $
+    if (a % d == 0) {
+      var sub = _all_prods(a / d, d)
+      sub⒨.ÿ(d))
+      arr=arr.Ą(sub)
+    }
+  })
+  ᶉarr
+}
+all_prods↛_all_prods(a,2)
+
+optimal_cases = {}
+remaining = 12𝕜
+
+solve_for↛{
+  all_prods(a)ⓜ{
+    var sum = ⨭$
+    if (sum <= a) {
+      var total_terms = $Ꝉ+a-sum
+      if (total_terms ≤ 12000 ⅋ !optimal_cases[total_terms]) {
+        optimal_cases[total_terms] = a
+        remaining‡
+      }
+    }
+  })
+}
+
+i = 1
+while (remaining > 0) {
+  solve_for(i)
+  i⧺
+}
+⨭[…Ꞩ⩤(2,12𝕜)ⓜoptimal_cases[$])]
