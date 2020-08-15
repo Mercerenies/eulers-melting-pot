@@ -630,7 +630,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 ### Euler 89
 * File: [problem89.11](problem89.11)
 * Language: [1.1](https://esolangs.org/wiki/1.1)
-* Compiler / Interpreter: [The provided Perl script](https://github.com/Sxakalo/1.1-Lang/blob/master/main.pl)
+* Compiler / Interpreter: [The provided Perl script](https://github.com/Sxakalo/1.1-Lang)
 * Notes: Pass `./files/p089_roman.txt` as input.
 
 ## Valid Languages
