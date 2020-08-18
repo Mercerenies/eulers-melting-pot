@@ -151,6 +151,7 @@
 *** Brat
 *** Chef
 *** CJam                                                               :used:
+*** COMPLEX                                                            :used:
 *** Cubix                                                              :used:
 *** Emoji
 *** Enchilada                                                          :used:
@@ -171,6 +172,7 @@
 *** MATL                                                               :used:
 *** Mouse-2002                                                         :used:
 *** Noether
+*** Orthagonal
 *** Piet                                                               :used:
 *** Pyth                                                               :used:
 *** Retina
@@ -189,10 +191,20 @@
 ** UNUSABLE
 *** Clasp.py
     Is this actually a language or just a library...?
+*** Conedy
+    See Trajedy.
 *** Enterprise
     Could not run due to language-imposed restrictions.
 *** INTERCAL
     No.
+*** Orthogonal
+    Sadly, the only [[http://www.muppetlabs.com/~breadbox/orth/][working interpreter]] I can find was written for a
+    compiler from 25 years ago.
+*** Skastic
+    Looks like a /super/ cool idea, but it's woefully incomplete to
+    the point of possibly not even being Turing complete.
+*** Trajedy
+    Beautiful language, but... no.
 *** Unlambda
     Possibly too minimal?
 ** UNCLASSIFIED

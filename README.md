@@ -27,6 +27,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * CIL
 * CJam
 * COBOL
+* COMPLEX
 * 🆒
 * Csh
 * Cubix
@@ -632,6 +633,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [1.1](https://esolangs.org/wiki/1.1)
 * Compiler / Interpreter: [The provided Perl script](https://github.com/Sxakalo/1.1-Lang)
 * Notes: Pass `./files/p089_roman.txt` as input.
+
+### Euler 90
+* File: [problem90.1+1j](problem90.1+1j)
+* Language: [COMPLEX](https://esolangs.org/wiki/COMPLEX)
+* Compiler / Interpreter: [The provided interpreter](https://github.com/Taneb/COMPLEX)
+* Notes: Code was written with the help of a Lisp translator program.
 
 ## Valid Languages
 
