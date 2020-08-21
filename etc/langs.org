@@ -106,6 +106,7 @@
 *** sed                                                                :used:
 *** SNOBOL                                                             :used:
 *** Streem
+*** SuperCollider                                                      :used:
 *** Vala                                                               :used:
 *** Vale
 *** Vimscript

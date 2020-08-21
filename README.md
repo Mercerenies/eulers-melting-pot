@@ -88,6 +88,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * SML
 * SNOBOL
 * Stuck
+* SuperCollider
 * Taxi
 * Tcl
 * V
@@ -646,6 +647,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Anti-Array](https://esolangs.org/wiki/Anti-Array)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/Demonthos/Anti-Array)
 * Notes: A somewhat slow solution; the interpreter crashes at the end for unknown reasons, but the answer printed is still correct.
+
+### Euler 92
+* File: [problem92.sc](problem92.sc)
+* Language: [SuperCollider](https://supercollider.github.io/)
+* Compiler / Interpreter: [The official interpreter](https://supercollider.github.io/download)
+* Notes: A somewhat slow solution.
 
 ## Valid Languages
 
