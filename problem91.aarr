@@ -1,0 +1,41 @@
+
+total = 0
+loop x1 = 0 | x1 < 51 | x1 ++ |
+  loop y1 = 0 | y1 < 51 | y1 ++ |
+    loop x2 = 0 | x2 < 51 | x2 ++ |
+      loop y2 = 0 | y2 < 51 | y2 ++ |
+        okay = true
+        if ( x1 == x2 )
+          if ( y1 == y2 )
+            okay = false
+          }
+        }
+        if ( x1 == 0 )
+          if ( y1 == 0 )
+            okay = false
+          }
+        }
+        if ( x2 == 0 )
+          if ( y2 == 0 )
+            okay = false
+          }
+        }
+        if ( okay )
+          a = ( ( x1 * x1 ) + ( y1 * y1 ) )
+          b = ( ( x2 * x2 ) + ( y2 * y2 ) )
+          c = ( ( ( x1 - x2 ) * ( x1 - x2 ) ) + ( ( y1 - y2 ) * ( y1 - y2 ) ) )
+          if ( a + b == c )
+            total ++
+          }
+          if ( b + c == a )
+            total ++
+          }
+          if ( c + a == b )
+            total ++
+          }
+        }
+      }
+    }
+  }
+}
+print ( total / 2 )

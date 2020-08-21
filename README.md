@@ -14,6 +14,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * \>\<\>
 * Ada
 * ALGOL 68
+* Anti-Array
 * APL
 * AWK
 * Aya
@@ -639,6 +640,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [COMPLEX](https://esolangs.org/wiki/COMPLEX)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/Taneb/COMPLEX)
 * Notes: Code was written with the help of a Lisp translator program.
+
+### Euler 91
+* File: [problem91.aarr](problem91.aarr)
+* Language: [Anti-Array](https://esolangs.org/wiki/Anti-Array)
+* Compiler / Interpreter: [The provided interpreter](https://github.com/Demonthos/Anti-Array)
+* Notes: A somewhat slow solution; the interpreter crashes at the end for unknown reasons, but the answer printed is still correct.
 
 ## Valid Languages
 
