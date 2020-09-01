@@ -44,6 +44,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Forth
 * Fortran
 * Funciton
+* Genie
 * GML
 * Go
 * Golfscript
@@ -653,6 +654,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [SuperCollider](https://supercollider.github.io/)
 * Compiler / Interpreter: [The official interpreter](https://supercollider.github.io/download)
 * Notes: A somewhat slow solution.
+
+### Euler 93
+* File: [problem93.gs](problem93.gs)
+* Language: [Genie](https://wiki.gnome.org/Projects/Genie)
+* Compiler / Interpreter: [valac](https://wiki.gnome.org/Projects/Vala/ValaPlatforms)
+* Notes: Ignore the lengthy list of pointer cast warnings when compiling.
 
 ## Valid Languages
 

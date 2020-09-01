@@ -84,8 +84,9 @@
 *** Dogescript                                                         :used:
 *** Dylan
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
+*** Frege
 *** GAP
-*** Genie
+*** Genie                                                              :used:
 *** Glava
 *** IntercalScript
 *** J                                                                  :used:
