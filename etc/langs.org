@@ -157,6 +157,7 @@
 *** Cubix                                                              :used:
 *** Emoji
 *** Enchilada                                                          :used:
+*** Factorio                                                           :used:
 *** FALSE                                                              :used:
 *** FiM++
 *** Fourier
