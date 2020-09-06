@@ -73,6 +73,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Objective-C
 * OCaml
 * Pascal
+* Parrot IR
 * PASM
 * Piet
 * Pike
@@ -667,6 +668,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Factorio](https://www.factorio.com/)
 * Compiler / Interpreter: [Factorio](https://www.factorio.com/)
 * Notes: Import the blueprint, then set the lower-left constant combinator to R=0 to run. Thanks to DaveMcW for his [compact digit display design](https://forums.factorio.com/viewtopic.php?t=19825). Screenshot is available at [etc/problem94_screenshot.png](etc/problem94_screenshot.png).
+
+### Euler 95
+* File: [problem95.pir](problem95.pir)
+* Language: [Parrot IR](https://en.wikipedia.org/wiki/Parrot_intermediate_representation)
+* Compiler / Interpreter: [The Parrot VM](https://github.com/parrot/parrot)
+* Notes: (None)
 
 ## Valid Languages
 

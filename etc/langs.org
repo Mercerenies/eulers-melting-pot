@@ -53,6 +53,7 @@
 *** Fennel
 *** Forth                                                              :used:
 *** Fortran                                                            :used:
+*** Haxe
 *** Io                                                                 :used:
 *** Ioke                                                               :used:
 *** Julia
@@ -120,7 +121,7 @@
 *** LLVM IR                                                            :used:
 *** MASM                                                               :used:
 *** NASM                                                               :used:
-*** Parrot IR
+*** Parrot IR                                                          :used:
 *** PASM                                                               :used:
 *** WASM
 ** SHELL
