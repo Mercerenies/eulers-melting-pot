@@ -193,6 +193,10 @@
 *** V                                                                  :used:
 *** Whitespace                                                         :used:
 ** UNUSABLE
+*** ALF
+    The [[https://www.informatik.uni-kiel.de/~mh/systems/ALF/][available implementation]] is 25 years old and, despite my best
+    efforts, I cannot get its ~a.out~ format executables to run on my
+    machine.
 *** Clasp.py
     Is this actually a language or just a library...?
 *** Conedy
