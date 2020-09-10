@@ -93,6 +93,7 @@
 *** J                                                                  :used:
 *** Javagony
 *** Joy
+*** λProlog
 *** LaTeX                                                              :used:
 *** LilyPond                                                           :used:
 *** m4                                                                 :used:
@@ -131,6 +132,7 @@
 *** Dash
 *** Zsh                                                                :used:
 ** BASIC
+*** Chipmunk BASIC
 *** Commodore BASIC
 *** JustBASIC                                                          :used:
 *** Microsoft SmallBasic
