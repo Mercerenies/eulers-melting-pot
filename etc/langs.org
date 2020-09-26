@@ -53,6 +53,7 @@
 *** Fennel
 *** Forth                                                              :used:
 *** Fortran                                                            :used:
+*** Haxe
 *** Io                                                                 :used:
 *** Ioke                                                               :used:
 *** Julia
@@ -91,11 +92,13 @@
 *** J                                                                  :used:
 *** Javagony
 *** Joy
+*** K
 *** LaTeX                                                              :used:
 *** LilyPond                                                           :used:
 *** m4                                                                 :used:
 *** Make                                                               :used:
 *** MoonScript
+*** Picat
 *** Pike                                                               :used:
 *** Potassco                                                           :used:
 *** Prolog                                                             :used:
