@@ -85,14 +85,16 @@
 *** Dogescript                                                         :used:
 *** Dylan
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
+*** Frege
 *** GAP
-*** Genie
+*** Genie                                                              :used:
 *** Glava
 *** IntercalScript
 *** J                                                                  :used:
 *** Javagony
 *** Joy
 *** K
+*** λProlog
 *** LaTeX                                                              :used:
 *** LilyPond                                                           :used:
 *** m4                                                                 :used:
@@ -122,7 +124,7 @@
 *** LLVM IR                                                            :used:
 *** MASM                                                               :used:
 *** NASM                                                               :used:
-*** Parrot IR
+*** Parrot IR                                                          :used:
 *** PASM                                                               :used:
 *** WASM
 ** SHELL
@@ -132,6 +134,7 @@
 *** Dash
 *** Zsh                                                                :used:
 ** BASIC
+*** Chipmunk BASIC
 *** Commodore BASIC
 *** JustBASIC                                                          :used:
 *** Microsoft SmallBasic
@@ -159,6 +162,7 @@
 *** Cubix                                                              :used:
 *** Emoji
 *** Enchilada                                                          :used:
+*** Factorio                                                           :used:
 *** FALSE                                                              :used:
 *** FiM++
 *** Fourier
@@ -193,6 +197,10 @@
 *** V                                                                  :used:
 *** Whitespace                                                         :used:
 ** UNUSABLE
+*** ALF
+    The [[https://www.informatik.uni-kiel.de/~mh/systems/ALF/][available implementation]] is 25 years old and, despite my best
+    efforts, I cannot get its ~a.out~ format executables to run on my
+    machine.
 *** Clasp.py
     Is this actually a language or just a library...?
 *** Conedy

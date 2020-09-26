@@ -40,10 +40,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Enchilada
 * 𝔼𝕊𝕄𝕚𝕟
 * Factor
+* Factorio
 * FALSE
 * Forth
 * Fortran
 * Funciton
+* Genie
 * GML
 * Go
 * Golfscript
@@ -71,6 +73,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Objective-C
 * OCaml
 * Pascal
+* Parrot IR
 * PASM
 * Piet
 * Pike
@@ -653,6 +656,24 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [SuperCollider](https://supercollider.github.io/)
 * Compiler / Interpreter: [The official interpreter](https://supercollider.github.io/download)
 * Notes: A somewhat slow solution.
+
+### Euler 93
+* File: [problem93.gs](problem93.gs)
+* Language: [Genie](https://wiki.gnome.org/Projects/Genie)
+* Compiler / Interpreter: [valac](https://wiki.gnome.org/Projects/Vala/ValaPlatforms)
+* Notes: Ignore the lengthy list of pointer cast warnings when compiling.
+
+### Euler 94
+* File: [problem94.fact](problem94.fact)
+* Language: [Factorio](https://www.factorio.com/)
+* Compiler / Interpreter: [Factorio](https://www.factorio.com/)
+* Notes: Import the blueprint, then set the lower-left constant combinator to R=0 to run. Thanks to DaveMcW for his [compact digit display design](https://forums.factorio.com/viewtopic.php?t=19825). Screenshot is available at [etc/problem94_screenshot.png](etc/problem94_screenshot.png).
+
+### Euler 95
+* File: [problem95.pir](problem95.pir)
+* Language: [Parrot IR](https://en.wikipedia.org/wiki/Parrot_intermediate_representation)
+* Compiler / Interpreter: [The Parrot VM](https://github.com/parrot/parrot)
+* Notes: (None)
 
 ## Valid Languages
 
