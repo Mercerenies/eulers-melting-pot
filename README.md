@@ -55,6 +55,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Ioke
 * J
 * Jasmin
+* Javagony
 * Jelly
 * JSF\*\*k
 * JustBASIC
@@ -674,6 +675,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Parrot IR](https://en.wikipedia.org/wiki/Parrot_intermediate_representation)
 * Compiler / Interpreter: [The Parrot VM](https://github.com/parrot/parrot)
 * Notes: (None)
+
+### Euler 96
+* File: [problem96.java](problem96.java)
+* Language: [Javagony](https://esolangs.org/wiki/Javagony)
+* Compiler / Interpreter: [openjdk](https://openjdk.java.net/)
+* Notes: An incredibly slow solution.
 
 ## Valid Languages
 

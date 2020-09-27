@@ -91,7 +91,7 @@
 *** Glava
 *** IntercalScript
 *** J                                                                  :used:
-*** Javagony
+*** Javagony                                                           :used:
 *** Joy
 *** K
 *** λProlog
