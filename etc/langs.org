@@ -88,7 +88,7 @@
 *** Frege
 *** GAP
 *** Genie                                                              :used:
-*** Glava
+*** Glava                                                              :used:
 *** IntercalScript
 *** J                                                                  :used:
 *** Javagony                                                           :used:
@@ -237,6 +237,7 @@
 *** Fission
 *** Groovy
 *** Icon
+*** Lava
 *** Logtalk
 *** NewLISP
 *** Nit

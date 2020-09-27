@@ -46,6 +46,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Fortran
 * Funciton
 * Genie
+* Glava
 * GML
 * Go
 * Golfscript
@@ -688,6 +689,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Math++](https://esolangs.org/wiki/Math%2B%2B)
 * Compiler / Interpreter: [The provided interpreter](https://pastebin.com/mnxZk1cz)
 * Notes: A very slow solution, outputs its answer in scientific notation but with sufficient precision.
+
+### Euler 98
+* File: [problem98.gl](problem98.gl)
+* Language: [Glava](https://esolangs.org/wiki/Glava)
+* Compiler / Interpreter: [The provided interpreter](https://github.com/ZekNikZ/Glava)
+* Notes: (None)
 
 ## Valid Languages
 

@@ -1,0 +1,60 @@
+
+try {
+  BufferedReader reader = new BufferedReader(new FileReader("./files/p098_words.txt"));
+  A = reader.readLine().split(",");
+  ΩAύ)A[i]=A[i].substring(1, A[i]υ-1)}
+} catch (IOException e) {}
+
+HashMap<σ, HashMap<Σ, Γ>> bag = new HashMap<σ, HashMap<Σ, Γ>>();
+ωσword:A)
+  HashMap<Σ, Γ> multi = new HashMap<Σ, Γ>();
+  Ωwordυ)
+    χch = word.charAt(i);
+    Γx = multi.get(ch);
+    multi.put(ch, x == η ? 1 : x + 1)
+  }
+  bag.put(word, multi);
+}
+
+ιbiggest = 0;
+ωσword1:A)
+  ωσword2:A)
+    if ((!word1.equals(word2)) && (bag.get(word1).equals(bag.get(word2)))) {
+      ιmin=ζΓsqrt(pow(10, word1υ-1));
+      ιmax=ζΓsqrt(pow(10, word1υ));
+      ωιj=min;j<=max;j++)
+        ιn = j * j;
+        σsq = Γ.toString(n);
+        if (sqυ != word1υ)
+          continue;
+        HashSet<Σ> used = new HashSet<Σ>();
+        HashMap<Σ, Σ> sub = new HashMap<Σ, Σ>();
+        Ωword1υ)
+          if (sub.get(word1.charAt(i)) == η) {
+            if (used.contains(sq.charAt(i))) {
+              sub = η;
+              break
+            }
+            sub.put(word1.charAt(i), sq.charAt(i));
+            used.add(sq.charAt(i))
+          } else if (sub.get(word1.charAt(i)) != sq.charAt(i)) {
+            sub = η;
+            break
+          }
+        }
+        if (sub != η) {
+          σs = "";
+          Ωword2υ)
+            s += sub.get(word2.charAt(i))
+          }
+          ιt = Γ.parseInt(s);
+          δu = sqrt(t);
+          if (s.charAt(0) != '0 && u == ζΓu) {
+            biggest = max(biggest, n);
+          }
+        }
+      }
+    }
+  }
+}
+λbiggest
