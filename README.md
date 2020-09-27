@@ -66,6 +66,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * m4
 * Make
 * MASM
+* Math++
 * MATL
 * Mouse-2002
 * NASM
@@ -681,6 +682,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Javagony](https://esolangs.org/wiki/Javagony)
 * Compiler / Interpreter: [openjdk](https://openjdk.java.net/)
 * Notes: An incredibly slow solution.
+
+### Euler 97
+* File: [problem97.mpp](problem97.mpp)
+* Language: [Math++](https://esolangs.org/wiki/Math%2B%2B)
+* Compiler / Interpreter: [The provided interpreter](https://pastebin.com/mnxZk1cz)
+* Notes: A very slow solution, outputs its answer in scientific notation but with sufficient precision.
 
 ## Valid Languages
 

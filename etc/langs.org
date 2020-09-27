@@ -176,7 +176,7 @@
 *** JSF**k                                                             :used:
 *** Labyrinth                                                          :used:
 *** MagiStack
-*** Math++
+*** Math++                                                             :used:
 *** MATL                                                               :used:
 *** Mouse-2002                                                         :used:
 *** Noether
@@ -249,6 +249,7 @@
 *** Pony
 *** PPL
 *** Simula
+*** Skip
 *** Snails
 *** SNUSP
 *** Squirrel
