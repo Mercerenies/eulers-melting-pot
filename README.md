@@ -94,6 +94,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Smalltalk
 * SML
 * SNOBOL
+* Snowman
 * Stuck
 * SuperCollider
 * Taxi
@@ -702,6 +703,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Hanabi](https://esolangs.org/wiki/Hanabi)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/elyatai/hanabi/)
 * Notes: Pass `./files/p099_base_exp.txt` as input.
+
+### Euler 100
+* File: [problem100.snow](problem100.snow)
+* Language: [Snowman](https://esolangs.org/wiki/Snowman)
+* Compiler / Interpreter: [The provided interpreter](https://github.com/tckmn/snowman-lang/)
+* Notes: Code was written with the help of a Lisp translator program.
 
 ## Valid Languages
 

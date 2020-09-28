@@ -19,7 +19,11 @@
     (floor "nF" 1 1)
     (ceil "nC" 1 1)
     (not "nO" 1 1)
-    (wrap "wR" 1 1)))
+    (wrap "wR" 1 1)
+    (pow "nP" 2 1)
+    (mul "nM" 2 1)
+    (add "nA" 2 1)
+    (less-than "nL" 2 1)))
 
 (defparameter *vars*
   '())
@@ -175,50 +179,48 @@
 ;;                    (to-string (total2) (total2))
 ;;                    (print (total2) ()))))))
 
-;; ///// gcd part is not efficient enough, maybe hand-write that
-;; section if possible?
-(format t "~A~%"
-        (full-translate
-         '((store 0 total)
-           (range (4 12001) (iter))
-           (each d iter
-                 ((dup (d) (d d1))
-                  (dup (d1) (d1 d2))
-                  (div (d1 3) (n0))
-                  (div (d2 2) (n1))
-                  (floor (n0) (n0))
-                  (ceil (n1) (n1))
-                  (incr (n0) (n0))
-                  (range (n0 n1) (iter1))
+;; (format t "~A~%"
+;;         (full-translate
+;;          '((store 0 total)
+;;            (range (4 12001) (iter))
+;;            (each d iter
+;;                  ((dup (d) (d d1))
+;;                   (dup (d1) (d1 d2))
+;;                   (div (d1 3) (n0))
+;;                   (div (d2 2) (n1))
+;;                   (floor (n0) (n0))
+;;                   (ceil (n1) (n1))
+;;                   (incr (n0) (n0))
+;;                   (range (n0 n1) (iter1))
 
-                  (dup (d) (d aaa))
-                  (mod (aaa 100) (bbb))
-                  (equal? (bbb 0) (bbb))
-                  (if bbb
-                      ((dup (d) (d aaa))
-                       (to-string (aaa) (aaa))
-                       (print (aaa) ())
-                       (wrap (13) (aaa))
-                       (print (aaa) ())
-                       (wrap (10) (aaa))
-                       (print (aaa) ()))
-                    ())
+;;                   (dup (d) (d aaa))
+;;                   (mod (aaa 100) (bbb))
+;;                   (equal? (bbb 0) (bbb))
+;;                   (if bbb
+;;                       ((dup (d) (d aaa))
+;;                        (to-string (aaa) (aaa))
+;;                        (print (aaa) ())
+;;                        (wrap (13) (aaa))
+;;                        (print (aaa) ())
+;;                        (wrap (10) (aaa))
+;;                        (print (aaa) ()))
+;;                     ())
 
-                  (each n iter1
-                        ;; gcd calculation
-                        ((while ((dup (d) (d dzero))
-                                 (equal? (dzero 0) (cond))
-                                 (not (cond) (cond)))
-                                cond
-                                ((dup (d) (t0 t1))
-                                 (mod (n t0) (d))
-                                 (move t1 n)))
-                         (equal? (n 1) (eq))
-                         (if eq
-                             ((incr (total) (total)))
-                           ())))))
-           (to-string (total) (total))
-           (print (total) ()))))
+;;                   (each n iter1
+;;                         ;; gcd calculation
+;;                         ((while ((dup (d) (d dzero))
+;;                                  (equal? (dzero 0) (cond))
+;;                                  (not (cond) (cond)))
+;;                                 cond
+;;                                 ((dup (d) (t0 t1))
+;;                                  (mod (n t0) (d))
+;;                                  (move t1 n)))
+;;                          (equal? (n 1) (eq))
+;;                          (if eq
+;;                              ((incr (total) (total)))
+;;                            ())))))
+;;            (to-string (total) (total))
+;;            (print (total) ()))))
 
 ;; (format t "~A~%"
 ;;         (full-translate
@@ -232,3 +234,26 @@
 ;;                     ())))
 ;;            (to-string (963) (aaa))
 ;;            (print (aaa) ()))))
+
+(format t "~A~%"
+        (full-translate
+         '((store 1 a)
+           (store 1 b)
+           (pow (10 12) (min))
+           (mul (2 min) (min))
+           (while ((dup (a) (a aa))
+                   (dup (min) (min tmp))
+                   (less-than (aa tmp) (cond)))
+                  cond
+                  ((dup (a) (a ta))
+                   (dup (b) (b tb))
+                   (mul (3 a) (tmp1))
+                   (mul (4 b) (tmp2))
+                   (add (tmp1 tmp2) (a))
+                   (mul (2 ta) (tmp1))
+                   (mul (3 tb) (tmp2))
+                   (add (tmp1 tmp2) (b))))
+           (add (b 1) (b))
+           (div (b 2) (b))
+           (to-string (b) (b))
+           (print (b) ())

@@ -190,7 +190,7 @@
 *** Secretary
 *** Seriously                                                          :used:
 *** Shakespeare                                                        :used:
-*** Snowman
+*** Snowman                                                            :used:
 *** Stuck                                                              :used:
 *** Taxi                                                               :used:
 *** Tome
