@@ -5,8 +5,8 @@ const lines = fs.readFileSync('./files/p099_base_exp.txt', 'utf8').split("\n");
 let biggest = 0;
 let biggest_line = 0;
 let current_line = 1;
-for (const line of lines) {
-  let [a, b] = line.split(",");
+for (let i = 0; i < 2000; i += 2) {
+  let [a, b] = [lines[i], lines[i + 1]]
   a = parseInt(a);
   b = parseInt(b);
   const value = Math.log(a) * b;
@@ -19,11 +19,32 @@ for (const line of lines) {
 console.log(biggest_line);
 
 /*
- * 0x1 Output buffer
- * 0x2 File buffer
- * 0x3 Variable a
- * 0x4 Variable b
- * 0x5 Temporary variable i
- * 0x6 Temporary variable j
- * 0x7 Temporary variable k
- */
+
+TOP
+current_line
+biggest_line
+biggest
+BOTTOM
+
+At label skip-save
+TOP
+current_line
+biggest_line
+biggest
+BOTTOM
+
+At label next-iter
+TOP
+current_line
+biggest_line
+biggest
+BOTTOM
+
+At label loop-start
+TOP
+current_line
+biggest_line
+biggest
+BOTTOM
+
+*/

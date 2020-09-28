@@ -51,6 +51,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Go
 * Golfscript
 * Grocery List
+* Hanabi
 * Hexagony
 * Io
 * Ioke
@@ -695,6 +696,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Glava](https://esolangs.org/wiki/Glava)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/ZekNikZ/Glava)
 * Notes: (None)
+
+### Euler 99
+* File: [problem99.hnb](problem99.hnb)
+* Language: [Hanabi](https://esolangs.org/wiki/Hanabi)
+* Compiler / Interpreter: [The provided interpreter](https://github.com/elyatai/hanabi/)
+* Notes: Pass `./files/p099_base_exp.txt` as input.
 
 ## Valid Languages
 

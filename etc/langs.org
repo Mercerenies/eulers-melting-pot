@@ -170,7 +170,7 @@
 *** Gibberish
 *** Golfscript                                                         :used:
 *** Grocery List                                                       :used:
-*** Hanabi
+*** Hanabi                                                             :used:
 *** Hexagony                                                           :used:
 *** Javagrid
 *** Jelly                                                              :used:
