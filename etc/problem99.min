@@ -1,0 +1,34 @@
+**** Forgot that I really need some kind of floating point support to do the logarithm. ****
+buf 0x1 out
+buf 0x100 debug
+
+buf 0x2 file
+put {{{ ./files/p099_base_exp.txt }}} 0x2
+mov 1 0x2
+
+mov 0 0x3
+lbl readNum_loop_a
+mov 0x2 0x5
+jlt 0x5 48 readNum_end_a
+mul 10 0x3
+sub 48 0x5
+add 0x5 0x3
+jmp readNum_loop_a
+lbl readNum_end_a
+
+mov 0 0x4
+lbl readNum_loop_b
+mov 0x2 0x5
+jlt 0x5 48 readNum_end_b
+mul 10 0x4
+sub 48 0x5
+add 0x5 0x4
+jmp readNum_loop_b
+lbl readNum_end_b
+
+mov 27 0x2
+
+mov 0x3 0x100
+mov 0x4 0x100
+
+mov 13 0x1
