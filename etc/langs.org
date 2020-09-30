@@ -167,7 +167,7 @@
 *** FiM++
 *** Fourier
 *** Funciton                                                           :used:
-*** Gibberish
+*** Gibberish                                                          :used:
 *** Golfscript                                                         :used:
 *** Grocery List                                                       :used:
 *** Hanabi                                                             :used:

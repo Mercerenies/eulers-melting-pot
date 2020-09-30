@@ -46,6 +46,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Fortran
 * Funciton
 * Genie
+* Gibberish
 * Glava
 * GML
 * Go
@@ -709,6 +710,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Snowman](https://esolangs.org/wiki/Snowman)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/tckmn/snowman-lang/)
 * Notes: Code was written with the help of a Lisp translator program.
+
+### Euler 101
+* File: [problem101.gibb](problem101.gibb)
+* Language: [Gibberish](https://esolangs.org/wiki/Gibberish_(programming_language))
+* Compiler / Interpreter: [The unofficial Python interpreter](https://esolangs.org/wiki/User:Marinus/Gibberish_interpreter)
+* Notes: (None)
 
 ## Valid Languages
 
