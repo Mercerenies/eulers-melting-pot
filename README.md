@@ -718,7 +718,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Compiler / Interpreter: [The unofficial Python interpreter](https://esolangs.org/wiki/User:Marinus/Gibberish_interpreter)
 * Notes: (None)
 
-#### Euler 102
+### Euler 102
 * File: [problem102.magi](problem102.magi)
 * Language: [MagiStack](https://esolangs.org/wiki/MagiStack)
 * Compiler / Interpreter: [MagiStack 1.2 Interpreter](https://github.com/tripl3dogdare/MagiStack/blob/master/magistack-1.2.py)
