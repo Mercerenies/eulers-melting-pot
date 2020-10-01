@@ -68,6 +68,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * LLVM IR
 * m4
 * Make
+* MagiStack
 * MASM
 * Math++
 * MATL
@@ -716,6 +717,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Gibberish](https://esolangs.org/wiki/Gibberish_(programming_language))
 * Compiler / Interpreter: [The unofficial Python interpreter](https://esolangs.org/wiki/User:Marinus/Gibberish_interpreter)
 * Notes: (None)
+
+#### Euler 102
+* File: [problem102.magi](problem102.magi)
+* Language: [MagiStack](https://esolangs.org/wiki/MagiStack)
+* Compiler / Interpreter: [MagiStack 1.2 Interpreter](https://github.com/tripl3dogdare/MagiStack/blob/master/magistack-1.2.py)
+* Notes: Code was written with the help of a Lisp translator program.
 
 ## Valid Languages
 

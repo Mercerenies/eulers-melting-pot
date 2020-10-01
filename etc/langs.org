@@ -176,7 +176,7 @@
 *** Jelly                                                              :used:
 *** JSF**k                                                             :used:
 *** Labyrinth                                                          :used:
-*** MagiStack
+*** MagiStack                                                          :used:
 *** Math++                                                             :used:
 *** MATL                                                               :used:
 *** minaac
