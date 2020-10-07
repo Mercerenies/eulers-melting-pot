@@ -74,6 +74,7 @@
 *** SML                                                                :used:
 *** Squeak
 *** Swift
+*** zkl                                                                :used:
 ** BRONZE
 *** Agda
 *** APL                                                                :used:
@@ -240,6 +241,7 @@
 *** Groovy
 *** Icon
 *** Inca
+*** Kitten
 *** Lava
 *** Logtalk
 *** NewLISP
@@ -261,7 +263,6 @@
 *** Sweet.js
 *** Teascript
 *** XY
-*** zkl
 * RESOURCES
 ** LISTS OF LANGUAGES
   Here are several online resources that I've found to be useful for finding various languages.

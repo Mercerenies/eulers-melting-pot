@@ -109,6 +109,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Wren
 * Wyvern
 * XSLT
+* zkl
 * Zsh
 
 ## Completed Challenges
@@ -729,6 +730,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem103.dylan](problem103.dylan)
 * Language: [Dylan](https://opendylan.org/)
 * Compiler / Interpreter: [Open Dylan](https://opendylan.org/download/index.html)
+* Notes: (None)
+
+### Euler 104
+* File: [problem104.zkl](problem104.zkl)
+* Language: [zkl](http://www.zenkinetic.com/zkl.html)
+* Compiler / Interpreter: [The official interpreter](http://www.zenkinetic.com/zklDownloads.html)
 * Notes: (None)
 
 ## Valid Languages

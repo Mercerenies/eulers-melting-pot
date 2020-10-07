@@ -1,0 +1,37 @@
+
+var cap = (10).pow(9);
+var sqrt5 = (5.0).sqrt();
+var phi = (1.0 + sqrt5) / 2.0;
+var logphi = phi.log10();
+var log5 = sqrt5.log10();
+
+fcn is_pan(x) {
+  var y;
+  y = x.sort().unique();
+  return(y[0] == "1" and y[-1] == "9" and y.len() == 9);
+}
+
+fcn fibo_front(i) {
+  var log;
+  log = i.toFloat() * logphi - log5;
+  return((10.0).pow(log % 1.0 + 9.0).toInt());
+}
+
+var running = True;
+var index = 1;
+var a = 1;
+var b = 1;
+while(running) {
+  if (is_pan(a.toString())) {
+    var f = fibo_front(index);
+    if (is_pan(f.toString())) {
+      println(index);
+      running = False;
+    }
+  }
+
+  var tmp = a;
+  a = b;
+  b = (tmp + a) % cap;
+  index = index + 1;
+}
