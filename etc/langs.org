@@ -47,6 +47,7 @@
 *** ASP
 *** AWK                                                                :used:
 *** COBOL                                                              :used:
+*** Dylan                                                              :used:
 *** Eiffel                                                             :used:
 *** F#
 *** Factor                                                             :used:
@@ -83,7 +84,6 @@
 *** 🆒                                                                 :used:
 *** Dip
 *** Dogescript                                                         :used:
-*** Dylan
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
 *** Frege
 *** GAP

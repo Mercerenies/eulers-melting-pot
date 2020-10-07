@@ -34,6 +34,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Cubix
 * D
 * Dogescript
+* Dylan
 * Eiffel
 * ELisp
 * Elixir
@@ -722,7 +723,13 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem102.magi](problem102.magi)
 * Language: [MagiStack](https://esolangs.org/wiki/MagiStack)
 * Compiler / Interpreter: [MagiStack 1.2 Interpreter](https://github.com/tripl3dogdare/MagiStack/blob/master/magistack-1.2.py)
-* Notes: Code was written with the help of a Lisp translator program.
+* Notes: Code was written with the help of a Lisp translator program; provide `./files/p102_triangles.txt` as input.
+
+### Euler 103
+* File: [problem103.dylan](problem103.dylan)
+* Language: [Dylan](https://opendylan.org/)
+* Compiler / Interpreter: [Open Dylan](https://opendylan.org/download/index.html)
+* Notes: (None)
 
 ## Valid Languages
 
