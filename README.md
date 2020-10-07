@@ -730,7 +730,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem103.dylan](problem103.dylan)
 * Language: [Dylan](https://opendylan.org/)
 * Compiler / Interpreter: [Open Dylan](https://opendylan.org/download/index.html)
-* Notes: (None)
+* Notes: `./etc/build103.sh` may be helpful in building the source.
 
 ### Euler 104
 * File: [problem104.zkl](problem104.zkl)
