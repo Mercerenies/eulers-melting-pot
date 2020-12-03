@@ -51,7 +51,7 @@
 *** Eiffel                                                             :used:
 *** F#
 *** Factor                                                             :used:
-*** Fennel
+*** Fennel                                                             :used:
 *** Forth                                                              :used:
 *** Fortran                                                            :used:
 *** Haxe
@@ -69,6 +69,7 @@
 *** Pascal                                                             :used:
 *** PHP
 *** R
+*** Raku (Perl 6)
 *** Self
 *** Smalltalk                                                          :used:
 *** SML                                                                :used:
@@ -192,6 +193,7 @@
 *** Orthagonal
 *** perchance.org
 *** Piet                                                               :used:
+*** Puzzlescript
 *** Pyth                                                               :used:
 *** Retina
 *** Rockstar
@@ -232,9 +234,11 @@
 ** UNCLASSIFIED
 *** Alice
 *** Alloy
+*** ATS
 *** AutoLISP
 *** Brachylog
 *** CandleScript
+*** Carp
 *** Cat
 *** Cecil
 *** Clean
@@ -242,6 +246,8 @@
 *** Crystal
 *** Delphi
 *** E
+*** Ė (https://e-dot.io/)
+*** EcstasyLang
 *** Euler
 *** Fancy
 *** Fission
@@ -249,11 +255,15 @@
 *** Gwion
 *** Icon
 *** Inca
+*** Jsish
+*** Kernel (Klisp)
 *** Kitten
+*** Kobalt (https://github.com/abel0b/kobalt)
 *** Lava
 *** Leafscript
 *** Logtalk
 *** Luna
+*** Magpie
 *** NewLISP
 *** Nit
 *** Oasis
@@ -272,6 +282,7 @@
 *** Squirrel
 *** Sweet.js
 *** Teascript
+*** XQuery
 *** XY
 * RESOURCES
 ** LISTS OF LANGUAGES

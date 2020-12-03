@@ -43,6 +43,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Factor
 * Factorio
 * FALSE
+* Fennel
 * Forth
 * Fortran
 * Funciton
@@ -736,6 +737,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem104.zkl](problem104.zkl)
 * Language: [zkl](http://www.zenkinetic.com/zkl.html)
 * Compiler / Interpreter: [The official interpreter](http://www.zenkinetic.com/zklDownloads.html)
+* Notes: (None)
+
+### Euler 105
+* File: [problem105.fnl](problem105.fnl)
+* Language: [Fennel](https://fennel-lang.org/)
+* Compiler / Interpreter: [fennel-0.7.0.lua](https://fennel-lang.org/downloads/fennel-0.7.0)
 * Notes: (None)
 
 ## Valid Languages
