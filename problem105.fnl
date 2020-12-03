@@ -49,7 +49,7 @@
           (set count (+ count x)))
     count)
 
-(var total 0)
+(var total)
 (each [line (io.lines "./files/p105_sets.txt")]
       (let [nums (parse-line line)]
         (when (and (condition1 nums) (condition2 nums))
