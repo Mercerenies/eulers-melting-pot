@@ -133,6 +133,7 @@
 *** Batch                                                              :used:
 *** Csh                                                                :used:
 *** Dash
+*** Fish
 *** Zsh                                                                :used:
 ** BASIC
 *** Chipmunk BASIC
@@ -144,6 +145,7 @@
 *** TI BASIC
 *** VBA                                                                :used:
 *** Visual Basic
+*** XC=BASIC
 ** ESOTERIC
 *** *><>                                                               :used:
 *** ///                                                                :used:
@@ -151,6 +153,7 @@
 *** 1.1                                                                :used:
 *** ><>                                                                :used:
 *** Anti-Array                                                         :used:
+*** Arn (ZippyMagician)
 *** Aya                                                                :used:
 *** Basis
 *** Befalse                                                            :used:
@@ -173,9 +176,12 @@
 *** Grocery List                                                       :used:
 *** Hanabi                                                             :used:
 *** Hexagony                                                           :used:
+*** Japt
 *** Javagrid
 *** Jelly                                                              :used:
+*** Jellyfish
 *** JSF**k                                                             :used:
+*** Keg
 *** Labyrinth                                                          :used:
 *** MagiStack                                                          :used:
 *** Math++                                                             :used:
@@ -184,6 +190,7 @@
 *** Mouse-2002                                                         :used:
 *** Noether
 *** Orthagonal
+*** perchance.org
 *** Piet                                                               :used:
 *** Pyth                                                               :used:
 *** Retina
@@ -239,11 +246,14 @@
 *** Fancy
 *** Fission
 *** Groovy
+*** Gwion
 *** Icon
 *** Inca
 *** Kitten
 *** Lava
+*** Leafscript
 *** Logtalk
+*** Luna
 *** NewLISP
 *** Nit
 *** Oasis
