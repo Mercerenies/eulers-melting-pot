@@ -1,0 +1,85 @@
+# Neat idea for a language, but as far as I can tell, the interpreter
+# is horribly broken. (half of the built-in list functions routinely
+# segfault)
+
+DEFINE debug == put put put put put put put put put put "\n" put .
+DEFINE ssize == stack size put .
+
+DEFINE over (* X Y -- X Y X *) ==
+  dupd swap .
+
+DEFINE pick (* X Y Z -- X Y Z X *) ==
+  [over] dip swap .
+
+DEFINE dup2 (* X Y -- X Y X Y *) ==
+  over over .
+
+DEFINE concat1 (* S T -- U *) ==
+  over null
+  [
+    popd
+  ] [
+    [uncons] dip concat1 "A" pop cons
+  ] branch .
+
+DEFINE map1 (* A P -- B *) ==
+  over null
+  [
+    pop pop []
+  ] [
+    swap over [uncons [swap i] dip] dip map1 cons
+  ] branch .
+
+DEFINE isdigit (* N -- ? *) ==
+  dup 57 <= swap 48 >= and .
+
+DEFINE todigit (* N -- N *) ==
+  48 - .
+
+DEFINE ltoi (* L -- N *) ==
+  [todigit] map1 0 [[10 *] dip +] fold .
+
+DEFINE singleton (* X -- L *) ==
+  [] cons .
+
+DEFINE fread1 (* S -- N *) ==
+  1 fread dup null [pop 0] [first] branch .
+
+# Second return tells whether we hit EOL
+DEFINE readnum (* S -- N ? *) ==
+  [] swap
+  dup fread1 [isdigit] [swapd singleton concat1 swap dup fread1] while
+  10 = [pop ltoi] dip .
+
+DEFINE readline-impl (* S A -- A *) ==
+  over readnum rollup singleton concat1 swap (* S A ? *)
+  [popd] [readline-impl] branch .
+
+DEFINE readline (* S -- L *) ==
+  [] readline-impl .
+
+DEFINE allsums (* L -- L *) ==
+  dup null [
+    pop [0]
+  ] [
+    uncons allsums dup [[over +] map1] dip concat1 popd
+  ] branch .
+
+# DEFINE condition1 (* L -- ? *) ==
+#   true [0] rolldown (* ? sums nums *)
+#   [
+#     over [over +] map1 (* ? sums x sums1 *)
+#     popd
+#     [
+#       (* ? sums z *)
+#       over in [[pop false] dip] [] branch
+#     ] step (* ? sums *)
+#   ] step pop .
+
+"./files/p105_sets.txt" "r" fopen
+
+100 [
+  dup readline allsums pop # condition1 put
+] times .
+
+fclose .
