@@ -11,7 +11,6 @@
 *** C
 *** C++
 *** Coffeescript
-*** Common Lisp
 *** GML                                                                :used:
 *** Haskell
 *** Java
@@ -27,9 +26,7 @@
 ** GOLD
 *** C#
 *** Ceylon
-*** Clojure
 *** D                                                                  :used:
-*** ELisp                                                              :used:
 *** Elixir                                                             :used:
 *** Elm
 *** Erlang
@@ -39,7 +36,6 @@
 *** Lua
 *** OCaml                                                              :used:
 *** Pizza
-*** Racket
 ** SILVER
 *** ActionScript
 *** Ada                                                                :used:
@@ -82,6 +78,7 @@
 *** AutoHotkey
 *** bc                                                                 :used:
 *** BeanShell                                                          :used:
+*** Cat
 *** chomksi (pep)
 *** 🆒                                                                 :used:
 *** Dip
@@ -96,8 +93,10 @@
 *** Javagony                                                           :used:
 *** Joy                                                                :used:
 *** K
+*** Kitten
 *** λProlog
 *** LaTeX                                                              :used:
+*** Leafscript
 *** LilyPond                                                           :used:
 *** m4                                                                 :used:
 *** Make                                                               :used:
@@ -135,6 +134,8 @@
 *** Csh                                                                :used:
 *** Dash
 *** Fish
+*** Oilshell
+*** Scsh
 *** Zsh                                                                :used:
 ** BASIC
 *** Chipmunk BASIC
@@ -147,6 +148,17 @@
 *** VBA                                                                :used:
 *** Visual Basic
 *** XC=BASIC
+** LISP
+*** AutoLISP
+*** Clojure
+*** Common Lisp
+*** ELisp                                                              :used:
+*** Kernel (Klisp)
+*** LFE (Lisp Flavored Erlang)
+*** Maclisp
+*** NewLISP
+*** Racket
+*** Scheme
 ** ESOTERIC
 *** *><>                                                               :used:
 *** ///                                                                :used:
@@ -165,6 +177,7 @@
 *** CJam                                                               :used:
 *** COMPLEX                                                            :used:
 *** Cubix                                                              :used:
+*** ed
 *** Emoji
 *** Enchilada                                                          :used:
 *** Factorio                                                           :used:
@@ -235,11 +248,9 @@
 *** Alice
 *** Alloy
 *** ATS
-*** AutoLISP
 *** Brachylog
 *** CandleScript
 *** Carp
-*** Cat
 *** Cecil
 *** Clean
 *** Coconut
@@ -248,6 +259,7 @@
 *** E
 *** Ė (https://e-dot.io/)
 *** EcstasyLang
+*** EGL
 *** Euler
 *** Fancy
 *** Fission
@@ -256,15 +268,11 @@
 *** Icon
 *** Inca
 *** Jsish
-*** Kernel (Klisp)
-*** Kitten
 *** Kobalt (https://github.com/abel0b/kobalt)
 *** Lava
-*** Leafscript
 *** Logtalk
 *** Luna
 *** Magpie
-*** NewLISP
 *** Nit
 *** Oasis
 *** Ohm
