@@ -99,4 +99,3 @@ DEFINE countpairs (* N -- C *) ==
   1 [] [] countpairsimpl .
 
 12 countpairs .
-# 4 [2 3] [1 4] needtocheck put .
