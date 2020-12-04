@@ -1,0 +1,102 @@
+
+DEFINE over (* X Y -- X Y X *) ==
+  dupd swap .
+
+DEFINE pick (* X Y Z -- X Y Z X *) ==
+  [over] dip swap .
+
+DEFINE dup2 (* X Y -- X Y X Y *) ==
+  over over .
+
+# Just... just don't even ask -_-
+DEFINE dup4 (* A B C D -- A B C D A B C D *) ==
+  [[dup2] dip] dip dup2 [[[rollup] dip rollup] dip] dip .
+
+DEFINE singleton (* X -- L *) ==
+  [] cons .
+
+DEFINE times1 (* N Q -- *) ==
+  over 0 > [
+    dup rollup [[i] dip 1 -] dip times1
+  ] [pop pop] branch .
+
+DEFINE reverseimpl (* L A -- A *) ==
+  over null [
+    popd
+  ] [
+    [uncons swap] dip cons reverseimpl
+  ] branch .
+
+DEFINE reverse (* L -- A *) ==
+  [] reverseimpl .
+
+DEFINE safeat (* A I -- X *) ==
+  dup2 [size] dip > [
+    at
+  ] [
+    pop pop -9999
+  ] branch .
+
+DEFINE needtocheck (* N A B -- M *) ==
+  dup2 [size] unary2 dup2 != [1 <= [1 <=] dip] dip or or [
+    pop pop pop 0
+  ] [
+    rolldown 0 0 rolldown 0 1 rolldown
+    [
+      (* A B C AI BI I *)
+      pick [[[[pick] dip swap] dip swap] dip swap] dip swap
+      (* A B C AI BI I AI A *)
+      swap safeat over = [
+        (* A B C AI BI I *)
+        [[[1 +] dip 1 +] dip] dip
+      ] [
+        (* A B C AI BI I *)
+        [[pick] dip swap] dip swap pick
+        (* A B C AI BI I B BI *)
+        safeat over = [
+          (* A B C AI BI I *)
+          [[[1 -] dip] dip 1 +] dip
+        ] [
+          (* A B C AI BI I *)
+          # Pass
+        ] branch
+      ] branch
+      (* A B C AI BI I *)
+      [pick] dip swap 0 <
+      [
+        [[[pop -999] dip] dip] dip
+      ] [] branch
+      1 +
+    ] times1
+    (* A B C AI BI I *)
+    pop pop pop [pop pop] dip
+    0 < [1] [0] branch
+  ] branch .
+
+DEFINE countpairsimpl (* N I A B -- C *) ==
+  pick [[pick] dip swap] dip < [
+      [popd] dip [reverse] unary2 needtocheck
+  ] [
+    # Case I
+    dup4 [[1 +] dip] dip countpairsimpl
+    (* N I A B C *)
+    # Case II
+    [
+      dup4 [dupd cons [1 +] dip] dip countpairsimpl
+    ] dip +
+    (* N I A B C *)
+    # Case III
+    pick null [] [
+      [
+        dup4 [over] dip cons [[1 +] dip] dip countpairsimpl
+      ] dip +
+    ] branch
+    (* N I A B C *)
+    [pop pop pop pop] dip
+  ] branch .
+
+DEFINE countpairs (* N -- C *) ==
+  1 [] [] countpairsimpl .
+
+12 countpairs .
+# 4 [2 3] [1 4] needtocheck put .

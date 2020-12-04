@@ -94,7 +94,7 @@
 *** IntercalScript
 *** J                                                                  :used:
 *** Javagony                                                           :used:
-*** Joy
+*** Joy                                                                :used:
 *** K
 *** λProlog
 *** LaTeX                                                              :used:

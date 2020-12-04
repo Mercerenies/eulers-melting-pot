@@ -62,6 +62,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Jasmin
 * Javagony
 * Jelly
+* Joy
 * JSF\*\*k
 * JustBASIC
 * Labyrinth
@@ -744,6 +745,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Fennel](https://fennel-lang.org/)
 * Compiler / Interpreter: [fennel-0.7.0.lua](https://fennel-lang.org/downloads/fennel-0.7.0)
 * Notes: (None)
+
+### Euler 106
+* File: [problem106.joy](problem106.joy)
+* Language: [Joy](https://www.latrobe.edu.au/humanities/research/research-projects/past-projects/joy-programming-language)
+* Compiler / Interpreter: [Archived interpreter](https://www.latrobe.edu.au/__data/assets/file/0007/240298/Joy-Programming.zip)
+* Notes: The interpreter dumps some noisy debugging information, which can be safely ignored.
 
 ## Valid Languages
 
