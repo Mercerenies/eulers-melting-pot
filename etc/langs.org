@@ -179,6 +179,7 @@
 *** Cubix                                                              :used:
 *** ed
 *** Emoji
+*** Emotinomicon
 *** Enchilada                                                          :used:
 *** Factorio                                                           :used:
 *** FALSE                                                              :used:
