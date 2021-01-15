@@ -81,9 +81,11 @@
 *** Cat
 *** chomksi (pep)
 *** 🆒                                                                 :used:
+*** Dafny                                                              :noio:
 *** Dip
 *** Dogescript                                                         :used:
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
+*** F*
 *** Frege
 *** GAP
 *** Genie                                                              :used:
@@ -103,6 +105,7 @@
 *** MoonScript
 *** Picat                                                              :used:
 *** Pike                                                               :used:
+*** Pikelet                                                            :noio:
 *** Potassco                                                           :used:
 *** Prolog                                                             :used:
 *** PROMAL
@@ -134,6 +137,7 @@
 *** Csh                                                                :used:
 *** Dash
 *** Fish
+*** Jsish
 *** Oilshell
 *** Scsh
 *** Zsh                                                                :used:
@@ -150,6 +154,7 @@
 *** XC=BASIC
 ** LISP
 *** AutoLISP
+*** Carp
 *** Clojure
 *** Common Lisp
 *** ELisp                                                              :used:
@@ -189,6 +194,7 @@
 *** Gibberish                                                          :used:
 *** Golfscript                                                         :used:
 *** Grocery List                                                       :used:
+*** Gwion                                                              :noio:
 *** Hanabi                                                             :used:
 *** Hexagony                                                           :used:
 *** Japt
@@ -251,7 +257,6 @@
 *** ATS
 *** Brachylog
 *** CandleScript
-*** Carp
 *** Cecil
 *** Clean
 *** Coconut
@@ -265,15 +270,14 @@
 *** Fancy
 *** Fission
 *** Groovy
-*** Gwion
 *** Icon
 *** Inca
-*** Jsish
 *** Kobalt (https://github.com/abel0b/kobalt)
 *** Lava
 *** Logtalk
 *** Luna
 *** Magpie
+*** Monte
 *** Nit
 *** Oasis
 *** Ohm
