@@ -27,7 +27,7 @@ total_cost /= 2;
 // Basically, Prim's algorithm.
 var optimized_cost = 0;
 const adjoined = {0: true};
-for (var i = 0; i < lines.length; i++) {
+for (var i = 0; i < lines.length - 1; i++) {
   var candidate = null;
   var candidate_vertex = null;
   for (var j = 0; j < lines.length; j++) {

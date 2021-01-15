@@ -101,7 +101,7 @@
 *** m4                                                                 :used:
 *** Make                                                               :used:
 *** MoonScript
-*** Picat
+*** Picat                                                              :used:
 *** Pike                                                               :used:
 *** Potassco                                                           :used:
 *** Prolog                                                             :used:

@@ -1,0 +1,47 @@
+
+import util.
+import ordset.
+
+main =>
+  Lines = map(split_string, read_file_lines("./files/p107_network.txt")),
+  TotalCost = get_total_cost(Lines),
+  get_optimized_cost(Lines, OptimizedCost),
+  println(TotalCost - OptimizedCost).
+  println("Hello\n").
+
+get_total_cost(Xs) = sum(map(nils_to_zero, flatten(Xs))) // 2.
+
+get_optimized_cost(Xs, Result) =>
+  Lines = map(to_array, Xs).to_array,
+  Optimized = 0,
+  Adjoined = new_ordset([1]),
+  foreach(I in 1..(length(Lines)-1))
+    Candidate = nil,
+    CandidateVertex = nil,
+    foreach(J in 1..length(Lines))
+      if member(J, Adjoined) then
+        Line = Lines[J],
+        foreach(K in 1..length(Lines))
+          if Line[K] != nil && not member(K, Adjoined) then
+            if Candidate == nil || Candidate > Line[K] then
+              Candidate := Line[K],
+              CandidateVertex := K
+            end
+          end
+        end
+      end
+    end,
+    Adjoined := insert(Adjoined, CandidateVertex),
+    Optimized := Optimized + Candidate
+  end,
+  Result = Optimized.
+
+sum(Xs) = fold((+), 0, Xs).
+
+split_string(S) = map(term_to_int, S.split(",")).
+
+term_to_int("-") = nil.
+term_to_int(S) = to_int(S).
+
+nils_to_zero(nil) = 0.
+nils_to_zero(X) = X.

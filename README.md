@@ -84,6 +84,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Pascal
 * Parrot IR
 * PASM
+* Picat
 * Piet
 * Pike
 * Potassco
@@ -751,6 +752,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Joy](https://www.latrobe.edu.au/humanities/research/research-projects/past-projects/joy-programming-language)
 * Compiler / Interpreter: [Archived interpreter](https://www.latrobe.edu.au/__data/assets/file/0007/240298/Joy-Programming.zip)
 * Notes: The interpreter dumps some noisy debugging information, which can be safely ignored.
+
+### Euler 107
+* File: [problem107.pi](problem107.pi)
+* Language: [Picat](http://picat-lang.org/)
+* Compiler / Interpreter: [The official interpreter](http://picat-lang.org/download.html)
+* Notes: (None)
 
 ## Valid Languages
 
