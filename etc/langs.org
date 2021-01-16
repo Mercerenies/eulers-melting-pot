@@ -175,6 +175,7 @@
 *** Aya                                                                :used:
 *** Basis
 *** Befalse                                                            :used:
+*** Befreak
 *** Befunge                                                            :used:
 *** Brainf**k                                                          :used:
 *** Brat
@@ -193,6 +194,7 @@
 *** Funciton                                                           :used:
 *** Gibberish                                                          :used:
 *** Golfscript                                                         :used:
+*** GridScript
 *** Grocery List                                                       :used:
 *** Gwion                                                              :noio:
 *** Hanabi                                                             :used:
@@ -213,6 +215,7 @@
 *** Orthagonal
 *** perchance.org
 *** Piet                                                               :used:
+*** Piet++
 *** Puzzlescript
 *** Pyth                                                               :used:
 *** Retina
