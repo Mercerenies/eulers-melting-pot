@@ -73,7 +73,7 @@
 *** Swift
 *** zkl                                                                :used:
 ** BRONZE
-*** Agda
+*** Agda                                                               :used:
 *** APL                                                                :used:
 *** AutoHotkey
 *** bc                                                                 :used:

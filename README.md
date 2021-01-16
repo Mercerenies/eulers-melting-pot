@@ -759,6 +759,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Compiler / Interpreter: [The official interpreter](http://picat-lang.org/download.html)
 * Notes: (None)
 
+### Euler 108
+* File: [problem108.agda](problem108.agda)
+* Language: [Agda](https://en.wikipedia.org/wiki/Agda_(programming_language))
+* Compiler / Interpreter: [Agda 2.6.0.1](https://github.com/agda/agda)
+* Notes: Requires [agda-stdlib 1.2](https://github.com/agda/agda-stdlib).
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular,
