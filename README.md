@@ -23,6 +23,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * BeanShell
 * Befalse
 * Befunge
+* Befunk
 * Brainf\*\*k
 * Brat
 * CIL
@@ -764,6 +765,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Agda](https://en.wikipedia.org/wiki/Agda_(programming_language))
 * Compiler / Interpreter: [Agda 2.6.0.1](https://github.com/agda/agda)
 * Notes: Requires [agda-stdlib 1.2](https://github.com/agda/agda-stdlib).
+
+### Euler 109
+* File: [problem109.png](problem109.png)
+* Language: [Befunk](https://esolangs.org/wiki/Befunk)
+* Compiler / Interpreter: [The provided interpreter](https://github.com/TieSoul/Befunk)
+* Notes: A very slow solution; code was written with the help of a Python translator program.
 
 ## Valid Languages
 

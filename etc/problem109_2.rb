@@ -39,3 +39,27 @@ $total = 0
   $total += $results[63 * (4 * s + 3)]
 end
 puts $total
+
+# Befunge stuff (y, x)
+# First line is the global array
+# Second / third lines have local variables:
+#  (1, 0) - 25451 (constant)
+#  (1, 1) - state
+#  (1, 2) - score_index
+#  (1, 3) - darts
+#  (1, 4) - points
+#  (1, 5) - total
+#  (1, 6) - s
+#  (1, 7) - idx
+#  (1, 8) - (swap space 1)
+#  (1, 9) - (swap space 2)
+#
+# Stack is empty at global loop start
+#
+# STACK TOP
+#
+# result
+#
+# STACK BOTTOM
+#
+# Swap: 81p91p81g91g (The regular swap instruction is broken in the interpreter)

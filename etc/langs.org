@@ -177,6 +177,7 @@
 *** Befalse                                                            :used:
 *** Befreak
 *** Befunge                                                            :used:
+*** Befunk                                                             :used:
 *** Brainf**k                                                          :used:
 *** Brat
 *** Chef
