@@ -217,6 +217,7 @@
 *** perchance.org
 *** Piet                                                               :used:
 *** Piet++
+*** Pip                                                                :used:
 *** Puzzlescript
 *** Pyth                                                               :used:
 *** Quark (https://github.com/henrystanley/Quark/)
@@ -275,6 +276,7 @@
 *** Fancy
 *** Fission
 *** Groovy
+*** Husk
 *** Icon
 *** Inca
 *** Kobalt (https://github.com/abel0b/kobalt)
@@ -293,6 +295,7 @@
 *** Pony
 *** Postscript
 *** PPL
+*** Processing (https://en.wikipedia.org/wiki/Processing_(programming_language))
 *** Quark (https://github.com/quark-lang/quark)
 *** Simula
 *** Skip

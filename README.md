@@ -88,6 +88,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Picat
 * Piet
 * Pike
+* Pip
 * Potassco
 * Prolog
 * Pyth
@@ -771,6 +772,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Befunk](https://esolangs.org/wiki/Befunk)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/TieSoul/Befunk)
 * Notes: A very slow solution; code was written with the help of a Python translator program.
+
+### Euler 110
+* File: [problem110.pip](problem110.pip)
+* Language: [Pip](https://esolangs.org/wiki/Pip)
+* Compiler / Interpreter: [The provided interpreter](https://github.com/dloscutoff/pip)
+* Notes: A somewhat slow solution.
 
 ## Valid Languages
 
