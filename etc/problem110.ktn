@@ -1,0 +1,69 @@
+
+// So close... this would be completely viable if (a) Kitten had
+// bignums and (b) the interpreter was a little bit faster. Oh
+// well... live and learn.
+
+// Emulating some lazy evaluation trickery to be able to
+// short circuit our main loop. The accumulation function
+// should return true to continue iteration and false to
+// stop.
+define range_lazy_fold (Int64, Int64, Int64, (Int64, Int64 -> Int64, Bool) -> Int64):
+  -> acc, x, y, f;
+  if (x < y):
+    acc x f call if { (x + 1i64) y f range_lazy_fold } else {}
+  else:
+    acc
+
+define zip_with<R..., T, S, U> (R..., List<T>, List<S>, (R..., T, S -> R..., U) -> R..., List<U>):
+  -> xs, ys, f;
+  match (xs head_tail)
+  case none:
+    []
+  case some:
+    unpair -> x, xs;
+    match (ys head_tail)
+      case none:
+        []
+      case some:
+        unpair -> y, ys;
+        x y f call -> z;
+        xs ys f zip_with -> zs;
+        z zs prepend
+
+define pow (Int64, Int64 -> Int64 +Fail):
+  -> x, y;
+  if (y > 0i64):
+    if (y % 2i64 = 0i64):
+      x (y / 2i64) pow dup (*)
+    else:
+      x * x (y - 1i64) pow
+  else:
+    1i64
+
+define primes (-> List<Int64>):
+  [2i64, 3i64, 5i64, 7i64, 11i64, 13i64, 17i64, 19i64, 23i64, 29i64, 31i64, 37i64, 41i64, 43i64, 47i64]
+
+define number_from_exps (List<Int64> -> Int64 +Fail):
+  primes swap \pow zip_with 1i64 \* fold_left
+
+define count_solutions (List<Int64> -> Int64):
+  { 2i64 (*) 1i64 (+) } map 1i64 \* fold_left + 1i64
+
+define recurse (List<Int64>, Int64 -> Int64 +Fail +IO):
+  -> acc, best;
+  if (acc count_solutions > 8000000i64):
+    acc number_from_exps -> solution;
+    solution best min
+  else:
+    acc last 4000000i64 from_optional -> stopping_condition;
+    best 1i64 stopping_condition {
+      -> best1, i;
+      acc i append -> acc1;
+      if (acc1 number_from_exps > best1):
+        best1 false
+      else:
+        acc1 best1 recurse true
+    } range_lazy_fold
+
+// 9223372036854775807 = 2^63 - 1 (Largest value available in 64-bit signed int)
+[] 9223372036854775807i64 recurse say
