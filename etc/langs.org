@@ -219,6 +219,7 @@
 *** Piet++
 *** Puzzlescript
 *** Pyth                                                               :used:
+*** Quark (https://github.com/henrystanley/Quark/)
 *** Retina
 *** Rockstar
 *** Secretary
@@ -292,6 +293,7 @@
 *** Pony
 *** Postscript
 *** PPL
+*** Quark (https://github.com/quark-lang/quark)
 *** Simula
 *** Skip
 *** Snails
