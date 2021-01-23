@@ -59,6 +59,7 @@
 *** MATLAB
 *** Modula
 *** Modula-2
+*** MoonScript
 *** Nim                                                                :used:
 *** Oberon-07                                                          :used:
 *** Objective-C                                                        :used:
@@ -81,7 +82,8 @@
 *** Cat
 *** chomksi (pep)
 *** 🆒                                                                 :used:
-*** Dafny                                                              :noio:
+*** Dafny
+    + No IO
 *** Dip
 *** Dogescript                                                         :used:
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
@@ -96,16 +98,19 @@
 *** Joy                                                                :used:
 *** K
 *** Kitten
+    + 64-bit integers (no bignums)
 *** λProlog
 *** LaTeX                                                              :used:
 *** Leafscript
+    + No arrays
+    + Doubles only (no bigints)
 *** LilyPond                                                           :used:
 *** m4                                                                 :used:
 *** Make                                                               :used:
-*** MoonScript
 *** Picat                                                              :used:
 *** Pike                                                               :used:
-*** Pikelet                                                            :noio:
+*** Pikelet
+    + No IO
 *** Potassco                                                           :used:
 *** Prolog                                                             :used:
 *** PROMAL
@@ -197,7 +202,8 @@
 *** Golfscript                                                         :used:
 *** GridScript
 *** Grocery List                                                       :used:
-*** Gwion                                                              :noio:
+*** Gwion
+    + No IO
 *** Hanabi                                                             :used:
 *** Hexagony                                                           :used:
 *** Japt
