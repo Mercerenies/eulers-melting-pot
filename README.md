@@ -78,6 +78,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * MATL
 * Mouse-2002
 * NASM
+* Nemerle
 * Nim
 * Oberon-07
 * Objective-C
@@ -778,6 +779,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Pip](https://esolangs.org/wiki/Pip)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/dloscutoff/pip)
 * Notes: A somewhat slow solution.
+
+### Euler 111
+* File: [problem111.n](problem111.n)
+* Language: [Nemerle](http://nemerle.org/About)
+* Compiler / Interpreter: [The official compiler](https://github.com/rsdn/nemerle)
+* Notes: (None)
 
 ## Valid Languages
 

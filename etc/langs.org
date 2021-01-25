@@ -60,6 +60,7 @@
 *** Modula
 *** Modula-2
 *** MoonScript
+*** Nemerle                                                            :used:
 *** Nim                                                                :used:
 *** Oberon-07                                                          :used:
 *** Objective-C                                                        :used:

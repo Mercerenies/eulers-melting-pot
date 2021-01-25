@@ -1,0 +1,147 @@
+
+using System;
+using System.Numerics;
+
+def PowMod(a : BigInteger, b : BigInteger, n : BigInteger) : BigInteger {
+  if (b == 0) {
+    1;
+  } else if (b % 2 == 0) {
+    def x = PowMod(a, b / 2, n);
+    (x * x) % n;
+  } else {
+    (PowMod(a, b - 1, n) * a) % n;
+  }
+}
+
+def Factorial(n : BigInteger) : BigInteger {
+  mutable result : BigInteger = 1;
+  for (mutable i = 1; i <= n; i++) {
+    result *= i;
+  }
+  result;
+}
+
+def nCr(n : BigInteger, r : BigInteger) : BigInteger {
+  Factorial(n) / (Factorial(r) * Factorial(n - r));
+}
+
+def MillerRabinTest(n : BigInteger, d : BigInteger, r : BigInteger, a : BigInteger) : bool {
+  mutable x = PowMod(a, d, n);
+  if ((x == 1) || (x == n - 1)) {
+    true;
+  } else {
+    break: {
+      for (mutable i = 0; i < r; i++) {
+        x = (x * x) % n;
+        when (x == n - 1)
+          break(true);
+      }
+      false;
+    }
+  }
+}
+
+def IsPrime(n: BigInteger) : bool {
+  if (n < 2) {
+    false;
+  } else if ((n == 2) || (n == 3) || (n == 5) || (n == 13) || (n == 23) || (n == 1662803)) {
+    true;
+  } else if ((n % 2 == 0) || (n % 3 == 0) || (n % 5 == 0)) {
+    false;
+  } else {
+    mutable d = n - 1;
+    mutable r = 0;
+    while (d % 2 == 0) {
+      d /= 2;
+      r += 1;
+    }
+    if (!MillerRabinTest(n, d, r, 2)) {
+      false;
+    } else if (!MillerRabinTest(n, d, r, 13)) {
+      false;
+    } else if (!MillerRabinTest(n, d, r, 23)) {
+      false;
+    } else if (!MillerRabinTest(n, d, r, 1662803)) {
+      false;
+    } else {
+      true;
+    }
+  }
+}
+
+def ToLong(data : array[Int32]) : BigInteger {
+  mutable result : BigInteger = 0;
+  foreach (x in data) {
+    result = 10 * result + x;
+  }
+  result;
+}
+
+def Generate(vec : array[BigInteger], digits : Int32, repeated : Int32, count : Int32, data : array[Int32], index : Int32, resultPosArg : Int32) : Int32 {
+  mutable resultPos = resultPosArg;
+  if (count < 0) {
+    // Return
+    resultPos;
+  } else if (index >= digits) {
+    vec[resultPos] = ToLong(data);
+    resultPos + 1;
+  } else if (digits - index < count) {
+    // Return
+    resultPos;
+  } else if (digits - index == count) {
+    for (mutable i = index; i < digits; i++) {
+      data[i] = repeated;
+    }
+    Generate(vec, digits, repeated, 0, data, digits, resultPos);
+  } else {
+    for (mutable i = 0; i < 10; i++) {
+      when ((i != 0) || (index != 0)) {
+        data[index] = i;
+        def newCount0 = if(repeated == i) count - 1 else count;
+        resultPos = Generate(vec, digits, repeated, newCount0, data, index + 1, resultPos);
+      }
+    }
+    resultPos;
+  }
+}
+
+def GenerateWithDigits(digits : Int32, repeated : Int32, count : Int32) : array[BigInteger] {
+  def resultArraySize = (BigInteger.Pow(10, digits - count) * nCr(digits, count)) :> Int32;
+  def result : array[BigInteger] = array(resultArraySize);
+  def data = array(digits);
+  def _ = Generate(result, digits, repeated, count, data, 0, 0);
+  result;
+}
+
+def MaxDigits(digits : Int32, repeated : Int32) : Int32 {
+  return: {
+    for (mutable i = digits; i >= 0; i--) {
+      def nums = GenerateWithDigits(digits, repeated, i);
+      foreach (num in nums) {
+        when (IsPrime(num)) {
+          return(i);
+        }
+      }
+    }
+    0;
+  }
+}
+
+def SumAll(digits : Int32, repeated : Int32, count : Int32) : BigInteger {
+  mutable total : BigInteger = 0;
+  def nums = GenerateWithDigits(digits, repeated, count);
+  foreach (num in nums) {
+    when (IsPrime(num)) {
+      total += num;
+    }
+  }
+  total;
+}
+
+def digits = 10;
+mutable sumTotal: BigInteger = 0;
+for (mutable i = 0; i < 10; i++) {
+  def count = MaxDigits(digits, i);
+  sumTotal += SumAll(digits, i, count);
+}
+System.Console.WriteLine(sumTotal);
