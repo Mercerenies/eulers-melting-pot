@@ -45,6 +45,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Factorio
 * FALSE
 * Fennel
+* FiM++
 * Forth
 * Fortran
 * Funciton
@@ -785,6 +786,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Nemerle](http://nemerle.org/About)
 * Compiler / Interpreter: [The official compiler](https://github.com/rsdn/nemerle)
 * Notes: (None)
+
+### Euler 112
+* File: [problem112.fimpp](problem112.fimpp)
+* Language: [FiM++](https://esolangs.org/wiki/FiM%2B%2B)
+* Compiler / Interpreter: [TIO Nexus](https://tio.run/#fimpp)
+* Notes: A somewhat slow solution.
 
 ## Valid Languages
 

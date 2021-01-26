@@ -196,7 +196,7 @@
 *** Enchilada                                                          :used:
 *** Factorio                                                           :used:
 *** FALSE                                                              :used:
-*** FiM++
+*** FiM++                                                              :used:
 *** Fourier
 *** Funciton                                                           :used:
 *** Gibberish                                                          :used:
