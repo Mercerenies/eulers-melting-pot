@@ -26,6 +26,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Befunk
 * Brainf\*\*k
 * Brat
+* Chef
 * CIL
 * CJam
 * COBOL
@@ -792,6 +793,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [FiM++](https://esolangs.org/wiki/FiM%2B%2B)
 * Compiler / Interpreter: [TIO Nexus](https://tio.run/#fimpp)
 * Notes: A somewhat slow solution.
+
+### Euler 113
+* File: [problem113.chef](problem113.chef)
+* Language: [Chef](https://www.dangermouse.net/esoteric/chef.html)
+* Compiler / Interpreter: [TIO Nexus](https://tio.run/#chef)
+* Notes: Code was written with the help of a Perl translator program.
 
 ## Valid Languages
 

@@ -186,7 +186,7 @@
 *** Befunk                                                             :used:
 *** Brainf**k                                                          :used:
 *** Brat
-*** Chef
+*** Chef                                                               :used:
 *** CJam                                                               :used:
 *** COMPLEX                                                            :used:
 *** Cubix                                                              :used:
@@ -326,6 +326,8 @@
     - https://en.wikipedia.org/wiki/Lists_of_programming_languages
   + Github Linguist ~languages.yml~
     - https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+  + 99-bottles-of-beer.net (Archived)
+    - https://web.archive.org/web/20180222023404/http://99-bottles-of-beer.net/abc.html
 ** ONLINE INTERPRETERS
    Some online interpreters that are free to use and very handy for tasks like this.
 
