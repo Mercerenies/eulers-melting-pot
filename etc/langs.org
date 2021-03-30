@@ -160,6 +160,7 @@
 *** XC=BASIC
 ** LISP
 *** AutoLISP
+*** Bel (http://www.paulgraham.com/bel.html)
 *** Carp
 *** Clojure
 *** Common Lisp
@@ -178,10 +179,12 @@
 *** ><>                                                                :used:
 *** Anti-Array                                                         :used:
 *** Arn (ZippyMagician)
+    + Bignum support
 *** Aya                                                                :used:
 *** Basis
 *** Befalse                                                            :used:
 *** Befreak
+    + No arrays
 *** Befunge                                                            :used:
 *** Befunk                                                             :used:
 *** Brainf**k                                                          :used:
@@ -267,12 +270,15 @@
 ** UNCLASSIFIED
 *** Alice
 *** Alloy
+*** ArkScript
 *** ATS
+*** Bizubee
 *** Brachylog
 *** CandleScript
 *** Cecil
 *** Clean
 *** Coconut
+*** Container (https://github.com/odddollar/Container-lang)
 *** Crystal
 *** Delphi
 *** E
@@ -282,6 +288,7 @@
 *** Euler
 *** Fancy
 *** Fission
+*** Gleam
 *** Groovy
 *** Husk
 *** Icon
@@ -296,6 +303,7 @@
 *** Oasis
 *** Ohm
 *** Orc
+*** Oxide (https://github.com/tuqqu/oxide-lang)
 *** Oz
 *** Paperscript
 *** Pikt
@@ -309,6 +317,7 @@
 *** Snails
 *** SNUSP
 *** Squirrel
+*** Strema (https://gilmi.gitlab.io/strema/)
 *** Sweet.js
 *** Teascript
 *** XQuery
@@ -328,6 +337,10 @@
     - https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
   + 99-bottles-of-beer.net (Archived)
     - https://web.archive.org/web/20180222023404/http://99-bottles-of-beer.net/abc.html
+  + List of languages that compile to JS
+    - https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS
+  + Hello world/Text - Rosetta Code
+    _ https://rosettacode.org/wiki/Hello_world/Text
 ** ONLINE INTERPRETERS
    Some online interpreters that are free to use and very handy for tasks like this.
 
