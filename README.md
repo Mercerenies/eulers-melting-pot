@@ -21,6 +21,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Batch
 * bc
 * BeanShell
+* Beeswax
 * Befalse
 * Befunge
 * Befunk
@@ -799,6 +800,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Chef](https://www.dangermouse.net/esoteric/chef.html)
 * Compiler / Interpreter: [TIO Nexus](https://tio.run/#chef)
 * Notes: Code was written with the help of a Perl translator program.
+
+### Euler 114
+* File: [problem114.bees](problem114.bees)
+* Language: [Beeswax](https://esolangs.org/wiki/Beeswax)
+* Compiler / Interpreter: [TIO Nexus](https://tio.run/#beeswax)
+* Notes: Code was written with the help of a Lisp translator program; a somewhat slow solution.
 
 ## Valid Languages
 

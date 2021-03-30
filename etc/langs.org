@@ -182,6 +182,7 @@
     + Bignum support
 *** Aya                                                                :used:
 *** Basis
+*** Beeswax                                                            :used:
 *** Befalse                                                            :used:
 *** Befreak
     + No arrays
