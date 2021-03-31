@@ -79,6 +79,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * MASM
 * Math++
 * MATL
+* MontiLang
 * Mouse-2002
 * NASM
 * Nemerle
@@ -806,6 +807,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Beeswax](https://esolangs.org/wiki/Beeswax)
 * Compiler / Interpreter: [TIO Nexus](https://tio.run/#beeswax)
 * Notes: Code was written with the help of a Lisp translator program; a somewhat slow solution.
+
+### Euler 115
+* File: [problem115.mt](problem115.mt)
+* Language: [MontiLang](https://rosettacode.org/wiki/Category:MontiLang)
+* Compiler / Interpreter: [The provided interpreter](https://github.com/lduck11007/MontiLang)
+* Notes: A somewhat slow solution.
 
 ## Valid Languages
 
