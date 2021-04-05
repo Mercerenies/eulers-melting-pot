@@ -69,6 +69,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Joy
 * JSF\*\*k
 * JustBASIC
+* Kitten
 * Labyrinth
 * LaTeX
 * LilyPond
@@ -813,6 +814,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [MontiLang](https://rosettacode.org/wiki/Category:MontiLang)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/lduck11007/MontiLang)
 * Notes: A somewhat slow solution.
+
+### Euler 116
+* File: [problem116.ktn](problem116.ktn)
+* Language: [Kitten](https://kittenlang.org/)
+* Compiler / Interpreter: [The provided interpreter](https://github.com/evincarofautumn/kitten)
+* Notes: (None)
 
 ## Valid Languages
 

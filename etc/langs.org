@@ -97,9 +97,9 @@
 *** J                                                                  :used:
 *** Javagony                                                           :used:
 *** Joy                                                                :used:
-*** K
-*** Kitten
+*** Kitten                                                             :used:
     + 64-bit integers (no bignums)
+*** K
 *** λProlog
 *** LaTeX                                                              :used:
 *** Leafscript
@@ -293,9 +293,11 @@
 *** Gleam
 *** Groovy
 *** Husk
+*** i (https://github.com/Qlova/ilang)
 *** Icon
 *** Inca
 *** Kobalt (https://github.com/abel0b/kobalt)
+*** Koi (https://koi-lang.dev/)
 *** Lava
 *** Logtalk
 *** Luna

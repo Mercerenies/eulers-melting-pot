@@ -1,0 +1,50 @@
+
+define unwrap<T> (Optional<T> -> T +Fail):
+  -> opt;
+  match (opt)
+    case none:
+      "unwrap error" abort
+    case some:
+      0 drop // Pass
+
+define f (Int32, Int32 -> Int64 +Fail +IO):
+  -> n, c;
+  [] -> gray;
+  [] -> col;
+  gray 1i64 append -> gray;
+  col 1i64 append -> col;
+  n c gray col 1 f_outer
+
+define f_outer (Int32, Int32, List<Int64>, List<Int64>, Int32 -> Int64 +Fail):
+  -> n, c, gray, col, i;
+  if (i > n):
+    col n get unwrap -> ntmp;
+    ntmp - 1i64
+  else:
+    i - c -> ic;
+    match (col ic get)
+      case none:
+        0i64
+      case some:
+        0 drop // Pass
+    -> g;
+    gray g append -> gray;
+    gray i 0 f_inner -> r;
+    r + g -> rg;
+    col rg append -> col;
+    i + 1 -> i1;
+    n c gray col i1 f_outer
+
+define f_inner (List<Int64>, Int32, Int32 -> Int64 +Fail):
+  -> gray, i, j;
+  if (j >= i):
+    0i64
+  else:
+    gray i (j + 1) f_inner -> rest;
+    gray j get unwrap -> fst;
+    fst + rest
+
+50 2 f -> a;
+50 3 f -> b;
+50 4 f -> c;
+(a + b + c) say
