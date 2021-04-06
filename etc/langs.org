@@ -112,6 +112,7 @@
 *** Pike                                                               :used:
 *** Pikelet
     + No IO
+*** Pony                                                               :used:
 *** Potassco                                                           :used:
 *** Prolog                                                             :used:
 *** PROMAL
@@ -311,7 +312,6 @@
 *** Oz
 *** Paperscript
 *** Pikt
-*** Pony
 *** Postscript
 *** PPL
 *** Processing (https://en.wikipedia.org/wiki/Processing_(programming_language))

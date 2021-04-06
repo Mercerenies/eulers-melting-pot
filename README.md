@@ -95,6 +95,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Piet
 * Pike
 * Pip
+* Pony
 * Potassco
 * Prolog
 * Pyth
@@ -819,6 +820,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem116.ktn](problem116.ktn)
 * Language: [Kitten](https://kittenlang.org/)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/evincarofautumn/kitten)
+* Notes: (None)
+
+### Euler 117
+* File: [problem117.pony](problem117.pony)
+* Language: [Pony](https://www.ponylang.io/)
+* Compiler / Interpreter: [Pony Playground](https://playground.ponylang.io/)
 * Notes: (None)
 
 ## Valid Languages
