@@ -6,7 +6,7 @@ function isprimetest(x)
     if x < 2
         false
     else
-        for i = 2 : floor(Int64, x / 2)
+        for i = 2 : x ÷ 2
             if x % i == 0
                 return false
             end
