@@ -828,6 +828,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Compiler / Interpreter: [Pony Playground](https://playground.ponylang.io/)
 * Notes: (None)
 
+### Euler 118
+* File: [problem118.jl](problem118.jl)
+* Language: [Julia](https://julialang.org/)
+* Compiler / Interpreter: [Julia 1.2.0](https://julialang.org/downloads/)
+* Notes: (None)
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular,

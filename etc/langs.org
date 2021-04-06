@@ -32,6 +32,7 @@
 *** Erlang
 *** GDScript
 *** Go                                                                 :used:
+*** Julia                                                              :used:
 *** Kotlin
 *** Lua
 *** OCaml                                                              :used:
@@ -53,7 +54,6 @@
 *** Haxe
 *** Io                                                                 :used:
 *** Ioke                                                               :used:
-*** Julia
 *** Lunar
 *** Maple
 *** MATLAB
