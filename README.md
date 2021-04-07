@@ -54,6 +54,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Genie
 * Gibberish
 * Glava
+* Gleam
 * GML
 * Go
 * Golfscript
@@ -833,6 +834,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Julia](https://julialang.org/)
 * Compiler / Interpreter: [Julia 1.2.0](https://julialang.org/downloads/)
 * Notes: (None)
+
+### Euler 119
+* File: [problem119.gleam](problem119.gleam)
+* Language: [Gleam](https://gleam.run/)
+* Compiler / Interpreter: [The official compiler](https://github.com/gleam-lang/gleam/releases)
+* Notes: `./etc/build119.sh` may be helpful in building the source.
 
 ## Valid Languages
 
