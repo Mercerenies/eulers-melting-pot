@@ -115,6 +115,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * SuperCollider
 * Taxi
 * Tcl
+* Tome
 * V
 * Vala
 * VBA
@@ -840,6 +841,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Gleam](https://gleam.run/)
 * Compiler / Interpreter: [The official compiler](https://github.com/gleam-lang/gleam/releases)
 * Notes: `./etc/build119.sh` may be helpful in building the source.
+
+### Euler 120
+* File: [problem120.tome](problem120.tome)
+* Language: [Tome](https://esolangs.org/wiki/Tome)
+* Compiler / Interpreter: [The provided interpreter](http://tome.gytis.co/)
+* Notes: The interpreter seems to run faster in Google Chrome.
 
 ## Valid Languages
 

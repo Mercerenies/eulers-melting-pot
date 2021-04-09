@@ -1,0 +1,34 @@
+
+Define power mod with a, b, n:
+  If b is 0, then do:
+    Return 1.
+  Or else do:
+    Set result to <power mod with a, (b - 1), n>.
+    Return (result * a) % n.
+  End.
+End.
+
+Define compute with a, n:
+  Return [<power mod with (a - 1), n, (a ** 2)>, <power mod with (a + 1), n, (a ** 2)>].
+End.
+
+Define run with a:
+  Set visited to {}.
+  Set rmax to 0.
+  Set n to 1.
+  While !visited[<compute with a, n>] do:
+    Set value to <compute with a, n>.
+    Set _ignore0 to undefined;visited[value] = 1.
+    Set _ignore1 to undefined;rmax = <Math.max with rmax, (value[0] + value[1]) % (a ** 2)>.
+    Set _ignore2 to undefined;n = n + 1.
+  End.
+  Return rmax.
+End.
+
+Set i to 3.
+Set total to 0.
+While i < 1001 do:
+  Set _ignore3 to undefined;total = total + run(i).
+  Set _ignore4 to undefined;i = i + 1.
+End.
+Show total.

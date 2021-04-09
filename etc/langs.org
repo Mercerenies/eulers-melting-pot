@@ -193,7 +193,7 @@
 *** Befunge                                                            :used:
 *** Befunk                                                             :used:
 *** Brainf**k                                                          :used:
-*** Brat
+*** Brat                                                               :used:
 *** Chef                                                               :used:
 *** CJam                                                               :used:
 *** COMPLEX                                                            :used:
@@ -245,7 +245,7 @@
 *** Snowman                                                            :used:
 *** Stuck                                                              :used:
 *** Taxi                                                               :used:
-*** Tome
+*** Tome                                                               :used:
 *** TRANSCRIPT
 *** Underload
 *** V                                                                  :used:
@@ -363,3 +363,19 @@
      - https://repl.it/
    + IDEOne
      - https://ideone.com/
+* SHORT LIST
+  These are languages that I've either attempted to use several times
+  and failed, or that I know (due to the specification or rules of the
+  language) that they will only be usable for an incredibly easy
+  challenge.
+** Emoji
+   Reasonably capable stack-based functional language, but the
+   implementation is very inefficient.
+   + Attempts: 2
+** minaac
+   Very limited assembly-like language with confusing semantics.
+   Probably usable but not for very much.
+** Piet++
+   Like Piet, this language is going to be a pain to do anything
+   nontrivial in. It has nested stacks, which can probably be used to
+   do something resembling arrays, but with great effort.
