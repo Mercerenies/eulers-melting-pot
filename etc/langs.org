@@ -199,7 +199,8 @@
 *** COMPLEX                                                            :used:
 *** Cubix                                                              :used:
 *** ed
-*** Emoji
+*** Emoji                                                              :used:
+*** Emoticon
 *** Emotinomicon
 *** Enchilada                                                          :used:
 *** Factorio                                                           :used:
@@ -225,7 +226,6 @@
 *** MagiStack                                                          :used:
 *** Math++                                                             :used:
 *** MATL                                                               :used:
-*** minaac
 *** MontiLang                                                          :used:
 *** Mouse-2002                                                         :used:
 *** Noether
@@ -265,6 +265,10 @@
     Could not run due to language-imposed restrictions.
 *** INTERCAL
     No.
+*** minaac
+    The interpreter seems to be using lots of implementation-defined
+    C++ behavior and, as a result, I can only use a small subset of
+    the defined commands without segfaulting at random.
 *** Orthogonal
     Sadly, the only [[http://www.muppetlabs.com/~breadbox/orth/][working interpreter]] I can find was written for a
     compiler from 25 years ago.
@@ -368,13 +372,6 @@
   and failed, or that I know (due to the specification or rules of the
   language) that they will only be usable for an incredibly easy
   challenge.
-** Emoji
-   Reasonably capable stack-based functional language, but the
-   implementation is very inefficient.
-   + Attempts: 2
-** minaac
-   Very limited assembly-like language with confusing semantics.
-   Probably usable but not for very much.
 ** Piet++
    Like Piet, this language is going to be a pain to do anything
    nontrivial in. It has nested stacks, which can probably be used to

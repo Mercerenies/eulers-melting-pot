@@ -41,6 +41,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Eiffel
 * ELisp
 * Elixir
+* Emoji
 * Enchilada
 * 𝔼𝕊𝕄𝕚𝕟
 * Factor
@@ -847,6 +848,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Tome](https://esolangs.org/wiki/Tome)
 * Compiler / Interpreter: [The provided interpreter](http://tome.gytis.co/)
 * Notes: The interpreter seems to run faster in Google Chrome.
+
+### Euler 121
+* File: [problem121.emoji](problem121.emoji)
+* Language: [Emoji](https://esolangs.org/wiki/Emoji)
+* Compiler / Interpreter: [The provided interpreter](https://github.com/vpzomtrrfrt/emoji.py)
+* Notes: Screenshot is available at [etc/problem121_screenshot.png](etc/problem121_screenshot.png).
 
 ## Valid Languages
 
