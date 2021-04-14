@@ -240,7 +240,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 ### Euler 19
 * File: [problem19.bas](problem19.bas)
 * Language: [QBASIC](https://en.wikipedia.org/wiki/QBasic)
-* Compiler / Interpreter: [repl.it](https://repl.it/Cc8a)
+* Compiler / Interpreter: [repl.it](https://repl.it/languages/qbasic)
 * Notes: (None)
 
 ### Euler 20
