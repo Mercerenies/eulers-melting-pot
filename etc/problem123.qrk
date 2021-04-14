@@ -1,0 +1,12 @@
+{
+  (let factorial (fn (n) {
+    (if (< n 1) (return 1))
+    (return (* n (factorial (+ n -1))))
+  }))
+(print (= false true))
+}
+# (let powermod (fn (a b n) {
+#                   (if (= b 0)
+#                       {1}
+#                       {(mod (* a (powermod a (- b 1) n)) n)})}))
+# (print (powermod 44 7 90))

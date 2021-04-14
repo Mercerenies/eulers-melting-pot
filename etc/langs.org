@@ -230,7 +230,6 @@
 *** Orthagonal
 *** perchance.org
 *** Piet                                                               :used:
-*** Piet++
 *** Pip                                                                :used:
 *** Puzzlescript
 *** Pyth                                                               :used:
@@ -281,6 +280,13 @@
 *** Orthogonal
     Sadly, the only [[http://www.muppetlabs.com/~breadbox/orth/][working interpreter]] I can find was written for a
     compiler from 25 years ago.
+*** Piet++
+    [[https://esolangs.org/wiki/Piet%252B%252B][Unimplemented :(]]
+*** Quark (https://github.com/quark-lang/quark)
+    Looks like a neat project, but the interpreter is irreparably
+    broken. ~true~ and ~false~ evaluate to the same value, subtraction
+    unconditionally yields NaN when called inside a function but works
+    correctly at top-level, etc., etc.
 *** Rio
     Can't find it again.
 *** Skastic
@@ -335,7 +341,6 @@
 *** Postscript
 *** PPL
 *** Processing (https://en.wikipedia.org/wiki/Processing_(programming_language))
-*** Quark (https://github.com/quark-lang/quark)
 *** Simula
 *** Skip
 *** Snails
@@ -382,7 +387,3 @@
   and failed, or that I know (due to the specification or rules of the
   language) that they will only be usable for an incredibly easy
   challenge.
-** Piet++
-   Like Piet, this language is going to be a pain to do anything
-   nontrivial in. It has nested stacks, which can probably be used to
-   do something resembling arrays, but with great effort.
