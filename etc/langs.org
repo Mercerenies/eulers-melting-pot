@@ -38,10 +38,8 @@
 *** OCaml                                                              :used:
 *** Pizza
 ** SILVER
-*** ActionScript
 *** Ada                                                                :used:
 *** ALGOL 68                                                           :used:
-*** ASP
 *** AWK                                                                :used:
 *** COBOL                                                              :used:
 *** Dylan                                                              :used:
@@ -160,7 +158,7 @@
 *** Quite BASIC
 *** TI BASIC
 *** VBA                                                                :used:
-*** Visual Basic
+*** Visual Basic .NET                                                  :used:
 *** XC=BASIC
 ** LISP
 *** AutoLISP
@@ -251,10 +249,21 @@
 *** V                                                                  :used:
 *** Whitespace                                                         :used:
 ** UNUSABLE
+*** ActionScript
+    Flash is end-of-life and all of the other Adobe products seem to
+    either be paid or not support my OS. I also can't seem to get the
+    [[https://github.com/Corsaair/as3shebang][open-source version]] to run at all.
 *** ALF
     The [[https://www.informatik.uni-kiel.de/~mh/systems/ALF/][available implementation]] is 25 years old and, despite my best
     efforts, I cannot get its ~a.out~ format executables to run on my
     machine.
+*** ASP
+    So I misunderstood. ASP is a way of embedding VBScript (which is,
+    for our purposes, basically Visual Basic). And ASP.net embeds C#,
+    Visual Basic, and Visual J#. The former two are already on my list
+    separately, and the final one seems to basically just be Java on a
+    different platform, so this is not an independent language for our
+    purposes.
 *** chomksi (pep)
     I can find no further records of this language's existence.
 *** Clasp.py
@@ -318,6 +327,7 @@
 *** Oasis
 *** Ohm
 *** Orc
+*** Orion (https://github.com/wafelack/orion/)
 *** Oxide (https://github.com/tuqqu/oxide-lang)
 *** Oz
 *** Paperscript

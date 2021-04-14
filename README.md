@@ -120,6 +120,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * V
 * Vala
 * VBA
+* Visual Basic .NET
 * Whitespace
 * Wren
 * Wyvern
@@ -854,6 +855,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Emoji](https://esolangs.org/wiki/Emoji)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/vpzomtrrfrt/emoji.py)
 * Notes: Screenshot is available at [etc/problem121_screenshot.png](etc/problem121_screenshot.png).
+
+### Euler 122
+* File: [problem122.vb](problem122.vb)
+* Language: [Visual Basic .NET](https://en.wikipedia.org/wiki/Visual_Basic_.NET)
+* Compiler / Interpreter: [TIO Nexus](https://tio.run/#vb-core)
+* Notes: (None)
 
 ## Valid Languages
 
