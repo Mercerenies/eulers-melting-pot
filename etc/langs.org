@@ -127,6 +127,7 @@
 *** Vala                                                               :used:
 *** Vale (https://vale.dev/)
 *** Vimscript
+*** Wenyan                                                             :used:
 *** Wren                                                               :used:
 *** Wyvern                                                             :used:
 *** XSLT                                                               :used:
@@ -183,7 +184,6 @@
 *** Arn (ZippyMagician)
     + Bignum support
 *** Aya                                                                :used:
-*** Basis
 *** Beeswax                                                            :used:
 *** Befalse                                                            :used:
 *** Befreak
@@ -263,6 +263,9 @@
     separately, and the final one seems to basically just be Java on a
     different platform, so this is not an independent language for our
     purposes.
+*** Basis
+    The [[https://esolangs.org/wiki/Basis#Reference_implementation_.28WIP.29][only implementation]] is incomplete and does not have enough
+    features to perform any sort of nontrivial computation.
 *** chomksi (pep)
     I can find no further records of this language's existence.
 *** Clasp.py
@@ -387,3 +390,13 @@
   and failed, or that I know (due to the specification or rules of the
   language) that they will only be usable for an incredibly easy
   challenge.
+*** Emotinomicon
+    The interpreter's primary stack shuffle command is broken. I
+    believe we can horribly inefficiently store arbitrary data in the
+    code space, but that restricts us to 16-bit integers.
+*** Underload
+    A very minimalist language. We can very inefficiently add,
+    multiply, and take exponents, and we have rudimentary cons cells.
+    Negative numbers are not supported, and anything vaguely
+    complicated is not happening. Integer only, and linear analog
+    representations at that.

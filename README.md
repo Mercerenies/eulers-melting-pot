@@ -121,6 +121,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Vala
 * VBA
 * Visual Basic .NET
+* Wenyan
 * Whitespace
 * Wren
 * Wyvern
@@ -861,6 +862,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Visual Basic .NET](https://en.wikipedia.org/wiki/Visual_Basic_.NET)
 * Compiler / Interpreter: [TIO Nexus](https://tio.run/#vb-core)
 * Notes: (None)
+
+### Euler 123
+* File: [problem123.wen](problem123.web)
+* Language: [Wenyan](https://github.com/wenyan-lang/wenyan)
+* Compiler / Interpreter: [The online IDE](https://ide.wy-lang.org/)
+* Notes: The answer is outputted in Classical Chinese.
 
 ## Valid Languages
 
