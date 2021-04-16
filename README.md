@@ -864,7 +864,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Notes: (None)
 
 ### Euler 123
-* File: [problem123.wen](problem123.web)
+* File: [problem123.wen](problem123.wen)
 * Language: [Wenyan](https://github.com/wenyan-lang/wenyan)
 * Compiler / Interpreter: [The online IDE](https://ide.wy-lang.org/)
 * Notes: The answer is outputted in Classical Chinese.
