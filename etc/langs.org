@@ -93,7 +93,7 @@
 *** GAP
 *** Genie                                                              :used:
 *** Glava                                                              :used:
-*** IntercalScript
+*** IntercalScript                                                     :used:
     + No Bignums
 *** J                                                                  :used:
 *** Javagony                                                           :used:

@@ -62,6 +62,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Grocery List
 * Hanabi
 * Hexagony
+* IntercalScript
 * Io
 * Ioke
 * J
@@ -868,6 +869,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Wenyan](https://github.com/wenyan-lang/wenyan)
 * Compiler / Interpreter: [The online IDE](https://ide.wy-lang.org/)
 * Notes: The answer is outputted in Classical Chinese.
+
+### Euler 124
+* File: [problem124.ics](problem124.ics)
+* Language: [IntercalScript](https://github.com/Storyyeller/IntercalScript)
+* Compiler / Interpreter: [The provided compiler](https://github.com/Storyyeller/IntercalScript)
+* Notes: (None)
 
 ## Valid Languages
 
