@@ -1,0 +1,23 @@
+procedure is_palindrome(a)
+    return a == reverse(a)
+end
+
+procedure main()
+    local total, limit, sum, i, j, counted
+    counted := set()
+    total := 0
+    limit := 99999999
+    every i := 1 to limit do {
+        sum := i * i
+        every j := i + 1 to limit do {
+            sum := sum + j * j
+            if sum > limit then
+                break
+            if is_palindrome(string(sum)) & not(member(counted, sum)) then {
+                total := total + sum
+                insert(counted, sum)
+            }
+        }
+    }
+    write(total)
+end

@@ -62,6 +62,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Grocery List
 * Hanabi
 * Hexagony
+* Icon
 * IntercalScript
 * Io
 * Ioke
@@ -875,6 +876,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [IntercalScript](https://github.com/Storyyeller/IntercalScript)
 * Compiler / Interpreter: [The provided compiler](https://github.com/Storyyeller/IntercalScript)
 * Notes: (None)
+
+### Euler 125
+* File: [problem125.icon](problem125.icon)
+* Language: [Icon](https://www2.cs.arizona.edu/icon/)
+* Compiler / Interpreter: [TIO Nexus](https://tio.run/#icon)
+* Notes: A somewhat slow solution.
 
 ## Valid Languages
 

@@ -52,6 +52,7 @@
 *** Frege
 *** Gleam                                                              :used:
 *** Haxe
+*** Icon                                                               :used:
 *** Io                                                                 :used:
 *** Ioke                                                               :used:
 *** Lunar
@@ -180,6 +181,7 @@
 *** 05AB1E                                                             :used:
 *** 1.1                                                                :used:
 *** ><>                                                                :used:
+*** Alice (m-ender)
 *** Anti-Array                                                         :used:
 *** Arn (ZippyMagician)
     + Bignum support
@@ -208,12 +210,12 @@
 *** Funciton                                                           :used:
 *** Gibberish                                                          :used:
 *** Golfscript                                                         :used:
-*** GridScript
 *** Grocery List                                                       :used:
 *** Gwion
     + No IO
 *** Hanabi                                                             :used:
 *** Hexagony                                                           :used:
+*** Inform 7
 *** Japt
 *** Javagrid
 *** Jelly                                                              :used:
@@ -274,6 +276,10 @@
     See Trajedy.
 *** Enterprise
     Could not run due to language-imposed restrictions.
+*** GridScript
+    [[https://esolangs.org/wiki/GridScript][Unimplemented]]
+*** Inca
+    Unimplemented
 *** INTERCAL
     No.
 *** minaac
@@ -302,6 +308,7 @@
 ** UNCLASSIFIED
 *** Alice
 *** Alloy
+*** Ark
 *** ArkScript
 *** ATS
 *** Bizubee
@@ -323,8 +330,6 @@
 *** Groovy
 *** Husk
 *** i (https://github.com/Qlova/ilang)
-*** Icon
-*** Inca
 *** Kobalt (https://github.com/abel0b/kobalt)
 *** Koi (https://koi-lang.dev/)
 *** Lava
@@ -352,6 +357,7 @@
 *** Strema (https://gilmi.gitlab.io/strema/)
 *** Sweet.js
 *** Teascript
+*** Unicon
 *** VALE (https://github.com/project-everest/vale)
 *** XQuery
 *** XY
