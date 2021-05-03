@@ -94,6 +94,7 @@
 *** GAP
 *** Genie                                                              :used:
 *** Glava                                                              :used:
+*** i (https://github.com/Qlova/ilang)                                 :used:
 *** IntercalScript                                                     :used:
     + No Bignums
 *** J                                                                  :used:
@@ -167,6 +168,7 @@
 *** Bel (http://www.paulgraham.com/bel.html)
 *** Carp
 *** Clojure
+*** ClojureScript
 *** Common Lisp
 *** ELisp                                                              :used:
 *** Kernel (Klisp)
@@ -274,6 +276,11 @@
     Is this actually a language or just a library...?
 *** Conedy
     See Trajedy.
+*** EcstasyLang
+    May be worth looking at at some point in the future. The
+    instructions to get the thing running don't seem to be in working
+    order. The language itself seems to have substantial work put into
+    it.
 *** Enterprise
     Could not run due to language-imposed restrictions.
 *** GridScript
@@ -322,14 +329,12 @@
 *** Delphi
 *** E
 *** Ė (https://e-dot.io/)
-*** EcstasyLang
 *** EGL
 *** Euler
 *** Fancy
 *** Fission
 *** Groovy
 *** Husk
-*** i (https://github.com/Qlova/ilang)
 *** Kobalt (https://github.com/abel0b/kobalt)
 *** Koi (https://koi-lang.dev/)
 *** Lava

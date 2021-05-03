@@ -62,6 +62,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Grocery List
 * Hanabi
 * Hexagony
+* i
 * Icon
 * IntercalScript
 * Io
@@ -882,6 +883,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Icon](https://www2.cs.arizona.edu/icon/)
 * Compiler / Interpreter: [TIO Nexus](https://tio.run/#icon)
 * Notes: A somewhat slow solution.
+
+### Euler 126
+* File: [problem126.i](problem126.i)
+* Language: [i](http://rosettacode.org/wiki/Category:I)
+* Compiler / Interpreter: [The provided interpreter](https://github.com/Qlova/ilang)
+* Notes: `./etc/build126.sh` may be helpful in building the source; a somewhat slow solution.
 
 ## Valid Languages
 
