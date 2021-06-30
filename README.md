@@ -90,6 +90,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * NASM
 * Nemerle
 * Nim
+* Nit
 * Oberon-07
 * Objective-C
 * OCaml
@@ -889,6 +890,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [i](http://rosettacode.org/wiki/Category:I)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/Qlova/ilang)
 * Notes: `./etc/build126.sh` may be helpful in building the source; a somewhat slow solution.
+
+### Euler 127
+* File: [problem127.nit](problem127.nit)
+* Language: [Nit](https://nitlanguage.org/)
+* Compiler / Interpreter: [The provided compiler](https://github.com/nitlang/nit)
+* Notes: The Nit interpreter is prohibitively slow in running this problem; use the compiler `nitc` instead.
 
 ## Valid Languages
 

@@ -55,7 +55,7 @@
 *** Icon                                                               :used:
 *** Io                                                                 :used:
 *** Ioke                                                               :used:
-*** Lunar
+*** Lunar (https://github.com/lunarlang/lunar)
 *** Maple
 *** MATLAB
 *** Modula
@@ -112,6 +112,7 @@
 *** LilyPond                                                           :used:
 *** m4                                                                 :used:
 *** Make                                                               :used:
+*** Nit                                                                :used:
 *** Picat                                                              :used:
 *** Pike                                                               :used:
 *** Pikelet
@@ -233,6 +234,8 @@
 *** Noether
 *** Orthagonal
 *** perchance.org
+*** Pickle (Python)
+    + Yes, the serialization framework; I think it's Turing complete
 *** Piet                                                               :used:
 *** Pip                                                                :used:
 *** Puzzlescript
@@ -320,7 +323,9 @@
 *** ATS
 *** Bizubee
 *** Brachylog
+*** Bracmat (https://github.com/BartJongejan/Bracmat)
 *** CandleScript
+*** Catln (https://catln.dev/)
 *** Cecil
 *** Clean
 *** Coconut
@@ -335,14 +340,15 @@
 *** Fission
 *** Groovy
 *** Husk
+*** jq (https://stedolan.github.io/jq/)
 *** Kobalt (https://github.com/abel0b/kobalt)
 *** Koi (https://koi-lang.dev/)
 *** Lava
 *** Logtalk
 *** Luna
+*** Lunar (http://users.rcn.com/david-moon/Lunar/)
 *** Magpie
 *** Monte
-*** Nit
 *** Oasis
 *** Ohm
 *** Orc
