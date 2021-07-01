@@ -14,6 +14,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * \>\<\>
 * Ada
 * ALGOL 68
+* Alice
 * Anti-Array
 * APL
 * AWK
@@ -896,6 +897,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Nit](https://nitlanguage.org/)
 * Compiler / Interpreter: [The provided compiler](https://github.com/nitlang/nit)
 * Notes: The Nit interpreter is prohibitively slow in running this problem; use the compiler `nitc` instead.
+
+### Euler 128
+* File: [problem128.alice](problem128.alice)
+* Language: [Alice](https://github.com/m-ender/alice)
+* Compiler / Interpreter: [TIO Nexus](https://tio.run/#alice)
+* Notes: A somewhat slow solution
 
 ## Valid Languages
 

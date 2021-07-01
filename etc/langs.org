@@ -184,7 +184,7 @@
 *** 05AB1E                                                             :used:
 *** 1.1                                                                :used:
 *** ><>                                                                :used:
-*** Alice (m-ender)
+*** Alice (m-ender)                                                    :used:
 *** Anti-Array                                                         :used:
 *** Arn (ZippyMagician)
     + Bignum support
@@ -193,6 +193,7 @@
 *** Befalse                                                            :used:
 *** Befreak
     + No arrays
+    + 32-bit integers
 *** Befunge                                                            :used:
 *** Befunk                                                             :used:
 *** Brainf**k                                                          :used:
@@ -203,7 +204,6 @@
 *** Cubix                                                              :used:
 *** ed
 *** Emoji                                                              :used:
-*** Emoticon
 *** Emotinomicon
 *** Enchilada                                                          :used:
 *** Factorio                                                           :used:
@@ -284,6 +284,11 @@
     instructions to get the thing running don't seem to be in working
     order. The language itself seems to have substantial work put into
     it.
+*** Emoticon
+    The only interpreter I could find is a Wayback Machine archive
+    from ancient times which tries to run a PHP server that doesn't
+    exist. The source code for this server is unavailable, to the best
+    of my searching ability.
 *** Enterprise
     Could not run due to language-imposed restrictions.
 *** GridScript
@@ -370,6 +375,7 @@
 *** Teascript
 *** Unicon
 *** VALE (https://github.com/project-everest/vale)
+*** Verilog
 *** XQuery
 *** XY
 * RESOURCES
