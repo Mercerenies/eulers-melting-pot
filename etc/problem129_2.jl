@@ -1,6 +1,4 @@
 
-import Primes
-
 struct PrimeFactor{T}
     factor::T
     count::Int64
