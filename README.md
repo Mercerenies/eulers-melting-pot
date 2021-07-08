@@ -909,7 +909,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem129.befreak](problem129.befreak)
 * Language: [Befreak](http://tunes.org/~iepos/befreak.html)
 * Compiler / Interpreter: [The provided interpreter](http://tunes.org/~iepos/befreak.tar.gz)
-* Notes: A very slow solution.
+* Notes: Code was written with the help of a Scala translator program; a very slow solution.
 
 ## Valid Languages
 
