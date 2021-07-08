@@ -24,6 +24,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * BeanShell
 * Beeswax
 * Befalse
+* Befreak
 * Befunge
 * Befunk
 * Brainf\*\*k
@@ -902,7 +903,13 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem128.alice](problem128.alice)
 * Language: [Alice](https://github.com/m-ender/alice)
 * Compiler / Interpreter: [TIO Nexus](https://tio.run/#alice)
-* Notes: A somewhat slow solution
+* Notes: A somewhat slow solution.
+
+### Euler 129
+* File: [problem129.befreak](problem129.befreak)
+* Language: [Befreak](http://tunes.org/~iepos/befreak.html)
+* Compiler / Interpreter: [The provided interpreter](http://tunes.org/~iepos/befreak.tar.gz)
+* Notes: A very slow solution.
 
 ## Valid Languages
 

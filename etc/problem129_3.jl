@@ -36,10 +36,17 @@ for n = Iterators.countfrom(1000000, 10), d = lastdigit
 end
 
 #=
-
 /                                       \
 @(1000000 (ovs's[)84+84 01%01(v):v `w]v)/
             \c=c(=)           /  \=(=)/
+--
+MAIN STACK
+i
 
+CONTROL STACK
+a(i)>1000000
+(gcd(10, i) == 1)
+a(i)
+gcd(10, i)
 
 =#

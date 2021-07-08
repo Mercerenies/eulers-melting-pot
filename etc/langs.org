@@ -191,7 +191,7 @@
 *** Aya                                                                :used:
 *** Beeswax                                                            :used:
 *** Befalse                                                            :used:
-*** Befreak
+*** Befreak                                                            :used:
     + No arrays
     + 32-bit integers
 *** Befunge                                                            :used:
@@ -423,7 +423,3 @@
     Negative numbers are not supported, and anything vaguely
     complicated is not happening. Integer only, and linear analog
     representations at that.
-*** Befreak
-    Language-imposed restrictions regarding reversibility make it
-    incredibly nontrivial to do even basic tasks like control flow and
-    multiplication.
