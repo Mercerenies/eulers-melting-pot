@@ -53,6 +53,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * FiM++
 * Forth
 * Fortran
+* Fourier
 * Funciton
 * Genie
 * Gibberish
@@ -911,6 +912,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Compiler / Interpreter: [The provided interpreter](http://tunes.org/~iepos/befreak.tar.gz)
 * Notes: Code was written with the help of a Scala translator program; a very slow solution.
 
+### Euler 130
+* File: [problem130.four](problem130.four)
+* Language: [Fourier](https://esolangs.org/wiki/Fourier)
+* Compiler / Interpreter: [Archived interpreter](https://archive.codeplex.com/?p=fourierlang)
+* Notes: Code was written with the help of a Haskell translator program; an incredibly slow solution.
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular,
@@ -930,6 +937,35 @@ change as I progress.
   will be acceptable.
 * I have written a few programming languages. At least one of them is in a usable state right now.
   For fairness, I will not be using any language that I myself wrote.
+* Generally speaking, interpreters and compilers are to be taken
+  "as-is". That means that, while it is perfectly permissible to use
+  compiler-specific extensions to a language, it is also necessary to
+  treat any bugs in the chosen compiler as intended behavior. One
+  minor exception to this is in the case of historical code, where
+  minor modifications are necessary to get a language interpreter
+  written long ago to work on a modern computer, as there are several
+  historical languages I aim to use for this challenge.
+
+## Speed Adjectives
+
+Some solutions are marked as "slow". Generally speaking, the following
+rough guidelines can be used to estimate how long it takes to run the
+code on a reasonably modern computer. These are, of course, very rough
+estimates, so take them with a grain of salt.
+
+* 30s or less: I will generally not denote these at all.
+* 30s to 2min: "A somewhat slow solution"
+* 2min to 10min: "A very slow solution"
+* More than 10min: "An incredibly slow solution"
+
+Currently, the slowest solution in this repository is Problem 130
+(Fourier), which takes roughly 26 minutes. The second slowest is
+Problem 96 (Javagony), at roughly 20 minutes.
+
+I do not have an explicit upper bound on the runtime of a correct
+algorithm. I will not leave code unattended overnight or for days on
+end, and the code written must *actually* terminate on a machine I
+have access to, not just theoretically produce correct results.
 
 ## Final Notes
 

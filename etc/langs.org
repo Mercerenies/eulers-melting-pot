@@ -209,7 +209,7 @@
 *** Factorio                                                           :used:
 *** FALSE                                                              :used:
 *** FiM++                                                              :used:
-*** Fourier
+*** Fourier                                                            :used:
 *** Funciton                                                           :used:
 *** Gibberish                                                          :used:
 *** Golfscript                                                         :used:
