@@ -100,6 +100,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Pascal
 * Parrot IR
 * PASM
+* Perchance
 * Picat
 * Piet
 * Pike
@@ -917,6 +918,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Fourier](https://esolangs.org/wiki/Fourier)
 * Compiler / Interpreter: [Archived interpreter](https://archive.codeplex.com/?p=fourierlang)
 * Notes: Code was written with the help of a Haskell translator program; an incredibly slow solution.
+
+### Euler 131
+* File: [problem131.perchance](problem131.perchance)
+* Language: [Perchance](https://perchance.org/welcome)
+* Compiler / Interpreter: [The online interpreter](https://perchance.org/minimal#edit)
+* Notes: (None)
 
 ## Valid Languages
 

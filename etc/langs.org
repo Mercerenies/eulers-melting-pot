@@ -186,8 +186,6 @@
 *** ><>                                                                :used:
 *** Alice (m-ender)                                                    :used:
 *** Anti-Array                                                         :used:
-*** Arn (ZippyMagician)
-    + Bignum support
 *** Aya                                                                :used:
 *** Beeswax                                                            :used:
 *** Befalse                                                            :used:
@@ -203,8 +201,10 @@
 *** COMPLEX                                                            :used:
 *** Cubix                                                              :used:
 *** ed
+    + Loops are recursive
 *** Emoji                                                              :used:
 *** Emotinomicon
+    + Short list
 *** Enchilada                                                          :used:
 *** Factorio                                                           :used:
 *** FALSE                                                              :used:
@@ -233,9 +233,10 @@
 *** Mouse-2002                                                         :used:
 *** Noether
 *** Orthagonal
-*** perchance.org
+*** Perchance                                                          :used:
 *** Pickle (Python)
     + Yes, the serialization framework; I think it's Turing complete
+    + Loops are recursive
 *** Piet                                                               :used:
 *** Pip                                                                :used:
 *** Puzzlescript
@@ -252,6 +253,7 @@
 *** Tome                                                               :used:
 *** TRANSCRIPT
 *** Underload
+    + Short list
 *** V                                                                  :used:
 *** Whitespace                                                         :used:
 ** UNUSABLE
@@ -263,6 +265,12 @@
     The [[https://www.informatik.uni-kiel.de/~mh/systems/ALF/][available implementation]] is 25 years old and, despite my best
     efforts, I cannot get its ~a.out~ format executables to run on my
     machine.
+*** Arn (ZippyMagician)
+    Looks neat, but either the documentation is wrong or the
+    implementation is hilariously buggy. I can't get anything more
+    than basic arithmetic to run in the downloadable implementation.
+    With no functions or loops, and no way to do any conditionals more
+    advanced than ~||~ and ~&&~, I don't see this one happening.
 *** ASP
     So I misunderstood. ASP is a way of embedding VBScript (which is,
     for our purposes, basically Visual Basic). And ASP.net embeds C#,
