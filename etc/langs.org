@@ -214,8 +214,7 @@
 *** Gibberish                                                          :used:
 *** Golfscript                                                         :used:
 *** Grocery List                                                       :used:
-*** Gwion
-    + No IO
+*** Gwion                                                              :used:
 *** Hanabi                                                             :used:
 *** Hexagony                                                           :used:
 *** Inform 7

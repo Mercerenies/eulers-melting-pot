@@ -1,55 +1,54 @@
 
 import Primes
 
-function isprime(n)
-    if n < 2
-        return false
-    end
-    for i in 2:Int64(floor(sqrt(n)))
-        if n % i == 0
-            return false
-        end
-    end
-    true
+# A number, stored as a function from (1-indexed) positions in the
+# number to the base 10 digit at that position.
+abstract type DigitNumber end
+
+# 1111...11111
+struct Repunit <: DigitNumber
+    length::Int
 end
 
-# The remainder when n is divided into A(x)
-function reprem(n, x)
+digit(::Repunit, n) = 1
+cyclelength(::Repunit) = 1
+totallength(value::Repunit) = value.length
+
+struct CyclicNumber <: DigitNumber
+    cycle::Vector{Int}
+    cycles::Int
+end
+
+digit(value::CyclicNumber, n) = value.cycle[(n - 1) % length(value.cycle) + 1]
+cyclelength(value::CyclicNumber) = length(value.cycle)
+totallength(value::CyclicNumber) = length(value.cycle) * value.cycles
+
+struct OrdinaryNumber <: DigitNumber
+    number::Int
+end
+
+digit(value::OrdinaryNumber, n) = div(value.number, 10 ^ (n - 1)) % 10
+cyclelength(value::OrdinaryNumber) = length(string(value.number))
+totallength(value::OrdinaryNumber) = length(string(value.number))
+
+# Remainder when dividing the number n into the DigitNumber value.
+function divrem(n, value::DigitNumber)
     cache = Dict()
     cycledata = []
     remainder = 0
-    for i in 1:x
-        if remainder in keys(cache)
-            match = cache[remainder]
+    for i in totallength(value):-1:1
+        j = i % cyclelength(value)
+        if (remainder, j) in keys(cache)
+            match = cache[(remainder, j)]
             cycle = cycledata[match:end]
-            remaining = x - i + 2
+            remaining = i + 2
             return cycle[(remaining-1) % length(cycle) + 1]
         end
-        push!(cache, remainder => i)
+        push!(cache, (remainder, j) => i)
         push!(cycledata, remainder)
-        remainder = (remainder * 10 + 1) % n
+        remainder = (remainder * 10 + digit(value, i)) % n
     end
     remainder
 end
 
-function run()
-    sum = 0
-    remaining = 40
-    for i in Iterators.countfrom(2)
-        if i % 1000 == 0
-            println(i)
-        end
-        if Primes.isprime(i) && reprem(i, 10 ^ 9) == 0
-            println(i)
-            push!(found, i)
-            sum += i
-            remaining -= 1
-            if remaining <= 0
-                break
-            end
-        end
-    end
-    sum
-end
-
-println(run())
+println(divrem(106, Repunit(11)))

@@ -1,0 +1,61 @@
+
+fun int powermod(int a, int b, int n) {
+   var int p;
+   var int x;
+
+   2 => p;
+   while (p * 2 <= b) {
+      p * 2 => p;
+   }
+
+   1 => x;
+   while (true) {
+      if (b >= p) {
+         (x * a) % n => x;
+         b - p => b;
+      }
+      p / 2 => p;
+      if (p <= 0) {
+         break;
+      }
+      (x * x) % n => x;
+   }
+   return x;
+}
+
+fun bool isprime(int x) {
+   if (x < 2) {
+      return false;
+   }
+   var int i;
+   2 => i;
+   while (i < x) {
+      if ((x % i) <= 0) {
+         return false;
+      }
+      i + 1 => i;
+   }
+   return true;
+}
+
+fun bool primedivides(int n, int p) {
+   var int m;
+   powermod(10, n, 9 * p) => m;
+   return m <= 1 && m >= 1;
+}
+
+var int i;
+var int sum;
+var int remaining;
+2 => i;
+0 => sum;
+40 => remaining;
+
+while (remaining > 0) {
+   if (primedivides(1000000000, i) && isprime(i)) {
+      sum + i => sum;
+      remaining - 1 => remaining;
+   }
+   i + 1 => i;
+}
+<<< sum >>>;

@@ -63,6 +63,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Go
 * Golfscript
 * Grocery List
+* Gwion
 * Hanabi
 * Hexagony
 * i
@@ -923,6 +924,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem131.perchance](problem131.perchance)
 * Language: [Perchance](https://perchance.org/welcome)
 * Compiler / Interpreter: [The online interpreter](https://perchance.org/minimal#edit)
+* Notes: (None)
+
+### Euler 132
+* File: [problem132.gw](problem132.gw)
+* Language: [Gwion](https://gwion.github.io/Gwion/index.html)
+* Compiler / Interpreter: [The provided interpreter](https://github.com/Gwion/Gwion)
 * Notes: (None)
 
 ## Valid Languages
