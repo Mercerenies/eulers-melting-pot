@@ -17,6 +17,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Alice
 * Anti-Array
 * APL
+* AutoHotkey
 * AWK
 * Aya
 * Batch
@@ -930,6 +931,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem132.gw](problem132.gw)
 * Language: [Gwion](https://gwion.github.io/Gwion/index.html)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/Gwion/Gwion)
+* Notes: (None)
+
+### Euler 133
+* File: [problem133.ahk](problem133.ahk)
+* Language: [AutoHotkey](https://www.autohotkey.com/)
+* Compiler / Interpreter: [AutoHotkey](https://www.autohotkey.com/)
 * Notes: (None)
 
 ## Valid Languages

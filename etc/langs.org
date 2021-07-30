@@ -78,8 +78,9 @@
 ** BRONZE
 *** Agda                                                               :used:
 *** APL                                                                :used:
-*** AutoHotkey
+*** AutoHotkey                                                         :used:
     + 64-bit integers (no bignums)
+    + Windows only
 *** bc                                                                 :used:
 *** BeanShell                                                          :used:
 *** Cat
