@@ -39,6 +39,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Csh
 * Cubix
 * D
+* Dafny
 * Dogescript
 * Dylan
 * Eiffel
@@ -938,6 +939,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [AutoHotkey](https://www.autohotkey.com/)
 * Compiler / Interpreter: [AutoHotkey](https://www.autohotkey.com/)
 * Notes: (None)
+
+### Euler 134
+* File: [problem134.dfy](problem134.dfy)
+* Language: [Dafny](https://www.microsoft.com/en-us/research/project/dafny-a-language-and-program-verifier-for-functional-correctness/)
+* Compiler / Interpreter: [Dafny 3.2.0](https://github.com/dafny-lang/dafny/releases)
+* Notes: `./etc/build134.sh` may be helpful in building the source.
 
 ## Valid Languages
 
