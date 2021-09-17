@@ -219,6 +219,7 @@
 *** Hexagony                                                           :used:
 *** Inform 7
 *** Japt
+    + Loops are recursion
 *** Javagrid
 *** Jelly                                                              :used:
 *** Jellyfish
@@ -230,6 +231,7 @@
 *** MATL                                                               :used:
 *** MontiLang                                                          :used:
 *** Mouse-2002                                                         :used:
+*** naz (https://github.com/sporeball/naz)
 *** Noether
 *** Orthagonal
 *** Perchance                                                          :used:
@@ -332,10 +334,13 @@
 *** Alloy
 *** Ark
 *** ArkScript
+*** AssemblyScript
 *** ATS
 *** Bizubee
+*** BQN (https://mlochbaum.github.io/BQN/)
 *** Brachylog
 *** Bracmat (https://github.com/BartJongejan/Bracmat)
+*** Burlesque (https://esolangs.org/wiki/Burlesque)
 *** CandleScript
 *** Catln (https://catln.dev/)
 *** Cecil
@@ -343,19 +348,25 @@
 *** Coconut
 *** Container (https://github.com/odddollar/Container-lang)
 *** Crystal
+*** Curl (https://www.curl.com/products/prod/language/)
 *** Delphi
+*** Dhall (https://dhall-lang.org/#)
 *** E
 *** Ė (https://e-dot.io/)
 *** EGL
 *** Euler
 *** Fancy
 *** Fission
+*** Fuzzy Octo Guacamole (https://codereview.stackexchange.com/questions/124736/fuzzy-octo-guacamole-interpreter)
+*** G-- (https://github.com/ReyAnthony/G--)
+*** Gluon
 *** Groovy
 *** Husk
 *** jq (https://stedolan.github.io/jq/)
 *** Kobalt (https://github.com/abel0b/kobalt)
 *** Koi (https://koi-lang.dev/)
 *** Lava
+*** Livescript
 *** Logtalk
 *** Luna
 *** Lunar (http://users.rcn.com/david-moon/Lunar/)
@@ -372,6 +383,7 @@
 *** Postscript
 *** PPL
 *** Processing (https://en.wikipedia.org/wiki/Processing_(programming_language))
+*** Runic Enchantments (https://github.com/Draco18s/RunicEnchantments/tree/Console)
 *** Simula
 *** Skip
 *** Snails
@@ -380,6 +392,7 @@
 *** Strema (https://gilmi.gitlab.io/strema/)
 *** Sweet.js
 *** Teascript
+*** TurtleArt (https://help.sugarlabs.org/en/turtleart_tutorials/programming_without_words.html)
 *** Unicon
 *** VALE (https://github.com/project-everest/vale)
 *** Verilog
@@ -403,7 +416,9 @@
   + List of languages that compile to JS
     - https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS
   + Hello world/Text - Rosetta Code
-    _ https://rosettacode.org/wiki/Hello_world/Text
+    - https://rosettacode.org/wiki/Hello_world/Text
+  + Showcase of Languages - Code Golf Stack Exchange
+    - https://codegolf.stackexchange.com/questions/44680/showcase-of-languages
 ** ONLINE INTERPRETERS
    Some online interpreters that are free to use and very handy for tasks like this.
 
