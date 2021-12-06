@@ -1,0 +1,17 @@
+"Problem135" by Mercerenies
+
+The library is a room. A computer is a kind of device. A computer is
+fixed in place.
+
+The library computer is a computer in the library.
+
+Instead of switching on the library computer, solve the Project Euler challenge.
+
+To solve the Project Euler challenge:
+	let solutions be a list of numbers;
+	repeat with the index running from 1 to 1000000:
+		add 0 to solutions;
+		if the remainder after dividing the index by 1000 is 0:
+			say the index;
+			say ".";
+	say 1.

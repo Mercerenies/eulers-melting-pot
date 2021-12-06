@@ -1,0 +1,42 @@
+
+dec limit:int
+dec a:int
+dec b:int
+dec result:int
+
+proc_main
+  1000000 malloc
+
+  999999 >limit
+
+  1 dup >a
+  while
+
+    1 >b
+    <a <b * <limit <=
+    while
+
+      3 <b * <a > if
+        <a 5 <b * + 4 % 0 == if
+          <a <b * dup 1 swap memget 1 + swap 1 swap memset
+        end_if
+      end_if
+
+      1 <b + >b
+      <a <b * <limit <=
+    end_while
+
+    1 <a + dup >a <limit <=
+  end_while
+
+  0 >result
+  1 dup >a
+  while
+    1 <a memget 10 == if
+      <result 1 + >result
+    end_if
+    1 <a + dup >a <limit <=
+  end_while
+
+  <result println
+proc_end

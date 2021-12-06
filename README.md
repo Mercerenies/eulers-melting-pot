@@ -946,6 +946,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Compiler / Interpreter: [Dafny 3.2.0](https://github.com/dafny-lang/dafny/releases)
 * Notes: `./etc/build134.sh` may be helpful in building the source.
 
+### Euler 135
+* File: [problem135.tovie](problem135.tovie)
+* Language: [Tovie](https://github.com/Jaysmito101/tovie)
+* Compiler / Interpreter: [Tovie v_03](https://github.com/Jaysmito101/tovie/releases/tag/v_03)
+* Notes: A somewhat slow solution; must be run using the Python transpiler (`./tovie -f python ./problem135.tovie`), as the default compiler's `malloc` implementation is broken.
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular,

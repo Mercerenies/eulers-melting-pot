@@ -252,6 +252,7 @@
 *** Stuck                                                              :used:
 *** Taxi                                                               :used:
 *** Tome                                                               :used:
+*** Tovie (https://github.com/Jaysmito101/tovie)                       :used:
 *** TRANSCRIPT
 *** Underload
     + Short list
@@ -366,6 +367,7 @@
 *** Kobalt (https://github.com/abel0b/kobalt)
 *** Koi (https://koi-lang.dev/)
 *** Lava
+*** Lean (https://leanprover-community.github.io/)
 *** Livescript
 *** Logtalk
 *** Luna
@@ -383,6 +385,8 @@
 *** Postscript
 *** PPL
 *** Processing (https://en.wikipedia.org/wiki/Processing_(programming_language))
+*** Rebol
+*** Red (https://www.red-lang.org/)
 *** Runic Enchantments (https://github.com/Draco18s/RunicEnchantments/tree/Console)
 *** Simula
 *** Skip
@@ -396,6 +400,8 @@
 *** Unicon
 *** VALE (https://github.com/project-everest/vale)
 *** Verilog
+*** Vyxal (https://github.com/Vyxal/Vyxal)
+*** Whispers (https://github.com/cairdcoinheringaahing/Whispers)
 *** XQuery
 *** XY
 * RESOURCES
