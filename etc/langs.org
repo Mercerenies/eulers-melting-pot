@@ -8,6 +8,9 @@
   for my use in determining what language to use next.
 * LANGUAGES
 ** PLATINUM
+   Platinum languages are languages that I personally feel very
+   confident programming in. I feel I can solve any challenge in these
+   languages, given the time.
 *** C
 *** C++
 *** Coffeescript
@@ -24,6 +27,9 @@
 *** Tcl                                                                :used:
 *** Typescript
 ** GOLD
+   Gold languages are languages are languages I feel mostly confident
+   programming in. With some help from online guides, I can consider
+   myself fluent in these.
 *** C#
 *** Ceylon
 *** D                                                                  :used:
@@ -38,6 +44,10 @@
 *** OCaml                                                              :used:
 *** Pizza
 ** SILVER
+   Silver languages are perfectly capable languages to solve any
+   challenge, but I do not consider myself fluent in them. "Silver" is
+   the highest rank a language can achieve by its own merits; "Gold"
+   and "Platinum" are measures of my personal skill.
 *** Ada                                                                :used:
 *** ALGOL 68                                                           :used:
 *** AWK                                                                :used:
@@ -76,6 +86,13 @@
 *** Swift
 *** zkl                                                                :used:
 ** BRONZE
+   Bronze languages are mostly capable general-purpose programming
+   languages which might have some inherent limitations.
+   Alternatively, they're powerful tools which turned out to be Turing
+   complete despite potentially not being intended in that way. A
+   Bronze language has an inherent limitation, either semantically or
+   from an efficiency perspective, that makes it less desirable than a
+   Silver language.
 *** Agda                                                               :used:
 *** APL                                                                :used:
 *** AutoHotkey                                                         :used:
@@ -135,6 +152,9 @@
 *** Wyvern                                                             :used:
 *** XSLT                                                               :used:
 ** ASSEMBLY
+   Assembly dialects. This includes both Assembly languages which
+   compile to the machine and those that compile to a VM such as the
+   JVM.
 *** CIL                                                                :used:
 *** Jasmin                                                             :used:
 *** LLVM IR                                                            :used:
@@ -144,6 +164,7 @@
 *** PASM                                                               :used:
 *** WASM
 ** SHELL
+   Shell dialects, languages intended to be used in a terminal.
 *** Bash
 *** Batch                                                              :used:
 *** Csh                                                                :used:
@@ -154,6 +175,7 @@
 *** Scsh
 *** Zsh                                                                :used:
 ** BASIC
+   BASIC dialects.
 *** Chipmunk BASIC
 *** Commodore BASIC
 *** JustBASIC                                                          :used:
@@ -165,6 +187,7 @@
 *** Visual Basic .NET                                                  :used:
 *** XC=BASIC
 ** LISP
+   Lisp dialects.
 *** AutoLISP
 *** Bel (http://www.paulgraham.com/bel.html)
 *** Carp
@@ -178,7 +201,20 @@
 *** NewLISP
 *** Racket
 *** Scheme
+** GAMES
+   Video games which happen to be Turing complete or close enough to
+   it to complete challenges.
+*** 7 Billion Humans
+*** Factorio                                                           :used:
+*** Game Builder Garage
+*** Super Mario Maker 2
+    + Very limited in computational capability, might be unusable
+*** Minecraft
+*** Turing Complete (https://turingcomplete.game/)
 ** ESOTERIC
+   "Esoteric" is the category below "Bronze"; an Esoteric language is
+   inherently special-purpose enough or limited enough that its uses
+   are severely restricted.
 *** *><>                                                               :used:
 *** ///                                                                :used:
 *** 05AB1E                                                             :used:
@@ -206,7 +242,6 @@
 *** Emotinomicon
     + Short list
 *** Enchilada                                                          :used:
-*** Factorio                                                           :used:
 *** FALSE                                                              :used:
 *** FiM++                                                              :used:
 *** Fourier                                                            :used:
@@ -354,6 +389,7 @@
 *** Dhall (https://dhall-lang.org/#)
 *** E
 *** Ė (https://e-dot.io/)
+*** Egison (https://www.egison.org/)
 *** EGL
 *** Euler
 *** Fancy
@@ -366,6 +402,7 @@
 *** jq (https://stedolan.github.io/jq/)
 *** Kobalt (https://github.com/abel0b/kobalt)
 *** Koi (https://koi-lang.dev/)
+*** Konna (https://www.reddit.com/r/ProgrammingLanguages/comments/rpe65y/konna_my_programming_language/)
 *** Lava
 *** Lean (https://leanprover-community.github.io/)
 *** Livescript
@@ -375,6 +412,7 @@
 *** Magpie
 *** Monte
 *** Oasis
+*** Oblivion (https://jweinst1.github.io/OblivionWebsite/)
 *** Ohm
 *** Orc
 *** Orion (https://github.com/wafelack/orion/)
@@ -404,6 +442,8 @@
 *** Whispers (https://github.com/cairdcoinheringaahing/Whispers)
 *** XQuery
 *** XY
+*** Yuescript
+    + Might be too similar to Moonscript? Investigate further.
 * RESOURCES
 ** LISTS OF LANGUAGES
   Here are several online resources that I've found to be useful for finding various languages.
