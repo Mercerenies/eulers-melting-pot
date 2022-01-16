@@ -14,11 +14,16 @@
 *** C
 *** C++
 *** Coffeescript
+*** GDScript
 *** GML                                                                :used:
 *** Haskell
 *** Java
 *** Javascript
+*** Julia                                                              :used:
+*** Kotlin
+*** Lua
 *** Mathematica
+*** OCaml                                                              :used:
 *** Perl
 *** Python
 *** Ruby
@@ -36,13 +41,12 @@
 *** Elixir                                                             :used:
 *** Elm
 *** Erlang
-*** GDScript
+*** Factor                                                             :used:
+*** Fennel                                                             :used:
 *** Go                                                                 :used:
-*** Julia                                                              :used:
-*** Kotlin
-*** Lua
-*** OCaml                                                              :used:
+*** PHP
 *** Pizza
+*** Raku (Perl 6)
 ** SILVER
    Silver languages are perfectly capable languages to solve any
    challenge, but I do not consider myself fluent in them. "Silver" is
@@ -55,8 +59,6 @@
 *** Dylan                                                              :used:
 *** Eiffel                                                             :used:
 *** F#
-*** Factor                                                             :used:
-*** Fennel                                                             :used:
 *** Forth                                                              :used:
 *** Fortran                                                            :used:
 *** Frege
@@ -76,9 +78,7 @@
 *** Oberon-07                                                          :used:
 *** Objective-C                                                        :used:
 *** Pascal                                                             :used:
-*** PHP
 *** R
-*** Raku (Perl 6)
 *** Self
 *** Smalltalk                                                          :used:
 *** SML                                                                :used:
