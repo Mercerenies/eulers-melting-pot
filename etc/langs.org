@@ -245,6 +245,7 @@
 *** Enchilada                                                          :used:
 *** FALSE                                                              :used:
 *** FiM++                                                              :used:
+*** Folders
 *** Fourier                                                            :used:
 *** Funciton                                                           :used:
 *** Gibberish                                                          :used:
@@ -290,6 +291,7 @@
 *** Tome                                                               :used:
 *** Tovie (https://github.com/Jaysmito101/tovie)                       :used:
 *** TRANSCRIPT
+    + No arrays
 *** Underload
     + Short list
 *** V                                                                  :used:
@@ -432,6 +434,7 @@
 *** Oxide (https://github.com/tuqqu/oxide-lang)
 *** Oz
 *** Paperscript
+*** Peg (https://github.com/HackerFoo/peg)
 *** Pikt
 *** Postscript
 *** PPL
