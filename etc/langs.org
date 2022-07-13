@@ -195,6 +195,7 @@
 *** ClojureScript
 *** Common Lisp
 *** ELisp                                                              :used:
+*** Guile
 *** Kernel (Klisp)
 *** LFE (Lisp Flavored Erlang)
 *** Maclisp
@@ -366,6 +367,8 @@
 *** Unlambda
     Possibly too minimal?
 ** UNCLASSIFIED
+*** 11l (http://rosettacode.org/wiki/Category:11l)
+*** 42 (https://forty2.is/)
 *** Alice
 *** Alloy
 *** Ark
@@ -379,26 +382,33 @@
 *** Burlesque (https://esolangs.org/wiki/Burlesque)
 *** CandleScript
 *** Catln (https://catln.dev/)
+*** CDuce (http://www.cduce.org/)
 *** Cecil
 *** Clean
 *** Coconut
+*** ColdFusion
 *** Container (https://github.com/odddollar/Container-lang)
 *** Crystal
 *** Curl (https://www.curl.com/products/prod/language/)
+*** Dale (https://github.com/tomhrr/dale)
+*** Dart
 *** Delphi
 *** Dhall (https://dhall-lang.org/#)
 *** E
 *** Ė (https://e-dot.io/)
+*** Egel (https://egel-lang.github.io/)
 *** Egison (https://www.egison.org/)
 *** EGL
 *** Euler
 *** Fancy
+*** Fantom (https://www.fantom.org/)
 *** Fission
 *** Fuzzy Octo Guacamole (https://codereview.stackexchange.com/questions/124736/fuzzy-octo-guacamole-interpreter)
 *** G-- (https://github.com/ReyAnthony/G--)
 *** Gluon
 *** Groovy
 *** Husk
+*** Hyperscript (https://hyperscript.org/)
 *** jq (https://stedolan.github.io/jq/)
 *** Kobalt (https://github.com/abel0b/kobalt)
 *** Koi (https://koi-lang.dev/)
@@ -410,9 +420,12 @@
 *** Luna
 *** Lunar (http://users.rcn.com/david-moon/Lunar/)
 *** Magpie
+*** Minus (http://www.golfscript.com/)
 *** Monte
+*** Nibbles (http://www.golfscript.com/)
 *** Oasis
 *** Oblivion (https://jweinst1.github.io/OblivionWebsite/)
+*** Occam
 *** Ohm
 *** Orc
 *** Orion (https://github.com/wafelack/orion/)
@@ -423,6 +436,7 @@
 *** Postscript
 *** PPL
 *** Processing (https://en.wikipedia.org/wiki/Processing_(programming_language))
+*** Reason (https://reasonml.github.io/)
 *** Rebol
 *** Red (https://www.red-lang.org/)
 *** Runic Enchantments (https://github.com/Draco18s/RunicEnchantments/tree/Console)
@@ -430,16 +444,22 @@
 *** Skip
 *** Snails
 *** SNUSP
+*** Soul (https://github.com/egel-lang/soul)
 *** Squirrel
 *** Strema (https://gilmi.gitlab.io/strema/)
+*** SuperForth (https://github.com/TheRealMichaelWang/superforth)
 *** Sweet.js
 *** Teascript
 *** TurtleArt (https://help.sugarlabs.org/en/turtleart_tutorials/programming_without_words.html)
 *** Unicon
+*** Unison (https://www.unison-lang.org/)
+*** Universal Lambda (http://www.golfscript.com/)
 *** VALE (https://github.com/project-everest/vale)
 *** Verilog
 *** Vyxal (https://github.com/Vyxal/Vyxal)
+*** Whiley (https://en.wikipedia.org/wiki/Whiley_(programming_language))
 *** Whispers (https://github.com/cairdcoinheringaahing/Whispers)
+*** Whython (https://www.pxeger.com/2021-09-19-hacking-on-cpython/)
 *** XQuery
 *** XY
 *** Yuescript
