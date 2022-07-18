@@ -132,6 +132,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * V
 * Vala
 * VBA
+* Verilog
 * Visual Basic .NET
 * Wenyan
 * Whitespace
@@ -952,6 +953,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Tovie](https://github.com/Jaysmito101/tovie)
 * Compiler / Interpreter: [Tovie v_03](https://github.com/Jaysmito101/tovie/releases/tag/v_03)
 * Notes: A somewhat slow solution; must be run using the Python transpiler (`./tovie -f python ./problem135.tovie`), as the default compiler's `malloc` implementation is broken.
+
+### Euler 136
+* File: [problem136.v](problem136.v)
+* Language: [Verilog](https://en.wikipedia.org/wiki/Verilog)
+* Compiler / Interpreter: [Verilator 4.224](https://www.veripool.org/verilator/)
+* Notes: `./etc/build136.sh` may be helpful in building the source.
 
 ## Valid Languages
 

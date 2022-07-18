@@ -84,6 +84,7 @@
 *** SML                                                                :used:
 *** Squeak
 *** Swift
+*** Verilog                                                            :used:
 *** zkl                                                                :used:
 ** BRONZE
    Bronze languages are mostly capable general-purpose programming
@@ -458,7 +459,6 @@
 *** Unison (https://www.unison-lang.org/)
 *** Universal Lambda (http://www.golfscript.com/)
 *** VALE (https://github.com/project-everest/vale)
-*** Verilog
 *** Vyxal (https://github.com/Vyxal/Vyxal)
 *** Whiley (https://en.wikipedia.org/wiki/Whiley_(programming_language))
 *** Whispers (https://github.com/cairdcoinheringaahing/Whispers)
