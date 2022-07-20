@@ -384,6 +384,7 @@
 *** Bracmat (https://github.com/BartJongejan/Bracmat)
 *** Burlesque (https://esolangs.org/wiki/Burlesque)
 *** CandleScript
+*** Carbon (https://github.com/carbon-language/carbon-lang)
 *** Catln (https://catln.dev/)
 *** CDuce (http://www.cduce.org/)
 *** Cecil
