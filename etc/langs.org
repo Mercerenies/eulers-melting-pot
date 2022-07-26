@@ -211,7 +211,7 @@
 *** Game Builder Garage
 *** Super Mario Maker 2
     + Very limited in computational capability, might be unusable
-*** Minecraft
+*** Minecraft                                                          :used:
 *** Turing Complete (https://turingcomplete.game/)
 ** ESOTERIC
    "Esoteric" is the category below "Bronze"; an Esoteric language is

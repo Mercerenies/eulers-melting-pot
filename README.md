@@ -91,6 +91,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * MASM
 * Math++
 * MATL
+* Minecraft
 * MontiLang
 * Mouse-2002
 * NASM
@@ -959,6 +960,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Verilog](https://en.wikipedia.org/wiki/Verilog)
 * Compiler / Interpreter: [Verilator 4.224](https://www.veripool.org/verilator/)
 * Notes: `./etc/build136.sh` may be helpful in building the source.
+
+### Euler 137
+* File: [problem137.zip](problem137.zip)
+* Language: [Minecraft](https://www.minecraft.net/en-us)
+* Compiler / Interpreter: [Minecraft Java Edition 1.18.2](https://minecraft.fandom.com/wiki/Java_Edition_1.18.2)
+* Notes: Zip contains a world save file; toggle the start lever to re-run the calculation. Answer is displayed in hexadecimal. A very slow solution. Screenshots are available at [etc/Minecraft](etc/Minecraft])
 
 ## Valid Languages
 
