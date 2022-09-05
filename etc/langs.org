@@ -372,6 +372,7 @@
 ** UNCLASSIFIED
 *** 11l (http://rosettacode.org/wiki/Category:11l)
 *** 42 (https://forty2.is/)
+*** ABAP (https://en.wikipedia.org/wiki/ABAP)
 *** Alice
 *** Alloy
 *** Ark
@@ -404,11 +405,14 @@
 *** Egison (https://www.egison.org/)
 *** EGL
 *** Euler
+*** F' (https://nasa.github.io/fprime/)
 *** Fancy
 *** Fantom (https://www.fantom.org/)
 *** Fission
+*** Flix (https://github.com/flix/flix)
 *** Fuzzy Octo Guacamole (https://codereview.stackexchange.com/questions/124736/fuzzy-octo-guacamole-interpreter)
 *** G-- (https://github.com/ReyAnthony/G--)
+*** Genesis (https://github.com/elonlit/Genesis)
 *** Gluon
 *** Groovy
 *** Husk
