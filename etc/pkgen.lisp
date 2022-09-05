@@ -63,6 +63,7 @@
 
 (defparameter *mul* (global "operator" "mul"))
 (defparameter *add* (global "operator" "add"))
+(defparameter *sub* (global "operator" "sub"))
 (defparameter *lt* (global "operator" "lt"))
 (defparameter *print* (global "builtins" "print"))
 (defparameter *setattr* (global "builtins" "setattr"))
@@ -171,10 +172,23 @@
 ;;                  (set-global "i" (call *add* (get-global "i") (int 1))))
 ;;           (stop)))
 
+;; (let ((*pprint-first-newline* nil))
+;;   (format t "~@{~A~}~%"
+;;           (set-global "sieve" (oprogn (mark) (olist)))
+;;           (set-global "rads" (oprogn (mark) (olist)))
+;;           (for "__for_loop" "i" (int 0) (int 120000)
+;;                (oprint (get-global "i")))
+;;           (oprint (get-global "sieve"))))
+
 (let ((*pprint-first-newline* nil))
   (format t "~@{~A~}~%"
-          (set-global "sieve" (oprogn (mark) (olist)))
-          (set-global "rads" (oprogn (mark) (olist)))
-          (for "__for_loop" "i" (int 0) (int 120000)
-               (oprint (get-global "i")))
-          (oprint (get-global "sieve"))))
+          (set-global "a" (int 1))
+          (set-global "b" (int 17))
+          (set-global "sum" (int 0))
+          (for "__for_loop" "i" (int 0) (int 12)
+               (set-global "sum" (call *add* (get-global "sum") (get-global "b")))
+               (set-global "tmp" (get-global "a"))
+               (set-global "a" (get-global "b"))
+               (set-global "b" (call *sub* (call *mul* (int 18) (get-global "b")) (get-global "tmp"))))
+          (oprint (get-global "sum"))
+          (stop)))

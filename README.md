@@ -106,6 +106,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * PASM
 * Perchance
 * Picat
+* Pickle
 * Piet
 * Pike
 * Pip
@@ -965,7 +966,13 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem137.zip](problem137.zip)
 * Language: [Minecraft](https://www.minecraft.net/en-us)
 * Compiler / Interpreter: [Minecraft Java Edition 1.18.2](https://minecraft.fandom.com/wiki/Java_Edition_1.18.2)
-* Notes: Zip contains a world save file; toggle the start lever to re-run the calculation. Answer is displayed in hexadecimal. A very slow solution. Screenshots are available at [etc/Minecraft](etc/Minecraft])
+* Notes: Zip contains a world save file; toggle the start lever to re-run the calculation. Answer is displayed in hexadecimal. A very slow solution. Screenshots are available at [etc/Minecraft](etc/Minecraft]).
+
+### Euler 138
+* File: [problem138.pickle](problem138.pickle)
+* Language: [Pickle](https://docs.python.org/3/library/pickle.html#module-pickle)
+* Compiler / Interpreter: [Python 3.7.9](https://www.python.org/)
+* Notes: `./etc/run138.py` may be helpful in running the source; code was written with the help of a Lisp translator program.
 
 ## Valid Languages
 

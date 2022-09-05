@@ -273,7 +273,7 @@
 *** Noether
 *** Orthagonal
 *** Perchance                                                          :used:
-*** Pickle (Python)
+*** Pickle (Python)                                                    :used:
     + Yes, the serialization framework; I think it's Turing complete
     + Loops are recursive
 *** Piet                                                               :used:
