@@ -504,6 +504,8 @@
      - https://repl.it/
    + IDEOne
      - https://ideone.com/
+** OTHER USEFUL LINKS
+   + https://www.alpertron.com.ar/QUAD.HTM
 * SHORT LIST
   These are languages that I've either attempted to use several times
   and failed, or that I know (due to the specification or rules of the
