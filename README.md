@@ -133,6 +133,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Tovie
 * V
 * Vala
+* Vale
 * VBA
 * Verilog
 * Visual Basic .NET
@@ -973,6 +974,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Pickle](https://docs.python.org/3/library/pickle.html#module-pickle)
 * Compiler / Interpreter: [Python 3.7.9](https://www.python.org/)
 * Notes: `./etc/run138.py` may be helpful in running the source; code was written with the help of a Lisp translator program.
+
+### Euler 139
+* File: [problem139.vale](problem139.vale)
+* Language: [Vale](https://vale.dev/)
+* Compiler / Interpreter: [Vale 0.2 Kuma](https://vale.dev/download)
+* Notes: (None)
 
 ## Valid Languages
 
