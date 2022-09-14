@@ -40,6 +40,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Cubix
 * D
 * Dafny
+* Dip
 * Dogescript
 * Dylan
 * Eiffel
@@ -979,6 +980,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem139.vale](problem139.vale)
 * Language: [Vale](https://vale.dev/)
 * Compiler / Interpreter: [Vale 0.2 Kuma](https://vale.dev/download)
+* Notes: (None)
+
+### Euler 140
+* File: [problem140.dip](problem140.dip)
+* Language: [Dip](http://www.dip-lang.org/)
+* Compiler / Interpreter: [Try Dip](http://www.dip-lang.org/try)
 * Notes: (None)
 
 ## Valid Languages
