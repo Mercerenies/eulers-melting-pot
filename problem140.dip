@@ -1,0 +1,44 @@
+function run()
+  variable x0 = 17
+  variable y0 = 7
+  variable x1 = 32
+  variable y1 = 14
+  variable x2 = 112
+  variable y2 = 50
+  variable x3 = 217
+  variable y3 = 97
+  variable x4 = 767
+  variable y4 = 343
+  variable x5 = 1487
+  variable y5 = 665
+  variable total = 0.0
+  for i = 0 to 5 then
+    variable total = total + (x0 - 7) / 5 + (x1 - 7) / 5 + (x2 - 7) / 5 + (x3 - 7) / 5 + (x4 - 7) / 5 + (x5 - 7) / 5
+    variable x0_tmp = 161 * x0 + 360 * y0
+    variable y0_tmp =  72 * x0 + 161 * y0
+    variable x1_tmp = 161 * x1 + 360 * y1
+    variable y1_tmp =  72 * x1 + 161 * y1
+    variable x2_tmp = 161 * x2 + 360 * y2
+    variable y2_tmp =  72 * x2 + 161 * y2
+    variable x3_tmp = 161 * x3 + 360 * y3
+    variable y3_tmp =  72 * x3 + 161 * y3
+    variable x4_tmp = 161 * x4 + 360 * y4
+    variable y4_tmp =  72 * x4 + 161 * y4
+    variable x5_tmp = 161 * x5 + 360 * y5
+    variable y5_tmp =  72 * x5 + 161 * y5
+    variable x0 = x0_tmp
+    variable y0 = y0_tmp
+    variable x1 = x1_tmp
+    variable y1 = y1_tmp
+    variable x2 = x2_tmp
+    variable y2 = y2_tmp
+    variable x3 = x3_tmp
+    variable y3 = y3_tmp
+    variable x4 = x4_tmp
+    variable y4 = y4_tmp
+    variable x5 = x5_tmp
+    variable y5 = y5_tmp
+  end
+  return total
+end
+print(run())

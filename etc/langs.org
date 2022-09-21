@@ -105,7 +105,7 @@
     + No arrays
 *** 🆒                                                                 :used:
 *** Dafny                                                              :used:
-*** Dip
+*** Dip                                                                :used:
 *** Dogescript                                                         :used:
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
 *** F*
@@ -124,9 +124,6 @@
     + No bignums
 *** λProlog
 *** LaTeX                                                              :used:
-*** Leafscript
-    + No arrays
-    + Doubles only (no bigints)
 *** LilyPond                                                           :used:
 *** m4                                                                 :used:
 *** Make                                                               :used:
@@ -146,7 +143,7 @@
 *** Streem
 *** SuperCollider                                                      :used:
 *** Vala                                                               :used:
-*** Vale (https://vale.dev/)
+*** Vale (https://vale.dev/)                                           :used:
 *** Vimscript
 *** Wenyan                                                             :used:
 *** Wren                                                               :used:
@@ -260,7 +257,6 @@
     + Loops are recursion
 *** Javagrid
 *** Jelly                                                              :used:
-*** Jellyfish
 *** JSF**k                                                             :used:
 *** Keg
 *** Labyrinth                                                          :used:
@@ -273,7 +269,7 @@
 *** Noether
 *** Orthagonal
 *** Perchance                                                          :used:
-*** Pickle (Python)
+*** Pickle (Python)                                                    :used:
     + Yes, the serialization framework; I think it's Turing complete
     + Loops are recursive
 *** Piet                                                               :used:
@@ -288,6 +284,7 @@
 *** Shakespeare                                                        :used:
 *** Snowman                                                            :used:
 *** Stuck                                                              :used:
+*** spl (https://esolangs.org/wiki/Spl)
 *** Taxi                                                               :used:
 *** Tome                                                               :used:
 *** Tovie (https://github.com/Jaysmito101/tovie)                       :used:
@@ -346,6 +343,14 @@
     Unimplemented
 *** INTERCAL
     No.
+*** Jellyfish
+    I'm calling Mandela effect here. I can find no record of this
+    language existing, aside from a random Docker container floating
+    around with no docs. I swear it used to have an Esolang page but
+    can't find any record of it.
+*** Leafscript
+    The only interpreter segfaults when running any of the example
+    programs.
 *** minaac
     The interpreter seems to be using lots of implementation-defined
     C++ behavior and, as a result, I can only use a small subset of
@@ -372,10 +377,12 @@
 ** UNCLASSIFIED
 *** 11l (http://rosettacode.org/wiki/Category:11l)
 *** 42 (https://forty2.is/)
+*** ABAP (https://en.wikipedia.org/wiki/ABAP)
 *** Alice
 *** Alloy
 *** Ark
 *** ArkScript
+*** ArnoldC (https://esolangs.org/wiki/ArnoldC)
 *** AssemblyScript
 *** ATS
 *** Bizubee
@@ -404,11 +411,14 @@
 *** Egison (https://www.egison.org/)
 *** EGL
 *** Euler
+*** F' (https://nasa.github.io/fprime/)
 *** Fancy
 *** Fantom (https://www.fantom.org/)
 *** Fission
+*** Flix (https://github.com/flix/flix)
 *** Fuzzy Octo Guacamole (https://codereview.stackexchange.com/questions/124736/fuzzy-octo-guacamole-interpreter)
 *** G-- (https://github.com/ReyAnthony/G--)
+*** Genesis (https://github.com/elonlit/Genesis)
 *** Gluon
 *** Groovy
 *** Hare (https://harelang.org/)
@@ -494,6 +504,8 @@
     - https://codegolf.stackexchange.com/questions/44680/showcase-of-languages
   + Anarchy Golf
     - http://golf.shinh.org/
+  + hakatashi/esolang-box: Easy and standardized docker images for 200+ esoteric (and non-esoteric) languages
+    - https://github.com/hakatashi/esolang-box
 ** ONLINE INTERPRETERS
    Some online interpreters that are free to use and very handy for tasks like this.
 
@@ -505,6 +517,8 @@
      - https://repl.it/
    + IDEOne
      - https://ideone.com/
+** OTHER USEFUL LINKS
+   + https://www.alpertron.com.ar/QUAD.HTM
 * SHORT LIST
   These are languages that I've either attempted to use several times
   and failed, or that I know (due to the specification or rules of the

@@ -1,0 +1,32 @@
+
+import stdlib.*;
+
+func gcd(a i64, b i64) i64 {
+  while b != 0i64 {
+    tmp = a;
+    set a = b;
+    set b = mod(tmp, b);
+  }
+  a
+}
+
+exported func main() {
+  count = 0i64;
+  foreach n0 in range(1, 5001) {
+    n = i64(n0);
+    m = n + 1i64;
+    while 2i64 * m * (m + n) < 100000000i64 {
+      a = m * m - n * n;
+      b = 2i64 * m * n;
+      c = m * m + n * n;
+      if mod(c, b - a) == 0i64 {
+        if gcd(m, n) == 1i64 {
+          total_triples = 99999999i64 / (2i64 * m * (m + n));
+          set count = count + total_triples;
+        }
+      }
+      set m = m + 2i64;
+    }
+  }
+  println("" + count);
+}
