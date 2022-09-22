@@ -1,7 +1,5 @@
 
-my $upper-limit = 10_000_000_000;
-
-my $squares = ((1...*).map({$^a * $^a}) ...^ (* >= $upper-limit)).Set;
+my $upper-limit = 10_000_000_000_000;
 
 # Remember, $r < $d < $q
 
@@ -15,8 +13,9 @@ while ($r + ($r + 1) * ($r + 2) < $upper-limit) {
         my $q = ($d * $d) div $r;
         my $n = $q * $d + $r;
         last if $n > $upper-limit;
-        if ((($d * $d) % $r == 0) && ($n ∈ $squares)) {
-            say $n;
+        my $nsqrt = sqrt($n);
+        if ((($d * $d) % $r == 0) && ($nsqrt == $nsqrt.Int)) {
+            #say $n;
             $total += $n;
         }
         $d += 1;
