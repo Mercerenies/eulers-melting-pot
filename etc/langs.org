@@ -421,8 +421,11 @@
 *** Genesis (https://github.com/elonlit/Genesis)
 *** Gluon
 *** Groovy
+*** Hare (https://harelang.org/)
 *** Husk
+*** Hy (https://en.wikipedia.org/wiki/Hy)
 *** Hyperscript (https://hyperscript.org/)
+*** IMPS (https://imps.mcmaster.ca/)
 *** jq (https://stedolan.github.io/jq/)
 *** Kobalt (https://github.com/abel0b/kobalt)
 *** Koi (https://koi-lang.dev/)
@@ -499,6 +502,8 @@
     - https://rosettacode.org/wiki/Hello_world/Text
   + Showcase of Languages - Code Golf Stack Exchange
     - https://codegolf.stackexchange.com/questions/44680/showcase-of-languages
+  + Anarchy Golf
+    - http://golf.shinh.org/
   + hakatashi/esolang-box: Easy and standardized docker images for 200+ esoteric (and non-esoteric) languages
     - https://github.com/hakatashi/esolang-box
 ** ONLINE INTERPRETERS
