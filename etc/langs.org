@@ -105,6 +105,9 @@
     + No arrays
 *** 🆒                                                                 :used:
 *** Dafny                                                              :used:
+*** Dhall (https://dhall-lang.org/#)
+    + Subturing, loops must be finitely bounded
+    + Loops only available via map, fold, etc.
 *** Dip                                                                :used:
 *** Dogescript                                                         :used:
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
@@ -405,7 +408,6 @@
 *** Dale (https://github.com/tomhrr/dale)
 *** Dart
 *** Delphi
-*** Dhall (https://dhall-lang.org/#)
 *** E
 *** Ė (https://e-dot.io/)
 *** Egel (https://egel-lang.github.io/)
