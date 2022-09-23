@@ -245,6 +245,7 @@
 *** FiM++                                                              :used:
 *** Folders
 *** Fourier                                                            :used:
+*** FRACTRAN
 *** Funciton                                                           :used:
 *** Gibberish                                                          :used:
 *** Golfscript                                                         :used:
@@ -534,3 +535,5 @@
     Negative numbers are not supported, and anything vaguely
     complicated is not happening. Integer only, and linear analog
     representations at that.
+*** FRACTRAN
+    Yeah.
