@@ -106,6 +106,9 @@
     + No arrays
 *** 🆒                                                                 :used:
 *** Dafny                                                              :used:
+*** Dhall (https://dhall-lang.org/#)
+    + Subturing, loops must be finitely bounded
+    + Loops only available via map, fold, etc.
 *** Dip                                                                :used:
 *** Dogescript                                                         :used:
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
@@ -246,6 +249,7 @@
 *** FiM++                                                              :used:
 *** Folders
 *** Fourier                                                            :used:
+*** FRACTRAN
 *** Funciton                                                           :used:
 *** Gibberish                                                          :used:
 *** Golfscript                                                         :used:
@@ -405,7 +409,6 @@
 *** Dale (https://github.com/tomhrr/dale)
 *** Dart
 *** Delphi
-*** Dhall (https://dhall-lang.org/#)
 *** E
 *** Ė (https://e-dot.io/)
 *** Egel (https://egel-lang.github.io/)
@@ -534,3 +537,5 @@
     Negative numbers are not supported, and anything vaguely
     complicated is not happening. Integer only, and linear analog
     representations at that.
+*** FRACTRAN
+    Yeah.
