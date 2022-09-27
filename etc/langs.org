@@ -164,7 +164,7 @@
 *** NASM                                                               :used:
 *** Parrot IR                                                          :used:
 *** PASM                                                               :used:
-*** WASM
+*** WASM (WAT)                                                         :used:
 ** SHELL
    Shell dialects, languages intended to be used in a terminal.
 *** Bash

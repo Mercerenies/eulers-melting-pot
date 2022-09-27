@@ -138,6 +138,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * VBA
 * Verilog
 * Visual Basic .NET
+* WebAssembly
 * Wenyan
 * Whitespace
 * Wren
@@ -986,6 +987,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem140.dip](problem140.dip)
 * Language: [Dip](http://www.dip-lang.org/)
 * Compiler / Interpreter: [Try Dip](http://www.dip-lang.org/try)
+* Notes: (None)
+
+### Euler 141
+* File: [problem141.wat](problem141.wat)
+* Language: [WebAssembly](https://webassembly.org/)
+* Compiler / Interpreter: [wasmer 2.3.0](https://wasmer.io/)
 * Notes: (None)
 
 ## Valid Languages
