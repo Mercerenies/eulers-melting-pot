@@ -67,6 +67,7 @@
 *** Icon                                                               :used:
 *** Io                                                                 :used:
 *** Ioke                                                               :used:
+*** Livescript (https://livescript.net/)
 *** Lunar (https://github.com/lunarlang/lunar)
 *** Maple
 *** MATLAB
@@ -432,7 +433,6 @@
 *** Konna (https://www.reddit.com/r/ProgrammingLanguages/comments/rpe65y/konna_my_programming_language/)
 *** Lava
 *** Lean (https://leanprover-community.github.io/)
-*** Livescript
 *** Logtalk
 *** Luna
 *** Lunar (http://users.rcn.com/david-moon/Lunar/)
