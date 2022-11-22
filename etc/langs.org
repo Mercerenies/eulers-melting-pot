@@ -214,6 +214,7 @@
     + Very limited in computational capability, might be unusable
 *** Minecraft                                                          :used:
 *** Turing Complete (https://turingcomplete.game/)
+*** Buildbox (https://www.buildbox.com/buildbox-free-is-now-available/)
 ** ESOTERIC
    "Esoteric" is the category below "Bronze"; an Esoteric language is
    inherently special-purpose enough or limited enough that its uses
@@ -409,6 +410,7 @@
 *** Dale (https://github.com/tomhrr/dale)
 *** Dart
 *** Delphi
+*** Dry (https://www.reddit.com/r/ProgrammingLanguages/comments/yo3937/dry_a_simple_dynamicallytyped_programming/)
 *** E
 *** Ė (https://e-dot.io/)
 *** Egel (https://egel-lang.github.io/)
