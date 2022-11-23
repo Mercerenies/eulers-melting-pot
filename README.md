@@ -995,6 +995,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Compiler / Interpreter: [wasmer 2.3.0](https://wasmer.io/)
 * Notes: (None)
 
+### Euler 142
+* File: [problem142.ark](problem142.ark)
+* Language: [ArkScript](https://github.com/ArkScript-lang/Ark/)
+* Compiler / Interpreter: [ArkScript 3.4.0](https://github.com/ArkScript-lang/Ark/#building)
+* Notes: (None)
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular,

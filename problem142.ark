@@ -1,0 +1,40 @@
+
+(import "Math.ark")
+(import "Exceptions.ark")
+
+(let epsilon 0.000001)
+
+(let is-perfect-square (fun (n) {
+    (let x (math:sqrt n))
+    # This might look like a silly way to do a comparison, but I
+    # can't write literal floats beyond five or six decimal places
+    # without them rounding off, so we have to move our significant
+    # figures over to do the comparison right.
+    (< (* 1000 (math:abs (- (math:floor x) x))) epsilon)}))
+
+(let solution (fun () {
+    (mut best-solution -1)
+    (mut a-sqrt 3)
+    (mut a (* a-sqrt a-sqrt))
+    (while (or (<= best-solution -1) (<= (/ a 2) best-solution)) {
+        (mut b-sqrt 2)
+        (while (< b-sqrt a-sqrt) {
+            (mut b (* b-sqrt b-sqrt))
+            (if (is-perfect-square (- a b)) {
+                (mut c-sqrt 1)
+                (while (< c-sqrt b-sqrt) {
+                    (mut c (* c-sqrt c-sqrt))
+                    (if (and (= (mod (+ a c) 2) 0)
+                             (> (+ a c) (* 2 b))
+                             (is-perfect-square (+ (- a b) c))
+                             (is-perfect-square (- b c))) {
+                        (mut sum (- (/ (+ (* 3 a) c) 2) b))
+                        (if (or (<= best-solution -1) (< sum best-solution))
+                            (mut best-solution sum))})
+                    (mut c-sqrt (+ c-sqrt 1))})})
+            (mut b-sqrt (+ b-sqrt 1))})
+        (mut a-sqrt (+ a-sqrt 1))
+        (mut a (* a-sqrt a-sqrt))})
+    best-solution}))
+
+(print (solution))

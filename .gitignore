@@ -8,3 +8,4 @@ vendor/*
 *.agdai
 MAlonzo/
 *.tasty
+__arkscript__/

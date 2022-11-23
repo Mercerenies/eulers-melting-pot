@@ -54,7 +54,9 @@
    and "Platinum" are measures of my personal skill.
 *** Ada                                                                :used:
 *** ALGOL 68                                                           :used:
+*** AssemblyScript
 *** AWK                                                                :used:
+*** Bizubee (https://bizubee.github.io/)
 *** COBOL                                                              :used:
 *** Dylan                                                              :used:
 *** Eiffel                                                             :used:
@@ -190,6 +192,7 @@
 *** XC=BASIC
 ** LISP
    Lisp dialects.
+*** ArkScript (https://github.com/ArkScript-lang/Ark/)                 :used:
 *** AutoLISP
 *** Bel (http://www.paulgraham.com/bel.html)
 *** Carp
@@ -309,6 +312,9 @@
     The [[https://www.informatik.uni-kiel.de/~mh/systems/ALF/][available implementation]] is 25 years old and, despite my best
     efforts, I cannot get its ~a.out~ format executables to run on my
     machine.
+*** Ark (https://github.com/ark-lang/ark)
+    Cannot build the tooling necessary to use the official (and only)
+    compiler.
 *** Arn (ZippyMagician)
     Looks neat, but either the documentation is wrong or the
     implementation is hilariously buggy. I can't get anything more
@@ -385,13 +391,9 @@
 *** 42 (https://forty2.is/)
 *** ABAP (https://en.wikipedia.org/wiki/ABAP)
 *** Alice
-*** Alloy
-*** Ark
-*** ArkScript
+*** Alloy (https://alloytools.org/)
 *** ArnoldC (https://esolangs.org/wiki/ArnoldC)
-*** AssemblyScript
 *** ATS
-*** Bizubee
 *** BQN (https://mlochbaum.github.io/BQN/)
 *** Brachylog
 *** Bracmat (https://github.com/BartJongejan/Bracmat)
