@@ -17,6 +17,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Alice
 * Anti-Array
 * APL
+* ArkScript
 * AutoHotkey
 * AWK
 * Aya
