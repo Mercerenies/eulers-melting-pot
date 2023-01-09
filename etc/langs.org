@@ -420,6 +420,7 @@
 *** EGL
 *** Euler
 *** F' (https://nasa.github.io/fprime/)
+*** Falcon (https://rosettacode.org/wiki/Category:Falcon)
 *** Fancy
 *** Fantom (https://www.fantom.org/)
 *** Fission
@@ -434,6 +435,7 @@
 *** Hy (https://en.wikipedia.org/wiki/Hy)
 *** Hyperscript (https://hyperscript.org/)
 *** IMPS (https://imps.mcmaster.ca/)
+*** Jeebox (http://jeebox.org/stuff/learn_more/)
 *** jq (https://stedolan.github.io/jq/)
 *** Kobalt (https://github.com/abel0b/kobalt)
 *** Koi (https://koi-lang.dev/)
