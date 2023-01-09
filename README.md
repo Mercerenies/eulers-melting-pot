@@ -214,7 +214,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem11.s](problem11.s)
 * Language: [NASM](http://www.nasm.us/)
 * Compiler / Interpreter: NASM + GCC Linker
-* Notes: 64-bit architectures, only.
+* Notes: 64-bit architectures, only. Uses Windows calling convention; to run on Linux, call puts with RDI rather than RCX.
 
 ### Euler 12
 * File: [problem12.ab](problem12.ab)
