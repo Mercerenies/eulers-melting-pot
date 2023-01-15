@@ -212,6 +212,7 @@ dir_dia1:
         add rsp, 4
         push ax
         dec cx
+        dec bx
         push cx
         push bx
         call get_pos_safe
