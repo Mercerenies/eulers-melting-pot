@@ -30,7 +30,7 @@
 *** Rust                                                               :used:
 *** Scala
 *** Tcl                                                                :used:
-*** Typescript
+*** Typescript                                                         :used:
 ** GOLD
    Gold languages are languages are languages I feel mostly confident
    programming in. With some help from online guides, I can consider
@@ -97,6 +97,9 @@
    Bronze language has an inherent limitation, either semantically or
    from an efficiency perspective, that makes it less desirable than a
    Silver language.
+*** 11l (http://rosettacode.org/wiki/Category:11l)
+    + Dictionaries / sets / advanced data structures are flaky
+*** 42 (https://forty2.is/)
 *** Agda                                                               :used:
 *** APL                                                                :used:
 *** AutoHotkey                                                         :used:
@@ -387,8 +390,6 @@
 *** Unlambda
     Possibly too minimal?
 ** UNCLASSIFIED
-*** 11l (http://rosettacode.org/wiki/Category:11l)
-*** 42 (https://forty2.is/)
 *** ABAP (https://en.wikipedia.org/wiki/ABAP)
 *** Alice
 *** Alloy (https://alloytools.org/)

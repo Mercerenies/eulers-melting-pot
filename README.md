@@ -133,6 +133,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Tcl
 * Tome
 * Tovie
+* Typescript
 * V
 * Vala
 * Vale
@@ -1000,6 +1001,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem142.ark](problem142.ark)
 * Language: [ArkScript](https://github.com/ArkScript-lang/Ark/)
 * Compiler / Interpreter: [ArkScript 3.4.0](https://github.com/ArkScript-lang/Ark/#building)
+* Notes: (None)
+
+### Euler 143
+* File: [problem143.ts](problem143.ts)
+* Language: [TypeScript](https://www.typescriptlang.org/)
+* Compiler / Interpreter: [tsc version 4.9.5](https://www.typescriptlang.org/download)
 * Notes: (None)
 
 ## Valid Languages
