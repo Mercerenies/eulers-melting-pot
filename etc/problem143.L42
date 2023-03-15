@@ -1,0 +1,37 @@
+
+reuse [L42.is/AdamsTowel]
+
+Problem143 = {
+
+  Candidates = Collection.set(Num)
+  Pairs = Collection.map(key=Num, val=Candidates)
+
+  class method
+  I min(I a, I b) = {
+    if a > b (
+      return b
+    ) else (
+      return a
+    )
+  }
+
+  class method
+  I run() = {
+    limit = 120000I
+    pairs = Pairs[]
+    for i0 in Range(limit) (
+      i = i0 + 1I
+      var j = i + 1I
+      while j <= Problem143.min(a=2I*i, b=limit) (
+        j := j + 1I
+      )
+      if i.mod(100I) == 0I (
+        Debug(i)
+      )
+    )
+    return 1I
+  }
+
+}
+
+Main = Debug(Problem143.run())

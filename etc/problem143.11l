@@ -1,0 +1,32 @@
+
+V limit = 36000
+
+V pairs = DefaultDict[Int, Set[Int]]()
+L 1..limit
+   V i = L.index + 1
+   L 0..min(2*i-(i+1),limit-(i+1))
+      V j = L.index+i+1
+      V x = j ^ 2 - i ^ 2
+      V y = j * (2 * i - j)
+      V d = gcd(x, y)
+      x = x I/ d
+      y = y I/ d
+      V dx = x
+      V dy = y
+      I x + y > limit
+         L.break
+      L
+         I x + y > limit
+            L.break
+         pairs[x].add(y)
+         pairs[y].add(x)
+         x = x + dx
+         y = y + dy
+
+V matches = Set[Int]()
+L(p, ps) pairs
+   L(r) ps
+      L(q) pairs[r].union(ps)
+         I p + q + r <= limit
+            matches.add(p + q + r)
+print(sum(matches))
