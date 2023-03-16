@@ -76,6 +76,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Io
 * Ioke
 * J
+* Japt
 * Jasmin
 * Javagony
 * Jelly
@@ -133,7 +134,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Tcl
 * Tome
 * Tovie
-* Typescript
+* TypeScript
 * V
 * Vala
 * Vale
@@ -1007,6 +1008,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem143.ts](problem143.ts)
 * Language: [TypeScript](https://www.typescriptlang.org/)
 * Compiler / Interpreter: [tsc version 4.9.5](https://www.typescriptlang.org/download)
+* Notes: (None)
+
+### Euler 144
+* File: [problem144.japt](problem144.japt)
+* Language: [Japt](https://github.com/ETHproductions/japt)
+* Compiler / Interpreter: [Japt 1.4.6 interpreter](https://ethproductions.github.io/japt/)
 * Notes: (None)
 
 ## Valid Languages

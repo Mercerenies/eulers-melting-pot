@@ -1,0 +1,31 @@
+
+*************************************************
+*** See problem144_1.rs for more recent notes ***
+*************************************************
+
+Scratchpad for Problem 144
+
+Conventions:
+X, Y, Z, T are arguments
+A, B, C, D are intermediate registers for computation
+E, F, G, H are function names
+
+Reflect slope:
+(X = normal_slope, Y = m)
+@(X*X*Y+2*X-Y)/(1+2*X*Y-X*X}
+
+Y intercept:
+(X = slope, Y = point.0, Z = point.1)
+@Z-X*Y
+
+Distance squared:
+(X = p.0, Y = p.1, Z = q.0, T = q.1)
+F=XYZT{(X-Z *(X-Z +(Y-T *(Y-T }
+
+Points on circle:
+(X = a, Y = b, returns [x0, y0, x1, y1])
+G=@A=(X*-Y+2*(25*X*X-Y*Y+100 q)/(4+X*X;B=A*X+Y;C=(X*-Y-2*(25*X*X-Y*Y+100 q)/(4+X*X;D=C*X+Y;[A,B,C,D]}
+
+Farthest point on circle:
+(X = origin.0, Y = origin.1, Z = a, T = b)
+H=ZTZT{A=(Z*-T+2*(25*Z*Z-T*T+100 q)/(4+Z*Z;B=A*Z+T;C=(Z*-T-2*(25*Z*Z-T*T+100 q)/(4+Z*Z;D=C*Z+T;
