@@ -59,6 +59,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Fortran
 * Fourier
 * Funciton
+* Game Builder Garage
 * Genie
 * Gibberish
 * Glava
@@ -1015,6 +1016,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Japt](https://github.com/ETHproductions/japt)
 * Compiler / Interpreter: [Japt 1.4.6 interpreter](https://ethproductions.github.io/japt/)
 * Notes: (None)
+
+### Euler 145
+* File: [problem145.txt](problem145.txt)
+* Language: [Game Builder Garage](https://www.nintendo.com/store/products/game-builder-garage-switch/)
+* Compiler / Interpreter: [Game Builder Garage Ver 1.0.1](https://www.nintendo.com/store/products/game-builder-garage-switch/)
+* Notes: Nintendo Switch required to run; screenshots are available at [etc/GameBuilderGarage](etc/GameBuilderGarage).
 
 ## Valid Languages
 

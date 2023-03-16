@@ -215,7 +215,7 @@
    it to complete challenges.
 *** 7 Billion Humans
 *** Factorio                                                           :used:
-*** Game Builder Garage
+*** Game Builder Garage                                                :used:
 *** Super Mario Maker 2
     + Very limited in computational capability, might be unusable
 *** Minecraft                                                          :used:
