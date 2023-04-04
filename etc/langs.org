@@ -88,6 +88,7 @@
 *** Squeak
 *** Swift
 *** Verilog                                                            :used:
+*** X10 (http://x10-lang.org/)                                         :used:
 *** zkl                                                                :used:
 ** BRONZE
    Bronze languages are mostly capable general-purpose programming
@@ -244,6 +245,7 @@
 *** Brat                                                               :used:
 *** Chef                                                               :used:
 *** CJam                                                               :used:
+*** Comefrom0x10 (https://esolangs.org/wiki/Comefrom0x10)
 *** COMPLEX                                                            :used:
 *** Cubix                                                              :used:
 *** ed
@@ -431,7 +433,7 @@
 *** Gluon
 *** Groovy
 *** Hare (https://harelang.org/)
-*** Husk
+*** Husk (https://github.com/barbuz/Husk)
 *** Hy (https://en.wikipedia.org/wiki/Hy)
 *** Hyperscript (https://hyperscript.org/)
 *** IMPS (https://imps.mcmaster.ca/)

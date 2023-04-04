@@ -147,6 +147,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Whitespace
 * Wren
 * Wyvern
+* X10
 * XSLT
 * zkl
 * Zsh
@@ -1022,6 +1023,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Game Builder Garage](https://www.nintendo.com/store/products/game-builder-garage-switch/)
 * Compiler / Interpreter: [Game Builder Garage Ver 1.0.1](https://www.nintendo.com/store/products/game-builder-garage-switch/)
 * Notes: Nintendo Switch required to run; screenshots are available at [etc/GameBuilderGarage](etc/GameBuilderGarage).
+
+### Euler 146
+* File: [problem146.x10](problem146.x10)
+* Language: [X10](http://x10-lang.org/)
+* Compiler / Interpreter: [X10 Release 2.6.2](https://sourceforge.net/projects/x10/)
+* Notes: A somewhat slow solution.
 
 ## Valid Languages
 
