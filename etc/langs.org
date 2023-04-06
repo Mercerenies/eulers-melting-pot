@@ -134,6 +134,7 @@
     + No bignums
 *** λProlog
 *** LaTeX                                                              :used:
+*** Lean (https://leanprover-community.github.io/)                     :used:
 *** LilyPond                                                           :used:
 *** m4                                                                 :used:
 *** Make                                                               :used:
@@ -248,6 +249,7 @@
 *** Comefrom0x10 (https://esolangs.org/wiki/Comefrom0x10)
 *** COMPLEX                                                            :used:
 *** Cubix                                                              :used:
+*** Cy (https://github.com/cyoce/Cy)
 *** ed
     + Loops are recursive
 *** Emoji                                                              :used:
@@ -442,8 +444,7 @@
 *** Kobalt (https://github.com/abel0b/kobalt)
 *** Koi (https://koi-lang.dev/)
 *** Konna (https://www.reddit.com/r/ProgrammingLanguages/comments/rpe65y/konna_my_programming_language/)
-*** Lava
-*** Lean (https://leanprover-community.github.io/)
+*** Lava (https://lavape.sourceforge.net/)
 *** Logtalk
 *** Luna
 *** Lunar (http://users.rcn.com/david-moon/Lunar/)

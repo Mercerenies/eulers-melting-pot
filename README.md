@@ -87,6 +87,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Kitten
 * Labyrinth
 * LaTeX
+* Lean
 * LilyPond
 * LLVM IR
 * m4
@@ -1029,6 +1030,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [X10](http://x10-lang.org/)
 * Compiler / Interpreter: [X10 Release 2.6.2](https://sourceforge.net/projects/x10/)
 * Notes: A somewhat slow solution.
+
+### Euler 147
+* File: [problem147.lean](problem147.lean)
+* Language: [Lean Theorem Prover](https://leanprover-community.github.io/)
+* Compiler / Interpreter: [Lean (version 3.42.1, commit 68455b087d87, Release)](https://leanprover-community.github.io/get_started.html)
+* Notes: `./etc/build147.sh` may be helpful in building the source.
 
 ## Valid Languages
 
