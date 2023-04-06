@@ -9,3 +9,4 @@ vendor/*
 MAlonzo/
 *.tasty
 __arkscript__/
+__pycache__/
