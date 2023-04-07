@@ -1,0 +1,30 @@
+START ORG $1000
+
+    ;; Initialize array
+    MOVE.L #0,D0
+INIT
+    ADDQ.L #1,D0
+    CMP.L #4000000,D0
+    BLT INIT
+
+    ;; Print number
+    MOVE.B #3,D0
+    MOVE.L #981,D1
+    TRAP #15
+
+    ;; Print crlf
+    LEA CRLF,A1
+    MOVE.B #14,D0
+    TRAP #15
+
+    ;; Terminate
+    MOVE.B #9,D0
+    TRAP #15
+
+GRID DS.L 4000000
+
+CR EQU $0D
+LF EQU $0A
+CRLF DC.B CR,LF,0
+
+    END START

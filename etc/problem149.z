@@ -1,0 +1,119 @@
+
+importstd F
+
+def mod: func (x, y)
+    # Correct modulo for negative dividends.
+    (x % y + y) % y
+
+let grid: Array(4000000)
+
+def getGrid: func (row, column)
+    grid[row * 2000 + column]
+
+def rightSum: func (row, column) {
+    let acc: 0
+    let best: 0
+    let i: 0
+    loop {
+        if i >= 2000 - row {
+            break
+        }
+        acc: acc + getGrid(row + i, column)
+        best: F.max(acc, best)
+        i: i + 1
+    }
+    return best
+}
+
+def downSum: func (row, column) {
+    let acc: 0
+    let best: 0
+    let i: 0
+    loop {
+        if i >= 2000 - column {
+            break
+        }
+        acc: acc + getGrid(row, column + i)
+        best: F.max(acc, best)
+        i: i + 1
+    }
+    return best
+}
+
+def diaSum: func (row, column) {
+    let acc: 0
+    let best: 0
+    let i: 0
+    loop {
+        if i >= F.min(2000 - row, 2000 - column) {
+            break
+        }
+        acc: acc + getGrid(row + i, column + i)
+        best: F.max(acc, best)
+        i: i + 1
+    }
+    return best
+}
+
+def antiDiaSum: func (row, column) {
+    let acc: 0
+    let best: 0
+    let i: 0
+    loop {
+        if i >= F.min(2000 - row, column) {
+            break
+        }
+        acc: acc + getGrid(row + i, column - i)
+        best: F.max(acc, best)
+        i: i + 1
+    }
+    return best
+}
+
+def maxSumFrom: func (row, column) {
+    if getGrid(row, column) < 0 {
+        return 0
+    }
+    return F.max(
+        F.max(rightSum(row, column), downSum(row, column)),
+        F.max(diaSum(row, column), antiDiaSum(row, column))
+    )
+}
+
+# Initialize the grid
+let k: 1
+loop {
+    if k > 4000000 {
+        break
+    }
+    grid[k - 1]:
+        if (k <= 55)
+            # Be defensive about when we take the modulo, to
+            # ensure we don't lose precision since everything is
+            # an IEEE float.
+            mod(100003 - 200003 * k + ((((((300007 * k) % 1000000) * k) % 1000000) * k) % 1000000), 1000000) - 500000
+        else
+            mod(grid[k - 25] + grid[k - 56], 1000000) - 500000
+    k: k + 1
+}
+
+let best: 0
+let r: 0
+loop {
+    if r >= 2000 {
+        break
+    }
+    if r % 10 = 0 {
+        log(r)
+    }
+    let c: 0
+    loop {
+        if c >= 2000 {
+            break
+        }
+        best = F.max(best, maxSumFrom(r, c))
+        c: c + 1
+    }
+    r: r + 1
+}
+log(best)

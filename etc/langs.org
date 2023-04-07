@@ -89,6 +89,7 @@
 *** Swift
 *** Verilog                                                            :used:
 *** X10 (http://x10-lang.org/)                                         :used:
+*** Z (https://zlanguage.github.io/)                                   :used:
 *** zkl                                                                :used:
 ** BRONZE
    Bronze languages are mostly capable general-purpose programming
@@ -168,6 +169,8 @@
 *** Jasmin                                                             :used:
 *** LLVM IR                                                            :used:
 *** MASM                                                               :used:
+*** Motorola 68000 (https://en.wikibooks.org/wiki/68000_Assembly/Registers)
+    + Good simulator for it: http://www.easy68k.com/index.html
 *** NASM                                                               :used:
 *** Parrot IR                                                          :used:
 *** PASM                                                               :used:

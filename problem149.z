@@ -1,0 +1,115 @@
+
+importstd F
+
+def mod: func (x, y)
+    # Correct modulo for negative dividends.
+    (x % y + y) % y
+
+let grid: Array(4000000)
+
+def getGrid: func (row, column)
+    if (row < 0 or column < 0 or row >= 2000 or column >= 2000)
+        0
+    else
+        grid[row * 2000 + column]
+
+# Initialize the grid
+let k: 1
+loop {
+    if k > 4000000 {
+        break
+    }
+    grid[k - 1]:
+        if (k <= 55)
+            # Be defensive about when we take the modulo, to
+            # ensure we don't lose precision since everything is
+            # an IEEE float.
+            mod(100003 - 200003 * k + ((((((300007 * k) % 1000000) * k) % 1000000) * k) % 1000000), 1000000) - 500000
+        else
+            mod(grid[k - 25] + grid[k - 56], 1000000) - 500000
+    k: k + 1
+}
+
+let best: 0
+
+# Row sums
+let r: 0
+loop {
+    if r >= 2000 {
+        break
+    }
+    let localSum: 0
+    let i: 0
+    loop {
+        if i >= 2000 {
+            break
+        }
+        let value: getGrid(r, i)
+        localSum: F.max(localSum + value, value)
+        best: F.max(localSum, best)
+        i: i + 1
+    }
+    r: r + 1
+}
+
+# Column sums
+let c: 0
+loop {
+    if c >= 2000 {
+        break
+    }
+    let localSum: 0
+    let i: 0
+    loop {
+        if i >= 2000 {
+            break
+        }
+        let value: getGrid(i, c)
+        localSum: F.max(localSum + value, value)
+        best: F.max(localSum, best)
+        i: i + 1
+    }
+    c: c + 1
+}
+
+# Diagonal sums
+let x: -2000
+loop {
+    if x >= 2000 {
+        break
+    }
+    let localSum: 0
+    let i: 0
+    loop {
+        if i >= 2000 {
+            break
+        }
+        let value: getGrid(x + i, i)
+        localSum: F.max(localSum + value, value)
+        best: F.max(localSum, best)
+        i: i + 1
+    }
+    x: x + 1
+}
+
+# Antidiagonal sums
+let y: 0
+loop {
+    if y >= 4000 {
+        break
+    }
+    let localSum: 0
+    let i: 0
+    loop {
+        if i >= 2000 {
+            break
+        }
+        let value: getGrid(y - i, i)
+        localSum: F.max(localSum + value, value)
+        best: F.max(localSum, best)
+        i: i + 1
+    }
+    y: y + 1
+}
+
+log(best)

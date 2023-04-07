@@ -151,6 +151,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Wyvern
 * X10
 * XSLT
+* Z
 * zkl
 * Zsh
 
@@ -1042,6 +1043,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem148.trn](problem148.trn)
 * Language: [TRANSCRIPT](https://esolangs.org/wiki/TRANSCRIPT)
 * Compiler / Interpreter: [The official interpreter](https://web.archive.org/web/20071018030927/http://www.corknut.org/code/transcript/)
+* Notes: (None)
+
+### Euler 149
+* File: [problem149.z](problem149.z)
+* Language: [Z](https://zlanguage.github.io/)
+* Compiler / Interpreter: [@zlanguage/zcomp/0.4.5 linux-x64 node-v14.18.2](https://www.npmjs.com/package/@zlanguage/zcomp)
 * Notes: (None)
 
 ## Valid Languages
