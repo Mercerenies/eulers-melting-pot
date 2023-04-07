@@ -1,0 +1,449 @@
+Inside of Pascal's Triangle
+This room is an enormous triangle that extends infinitely in one direction.
+You can see a thumbtack, a beret, a dagger, an icebox, a table, a paper, a xylophone, and a carrot here.
+
+>SET XYLOPHONE TO 0
+You tune your xylophone.
+
+>SET CARROT TO 28
+You update the expiration date on your carrot.
+
+>SET THUMBTACK TO 1
+You press your thumb against the back of the tack firmly once.
+
+>SET BERET TO 1
+You rotate the beret in your hand. It doesn't have much effect.
+
+>SET DAGGER TO 5
+The dagger looks quite sharp. You'd best be careful with that!
+
+>SET TABLE TO 0
+The table is already empty.
+
+>SET PAPER TO 0
+You scribble a few words on the paper.
+
+>PUT DAGGER ON PAPER
+The dagger is balanced precariously on a sheet of paper.
+
+>SET ICEBOX TO 0
+You empty the icebox on the ground.
+
+>ATTACH ICEBOX TO PAPER
+The icebox sticks easily to the paper.
+
+>PUT ICEBOX ON TABLE
+You set the icebox gently on the table.
+
+>DETACH ICEBOX FROM PAPER
+You peel the paper and icebox away from each other.
+
+>LIFT DAGGER
+You pick the dagger up off the paper.
+
+>HIT THUMBTACK WITH DAGGER
+You slam the dagger against the thumbtack, leaving a mark.
+
+>HIT TABLE WITH BERET
+You angrily toss the beret down on the table.
+
+>PUT TABLE ON THUMBTACK
+How would that even work?
+
+>HIT BERET WITH CARROT
+You tap the beret with the sharp end of your carrot.
+
+>SET DAGGER TO 1
+The dagger looks quite sharp. You'd best be careful with that!
+
+>SET TABLE TO 0
+The table is already empty.
+
+>SET PAPER TO 0
+You scribble a few words on the paper.
+
+>PUT DAGGER ON PAPER
+The dagger is balanced precariously on a sheet of paper.
+
+>SET ICEBOX TO 0
+You empty the icebox on the ground.
+
+>ATTACH ICEBOX TO PAPER
+The icebox sticks easily to the paper.
+
+>PUT ICEBOX ON TABLE
+You set the icebox gently on the table.
+
+>DETACH ICEBOX FROM PAPER
+You peel the paper and icebox away from each other.
+
+>LIFT DAGGER
+You pick the dagger up off the paper.
+
+>HIT THUMBTACK WITH DAGGER
+You slam the dagger against the thumbtack, leaving a mark.
+
+>HIT TABLE WITH BERET
+You angrily toss the beret down on the table.
+
+>PUT TABLE ON THUMBTACK
+How would that even work?
+
+>HIT BERET WITH CARROT
+You tap the beret with the sharp end of your carrot.
+
+>SET DAGGER TO 6
+The dagger looks quite sharp. You'd best be careful with that!
+
+>SET TABLE TO 0
+The table is already empty.
+
+>SET PAPER TO 0
+You scribble a few words on the paper.
+
+>PUT DAGGER ON PAPER
+The dagger is balanced precariously on a sheet of paper.
+
+>SET ICEBOX TO 0
+You empty the icebox on the ground.
+
+>ATTACH ICEBOX TO PAPER
+The icebox sticks easily to the paper.
+
+>PUT ICEBOX ON TABLE
+You set the icebox gently on the table.
+
+>DETACH ICEBOX FROM PAPER
+You peel the paper and icebox away from each other.
+
+>LIFT DAGGER
+You pick the dagger up off the paper.
+
+>HIT THUMBTACK WITH DAGGER
+You slam the dagger against the thumbtack, leaving a mark.
+
+>HIT TABLE WITH BERET
+You angrily toss the beret down on the table.
+
+>PUT TABLE ON THUMBTACK
+How would that even work?
+
+>HIT BERET WITH CARROT
+You tap the beret with the sharp end of your carrot.
+
+>SET DAGGER TO 0
+The dagger looks quite sharp. You'd best be careful with that!
+
+>SET TABLE TO 0
+The table is already empty.
+
+>SET PAPER TO 0
+You scribble a few words on the paper.
+
+>PUT DAGGER ON PAPER
+The dagger is balanced precariously on a sheet of paper.
+
+>SET ICEBOX TO 0
+You empty the icebox on the ground.
+
+>ATTACH ICEBOX TO PAPER
+The icebox sticks easily to the paper.
+
+>PUT ICEBOX ON TABLE
+You set the icebox gently on the table.
+
+>DETACH ICEBOX FROM PAPER
+You peel the paper and icebox away from each other.
+
+>LIFT DAGGER
+You pick the dagger up off the paper.
+
+>HIT THUMBTACK WITH DAGGER
+You slam the dagger against the thumbtack, leaving a mark.
+
+>HIT TABLE WITH BERET
+You angrily toss the beret down on the table.
+
+>PUT TABLE ON THUMBTACK
+How would that even work?
+
+>HIT BERET WITH CARROT
+You tap the beret with the sharp end of your carrot.
+
+>SET DAGGER TO 0
+The dagger looks quite sharp. You'd best be careful with that!
+
+>SET TABLE TO 0
+The table is already empty.
+
+>SET PAPER TO 0
+You scribble a few words on the paper.
+
+>PUT DAGGER ON PAPER
+The dagger is balanced precariously on a sheet of paper.
+
+>SET ICEBOX TO 0
+You empty the icebox on the ground.
+
+>ATTACH ICEBOX TO PAPER
+The icebox sticks easily to the paper.
+
+>PUT ICEBOX ON TABLE
+You set the icebox gently on the table.
+
+>DETACH ICEBOX FROM PAPER
+You peel the paper and icebox away from each other.
+
+>LIFT DAGGER
+You pick the dagger up off the paper.
+
+>HIT THUMBTACK WITH DAGGER
+You slam the dagger against the thumbtack, leaving a mark.
+
+>HIT TABLE WITH BERET
+You angrily toss the beret down on the table.
+
+>PUT TABLE ON THUMBTACK
+How would that even work?
+
+>HIT BERET WITH CARROT
+You tap the beret with the sharp end of your carrot.
+
+>SET DAGGER TO 6
+The dagger looks quite sharp. You'd best be careful with that!
+
+>SET TABLE TO 0
+The table is already empty.
+
+>SET PAPER TO 0
+You scribble a few words on the paper.
+
+>PUT DAGGER ON PAPER
+The dagger is balanced precariously on a sheet of paper.
+
+>SET ICEBOX TO 0
+You empty the icebox on the ground.
+
+>ATTACH ICEBOX TO PAPER
+The icebox sticks easily to the paper.
+
+>PUT ICEBOX ON TABLE
+You set the icebox gently on the table.
+
+>DETACH ICEBOX FROM PAPER
+You peel the paper and icebox away from each other.
+
+>LIFT DAGGER
+You pick the dagger up off the paper.
+
+>HIT THUMBTACK WITH DAGGER
+You slam the dagger against the thumbtack, leaving a mark.
+
+>HIT TABLE WITH BERET
+You angrily toss the beret down on the table.
+
+>PUT TABLE ON THUMBTACK
+How would that even work?
+
+>HIT BERET WITH CARROT
+You tap the beret with the sharp end of your carrot.
+
+>SET DAGGER TO 1
+The dagger looks quite sharp. You'd best be careful with that!
+
+>SET TABLE TO 0
+The table is already empty.
+
+>SET PAPER TO 0
+You scribble a few words on the paper.
+
+>PUT DAGGER ON PAPER
+The dagger is balanced precariously on a sheet of paper.
+
+>SET ICEBOX TO 0
+You empty the icebox on the ground.
+
+>ATTACH ICEBOX TO PAPER
+The icebox sticks easily to the paper.
+
+>PUT ICEBOX ON TABLE
+You set the icebox gently on the table.
+
+>DETACH ICEBOX FROM PAPER
+You peel the paper and icebox away from each other.
+
+>LIFT DAGGER
+You pick the dagger up off the paper.
+
+>HIT THUMBTACK WITH DAGGER
+You slam the dagger against the thumbtack, leaving a mark.
+
+>HIT TABLE WITH BERET
+You angrily toss the beret down on the table.
+
+>PUT TABLE ON THUMBTACK
+How would that even work?
+
+>HIT BERET WITH CARROT
+You tap the beret with the sharp end of your carrot.
+
+>SET DAGGER TO 3
+The dagger looks quite sharp. You'd best be careful with that!
+
+>SET TABLE TO 0
+The table is already empty.
+
+>SET PAPER TO 0
+You scribble a few words on the paper.
+
+>PUT DAGGER ON PAPER
+The dagger is balanced precariously on a sheet of paper.
+
+>SET ICEBOX TO 0
+You empty the icebox on the ground.
+
+>ATTACH ICEBOX TO PAPER
+The icebox sticks easily to the paper.
+
+>PUT ICEBOX ON TABLE
+You set the icebox gently on the table.
+
+>DETACH ICEBOX FROM PAPER
+You peel the paper and icebox away from each other.
+
+>LIFT DAGGER
+You pick the dagger up off the paper.
+
+>HIT THUMBTACK WITH DAGGER
+You slam the dagger against the thumbtack, leaving a mark.
+
+>HIT TABLE WITH BERET
+You angrily toss the beret down on the table.
+
+>PUT TABLE ON THUMBTACK
+How would that even work?
+
+>HIT BERET WITH CARROT
+You tap the beret with the sharp end of your carrot.
+
+>SET DAGGER TO 5
+The dagger looks quite sharp. You'd best be careful with that!
+
+>SET TABLE TO 0
+The table is already empty.
+
+>SET PAPER TO 0
+You scribble a few words on the paper.
+
+>PUT DAGGER ON PAPER
+The dagger is balanced precariously on a sheet of paper.
+
+>SET ICEBOX TO 0
+You empty the icebox on the ground.
+
+>ATTACH ICEBOX TO PAPER
+The icebox sticks easily to the paper.
+
+>PUT ICEBOX ON TABLE
+You set the icebox gently on the table.
+
+>DETACH ICEBOX FROM PAPER
+You peel the paper and icebox away from each other.
+
+>LIFT DAGGER
+You pick the dagger up off the paper.
+
+>HIT THUMBTACK WITH DAGGER
+You slam the dagger against the thumbtack, leaving a mark.
+
+>HIT TABLE WITH BERET
+You angrily toss the beret down on the table.
+
+>PUT TABLE ON THUMBTACK
+How would that even work?
+
+>HIT BERET WITH CARROT
+You tap the beret with the sharp end of your carrot.
+
+>SET DAGGER TO 3
+The dagger looks quite sharp. You'd best be careful with that!
+
+>SET TABLE TO 0
+The table is already empty.
+
+>SET PAPER TO 0
+You scribble a few words on the paper.
+
+>PUT DAGGER ON PAPER
+The dagger is balanced precariously on a sheet of paper.
+
+>SET ICEBOX TO 0
+You empty the icebox on the ground.
+
+>ATTACH ICEBOX TO PAPER
+The icebox sticks easily to the paper.
+
+>PUT ICEBOX ON TABLE
+You set the icebox gently on the table.
+
+>DETACH ICEBOX FROM PAPER
+You peel the paper and icebox away from each other.
+
+>LIFT DAGGER
+You pick the dagger up off the paper.
+
+>HIT THUMBTACK WITH DAGGER
+You slam the dagger against the thumbtack, leaving a mark.
+
+>HIT TABLE WITH BERET
+You angrily toss the beret down on the table.
+
+>PUT TABLE ON THUMBTACK
+How would that even work?
+
+>HIT BERET WITH CARROT
+You tap the beret with the sharp end of your carrot.
+
+>SET DAGGER TO 3
+The dagger looks quite sharp. You'd best be careful with that!
+
+>SET TABLE TO 0
+The table is already empty.
+
+>SET PAPER TO 0
+You scribble a few words on the paper.
+
+>PUT DAGGER ON PAPER
+The dagger is balanced precariously on a sheet of paper.
+
+>SET ICEBOX TO 0
+You empty the icebox on the ground.
+
+>ATTACH ICEBOX TO PAPER
+The icebox sticks easily to the paper.
+
+>PUT ICEBOX ON TABLE
+You set the icebox gently on the table.
+
+>DETACH ICEBOX FROM PAPER
+You peel the paper and icebox away from each other.
+
+>LIFT DAGGER
+You pick the dagger up off the paper.
+
+>HIT THUMBTACK WITH DAGGER
+You slam the dagger against the thumbtack, leaving a mark.
+
+>HIT TABLE WITH BERET
+You angrily toss the beret down on the table.
+
+>PUT TABLE ON THUMBTACK
+How would that even work?
+
+>HIT BERET WITH CARROT
+You tap the beret with the sharp end of your carrot.
+
+>X THUMBTACK
+You examine the markings on the thumbtack carefully.
+
+>QUIT

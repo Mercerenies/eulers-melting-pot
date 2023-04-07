@@ -281,7 +281,7 @@
 *** MontiLang                                                          :used:
 *** Mouse-2002                                                         :used:
 *** naz (https://github.com/sporeball/naz)
-*** Noether
+*** Noether (https://github.com/noether-lang/noether)
 *** Orthagonal
 *** Perchance                                                          :used:
 *** Pickle (Python)                                                    :used:
@@ -299,11 +299,10 @@
 *** Shakespeare                                                        :used:
 *** Snowman                                                            :used:
 *** Stuck                                                              :used:
-*** spl (https://esolangs.org/wiki/Spl)
 *** Taxi                                                               :used:
 *** Tome                                                               :used:
 *** Tovie (https://github.com/Jaysmito101/tovie)                       :used:
-*** TRANSCRIPT
+*** TRANSCRIPT                                                         :used:
     + No arrays
 *** Underload
     + Short list
@@ -388,6 +387,8 @@
 *** Skastic
     Looks like a /super/ cool idea, but it's woefully incomplete to
     the point of possibly not even being Turing complete.
+*** spl (https://esolangs.org/wiki/Spl)
+    No implementation
 *** Trajedy
     Beautiful language, but... no.
 *** Unlambda

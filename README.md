@@ -136,6 +136,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Tcl
 * Tome
 * Tovie
+* TRANSCRIPT
 * TypeScript
 * V
 * Vala
@@ -1036,6 +1037,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Lean Theorem Prover](https://leanprover-community.github.io/)
 * Compiler / Interpreter: [Lean (version 3.42.1, commit 68455b087d87, Release)](https://leanprover-community.github.io/get_started.html)
 * Notes: `./etc/build147.sh` may be helpful in building the source.
+
+### Euler 148
+* File: [problem148.trn](problem148.trn)
+* Language: [TRANSCRIPT](https://esolangs.org/wiki/TRANSCRIPT)
+* Compiler / Interpreter: [The official interpreter](https://web.archive.org/web/20071018030927/http://www.corknut.org/code/transcript/)
+* Notes: (None)
 
 ## Valid Languages
 
