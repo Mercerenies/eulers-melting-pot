@@ -278,6 +278,7 @@
 *** JSF**k                                                             :used:
 *** Keg
 *** Labyrinth                                                          :used:
+*** LOLCODE
 *** MagiStack                                                          :used:
 *** Math++                                                             :used:
 *** MATL                                                               :used:
