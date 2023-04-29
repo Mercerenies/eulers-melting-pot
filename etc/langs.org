@@ -75,13 +75,14 @@
 *** MATLAB
 *** Modula
 *** Modula-2
-*** MoonScript
+*** MoonScript                                                         :used:
 *** Nemerle                                                            :used:
 *** Nim                                                                :used:
 *** Oberon-07                                                          :used:
 *** Objective-C                                                        :used:
 *** Pascal                                                             :used:
 *** R
+*** Red (https://www.red-lang.org/)
 *** Self
 *** Smalltalk                                                          :used:
 *** SML                                                                :used:
@@ -118,6 +119,7 @@
     + Loops only available via map, fold, etc.
 *** Dip                                                                :used:
 *** Dogescript                                                         :used:
+*** Dry (https://www.reddit.com/r/ProgrammingLanguages/comments/yo3937/dry_a_simple_dynamicallytyped_programming/)
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
 *** F*
 *** GAP
@@ -246,6 +248,7 @@
 *** Befunge                                                            :used:
 *** Befunk                                                             :used:
 *** Brainf**k                                                          :used:
+*** Burlesque (https://esolangs.org/wiki/Burlesque)
 *** Brat                                                               :used:
 *** Chef                                                               :used:
 *** CJam                                                               :used:
@@ -266,6 +269,7 @@
 *** Fourier                                                            :used:
 *** FRACTRAN
 *** Funciton                                                           :used:
+*** Fuzzy Octo Guacamole (https://codereview.stackexchange.com/questions/124736/fuzzy-octo-guacamole-interpreter)
 *** Gibberish                                                          :used:
 *** Golfscript                                                         :used:
 *** Grocery List                                                       :used:
@@ -407,7 +411,6 @@
 *** BQN (https://mlochbaum.github.io/BQN/)
 *** Brachylog
 *** Bracmat (https://github.com/BartJongejan/Bracmat)
-*** Burlesque (https://esolangs.org/wiki/Burlesque)
 *** CandleScript
 *** Carbon (https://github.com/carbon-language/carbon-lang)
 *** Catln (https://catln.dev/)
@@ -422,7 +425,6 @@
 *** Dale (https://github.com/tomhrr/dale)
 *** Dart
 *** Delphi
-*** Dry (https://www.reddit.com/r/ProgrammingLanguages/comments/yo3937/dry_a_simple_dynamicallytyped_programming/)
 *** E
 *** Ė (https://e-dot.io/)
 *** Egel (https://egel-lang.github.io/)
@@ -436,7 +438,6 @@
 *** Fission
 *** Flix (https://github.com/flix/flix)
 *** Flora (https://flora.sourceforge.net/)
-*** Fuzzy Octo Guacamole (https://codereview.stackexchange.com/questions/124736/fuzzy-octo-guacamole-interpreter)
 *** G-- (https://github.com/ReyAnthony/G--)
 *** Genesis (https://github.com/elonlit/Genesis)
 *** Gluon
@@ -475,7 +476,6 @@
 *** Processing (https://en.wikipedia.org/wiki/Processing_(programming_language))
 *** Reason (https://reasonml.github.io/)
 *** Rebol
-*** Red (https://www.red-lang.org/)
 *** Runic Enchantments (https://github.com/Draco18s/RunicEnchantments/tree/Console)
 *** Simula
 *** Skip

@@ -98,6 +98,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * MATL
 * Minecraft
 * MontiLang
+* MoonScript
 * Mouse-2002
 * NASM
 * Nemerle
@@ -1049,6 +1050,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem149.z](problem149.z)
 * Language: [Z](https://zlanguage.github.io/)
 * Compiler / Interpreter: [@zlanguage/zcomp/0.4.5 linux-x64 node-v14.18.2](https://www.npmjs.com/package/@zlanguage/zcomp)
+* Notes: (None)
+
+### Euler 150
+* File: [problem150.moon](problem150.moon)
+* Language: [MoonScript](https://moonscript.org/)
+* Compiler / Interpreter: [MoonScript version 0.5.0](rocks-5.3/moonscript/dev-1/bin/)
 * Notes: (None)
 
 ## Valid Languages
