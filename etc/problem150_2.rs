@@ -1,4 +1,26 @@
 
+// We make a triangle of partial sums starting from x=0. So if our
+// input triangle was this.
+//
+//    1
+//   2 3
+//  4 5 6
+//
+// Our partial sum triangle would be this.
+//
+//    1
+//   2 5
+//  4 9 15
+//
+// To calculate the sum of a contiguous sequence i..j in a row
+// quickly, we take the sum 0..j and subtract the sum 0..(i-1). That
+// means we can sum rows in O(1) time by precomputing everything.
+//
+// From there, just brute force everything. Y, X, and the triangle
+// height range from 0 to 1000, so it's a cubic time algorithm. The
+// actual "summing" part is O(1) since we made our partial sums up
+// front in O(n). Takes 12 seconds to run.
+
 const ROWS: usize = 1000;
 
 #[derive(Debug)]
