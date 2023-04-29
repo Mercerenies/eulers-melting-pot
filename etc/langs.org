@@ -54,7 +54,7 @@
    and "Platinum" are measures of my personal skill.
 *** Ada                                                                :used:
 *** ALGOL 68                                                           :used:
-*** AssemblyScript
+*** AssemblyScript (https://www.assemblyscript.org/)
 *** AWK                                                                :used:
 *** Bizubee (https://bizubee.github.io/)
 *** COBOL                                                              :used:
@@ -63,9 +63,9 @@
 *** F#
 *** Forth                                                              :used:
 *** Fortran                                                            :used:
-*** Frege
+*** Frege (https://github.com/Frege/frege)
 *** Gleam                                                              :used:
-*** Haxe
+*** Haxe (https://haxe.org/)
 *** Icon                                                               :used:
 *** Io                                                                 :used:
 *** Ioke                                                               :used:
@@ -255,6 +255,7 @@
 *** Cy (https://github.com/cyoce/Cy)
 *** ed
     + Loops are recursive
+*** Emmental (https://esolangs.org/wiki/Emmental)
 *** Emoji                                                              :used:
 *** Emotinomicon
     + Short list
@@ -434,6 +435,7 @@
 *** Fantom (https://www.fantom.org/)
 *** Fission
 *** Flix (https://github.com/flix/flix)
+*** Flora (https://flora.sourceforge.net/)
 *** Fuzzy Octo Guacamole (https://codereview.stackexchange.com/questions/124736/fuzzy-octo-guacamole-interpreter)
 *** G-- (https://github.com/ReyAnthony/G--)
 *** Genesis (https://github.com/elonlit/Genesis)
@@ -477,6 +479,7 @@
 *** Runic Enchantments (https://github.com/Draco18s/RunicEnchantments/tree/Console)
 *** Simula
 *** Skip
+*** smodels (http://www.tcs.hut.fi/Software/smodels/)
 *** Snails
 *** SNUSP
 *** Soul (https://github.com/egel-lang/soul)
