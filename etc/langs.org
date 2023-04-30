@@ -119,7 +119,7 @@
     + Loops only available via map, fold, etc.
 *** Dip                                                                :used:
 *** Dogescript                                                         :used:
-*** Dry (https://www.reddit.com/r/ProgrammingLanguages/comments/yo3937/dry_a_simple_dynamicallytyped_programming/)
+*** Dry                                                                :used:
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
 *** F*
 *** GAP

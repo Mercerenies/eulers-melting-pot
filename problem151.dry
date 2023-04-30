@@ -1,0 +1,104 @@
+
+// NOTE: There's a parser bug where function parameter lists are
+// flipped, so when we declare a function, we write the parameter
+// list backwards.
+
+let HASH_LIST_LENGTH = 283;
+
+def hash(arr) {
+    let hashcode = 0;
+    for (let i = 0; i < arr.size(); i = i + 1) {
+        hashcode = 7 * hashcode + arr.at(i);
+    }
+    return hashcode;
+}
+
+// Dictionary class special-cased to lists of integers, since
+// that's what we need for this problem.
+class Dictionary {
+
+    def init() {
+        // Store the dictionary as a list of length HASH_LIST_LENGTH. Each
+        // element is an alist (i.e. a list of key-value pairs).
+        self.impl = list();
+        for (let i = 0; i < HASH_LIST_LENGTH; i = i + 1) {
+            self.impl.add(list());
+        }
+    }
+
+    def contains(key) {
+        return !(self.get(key) == none);
+    }
+
+    def get(key) {
+        let hashcode = hash(key);
+        let candidates = self.impl.at(hashcode % HASH_LIST_LENGTH);
+        for (let i = 0; i < candidates.size(); i = i + 1) {
+            if (candidates.at(i)._0 == key) {
+                return candidates.at(i)._1;
+            }
+        }
+        return none;
+    }
+
+    // Assumes the key is not currently in the dictionary.
+    def putnew(value, key) {
+        let hashcode = hash(key);
+        self.impl.at(hashcode % HASH_LIST_LENGTH).add(list(key, value));
+    }
+
+}
+
+def cutup(paper) {
+    let result = list();
+    for (let i = paper + 1; i <= 5; i = i + 1) {
+        result.add(i);
+    }
+    return result;
+}
+
+def removed(index, oldlist) {
+    let newlist = list();
+    for (let i = 0; i < oldlist.size(); i = i + 1) {
+        if (i != index) {
+            newlist.add(oldlist.at(i));
+        }
+    }
+    return newlist;
+}
+
+def appendinplace(b, a) {
+    for (let i = 0; i < b.size(); i = i + 1) {
+        a.add(b.at(i));
+    }
+    return a;
+}
+
+def removeandcut(index, envelope) {
+    let chosenpaper = envelope.at(index);
+    return appendinplace(removed(envelope, index), cutup(chosenpaper));
+}
+
+let cache = Dictionary();
+
+def consumeall(envelope) {
+    if (envelope.size() == 0) {
+        return 0;
+    } else if (cache.contains(envelope)) {
+        return cache.get(envelope);
+    } else {
+        let expectedvalue = 0;
+        if (envelope.size() == 1) {
+            expectedvalue = expectedvalue + 1;
+        }
+        for (let i = 0; i < envelope.size(); i = i + 1) {
+            let newenvelope = removeandcut(envelope, i);
+            let innerexpectedvalue = consumeall(newenvelope);
+            expectedvalue = expectedvalue + innerexpectedvalue / envelope.size();
+        }
+        cache.putnew(envelope, expectedvalue);
+        return expectedvalue;
+    }
+}
+
+println(consumeall(list(1)) - 2);

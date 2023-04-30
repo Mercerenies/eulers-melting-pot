@@ -43,6 +43,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Dafny
 * Dip
 * Dogescript
+* Dry
 * Dylan
 * Eiffel
 * ELisp
@@ -1057,6 +1058,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [MoonScript](https://moonscript.org/)
 * Compiler / Interpreter: [MoonScript version 0.5.0](rocks-5.3/moonscript/dev-1/bin/)
 * Notes: (None)
+
+### Euler 151
+* File: [problem151.dry](problem151.dry)
+* Language: [Dry](https://github.com/melvic-ybanez/dry)
+* Compiler / Interpreter: [The official interpreter (02e9cbf)](https://github.com/melvic-ybanez/dry/tree/02e9cbfebcb88c9429a55468d5d1d6acb8250acf)
+* Notes: Provided solution does not round the result off to six digits.
 
 ## Valid Languages
 
