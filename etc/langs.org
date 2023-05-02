@@ -141,6 +141,7 @@
 *** LilyPond                                                           :used:
 *** m4                                                                 :used:
 *** Make                                                               :used:
+*** Mercury (https://www.mercurylang.org/)
 *** Nit                                                                :used:
 *** Picat                                                              :used:
 *** Pike                                                               :used:
