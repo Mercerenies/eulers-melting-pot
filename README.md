@@ -50,6 +50,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Elixir
 * Emoji
 * Enchilada
+* Erlang
 * 𝔼𝕊𝕄𝕚𝕟
 * Factor
 * Factorio
@@ -1064,6 +1065,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Dry](https://github.com/melvic-ybanez/dry)
 * Compiler / Interpreter: [The official interpreter (02e9cbf)](https://github.com/melvic-ybanez/dry/tree/02e9cbfebcb88c9429a55468d5d1d6acb8250acf)
 * Notes: Provided solution does not round the result off to six digits.
+
+### Euler 152
+* File: [problem152.erl](problem152.erl)
+* Language: [Erlang](https://www.erlang.org/)
+* Compiler / Interpreter: [Erlang/OTP 25](https://www.erlang.org/downloads)
+* Notes: (None)
 
 ## Valid Languages
 

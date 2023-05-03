@@ -40,7 +40,7 @@
 *** D                                                                  :used:
 *** Elixir                                                             :used:
 *** Elm
-*** Erlang
+*** Erlang                                                             :used:
 *** Factor                                                             :used:
 *** Fennel                                                             :used:
 *** Go                                                                 :used:
@@ -185,7 +185,7 @@
 *** Csh                                                                :used:
 *** Dash
 *** Fish
-*** Jsish
+*** Ksh
 *** Oilshell
 *** Scsh
 *** Zsh                                                                :used:
@@ -203,9 +203,11 @@
 *** XC=BASIC
 ** LISP
    Lisp dialects.
+*** Arc (https://en.wikipedia.org/wiki/Arc_(programming_language))
 *** ArkScript (https://github.com/ArkScript-lang/Ark/)                 :used:
 *** AutoLISP
 *** Bel (http://www.paulgraham.com/bel.html)
+    + Possible interpreter: https://github.com/ajlopez/beljs
 *** Carp
 *** Clojure
 *** ClojureScript
@@ -375,6 +377,9 @@
     language existing, aside from a random Docker container floating
     around with no docs. I swear it used to have an Esolang page but
     can't find any record of it.
+*** Jsish
+    This is just a Javascript interpreter built for embedded systems.
+    It's too similar to vanilla JS for my tastes.
 *** Leafscript
     The only interpreter segfaults when running any of the example
     programs.
@@ -494,10 +499,12 @@
 *** Unison (https://www.unison-lang.org/)
 *** Universal Lambda (http://www.golfscript.com/)
 *** VALE (https://github.com/project-everest/vale)
+*** Vortex (https://github.com/dibsonthis/Vortex)
 *** Vyxal (https://github.com/Vyxal/Vyxal)
 *** Whiley (https://en.wikipedia.org/wiki/Whiley_(programming_language))
 *** Whispers (https://github.com/cairdcoinheringaahing/Whispers)
 *** Whython (https://www.pxeger.com/2021-09-19-hacking-on-cpython/)
+    May be unimplemented?
 *** XQuery
 *** XY
 *** Yuescript

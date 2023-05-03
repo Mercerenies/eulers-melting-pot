@@ -6,6 +6,7 @@ vendor/*
 *.obj
 *.class
 *.agdai
+*.beam
 MAlonzo/
 *.tasty
 __arkscript__/
