@@ -67,6 +67,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Glava
 * Gleam
 * GML
+* GNU Octave
 * Go
 * Golfscript
 * Grocery List
@@ -1071,6 +1072,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Erlang](https://www.erlang.org/)
 * Compiler / Interpreter: [Erlang/OTP 25](https://www.erlang.org/downloads)
 * Notes: (None)
+
+### Euler 153
+* File: [problem153.m](problem153.m)
+* Language: [GNU Octave](https://octave.org/)
+* Compiler / Interpreter: [GNU Octave, version 7.3.0](https://octave.org/download)
+* Notes: A very slow solution.
 
 ## Valid Languages
 
