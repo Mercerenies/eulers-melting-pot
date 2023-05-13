@@ -61,6 +61,7 @@
 *** Bizubee (https://bizubee.github.io/)
 *** COBOL                                                              :used:
 *** Dylan                                                              :used:
+*** Earl Grey                                                          :used:
 *** Eiffel                                                             :used:
 *** F#
 *** Forth                                                              :used:
@@ -216,6 +217,7 @@
 *** Common Lisp
 *** ELisp                                                              :used:
 *** Guile
+*** Kawa
 *** Kernel (Klisp)
 *** LFE (Lisp Flavored Erlang)
 *** Maclisp

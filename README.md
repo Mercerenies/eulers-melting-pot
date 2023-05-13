@@ -45,6 +45,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Dogescript
 * Dry
 * Dylan
+* Earl Grey
 * Eiffel
 * ELisp
 * Elixir
@@ -1078,6 +1079,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [GNU Octave](https://octave.org/)
 * Compiler / Interpreter: [GNU Octave, version 7.3.0](https://octave.org/download)
 * Notes: A very slow solution.
+
+### Euler 154
+* File: [problem154.eg](problem154.eg)
+* Language: [Earl Grey](https://github.com/breuleux/earl-grey)
+* Compiler / Interpreter: [Earl Grey version 0.1.2](https://github.com/breuleux/earl-grey)
+* Notes: An incredibly slow solution.
 
 ## Valid Languages
 

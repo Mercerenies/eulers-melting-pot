@@ -1,0 +1,61 @@
+
+p-adic-valuation(var n, p) =
+  var result = 0
+  while n mod p == 0:
+    n /= p
+    result += 1
+  result
+
+;; Representation of a number as a product of a power of 2 and a power
+;; of 5. Other primes are ignored.
+class Num:
+
+  constructor(@two, @five) =
+    pass
+
+  mul(that) =
+    Num(@two + that.two, @five + that.five)
+
+  div(that) =
+    Num(@two - that.two, @five - that.five)
+
+  divides(that) =
+    let result = that.div(this)
+    result.two >= 0 and result.five >= 0
+
+  static:
+    from-int(integer) =
+      Num(p-adic-valuation(integer, 2), p-adic-valuation(integer, 5))
+
+    ONE = Num(0, 0)
+
+let LIMIT = 200000
+
+;; Precompute all the factorials into one big table.
+let FACTORIALS = {0 = Num.ONE}
+var acc = Num.ONE
+1..LIMIT each i ->
+  acc = acc.mul(Num.from-int(i))
+  FACTORIALS[i] = acc
+
+;; 10^12
+let TARGET = Num(12, 12)
+
+let NUMERATOR = FACTORIALS[LIMIT]
+
+var result-count = 0
+0..LIMIT each k1 ->
+  k1..LIMIT each k2 ->
+    let k3 = LIMIT - k1 - k2
+    if k3 < k2:
+      break
+    let value = NUMERATOR.div(FACTORIALS[k1].mul(FACTORIALS[k2]).mul(FACTORIALS[k3]))
+    if TARGET.divides(value):
+      ;; Found a solution, count distinct permutations of it.
+      if k1 == k3:
+        result-count += 1
+      elif k1 == k2 or k2 == k3:
+        result-count += 3
+      else:
+        result-count += 6
+print result-count
