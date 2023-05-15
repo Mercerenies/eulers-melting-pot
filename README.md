@@ -31,6 +31,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Befunk
 * Brainf\*\*k
 * Brat
+* C#
 * Chef
 * CIL
 * CJam
@@ -1085,6 +1086,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Earl Grey](https://github.com/breuleux/earl-grey)
 * Compiler / Interpreter: [Earl Grey version 0.1.2](https://github.com/breuleux/earl-grey)
 * Notes: An incredibly slow solution.
+
+### Euler 155
+* File: [problem155.cs](problem155.cs)
+* Language: [C#](https://dotnet.microsoft.com/en-us/languages/csharp)
+* Compiler / Interpreter: [Mono JIT compiler version 6.12.0.182](https://www.mono-project.com/download/stable/)
+* Notes: (None)
 
 ## Valid Languages
 

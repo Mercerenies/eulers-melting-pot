@@ -35,7 +35,7 @@
    Gold languages are languages are languages I feel mostly confident
    programming in. With some help from online guides, I can consider
    myself fluent in these.
-*** C#
+*** C#                                                                 :used:
 *** Carbon (https://github.com/carbon-language/carbon-lang)
     + Currently unimplemented. Looks like they hope to be done in
       2023, so maybe soon.
