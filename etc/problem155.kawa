@@ -1,0 +1,61 @@
+;; -*- Scheme -*-
+
+;; Also too slow :(
+
+(import (class java.util ArrayList HashSet))
+
+;; Kawa's numerical type implements equals but not hashCode, which
+;; means we can't safely store it in HashSet. We wrap it in a type
+;; that correctly implements both here.
+(define-simple-class RationalNumber ()
+  (x ::rational)
+
+  ((*init* (x0 ::rational))
+   (set! x x0))
+
+  ((equals that)
+   (and (instance? that RationalNumber)
+        (x:equals (as RationalNumber that):x)))
+
+  ((hashCode)
+   (bitwise-xor (x:numerator) (x:denominator))))
+
+
+(define-syntax dorange
+  (syntax-rules ()
+    ((dorange var (lower-bound upper-bound) exp ...)
+     (let loop ((var lower-bound))
+       exp ...
+       (when (< var upper-bound)
+         (loop (+ var 1)))))))
+
+(define (par+ x y)
+  (/ (+ (/ x) (/ y))))
+
+(define (flatten array-list)
+  (let ((final (ArrayList)))
+    (for-each (lambda (xs)
+                (for-each (lambda (x)
+                            (final:add x))
+                          xs))
+              array-list)
+    final))
+
+(define (up-to n)
+  (let ((distinct (ArrayList ||: (HashSet ||: (RationalNumber 1)))))
+    (dorange x (2 n)
+             (display x)
+             (newline)
+      (let ((new-distinct (ArrayList)))
+        (dorange n1 (1 (div x 2))
+          (for-each (lambda (c1 ::RationalNumber)
+                      (for-each (lambda (c2 ::RationalNumber)
+                                  (new-distinct:add (+ c1:x c2:x))
+                                  (new-distinct:add (par+ c1:x c2:x)))
+                                (distinct:get (- x n1 1))))
+                    (distinct:get (- n1 1))))
+        (distinct:add (HashSet (map RationalNumber new-distinct)))))
+    ((HashSet (flatten distinct)):size)))
+
+(display (up-to 18))
+(newline)
