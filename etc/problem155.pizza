@@ -1,0 +1,114 @@
+// -*- Java -*- (Close enough for syntax highlighting)
+
+// Failed implementation in Pizza. Too slow.
+
+import net.sf.pizzacompiler.util.Set;
+import net.sf.pizzacompiler.util.Enumeration;
+import net.sf.pizzacompiler.lang.ListBuffer;
+
+public class problem155 extends Object {
+
+  public static long gcd(long a, long b) {
+    while (b != 0) {
+      long tmp = a;
+      a = b;
+      b = tmp % a;
+    }
+    return a;
+  }
+
+  public static class Fraction {
+    private long numerator;
+    private long denominator;
+
+    public Fraction(long numerator, long denominator) {
+      long d = gcd(numerator, denominator);
+      this.numerator = numerator / d;
+      this.denominator = denominator / d;
+    }
+
+    public boolean equals(Object that) {
+      if (!(that instanceof Fraction)) {
+        return false;
+      }
+      Fraction x = (Fraction)that;
+      return (this.numerator == x.numerator) && (this.denominator == x.denominator);
+    }
+
+    public int hashCode() {
+      return (int)(numerator * 9999999 + denominator);
+    }
+
+    public Fraction getReciprocal() {
+      return new Fraction(denominator, numerator);
+    }
+
+    public long getNumerator() {
+      return numerator;
+    }
+
+    public long getDenominator() {
+      return denominator;
+    }
+
+    public Fraction add(Fraction that) {
+      return new Fraction(
+        this.numerator * that.denominator + that.numerator * this.denominator,
+        this.denominator * that.denominator
+      );
+    }
+
+    public Fraction parallelAdd(Fraction that) {
+      return this.getReciprocal().add(that.getReciprocal()).getReciprocal();
+    }
+
+  }
+
+  private static Set<Fraction> baseCase() {
+    Set<Fraction> result = new Set();
+    result.put(new Fraction(1, 1));
+    return result;
+  }
+
+  public static long upTo(int n) {
+    ListBuffer<Set<Fraction>> distinctValues = new ListBuffer();
+    distinctValues.append(baseCase());
+    for (int x = 2; x <= n; x++) {
+      System.out.println(x);
+      ListBuffer<Fraction> newDistinct = new ListBuffer();
+      for (int n1 = 1; n1 <= x / 2; n1++) {
+        Enumeration<Fraction> c1iter = distinctValues.getAt(n1-1).elements();
+        while (c1iter.hasMoreElements()) {
+          Fraction c1 = c1iter.nextElement();
+          int n2 = x - n1;
+          Enumeration<Fraction> c2iter = distinctValues.getAt(n2-1).elements();
+          while (c2iter.hasMoreElements()) {
+            Fraction c2 = c2iter.nextElement();
+            newDistinct.append(c1.add(c2));
+            newDistinct.append(c1.parallelAdd(c2));
+          }
+        }
+      }
+
+      Set<Fraction> compiled = new Set();
+      for (int i = 0; i < newDistinct.length(); i++) {
+        compiled.put(newDistinct.getAt(i));
+      }
+      distinctValues.append(compiled);
+    }
+
+    Set<Fraction> result = new Set();
+    for (int i = 0; i < distinctValues.length(); i++) {
+      Enumeration<Fraction> constituent = distinctValues.getAt(i).elements();
+      while (constituent.hasMoreElements()) {
+        result.put(constituent.nextElement());
+      }
+    }
+    return result.size();
+  }
+
+  public static void main(String[] args) {
+    System.out.println(upTo(11));
+  }
+
+}

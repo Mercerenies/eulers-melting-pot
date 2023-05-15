@@ -36,6 +36,9 @@
    programming in. With some help from online guides, I can consider
    myself fluent in these.
 *** C#
+*** Carbon (https://github.com/carbon-language/carbon-lang)
+    + Currently unimplemented. Looks like they hope to be done in
+      2023, so maybe soon.
 *** Ceylon
 *** D                                                                  :used:
 *** Elixir                                                             :used:
@@ -417,12 +420,12 @@
 *** Alice
 *** Alloy (https://alloytools.org/)
 *** ArnoldC (https://esolangs.org/wiki/ArnoldC)
+*** Ateji PX (https://en.wikipedia.org/wiki/Ateji_PX)
 *** ATS
 *** BQN (https://mlochbaum.github.io/BQN/)
 *** Brachylog
 *** Bracmat (https://github.com/BartJongejan/Bracmat)
 *** CandleScript
-*** Carbon (https://github.com/carbon-language/carbon-lang)
 *** Catln (https://catln.dev/)
 *** CDuce (http://www.cduce.org/)
 *** Cecil
@@ -538,6 +541,8 @@
     - http://golf.shinh.org/
   + hakatashi/esolang-box: Easy and standardized docker images for 200+ esoteric (and non-esoteric) languages
     - https://github.com/hakatashi/esolang-box
+  + Best languages that compile to JS
+    - https://www.slant.co/topics/101/~best-languages-that-compile-to-javascript
 ** ONLINE INTERPRETERS
    Some online interpreters that are free to use and very handy for tasks like this.
 
