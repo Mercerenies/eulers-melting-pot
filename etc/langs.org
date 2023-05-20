@@ -126,10 +126,13 @@
 *** Dip                                                                :used:
 *** Dogescript                                                         :used:
 *** Dry                                                                :used:
+*** Egison (https://www.egison.org/)
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
 *** F*
 *** GAP
 *** Genie                                                              :used:
+*** Giml (https://giml-lang.org/)
+    + Division is broken, no modulo
 *** Glava                                                              :used:
 *** i (https://github.com/Qlova/ilang)                                 :used:
 *** IntercalScript                                                     :used:
@@ -162,6 +165,8 @@
 *** sed                                                                :used:
 *** SNOBOL                                                             :used:
 *** Streem
+*** Strema (https://gilmi.gitlab.io/strema/)
+    + Division is broken, no modulo
 *** SuperCollider                                                      :used:
 *** Vala                                                               :used:
 *** Vale (https://vale.dev/)                                           :used:
@@ -209,7 +214,7 @@
 *** XC=BASIC
 ** LISP
    Lisp dialects.
-*** Arc (https://en.wikipedia.org/wiki/Arc_(programming_language))
+*** Arc (https://en.wikipedia.org/wiki/Arc_(programming_language))     :used:
 *** ArkScript (https://github.com/ArkScript-lang/Ark/)                 :used:
 *** AutoLISP
 *** Bel (http://www.paulgraham.com/bel.html)
@@ -390,6 +395,8 @@
 *** Leafscript
     The only interpreter segfaults when running any of the example
     programs.
+*** Lunar (http://users.rcn.com/david-moon/Lunar/)
+    Unimplemented
 *** minaac
     The interpreter seems to be using lots of implementation-defined
     C++ behavior and, as a result, I can only use a small subset of
@@ -441,7 +448,6 @@
 *** E
 *** Ė (https://e-dot.io/)
 *** Egel (https://egel-lang.github.io/)
-*** Egison (https://www.egison.org/)
 *** EGL
 *** Euler
 *** F' (https://nasa.github.io/fprime/)
@@ -468,7 +474,6 @@
 *** Lava (https://lavape.sourceforge.net/)
 *** Logtalk
 *** Luna
-*** Lunar (http://users.rcn.com/david-moon/Lunar/)
 *** Magpie
 *** Minus (http://www.golfscript.com/)
 *** Monte
@@ -497,7 +502,6 @@
 *** SNUSP
 *** Soul (https://github.com/egel-lang/soul)
 *** Squirrel
-*** Strema (https://gilmi.gitlab.io/strema/)
 *** SuperForth (https://github.com/TheRealMichaelWang/superforth)
 *** Sweet.js
 *** Teascript

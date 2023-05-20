@@ -1,0 +1,46 @@
+
+def toNum xs := toNumAcc (reverse xs)
+
+def toNumAcc xs := match xs as list integer with
+    | [] -> 0
+    | $x :: $xs -> x + 10 * toNumAcc xs
+
+def fromNum n := reverse (fromNumAcc n)
+
+def fromNumAcc n := match n as integer with
+    | #0 -> []
+    | $n -> n % 10 :: fromNumAcc (quotient n 10)
+
+def fList ns d := match ns as list integer with
+    | [] -> 0
+    | $n :: $ns ->
+        let k := length ns in
+        let below := if k = 0 then 0 else n * k * 10 ^ (k - 1) in
+        let current := if n = d then
+                           toNum ns + 1
+                       else if n > d then
+                           10 ^ k
+                       else
+                           0 in
+        let recursive := fList ns d in
+        below + current + recursive
+
+def f n d := fList (fromNum n) d
+
+def upperLimit := 10 ^ 11
+
+def findAllFixedPoints lower upper d :=
+    if lower >= upper then
+        0
+    else if lower = upper - 1 then
+        if f lower d = lower then lower else 0
+    else
+        let midpoint := quotient (upper + lower) 2 in
+        let fLower := f lower d in
+        let fUpper := f upper d in
+        let fMidpoint := f midpoint d in
+        let lowerSum := if fLower > midpoint || fMidpoint < lower then 0 else findAllFixedPoints lower midpoint d in
+        let upperSum := if fMidpoint > upper || fUpper < midpoint then 0 else findAllFixedPoints midpoint upper d in
+        lowerSum + upperSum
+
+def main args := do print (show (sum $ map (\d -> findAllFixedPoints 0 upperLimit d) [8]))

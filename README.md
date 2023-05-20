@@ -17,6 +17,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Alice
 * Anti-Array
 * APL
+* Arc
 * ArkScript
 * AutoHotkey
 * AWK
@@ -1091,6 +1092,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem155.cs](problem155.cs)
 * Language: [C#](https://dotnet.microsoft.com/en-us/languages/csharp)
 * Compiler / Interpreter: [Mono JIT compiler version 6.12.0.182](https://www.mono-project.com/download/stable/)
+* Notes: (None)
+
+### Euler 156
+* File: [problem156.arc](problem156.arc)
+* Language: [Arc](https://en.wikipedia.org/wiki/Arc_(programming_language))
+* Compiler / Interpreter: [Arcadia 0.25.1](https://github.com/kimtg/Arcadia)
 * Notes: (None)
 
 ## Valid Languages
