@@ -267,7 +267,7 @@
 *** Brat                                                               :used:
 *** Chef                                                               :used:
 *** CJam                                                               :used:
-*** Comefrom0x10 (https://esolangs.org/wiki/Comefrom0x10)
+*** Comefrom0x10 (https://esolangs.org/wiki/Comefrom0x10)              :used:
 *** COMPLEX                                                            :used:
 *** Cubix                                                              :used:
 *** Cy (https://github.com/cyoce/Cy)

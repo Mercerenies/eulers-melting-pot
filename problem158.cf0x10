@@ -1,0 +1,101 @@
+loop # Call (loop_acc = -1); returns in loop_acc
+  p # Call with x (p_acc = -1); returns in p_acc
+    choose # Call with nn, kk (choose_acc = -1); returns in choose_acc
+      product # Call with n, m (product_acc = -1); returns in product_acc
+        comefrom if product_acc is -1
+        product_acc = 1
+        comefrom product
+        product_acc = product_acc * n
+        n = n + 1
+
+        comefrom product if n > m
+      comefrom if choose_acc is -1
+      choose_acc = 1
+      n = 1
+      m = kk
+      product_acc = -1
+      denom = product_acc
+      n = nn - kk + 1
+      m = nn
+      product_acc = -1
+      numer = product_acc
+      choose_acc = numer / denom
+    power_of_two # Call with y (power_of_two_acc = -1); returns in power_of_two_acc
+      comefrom if power_of_two_acc is -1
+      power_of_two_acc = 1
+
+      comefrom power_of_two
+      power_of_two_acc = power_of_two_acc * 2
+      y = y - 1
+
+      comefrom power_of_two if y is 0
+    comefrom if p_acc is -1
+    p_acc = 1
+    y = x
+    power_of_two_acc = -1
+    nn = 26
+    kk = x
+    choose_acc = -1
+    p_acc = choose_acc * (power_of_two_acc - (x + 1))
+  max # Call with q1, q2 (max_acc = -1); returns in max_acc
+    comefrom if max_acc is -1
+    max_acc = q1
+
+    max_acc = q2
+    comefrom max if q1 > q2
+  comefrom if loop_acc is -1
+  loop_acc = 1
+  maximum = 0
+  iter = 1
+  comefrom loop if iter < 27
+  x = iter
+  p_acc = -1
+  q1 = maximum
+  q2 = p_acc
+  max_acc = -1
+  maximum = max_acc
+  iter = iter + 1
+  loop_acc = maximum
+digits # Call with z (digits_acc = -1); returns in digits_acc
+  lastdigit # Call with value (lastdigit_acc = -1); returns in lastdigit_acc
+    comefrom if lastdigit_acc is -1
+    lastdigit_acc = 1
+
+    comefrom lastdigit if value > 99999999
+    value = value - 100000000
+    comefrom lastdigit if value < 100000000
+    value = value - 10000000
+    comefrom lastdigit if value < 10000000
+    value = value - 1000000
+    comefrom lastdigit if value < 1000000
+    value = value - 100000
+    comefrom lastdigit if value < 100000
+    value = value - 10000
+    comefrom lastdigit if value < 10000
+    value = value - 1000
+    comefrom lastdigit if value < 1000
+    value = value - 100
+    comefrom lastdigit if value < 100
+    value = value - 10
+    comefrom lastdigit if value < 10
+    lastdigit_acc = value
+  comefrom if digits_acc is -1
+  digits_acc = ''
+  # This bears some explanation. itoa just chokes whenever you give it a non-decimal number. And
+  # because of precision issues, the last digit is always imperfect. Basically, the last loop
+  # iteration here will always produce undefined and add nothing to the string. So we multiply by
+  # ten to make sure the last digit isn't one we care about. Then we add 5 (0.5 in the original
+  # number) to round off any errors to the nearest integer.
+  z = z * 10 + 5
+  comefrom digits if z > 0.5
+  value = z
+  lastdigit_acc = -1
+  itoa = lastdigit_acc + 48
+  digits_acc = itoa digits_acc
+  z = (z - lastdigit_acc) / 10
+  comefrom digits if z < 0.5001
+loop_acc = -1
+# Can't just print out loop_acc, because it prints in scientific notation will too few sigfigs :(
+z = loop_acc
+digits_acc = -1
+digits_acc

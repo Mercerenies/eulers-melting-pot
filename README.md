@@ -38,6 +38,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * CIL
 * CJam
 * COBOL
+* Comefrom0x10
 * COMPLEX
 * 🆒
 * Csh
@@ -1106,6 +1107,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Burlesque](https://esolangs.org/wiki/Burlesque)
 * Compiler / Interpreter: [Burlesque 1753bdf](https://github.com/FMNSSun/Burlesque)
 * Notes: A somewhat slow solution; code was written with the help of a Racket translator program.
+
+### Euler 158
+* File: [problem158.cf0x10](problem158.cf0x10)
+* Language: [Comefrom0x10](https://esolangs.org/wiki/Comefrom0x10)
+* Compiler / Interpreter: [The official interpreter](https://comefrom0x10.readthedocs.io/en/latest/install.html)
+* Notes: (None)
 
 ## Valid Languages
 
