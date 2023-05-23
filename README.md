@@ -32,6 +32,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Befunk
 * Brainf\*\*k
 * Brat
+* Burlesque
 * C#
 * Chef
 * CIL
@@ -1099,6 +1100,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Arc](https://en.wikipedia.org/wiki/Arc_(programming_language))
 * Compiler / Interpreter: [Arcadia 0.25.1](https://github.com/kimtg/Arcadia)
 * Notes: (None)
+
+### Euler 157
+* File: [problem157.blsq](problem157.blsq)
+* Language: [Burlesque](https://esolangs.org/wiki/Burlesque)
+* Compiler / Interpreter: [Burlesque 1753bdf](https://github.com/FMNSSun/Burlesque)
+* Notes: A somewhat slow solution; code was written with the help of a Racket translator program.
 
 ## Valid Languages
 

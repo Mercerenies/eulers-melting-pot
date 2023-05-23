@@ -263,7 +263,7 @@
 *** Befunge                                                            :used:
 *** Befunk                                                             :used:
 *** Brainf**k                                                          :used:
-*** Burlesque (https://esolangs.org/wiki/Burlesque)
+*** Burlesque (https://esolangs.org/wiki/Burlesque)                    :used:
 *** Brat                                                               :used:
 *** Chef                                                               :used:
 *** CJam                                                               :used:
