@@ -3,6 +3,8 @@
 This is a Project Euler attempt. The catch is that every challenge will be completed in a different
 programming language.
 
+Euler's Melting Pot is also being run as an educational YouTube series, where I talk about the code I've written here. See https://www.youtube.com/playlist?list=PL1ltQrTP1szcCAD-Jm-6eQdV_zhnm3oNq
+
 ## Languages Used
 
 Full details of the various solutions are listed below, but for the sake of easy reference, here is an
