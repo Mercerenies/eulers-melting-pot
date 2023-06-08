@@ -149,6 +149,8 @@
 *** Lean (https://leanprover-community.github.io/)                     :used:
 *** LilyPond                                                           :used:
 *** m4                                                                 :used:
+*** Magpie (https://www.magpie-lang.org/)
+    + Arrays are immutable
 *** Make                                                               :used:
 *** Mercury (https://www.mercurylang.org/)
 *** Nit                                                                :used:
@@ -292,6 +294,7 @@
 *** Hanabi                                                             :used:
 *** Hexagony                                                           :used:
 *** Inform 7
+    + Short List
 *** Japt                                                               :used:
 *** Javagrid
 *** Jelly                                                              :used:
@@ -474,7 +477,6 @@
 *** Lava (https://lavape.sourceforge.net/)
 *** Logtalk
 *** Luna
-*** Magpie
 *** Minus (http://www.golfscript.com/)
 *** Monte
 *** Nibbles (http://www.golfscript.com/)
@@ -577,3 +579,5 @@
     representations at that.
 *** FRACTRAN
     Yeah.
+
+*** Inform 7
