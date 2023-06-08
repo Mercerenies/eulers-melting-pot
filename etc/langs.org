@@ -118,6 +118,8 @@
 *** BeanShell                                                          :used:
 *** Cat
     + No arrays
+*** Container (https://github.com/odddollar/Container-lang)
+    + No arrays
 *** 🆒                                                                 :used:
 *** Dafny                                                              :used:
 *** Dhall (https://dhall-lang.org/#)
@@ -158,6 +160,8 @@
 *** Pike                                                               :used:
 *** Pikelet
     + No IO
+*** Pikt (https://web.archive.org/web/20080716033727/http://pikt.org/pikt/intro/intro.html)
+*** Pikt (https://github.com/iAmGio/pikt)
 *** Pony                                                               :used:
 *** Potassco                                                           :used:
 *** Prolog                                                             :used:
@@ -442,7 +446,6 @@
 *** Clean
 *** Coconut
 *** ColdFusion
-*** Container (https://github.com/odddollar/Container-lang)
 *** Crystal
 *** Curl (https://www.curl.com/products/prod/language/)
 *** Dale (https://github.com/tomhrr/dale)
