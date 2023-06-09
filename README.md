@@ -125,6 +125,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Pickle
 * Piet
 * Pike
+* Pikt
 * Pip
 * Pony
 * Potassco
@@ -1115,6 +1116,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Comefrom0x10](https://esolangs.org/wiki/Comefrom0x10)
 * Compiler / Interpreter: [The official interpreter](https://comefrom0x10.readthedocs.io/en/latest/install.html)
 * Notes: (None)
+
+### Euler 159
+* File: [problem159.png](problem159.png)
+* Language: [Pikt](https://github.com/iamgio/pikt)
+* Compiler / Interpreter: [Pikt 64025d6](https://github.com/iamgio/pikt/tree/64025d690daffe0315654fae74b08af39319d542)
+* Notes: `./etc/build159.sh` may be helpful in building the source.
 
 ## Valid Languages
 
