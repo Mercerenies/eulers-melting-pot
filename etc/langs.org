@@ -284,6 +284,7 @@
 *** Emotinomicon
     + Short list
 *** Enchilada                                                          :used:
+*** Excel
 *** FALSE                                                              :used:
 *** FiM++                                                              :used:
 *** Folders
