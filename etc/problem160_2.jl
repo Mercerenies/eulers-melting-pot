@@ -1,18 +1,9 @@
 
-# Runs in 3 seconds. Keep an array of all of the factors (mod 10^5) we
-# need. Count them in a clever way, keeping out any multiples of five
-# systematically. Then we go back and remove a factor of 2 for every
-# factor of 5. In this way, we systematically remove all 10's (since
-# 10 = 2*5), and we have all of the factors of our factorial, modulo
-# 10^5, excluding the tens (hence, not ending in a zero). Multiply
-# them all out, using powermod for efficient exponentiation in our
-# modular arithmetic scope, and you have the answer.
-#
-# It's an easy proof to show that there will always be more powers of
-# 2 than powers of 5, provided our upper limit is at least, you know,
-# 2.
+# This is problem160_1.jl applied to a smaller numerical value. I can
+# do this because of the logic here:
+# https://projecteuler.net/thread=160#11127
 
-LIMIT = 1_000_000_000_000  # Inclusive limit
+LIMIT = 12_800_000  # Inclusive limit
 
 DIGIT_COUNT = 5
 MODULO = 10 ^ DIGIT_COUNT
