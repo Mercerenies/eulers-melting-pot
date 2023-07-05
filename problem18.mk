@@ -6,7 +6,6 @@ get=$(word $2,$(subst ;,$(SP),$(word $1,$(data))))
 
 _add=$1 $2
 add=$(call to_num,$(call from_num,$1) $(call from_num,$2))
-_dec=$(wordlist 2,$(words $1),$1)
 _max=$(if $(word $(call to_num,$1),$2),$2,$1)
 to_num=$(words $1)
 _from_num=$(if $(word $1,$2),$2,$(call _from_num,$1,x $2))
