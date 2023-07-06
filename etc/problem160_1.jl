@@ -61,7 +61,7 @@ let
 
     # Now divide out twos from the first several multiples of 2. Let N
     # = count_all_fives(). We want to remove a single power of 2 from
-    # each of [2, 4, 6, 8, ... N-2, N]. But remember that these
+    # each of [2, 4, 6, 8, ... 2N-2, 2N]. But remember that these
     # numbers have already had their fives removed, so we have to take
     # that into consideration when removing values.
     values_to_remove = count_all_fives()
@@ -71,7 +71,7 @@ let
         old_value = (current_value * 2) % MODULO
         new_value = current_value % MODULO
         multiples[old_value] -= (LIMIT ÷ (2 * MODULO))
-        multiples[old_value] += (LIMIT ÷ (2 * MODULO))
+        multiples[new_value] += (LIMIT ÷ (2 * MODULO))
         values_to_remove -= LIMIT ÷ (2 * MODULO)
         i += 1
     end
@@ -80,11 +80,13 @@ let
     # some back by hand.
     i = 1
     while values_to_remove < 0
-        old_value = i % MODULO
-        new_value = (i * 2) % MODULO
+        current_value = NON_FIVES[i]
+        old_value = current_value % MODULO
+        new_value = (current_value * 2) % MODULO
         multiples[old_value] -= 1
         multiples[new_value] += 1
         values_to_remove += 1
+        i += 1
     end
 
     # Now we have all the multiples. Multiply it out.
