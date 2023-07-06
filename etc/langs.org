@@ -88,6 +88,7 @@
 *** Objective-C                                                        :used:
 *** Pascal                                                             :used:
 *** R
+*** Rebol
 *** Red (https://www.red-lang.org/)
 *** Self
 *** Smalltalk                                                          :used:
@@ -499,7 +500,6 @@
 *** PPL
 *** Processing (https://en.wikipedia.org/wiki/Processing_(programming_language))
 *** Reason (https://reasonml.github.io/)
-*** Rebol
 *** Runic Enchantments (https://github.com/Draco18s/RunicEnchantments/tree/Console)
 *** Simula
 *** Skip

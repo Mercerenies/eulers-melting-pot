@@ -132,6 +132,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Prolog
 * Pyth
 * QBASIC
+* Rebol
 * Roy
 * Rust
 * Scratch
@@ -1122,6 +1123,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Pikt](https://github.com/iamgio/pikt)
 * Compiler / Interpreter: [Pikt 64025d6](https://github.com/iamgio/pikt/tree/64025d690daffe0315654fae74b08af39319d542)
 * Notes: `./etc/build159.sh` may be helpful in building the source.
+
+### Euler 160
+* File: [problem160.r](problem160.r)
+* Language: [Rebol](http://www.rebol.com/)
+* Compiler / Interpreter: [REBOL/Core 2.7.8.4.10 (23-Jan-2016)](http://www.rebol.com/downloads.html)
+* Notes: (None)
 
 ## Valid Languages
 
