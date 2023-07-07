@@ -88,7 +88,7 @@
 *** Objective-C                                                        :used:
 *** Pascal                                                             :used:
 *** R
-*** Rebol
+*** Rebol                                                              :used:
 *** Red (https://www.red-lang.org/)
 *** Self
 *** Smalltalk                                                          :used:
@@ -495,10 +495,10 @@
 *** Oz
 *** Paperscript
 *** Peg (https://github.com/HackerFoo/peg)
-*** Pikt
 *** Postscript
 *** PPL
 *** Processing (https://en.wikipedia.org/wiki/Processing_(programming_language))
+*** Pyret (https://pyret.org/index.html)
 *** Reason (https://reasonml.github.io/)
 *** Runic Enchantments (https://github.com/Draco18s/RunicEnchantments/tree/Console)
 *** Simula
