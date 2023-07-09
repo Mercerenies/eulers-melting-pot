@@ -145,6 +145,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Snowman
 * Stuck
 * SuperCollider
+* Swift
 * Taxi
 * Tcl
 * Tome
@@ -1128,6 +1129,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem160.r](problem160.r)
 * Language: [Rebol](http://www.rebol.com/)
 * Compiler / Interpreter: [REBOL/Core 2.7.8.4.10 (23-Jan-2016)](http://www.rebol.com/downloads.html)
+* Notes: (None)
+
+### Euler 161
+* File: [problem161.swift](problem161.swift)
+* Language: [Swift](https://www.swift.org/)
+* Compiler / Interpreter: [swift-5.8.1-RELEASE](https://www.swift.org/download/)
 * Notes: (None)
 
 ## Valid Languages

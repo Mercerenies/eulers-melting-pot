@@ -1,5 +1,13 @@
 
 # Let's do recurrence relations now.
+#
+# This is basically really fancy dynamic programming. We identify, for
+# each possible configuration of the top three rows, the linear
+# equation that identifies the count for that formation, given the
+# count for "smaller" formations. Then we iterate over a big table and
+# apply the formulas repeatedly until we get where we want to be.
+#
+# ~3 seconds in Python.
 
 from __future__ import annotations
 
@@ -238,6 +246,11 @@ WIDTH = 9
 GOAL = 12
 states = build_state_table(WIDTH)
 equations = build_equation_table(states)
+
+# We start with extremely negative numbers here. If our topological
+# sort fails for some reason and we solve in the wrong order, we'll
+# get a very negative answer which makes that problem obvious.
+# Effectively, we're poisoning the well of uninitialized values.
 values_table = [[-9999] * len(states) for _ in range(GOAL + 1)]
 values_table[0] = [0] * len(states)
 
