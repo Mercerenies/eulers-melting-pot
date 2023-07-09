@@ -280,12 +280,14 @@
 *** Cy (https://github.com/cyoce/Cy)
 *** ed
     + Loops are recursive
+    + Short list
 *** Emmental (https://esolangs.org/wiki/Emmental)
 *** Emoji                                                              :used:
 *** Emotinomicon
     + Short list
 *** Enchilada                                                          :used:
-*** Excel
+*** Excel                                                              :used:
+    + Answer must fit into floating-point value
 *** FALSE                                                              :used:
 *** FiM++                                                              :used:
 *** Folders
@@ -585,3 +587,4 @@
     Yeah.
 
 *** Inform 7
+*** ed

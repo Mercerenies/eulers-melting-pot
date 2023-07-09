@@ -106,6 +106,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * MASM
 * Math++
 * MATL
+* Microsoft Excel
 * Minecraft
 * MontiLang
 * MoonScript
@@ -1136,6 +1137,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Swift](https://www.swift.org/)
 * Compiler / Interpreter: [swift-5.8.1-RELEASE](https://www.swift.org/download/)
 * Notes: (None)
+
+### Euler 162
+* File: [problem162.xlsx](problem162.xlsx)
+* Language: [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel)
+* Compiler / Interpreter: [Office 365 Excel 16.0.16704.42304](https://www.office.com/)
+* Notes: Due to numerical precision limits, the answer is printed along two cells
 
 ## Valid Languages
 

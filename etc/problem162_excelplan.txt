@@ -1,0 +1,43 @@
+
+Plan document for the Excel spreadsheet formula we're building.
+
+multinomial is built-in in Excel.
+
+COUNT_FUNCTION, LAMBDA(W, Z, O, A, (MULTINOMIAL(W, Z, O, A) - IF(Z > 0, MULTINOMIAL(W, Z - 1, O, A), 0)) * 13 ^ W)
+
+FIX, LAMBDA(F, LAMBDA(X, F(LAMBDA(V, X(X)(V))))(LAMBDA(X, F(LAMBDA(V, X(X)(V))))))
+
+ALOOP, FIX(LAMBDA(G, LAMBDA(W, LAMBDA(Z, LAMBDA(O, LAMBDA(A, IF(W + Z + O + A <= 16, COUNT_FUNCTION(W, Z, O, A) + G(W)(Z)(O)(A + 1), 0)))))))
+
+OLOOP, FIX(LAMBDA(G, LAMBDA(W, LAMBDA(Z, LAMBDA(O, IF(W + Z + O <= 16, ALOOP(W)(Z)(O)(1) + G(W)(Z)(O + 1), 0))))))
+
+ZLOOP, FIX(LAMBDA(G, LAMBDA(W, LAMBDA(Z, IF(W + Z <= 16, OLOOP(W)(Z)(1) + G(W)(Z + 1), 0)))))
+
+ZLOOP(A1)(1) [Do this 17 times in 17 cells, where the referenced A1 cell ranges from 0 to 16 inclusive. Then sum the results]
+
+Excel doesn't do 64 bit integers. Should've checked that up front :(
+
+--
+
+Okay, we're splitting the calculation in two. The above will do the
+first few significant digits (above 16^6). Then we do the below to get
+everything done modulo 16^6. Combine digits at the end.
+
+The multiplications by 13 are overflowing, do them in a different order.
+
+FIX, LAMBDA(F, LAMBDA(X, F(LAMBDA(V, X(X)(V))))(LAMBDA(X, F(LAMBDA(V, X(X)(V))))))
+
+MUL, FIX(LAMBDA(G, LAMBDA(N, LAMBDA(TIMES, IF(TIMES <= 0, N, G(MOD(13 * N, 16^6))(TIMES - 1))))))
+
+COUNT_FUNCTION, LAMBDA(W, Z, O, A, MUL(MOD(ROUND(MULTINOMIAL(W, Z, O, A), 0) - IF(Z > 0, ROUND(MULTINOMIAL(W, Z - 1, O, A), 0), 0), 16^6))(W))
+
+ALOOP, FIX(LAMBDA(G, LAMBDA(W, LAMBDA(Z, LAMBDA(O, LAMBDA(A, IF(W + Z + O + A <= 16, MOD(MOD(COUNT_FUNCTION(W, Z, O, A), 16^6) + G(W)(Z)(O)(A + 1), 16^6), 0)))))))
+
+OLOOP, FIX(LAMBDA(G, LAMBDA(W, LAMBDA(Z, LAMBDA(O, IF(W + Z + O <= 16, MOD(ALOOP(W)(Z)(O)(1) + G(W)(Z)(O + 1), 16^6), 0))))))
+
+ZLOOP, FIX(LAMBDA(G, LAMBDA(W, LAMBDA(Z, IF(W + Z <= 16, MOD(OLOOP(W)(Z)(1) + G(W)(Z + 1), 16^6), 0)))))
+
+ZLOOP(A1)(1) [Do this 17 times in 17 cells, where the referenced A1 cell ranges from 0 to 16 inclusive. Then sum the results]
+
+
+MOD(OLOOP(3)(1)(1) + ZLOOP(3)(2), 16^6)
