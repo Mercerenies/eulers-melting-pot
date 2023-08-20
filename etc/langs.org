@@ -447,6 +447,7 @@
 *** Catln (https://catln.dev/)
 *** CDuce (http://www.cduce.org/)
 *** Cecil
+*** Charm (https://en.wikipedia.org/wiki/Charm_(programming_language))
 *** Clean
 *** Coconut
 *** ColdFusion
@@ -510,6 +511,7 @@
 *** SNUSP
 *** Soul (https://github.com/egel-lang/soul)
 *** Squirrel
+*** Story (https://github.com/soborat/story-programming-language)
 *** SuperForth (https://github.com/TheRealMichaelWang/superforth)
 *** Sweet.js
 *** Teascript
@@ -555,6 +557,9 @@
     - https://github.com/hakatashi/esolang-box
   + Best languages that compile to JS
     - https://www.slant.co/topics/101/~best-languages-that-compile-to-javascript
+  + What languages have been created by PLDI Users - Programming
+    Language Design and Implementation Meta Stack Exchange
+    - https://langdev.meta.stackexchange.com/questions/350/what-languages-have-been-created-by-pldi-users
 ** ONLINE INTERPRETERS
    Some online interpreters that are free to use and very handy for tasks like this.
 
