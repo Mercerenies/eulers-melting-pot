@@ -1,19 +1,17 @@
 
-// My mistake it's not exponential :(
-
 object problem163_2 {
 
   case class Triangle(
     val sideLength: Int,
   ) {
 
-    def maxCoord: Int = pow(2, sideLength + 1)
+    def maxCoord: Int = 4 * sideLength
 
     case class Point(
       val a: Int,
       val b: Int,
     ) {
-      val c: Int = 3 * pow(2, sideLength) - a - b
+      val c: Int = 6 * sideLength - a - b
 
       def rotatedLeft: Point = Point(c, a)
 
@@ -24,6 +22,12 @@ object problem163_2 {
     case class Line(
       val points: Set[Point],
     ) {
+
+      infix def intersect(that: Set[Point]): Set[Point] =
+        this.points intersect that
+
+      infix def intersect(that: Line): Set[Point] =
+        this.points intersect that.points
 
       def rotatedLeft: Line =
         Line(points map { _.rotatedLeft })
@@ -38,77 +42,133 @@ object problem163_2 {
       def apply(points: Iterable[Point]): Line =
         Line(points.toSet)
 
+      extension(self: Set[Point])
+        infix def intersect(that: Line): Set[Point] =
+          that intersect self
+
     }
 
   }
 
-  sealed trait LineClass {
+  sealed trait LineType {
     def linesFor(triangle: Triangle): List[triangle.Line]
   }
 
-  object LineClass {
+  object LineType {
 
-    case object A extends LineClass {
+    val all: List[LineType] = List(A, B, C, D, E, F)
+
+    case object A extends LineType {
 
       override def linesFor(triangle: Triangle): List[triangle.Line] =
-        (0 until pow(2, triangle.sideLength) by 2 map { lineFor(triangle, _) }).toList
+        (0 until lineCount(triangle) map { lineFor(triangle, _) }).toList
 
-      private def lineFor(triangle: Triangle, start: Int): triangle.Line =
-        triangle.Line(
-          start to (triangle.maxCoord - start) by 2 map { a => triangle.Point(a, start + pow(2, triangle.sideLength) - (a - start) / 2) }
-        )
+      private def lineCount(triangle: Triangle): Int = triangle.sideLength
+
+      private def lineFor(triangle: Triangle, index: Int): triangle.Line = {
+        val length = 1 + 2 * (lineCount(triangle) - index)
+        val startA = 2 * index
+        val startB = (triangle.maxCoord / 2) + 2 * index
+        triangle.Line(0 until length map { j => triangle.Point(startA + 2 * j, startB - j) })
+      }
 
     }
 
-    case object B extends LineClass {
+    case object B extends LineType {
 
       override def linesFor(triangle: Triangle): List[triangle.Line] =
         A.linesFor(triangle).map { _.rotatedLeft }
 
     }
 
-    case object C extends LineClass {
+    case object C extends LineType {
 
       override def linesFor(triangle: Triangle): List[triangle.Line] =
         A.linesFor(triangle).map { _.rotatedRight }
 
     }
 
-    case object D extends LineClass {
+    case object D extends LineType {
 
       override def linesFor(triangle: Triangle): List[triangle.Line] =
-        (2 until triangle.maxCoord by 2 map { lineFor(triangle, _) }).toList
+        (0 until lineCount(triangle) map { lineFor(triangle, _) }).toList
 
-      private def lineFor(triangle: Triangle, a: Int): triangle.Line = {
-        val startB = (triangle.maxCoord - a) / 2
-        val stopB = math.max(triangle.maxCoord - a, pow(2, triangle.sideLength)) // This is wrong :(
-        triangle.Line(startB to stopB map { b => triangle.Point(a, b) })
+      private def lineCount(triangle: Triangle): Int = 2 * triangle.sideLength - 1
+
+      private def lineFor(triangle: Triangle, index: Int): triangle.Line = {
+        val length = math.min(4 + 3 * index, 4 + 3 * (lineCount(triangle) - index - 1))
+        val a = 2 * (index + 1)
+        val startB = (triangle.maxCoord / 2 - 1) - index
+        triangle.Line(0 until length map { j => triangle.Point(a, startB + j) })
       }
 
     }
 
-    case object E extends LineClass {
+    case object E extends LineType {
 
       override def linesFor(triangle: Triangle): List[triangle.Line] =
-        E.linesFor(triangle).map { _.rotatedLeft }
+        D.linesFor(triangle).map { _.rotatedLeft }
 
     }
 
-    case object F extends LineClass {
+    case object F extends LineType {
 
       override def linesFor(triangle: Triangle): List[triangle.Line] =
-        E.linesFor(triangle).map { _.rotatedRight }
+        D.linesFor(triangle).map { _.rotatedRight }
 
     }
 
   }
 
-  def pow(a: Int, b: Int): Int = math.pow(a, b).intValue
+  case class TriangleClass(
+    val lineType1: LineType,
+    val lineType2: LineType,
+    val lineType3: LineType,
+    val multiplier: Int,
+  ) {
+
+    def countTriangles(outerTriangle: Triangle, allLines: Map[LineType, List[outerTriangle.Line]]): Int =
+      (for {
+        line1 <- allLines(lineType1)
+        line2 <- allLines(lineType2)
+        if !(line1 intersect line2).isEmpty
+        line3 <- allLines(lineType3)
+        if !(line1 intersect line3).isEmpty
+        if !(line2 intersect line3).isEmpty
+        if (line1 intersect line2 intersect line3).isEmpty
+      } yield {
+        1
+      }).sum * multiplier
+
+  }
+
+  object TriangleClass {
+
+    val all: List[TriangleClass] = {
+      import LineType.*
+      List(
+        TriangleClass(A, B, C, 1),
+        TriangleClass(D, E, F, 1),
+        TriangleClass(A, B, F, 3),
+        TriangleClass(A, E, F, 3),
+        TriangleClass(A, B, D, 6),
+        TriangleClass(A, D, E, 6),
+      )
+    }
+
+  }
+
+  def linesByClass(triangle: Triangle): Map[LineType, List[triangle.Line]] =
+    LineType.all.map { lineClass => lineClass -> lineClass.linesFor(triangle) }.toMap
+
+  def countTriangles(outerTriangle: Triangle): Int = {
+    val allLines = linesByClass(outerTriangle)
+    TriangleClass.all.map { _.countTriangles(outerTriangle, allLines) }.sum
+  }
 
   @main def main() = {
-    val triangle = Triangle(2)
-    println(LineClass.A.linesFor(triangle))
-    println(LineClass.D.linesFor(triangle))
+    val triangle = Triangle(36)
+    println(countTriangles(triangle))
   }
 
 }
