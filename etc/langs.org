@@ -123,7 +123,7 @@
     + No arrays
 *** 🆒                                                                 :used:
 *** Dafny                                                              :used:
-*** Dhall (https://dhall-lang.org/#)
+*** Dhall (https://dhall-lang.org/#)                                   :used:
     + Subturing, loops must be finitely bounded
     + Loops only available via map, fold, etc.
 *** Dip                                                                :used:

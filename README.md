@@ -48,6 +48,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Cubix
 * D
 * Dafny
+* Dhall
 * Dip
 * Dogescript
 * Dry
@@ -1150,6 +1151,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [AssemblyScript](https://www.assemblyscript.org/)
 * Compiler / Interpreter: [assemblyscript 0.19.23](https://www.npmjs.com/package/assemblyscript/v/0.19.23)
 * Notes: `./etc/build163.sh` may be helpful in building the source.
+
+### Euler 164
+* File: [problem164.dhall](problem164.dhall)
+* Language: [Dhall](https://dhall-lang.org/)
+* Compiler / Interpreter: [Dhall 1.41.2](https://github.com/dhall-lang/dhall-haskell/releases/tag/1.41.2)
+* Notes: (None)
 
 ## Valid Languages
 
