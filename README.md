@@ -21,6 +21,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * APL
 * Arc
 * ArkScript
+* AssemblyScript
 * AutoHotkey
 * AWK
 * Aya
@@ -1143,6 +1144,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel)
 * Compiler / Interpreter: [Office 365 Excel 16.0.16704.42304](https://www.office.com/)
 * Notes: Due to numerical precision limits, the answer is printed along two cells
+
+### Euler 163
+* File: [problem163.ts](problem163.ts)
+* Language: [AssemblyScript](https://www.assemblyscript.org/)
+* Compiler / Interpreter: [assemblyscript 0.19.23](https://www.npmjs.com/package/assemblyscript/v/0.19.23)
+* Notes: `./etc/build163.sh` may be helpful in building the source.
 
 ## Valid Languages
 

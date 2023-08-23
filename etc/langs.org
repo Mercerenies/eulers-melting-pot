@@ -57,7 +57,7 @@
    and "Platinum" are measures of my personal skill.
 *** Ada                                                                :used:
 *** ALGOL 68                                                           :used:
-*** AssemblyScript (https://www.assemblyscript.org/)
+*** AssemblyScript (https://www.assemblyscript.org/)                   :used:
     + Limit is probably i32; i64 is mocked through a weird interface
       (~setTempRet0~) that probably doesn't work for us.
 *** AWK                                                                :used:
