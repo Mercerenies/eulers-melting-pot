@@ -1,19 +1,20 @@
 
 // Working solution in D. Uses rationals, as floats are subject to
-// imprecision and get a bad answer. 29 seconds
+// imprecision and get a bad answer. 21 seconds
 
 module problem165_1;
 
 import std.stdio;
 import std.math;
 import std.algorithm;
+import std.algorithm.sorting;
 import std.array;
 import std.typecons;
 import std.numeric;
 
 struct Rational {
-  const long numerator;
-  const long denominator;
+  private long _numerator;
+  private long _denominator;
 
   this(long numerator, long denominator) {
     assert(denominator != 0);
@@ -22,12 +23,25 @@ struct Rational {
       numerator *= -1;
     }
     long d = gcd(numerator, denominator);
-    this.numerator = numerator / d;
-    this.denominator = denominator / d;
+    this._numerator = numerator / d;
+    this._denominator = denominator / d;
   }
 
   this(long longValue) {
     this(longValue, 1L);
+  }
+
+  void opAssign(Rational rhs) {
+    _numerator = rhs._numerator;
+    _denominator = rhs._denominator;
+  }
+
+  long numerator() const {
+    return _numerator;
+  }
+
+  long denominator() const {
+    return _denominator;
   }
 
   int opCmp(ref const Rational that) const {
@@ -65,10 +79,10 @@ int rsgn(Rational rat) {
 }
 
 struct Point {
-  const Rational x;
-  const Rational y;
+  Rational x;
+  Rational y;
 
-  int opCmp(ref const Point that) {
+  int opCmp(Point that) {
     if (this.x - that.x != Rational(0, 1)) {
       return rsgn(this.x - that.x);
     } else {
@@ -79,18 +93,31 @@ struct Point {
 }
 
 struct LineSegment {
-  const Point first;
-  const Point second;
+  private Point _first;
+  private Point _second;
 
   // Normalize so that first <= second.
   this(Point first, Point second) {
     if (first > second) {
-      this.second = first;
-      this.first = second;
+      this._second = first;
+      this._first = second;
     } else {
-      this.first = first;
-      this.second = second;
+      this._first = first;
+      this._second = second;
     }
+  }
+
+  void opAssign(LineSegment rhs) {
+    _first = rhs._first;
+    _second = rhs._second;
+  }
+
+  const Point first() {
+    return _first;
+  }
+
+  const Point second() {
+    return _second;
   }
 
 }
@@ -141,7 +168,7 @@ Nullable!Point intersectionPoint(ref const LineSegment line1, ref const LineSegm
     // Parallel or overlapping: Always false
     return Nullable!Point.init;
   }
-  Rational x = (line2.first.y - line1.first.y  + m1 * line1.first.x - m2 * line2.first.x) / (m1 - m2);
+  Rational x = (line2.first.y - line1.first.y + m1 * line1.first.x - m2 * line2.first.x) / (m1 - m2);
   Rational y = f(line1, x);
   // Check bounds for line1
   if ((x <= line1.first.x) || (x >= line1.second.x)) {
@@ -189,12 +216,19 @@ void runSampleValues() {
 void main(string[] args) {
   //runSampleValues();
   auto lines = numbersToSegments(blumBlumShub(20001)); // 20,001 = 20,000 + the one starting value of 290797
+  lines.sort!("a.first < b.first")();
   int[Point] intersectionPoints; // Used as a set
   long count = 0;
   for (int i = 0; i < lines.length; i++) {
     auto line1 = lines[i];
     for (int j = i + 1; j < lines.length; j++) {
       auto line2 = lines[j];
+      // The lines are sorted in increasing order by their minimum X
+      // coordinate, so when line2's min X is greater than line1's max
+      // X, we can never get an intersection again, so break.
+      if (line2.first.x > line1.second.x) {
+        break;
+      }
       auto point = intersectionPoint(line1, line2);
       if (!point.isNull) {
         intersectionPoints[point.get] = 1;
