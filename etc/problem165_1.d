@@ -1,6 +1,6 @@
 
 // Working solution in D. Uses rationals, as floats are subject to
-// imprecision and get a bad answer. 54 seconds
+// imprecision and get a bad answer. 29 seconds
 
 module problem165_1;
 
@@ -191,8 +191,10 @@ void main(string[] args) {
   auto lines = numbersToSegments(blumBlumShub(20001)); // 20,001 = 20,000 + the one starting value of 290797
   int[Point] intersectionPoints; // Used as a set
   long count = 0;
-  foreach (line1; lines) {
-    foreach (line2; lines) {
+  for (int i = 0; i < lines.length; i++) {
+    auto line1 = lines[i];
+    for (int j = i + 1; j < lines.length; j++) {
+      auto line2 = lines[j];
       auto point = intersectionPoint(line1, line2);
       if (!point.isNull) {
         intersectionPoints[point.get] = 1;
