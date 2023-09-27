@@ -151,6 +151,7 @@
 *** LaTeX                                                              :used:
 *** Lean (https://leanprover-community.github.io/)                     :used:
 *** LilyPond                                                           :used:
+*** Luna (http://staging.luna-lang.org/)
 *** m4                                                                 :used:
 *** Magpie (https://www.magpie-lang.org/)
     + Arrays are immutable
@@ -460,6 +461,7 @@
 *** Ė (https://e-dot.io/)
 *** Egel (https://egel-lang.github.io/)
 *** EGL
+*** Enso (https://enso.org/)
 *** Euler
 *** F' (https://nasa.github.io/fprime/)
 *** Falcon (https://rosettacode.org/wiki/Category:Falcon)
@@ -483,10 +485,10 @@
 *** Koi (https://koi-lang.dev/)
 *** Konna (https://www.reddit.com/r/ProgrammingLanguages/comments/rpe65y/konna_my_programming_language/)
 *** Lava (https://lavape.sourceforge.net/)
-*** Logtalk
-*** Luna
+*** Logtalk (https://logtalk.org/)
 *** Minus (http://www.golfscript.com/)
-*** Monte
+*** Monte (https://github.com/monte-language/monte)
+*** Mojo (https://www.modular.com/mojo)
 *** Nibbles (http://www.golfscript.com/)
 *** Oasis
 *** Oblivion (https://jweinst1.github.io/OblivionWebsite/)
@@ -503,9 +505,11 @@
 *** Processing (https://en.wikipedia.org/wiki/Processing_(programming_language))
 *** Pyret (https://pyret.org/index.html)
 *** Reason (https://reasonml.github.io/)
+*** Rhombus (https://docs.racket-lang.org/rhombus/index.html)
 *** Runic Enchantments (https://github.com/Draco18s/RunicEnchantments/tree/Console)
 *** Simula
 *** Skip
+*** Skript (https://docs.skriptlang.org/)
 *** smodels (http://www.tcs.hut.fi/Software/smodels/)
 *** Snails
 *** SNUSP
@@ -520,6 +524,7 @@
 *** Unison (https://www.unison-lang.org/)
 *** Universal Lambda (http://www.golfscript.com/)
 *** VALE (https://github.com/project-everest/vale)
+*** Verse (https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference)
 *** Vortex (https://github.com/dibsonthis/Vortex)
 *** Vyxal (https://github.com/Vyxal/Vyxal)
 *** Whiley (https://en.wikipedia.org/wiki/Whiley_(programming_language))
