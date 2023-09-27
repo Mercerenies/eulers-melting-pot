@@ -83,6 +83,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Gwion
 * Hanabi
 * Hexagony
+* Hy
 * i
 * Icon
 * IntercalScript
@@ -1157,6 +1158,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Dhall](https://dhall-lang.org/)
 * Compiler / Interpreter: [Dhall 1.41.2](https://github.com/dhall-lang/dhall-haskell/releases/tag/1.41.2)
 * Notes: (None)
+
+### Euler 165
+* File: [problem165.hy](problem165.hy)
+* Language: [Hy](http://hylang.org/)
+* Compiler / Interpreter: [hy 0.27.0+96.g902233d8](https://github.com/hylang/hy/tree/902233d854d765058927402d60f1ee8bef02daf8)
+* Notes: An incredibly slow solution.
 
 ## Valid Languages
 

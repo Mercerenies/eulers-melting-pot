@@ -233,6 +233,7 @@
 *** Common Lisp
 *** ELisp                                                              :used:
 *** Guile
+*** Hy (https://en.wikipedia.org/wiki/Hy)                              :used:
 *** Kawa
 *** Kernel (Klisp)
 *** LFE (Lisp Flavored Erlang)
@@ -476,7 +477,6 @@
 *** Groovy
 *** Hare (https://harelang.org/)
 *** Husk (https://github.com/barbuz/Husk)
-*** Hy (https://en.wikipedia.org/wiki/Hy)
 *** Hyperscript (https://hyperscript.org/)
 *** IMPS (https://imps.mcmaster.ca/)
 *** Jeebox (http://jeebox.org/stuff/learn_more/)
