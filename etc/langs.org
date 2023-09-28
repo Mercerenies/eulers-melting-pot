@@ -261,6 +261,7 @@
 *** 05AB1E                                                             :used:
 *** 1.1                                                                :used:
 *** ><>                                                                :used:
+*** AGSPL (https://esolangs.org/wiki/AGSPL)
 *** Alice (m-ender)                                                    :used:
 *** Anti-Array                                                         :used:
 *** Aya                                                                :used:
