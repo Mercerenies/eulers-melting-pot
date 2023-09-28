@@ -1,0 +1,28 @@
+"Failed AGSPL solution; language is FAR too slow for this challenge"&
+
+0
+0 :h {
+  0 :j {
+    ;j 1 + :j
+    0 :k {
+      ;j ;k + ;h - :e
+      { 1 _ ;e < ;e 10 < * } {
+        &
+        0 :l {
+          0 :m {
+            ;h ;l + ;m - :a
+            { 1 _ ;a < ;a 10 < * } {
+              &
+              "dummy"
+            } ? &
+            ;m 1 + :m
+          } 10 v
+          ;l 1 + :l
+        } 10 v
+        "dummy"
+      } ? &
+      ;k 1 + :k
+    } 10 v
+  } 10 v
+  ;h 1 + :h
+} 10 v
