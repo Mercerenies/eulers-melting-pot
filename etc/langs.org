@@ -331,7 +331,7 @@
 *** Pyth                                                               :used:
 *** Quark (https://github.com/henrystanley/Quark/)
 *** Retina
-*** Rockstar
+*** Rockstar                                                           :used:
 *** Secretary
 *** Seriously                                                          :used:
 *** Shakespeare                                                        :used:
@@ -454,6 +454,7 @@
 *** Clean
 *** Coconut
 *** ColdFusion
+*** Cubically (https://github.com/aaronryank/cubically)
 *** Crystal
 *** Curl (https://www.curl.com/products/prod/language/)
 *** Dale (https://github.com/tomhrr/dale)
@@ -479,6 +480,7 @@
 *** Hare (https://harelang.org/)
 *** Husk (https://github.com/barbuz/Husk)
 *** Hyperscript (https://hyperscript.org/)
+*** I (https://aplwiki.com/wiki/I)
 *** IMPS (https://imps.mcmaster.ca/)
 *** Jeebox (http://jeebox.org/stuff/learn_more/)
 *** jq (https://stedolan.github.io/jq/)
@@ -532,6 +534,7 @@
 *** Whispers (https://github.com/cairdcoinheringaahing/Whispers)
 *** Whython (https://www.pxeger.com/2021-09-19-hacking-on-cpython/)
     May be unimplemented?
+*** Width (https://github.com/stestoltz/Width)
 *** XQuery
 *** XY
 *** Yuescript
@@ -566,6 +569,8 @@
   + What languages have been created by PLDI Users - Programming
     Language Design and Implementation Meta Stack Exchange
     - https://langdev.meta.stackexchange.com/questions/350/what-languages-have-been-created-by-pldi-users
+  + Category:Programming Languages - APL Wiki
+    - https://aplwiki.com/wiki/Category:Programming_languages
 ** ONLINE INTERPRETERS
    Some online interpreters that are free to use and very handy for tasks like this.
 

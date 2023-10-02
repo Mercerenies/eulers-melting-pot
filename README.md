@@ -137,6 +137,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Pyth
 * QBASIC
 * Rebol
+* Rockstar
 * Roy
 * Rust
 * Scratch
@@ -1164,6 +1165,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Hy](http://hylang.org/)
 * Compiler / Interpreter: [hy 0.27.0+96.g902233d8](https://github.com/hylang/hy/tree/902233d854d765058927402d60f1ee8bef02daf8)
 * Notes: An incredibly slow solution.
+
+### Euler 166
+* File: [problem166.rock](problem166.rock)
+* Language: [Rockstar](https://github.com/RockstarLang/rockstar)
+* Compiler / Interpreter: [wolfgang42/rockstar-js 29a1476](https://github.com/wolfgang42/rockstar-js/tree/29a14768db98724b1ba4f61b27362d0f68558603)
+* Notes: Indented version is available at [etc/problem166_indented.rock](etc/problem166_indented.rock).
 
 ## Valid Languages
 
