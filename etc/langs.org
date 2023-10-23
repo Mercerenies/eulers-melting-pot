@@ -247,6 +247,8 @@
 *** 7 Billion Humans
 *** Factorio                                                           :used:
 *** Game Builder Garage                                                :used:
+*** Oort (https://oort.rs/)
+    + Too similar to Rust?
 *** Super Mario Maker 2
     + Very limited in computational capability, might be unusable
 *** Minecraft                                                          :used:
