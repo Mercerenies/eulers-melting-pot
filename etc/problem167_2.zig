@@ -159,12 +159,13 @@ pub fn main() !void {
     const allocator = arena.allocator();
 
     //const bits = try generateUlamBits(allocator, 1, 2, 40000);
-    const bits = try generateUlamBits(allocator, 2, 5, 20000);
+    //const bits = try generateUlamBits(allocator, 2, 5, 80000); ///// Nudge me :), we're at 1,300,321 right now
+    const bits = try generateUlamBits(allocator, 2, 11, 200);
     const values = try compileUlamValues(allocator, bits);
     //std.debug.print("{any}\n", .{values});
     //std.debug.print("{any}\n", .{bits});
-    std.debug.print("first few = {any}\n", .{values.items[0..100]});
     std.debug.print("length = {any}\n", .{values.items.len});
+    std.debug.print("values = {any}\n", .{values.items});
 
     //std.debug.assert(std.mem.eql(u64, values.items[0..59], &[_]u64{1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28, 36, 38, 47, 48, 53, 57, 62, 69, 72, 77, 82, 87, 97, 99, 102, 106, 114, 126, 131, 138, 145, 148, 155, 175, 177, 180, 182, 189, 197, 206, 209, 219, 221, 236, 238, 241, 243, 253, 258, 260, 273, 282, 309, 316, 319, 324, 339}));
     //std.debug.assert(values.items[9999] == 132788);
