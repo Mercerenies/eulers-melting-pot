@@ -7,7 +7,7 @@ const AllocationError = error {
     OutOfMemory,
 };
 
-const SIZEOF_U64 = @sizeOf(u64);
+const SIZEOF_U64 = @bitSizeOf(u64);
 
 inline fn bitOf(value: u64, bit_number: u6) u1 {
     return @truncate(value >> bit_number);
@@ -19,27 +19,40 @@ inline fn setBitOf(value: *u64, bit_number: u6, new_bit_value: u1) void {
     value.* = value.* ^ flip_value;
 }
 
+inline fn bitOfArray(values: []u64, index: u64) u1 {
+    return bitOf(values[index / SIZEOF_U64], @truncate(index % SIZEOF_U64));
+}
+
+inline fn setBitOfArray(values: []u64, index: u64, value: u1) void {
+    setBitOf(&values[index / SIZEOF_U64], @truncate(index % SIZEOF_U64), value);
+}
+
 inline fn doUlamSumSlow(ulam_array: []u64, non_ulam_array: []u64, k: u64) void {
     // The slow version; do each bit individually.
-    const upper_bound = @min(k, ulam_array.len - k);
+    const upper_bound = @min(k, ulam_array.len * SIZEOF_U64 - k);
     for (1..upper_bound) |i| {
         const j = k + i;
-        const src_bit = bitOf(ulam_array[i / SIZEOF_U64], @truncate(i % SIZEOF_U64));
-        const dest_bit = bitOf(ulam_array[j / SIZEOF_U64], @truncate(j % SIZEOF_U64));
-        var non_ulam_bit = bitOf(non_ulam_array[j / SIZEOF_U64], @truncate(j % SIZEOF_U64));
+        const src_bit = bitOfArray(ulam_array, i);
+        const dest_bit = bitOfArray(ulam_array, j);
+        var non_ulam_bit = bitOfArray(non_ulam_array, j);
         non_ulam_bit |= (src_bit & dest_bit);
-        setBitOf(&non_ulam_array[j / SIZEOF_U64], @truncate(j % SIZEOF_U64), non_ulam_bit);
-        setBitOf(&ulam_array[j / SIZEOF_U64], @truncate(j % SIZEOF_U64), (dest_bit | src_bit) & ~non_ulam_bit);
+        setBitOfArray(non_ulam_array, j, non_ulam_bit);
+        setBitOfArray(ulam_array, j, (dest_bit | src_bit) & ~non_ulam_bit);
     }
 }
 
 inline fn doUlamSum(ulam_array: []u64, non_ulam_array: []u64, k: u64) void {
-    const upper_bound = @min(k, ulam_array.len - k);
-    _ = upper_bound;
+    const upper_bound = @min(k, ulam_array.len * SIZEOF_U64 - k);
+    // Avoid weird corner cases; do it the slow way for small inputs.
+    if (upper_bound < 2 * SIZEOF_U64) {
+        doUlamSumSlow(ulam_array, non_ulam_array, k);
+        return;
+    }
 
     // I want to go from 1 up to (exclusive) upper_bound. Start by
     // getting aligned to a u64.
-    //const init_span = SIZEOF_U64 - ((k + 1) % SIZEOF_U64);
+    const init_span = SIZEOF_U64 - ((k + 1) % SIZEOF_U64);
+    _ = init_span;
 
     //for (1..upper_bound) |i| {
     //    const j = k + i;
@@ -63,14 +76,14 @@ fn generateUlamBits(allocator: std.mem.Allocator, a: u64, b: u64, length: usize)
     }
 
     var k = b;
-    setBitOf(&ulam_array[a / SIZEOF_U64], @truncate(a), 1);
-    setBitOf(&ulam_array[b / SIZEOF_U64], @truncate(b), 1);
+    setBitOfArray(ulam_array, a, 1);
+    setBitOfArray(ulam_array, b, 1);
 
-    while (k < length) {
+    while (k < length * SIZEOF_U64) {
         doUlamSum(ulam_array, non_ulam_array, k);
         // Calculate new k.
-        for (k+1..length) |new_k| {
-            if (bitOf(ulam_array[new_k / SIZEOF_U64], @truncate(new_k % SIZEOF_U64)) != 0) {
+        for (k + 1 .. length * SIZEOF_U64) |new_k| {
+            if (bitOfArray(ulam_array, new_k) != 0) {
                 k = new_k;
                 break;
             }
@@ -100,7 +113,12 @@ pub fn main() !void {
     defer arena.deinit();
     const allocator = arena.allocator();
 
-    const bits = try generateUlamBits(allocator, 1, 2, 200);
+    const bits = try generateUlamBits(allocator, 1, 2, 2500);
     const values = try compileUlamValues(allocator, bits);
-    std.debug.print("{any}\n", .{values});
+    //std.debug.print("{any}\n", .{values});
+    //std.debug.print("{any}\n", .{bits});
+    std.debug.print("length = {any}\n", .{values.items.len});
+
+    std.debug.assert(std.mem.eql(u64, values.items[0..59], &[_]u64{1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28, 36, 38, 47, 48, 53, 57, 62, 69, 72, 77, 82, 87, 97, 99, 102, 106, 114, 126, 131, 138, 145, 148, 155, 175, 177, 180, 182, 189, 197, 206, 209, 219, 221, 236, 238, 241, 243, 253, 258, 260, 273, 282, 309, 316, 319, 324, 339}));
+    std.debug.assert(values.items[9999] == 132788);
 }
