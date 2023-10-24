@@ -1,8 +1,7 @@
 
 // Ulam sequence generator using []i64 and complicated bit arithmetic. See https://math.stackexchange.com/questions/2165222/generating-ulam-sequences-using-bit-manipulation (specifically the answer that changed the function slightly)
 //
-// This is basically what the final solution in Zig is, but that one
-// is cleaned up quite a bit and has the debug stuff removed.
+// STRONGLY recommend running this with -OReleaseFast
 
 const std = @import("std");
 
@@ -201,23 +200,8 @@ pub fn main() !void {
     var sum: u64 = 0;
     for (2..11) |n| {
         const b = 2 * n + 1;
-        std.debug.print("b = {}, bits = {}\n", .{b, requiredUlamBitVectorLength(b) + 200});
         const term = try getUlamTerm(allocator, b, target_index - 1);
         sum += term;
     }
     std.debug.print("{}\n", .{sum});
-
-    //const bits = try generateUlamBits(allocator, 1, 2, 40000);
-    //const bits = try generateUlamBits(allocator, 2, 5, 80000); ///// Nudge me :), we're at 1,300,321 right now
-    //const bits = try generateUlamBits(allocator, 2, 21, 8000);
-    //const values = try compileUlamValues(allocator, bits);
-    //std.debug.print("{any}\n", .{values});
-    //std.debug.print("{any}\n", .{bits});
-    //std.debug.print("length = {any}\n", .{values.items.len});
-    //std.debug.print("values = {any}\n", .{values.items});
-
-    //std.debug.print("needed for 13 is {any}\n", .{requiredUlamBitVectorLength(21)});
-
-    //std.debug.assert(std.mem.eql(u64, values.items[0..59], &[_]u64{1, 2, 3, 4, 6, 8, 11, 13, 16, 18, 26, 28, 36, 38, 47, 48, 53, 57, 62, 69, 72, 77, 82, 87, 97, 99, 102, 106, 114, 126, 131, 138, 145, 148, 155, 175, 177, 180, 182, 189, 197, 206, 209, 219, 221, 236, 238, 241, 243, 253, 258, 260, 273, 282, 309, 316, 319, 324, 339}));
-    //std.debug.assert(values.items[9999] == 132788);
 }

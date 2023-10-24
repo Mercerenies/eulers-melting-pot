@@ -171,6 +171,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * X10
 * XSLT
 * Z
+* Zig
 * zkl
 * Zsh
 
@@ -1171,6 +1172,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Rockstar](https://github.com/RockstarLang/rockstar)
 * Compiler / Interpreter: [wolfgang42/rockstar-js 29a1476](https://github.com/wolfgang42/rockstar-js/tree/29a14768db98724b1ba4f61b27362d0f68558603)
 * Notes: Indented version is available at [etc/problem166_indented.rock](etc/problem166_indented.rock).
+
+### Euler 167
+* File: [problem167.zig](problem167.zip)
+* Language: [Zig](https://ziglang.org/documentation/master/)
+* Compiler / Interpreter: [0.12.0-dev.1200+5f92b070b](https://ziglang.org/download/)
+* Notes: A very slow solution, recommended to be compiled with `-OReleaseFast`.
 
 ## Valid Languages
 

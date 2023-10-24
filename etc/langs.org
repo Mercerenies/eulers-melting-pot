@@ -31,6 +31,7 @@
 *** Scala
 *** Tcl                                                                :used:
 *** Typescript                                                         :used:
+*** Zig                                                                :used:
 ** GOLD
    Gold languages are languages are languages I feel mostly confident
    programming in. With some help from online guides, I can consider
