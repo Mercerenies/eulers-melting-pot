@@ -26,6 +26,7 @@
 *** OCaml                                                              :used:
 *** Perl
 *** Python
+*** Raku (Perl 6)
 *** Ruby
 *** Rust                                                               :used:
 *** Scala
@@ -47,10 +48,10 @@
 *** Erlang                                                             :used:
 *** Factor                                                             :used:
 *** Fennel                                                             :used:
+*** Frege (https://github.com/Frege/frege)
 *** Go                                                                 :used:
 *** PHP
 *** Pizza
-*** Raku (Perl 6)
 ** SILVER
    Silver languages are perfectly capable languages to solve any
    challenge, but I do not consider myself fluent in them. "Silver" is
@@ -70,7 +71,6 @@
 *** F#
 *** Forth                                                              :used:
 *** Fortran                                                            :used:
-*** Frege (https://github.com/Frege/frege)
 *** Gleam                                                              :used:
 *** Haxe (https://haxe.org/)
 *** Icon                                                               :used:
@@ -191,6 +191,7 @@
 *** CIL                                                                :used:
 *** Jasmin                                                             :used:
 *** LLVM IR                                                            :used:
+*** Marie.js (https://marie.js.org/)
 *** MASM                                                               :used:
 *** Motorola 68000 (https://en.wikibooks.org/wiki/68000_Assembly/Registers)
     + Good simulator for it: http://www.easy68k.com/index.html
@@ -446,6 +447,7 @@
 *** ArnoldC (https://esolangs.org/wiki/ArnoldC)
 *** Ateji PX (https://en.wikipedia.org/wiki/Ateji_PX)
 *** ATS
+*** BaCon (http://basic-converter.org/)
 *** BQN (https://mlochbaum.github.io/BQN/)
 *** Brachylog
 *** Bracmat (https://github.com/BartJongejan/Bracmat)
