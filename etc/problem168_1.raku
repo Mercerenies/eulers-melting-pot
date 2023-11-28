@@ -10,12 +10,10 @@ sub do-shift($n) {
 # algorithm on Wikipedia.
 # https://en.wikipedia.org/wiki/Parasitic_number
 sub generate-parasitic-number($n, $k is copy) {
-    my $final-number = "";
     my $digits = 1;
     while (do-shift($k) != $k * $n) {
         my $product = $n * $k;
         my $new-digit = substr($product, * - $digits, 1) // '0';
-        $final-number = $new-digit ~ $final-number;
         $k = $new-digit ~ $k;
         $digits++;
     }
