@@ -1179,6 +1179,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Compiler / Interpreter: [0.12.0-dev.1200+5f92b070b](https://ziglang.org/download/)
 * Notes: A very slow solution, recommended to be compiled with `-OReleaseFast`.
 
+### Euler 168
+* File: [problem168.11l](problem168.11l)
+* Language: [11l](http://11l-lang.org/)
+* Compiler / Interpreter: [11l 2022.11](https://github.com/11L-lang/11l)
+* Notes: (None)
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular,

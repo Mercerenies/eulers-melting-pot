@@ -1,0 +1,87 @@
+
+-V upper_limit_digit_count = 100
+-V modulo_value = 100000
+
+F do_shift(n)
+   R n[n.len-1..]""n[0..n.len-2]
+
+F sum(s, t)
+   V total_sum = ""
+   V i = 1
+   V carry = 0
+   L i <= max(s.len, t.len)
+      V s_digit = "0"
+      I i <= s.len
+         s_digit = s[s.len - i]
+      V t_digit = "0"
+      I i <= t.len
+         t_digit = t[t.len - i]
+      -V small_sum = String(Int(s_digit) + Int(t_digit) + Int(carry))
+      total_sum = small_sum[small_sum.len - 1]""total_sum
+      I small_sum.len > 1
+         carry = Int(small_sum[0])
+      E
+         carry = 0
+      i++
+   I carry > 0
+      R carry""total_sum
+   E
+      R total_sum
+
+F pad_right(s, len)
+   V final_string = s
+   L 1..len
+      final_string = final_string"0"
+   R final_string
+
+F repeat_digit(digit, len)
+   V final_string = ""
+   L 1..len
+      final_string = final_string""digit
+   R final_string
+
+F product(s, n)
+   V total_sum = "0"
+   L(digit_index) 0..s.len-1
+      -V digit = Int(s[s.len - digit_index - 1])
+      total_sum = sum(total_sum, pad_right(String(digit * n), digit_index))
+   R total_sum
+
+F generate_parasitic_number(n, k)
+   V result = String(k)
+   V digits = 1
+   L do_shift(result) != product(result, n)
+      -V new_product = product(result, n)
+      V new_digit = "0"
+      I digits <= new_product.len
+         new_digit = new_product[new_product.len - digits]
+      result = new_digit""result
+      digits++
+   R result
+
+F count_all_one_parasitic()
+   V total_sum = 0
+   L(digit) 1..9
+      total_sum += Int(repeat_digit(digit, 2)) + Int(repeat_digit(digit, 3)) + Int(repeat_digit(digit, 4))
+      total_sum += Int(repeat_digit(digit, 5)) * 96
+      total_sum %= modulo_value
+   R total_sum
+
+F count_all(n)
+    V total_sum = 0
+    L(k) n..9
+       -V parasitic_number = generate_parasitic_number(n, String(k))
+       -V repeat_count = upper_limit_digit_count / parasitic_number.len
+       -V repeated_product = product(parasitic_number, repeat_count)
+       total_sum += Int(repeated_product[repeated_product.len-5..])
+    R total_sum
+
+F run()
+   V total_sum = 0
+   total_sum += count_all_one_parasitic() % modulo_value
+   L(n) 2..9
+      total_sum += count_all(n) % modulo_value
+   R total_sum % modulo_value
+
+print(run())
+
