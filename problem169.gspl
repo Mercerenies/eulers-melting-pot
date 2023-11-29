@@ -1,0 +1,98 @@
+
+"Half of largest power of 2 that divides into input N"&
+{
+  1 :i
+  { $ ;i 4*% 0= } {
+    & ;i 2 * :i
+  } #
+  & & ;i
+} :powtwo
+
+"Integer division-by-2 algorithm (built-in division is floating)"&
+{
+  { } {
+    $ ;powtwo! $ :tmp 2*- ;tmp ^ ;divtwo! +
+  } {
+    "0 / 2 == 0, we're done"&
+  } ¿
+} :divtwo
+
+"Get first element from array"&
+{
+  1_ :v
+  {
+    { ;v 0 < } {
+      & ; :v
+    } {
+      &
+    } ¿
+  } ^ f 
+  ;v
+} :first
+
+"Get second element from array"&
+{
+  1_ :v
+  {
+    { ;v 1_ = } {
+      & 2_ :v
+    } {
+      & { ;v 2_ = } {
+        & ; :v
+      } {
+        &
+      } ¿
+    } ¿
+  } ^ f 
+  ;v
+} :second
+
+"Uncached fusc function"&
+{
+  { $1> } {
+    & { $2% } {
+      "Odd case"&
+      & 1 - ;divtwo! $ 1 + ;cachedfusc! ^ ;cachedfusc! +
+    } {
+      "Even case"&
+      & ;divtwo! ;cachedfusc!
+    } ¿
+  } {
+    &
+  } ¿
+} :fusc
+
+"Cache is stored as a list of [key value] pairs"&
+[] :cache
+
+"Find value in cache, return -1 if not found"&
+{
+  :n
+  1_ :cachedvalue
+  {
+    ; :curr
+    { ;curr ;first! ;n = } {
+      & ;curr ;second! :cachedvalue
+    } {
+      &
+    } ¿
+  } ;cache f 
+  ;cachedvalue
+} :findcached
+
+"Append to cache; takes two arguments"&
+{
+  :v :k
+  ;cache [] ;k + ;v + 2 / + :cache
+} :appendcache
+
+"Cached fusc function"&
+{
+  { $ ;findcached! $ 1_ > } {
+    &^&
+  } {
+    && $ ;fusc! $ :tmp ;appendcache! ;tmp
+  } ¿
+} :cachedfusc
+
+10 25 ×& 1+ ;cachedfusc! . 10 ,

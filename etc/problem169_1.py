@@ -21,3 +21,19 @@ def f(n):
 
 
 print(f(10 ** 25))
+
+# Editor's notes on AGSPL:
+#
+# * Can't use regular division because it's floating, so we implement
+#   division by 2 ourselves.
+#
+# * Implementing the cache as an array of alists [[key, value], [key,
+#   value], ...], since our Python implementation tells us there's
+#   only about 200 values we need in total.
+#
+# * For loops are broken. We have to use an empty variable name "" or
+#   the for loop will only work once, since the variable identifier in
+#   the interpreter is a global and is never reset (so the names are
+#   just concatenated together). This is also why there's always a
+#   trailing space after the "f" keyword for 'for' loops. That's the
+#   empty variable name.

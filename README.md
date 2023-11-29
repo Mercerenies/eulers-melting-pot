@@ -13,8 +13,10 @@ alphabetized list of the languages that have been used in these challenges so fa
 * ///
 * 05AB1E
 * 1.1
+* 11l
 * \>\<\>
 * Ada
+* AGSPL
 * ALGOL 68
 * Alice
 * Anti-Array
@@ -1183,6 +1185,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem168.11l](problem168.11l)
 * Language: [11l](http://11l-lang.org/)
 * Compiler / Interpreter: [11l 2022.11](https://github.com/11L-lang/11l)
+* Notes: (None)
+
+### Euler 169
+* File: [problem169.gspl](problem169.gspl)
+* Language: [AGSPL](https://esolangs.org/wiki/AGSPL)
+* Compiler / Interpreter: [AGSPL (commit eb6afa05)](https://github.com/xi816/AGSPL/commit/eb6afa05db2c972330b623ccddbd1c81ef7a6759)
 * Notes: (None)
 
 ## Valid Languages
