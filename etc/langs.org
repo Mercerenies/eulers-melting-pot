@@ -113,6 +113,7 @@
 *** 42 (https://forty2.is/)
 *** Agda                                                               :used:
 *** APL                                                                :used:
+*** Attache (https://github.com/ConorOBrien-Foxx/Attache)
 *** AutoHotkey                                                         :used:
     + 64-bit integers (no bignums)
     + Windows only
@@ -173,6 +174,7 @@
 *** Scratch                                                            :used:
 *** sed                                                                :used:
 *** SNOBOL                                                             :used:
+*** Stacked (https://github.com/ConorOBrien-Foxx/stacked)
 *** Streem
 *** Strema (https://gilmi.gitlab.io/strema/)
     + Division is broken, no modulo
@@ -265,7 +267,7 @@
 *** 05AB1E                                                             :used:
 *** 1.1                                                                :used:
 *** ><>                                                                :used:
-*** AGSPL (https://esolangs.org/wiki/AGSPL)
+*** AGSPL (https://esolangs.org/wiki/AGSPL)                            :used:
 *** Alice (m-ender)                                                    :used:
 *** Anti-Array                                                         :used:
 *** Aya                                                                :used:
@@ -297,9 +299,10 @@
     + Answer must fit into floating-point value
 *** FALSE                                                              :used:
 *** FiM++                                                              :used:
-*** Folders
+*** Folders (https://esolangs.org/wiki/Folders)
 *** Fourier                                                            :used:
 *** FRACTRAN
+    + Short list
 *** Funciton                                                           :used:
 *** Fuzzy Octo Guacamole (https://codereview.stackexchange.com/questions/124736/fuzzy-octo-guacamole-interpreter)
 *** Gibberish                                                          :used:
@@ -311,32 +314,32 @@
 *** Inform 7
     + Short List
 *** Japt                                                               :used:
-*** Javagrid
+*** Javagrid (https://esolangs.org/wiki/Javagrid)
 *** Jelly                                                              :used:
 *** JSF**k                                                             :used:
-*** Keg
 *** Labyrinth                                                          :used:
-*** LOLCODE
+*** LOLCODE (https://en.wikipedia.org/wiki/LOLCODE)
 *** MagiStack                                                          :used:
 *** Math++                                                             :used:
 *** MATL                                                               :used:
 *** MontiLang                                                          :used:
 *** Mouse-2002                                                         :used:
+*** Myby (https://github.com/ConorOBrien-Foxx/Myby/)
 *** naz (https://github.com/sporeball/naz)
-*** Noether (https://github.com/noether-lang/noether)
-*** Orthagonal
+*** Orthagonal (https://github.com/m-ender/orthagonal)
 *** Perchance                                                          :used:
 *** Pickle (Python)                                                    :used:
     + Yes, the serialization framework; I think it's Turing complete
     + Loops are recursive
 *** Piet                                                               :used:
 *** Pip                                                                :used:
-*** Puzzlescript
+*** Puzzlescript (https://www.puzzlescript.net/)
+*** Pyramid Scheme (https://github.com/ConorOBrien-Foxx/Pyramid-Scheme)
 *** Pyth                                                               :used:
 *** Quark (https://github.com/henrystanley/Quark/)
-*** Retina
+*** Retina (https://esolangs.org/wiki/Retina)
 *** Rockstar                                                           :used:
-*** Secretary
+*** Secretary (https://esolangs.org/wiki/Secretary)
 *** Seriously                                                          :used:
 *** Shakespeare                                                        :used:
 *** Snowman                                                            :used:
@@ -410,6 +413,8 @@
 *** Jsish
     This is just a Javascript interpreter built for embedded systems.
     It's too similar to vanilla JS for my tastes.
+*** Keg
+    Cannot find this language again.
 *** Leafscript
     The only interpreter segfaults when running any of the example
     programs.
@@ -419,6 +424,8 @@
     The interpreter seems to be using lots of implementation-defined
     C++ behavior and, as a result, I can only use a small subset of
     the defined commands without segfaulting at random.
+*** Noether (https://github.com/noether-lang/noether)
+    Unimplemented
 *** Orthogonal
     Sadly, the only [[http://www.muppetlabs.com/~breadbox/orth/][working interpreter]] I can find was written for a
     compiler from 25 years ago.
