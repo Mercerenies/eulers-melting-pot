@@ -72,6 +72,7 @@
 *** Forth                                                              :used:
 *** Fortran                                                            :used:
 *** Gleam                                                              :used:
+*** Groovy (https://groovy-lang.org/)
 *** Haxe (https://haxe.org/)
 *** Icon                                                               :used:
 *** Io                                                                 :used:
@@ -111,6 +112,7 @@
 *** 11l (http://rosettacode.org/wiki/Category:11l)                     :used:
     + Dictionaries / sets / advanced data structures are flaky
 *** 42 (https://forty2.is/)
+*** ABAP (https://en.wikipedia.org/wiki/ABAP)
 *** Agda                                                               :used:
 *** APL                                                                :used:
 *** Attache (https://github.com/ConorOBrien-Foxx/Attache)
@@ -119,6 +121,7 @@
     + Windows only
 *** bc                                                                 :used:
 *** BeanShell                                                          :used:
+*** BQN (https://mlochbaum.github.io/BQN/)
 *** Cat
     + No arrays
 *** Container (https://github.com/odddollar/Container-lang)
@@ -171,6 +174,7 @@
 *** Prolog                                                             :used:
 *** PROMAL
 *** Roy                                                                :used:
+*** S (https://en.wikipedia.org/wiki/S_(programming_language))
 *** Scratch                                                            :used:
 *** sed                                                                :used:
 *** SNOBOL                                                             :used:
@@ -343,6 +347,7 @@
 *** Seriously                                                          :used:
 *** Shakespeare                                                        :used:
 *** Snowman                                                            :used:
+*** SNUSP (https://esolangs.org/wiki/SNUSP)
 *** Stuck                                                              :used:
 *** Taxi                                                               :used:
 *** Tome                                                               :used:
@@ -447,15 +452,15 @@
     Beautiful language, but... no.
 *** Unlambda
     Possibly too minimal?
+*** Whython (https://www.pxeger.com/2021-09-19-hacking-on-cpython/)
+    Unimplemented
 ** UNCLASSIFIED
-*** ABAP (https://en.wikipedia.org/wiki/ABAP)
 *** Alice
 *** Alloy (https://alloytools.org/)
 *** ArnoldC (https://esolangs.org/wiki/ArnoldC)
 *** Ateji PX (https://en.wikipedia.org/wiki/Ateji_PX)
 *** ATS
 *** BaCon (http://basic-converter.org/)
-*** BQN (https://mlochbaum.github.io/BQN/)
 *** Brachylog
 *** Bracmat (https://github.com/BartJongejan/Bracmat)
 *** CandleScript
@@ -488,7 +493,6 @@
 *** G-- (https://github.com/ReyAnthony/G--)
 *** Genesis (https://github.com/elonlit/Genesis)
 *** Gluon
-*** Groovy
 *** Hare (https://harelang.org/)
 *** Husk (https://github.com/barbuz/Husk)
 *** Hyperscript (https://hyperscript.org/)
@@ -508,6 +512,7 @@
 *** Oasis
 *** Oblivion (https://jweinst1.github.io/OblivionWebsite/)
 *** Occam
+*** Occam-π
 *** Ohm
 *** Orc
 *** Orion (https://github.com/wafelack/orion/)
@@ -527,7 +532,6 @@
 *** Skript (https://docs.skriptlang.org/)
 *** smodels (http://www.tcs.hut.fi/Software/smodels/)
 *** Snails
-*** SNUSP
 *** Soul (https://github.com/egel-lang/soul)
 *** Squirrel
 *** Story (https://github.com/soborat/story-programming-language)
@@ -544,8 +548,6 @@
 *** Vyxal (https://github.com/Vyxal/Vyxal)
 *** Whiley (https://en.wikipedia.org/wiki/Whiley_(programming_language))
 *** Whispers (https://github.com/cairdcoinheringaahing/Whispers)
-*** Whython (https://www.pxeger.com/2021-09-19-hacking-on-cpython/)
-    May be unimplemented?
 *** Width (https://github.com/stestoltz/Width)
 *** XQuery
 *** XY
