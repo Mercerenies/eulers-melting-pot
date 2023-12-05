@@ -95,7 +95,7 @@
 *** Smalltalk                                                          :used:
 *** SML                                                                :used:
 *** Squeak
-*** Swift
+*** Swift                                                              :used:
 *** Verilog                                                            :used:
 *** X10 (http://x10-lang.org/)                                         :used:
 *** Z (https://zlanguage.github.io/)                                   :used:
