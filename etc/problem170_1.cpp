@@ -1,5 +1,6 @@
 
-// Simple direct computation, no tricks.
+// Same algorithm as problem170.cpp, but eliminating all of the stol
+// and ostringstream shimmering.
 
 #include <vector>
 #include <set>
@@ -8,23 +9,23 @@
 #include <string>
 #include <iostream>
 
-std::string concatenated_product(long n, const std::vector<long>& values) {
-  std::ostringstream out;
+std::vector<long> concatenated_product(long n, const std::vector<long>& values) {
+  std::vector<long> result;
   for (const auto &v : values) {
-    out << (n * v);
+    result.push_back(n * v);
   }
-  return out.str();
+  return result;
 }
 
-std::string concatenated_product_except_last(long n, const std::vector<long>& values) {
+std::vector<long> concatenated_product_except_last(long n, const std::vector<long>& values) {
   if (values.size() == 0) {
-    return "";
+    return {};
   }
-  std::ostringstream out;
+  std::vector<long> result;
   for (auto it = values.begin(); it != values.end() - 1; it++) {
-    out << (n * (*it));
+    result.push_back(n * (*it));
   }
-  return out.str();
+  return result;
 }
 
 bool is_pandigital(const std::string& s) {
@@ -33,22 +34,35 @@ bool is_pandigital(const std::string& s) {
   return text == "0123456789";
 }
 
-bool is_pandigital(long n) {
-  return is_pandigital(std::to_string(n));
-}
-
-bool repeats_digits(const std::string& p) {
-  std::set<char> unique { std::begin(p), std::end(p) };
-  return (unique.size() != p.length());
-}
-
-bool can_be_big_enough(long best_value_so_far, const std::string& product_so_far) {
-  // Consider the largest number we could possibly build from product_so_far.
-  long largest_product = std::stol(product_so_far);
-  for (int i = product_so_far.size(); i < 10; i++) {
-    largest_product = largest_product * 10 + 9;
+bool is_pandigital(const std::vector<long>& ns) {
+  std::ostringstream oss;
+  for (long n : ns) {
+    oss << n;
   }
-  return (largest_product > best_value_so_far);
+  return is_pandigital(oss.str());
+}
+
+bool repeats_digits(const std::vector<long>& ns) {
+  std::set<long> unique;
+  for (long n : ns) {
+    while (n > 0) {
+      int digit = n % 10;
+      if (unique.contains(digit)) {
+        return true;
+      }
+      unique.insert(digit);
+      n /= 10;
+    }
+  }
+  return false;
+}
+
+bool can_be_big_enough(long best_value_so_far, long product_so_far) {
+  // Consider the largest number we could possibly build from product_so_far.
+  while (product_so_far < 1000000000) {
+    product_so_far = product_so_far * 10 + 9;
+  }
+  return (product_so_far > best_value_so_far);
 }
 
 long build_result(long& best_value_so_far, long leading_value, std::vector<long>& values, std::set<long>& used_digits, long output_digit_count) {
@@ -58,19 +72,21 @@ long build_result(long& best_value_so_far, long leading_value, std::vector<long>
     return 0L;
   }
 
-  std::string product_so_far = concatenated_product_except_last(leading_value, values);
+  std::vector<long> product_so_far = concatenated_product_except_last(leading_value, values);
   if (repeats_digits(product_so_far)) {
     // We've already repeated a digit, so bail out.
     return 0L;
   }
+  /*
   if ((product_so_far.size() > 0) && (!can_be_big_enough(best_value_so_far, product_so_far))) {
     // We already know of a larger solution, so short-circuit out.
     return 0L;
   }
+  */
 
   if (used_digits.size() == 10) {
     // All digits used, check if the result is pandigital.
-    std::string product = concatenated_product(leading_value, values);
+    std::vector<long> product = concatenated_product(leading_value, values);
     if (is_pandigital(product)) {
       /*
       std::cout << product << " = " << leading_value << " with";
@@ -79,7 +95,11 @@ long build_result(long& best_value_so_far, long leading_value, std::vector<long>
       }
       std::cout << std::endl;
       */
-      return std::stol(product);
+      std::ostringstream oss;
+      for (long n : product) {
+        oss << n;
+      }
+      return std::stol(oss.str());
     } else {
       return 0L;
     }
@@ -139,12 +159,7 @@ int main() {
   // equal to 100, then even if there's only two numbers on the
   // right-hand side, we pick up four digits from multiplying by a
   // 3-digit number, and we can't possibly be pandigital in the end.
-  //
-  // As it turns out, since our short-circuiting behavior is optimized
-  // to cut out when we already know of a bigger solution, it's faster
-  // to start at 99 and go down rather than starting at 2 and going
-  // up.
-  for (int i = 99; i >= 2; i--) {
+  for (int i = 2; i < 100; i++) {
     if (i % 11 == 0) {
       // Trivially has a repeating digit
       continue;
@@ -154,7 +169,3 @@ int main() {
   }
   std::cout << best << std::endl;
 }
-
-// Final answer: 9857164023 = 27 * (36508, 149)
-//
-// This solution runs in about 20 seconds (requires -O3)
