@@ -65,6 +65,9 @@
 *** AWK                                                                :used:
 *** Bizubee (https://bizubee.github.io/)
 *** COBOL                                                              :used:
+*** Delphi (https://en.wikipedia.org/wiki/Delphi_(software))
+    + Verify that this is different enough from Pascal to warrant its
+      own slot.
 *** Dylan                                                              :used:
 *** Earl Grey                                                          :used:
 *** Eiffel                                                             :used:
@@ -93,6 +96,7 @@
 *** Rebol                                                              :used:
 *** Red (https://www.red-lang.org/)
 *** Self
+*** Skip (https://skiplang.com/)
 *** Smalltalk                                                          :used:
 *** SML                                                                :used:
 *** Squeak
@@ -143,6 +147,7 @@
     + Division is broken, no modulo
 *** Glava                                                              :used:
 *** i (https://github.com/Qlova/ilang)                                 :used:
+*** IMPS (https://imps.mcmaster.ca/)
 *** IntercalScript                                                     :used:
     + No Bignums
 *** J                                                                  :used:
@@ -284,6 +289,7 @@
 *** Befunk                                                             :used:
 *** Brainf**k                                                          :used:
 *** Burlesque (https://esolangs.org/wiki/Burlesque)                    :used:
+*** Bussin (https://github.com/face-hh/bussin)
 *** Brat                                                               :used:
 *** Chef                                                               :used:
 *** CJam                                                               :used:
@@ -299,6 +305,7 @@
 *** Emotinomicon
     + Short list
 *** Enchilada                                                          :used:
+*** Enso (https://enso.org/)
 *** Excel                                                              :used:
     + Answer must fit into floating-point value
 *** FALSE                                                              :used:
@@ -476,12 +483,10 @@
 *** Curl (https://www.curl.com/products/prod/language/)
 *** Dale (https://github.com/tomhrr/dale)
 *** Dart
-*** Delphi
 *** E
 *** Ė (https://e-dot.io/)
 *** Egel (https://egel-lang.github.io/)
 *** EGL
-*** Enso (https://enso.org/)
 *** Euler
 *** F' (https://nasa.github.io/fprime/)
 *** Falcon (https://rosettacode.org/wiki/Category:Falcon)
@@ -497,7 +502,7 @@
 *** Husk (https://github.com/barbuz/Husk)
 *** Hyperscript (https://hyperscript.org/)
 *** I (https://aplwiki.com/wiki/I)
-*** IMPS (https://imps.mcmaster.ca/)
+*** IMP (https://en.wikipedia.org/wiki/IMP_(programming_language))
 *** Jeebox (http://jeebox.org/stuff/learn_more/)
 *** jq (https://stedolan.github.io/jq/)
 *** Kobalt (https://github.com/abel0b/kobalt)
@@ -528,7 +533,6 @@
 *** Rhombus (https://docs.racket-lang.org/rhombus/index.html)
 *** Runic Enchantments (https://github.com/Draco18s/RunicEnchantments/tree/Console)
 *** Simula
-*** Skip
 *** Skript (https://docs.skriptlang.org/)
 *** smodels (http://www.tcs.hut.fi/Software/smodels/)
 *** Snails
