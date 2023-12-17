@@ -42,14 +42,29 @@ bool repeats_digits(const std::string& p) {
   return (unique.size() != p.length());
 }
 
-long build_result(long leading_value, std::vector<long>& values, std::set<long>& used_digits, long output_digit_count) {
+bool can_be_big_enough(long best_value_so_far, const std::string& product_so_far) {
+  // Consider the largest number we could possibly build from product_so_far.
+  long largest_product = std::stol(product_so_far);
+  for (int i = product_so_far.size(); i < 10; i++) {
+    largest_product = largest_product * 10 + 9;
+  }
+  return (largest_product > best_value_so_far);
+}
+
+long build_result(long& best_value_so_far, long leading_value, std::vector<long>& values, std::set<long>& used_digits, long output_digit_count) {
   if ((unsigned long)output_digit_count > used_digits.size()) {
     // We can short circuit out, because we have too many digits, so
     // we can't possibly get a pandigital number in the end.
     return 0L;
   }
-  if (repeats_digits(concatenated_product_except_last(leading_value, values))) {
+
+  std::string product_so_far = concatenated_product_except_last(leading_value, values);
+  if (repeats_digits(product_so_far)) {
     // We've already repeated a digit, so bail out.
+    return 0L;
+  }
+  if ((product_so_far.size() > 0) && (!can_be_big_enough(best_value_so_far, product_so_far))) {
+    // We already know of a larger solution, so short-circuit out.
     return 0L;
   }
 
@@ -57,18 +72,18 @@ long build_result(long leading_value, std::vector<long>& values, std::set<long>&
     // All digits used, check if the result is pandigital.
     std::string product = concatenated_product(leading_value, values);
     if (is_pandigital(product)) {
+      /*
       std::cout << product << " = " << leading_value << " with";
       for (const auto& value : values) {
         std::cout << " " << value;
       }
       std::cout << std::endl;
+      */
       return std::stol(product);
     } else {
       return 0L;
     }
   }
-
-  long best_result = 0L;
 
   // We could start a new number.
   for (int i = 0; i < 10; i++) {
@@ -78,7 +93,7 @@ long build_result(long leading_value, std::vector<long>& values, std::set<long>&
     values.push_back(i);
     used_digits.insert(i);
     std::string new_output_product = std::to_string(leading_value * values.back());
-    best_result = std::max(build_result(leading_value, values, used_digits, output_digit_count + new_output_product.length()), best_result);
+    best_value_so_far = std::max(build_result(best_value_so_far, leading_value, values, used_digits, output_digit_count + new_output_product.length()), best_value_so_far);
     used_digits.erase(i);
     values.pop_back();
   }
@@ -94,23 +109,24 @@ long build_result(long leading_value, std::vector<long>& values, std::set<long>&
       values.back() = values.back() * 10 + i;
       used_digits.insert(i);
       std::string new_output_product = std::to_string(leading_value * values.back());
-      best_result = std::max(build_result(leading_value, values, used_digits, output_digit_count - old_output_product.length() + new_output_product.length()), best_result);
+      best_value_so_far = std::max(build_result(best_value_so_far, leading_value, values, used_digits, output_digit_count - old_output_product.length() + new_output_product.length()), best_value_so_far);
       used_digits.erase(i);
       values.back() /= 10;
     }
   }
 
-  return best_result;
+  return best_value_so_far;
 }
 
 long build_result(long leading_value) {
   std::vector<long> values;
   std::set<long> used_digits;
+  long best_value_so_far = 0L;
   used_digits.insert(leading_value % 10);
   if (leading_value >= 10) {
     used_digits.insert(leading_value / 10);
   }
-  return build_result(leading_value, values, used_digits, 0L);
+  return build_result(best_value_so_far, leading_value, values, used_digits, 0L);
 }
 
 int main() {
