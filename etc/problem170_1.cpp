@@ -159,7 +159,10 @@ int main() {
   // equal to 100, then even if there's only two numbers on the
   // right-hand side, we pick up four digits from multiplying by a
   // 3-digit number, and we can't possibly be pandigital in the end.
-  for (int i = 2; i < 100; i++) {
+  //
+  // i must be a multiple of 3. See Lemma I at the bottom of this file
+  // for the reasoning.
+  for (int i = 3; i < 100; i += 3) {
     if (i % 11 == 0) {
       // Trivially has a repeating digit
       continue;
@@ -169,3 +172,30 @@ int main() {
   }
   std::cout << best << std::endl;
 }
+
+// Lemma I: i must be a multiple of 3.
+//
+// Proof: Suppose to the contrary that i is not divisible by 3. Let X
+// be the concatenation of the inputs. X is pandigital by assumption.
+// Hence, the sum of digits of X is 45, so X is divisible by 9.
+//
+// Now if we omit i (the common multiplicand) from the beginning of X,
+// we get a number that is NOT divisible by 9 (Note: i cannot be 9
+// since we're doing a proof by contradiction, so we're removing a
+// number other than 9 from the sum of digits).
+//
+// Hence, the concatenation of the input values (excluding i) must not
+// be divisible by 9. Note that the concatenated output product can be
+// viewed as i times the concatenation of the input values, possibly
+// with some padding zeroes inserted to account for carry digits.
+// Adding zeroes in the middle of a number does not change its
+// divisibility by 9. Let X' be this input value that, when multiplied
+// by i, gives us our output, and let the concatenated output be Y.
+// That is, X' * i = Y.
+//
+// X' is not divisible by 9, by the above logic, so the 3-adic
+// valuation of X' is at most 1. Y is pandigital and is therefore
+// divisible by 9, so Y's 3-adic valuation is at least 2. Hence,
+// there's a missing factor of 3, which must be in i.
+//
+// QED
