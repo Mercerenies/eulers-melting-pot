@@ -133,6 +133,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Pike
 * Pikt
 * Pip
+* Pizza
 * Pony
 * Potassco
 * Prolog
@@ -1192,6 +1193,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [AGSPL](https://esolangs.org/wiki/AGSPL)
 * Compiler / Interpreter: [AGSPL (commit eb6afa05)](https://github.com/xi816/AGSPL/commit/eb6afa05db2c972330b623ccddbd1c81ef7a6759)
 * Notes: (None)
+
+### Euler 170
+* File: [problem170.pizza](problem170.pizza)
+* Language: [Pizza](https://pizzacompiler.sourceforge.net/index.html)
+* Compiler / Interpreter: [Pizza v1.0g, 1-October-2001](https://sourceforge.net/projects/pizzacompiler/files/)
+* Notes: Pizza compiler requires an old Java runtime to run; tested on Java 1.4.2_19
 
 ## Valid Languages
 

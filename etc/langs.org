@@ -51,7 +51,7 @@
 *** Frege (https://github.com/Frege/frege)
 *** Go                                                                 :used:
 *** PHP
-*** Pizza
+*** Pizza                                                              :used:
 ** SILVER
    Silver languages are perfectly capable languages to solve any
    challenge, but I do not consider myself fluent in them. "Silver" is

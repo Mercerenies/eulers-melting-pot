@@ -1,0 +1,148 @@
+
+import net.sf.pizzacompiler.util.Vector;
+
+public class problem170 {
+
+  public static void main(String[] args) {
+    long bestResult = 0L;
+    for (int i = 3; i < 100; i += 3) {
+      if (i % 11 == 0) {
+        continue;
+      }
+      bestResult = Math.max(bestResult, buildResult(i));
+    }
+    System.out.println(bestResult);
+  }
+
+  private static long[] allocator(int capacity) {
+    return new long[capacity];
+  }
+
+  private static long[] concatenatedProduct(long n, Vector<long> values, int omitFromEnd) {
+    long[] result = new long[values.size()];
+    for (int i = 0; i < values.size() - omitFromEnd; i++) {
+      result[i] = n * values.elementAt(i);
+    }
+    return result;
+  }
+
+  private static boolean isPandigital(String s) {
+    if (s.length() != 10) {
+      return false;
+    }
+    for (char ch = '0'; ch <= '9'; ch++) {
+      if (s.indexOf(ch) < 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  private static boolean isPandigital(long[] ns) {
+    return isPandigital(concatenateNumbers(ns));
+  }
+
+  private static String concatenateNumbers(long[] ns) {
+    StringBuffer buf = new StringBuffer();
+    for (int i = 0; i < ns.length; i++) {
+      buf.append(ns[i]);
+    }
+    return buf.toString();
+  }
+
+  private static boolean repeatsDigits(long[] ns) {
+    boolean[] uniqueDigits = new boolean[10];
+    for (int i = 0; i < ns.length; i++) {
+      long n = ns[i];
+      while (n > 0) {
+        int digit = (int)(n % 10);
+        if (uniqueDigits[digit]) {
+          return true;
+        }
+        uniqueDigits[digit] = true;
+        n /= 10;
+      }
+    }
+    return false;
+  }
+
+  private static long numberLength(long n) {
+    if (n == 0) {
+      return 1;
+    }
+    long count = 0;
+    while (n > 0) {
+      count++;
+      n /= 10;
+    }
+    return count;
+  }
+
+  private static long buildResult(long leadingValue) {
+    Vector<long> values = new Vector(10, allocator, 0L);
+    boolean[] usedDigits = new boolean[10];
+    long usedDigitsCount = 1L;
+    usedDigits[(int)(leadingValue % 10)] = true;
+    if (leadingValue >= 10) {
+      usedDigits[(int)(leadingValue / 10)] = true;
+      usedDigitsCount++;
+    }
+    return buildResult(leadingValue, values, usedDigitsCount, usedDigits, 0L);
+  }
+
+  private static long buildResult(long leadingValue, Vector<long> values, long usedDigitsCount, boolean[] usedDigits, long outputDigitCount) {
+    if (outputDigitCount > usedDigitsCount) {
+      return 0L;
+    }
+    if (repeatsDigits(concatenatedProduct(leadingValue, values, 1))) {
+      return 0L;
+    }
+
+    // Base case: All digits are used so check if we have a valid
+    // product.
+    if (usedDigitsCount == 10L) {
+      long[] product = concatenatedProduct(leadingValue, values, 0);
+      if (isPandigital(product)) {
+        return Long.parseLong(concatenateNumbers(product));
+      } else {
+        return 0L;
+      }
+    }
+
+    long bestResult = 0L;
+
+    // Recursive step 1: We could start a new number.
+    for (int i = 0; i < 10; i++) {
+      if (usedDigits[i]) {
+        continue;
+      }
+      values.addElement(i);
+      usedDigits[i] = true;
+      long recursiveResult = buildResult(leadingValue, values, usedDigitsCount + 1, usedDigits, outputDigitCount + numberLength(leadingValue * i));
+      bestResult = Math.max(bestResult, recursiveResult);
+      usedDigits[i] = false;
+      values.removeElementAt(values.size() - 1);
+    }
+
+    // Recursive step 2: We could continue the current number, if it
+    // exists and is not a leading zero.
+    if ((values.size() > 0) && (values.lastElement() != 0)) {
+      for (int i = 0; i < 10; i++) {
+        if (usedDigits[i]) {
+          continue;
+        }
+        long oldOutputLength = numberLength(leadingValue * values.lastElement());
+        values.setElementAt(values.lastElement() * 10 + i, values.size() - 1);
+        usedDigits[i] = true;
+        long newOutputLength = numberLength(leadingValue * values.lastElement());
+        long recursiveResult = buildResult(leadingValue, values, usedDigitsCount + 1, usedDigits, outputDigitCount - oldOutputLength + newOutputLength);
+        bestResult = Math.max(bestResult, recursiveResult);
+        usedDigits[i] = false;
+        values.setElementAt(values.lastElement() / 10, values.size() - 1);
+      }
+    }
+
+    return bestResult;
+  }
+
+}
