@@ -3,18 +3,8 @@
 // remainingDigitSumsCount array. But then we use combinatorics at the
 // end to avoid enumerating all possible numbers.
 
-const LIMIT = BigInt(1000000000)
+const LIMIT = 1000000000
 const DIGITS_IN_NUMBER = 9
-
-// The largest 20-digit number consists of twenty 9's in a row. The
-// sum of squares of digits of that number is 81 * 20 = 1620.
-// Therefore, the only perfect squares we can ever encounter are those
-// less than 1620. The final such perfect square is 1600 (= 40 * 40).
-// Enumerate these squares and put them in a dictionary.
-const isPerfectSquare = {}
-for (let i = 0; i <= 40; i++) {
-  isPerfectSquare[i * i] = true;
-}
 
 function factorial(n) {
   let total = 1;
@@ -83,7 +73,7 @@ function run(digitCounts, index, runningCount) {
     return sumPossibilities(digitCounts, arrangements);
   }
 
-  let total = BigInt(0);
+  let total = 0;
   for (let i = 0; i <= DIGITS_IN_NUMBER - runningCount; i++) {
     digitCounts[index] = i;
     total = (total + run(digitCounts, index + 1, runningCount + i)) % LIMIT;
@@ -92,7 +82,7 @@ function run(digitCounts, index, runningCount) {
 }
 
 function sumPossibilities(digitCounts, higherArrangementsCount) {
-  let total = BigInt(0);
+  let total = 0;
   // Consider each digit in isolation and consider each possible value
   // for that digit.
   for (let positionInNumber = 0; positionInNumber < DIGITS_IN_NUMBER; positionInNumber++) {
@@ -102,7 +92,7 @@ function sumPossibilities(digitCounts, higherArrangementsCount) {
         digitCounts[i - 1] -= 1;
         const lowerArrangementsCount = multinomial(DIGITS_IN_NUMBER - 1, digitCounts);
         digitCounts[i - 1] += 1;
-        total = (total + BigInt(constant) * BigInt(lowerArrangementsCount) * BigInt(higherArrangementsCount)) % LIMIT;
+        total = (total + ((((constant % LIMIT) * (lowerArrangementsCount % LIMIT)) % LIMIT) * (higherArrangementsCount % LIMIT)) % LIMIT) % LIMIT;
       }
     }
   }
