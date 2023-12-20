@@ -218,9 +218,10 @@
 *** Batch                                                              :used:
 *** Csh                                                                :used:
 *** Dash
-*** Fish
+*** Fish                                                               :used:
 *** Ksh
 *** Oilshell
+*** Powershell
 *** Scsh
 *** Zsh                                                                :used:
 ** BASIC

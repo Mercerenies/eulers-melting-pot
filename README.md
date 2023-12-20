@@ -68,6 +68,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * FALSE
 * Fennel
 * FiM++
+* Fish
 * Forth
 * Fortran
 * Fourier
@@ -1199,6 +1200,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Pizza](https://pizzacompiler.sourceforge.net/index.html)
 * Compiler / Interpreter: [Pizza v1.0g, 1-October-2001](https://sourceforge.net/projects/pizzacompiler/files/)
 * Notes: Pizza compiler requires an old Java runtime to run; tested on Java 1.4.2_19
+
+### Euler 171
+* File: [problem171.sh](problem171.sh)
+* Language: [Fish](https://fishshell.com/)
+* Compiler / Interpreter: [fish, version 3.6.1](https://fishshell.com/)
+* Notes: A very slow solution.
 
 ## Valid Languages
 
