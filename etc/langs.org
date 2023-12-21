@@ -101,6 +101,7 @@
 *** SML                                                                :used:
 *** Squeak
 *** Swift                                                              :used:
+*** Unicon (http://www.unicon.org/)
 *** Verilog                                                            :used:
 *** X10 (http://x10-lang.org/)                                         :used:
 *** Z (https://zlanguage.github.io/)                                   :used:
@@ -141,6 +142,7 @@
 *** Egison (https://www.egison.org/)
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
 *** F*
+*** G-- (https://github.com/ReyAnthony/G--)
 *** GAP
 *** Genie                                                              :used:
 *** Giml (https://giml-lang.org/)
@@ -188,6 +190,8 @@
 *** Strema (https://gilmi.gitlab.io/strema/)
     + Division is broken, no modulo
 *** SuperCollider                                                      :used:
+*** Teascript (https://tea-age.solutions/teascript/downloads/)
+    + Very basic array support
 *** Vala                                                               :used:
 *** Vale (https://vale.dev/)                                           :used:
 *** Vimscript
@@ -339,6 +343,7 @@
 *** Mouse-2002                                                         :used:
 *** Myby (https://github.com/ConorOBrien-Foxx/Myby/)
 *** naz (https://github.com/sporeball/naz)
+    + Short list
 *** Orthagonal (https://github.com/m-ender/orthagonal)
 *** Perchance                                                          :used:
 *** Pickle (Python)                                                    :used:
@@ -363,6 +368,7 @@
 *** Tovie (https://github.com/Jaysmito101/tovie)                       :used:
 *** TRANSCRIPT                                                         :used:
     + No arrays
+*** TurtleArt (https://help.sugarlabs.org/en/turtleart_tutorials/programming_without_words.html)
 *** Underload
     + Short list
 *** V                                                                  :used:
@@ -501,7 +507,6 @@
 *** Fission
 *** Flix (https://github.com/flix/flix)
 *** Flora (https://flora.sourceforge.net/)
-*** G-- (https://github.com/ReyAnthony/G--)
 *** Genesis (https://github.com/elonlit/Genesis)
 *** Gluon
 *** Hare (https://harelang.org/)
@@ -547,9 +552,6 @@
 *** Story (https://github.com/soborat/story-programming-language)
 *** SuperForth (https://github.com/TheRealMichaelWang/superforth)
 *** Sweet.js
-*** Teascript
-*** TurtleArt (https://help.sugarlabs.org/en/turtleart_tutorials/programming_without_words.html)
-*** Unicon
 *** Unison (https://www.unison-lang.org/)
 *** Universal Lambda (http://www.golfscript.com/)
 *** VALE (https://github.com/project-everest/vale)
@@ -628,3 +630,8 @@
 
 *** Inform 7
 *** ed
+*** naz
+    This is going to be close to Brainf**k type coding if we can ever
+    do it. Pretty much all arithmetic operations work on a constant,
+    so there's no "add two variables" but there's "add a variable and
+    this known constant".
