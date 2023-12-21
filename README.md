@@ -70,6 +70,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Fennel
 * FiM++
 * Fish
+* Folders
 * Forth
 * Fortran
 * Fourier
@@ -1213,6 +1214,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Bussin](https://github.com/face-hh/bussin)
 * Compiler / Interpreter: [bussin c97bece](https://github.com/face-hh/bussin/commit/c97bece4769c438b8c4bf0f012d9eb33720dd3f4)
 * Notes: The interpreter hangs after execution.
+
+### Euler 173
+* File: [problem173.folders](problem173.folders)
+* Language: [Folders](https://esolangs.org/wiki/Folders)
+* Compiler / Interpreter: [Folders.py 0bec545](https://github.com/SinaKhalili/Folders.py/tree/main)
+* Notes: Code was written with the help of a Haskell translator program; output of Linux `tree` command is available at `etc/problem173_tree.txt`.
 
 ## Valid Languages
 

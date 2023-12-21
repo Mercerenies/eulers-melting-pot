@@ -308,12 +308,11 @@
 *** Emotinomicon
     + Short list
 *** Enchilada                                                          :used:
-*** Enso (https://enso.org/)
 *** Excel                                                              :used:
     + Answer must fit into floating-point value
 *** FALSE                                                              :used:
 *** FiM++                                                              :used:
-*** Folders (https://esolangs.org/wiki/Folders)
+*** Folders (https://esolangs.org/wiki/Folders)                        :used:
 *** Fourier                                                            :used:
 *** FRACTRAN
     + Short list
@@ -412,6 +411,10 @@
     from ancient times which tries to run a PHP server that doesn't
     exist. The source code for this server is unavailable, to the best
     of my searching ability.
+*** Enso (https://enso.org/)
+    I thought this might work, but it's just a weird
+    data-visualization half-language and doesn't really do much other
+    than look vaguely snazzy.
 *** Enterprise
     Could not run due to language-imposed restrictions.
 *** GridScript
