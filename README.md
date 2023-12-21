@@ -38,6 +38,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Brainf\*\*k
 * Brat
 * Burlesque
+* Bussin
 * C#
 * Chef
 * CIL
@@ -1206,6 +1207,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Fish](https://fishshell.com/)
 * Compiler / Interpreter: [fish, version 3.6.1](https://fishshell.com/)
 * Notes: A very slow solution.
+
+### Euler 172
+* File: [problem172.bsx](problem172.bsx)
+* Language: [Bussin](https://github.com/face-hh/bussin)
+* Compiler / Interpreter: [bussin c97bece](https://github.com/face-hh/bussin/commit/c97bece4769c438b8c4bf0f012d9eb33720dd3f4)
+* Notes: The interpreter hangs after execution.
 
 ## Valid Languages
 

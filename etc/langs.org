@@ -292,7 +292,7 @@
 *** Befunk                                                             :used:
 *** Brainf**k                                                          :used:
 *** Burlesque (https://esolangs.org/wiki/Burlesque)                    :used:
-*** Bussin (https://github.com/face-hh/bussin)
+*** Bussin (https://github.com/face-hh/bussin)                         :used:
 *** Brat                                                               :used:
 *** Chef                                                               :used:
 *** CJam                                                               :used:

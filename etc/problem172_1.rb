@@ -56,3 +56,14 @@ end
 puts run
 
 # 0.8 seconds in Ruby, it's fast. Let's explore.
+#
+# Note about the Bussin solution (problem172.bsx): The language's for
+# loops are weird and run the "step" part before the first iteration
+# as well, and they also seem to check the condition before running
+# the "step" part. For loops are weird in this language, so we'll have
+# to be careful.
+#
+# The solution to this problem actually does fit precisely into a
+# 64-bit float by coincidence. But it's larger than 2^53, so I can't
+# prove that it will do so a priori. Hence, we're splitting into
+# higher bits and lower bits in Bussin.

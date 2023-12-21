@@ -1,0 +1,49 @@
+
+bruh fac(n) {
+  lit product be 1 rn
+  yall(lit i be 0 rn i smol n rn i be i + 1) {
+    product be product * i
+  }
+  product
+}
+
+bruh multinomial(n, a, b, c, d, e, f, g, h, i) {
+  mf j be n - a - b - c - d - e - f - g - h - i rn
+  fac(n) / (fac(a) * fac(b) * fac(c) * fac(d) * fac(e) * fac(f) * fac(g) * fac(h) * fac(i) * fac(j))
+}
+
+mf split be 1000000000000 rn
+
+lit msb be 0 rn
+lit lsb be 0 rn
+yall(lit ones be 0 - 1 rn ones smol 3 rn ones be ones + 1) {
+  yall(lit twos be 0 - 1 rn twos smol 3 rn twos be twos + 1) {
+    yall(lit threes be 0 - 1 rn threes smol 3 rn threes be threes + 1) {
+      yall(lit fours be 0 - 1 rn fours smol 3 rn fours be fours + 1) {
+        yall(lit fives be 0 - 1 rn fives smol 3 rn fives be fives + 1) {
+          yall(lit sixes be 0 - 1 rn sixes smol 3 rn sixes be sixes + 1) {
+            yall(lit sevens be 0 - 1 rn sevens smol 3 rn sevens be sevens + 1) {
+              yall(lit eights be 0 - 1 rn eights smol 3 rn eights be eights + 1) {
+                yall(lit nines be 0 - 1 rn nines smol 3 rn nines be nines + 1) {
+                  yall(lit zeroes be 0 - 1 rn zeroes smol 3 rn zeroes be zeroes + 1) {
+                    mf total_digits be ones + twos + threes + fours + fives + sixes + sevens + eights + nines + zeroes rn
+                    sus (total_digits fr 18) {
+                      mf total_numbers be multinomial(total_digits, ones, twos, threes, fours, fives, sixes, sevens, eights, nines) rn
+                      lit total_with_leading_zeroes be 0 rn
+                      sus (zeroes thicc 0) {
+                        total_with_leading_zeroes be multinomial(total_digits - 1, ones, twos, threes, fours, fives, sixes, sevens, eights, nines)
+                      }
+                      msb be msb + total_numbers - total_with_leading_zeroes
+                      lsb be (lsb + total_numbers - total_with_leading_zeroes) % split
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+waffle(format(format("${}${}", nerd.round((msb - split / 2) / split)), lsb))
