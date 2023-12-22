@@ -1,0 +1,25 @@
+<script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
+
+<script type="text/hyperscript">
+  init
+    put Array(1000001).fill(0) into ways
+    put 3 into n
+    repeat while n <= 250001
+        put n - 2 into m
+        repeat while m > 0 and (n * n) - (m * m) <= 1000000
+            put (n * n) - (m * m) into tiles
+            increment ways[tiles]
+            decrement m by 2
+        end
+        increment n
+    end
+
+    put 0 into total
+    repeat for count in ways
+      if count > 0 and count <= 10 then
+        increment total
+      end
+    end
+    append total to body
+  end
+</script>

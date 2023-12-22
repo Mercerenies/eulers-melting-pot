@@ -89,6 +89,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Hanabi
 * Hexagony
 * Hy
+* Hyperscript
 * i
 * Icon
 * IntercalScript
@@ -1220,6 +1221,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Folders](https://esolangs.org/wiki/Folders)
 * Compiler / Interpreter: [Folders.py 0bec545](https://github.com/SinaKhalili/Folders.py/tree/main)
 * Notes: Code was written with the help of a Haskell translator program; output of Linux `tree` command is available at `etc/problem173_tree.txt`.
+
+### Euler 174
+* File: [problem174.html](problem174.html)
+* Language: [Hyperscript](https://hyperscript.org/)
+* Compiler / Interpreter: [HyperScript 0.9.12](https://unpkg.com/hyperscript.org@0.9.12) on Firefox 120.0.1
+* Notes: (None)
 
 ## Valid Languages
 

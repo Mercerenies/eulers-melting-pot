@@ -72,6 +72,7 @@
 *** Earl Grey                                                          :used:
 *** Eiffel                                                             :used:
 *** F#
+*** Fantom (https://www.fantom.org/)
 *** Forth                                                              :used:
 *** Fortran                                                            :used:
 *** Gleam                                                              :used:
@@ -92,6 +93,7 @@
 *** Oberon-07                                                          :used:
 *** Objective-C                                                        :used:
 *** Pascal                                                             :used:
+*** Pyret (https://pyret.org/index.html)
 *** R
 *** Rebol                                                              :used:
 *** Red (https://www.red-lang.org/)
@@ -129,6 +131,9 @@
 *** BQN (https://mlochbaum.github.io/BQN/)
 *** Cat
     + No arrays
+*** Charm (https://en.wikipedia.org/wiki/Charm_(programming_language))
+    + Older, designed for ARM. I'll probably need to emulate so it'll
+      likely be slow.
 *** Container (https://github.com/odddollar/Container-lang)
     + No arrays
 *** 🆒                                                                 :used:
@@ -139,6 +144,7 @@
 *** Dip                                                                :used:
 *** Dogescript                                                         :used:
 *** Dry                                                                :used:
+*** Egel (https://egel-lang.github.io/)
 *** Egison (https://www.egison.org/)
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
 *** F*
@@ -148,6 +154,7 @@
 *** Giml (https://giml-lang.org/)
     + Division is broken, no modulo
 *** Glava                                                              :used:
+*** Hyperscript (https://hyperscript.org/)                             :used:
 *** i (https://github.com/Qlova/ilang)                                 :used:
 *** IMPS (https://imps.mcmaster.ca/)
 *** IntercalScript                                                     :used:
@@ -196,6 +203,7 @@
 *** Vale (https://vale.dev/)                                           :used:
 *** Vimscript
 *** Wenyan                                                             :used:
+*** Whiley (https://en.wikipedia.org/wiki/Whiley_(programming_language))
 *** Wren                                                               :used:
 *** Wyvern                                                             :used:
 *** XSLT                                                               :used:
@@ -286,6 +294,7 @@
 *** AGSPL (https://esolangs.org/wiki/AGSPL)                            :used:
 *** Alice (m-ender)                                                    :used:
 *** Anti-Array                                                         :used:
+*** ArnoldC (https://esolangs.org/wiki/ArnoldC)
 *** Aya                                                                :used:
 *** Beeswax                                                            :used:
 *** Befalse                                                            :used:
@@ -344,6 +353,7 @@
 *** Myby (https://github.com/ConorOBrien-Foxx/Myby/)
 *** naz (https://github.com/sporeball/naz)
     + Short list
+*** Oblivion (https://jweinst1.github.io/OblivionWebsite/)
 *** Orthagonal (https://github.com/m-ender/orthagonal)
 *** Perchance                                                          :used:
 *** Pickle (Python)                                                    :used:
@@ -362,16 +372,23 @@
 *** Shakespeare                                                        :used:
 *** Snowman                                                            :used:
 *** SNUSP (https://esolangs.org/wiki/SNUSP)
+*** Soul (https://github.com/egel-lang/soul)
+    + Loops are recursion
+    + No arrays, but random access to the top-level stack.
 *** Stuck                                                              :used:
 *** Taxi                                                               :used:
 *** Tome                                                               :used:
 *** Tovie (https://github.com/Jaysmito101/tovie)                       :used:
 *** TRANSCRIPT                                                         :used:
     + No arrays
+*** TrumpScript (https://github.com/samshadwell/TrumpScript)
+    + Yes, we'll probably actually do this one sometime.
+    + No arrays.
 *** TurtleArt (https://help.sugarlabs.org/en/turtleart_tutorials/programming_without_words.html)
 *** Underload
     + Short list
 *** V                                                                  :used:
+*** Whispers (https://github.com/cairdcoinheringaahing/Whispers)
 *** Whitespace                                                         :used:
 ** UNUSABLE
 *** ActionScript
@@ -407,6 +424,11 @@
     Is this actually a language or just a library...?
 *** Conedy
     See Trajedy.
+*** Ė (https://e-dot.io/)
+    Website doesn't exist anymore. I can access it on the Wayback
+    Machine, but the online interpreter is broken. If there was a
+    GitHub or something I would try reconstructing it from source, but
+    I can't locate the source either.
 *** EcstasyLang
     May be worth looking at at some point in the future. The
     instructions to get the thing running don't seem to be in working
@@ -476,7 +498,6 @@
 ** UNCLASSIFIED
 *** Alice
 *** Alloy (https://alloytools.org/)
-*** ArnoldC (https://esolangs.org/wiki/ArnoldC)
 *** Ateji PX (https://en.wikipedia.org/wiki/Ateji_PX)
 *** ATS
 *** BaCon (http://basic-converter.org/)
@@ -486,7 +507,7 @@
 *** Catln (https://catln.dev/)
 *** CDuce (http://www.cduce.org/)
 *** Cecil
-*** Charm (https://en.wikipedia.org/wiki/Charm_(programming_language))
+*** Charm++ (https://en.wikipedia.org/wiki/Charm%2B%2B)
 *** Clean
 *** Coconut
 *** ColdFusion
@@ -496,14 +517,11 @@
 *** Dale (https://github.com/tomhrr/dale)
 *** Dart
 *** E
-*** Ė (https://e-dot.io/)
-*** Egel (https://egel-lang.github.io/)
 *** EGL
 *** Euler
 *** F' (https://nasa.github.io/fprime/)
 *** Falcon (https://rosettacode.org/wiki/Category:Falcon)
 *** Fancy
-*** Fantom (https://www.fantom.org/)
 *** Fission
 *** Flix (https://github.com/flix/flix)
 *** Flora (https://flora.sourceforge.net/)
@@ -511,7 +529,6 @@
 *** Gluon
 *** Hare (https://harelang.org/)
 *** Husk (https://github.com/barbuz/Husk)
-*** Hyperscript (https://hyperscript.org/)
 *** I (https://aplwiki.com/wiki/I)
 *** IMP (https://en.wikipedia.org/wiki/IMP_(programming_language))
 *** Jeebox (http://jeebox.org/stuff/learn_more/)
@@ -526,7 +543,6 @@
 *** Mojo (https://www.modular.com/mojo)
 *** Nibbles (http://www.golfscript.com/)
 *** Oasis
-*** Oblivion (https://jweinst1.github.io/OblivionWebsite/)
 *** Occam
 *** Occam-π
 *** Ohm
@@ -539,7 +555,6 @@
 *** Postscript
 *** PPL
 *** Processing (https://en.wikipedia.org/wiki/Processing_(programming_language))
-*** Pyret (https://pyret.org/index.html)
 *** Reason (https://reasonml.github.io/)
 *** Rhombus (https://docs.racket-lang.org/rhombus/index.html)
 *** Runic Enchantments (https://github.com/Draco18s/RunicEnchantments/tree/Console)
@@ -547,7 +562,6 @@
 *** Skript (https://docs.skriptlang.org/)
 *** smodels (http://www.tcs.hut.fi/Software/smodels/)
 *** Snails
-*** Soul (https://github.com/egel-lang/soul)
 *** Squirrel
 *** Story (https://github.com/soborat/story-programming-language)
 *** SuperForth (https://github.com/TheRealMichaelWang/superforth)
@@ -558,8 +572,6 @@
 *** Verse (https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference)
 *** Vortex (https://github.com/dibsonthis/Vortex)
 *** Vyxal (https://github.com/Vyxal/Vyxal)
-*** Whiley (https://en.wikipedia.org/wiki/Whiley_(programming_language))
-*** Whispers (https://github.com/cairdcoinheringaahing/Whispers)
 *** Width (https://github.com/stestoltz/Width)
 *** XQuery
 *** XY
