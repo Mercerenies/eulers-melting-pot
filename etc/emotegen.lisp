@@ -1,9 +1,67 @@
 
 ;; Emotinomicon code generation helper
 
-(defgeneric translate (cmd))
+(defparameter +default-push-num-length+ 13)
 
-(defmethod translate ((cmd list))
+(defclass label ()
+  ((label-name :type symbol :accessor label-name :initarg :label-name)))
+
+(defclass goto ()
+  ((label-name :type symbol :accessor label-name :initarg :label-name)))
+
+(defun label (label-name)
+  (make-instance 'label :label-name label-name))
+
+(defun goto (label-name)
+  (make-instance 'goto :label-name label-name))
+
+(defgeneric parse (cmd index labels-hash)
+  (:documentation "Takes the command, the current position in the
+   source code, and a hash table of known labels. The last argument is
+   mutable. Returns the new position after executing the given
+   command. We need to pre-process the input so we know the source
+   index of labels for goto statements, since that's our only
+   nontrivial conditional capability."))
+
+(defmethod parse ((cmd list) index labels-hash)
+  ;; List commands are always of length 1 in the resulting source
+  ;; code.
+  (1+ index))
+
+(defmethod parse ((cmd label) index labels-hash)
+  ;; Labels do not produce any code, but they modify the labels hash.
+  (when (gethash (label-name cmd) labels-hash)
+    (error "Duplicate label ~A" (label-name cmd)))
+  (setf (gethash (label-name cmd) labels-hash) index)
+  index)
+
+(defmethod parse ((cmd string) index labels-hash)
+  (+ index (length cmd)))
+
+(defmethod parse ((cmd goto) index labels-hash)
+  (+ index (1+ +default-push-num-length+)))
+
+(defgeneric translate (cmd labels-hash)
+  (:documentation "Takes the command and produces a string. The string must be of the length
+   promised by #'parse."))
+
+(defmethod translate ((cmd label) labels-hash)
+  "")
+
+(defmethod translate ((cmd goto) labels-hash)
+  (let ((destination-index (gethash (label-name cmd) labels-hash)))
+    (unless destination-index
+      (error "No such label ~A" (label-name cmd)))
+    (unless (< destination-index 10000)
+      (error "Label index ~A too big, increase the limit :(" destination-index))
+    (format nil "~{~A~}"
+            (append (mapcar (lambda (c) (translate c labels-hash)) (push-num-fixed-length destination-index))
+                    (list (translate '(pop-and-goto) labels-hash))))))
+
+(defmethod translate ((cmd string) labels-hash)
+  cmd)
+
+(defmethod translate ((cmd list) labels-hash)
   (ecase (first cmd)
     (push0 "😀")
     (push1 "😅")
@@ -78,11 +136,12 @@
     (double-factorial "‼")
     (skip-if-false "⁉")))
 
-(defmethod translate ((cmd string))
-  cmd)
-
-(defmethod translate-all (cmd)
-  (mapcar #'translate cmd))
+(defmethod translate-all (cmds)
+  (let ((labels-hash (make-hash-table :test 'equal)))
+    (loop with index = 0
+          for cmd in cmds
+          do (setf index (parse cmd index labels-hash)))
+    (mapcar (lambda (cmd) (translate cmd labels-hash)) cmds)))
 
 (defun lit-string (body)
   `((begin-string)
@@ -111,6 +170,32 @@
     (100 '((push100)))
     (t (multiple-value-bind (quotient remainder) (floor n 10)
          `((push10) ,@(push-num quotient) (mul) ,@(push-num remainder) (add))))))
+
+;; I think the moon phases are pretty, so I'm going to use them as
+;; padding :) We don't have to use different characters (we could just
+;; spam 'new moon', but I consider myself something of an artist)
+(defparameter *padding*
+  #("🌑" "🌒" "🌓" "🌔" "🌕" "🌖" "🌗" "🌘"))
+
+(defparameter *padding-position*
+  0)
+
+(defun generate-padding-list (n)
+  (if (<= n 0)
+      nil
+      (cons (elt *padding* *padding-position*)
+            (progn (setf *padding-position* (mod (1+ *padding-position*) (length *padding*)))
+                   (generate-padding-list (1- n))))))
+
+(defun pad-list (list desired-length)
+  (append list (generate-padding-list (- desired-length (length list)))))
+
+(defun push-num-fixed-length (n &optional (desired-length +default-push-num-length+))
+  "As push-num but padding to a desired length. The default
+   desired-length of 13 assumes that n is less than 10,000, as every
+   number less than that can be represented in 13 characters or less."
+  (let ((num-instructions (push-num n)))
+    (pad-list num-instructions desired-length)))
 
 ;; Using repeated multiplication, we do better than naive push-num
 ;; since we'll be using this number A LOT.
@@ -228,9 +313,20 @@
         (translate-all `(,@(save-var *var-numbers-count*
                                      `((push2)))
                          ,@(push-num 100)
-                         ,@(push 20)
+                         (push10)
                          ,@(get-var *var-numbers-count*)
                          (n%2))))
+
+(format t "DEBUGGING~%")
+
+(format t "~{~A~}~%"
+        (translate-all `((push1)
+                         (push2)
+                         (push3)
+                         ,(goto 'a)
+                         (push4)
+                         ,(label 'a)
+                         (output-num))))
 
 ;; (format t "~{~A~}~%"
 ;;         (translate-all `(,@(push-num 10)
