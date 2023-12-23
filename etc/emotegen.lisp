@@ -9,11 +9,29 @@
 (defclass goto ()
   ((label-name :type symbol :accessor label-name :initarg :label-name)))
 
+;; Condition must have stack effect ( -- x) and must NOT depend on the
+;; current top of the stack. If condition is true, then we pop it and
+;; jump to the label. If condition is false, we proceed.
+;;
+;; If inverted-condition is true, then we jump on a false condition
+;; and proceed on a true one. The default for inverted-condition is
+;; false.
+(defclass goto-maybe ()
+  ((branch-condition :type list :accessor branch-condition :initarg :branch-condition)
+   (label-name :type symbol :accessor label-name :initarg :label-name)
+   (inverted-condition :type boolean :accessor inverted-condition :initarg :inverted-condition :initform nil)))
+
 (defun label (label-name)
   (make-instance 'label :label-name label-name))
 
 (defun goto (label-name)
   (make-instance 'goto :label-name label-name))
+
+(defun goto-maybe (branch-condition label-name &key (inverted-condition nil))
+  (make-instance 'goto-maybe
+                 :branch-condition branch-condition
+                 :label-name label-name
+                 :inverted-condition inverted-condition))
 
 (defgeneric parse (cmd index labels-hash)
   (:documentation "Takes the command, the current position in the
@@ -41,6 +59,12 @@
 (defmethod parse ((cmd goto) index labels-hash)
   (+ index (1+ +default-push-num-length+)))
 
+(defmethod parse ((cmd goto-maybe) index labels-hash)
+  (let* ((index1 (+ index +default-push-num-length+))
+         (index2 (parse (branch-condition cmd) index1 labels-hash))
+         (index3 (+ index2 3)))
+    index3))
+
 (defgeneric translate (cmd labels-hash)
   (:documentation "Takes the command and produces a string. The string must be of the length
    promised by #'parse."))
@@ -57,6 +81,19 @@
     (format nil "~{~A~}"
             (append (mapcar (lambda (c) (translate c labels-hash)) (push-num-fixed-length destination-index))
                     (list (translate '(pop-and-goto) labels-hash))))))
+
+(defmethod translate ((cmd goto-maybe) labels-hash)
+  (let ((destination-index (gethash (label-name cmd) labels-hash)))
+    (unless destination-index
+      (error "No such label ~A" (label-name cmd)))
+    (unless (< destination-index 10000)
+      (error "Label index ~A too big, increase the limit :(" destination-index))
+    (format nil "~{~A~}"
+            (append (mapcar (lambda (c) (translate c labels-hash)) (push-num-fixed-length destination-index))
+                    (mapcar (lambda (c) (translate c labels-hash)) (branch-condition cmd))
+                    (list (translate (if (inverted-condition cmd) '(skip-if-true) '(skip-if-false)) labels-hash)
+                          (translate '(pop-and-goto) labels-hash)
+                          (translate '(drop) labels-hash))))))
 
 (defmethod translate ((cmd string) labels-hash)
   cmd)
@@ -133,8 +170,8 @@
     (if-then-else "️❓")
     (skip "❕")
     (skip-if-true "❔")
-    (double-factorial "‼")
-    (skip-if-false "⁉")))
+    (double-factorial "‼️")
+    (skip-if-false "⁉️")))
 
 (defmethod translate-all (cmds)
   (let ((labels-hash (make-hash-table :test 'equal)))
@@ -154,13 +191,12 @@
     (close-loop)))
 
 (defun do-if (condition body &key (label (gensym))) ;; NOT WORKING
-  "condition shall have stack effect ( ..a -- ..a x) and body can have
-   arbitrary stack effect."
-  `(,@condition
-    (skip-if-true)
-    ,(goto label)
+  "condition shall have stack effect ( -- x) and body can have arbitrary
+   stack effect."
+  `(,(goto-maybe condition label :inverted-condition t)
     ,@body
-    ,(label label)))
+    ,(label label)
+    (drop)))
 
 ;; Only supports numbers from 0 to 100
 (defun push-num (n)
@@ -309,8 +345,8 @@
                                ;; Most of the arithmetic operations in
                                ;; the language operate on bignums that
                                ;; don't work correctly when taken for
-                               ;; truthiness. But fortunately, n+1 and
-                               ;; n-1 coerce back to regular numbers
+                               ;; truthiness. But fortunately, n-1 and
+                               ;; n+1 coerce back to regular numbers
                                ;; that are correctly falsy at zero.
                                (n+1)
                                (n-1)))
@@ -330,10 +366,10 @@
 
 (format t "~{~A~}~%"
         (translate-all `(,@(do-if
-                             `((push0) (n+1))
+                             `((push0) (n-1) (n+1) (n+1))
                              `((push1) (output-num)))
                          ,@(do-if
-                             `((push0) (n+1) (n-1))
+                             `((push0) (n-1) (n+1))
                              `((push2) (output-num))))))
 
 ;; (format t "~{~A~}~%"
