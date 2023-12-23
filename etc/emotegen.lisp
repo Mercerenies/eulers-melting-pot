@@ -194,14 +194,12 @@
     ,@body
     (close-loop)))
 
-(defun do-if (condition body &key (label (gensym))) ;; NOT WORKING
+(defun do-if (condition body &key (label (gensym)) (inverted-condition t))
   "condition shall have stack effect ( -- x) and body can have arbitrary
    stack effect."
-  `(,(goto-maybe condition label :inverted-condition t)
+  `(,(goto-maybe condition label :inverted-condition inverted-condition)
     ,@body
-    (push0) ; Garbage value to get popped by the drop call below.
-    ,(label label)
-    (drop)))
+    ,(label label)))
 
 ;; Only supports numbers from 0 to 100
 (defun push-num (n)
@@ -290,12 +288,16 @@
   `(,@(push-num n)
     ,@body
     ,@*65536*
+    (n-1)
+    (n+1)
     (div)
     (floor)
     (pop-and-modify-code)
     ,@(push-num (1+ n))
     ,@*65536*
     ,@body
+    (n-1)
+    (n+1)
     (mod)
     (pop-and-modify-code)))
 
@@ -361,17 +363,43 @@
 ;; Mocking up the second half of the program
 (format t "~{~A~}~%"
         (translate-all `(,@(save-var *var-numbers-count*
-                                     `((push2)))
+                                     `((push3)))
                          ,@(push-num 100)
-                         (push10)
+                         (push3)
+                         ,@(save-var *var-whole-part*
+                                     `((push1)))
+                         ,@(get-var *var-whole-part*)
                          ,@(do-if
                            `((push1)
                              ,@(get-var *var-numbers-count*)
                              (n%2)
-                             (sub))
-                           `((push1)
                              (sub)
-                             (push1))))))
+                             (n-1)
+                             (n+1))
+                           `(,@(do-if
+                               `(,@(get-var *var-whole-part*)
+                                 (n-1))
+                               `(;; Case 1: We need to correct, but the top of the stack is not 1.
+                                 (push1)
+                                 (sub)
+                                 (push1)
+                                 ,@(save-var *var-temporary*
+                                             `(,@(get-var *var-numbers-count*)))
+                                 ,@(save-var *var-numbers-count*
+                                             `(,@(get-var *var-temporary*)
+                                               (n+1)))))
+                             ,@(do-if
+                               `((push1)
+                                 ,@(get-var *var-numbers-count*)
+                                 (n%2)
+                                 (sub)
+                                 (n-1)
+                                 (n+1))
+                               `(;; Case 2: We need to correct, top of the stack equals 1.
+                                 (drop)
+                                 (n-1)
+                                 (n+1)
+                                 (n+1))))))))
 
 ;; (format t "~{~A~}~%"
 ;;         (translate-all `(,@(push-num 10)
