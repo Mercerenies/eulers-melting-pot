@@ -153,6 +153,15 @@
     ,@body
     (close-loop)))
 
+(defun do-if (condition body &key (label (gensym))) ;; NOT WORKING
+  "condition shall have stack effect ( ..a -- ..a x) and body can have
+   arbitrary stack effect."
+  `(,@condition
+    (skip-if-true)
+    ,(goto label)
+    ,@body
+    ,(label label)))
+
 ;; Only supports numbers from 0 to 100
 (defun push-num (n)
   (case n
@@ -320,13 +329,12 @@
 (format t "DEBUGGING~%")
 
 (format t "~{~A~}~%"
-        (translate-all `((push1)
-                         (push2)
-                         (push3)
-                         ,(goto 'a)
-                         (push4)
-                         ,(label 'a)
-                         (output-num))))
+        (translate-all `(,@(do-if
+                             `((push0) (n+1))
+                             `((push1) (output-num)))
+                         ,@(do-if
+                             `((push0) (n+1) (n-1))
+                             `((push2) (output-num))))))
 
 ;; (format t "~{~A~}~%"
 ;;         (translate-all `(,@(push-num 10)
