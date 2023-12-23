@@ -318,8 +318,7 @@
     + Short list
 *** Emmental (https://esolangs.org/wiki/Emmental)
 *** Emoji                                                              :used:
-*** Emotinomicon
-    + Short list
+*** Emotinomicon                                                       :used:
 *** Enchilada                                                          :used:
 *** Excel                                                              :used:
     + Answer must fit into floating-point value
@@ -627,10 +626,6 @@
   and failed, or that I know (due to the specification or rules of the
   language) that they will only be usable for an incredibly easy
   challenge.
-*** Emotinomicon
-    The interpreter's primary stack shuffle command is broken. I
-    believe we can horribly inefficiently store arbitrary data in the
-    code space, but that restricts us to 16-bit integers.
 *** Underload
     A very minimalist language. We can very inefficiently add,
     multiply, and take exponents, and we have rudimentary cons cells.

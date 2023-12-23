@@ -61,6 +61,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * ELisp
 * Elixir
 * Emoji
+* Emotinomicon
 * Enchilada
 * Erlang
 * 𝔼𝕊𝕄𝕚𝕟
@@ -1227,6 +1228,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Hyperscript](https://hyperscript.org/)
 * Compiler / Interpreter: [HyperScript 0.9.12](https://unpkg.com/hyperscript.org@0.9.12) on Firefox 120.0.1
 * Notes: (None)
+
+### Euler 175
+* File: [problem175.emote](problem175.emote)
+* Language: [Emotinomicon](https://github.com/ConorOBrien-Foxx/Emotinomicon/)
+* Compiler / Interpreter: [The online interpreter](http://conorobrien-foxx.github.io/Emotinomicon/int.html)
+* Notes: A somewhat slow solution; code was written with the help of a Lisp translator program; screenshot is available at [etc/problem175_screenshot.png](etc/problem175_screenshot.png).
 
 ## Valid Languages
 
