@@ -61,9 +61,15 @@
 
 (defmethod parse ((cmd goto-maybe) index labels-hash)
   (let* ((index1 (+ index +default-push-num-length+))
-         (index2 (parse (branch-condition cmd) index1 labels-hash))
+         (index2 (parse-seq (branch-condition cmd) index1 labels-hash))
          (index3 (+ index2 3)))
     index3))
+
+(defun parse-seq (cmds starting-index labels-hash)
+  (loop with index = starting-index
+        for cmd in cmds
+        do (setf index (parse cmd index labels-hash))
+        finally (return index)))
 
 (defgeneric translate (cmd labels-hash)
   (:documentation "Takes the command and produces a string. The string must be of the length
@@ -175,9 +181,7 @@
 
 (defmethod translate-all (cmds)
   (let ((labels-hash (make-hash-table :test 'equal)))
-    (loop with index = 0
-          for cmd in cmds
-          do (setf index (parse cmd index labels-hash)))
+    (parse-seq cmds 0 labels-hash)
     (mapcar (lambda (cmd) (translate cmd labels-hash)) cmds)))
 
 (defun lit-string (body)
@@ -195,6 +199,7 @@
    stack effect."
   `(,(goto-maybe condition label :inverted-condition t)
     ,@body
+    (push0) ; Garbage value to get popped by the drop call below.
     ,(label label)
     (drop)))
 
@@ -359,18 +364,14 @@
                                      `((push2)))
                          ,@(push-num 100)
                          (push10)
-                         ,@(get-var *var-numbers-count*)
-                         (n%2))))
-
-(format t "DEBUGGING~%")
-
-(format t "~{~A~}~%"
-        (translate-all `(,@(do-if
-                             `((push0) (n-1) (n+1) (n+1))
-                             `((push1) (output-num)))
                          ,@(do-if
-                             `((push0) (n-1) (n+1))
-                             `((push2) (output-num))))))
+                           `((push1)
+                             ,@(get-var *var-numbers-count*)
+                             (n%2)
+                             (sub))
+                           `((push1)
+                             (sub)
+                             (push1))))))
 
 ;; (format t "~{~A~}~%"
 ;;         (translate-all `(,@(push-num 10)
