@@ -122,6 +122,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * MoonScript
 * Mouse-2002
 * NASM
+* naz
 * Nemerle
 * Nim
 * Nit
@@ -1234,6 +1235,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Emotinomicon](https://github.com/ConorOBrien-Foxx/Emotinomicon/)
 * Compiler / Interpreter: [The online interpreter](http://conorobrien-foxx.github.io/Emotinomicon/int.html)
 * Notes: A somewhat slow solution; code was written with the help of a Lisp translator program; screenshot is available at [etc/problem175_screenshot.png](etc/problem175_screenshot.png).
+
+### Euler 176
+* File: [problem176.naz](problem176.naz)
+* Language: [naz](https://esolangs.org/wiki/Naz)
+* Compiler / Interpreter: [naz 82960e5](https://github.com/sporeball/naz)
+* Notes: Code was written with the help of a Racket translator program; requires the `-u` flag.
 
 ## Valid Languages
 

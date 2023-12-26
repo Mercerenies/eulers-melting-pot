@@ -349,8 +349,9 @@
 *** MATL                                                               :used:
 *** MontiLang                                                          :used:
 *** Mouse-2002                                                         :used:
+*** Muriel (https://esolangs.org/wiki/Muriel)
 *** Myby (https://github.com/ConorOBrien-Foxx/Myby/)
-*** naz (https://github.com/sporeball/naz)
+*** naz (https://github.com/sporeball/naz)                             :used:
     + Short list
 *** Oblivion (https://jweinst1.github.io/OblivionWebsite/)
 *** Orthagonal (https://github.com/m-ender/orthagonal)
@@ -637,8 +638,3 @@
 
 *** Inform 7
 *** ed
-*** naz
-    This is going to be close to Brainf**k type coding if we can ever
-    do it. Pretty much all arithmetic operations work on a constant,
-    so there's no "add two variables" but there's "add a variable and
-    this known constant".
