@@ -5,9 +5,7 @@ set nums=0123456789
 set result=
 
 set factorials='1 2 6 24 120 720 5040 40320 362880'
-#set factorials=`echo $factorials | tr " " "\n" | head -n $n | tail -n 1`
 
-#set var=`echo London | head -c 4 | tail -c 1`
 foreach dotimes (1 2 3 4 5 6 7 8 9)
     set loopvar=0
     set length=`printf $nums | wc -c`
