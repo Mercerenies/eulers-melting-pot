@@ -59,6 +59,7 @@
    and "Platinum" are measures of my personal skill.
 *** Ada                                                                :used:
 *** ALGOL 68                                                           :used:
+*** AliceML (https://en.wikipedia.org/wiki/Alice_(programming_language))
 *** AssemblyScript (https://www.assemblyscript.org/)                   :used:
     + Limit is probably i32; i64 is mocked through a weird interface
       (~setTempRet0~) that probably doesn't work for us.
@@ -72,6 +73,9 @@
 *** Earl Grey                                                          :used:
 *** Eiffel                                                             :used:
 *** F#
+*** Falcon (https://rosettacode.org/wiki/Category:Falcon)
+    + This website probably has the most up-to-date interpreters:
+      http://falconpl.org/
 *** Fantom (https://www.fantom.org/)
 *** Forth                                                              :used:
 *** Fortran                                                            :used:
@@ -103,6 +107,7 @@
 *** SML                                                                :used:
 *** Squeak
 *** Swift                                                              :used:
+*** Tyr (https://github.com/tyr-lang/)
 *** Unicon (http://www.unicon.org/)
 *** Verilog                                                            :used:
 *** X10 (http://x10-lang.org/)                                         :used:
@@ -121,6 +126,8 @@
 *** 42 (https://forty2.is/)
 *** ABAP (https://en.wikipedia.org/wiki/ABAP)
 *** Agda                                                               :used:
+*** Alice (https://en.wikipedia.org/wiki/Alice_(software))
+*** Alloy (https://alloytools.org/)
 *** APL                                                                :used:
 *** Attache (https://github.com/ConorOBrien-Foxx/Attache)
 *** AutoHotkey                                                         :used:
@@ -498,8 +505,6 @@
 *** Whython (https://www.pxeger.com/2021-09-19-hacking-on-cpython/)
     Unimplemented
 ** UNCLASSIFIED
-*** Alice
-*** Alloy (https://alloytools.org/)
 *** Ateji PX (https://en.wikipedia.org/wiki/Ateji_PX)
 *** ATS
 *** BaCon (http://basic-converter.org/)
@@ -522,7 +527,6 @@
 *** EGL
 *** Euler
 *** F' (https://nasa.github.io/fprime/)
-*** Falcon (https://rosettacode.org/wiki/Category:Falcon)
 *** Fancy
 *** Fission
 *** Flix (https://github.com/flix/flix)
@@ -554,7 +558,7 @@
 *** Orc
 *** Orion (https://github.com/wafelack/orion/)
 *** Oxide (https://github.com/tuqqu/oxide-lang)
-*** Oz
+*** Oz (https://en.wikipedia.org/wiki/Oz_(programming_language))
 *** Paperscript
 *** Peg (https://github.com/HackerFoo/peg)
 *** Postscript
