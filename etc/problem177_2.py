@@ -1,7 +1,15 @@
 
-# Straight brute force, 4 minutes in Python
+# problem177_1.py but memoizing trig calls
 
 from math import sin, cos, sqrt, asin, degrees, radians
+
+
+sines = []
+cosines = []
+
+for i in range(180):
+    sines.append(sin(radians(i)))
+    cosines.append(cos(radians(i)))
 
 
 def clamp(value, lower, upper):
@@ -72,13 +80,13 @@ for a1 in range(1, 180):
                 # Now the hard angles: c1 and c2
                 c3 = 180 - a1 - a2
                 k = 1  # We don't care about similar figures, so assert k = 1
-                l = sin(radians(b2)) * k / sin(radians(b1))
-                m = sin(radians(a2)) * l / sin(radians(a1))
-                n = sin(radians(d2)) * m / sin(radians(d1))
-                x = sqrt(k ** 2 + n ** 2 - 2 * k * n * cos(radians(c3)))
-                inner = clamp(n * sin(radians(c3)) / x, -1, 1)
+                l = sines[b2] * k / sines[b1]
+                m = sines[a2] * l / sines[a1]
+                n = sines[d2] * m / sines[d1]
+                x = sqrt(k ** 2 + n ** 2 - 2 * k * n * cosines[c3])
+                inner = clamp(n * sines[c3] / x, -1, 1)
                 c1 = degrees(asin(inner))
-                inner = clamp(k * sin(radians(c3)) / x, -1, 1)
+                inner = clamp(k * sines[c3] / x, -1, 1)
                 c2 = degrees(asin(inner))
                 if is_integer(c1) and is_integer(c2):
                     int_c1 = int(c1 + 0.5)
