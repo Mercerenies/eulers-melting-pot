@@ -65,6 +65,7 @@
       (~setTempRet0~) that probably doesn't work for us.
 *** AWK                                                                :used:
 *** Bizubee (https://bizubee.github.io/)
+*** C3 (https://c3-lang.org/primer/)
 *** COBOL                                                              :used:
 *** Delphi (https://en.wikipedia.org/wiki/Delphi_(software))
     + Verify that this is different enough from Pascal to warrant its
