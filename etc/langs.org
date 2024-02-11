@@ -108,7 +108,6 @@
 *** SML                                                                :used:
 *** Squeak
 *** Swift                                                              :used:
-*** Tyr (https://github.com/tyr-lang/)
 *** Unicon (http://www.unicon.org/)
 *** Verilog                                                            :used:
 *** X10 (http://x10-lang.org/)                                         :used:
@@ -139,9 +138,6 @@
 *** BQN (https://mlochbaum.github.io/BQN/)
 *** Cat
     + No arrays
-*** Charm (https://en.wikipedia.org/wiki/Charm_(programming_language))
-    + Older, designed for ARM. I'll probably need to emulate so it'll
-      likely be slow.
 *** Container (https://github.com/odddollar/Container-lang)
     + No arrays
 *** 🆒                                                                 :used:
@@ -213,6 +209,8 @@
 *** Vimscript
 *** Wenyan                                                             :used:
 *** Whiley (https://en.wikipedia.org/wiki/Whiley_(programming_language))
+    + No floating points, only integers
+    + Compiles to JVM
 *** Wren                                                               :used:
 *** Wyvern                                                             :used:
 *** XSLT                                                               :used:
@@ -428,6 +426,13 @@
 *** Basis
     The [[https://esolangs.org/wiki/Basis#Reference_implementation_.28WIP.29][only implementation]] is incomplete and does not have enough
     features to perform any sort of nontrivial computation.
+*** Charm (https://en.wikipedia.org/wiki/Charm_(programming_language))
+    + Older, designed for ARM. I'll probably need to emulate so it'll
+      likely be slow.
+    + Can't find source code (despite it being GPL). Only compiler I
+      can find is baked into an old RPi emulator, doesn't work on its
+      own, and has no corresponding install instructions. I'm calling
+      this one unusable.
 *** chomksi (pep)
     I can find no further records of this language's existence.
 *** Clasp.py
@@ -501,6 +506,13 @@
     No implementation
 *** Trajedy
     Beautiful language, but... no.
+*** Tyr (https://github.com/tyr-lang/)
+    Official compiler doesn't appear to work. Produces LLVM errors on
+    even the official "Hello World" project.
+#+BEGIN_SRC
+    error message:
+error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader: 'LLVM 15.0.7')
+#+END_SRC
 *** Unlambda
     Possibly too minimal?
 *** Whython (https://www.pxeger.com/2021-09-19-hacking-on-cpython/)
