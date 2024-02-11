@@ -30,7 +30,7 @@ class Quadrilateral:
 
     def __repr__(self):
         angles = next(iter(self.angles))
-        return f"Quadrilateral({','.join(angles)})"
+        return f"Quadrilateral({','.join(str(x) for x in angles)})"
 
     def __eq__(self, other):
         if not isinstance(other, Quadrilateral):

@@ -1,5 +1,9 @@
 
 # problem177_1.py but memoizing trig calls
+#
+# Also made some of the for loops more efficient.
+#
+# Down to 1 minute 20 seconds in Python
 
 from math import sin, cos, sqrt, asin, degrees, radians
 
@@ -38,7 +42,7 @@ class Quadrilateral:
 
     def __repr__(self):
         angles = next(iter(self.angles))
-        return f"Quadrilateral({','.join(angles)})"
+        return f"Quadrilateral({','.join(str(x) for x in angles)})"
 
     def __eq__(self, other):
         if not isinstance(other, Quadrilateral):
@@ -60,23 +64,16 @@ count = 0
 all_solutions = set()
 
 for a1 in range(1, 180):
-    if a1 % 10 == 0:
-        print(f"a1 = {a1}")
-    for a2 in range(1, 180 - a1):
-        for b1 in range(1, 180):
-            if a2 + b1 >= 180:
-                # Concave
-                continue
+    print(f"a1 = {a1}")
+    # Loop constraints: a1 + a2 < 180 (triangle properties) and, up to
+    # reflection, we can swap a1 and a2.
+    for a2 in range(a1, 180 - a1):
+        # Loop constraint: If a1 + a2 + b1 >= 180 then b2 <= 0.
+        for b1 in range(1, 180 - a1 - a2):
             b2 = 180 - b1 - a1 - a2
-            if b2 <= 0 or b2 >= 180:
-                continue
-            for d2 in range(1, 180):
+            for d2 in range(1, 180 - a1 - a2):
+                # Loop constraint: If a1 + a2 + d2 >= 180, then d1 <= 0.
                 d1 = 180 - d2 - a1 - a2
-                if d1 <= 0 or d1 >= 180:
-                    continue
-                if d2 + a1 >= 180:
-                    # Concave
-                    continue
                 # Now the hard angles: c1 and c2
                 c3 = 180 - a1 - a2
                 k = 1  # We don't care about similar figures, so assert k = 1
