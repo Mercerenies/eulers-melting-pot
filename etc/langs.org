@@ -13,6 +13,7 @@
    languages, given the time.
 *** C
 *** C++
+*** Coconut (http://coconut-lang.org/)                                 :used:
 *** Coffeescript
 *** GDScript
 *** GML                                                                :used:
@@ -70,7 +71,6 @@
 *** Bizubee (https://bizubee.github.io/)
 *** C3 (https://c3-lang.org/primer/)
 *** COBOL                                                              :used:
-*** Coconut (http://coconut-lang.org/)                                 :used:
 *** Delphi (https://en.wikipedia.org/wiki/Delphi_(software))
     + Verify that this is different enough from Pascal to warrant its
       own slot.
