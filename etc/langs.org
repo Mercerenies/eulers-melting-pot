@@ -42,6 +42,9 @@
     + Currently unimplemented. Looks like they hope to be done in
       2023, so maybe soon.
 *** Ceylon
+    + Having trouble building official compiler (which claims to
+      require Java 8 but won't build against it). TIO has a working
+      version, for problems that take < 1 minute
 *** D                                                                  :used:
 *** Elixir                                                             :used:
 *** Elm
@@ -67,6 +70,7 @@
 *** Bizubee (https://bizubee.github.io/)
 *** C3 (https://c3-lang.org/primer/)
 *** COBOL                                                              :used:
+*** Coconut (http://coconut-lang.org/)                                 :used:
 *** Delphi (https://en.wikipedia.org/wiki/Delphi_(software))
     + Verify that this is different enough from Pascal to warrant its
       own slot.
@@ -529,7 +533,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Cecil
 *** Charm++ (https://en.wikipedia.org/wiki/Charm%2B%2B)
 *** Clean
-*** Coconut
+*** Coco (https://rosettacode.org/wiki/Category:Coco)
 *** ColdFusion
 *** Cubically (https://github.com/aaronryank/cubically)
 *** Crystal
@@ -631,6 +635,8 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
     - https://langdev.meta.stackexchange.com/questions/350/what-languages-have-been-created-by-pldi-users
   + Category:Programming Languages - APL Wiki
     - https://aplwiki.com/wiki/Category:Programming_languages
+  + List of languages that compile to python
+    - https://github.com/vindarel/languages-that-compile-to-python
 ** ONLINE INTERPRETERS
    Some online interpreters that are free to use and very handy for tasks like this.
 

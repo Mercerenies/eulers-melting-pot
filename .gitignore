@@ -13,3 +13,4 @@ __arkscript__/
 __pycache__/
 META-INF/
 egcache/
+__coconut_cache__/

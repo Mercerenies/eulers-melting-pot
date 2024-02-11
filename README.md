@@ -44,6 +44,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * CIL
 * CJam
 * COBOL
+* Coconut
 * Comefrom0x10
 * COMPLEX
 * 🆒
@@ -1241,6 +1242,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [naz](https://esolangs.org/wiki/Naz)
 * Compiler / Interpreter: [naz 82960e5](https://github.com/sporeball/naz)
 * Notes: Code was written with the help of a Racket translator program; requires the `-u` flag.
+
+### Euler 177
+* File: [problem177.coco](problem177.coco)
+* Language: [Coconut](http://coconut-lang.org/)
+* Compiler / Interpreter: [Coconut: Version 3.0.4](https://coconut.readthedocs.io/en/latest/DOCS.html#installation)
+* Notes: A somewhat slow solution.
 
 ## Valid Languages
 
