@@ -105,6 +105,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Joy
 * JSF\*\*k
 * JustBASIC
+* K
 * Kitten
 * Labyrinth
 * LaTeX
@@ -1248,6 +1249,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Coconut](http://coconut-lang.org/)
 * Compiler / Interpreter: [Coconut: Version 3.0.4](https://coconut.readthedocs.io/en/latest/DOCS.html#installation)
 * Notes: A somewhat slow solution.
+
+### Euler 178
+* File: [problem178.k](problem178.k)
+* Language: [K](https://en.wikipedia.org/wiki/K_(programming_language))
+* Compiler / Interpreter: [ngn/k on TIO Nexus](https://tio.run/#k-ngn)
+* Notes: (None)
 
 ## Valid Languages
 

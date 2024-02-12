@@ -172,7 +172,7 @@
 *** Joy                                                                :used:
 *** Kitten                                                             :used:
     + 64-bit integers (no bignums)
-*** K
+*** K                                                                  :used:
     + No bignums
 *** λProlog
 *** LaTeX                                                              :used:
