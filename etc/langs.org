@@ -322,6 +322,7 @@
 *** CJam                                                               :used:
 *** Comefrom0x10 (https://esolangs.org/wiki/Comefrom0x10)              :used:
 *** COMPLEX                                                            :used:
+*** Connery (https://esolangs.org/wiki/Connery)
 *** Cubix                                                              :used:
 *** Cy (https://github.com/cyoce/Cy)
 *** ed
