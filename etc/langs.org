@@ -297,6 +297,7 @@
    "Esoteric" is the category below "Bronze"; an Esoteric language is
    inherently special-purpose enough or limited enough that its uses
    are severely restricted.
+*** #hell (https://esolangs.org/wiki/HashHell)
 *** *><>                                                               :used:
 *** ///                                                                :used:
 *** 05AB1E                                                             :used:
@@ -315,6 +316,7 @@
 *** Befunge                                                            :used:
 *** Befunk                                                             :used:
 *** Brainf**k                                                          :used:
+*** Broccoli (https://github.com/mathieucaroff/broccoli)
 *** Burlesque (https://esolangs.org/wiki/Burlesque)                    :used:
 *** Bussin (https://github.com/face-hh/bussin)                         :used:
 *** Brat                                                               :used:
@@ -342,6 +344,7 @@
     + Short list
 *** Funciton                                                           :used:
 *** Fuzzy Octo Guacamole (https://codereview.stackexchange.com/questions/124736/fuzzy-octo-guacamole-interpreter)
+*** Gaot++ (https://esolangs.org/wiki/Gaot%2B%2B)
 *** Gibberish                                                          :used:
 *** Golfscript                                                         :used:
 *** Grocery List                                                       :used:
@@ -377,8 +380,10 @@
 *** Pyramid Scheme (https://github.com/ConorOBrien-Foxx/Pyramid-Scheme)
 *** Pyth                                                               :used:
 *** Quark (https://github.com/henrystanley/Quark/)
+*** reMorse (https://esolangs.org/wiki/ReMorse)
 *** Retina (https://esolangs.org/wiki/Retina)
 *** Rockstar                                                           :used:
+*** Rpg (https://esolangs.org/wiki/Rpg)
 *** Secretary (https://esolangs.org/wiki/Secretary)
 *** Seriously                                                          :used:
 *** Shakespeare                                                        :used:
@@ -401,6 +406,7 @@
     + Short list
 *** V                                                                  :used:
 *** Velato (http://www.velato.net/)
+*** Whirl (https://web.archive.org/web/20130116204525/bigzaphod.org/whirl/)
 *** Whispers (https://github.com/cairdcoinheringaahing/Whispers)
 *** Whitespace                                                         :used:
 ** UNUSABLE
