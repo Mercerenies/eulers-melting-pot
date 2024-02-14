@@ -32,10 +32,15 @@
 ;; big array is stored at the trailing right end of the memory buffer.
 ;; Again, all useful values are stored at even positions, so to move
 ;; to an array position we'll need to multiply the desired index by 2.
+;;
+;; (6) The largest variable that is NOT part of the trailing array is
+;; the constant -1, which we'll use to move left in memory.
 
 (define ring-size 12)
 
 (struct command (ring-name index))
+
+(struct var (name index))
 
 (struct whirl-code (text comment))
 
@@ -76,10 +81,11 @@
 (define math/negate (command 'math 11))
 
 ;; Variable indices
-(define var/i 0)
-(define var/j 2)
-(define var/p 4)
-(define var/valuation 6)
+(define var/i (var 'i 0))
+(define var/j (var 'j 2))
+(define var/p (var 'p 4))
+(define var/valuation (var 'valuation 6))
+(define var/-1 (var 'minus-one 8)) ; Must be the largest non-array variable
 
 (define (string-concat lst)
   (apply string-append lst))
@@ -128,16 +134,12 @@
                     (for/list ([i (range memory-position target-position)])
                       (execute op/add-memory)))]
             [(< target-position memory-position)
-             (let ([distance (+ 1 (- memory-position target-position))])
+             (let* ([<-1>-var-index (var-index var/-1)]
+                    [distance-to-destination (- <-1>-var-index target-position)])
                (apply string-append
-                      (execute op/set-to-one)
-                      (execute op/add-memory)
-                      (execute math/set-to-zero)
-                      (execute math/not)
-                      (execute math/negate)
-                      (execute math/store-memory)
+                      (move-memory <-1>-var-index)
                       (execute op/load-memory)
-                      (for/list ([i (range distance)])
+                      (for/list ([i (range distance-to-destination)])
                         (execute op/add-memory))))])
         (set! memory-position target-position)))
     (define/public (normalize-rings)
@@ -242,23 +244,45 @@
     [(>= n 100) ">= one hundred"] ; Hopefully we won't see this case so just do something simple :)
     [#t (format "~a-~a" (number->word (* 10 (quotient n 10))) (number->word (modulo n 10)))]))
 
-(define (move-memory target-pos)
-  ;; Move to the given memory position.
+(define (move-memory target-var)
+  ;; Move to the given memory position. Clobbers op wheel value.
   (code
-   (send (interpreter-state) move-memory target-pos)
-   (format "Seek to position ~a" (number->word target-pos))))
+   (send (interpreter-state) move-memory (var-index target-var))
+   (format "Seek to ~a" (var-name target-var))))
 
-;(define (assign destination-var source-var)
-  ;; Set the destination variable to the current value of the source variable.
+(define (assign destination-var source-var)
+  ;; Set the destination variable to the current value of the source
+  ;; variable. Clobbers both wheel values and seeks to
+  ;; destination-var.
+  (code
+   (string-append
+    (send (interpreter-state) move-memory (var-index source-var))
+    (exec-str math/load-memory)
+    (send (interpreter-state) move-memory (var-index destination-var))
+    (exec-str math/store-memory))
+   (format "Assign [~a] = [~a]" (var-name destination-var) (var-name source-var))))
+
+(define (prelude)
+  ;; Sets up constants
+  (code
+   (string-append
+    (send (interpreter-state) move-memory (var-index var/-1))
+    (exec-str math/set-to-zero)
+    (exec-str math/not)
+    (exec-str math/negate)
+    (exec-str math/store-memory))
+   "Initialize negative one constant"))
 
 (define project-euler-179
   (parameterize ([interpreter-state (new state%)])
     (progn
-     (move-memory 2)
+     (prelude)
+     (move-memory var/i)
      (exec op/set-to-one)
      (exec op/store-memory)
-     (move-memory 3)
-     (move-memory 2)
+     (print-number)
+     (assign var/j var/i)
+     (move-memory var/j)
      (print-number))))
 
 (print-code project-euler-179)
