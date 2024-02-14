@@ -128,8 +128,18 @@
                     (for/list ([i (range memory-position target-position)])
                       (execute op/add-memory)))]
             [(< target-position memory-position)
-             (error "Not implemented yet")])
-        (set memory-position target-position)))
+             (let ([distance (+ 1 (- memory-position target-position))])
+               (apply string-append
+                      (execute op/set-to-one)
+                      (execute op/add-memory)
+                      (execute math/set-to-zero)
+                      (execute math/not)
+                      (execute math/negate)
+                      (execute math/store-memory)
+                      (execute op/load-memory)
+                      (for/list ([i (range distance)])
+                        (execute op/add-memory))))])
+        (set! memory-position target-position)))
     (define/public (normalize-rings)
       ;; Resets both rings to the default state (both at noop facing
       ;; clockwise and the pointer on 'operations).
@@ -180,21 +190,75 @@
 
 (define interpreter-state (make-parameter #f))
 
+(define (exec-str command)
+  ;; Low-level exec command that just moves the wheel(s) and executes.
+  ;; Returns a string.
+  (send (interpreter-state) execute command))
+
 (define (exec command)
   ;; Low-level exec command that just moves the wheel(s) and executes.
-  (code (send (interpreter-state) execute command)))
+  ;; Returns a code object.
+  (code (exec-str command)))
 
 (define (print-number)
   ;; Print the value at the current memory position, as an integer.
-  (progn
-   (exec op/set-to-one)
-   (exec op/integer-io)))
+  (code
+   (string-append
+    (exec-str op/set-to-one)
+    (exec-str op/integer-io))
+   "Print"))
+
+(define (number->word n)
+  ;; Convert a number into words.
+  (cond
+    [(= n 0) "zero"]
+    [(= n 1) "one"]
+    [(= n 2) "two"]
+    [(= n 3) "three"]
+    [(= n 4) "four"]
+    [(= n 5) "five"]
+    [(= n 6) "six"]
+    [(= n 7) "seven"]
+    [(= n 8) "eight"]
+    [(= n 9) "nine"]
+    [(= n 10) "ten"]
+    [(= n 11) "eleven"]
+    [(= n 12) "twelve"]
+    [(= n 13) "thirteen"]
+    [(= n 14) "fourteen"]
+    [(= n 15) "fifteen"]
+    [(= n 16) "sixteen"]
+    [(= n 17) "seventeen"]
+    [(= n 18) "eighteen"]
+    [(= n 19) "nineteen"]
+    [(= n 20) "twenty"]
+    [(= n 30) "thirty"]
+    [(= n 40) "forty"]
+    [(= n 50) "fifty"]
+    [(= n 60) "sixty"]
+    [(= n 70) "seventy"]
+    [(= n 80) "eighty"]
+    [(= n 90) "ninety"]
+    [(>= n 100) ">= one hundred"] ; Hopefully we won't see this case so just do something simple :)
+    [#t (format "~a-~a" (number->word (* 10 (quotient n 10))) (number->word (modulo n 10)))]))
+
+(define (move-memory target-pos)
+  ;; Move to the given memory position.
+  (code
+   (send (interpreter-state) move-memory target-pos)
+   (format "Seek to position ~a" (number->word target-pos))))
+
+;(define (assign destination-var source-var)
+  ;; Set the destination variable to the current value of the source variable.
 
 (define project-euler-179
   (parameterize ([interpreter-state (new state%)])
     (progn
+     (move-memory 2)
      (exec op/set-to-one)
      (exec op/store-memory)
+     (move-memory 3)
+     (move-memory 2)
      (print-number))))
 
 (print-code project-euler-179)
