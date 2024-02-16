@@ -176,6 +176,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Visual Basic .NET
 * WebAssembly
 * Wenyan
+* Whirl
 * Whitespace
 * Wren
 * Wyvern
@@ -1256,6 +1257,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Compiler / Interpreter: [ngn/k on TIO Nexus](https://tio.run/#k-ngn)
 * Notes: (None)
 
+### Euler 179
+* File: [problem179.whirl](problem179.whirl)
+* Language: [Whirl](https://web.archive.org/web/20130116204525/bigzaphod.org/whirl/)
+* Compiler / Interpreter: [Whirl-2.java](https://web.archive.org/web/20120303124619/http://www.bigzaphod.org/whirl/Whirl-2.java)
+* Notes: An incredibly slow solution
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular,
@@ -1295,6 +1302,11 @@ estimates, so take them with a grain of salt.
 * 30s to 2min: "A somewhat slow solution"
 * 2min to 10min: "A very slow solution"
 * More than 10min: "An incredibly slow solution"
+
+Currently, the slowest solutions in this repository are:
+* Problem 179 (Whirl) in ~34 minutes
+* Problem 130 (Fourier) in ~26 minutes
+* Problem 96 (Javagony) in ~20 minutes
 
 Currently, the slowest solution in this repository is Problem 130
 (Fourier), which takes roughly 26 minutes. The second slowest is

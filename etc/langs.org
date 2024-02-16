@@ -406,7 +406,7 @@
     + Short list
 *** V                                                                  :used:
 *** Velato (http://www.velato.net/)
-*** Whirl (https://web.archive.org/web/20130116204525/bigzaphod.org/whirl/)
+*** Whirl (https://web.archive.org/web/20130116204525/bigzaphod.org/whirl/) :used:
 *** Whispers (https://github.com/cairdcoinheringaahing/Whispers)
 *** Whitespace                                                         :used:
 ** UNUSABLE
