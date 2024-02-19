@@ -377,6 +377,7 @@
 *** Piet                                                               :used:
 *** Pip                                                                :used:
 *** Puzzlescript (https://www.puzzlescript.net/)
+*** Pyf**k (https://github.com/wanqizhu/pyfuck)
 *** Pyramid Scheme (https://github.com/ConorOBrien-Foxx/Pyramid-Scheme)
 *** Pyth                                                               :used:
 *** Quark (https://github.com/henrystanley/Quark/)
@@ -593,6 +594,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Runic Enchantments (https://github.com/Draco18s/RunicEnchantments/tree/Console)
 *** Simula
 *** Skript (https://docs.skriptlang.org/)
+*** SLOBIL (https://www.reddit.com/r/ProgrammingLanguages/comments/1atnmbk/slobil_slot_and_object_based_interactive_language/)
 *** smodels (http://www.tcs.hut.fi/Software/smodels/)
 *** Snails
 *** Squirrel
