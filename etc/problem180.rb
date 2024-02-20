@@ -43,7 +43,6 @@ def add_solution(x, y, z)
 end
 
 def produce_solutions_for(x, y)
-  solutions = []
   # x + y = z
   z = x + y
   add_solution x, y, z
@@ -62,8 +61,8 @@ def each_fraction(&block)
   if block
     (1..35).each do |a|
       ((a+1)..35).each do |b|
-         block.call Rational(a, b)
-       end
+        block.call Rational(a, b)
+      end
     end
   else
     Enumerator.new { |y| each_fraction(&y) }
@@ -78,3 +77,27 @@ end
 
 final_total = $all_solutions.sum
 puts(final_total.numerator + final_total.denominator)
+
+# Note on implementation in Oblivion: We'll be storing rationals as
+# two-element lists.
+#
+# Don't trust local variables or arguments when recursing in Oblivion.
+# The language makes them mutable due to a faulty implementation of
+# trampoline recursion.
+#
+# Can't insert() into empty array, so we start with an array of one
+# element.
+#
+# `return` doesn't exit the function, which is why our isqrt is nested
+# an exciting 35 layers deep.
+#
+# The parser is super weird in places which is why we have all of the
+# "conda" / "condb" / etc. Speaking of weird variable names, can't use
+# numbers in variables, so I'm "numbering" things with a, b, c, ...
+#
+# Lists are NOT immutable, despite what the documentation says. List
+# operations may or may not mutate in place.
+#
+# Oops! Oblivion can only do double precision integers, not 64-bit. So
+# I can't use it here. Oh well, I know what I'm getting into next
+# time.

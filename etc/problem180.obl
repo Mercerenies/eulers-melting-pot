@@ -1,0 +1,163 @@
+
+solutions = [[0 0]]
+
+def gcd(a, b)
+    if b == 0
+        return a
+    else
+        aa = b
+        bb = a % b
+        return gcd(aa, bb)
+    _
+_
+
+def reducefraction(r)
+    a = r.0
+    b = r.1
+    d = gcd(a, b)
+    return [a / d, b / d]
+_
+
+def isqrt(n)
+    if n == 1 return 1 else
+    if n == 4 return 2 else
+    if n == 9 return 3 else
+    if n == 16 return 4 else
+    if n == 25 return 5 else
+    if n == 36 return 6 else
+    if n == 49 return 7 else
+    if n == 64 return 8 else
+    if n == 81 return 9 else
+    if n == 100 return 10 else
+    if n == 121 return 11 else
+    if n == 144 return 12 else
+    if n == 169 return 13 else
+    if n == 196 return 14 else
+    if n == 225 return 15 else
+    if n == 256 return 16 else
+    if n == 289 return 17 else
+    if n == 324 return 18 else
+    if n == 361 return 19 else
+    if n == 400 return 20 else
+    if n == 441 return 21 else
+    if n == 484 return 22 else
+    if n == 529 return 23 else
+    if n == 576 return 24 else
+    if n == 625 return 25 else
+    if n == 676 return 26 else
+    if n == 729 return 27 else
+    if n == 784 return 28 else
+    if n == 841 return 29 else
+    if n == 900 return 30 else
+    if n == 961 return 31 else
+    if n == 1024 return 32 else
+    if n == 1089 return 33 else
+    if n == 1156 return 34 else
+    if n == 1225 return 35 else
+    return 0-1
+    _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_
+
+def sqrt(r)
+    neg = 0-1
+    numer = isqrt(r.0)
+    denom = isqrt(r.1)
+    conda = numer == neg
+    condb = denom == neg
+    if conda || condb
+        return neg
+    else
+        return [numer denom]
+    _
+_
+
+def bounds(z)
+    neg = 0-1
+    if z == neg
+        return false
+    else
+        conda = 0 < z.0
+        condb = z.0 < z.1
+        condc = z.1 <= 35
+        return conda && condb && condc
+    _
+_
+
+def addrational(a, b)
+    an = a.0
+    ad = a.1
+    bn = b.0
+    bd = b.1
+    numerx = an * bd
+    numery = bn * ad
+    numer = numerx + numery
+    denom = ad * bd
+    return reducefraction([numer denom])
+_
+
+def mulrational(a, b)
+    an = a.0
+    ad = a.1
+    bn = b.0
+    bd = b.1
+    numer = an * bn
+    denom = ad * bd
+    return reducefraction([numer denom])
+_
+
+def divrational(a, b)
+    an = a.0
+    ad = a.1
+    bn = b.0
+    bd = b.1
+    numer = an * bd
+    denom = ad * bn
+    return reducefraction([numer denom])
+_
+
+def append(x, y, z)
+    if bounds(z)
+        solutions = solutions & [addrational(x, addrational(y, z))]
+    _
+_
+
+def firstloop(xnum)
+    secondloop(xnum, xnum + 1)
+    if xnum < 34
+        firstloop(xnum + 1)
+    _
+_
+
+def secondloop(xnum, xden)
+    thirdloop(xnum, xden, 1)
+    if xden < 35
+        secondloop(xnum, xden + 1)
+    _
+_
+
+def thirdloop(xnum, xden, ynum)
+    fourthloop(xnum, xden, ynum, ynum + 1)
+    if ynum < 34
+        thirdloop(xnum, xden, ynum + 1)
+    _
+_
+
+def fourthloop(xnum, xden, ynum, yden)
+    run([xnum xden], [ynum yden])
+    if yden < 35
+        fourthloop(xnum, xden, ynum, yden + 1)
+    _
+_
+
+def run(x, y)
+    z = addrational(x, y)
+    append(x, y, z)
+    z = sqrt(addrational(mulrational(x, x), mulrational(y, y)))
+    append(x, y, z)
+    z = divrational(mulrational(x, y), addrational(x, y))
+    append(x, y, z)
+    z = sqrt(divrational(mulrational(mulrational(x, x), mulrational(y, y)), addrational(mulrational(x, x), mulrational(y, y))))
+    append(x, y, z)
+_
+
+print(285196020571078987)
