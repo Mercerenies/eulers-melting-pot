@@ -17,13 +17,13 @@ maxa = 0
 maxb = 0
 streak = 0
 (-999..999) select(a,
-                   (-999..999) select(b,
-                                      curr = 0
-                                      while(isPrime((curr * curr + a * curr + b) abs),
-                                            curr++)
-                                      if(curr > streak,
-                                         maxa = a
-                                         maxb = b
-                                         streak = curr,
-                                         nil)))
+                   (-1000..1000) select(b,
+                                        curr = 0
+                                        while(isPrime((curr * curr + a * curr + b) abs),
+                                              curr++)
+                                        if(curr > streak,
+                                           maxa = a
+                                           maxb = b
+                                           streak = curr,
+                                           nil)))
 (maxa * maxb) println
