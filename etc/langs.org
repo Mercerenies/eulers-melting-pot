@@ -537,6 +537,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Ateji PX (https://en.wikipedia.org/wiki/Ateji_PX)
 *** ATS
 *** BaCon (http://basic-converter.org/)
+*** Boo (https://boo-language.github.io/)
 *** Brachylog
 *** Bracmat (https://github.com/BartJongejan/Bracmat)
 *** CandleScript
@@ -588,6 +589,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Oxide (https://github.com/tuqqu/oxide-lang)
 *** Oz (https://en.wikipedia.org/wiki/Oz_(programming_language))
 *** Paperscript
+*** PARI/GP (https://en.wikipedia.org/wiki/PARI/GP)
 *** Peg (https://github.com/HackerFoo/peg)
 *** Postscript
 *** PPL
