@@ -142,6 +142,7 @@
 *** BQN (https://mlochbaum.github.io/BQN/)
 *** Cat
     + No arrays
+*** ColdFusion (https://en.wikipedia.org/wiki/ColdFusion_Markup_Language)
 *** Container (https://github.com/odddollar/Container-lang)
     + No arrays
 *** 🆒                                                                 :used:
@@ -279,6 +280,7 @@
 *** Maclisp
 *** NewLISP
 *** Racket
+*** RainLisp (https://github.com/chr1st0scli/RainLisp)
 *** Scheme
 ** GAMES
    Video games which happen to be Turing complete or close enough to
@@ -369,6 +371,8 @@
 *** naz (https://github.com/sporeball/naz)                             :used:
     + Short list
 *** Oblivion (https://jweinst1.github.io/OblivionWebsite/)
+    + Double-precision floats
+    + Non-constant loops are recursion
 *** Orthagonal (https://github.com/m-ender/orthagonal)
 *** Perchance                                                          :used:
 *** Pickle (Python)                                                    :used:
@@ -377,7 +381,7 @@
 *** Piet                                                               :used:
 *** Pip                                                                :used:
 *** Puzzlescript (https://www.puzzlescript.net/)
-*** Pyf**k (https://github.com/wanqizhu/pyfuck)
+*** Pyf**k (https://github.com/wanqizhu/pyfuck)                        :used:
 *** Pyramid Scheme (https://github.com/ConorOBrien-Foxx/Pyramid-Scheme)
 *** Pyth                                                               :used:
 *** Quark (https://github.com/henrystanley/Quark/)
@@ -542,7 +546,6 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Charm++ (https://en.wikipedia.org/wiki/Charm%2B%2B)
 *** Clean
 *** Coco (https://rosettacode.org/wiki/Category:Coco)
-*** ColdFusion
 *** Cubically (https://github.com/aaronryank/cubically)
 *** Crystal
 *** Curl (https://www.curl.com/products/prod/language/)

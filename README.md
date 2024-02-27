@@ -145,6 +145,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Pony
 * Potassco
 * Prolog
+* Pyf\*\*ck
 * Pyth
 * QBASIC
 * Rebol
@@ -349,7 +350,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem27.ik](problem27.ik)
 * Language: [Ioke](https://ioke.org/)
 * Compiler / Interpreter: [Ioke for the JVM](https://ioke.org/download.html)
-* Notes: A fairly slow solution.
+* Notes: A very slow solution.
 
 ### Euler 28
 * File: [problem28.bf](problem28.bf)
@@ -1261,7 +1262,13 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem179.whirl](problem179.whirl)
 * Language: [Whirl](https://web.archive.org/web/20130116204525/bigzaphod.org/whirl/)
 * Compiler / Interpreter: [Whirl-2.java](https://web.archive.org/web/20120303124619/http://www.bigzaphod.org/whirl/Whirl-2.java)
-* Notes: An incredibly slow solution
+* Notes: An incredibly slow solution.
+
+### Euler 180
+* File: [problem180.py](problem180.py)
+* Language: [Pyf\*\*ck](https://github.com/wanqizhu/pyfuck)
+* Compiler / Interpreter: [Python 3.11.6](https://www.python.org/downloads/)
+* Notes: Code was generated with the help of the creator's translation tool.
 
 ## Valid Languages
 
