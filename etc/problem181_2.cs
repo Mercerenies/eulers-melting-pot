@@ -1,12 +1,10 @@
 
-// Same as problem181.swift, but using an explicit dynamic programming
-// array.
-//
-// 6 seconds in C#
+// Failed attempt to make problem181_1.cs faster. Slowed it down to 9
+// seconds instead.
 
 using System;
 
-public class problem181_1 {
+public class problem181_2 {
 
   private static int index(int white, int black, int lastWhite, int lastBlack) {
     return lastBlack + 61 * (lastWhite + 41 * (black + 61 * white));
@@ -37,7 +35,12 @@ public class problem181_1 {
               for (int blackSpent = 0; blackSpent <= blackLimit; blackSpent++) {
                 int newWhite = white - whiteSpent;
                 int newBlack = black - blackSpent;
-                int newIndex = index(newWhite, newBlack, whiteSpent, blackSpent);
+                // Note: newWhite + 1 instead of newWhite, since we
+                // need to be able to distinguish the cases where we
+                // went "down" by a white from those where we haven't
+                // (see the conditional for blackLimit above). But we
+                // don't have to distinguish any further than that.
+                int newIndex = index(newWhite, newBlack, Math.Min(whiteSpent, newWhite + 1), Math.Min(blackSpent, newBlack));
                 array[currIndex] += array[newIndex];
               }
             }
