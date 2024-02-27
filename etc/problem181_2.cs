@@ -1,6 +1,6 @@
 
-// Failed attempt to make problem181_1.cs faster. Slowed it down to 9
-// seconds instead.
+// problem181_1.cs but removing some unnecessary indices from the
+// array. 3 seconds in C#.
 
 using System;
 
@@ -26,8 +26,9 @@ public class problem181_2 {
         if ((white == 0) && (black == 0)) {
           continue;
         }
-        for (int lastWhite = 0; lastWhite <= 40; lastWhite++) {
-          for (int lastBlack = 0; lastBlack <= 60; lastBlack++) {
+        int lastWhiteLimit = (white == 40 ? 40 : white + 1);
+        for (int lastWhite = 0; lastWhite <= lastWhiteLimit; lastWhite++) {
+          for (int lastBlack = 0; lastBlack <= black; lastBlack++) {
             int currIndex = index(white, black, lastWhite, lastBlack);
             int whiteLimit = Math.Min(white, lastWhite);
             for (int whiteSpent = 0; whiteSpent <= whiteLimit; whiteSpent++) {
