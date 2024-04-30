@@ -24,12 +24,14 @@
 *** Kotlin
 *** Lua
 *** Mathematica
+*** Mython (https://mython.org/)
 *** OCaml                                                              :used:
 *** Perl
 *** Python
 *** Raku (Perl 6)
 *** Ruby
 *** Rust                                                               :used:
+*** Sage
 *** Scala
 *** Tcl                                                                :used:
 *** Typescript                                                         :used:
@@ -56,6 +58,7 @@
 *** Go                                                                 :used:
 *** PHP
 *** Pizza                                                              :used:
+*** Rhombus (https://docs.racket-lang.org/rhombus/index.html)
 ** SILVER
    Silver languages are perfectly capable languages to solve any
    challenge, but I do not consider myself fluent in them. "Silver" is
@@ -82,6 +85,7 @@
     + This website probably has the most up-to-date interpreters:
       http://falconpl.org/
 *** Fantom (https://www.fantom.org/)
+*** Flix (https://github.com/flix/flix)
 *** Forth                                                              :used:
 *** Fortran                                                            :used:
 *** Gleam                                                              :used:
@@ -94,6 +98,7 @@
 *** Lunar (https://github.com/lunarlang/lunar)
 *** Maple
 *** MATLAB / Octave                                                    :used:
+*** Mercury (https://www.mercurylang.org/)
 *** Modula
 *** Modula-2
 *** MoonScript                                                         :used:
@@ -107,6 +112,7 @@
 *** Rebol                                                              :used:
 *** Red (https://www.red-lang.org/)
 *** Self
+*** Simula (https://en.wikipedia.org/wiki/Simula)
 *** Skip (https://skiplang.com/)
 *** Smalltalk                                                          :used:
 *** SML                                                                :used:
@@ -133,6 +139,7 @@
 *** Alice (https://en.wikipedia.org/wiki/Alice_(software))
 *** Alloy (https://alloytools.org/)
 *** APL                                                                :used:
+*** ATS (https://www.cs.bu.edu/~hwxi/atslangweb/)
 *** Attache (https://github.com/ConorOBrien-Foxx/Attache)
 *** AutoHotkey                                                         :used:
     + 64-bit integers (no bignums)
@@ -142,6 +149,7 @@
 *** BQN (https://mlochbaum.github.io/BQN/)
 *** Cat
     + No arrays
+*** Claro (https://docs.clarolang.com/)
 *** ColdFusion (https://en.wikipedia.org/wiki/ColdFusion_Markup_Language)
 *** Container (https://github.com/odddollar/Container-lang)
     + No arrays
@@ -170,9 +178,11 @@
     + No Bignums
 *** J                                                                  :used:
 *** Javagony                                                           :used:
+*** Jeebox (http://jeebox.org/stuff/learn_more/)
 *** Joy                                                                :used:
 *** Kitten                                                             :used:
     + 64-bit integers (no bignums)
+*** Kobalt (https://github.com/abel0b/kobalt)
 *** K                                                                  :used:
     + No bignums
 *** λProlog
@@ -184,8 +194,8 @@
 *** Magpie (https://www.magpie-lang.org/)
     + Arrays are immutable
 *** Make                                                               :used:
-*** Mercury (https://www.mercurylang.org/)
 *** Nit                                                                :used:
+*** Oasis (*** Oasis (https://github.com/oasis-lang/))
 *** Picat                                                              :used:
 *** Pike                                                               :used:
 *** Pikelet
@@ -196,6 +206,7 @@
 *** Potassco                                                           :used:
 *** Prolog                                                             :used:
 *** PROMAL
+*** Redscript (https://wiki.redmodding.org/redscript)
 *** Roy                                                                :used:
 *** S (https://en.wikipedia.org/wiki/S_(programming_language))
 *** Scratch                                                            :used:
@@ -309,6 +320,7 @@
 *** Alice (m-ender)                                                    :used:
 *** Anti-Array                                                         :used:
 *** ArnoldC (https://esolangs.org/wiki/ArnoldC)
+    + No arrays
 *** Aya                                                                :used:
 *** Beeswax                                                            :used:
 *** Befalse                                                            :used:
@@ -346,7 +358,9 @@
     + Short list
 *** Funciton                                                           :used:
 *** Fuzzy Octo Guacamole (https://codereview.stackexchange.com/questions/124736/fuzzy-octo-guacamole-interpreter)
+    + No arrays
 *** Gaot++ (https://esolangs.org/wiki/Gaot%2B%2B)
+    + No arrays
 *** Gibberish                                                          :used:
 *** Golfscript                                                         :used:
 *** Grocery List                                                       :used:
@@ -386,9 +400,11 @@
 *** Pyth                                                               :used:
 *** Quark (https://github.com/henrystanley/Quark/)
 *** reMorse (https://esolangs.org/wiki/ReMorse)
+    + Values are 1 byte
 *** Retina (https://esolangs.org/wiki/Retina)
 *** Rockstar                                                           :used:
 *** Rpg (https://esolangs.org/wiki/Rpg)
+*** Runic Enchantments (https://github.com/Draco18s/RunicEnchantments/tree/Console)
 *** Secretary (https://esolangs.org/wiki/Secretary)
 *** Seriously                                                          :used:
 *** Shakespeare                                                        :used:
@@ -439,6 +455,10 @@
     separately, and the final one seems to basically just be Java on a
     different platform, so this is not an independent language for our
     purposes.
+*** Ateji PX (https://en.wikipedia.org/wiki/Ateji_PX)
+    Obsolete product, homepage is only accessible via Wayback Machine,
+    all the download links give me a cloudflare-like 500 page. No
+    implementation available.
 *** Basis
     The [[https://esolangs.org/wiki/Basis#Reference_implementation_.28WIP.29][only implementation]] is incomplete and does not have enough
     features to perform any sort of nontrivial computation.
@@ -534,8 +554,6 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Whython (https://www.pxeger.com/2021-09-19-hacking-on-cpython/)
     Unimplemented
 ** UNCLASSIFIED
-*** Ateji PX (https://en.wikipedia.org/wiki/Ateji_PX)
-*** ATS
 *** BaCon (http://basic-converter.org/)
 *** Boo (https://boo-language.github.io/)
 *** Brachylog
@@ -545,6 +563,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** CDuce (http://www.cduce.org/)
 *** Cecil
 *** Charm++ (https://en.wikipedia.org/wiki/Charm%2B%2B)
+*** ChronLang (https://github.com/DeLuxe-1337/ChronLang)
 *** Clean
 *** Coco (https://rosettacode.org/wiki/Category:Coco)
 *** Cubically (https://github.com/aaronryank/cubically)
@@ -558,7 +577,6 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** F' (https://nasa.github.io/fprime/)
 *** Fancy
 *** Fission
-*** Flix (https://github.com/flix/flix)
 *** Flora (https://flora.sourceforge.net/)
 *** Genesis (https://github.com/elonlit/Genesis)
 *** Gluon
@@ -566,9 +584,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Husk (https://github.com/barbuz/Husk)
 *** I (https://aplwiki.com/wiki/I)
 *** IMP (https://en.wikipedia.org/wiki/IMP_(programming_language))
-*** Jeebox (http://jeebox.org/stuff/learn_more/)
 *** jq (https://stedolan.github.io/jq/)
-*** Kobalt (https://github.com/abel0b/kobalt)
 *** Koi (https://koi-lang.dev/)
 *** Konna (https://www.reddit.com/r/ProgrammingLanguages/comments/rpe65y/konna_my_programming_language/)
 *** Lava (https://lavape.sourceforge.net/)
@@ -580,7 +596,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Monte (https://github.com/monte-language/monte)
 *** Mojo (https://www.modular.com/mojo)
 *** Nibbles (http://www.golfscript.com/)
-*** Oasis
+*** Noop (https://en.wikipedia.org/wiki/Noop)
 *** Occam
 *** Occam-π
 *** Ohm
@@ -595,13 +611,11 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** PPL
 *** Processing (https://en.wikipedia.org/wiki/Processing_(programming_language))
 *** Reason (https://reasonml.github.io/)
-*** Rhombus (https://docs.racket-lang.org/rhombus/index.html)
-*** Runic Enchantments (https://github.com/Draco18s/RunicEnchantments/tree/Console)
-*** Simula
 *** Skript (https://docs.skriptlang.org/)
 *** SLOBIL (https://www.reddit.com/r/ProgrammingLanguages/comments/1atnmbk/slobil_slot_and_object_based_interactive_language/)
 *** smodels (http://www.tcs.hut.fi/Software/smodels/)
 *** Snails
+*** Speedie (https://github.com/gamblevore/speedie/)
 *** Squirrel
 *** Story (https://github.com/soborat/story-programming-language)
 *** SuperForth (https://github.com/TheRealMichaelWang/superforth)
@@ -651,6 +665,8 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
     - https://aplwiki.com/wiki/Category:Programming_languages
   + List of languages that compile to python
     - https://github.com/vindarel/languages-that-compile-to-python
+  + Lox Implementations - munificent/craftinginterpreters Wiki
+    - https://github.com/munificent/craftinginterpreters/wiki/Lox-implementations
 ** ONLINE INTERPRETERS
    Some online interpreters that are free to use and very handy for tasks like this.
 
