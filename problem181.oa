@@ -1,0 +1,34 @@
+
+let moduloValue = 1000000
+
+// We're splitting the computation, so we'll do
+// part of it modulo 1e8 and the other part using
+// double-precision to get the first few digits.
+let smallArray = [1]
+let bigArray = [math:abs(1)] // math:abs forces coercion to Double
+
+for i in range(1, (41 * 61) - 1)
+    smallArray:add(0)
+    bigArray:add(math:abs(0))
+end
+
+for whiteToSpend in range(0, 40)
+    for blackToSpend in range(0, 60)
+        if (whiteToSpend == 0) and (blackToSpend == 0)
+            continue
+        end
+        for whiteLeft in range(whiteToSpend, 40)
+            for blackLeft in range(blackToSpend, 60)
+                let currIndex = (whiteLeft * 61) + blackLeft // Note: Order of operations doesn't work
+                let newIndex = ((whiteLeft - whiteToSpend) * 61) + (blackLeft - blackToSpend)
+                smallArray:(currIndex) = (smallArray:(currIndex) + smallArray:(newIndex)) % moduloValue
+                bigArray:(currIndex) += bigArray:(newIndex)
+            end
+        end
+    end
+end
+
+// json:dump is the only consistent way I can find to string-ify numbers. ¯\_(ツ)_/¯
+let bigPart = math:round(bigArray:((41 * 61) - 1) / moduloValue)
+let smallPart = smallArray:((41 * 61) - 1)
+io:print(json:dump(bigPart) + json:dump(smallPart))

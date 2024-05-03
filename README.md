@@ -1270,6 +1270,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Compiler / Interpreter: [Python 3.11.6](https://www.python.org/downloads/)
 * Notes: Code was generated with the help of the creator's translation tool.
 
+### Euler 181
+* File: [problem181.oa](problem181.oa)
+* Language: [Oasis](https://github.com/oasis-lang/oasis)
+* Compiler / Interpreter: [oasis @ 9c3bed49](https://github.com/oasis-lang/oasis/tree/9c3bed49471267272c9558b8f8b96b6d87262630)
+* Notes: (None)
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular,

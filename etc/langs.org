@@ -160,6 +160,7 @@
 *** Dhall (https://dhall-lang.org/#)                                   :used:
     + Subturing, loops must be finitely bounded
     + Loops only available via map, fold, etc.
+*** Dictu (https://github.com/dictu-lang/Dictu)
 *** Dip                                                                :used:
 *** Dogescript                                                         :used:
 *** Dry                                                                :used:
@@ -191,13 +192,16 @@
 *** LaTeX                                                              :used:
 *** Lean (https://leanprover-community.github.io/)                     :used:
 *** LilyPond                                                           :used:
+*** Lox (https://github.com/munificent/craftinginterpreters/wiki/Lox-implementations)
 *** Luna (http://staging.luna-lang.org/)
 *** m4                                                                 :used:
 *** Magpie (https://www.magpie-lang.org/)
     + Arrays are immutable
 *** Make                                                               :used:
 *** Nit                                                                :used:
-*** Oasis (*** Oasis (https://github.com/oasis-lang/))
+*** Oasis (https://github.com/oasis-lang/)                             :used:
+    + Have to run as Jar; ~gradle run~ command is broken.
+*** Odin (https://odin-lang.org/docs/)
 *** Picat                                                              :used:
 *** Pike                                                               :used:
 *** Pikelet
