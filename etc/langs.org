@@ -348,6 +348,12 @@
     + Short list
 *** Emmental (https://esolangs.org/wiki/Emmental)
 *** Emoji                                                              :used:
+*** Emoticon
+    Okay, so the PHP interpreter (which, for awhile, was offline) is
+    now back online. Unfortunately, there's a new problem. It has a
+    hard limit of 10,000 instructions total to be executed during the
+    program (that is, total /executed/, including code repeated in a
+    loop), which makes it somewhat difficult to do anything nontrivial.
 *** Emotinomicon                                                       :used:
 *** Enchilada                                                          :used:
 *** Excel                                                              :used:
@@ -490,11 +496,6 @@
     instructions to get the thing running don't seem to be in working
     order. The language itself seems to have substantial work put into
     it.
-*** Emoticon
-    The only interpreter I could find is a Wayback Machine archive
-    from ancient times which tries to run a PHP server that doesn't
-    exist. The source code for this server is unavailable, to the best
-    of my searching ability.
 *** Enso (https://enso.org/)
     I thought this might work, but it's just a weird
     data-visualization half-language and doesn't really do much other

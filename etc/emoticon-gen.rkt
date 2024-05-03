@@ -105,6 +105,17 @@
     (maths-right "+" face-var)
     (close-block)))
 
+;; So the online interpreter has a really bizarrely strict
+;; infinite-loop checker that chokes after a few hundred iterations.
+;; So we're unrolling our loops in the hopes that the loop checker
+;; doesn't flag us. As above, loop bounds are inclusive on both sides.
+(define (for-loop-unrolled face-var lower-bound upper-bound . body)
+  (program (for/list ([x (in-range lower-bound (+ upper-bound 1))])
+             (program (set-current-list face-var)
+                      (word x)
+                      (program body)
+                      (pop-right face-var)))))
+
 (define (push-right face word-value)
   (program (set-current-list face)
            (word word-value)))
@@ -136,18 +147,16 @@
            (push-right face-60 60)
            ;; Initialize array
            (push-right face-storage-array 1)
-           (push-right face-white-to-spend 0)
-           ;; We can't loop 2500 times because the website has a
-           ;; really badly-written termination checker that trips on
-           ;; our program. So we nest the loops to disguise them.
-           (for-loop face-white-to-spend face-40
-                     (push-right face-black-to-spend 0)
-                     (for-loop face-black-to-spend face-60
-                               (push-right face-storage-array 0))
-                     (pop-right face-black-to-spend))
-           (pop-right face-white-to-spend)
-           ;; We iterated 2501 times, so we got two extra zeroes.
-           (pop-right face-storage-array)
-           (pop-right face-storage-array)))
+           (set-current-list ":::::")
+           (word 100)
+           (print-and-pop-left ":::::")
+           (for-loop-unrolled face-temporary 0 40
+                              (push-right face-white-left 0)
+                              (for-loop face-white-left face-60
+                                        (push-right face-storage-array 0))
+                              (pop-right face-white-left))
+           (set-current-list ":::::")
+           (word 100)
+           (print-and-pop-left ":::::")))
 
 (displayln project-euler-181)
