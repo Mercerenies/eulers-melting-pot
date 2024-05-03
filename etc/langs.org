@@ -113,6 +113,8 @@
 *** Red (https://www.red-lang.org/)
 *** Self
 *** Simula (https://en.wikipedia.org/wiki/Simula)
+*** Skib-Lang (https://github.com/AlexanderMeade/Skib-Lang)
+    + Superset of Lua
 *** Skip (https://skiplang.com/)
 *** Smalltalk                                                          :used:
 *** SML                                                                :used:
@@ -147,7 +149,7 @@
 *** bc                                                                 :used:
 *** BeanShell                                                          :used:
 *** BQN (https://mlochbaum.github.io/BQN/)
-*** Cat
+*** Cat (https://github.com/cdiggins/cat-language)
     + No arrays
 *** Claro (https://docs.clarolang.com/)
 *** ColdFusion (https://en.wikipedia.org/wiki/ColdFusion_Markup_Language)
@@ -413,6 +415,9 @@
 *** Soul (https://github.com/egel-lang/soul)
     + Loops are recursion
     + No arrays, but random access to the top-level stack.
+    + ~put~ command appears to be completely broken, can't modify
+      stack at random.
+    + Executable notes: Must run from ~vendor~ directory: ~./egel -I '../include' ../../soul/src/soul.eg <../../../filename.soul~
 *** Stuck                                                              :used:
 *** Taxi                                                               :used:
 *** Tome                                                               :used:
