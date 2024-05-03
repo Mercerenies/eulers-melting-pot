@@ -373,6 +373,7 @@
 *** Golfscript                                                         :used:
 *** Grocery List                                                       :used:
 *** Gwion                                                              :used:
+*** HAN (https://github.com/ARYANTECH123/HAN)
 *** Hanabi                                                             :used:
 *** Hexagony                                                           :used:
 *** Inform 7
@@ -392,6 +393,7 @@
 *** Myby (https://github.com/ConorOBrien-Foxx/Myby/)
 *** naz (https://github.com/sporeball/naz)                             :used:
     + Short list
+*** NICE (https://esolangs.org/wiki/NICE)
 *** Oblivion (https://jweinst1.github.io/OblivionWebsite/)
     + Double-precision floats
     + Non-constant loops are recursion
@@ -439,6 +441,7 @@
 *** V                                                                  :used:
 *** Velato (http://www.velato.net/)
 *** Whirl (https://web.archive.org/web/20130116204525/bigzaphod.org/whirl/) :used:
+*** Wierd (sic) (https://esolangs.org/wiki/Wierd)
 *** Whispers (https://github.com/cairdcoinheringaahing/Whispers)
 *** Whitespace                                                         :used:
 ** UNUSABLE
