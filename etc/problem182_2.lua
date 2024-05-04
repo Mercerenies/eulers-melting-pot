@@ -26,6 +26,16 @@
 -- solutions in that case. Multiply the two together to get our claim.
 --
 -- Got it in 2.7 seconds in Lua!
+--
+-- Further observation: We know gcd(e, phi) = 1 by assumption. And phi
+-- is even, so e must be odd for this to hold. Hence, e - 1 is even,
+-- go gcd(e - 1, q - 1) and gcd(e - 1, p - 1) are both at least 2. So
+-- our total count, for any given (odd) e, of (1 + gcd(e - 1, p - 1))
+-- * (1 + gcd(e - 1, q - 1)) is at least 9. And for e = 11, this bound
+-- is tight, so we know that the minimum number of unconcealed
+-- messages, concretely, is 9. Now we just have to find the e values
+-- such that this number is 9. We don't do this in the Lua solution,
+-- since Lua is already fast enough.
 
 function gcd(a, b)
   while b ~= 0 do
