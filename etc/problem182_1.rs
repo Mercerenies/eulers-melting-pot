@@ -61,8 +61,8 @@ fn get_orders(n: i64) -> Vec<i64> {
 }
 
 fn main() {
-  let p = 1009;
-  let q = 3643;
+  let p = 19; // 1009;
+  let q = 37; // 3643;
   let limit = p * q;
   let phi = (p - 1) * (q - 1);
   let orders = get_orders(limit);
@@ -76,6 +76,9 @@ fn main() {
   desired_e_values_bitmask[0] = false;
   desired_e_values_bitmask[1] = false;
   for order in orders {
+    if order == 1 {
+      continue; // Skip order 1; as we can never satisfy those values
+    }
     let mut i = order;
     while i + 1 < phi {
       desired_e_values_bitmask[(i + 1) as usize] = false;
@@ -84,7 +87,7 @@ fn main() {
   }
   let mut sum = 0;
   for (e, mask) in desired_e_values_bitmask.into_iter().enumerate() {
-    if mask {
+    if gcd(e as i64, phi) == 1 && mask {
       sum += e;
     }
   }

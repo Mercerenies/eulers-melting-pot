@@ -1,8 +1,7 @@
 
 # Direct computation in Julia
 
-# Too slow, by far, and I even made a mistake (not skipping over the
-# correct number of e's when gcd is not 1)
+# Too slow, by far.
 
 function countunconcealed(e, n)
     count = 0
@@ -16,8 +15,8 @@ end
 
 let
     # Constants from the problem description
-    p = 1009
-    q = 3643
+    p = 19 # 1009
+    q = 37 # 3643
     n = p * q
     phi = (p - 1) * (q - 1)
 
@@ -30,12 +29,14 @@ let
         if e % 1000 == 0
             println(e)
         end
+
+        acc_values .*= m_values
+        acc_values .%= n
+
         if gcd(e, phi) != 1
             continue
         end
 
-        acc_values .*= m_values # Mistake here: We need to append multiple e's, not just one.
-        acc_values .%= n
         unconcealed_count = sum(acc_values .== m_values)
         if unconcealed_count == best_min
             # Found another e value, so add it
