@@ -37,6 +37,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Befunk
 * Brainf\*\*k
 * Brat
+* Broccoli
 * Burlesque
 * Bussin
 * C#
@@ -128,6 +129,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Nemerle
 * Nim
 * Nit
+* Oasis
 * Oberon-07
 * Objective-C
 * OCaml
@@ -1274,6 +1276,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem181.oa](problem181.oa)
 * Language: [Oasis](https://github.com/oasis-lang/oasis)
 * Compiler / Interpreter: [oasis @ 9c3bed49](https://github.com/oasis-lang/oasis/tree/9c3bed49471267272c9558b8f8b96b6d87262630)
+* Notes: (None)
+
+### Euler 182
+* File: [problem182.br](problem182.br)
+* Language: [Broccoli](https://github.com/mathieucaroff/broccoli)
+* Compiler / Interpreter: [https://mathieucaroff.com/broccoli](https://mathieucaroff.com/broccoli)
 * Notes: (None)
 
 ## Valid Languages

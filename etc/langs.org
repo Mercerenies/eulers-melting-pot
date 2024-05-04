@@ -327,6 +327,7 @@
 *** Anti-Array                                                         :used:
 *** ArnoldC (https://esolangs.org/wiki/ArnoldC)
     + No arrays
+    + 16-bit signed integers
 *** Aya                                                                :used:
 *** Beeswax                                                            :used:
 *** Befalse                                                            :used:
@@ -336,7 +337,7 @@
 *** Befunge                                                            :used:
 *** Befunk                                                             :used:
 *** Brainf**k                                                          :used:
-*** Broccoli (https://github.com/mathieucaroff/broccoli)
+*** Broccoli (https://github.com/mathieucaroff/broccoli)               :used:
 *** Burlesque (https://esolangs.org/wiki/Burlesque)                    :used:
 *** Bussin (https://github.com/face-hh/bussin)                         :used:
 *** Brat                                                               :used:
@@ -373,6 +374,8 @@
     + No arrays
 *** Gaot++ (https://esolangs.org/wiki/Gaot%2B%2B)
     + No arrays
+    + Probably can't nest loops, unless we figure out some really neat
+      tech
 *** Gibberish                                                          :used:
 *** Golfscript                                                         :used:
 *** Grocery List                                                       :used:

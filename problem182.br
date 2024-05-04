@@ -1,0 +1,35 @@
+
+# Clobbers a and b
+{
+    = a = b
+    {
+        b a % b = b = a
+    } { b != 0 } while
+    a
+} : gcd
+
+# Clobbers a, b, e
+{
+    = e
+    (e - 1 1008 gcd + 1) * (e - 1 3642 gcd + 1)
+} : solutions
+
+# The online interpreter cuts off while loops at 1000 iterations, so
+# we have to nest loops to avoid this constraint.
+0 = e1
+0 = sum
+# NOTE: 3671136 = (p - 1) * (q - 1)
+{
+    {
+        {
+            {
+                {
+                    sum + e1 = sum
+                } { } e1 solutions == 9 if
+            } { } e1 3671136 gcd == 1 if
+            e1 + 1 = e1
+        } { e1 < 3671136 } while
+    } { e1 < 3671136 } while
+} { e1 < 3671136 } while
+
+sum output
