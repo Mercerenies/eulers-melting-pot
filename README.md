@@ -149,6 +149,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Prolog
 * Pyf\*\*ck
 * Pyth
+* Pyramid Scheme
 * QBASIC
 * Rebol
 * Rockstar
@@ -1283,6 +1284,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Broccoli](https://github.com/mathieucaroff/broccoli)
 * Compiler / Interpreter: [https://mathieucaroff.com/broccoli](https://mathieucaroff.com/broccoli)
 * Notes: (None)
+
+### Euler 183
+* File: [problem183.pyra](problem183.pyra)
+* Language: [Pyramid Scheme](https://github.com/ConorOBrien-Foxx/Pyramid-Scheme)
+* Compiler / Interpreter: [Pyramid-Scheme @ fd183d29](https://github.com/ConorOBrien-Foxx/Pyramid-Scheme/tree/fd183d296f08e0cba8bf55da907697eaf412f6a7)
+* Notes: Code was written with the help of a Scala translator program.
 
 ## Valid Languages
 

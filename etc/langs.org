@@ -413,7 +413,7 @@
 *** Pip                                                                :used:
 *** Puzzlescript (https://www.puzzlescript.net/)
 *** Pyf**k (https://github.com/wanqizhu/pyfuck)                        :used:
-*** Pyramid Scheme (https://github.com/ConorOBrien-Foxx/Pyramid-Scheme)
+*** Pyramid Scheme (https://github.com/ConorOBrien-Foxx/Pyramid-Scheme) :used:
 *** Pyth                                                               :used:
 *** Quark (https://github.com/henrystanley/Quark/)
 *** reMorse (https://esolangs.org/wiki/ReMorse)
