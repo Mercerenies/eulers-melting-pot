@@ -203,7 +203,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem2.bf](problem2.bf)
 * Language: [Brainf\*\*k](https://en.wikipedia.org/wiki/Brainfuck)
 * Compiler / Interpreter: [copy.sh](https://copy.sh/brainfuck/)
-* Notes: This code was written with the help of a Lisp translator program.
+* Notes: This code was written with the help of a [Lisp translator program](etc/bfgen.lisp).
 
 ### Euler 3
 * File: [problem3.ijs](problem3.ijs)
@@ -233,7 +233,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem7.ws](problem7.ws)
 * Language: [Whitespace](http://compsoc.dur.ac.uk/whitespace/tutorial.html)
 * Compiler / Interpreter: [TIO Nexus](http://tio.run/#whitespace)
-* Notes: This code was written with the help of a Lisp translator program.
+* Notes: This code was written with the help of a [Lisp translator program](etc/wsgen.lisp).
 
 ### Euler 8
 * File: [problem8.io](problem8.io)
@@ -413,7 +413,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem37.jsf](problem37.jsf)
 * Language: [JSF\*\*k](http://www.jsfuck.com/)
 * Compiler / Interpreter: [The provided runner](http://www.jsfuck.com/)
-* Notes: Code was generated with the help of the official website's translator.
+* Notes: Code was generated with the help of the [official website's translator](https://jsfuck.com/).
 
 ### Euler 38
 * File: [problem38.bas](problem38.bas)
@@ -569,7 +569,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem63.ench](problem63.ench)
 * Language: [Enchilada](http://www.enchiladacode.nl/)
 * Compiler / Interpreter: [The official interpreter](http://www.enchiladacode.nl/download.html)
-* Notes: This code was compiled with the help of a Perl translator program.
+* Notes: This code was compiled with the help of a [Perl translator program](etc/enchgen.pl).
 
 ### Euler 64
 * File: [problem64.m4](problem64.m4)
@@ -593,7 +593,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem67.gl](problem67.gl)
 * Language: [Grocery List](https://esolangs.org/wiki/Grocery_List)
 * Compiler / Interpreter: [Archived interpreter](https://web.archive.org/web/20160404194506/https://bpaste.net/show/50974d4c80f8)
-* Notes: Code was written with the help of a Lisp translator program. Pipe `./files/p067_triangle.txt` as standard input. File must have Unix line endings.
+* Notes: Code was written with the help of a [Lisp translator program](etc/glgen.lisp). Pipe `./files/p067_triangle.txt` as standard input. File must have Unix line endings.
 
 ### Euler 68
 * File: [problem68.ll](problem68.ll)
@@ -731,7 +731,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem90.1+1j](problem90.1+1j)
 * Language: [COMPLEX](https://esolangs.org/wiki/COMPLEX)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/Taneb/COMPLEX)
-* Notes: Code was written with the help of a Lisp translator program.
+* Notes: Code was written with the help of a [Lisp translator program](etc/cmgen.lisp).
 
 ### Euler 91
 * File: [problem91.aarr](problem91.aarr)
@@ -791,7 +791,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem100.snow](problem100.snow)
 * Language: [Snowman](https://esolangs.org/wiki/Snowman)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/tckmn/snowman-lang/)
-* Notes: Code was written with the help of a Lisp translator program.
+* Notes: Code was written with the help of a [Lisp translator program](etc/smgen.lisp).
 
 ### Euler 101
 * File: [problem101.gibb](problem101.gibb)
@@ -803,7 +803,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem102.magi](problem102.magi)
 * Language: [MagiStack](https://esolangs.org/wiki/MagiStack)
 * Compiler / Interpreter: [MagiStack 1.2 Interpreter](https://github.com/tripl3dogdare/MagiStack/blob/master/magistack-1.2.py)
-* Notes: Code was written with the help of a Lisp translator program; provide `./files/p102_triangles.txt` as input.
+* Notes: Code was written with the help of a [Lisp translator program](etc/mggen.lisp); provide `./files/p102_triangles.txt` as input.
 
 ### Euler 103
 * File: [problem103.dylan](problem103.dylan)
@@ -845,7 +845,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem109.png](problem109.png)
 * Language: [Befunk](https://esolangs.org/wiki/Befunk)
 * Compiler / Interpreter: [The provided interpreter](https://github.com/TieSoul/Befunk)
-* Notes: A very slow solution; code was written with the help of a Python translator program.
+* Notes: A very slow solution; code was written with the help of a [Python translator program](etc/bkgen.py).
 
 ### Euler 110
 * File: [problem110.pip](problem110.pip)
@@ -869,13 +869,13 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem113.chef](problem113.chef)
 * Language: [Chef](https://www.dangermouse.net/esoteric/chef.html)
 * Compiler / Interpreter: [TIO Nexus](https://tio.run/#chef)
-* Notes: Code was written with the help of a Perl translator program.
+* Notes: Code was written with the help of a [Perl translator program](etc/chgen.lisp).
 
 ### Euler 114
 * File: [problem114.bees](problem114.bees)
 * Language: [Beeswax](https://esolangs.org/wiki/Beeswax)
 * Compiler / Interpreter: [TIO Nexus](https://tio.run/#beeswax)
-* Notes: Code was written with the help of a Lisp translator program; a somewhat slow solution.
+* Notes: Code was written with the help of a [Lisp translator program](etc/bwgen.lisp); a somewhat slow solution.
 
 ### Euler 115
 * File: [problem115.mt](problem115.mt)
@@ -965,13 +965,13 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem129.befreak](problem129.befreak)
 * Language: [Befreak](http://tunes.org/~iepos/befreak.html)
 * Compiler / Interpreter: [The provided interpreter](http://tunes.org/~iepos/befreak.tar.gz)
-* Notes: Code was written with the help of a Scala translator program; a very slow solution.
+* Notes: Code was written with the help of a [Scala translator program](https://github.com/Mercerenies/befreakgen); a very slow solution.
 
 ### Euler 130
 * File: [problem130.four](problem130.four)
 * Language: [Fourier](https://esolangs.org/wiki/Fourier)
 * Compiler / Interpreter: [Archived interpreter](https://archive.codeplex.com/?p=fourierlang)
-* Notes: Code was written with the help of a Haskell translator program; an incredibly slow solution.
+* Notes: Code was written with the help of a [Haskell translator program](etc/frgen.hs); an incredibly slow solution.
 
 ### Euler 131
 * File: [problem131.perchance](problem131.perchance)
@@ -1019,7 +1019,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem138.pickle](problem138.pickle)
 * Language: [Pickle](https://docs.python.org/3/library/pickle.html#module-pickle)
 * Compiler / Interpreter: [Python 3.7.9](https://www.python.org/)
-* Notes: `./etc/run138.py` may be helpful in running the source; code was written with the help of a Lisp translator program.
+* Notes: `./etc/run138.py` may be helpful in running the source; code was written with the help of a [Lisp translator program](etc/pkgen.lisp).
 
 ### Euler 139
 * File: [problem139.vale](problem139.vale)
@@ -1133,7 +1133,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem157.blsq](problem157.blsq)
 * Language: [Burlesque](https://esolangs.org/wiki/Burlesque)
 * Compiler / Interpreter: [Burlesque 1753bdf](https://github.com/FMNSSun/Burlesque)
-* Notes: A somewhat slow solution; code was written with the help of a Racket translator program.
+* Notes: A somewhat slow solution; code was written with the help of a [Racket translator program](etc/blsq_gen.rkt).
 
 ### Euler 158
 * File: [problem158.cf0x10](problem158.cf0x10)
@@ -1229,7 +1229,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem173.folders](problem173.folders)
 * Language: [Folders](https://esolangs.org/wiki/Folders)
 * Compiler / Interpreter: [Folders.py 0bec545](https://github.com/SinaKhalili/Folders.py/tree/main)
-* Notes: Code was written with the help of a Haskell translator program; output of Linux `tree` command is available at `etc/problem173_tree.txt`.
+* Notes: Code was written with the help of a [Haskell translator program](etc/generate_173.hs); output of Linux `tree` command is available at `etc/problem173_tree.txt`.
 
 ### Euler 174
 * File: [problem174.html](problem174.html)
@@ -1241,13 +1241,13 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem175.emote](problem175.emote)
 * Language: [Emotinomicon](https://github.com/ConorOBrien-Foxx/Emotinomicon/)
 * Compiler / Interpreter: [The online interpreter](http://conorobrien-foxx.github.io/Emotinomicon/int.html)
-* Notes: A somewhat slow solution; code was written with the help of a Lisp translator program; screenshot is available at [etc/problem175_screenshot.png](etc/problem175_screenshot.png).
+* Notes: A somewhat slow solution; code was written with the help of a [Lisp translator program](etc/emotegen.lisp); screenshot is available at [etc/problem175_screenshot.png](etc/problem175_screenshot.png).
 
 ### Euler 176
 * File: [problem176.naz](problem176.naz)
 * Language: [naz](https://esolangs.org/wiki/Naz)
 * Compiler / Interpreter: [naz 82960e5](https://github.com/sporeball/naz)
-* Notes: Code was written with the help of a Racket translator program; requires the `-u` flag.
+* Notes: Code was written with the help of a [Racket translator program](etc/naz_gen.rkt); requires the `-u` flag.
 
 ### Euler 177
 * File: [problem177.coco](problem177.coco)
@@ -1271,7 +1271,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem180.py](problem180.py)
 * Language: [Pyf\*\*ck](https://github.com/wanqizhu/pyfuck)
 * Compiler / Interpreter: [Python 3.11.6](https://www.python.org/downloads/)
-* Notes: Code was generated with the help of the creator's translation tool.
+* Notes: Code was generated with the help of the creator's [translation tool](https://github.com/wanqizhu/pyfuck/blob/master/pyfuck.py).
 
 ### Euler 181
 * File: [problem181.oa](problem181.oa)
@@ -1289,7 +1289,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem183.pyra](problem183.pyra)
 * Language: [Pyramid Scheme](https://github.com/ConorOBrien-Foxx/Pyramid-Scheme)
 * Compiler / Interpreter: [Pyramid-Scheme @ fd183d29](https://github.com/ConorOBrien-Foxx/Pyramid-Scheme/tree/fd183d296f08e0cba8bf55da907697eaf412f6a7)
-* Notes: Code was written with the help of a Scala translator program.
+* Notes: Code was written with the help of a [Scala translator program](https://github.com/Mercerenies/pyramid-scheme-generator).
 
 ## Valid Languages
 
