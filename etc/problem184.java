@@ -85,7 +85,7 @@ public class problem184 {
     return triangles;
   }
 
-  public static long countI(int radius) {
+  public static long countTriangles(int radius) {
     var points = getPoints(radius);
     var triangles = getTriangles(points);
     return triangles.stream().filter((x) -> x.contains(Vector.ZERO)).count();
@@ -93,7 +93,7 @@ public class problem184 {
 
   public static void main(String[] args) {
     for (int r = 1; r < 10; r++) {
-      System.out.println(r + " " + countI(r));
+      System.out.println(r + " " + countTriangles(r));
     }
   }
 
