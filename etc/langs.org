@@ -640,6 +640,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Universal Lambda (http://www.golfscript.com/)
 *** VALE (https://github.com/project-everest/vale)
 *** Verse (https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference)
+*** VHDL
 *** Vortex (https://github.com/dibsonthis/Vortex)
 *** Vyxal (https://github.com/Vyxal/Vyxal)
 *** Width (https://github.com/stestoltz/Width)

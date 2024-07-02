@@ -29,27 +29,11 @@ sub points($radius) {
 
 sub run($radius) {
     my $count = 0;
-    my $outerlimit = $radius - 1;
-    for (- $outerlimit)..$outerlimit -> $ay {
-        for (- $outerlimit)..$outerlimit -> $bx {
-            my $alimit = other-limit-for($radius, $ay) - 1;
-            my $blimit = other-limit-for($radius, $bx) - 1;
-            for (- $blimit)..$blimit -> $by {
-                for (- $alimit)..$alimit -> $ax {
-                    next if $by * $ax >= $ay * $bx;
-                    for (- $outerlimit)..$outerlimit -> $cx {
-                        my $climit = other-limit-for($radius, $cx) - 1;
-                        for (- $climit)..$climit -> $cy {
-                            if $cy * $bx < $by * $cx && $ay * $cx < $cy * $ax {
-                                $count++;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+    my @points = points($radius);
+    for @points.combinations(3) -> ($a, $b, $c) {
+        $count++ if $b.y * $a.x < $a.y * $b.x && $c.y * $b.x < $b.y * $c.x && $a.y * $c.x < $c.y * $a.x;
     }
-    $count / 3;
+    $count * 2
 }
 
 for 1..10 -> $r {
