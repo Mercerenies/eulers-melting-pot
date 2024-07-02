@@ -353,7 +353,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem27.ik](problem27.ik)
 * Language: [Ioke](https://ioke.org/)
 * Compiler / Interpreter: [Ioke for the JVM](https://ioke.org/download.html)
-* Notes: A very slow solution.
+* Notes: A somewhat slow solution.
 
 ### Euler 28
 * File: [problem28.bf](problem28.bf)
