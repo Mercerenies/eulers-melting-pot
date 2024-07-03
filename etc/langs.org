@@ -627,6 +627,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** PPL
 *** Processing (https://en.wikipedia.org/wiki/Processing_(programming_language))
 *** Reason (https://reasonml.github.io/)
+*** Seph (https://github.com/seph-lang/seph)
 *** Skript (https://docs.skriptlang.org/)
 *** SLOBIL (https://www.reddit.com/r/ProgrammingLanguages/comments/1atnmbk/slobil_slot_and_object_based_interactive_language/)
 *** smodels (http://www.tcs.hut.fi/Software/smodels/)
