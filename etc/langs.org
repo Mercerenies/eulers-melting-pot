@@ -135,7 +135,7 @@
    Silver language.
 *** 11l (http://rosettacode.org/wiki/Category:11l)                     :used:
     + Dictionaries / sets / advanced data structures are flaky
-*** 42 (https://forty2.is/)
+*** 42 (https://forty2.is/)                                            :used:
 *** ABAP (https://en.wikipedia.org/wiki/ABAP)
 *** Agda                                                               :used:
 *** Alice (https://en.wikipedia.org/wiki/Alice_(software))

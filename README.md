@@ -14,6 +14,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * 05AB1E
 * 1.1
 * 11l
+* 42
 * \>\<\>
 * Ada
 * AGSPL
@@ -1290,6 +1291,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Pyramid Scheme](https://github.com/ConorOBrien-Foxx/Pyramid-Scheme)
 * Compiler / Interpreter: [Pyramid-Scheme @ fd183d29](https://github.com/ConorOBrien-Foxx/Pyramid-Scheme/tree/fd183d296f08e0cba8bf55da907697eaf412f6a7)
 * Notes: Code was written with the help of a [Scala translator program](https://github.com/Mercerenies/pyramid-scheme-generator).
+
+### Euler 184
+* File: [problem184.L42](problem184.L42)
+* Language: [42](https://forty2.is/index.xhtml)
+* Compiler / Interpreter: [L42PortableLinux.zip](https://forty2.is/download.xhtml)
+* Notes: `./etc/build184.sh` may be helpful in building the source.
 
 ## Valid Languages
 
