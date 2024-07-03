@@ -16,11 +16,11 @@ maxa = 0
 maxb = 0
 streak = 0
 (2..1000) filter(isPrime) each(b,
-  b println
   (-999..999) each(a,
     curr = 0
     while((curr * curr + a * curr + b) isPrime,
-      curr++)
+      curr++
+    )
     if(curr > streak,
       maxa = a
       maxb = b
