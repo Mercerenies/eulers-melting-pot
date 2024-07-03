@@ -63,12 +63,18 @@ sub count-quad-iii($radius, $a) {
     my $b-lines = 0; # Above the origin
     my $c-lines = 0; # Below the origin
     for (0..^$radius).reverse -> $by {
-        my $blimit = other-limit-for($radius, $by);
-        for (1..^$blimit).reverse -> $bx {
-            my $b = Point.new(x => - $bx, y => - $by);
-            my $y-intercept = y-intercept($a, $b);
-            $b-lines++ if $y-intercept > 0;
-            $c-lines++ if $y-intercept < 0;
+        my $b-limit = other-limit-for($radius, $by);
+        my $b-pivot = ($a.x * $by) / $a.y;
+        if $b-pivot < 1 {
+            $b-lines += ($b-limit - 1);
+        } elsif $b-pivot > $b-limit - 1 {
+            $c-lines += ($b-limit - 1);
+        } elsif $b-pivot.denominator == 1 {
+            $b-lines += ($b-limit - $b-pivot - 1);
+            $c-lines += ($b-pivot - 1);
+        } else {
+            $b-lines += ($b-limit - $b-pivot.ceiling);
+            $c-lines += $b-pivot.floor;
         }
     }
     $b-lines * $c-lines;
@@ -78,9 +84,9 @@ sub run($radius) {
     my $count = 0;
     my $points-in-one-quadrant = points($radius).elems;
     for 1..^$radius -> $ax {
+        say $ax;
         my $alimit = other-limit-for($radius, $ax);
         for 1..^$alimit -> $ay {
-            say "$ax $ay";
             my $a = Point.new(x => $ax, y => $ay);
             $count += count-quad-iv($radius, $points-in-one-quadrant, $a);
             $count += count-quad-iii($radius, $a);
