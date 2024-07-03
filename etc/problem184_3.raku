@@ -10,6 +10,10 @@
 # values independently and multiply.
 #
 # Runs; works in 9minutes
+#
+# With some optimizations on count-quad-iii, down to 4 minutes.
+#
+# And with not being stupid (more optimizations), we're down to 2 seconds.
 
 class Point {
     has Int $.x;
@@ -46,20 +50,7 @@ sub points($radius) {
     }
 }
 
-sub count-quad-iv($radius, $points-in-one-quadrant, $a) {
-    my $count = 0;
-    for (0..^$radius).reverse -> $by {
-        my $blimit = other-limit-for($radius, $by);
-        for (1..^$blimit).reverse -> $bx {
-            my $b = Point.new(x => - $bx, y => - $by);
-            next if y-intercept($a, $b) <= 0;
-            $count += $points-in-one-quadrant;
-        }
-    }
-    $count;
-}
-
-sub count-quad-iii($radius, $a) {
+sub count-quads($radius, $points-in-one-quadrant, $a) {
     my $b-lines = 0; # Above the origin
     my $c-lines = 0; # Below the origin
     for (0..^$radius).reverse -> $by {
@@ -77,7 +68,7 @@ sub count-quad-iii($radius, $a) {
             $c-lines += $b-pivot.floor;
         }
     }
-    $b-lines * $c-lines;
+    $b-lines * ($c-lines + $points-in-one-quadrant);
 }
 
 sub run($radius) {
@@ -88,8 +79,7 @@ sub run($radius) {
         my $alimit = other-limit-for($radius, $ax);
         for 1..^$alimit -> $ay {
             my $a = Point.new(x => $ax, y => $ay);
-            $count += count-quad-iv($radius, $points-in-one-quadrant, $a);
-            $count += count-quad-iii($radius, $a);
+            $count += count-quads($radius, $points-in-one-quadrant, $a);
         }
     }
     $count * 4;
