@@ -147,6 +147,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Pip
 * Pizza
 * Pony
+* Potassco
 * Prolog
 * Pyf\*\*ck
 * Pyth
@@ -1297,6 +1298,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [42](https://forty2.is/index.xhtml)
 * Compiler / Interpreter: [L42PortableLinux.zip](https://forty2.is/download.xhtml)
 * Notes: `./etc/build184.sh` may be helpful in building the source.
+
+### Euler 185
+* File: [problem185.lp](problem185.lp)
+* Language: [Potassco](https://potassco.org/)
+* Compiler / Interpreter: [clingo](https://potassco.org/clingo/)
+* Notes: The answer outputs `correct(N, X)`, where `X` is the `N`th digit in the result.
 
 ## Valid Languages
 

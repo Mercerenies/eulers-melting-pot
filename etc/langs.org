@@ -209,7 +209,7 @@
 *** Pikt (https://web.archive.org/web/20080716033727/http://pikt.org/pikt/intro/intro.html)
 *** Pikt (https://github.com/iAmGio/pikt)                              :used:
 *** Pony                                                               :used:
-*** Potassco
+*** Potassco                                                           :used:
 *** Prolog                                                             :used:
 *** PROMAL
 *** Redscript (https://wiki.redmodding.org/redscript)
