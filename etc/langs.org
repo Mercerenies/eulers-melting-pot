@@ -209,7 +209,7 @@
 *** Pikt (https://web.archive.org/web/20080716033727/http://pikt.org/pikt/intro/intro.html)
 *** Pikt (https://github.com/iAmGio/pikt)                              :used:
 *** Pony                                                               :used:
-*** Potassco                                                           :used:
+*** Potassco
 *** Prolog                                                             :used:
 *** PROMAL
 *** Redscript (https://wiki.redmodding.org/redscript)
@@ -348,7 +348,7 @@
 *** Connery (https://esolangs.org/wiki/Connery)
 *** Cubix                                                              :used:
 *** Cy (https://github.com/cyoce/Cy)
-*** ed
+*** ed                                                                 :used:
     + Loops are recursive
     + Short list
 *** Emmental (https://esolangs.org/wiki/Emmental)
@@ -713,4 +713,3 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
     Yeah.
 
 *** Inform 7
-*** ed

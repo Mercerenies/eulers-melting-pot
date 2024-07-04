@@ -60,6 +60,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Dry
 * Dylan
 * Earl Grey
+* ed
 * Eiffel
 * ELisp
 * Elixir
@@ -146,7 +147,6 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Pip
 * Pizza
 * Pony
-* Potassco
 * Prolog
 * Pyf\*\*ck
 * Pyth
@@ -663,10 +663,10 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Notes: (None)
 
 ### Euler 79
-* File: [problem79.lp](problem79.lp)
-* Language: [Potassco](https://potassco.org/)
-* Compiler / Interpreter: [clingo](https://potassco.org/clingo/)
-* Notes: The answer outputs `pos(N, X)`, where `X` is the `N`th digit in the result.
+* File: [problem79.ed](problem79.ed)
+* Language: [ed](https://www.gnu.org/software/ed/manual/ed_manual.html)
+* Compiler / Interpreter: [GNU ed 1.18](https://www.gnu.org/software/ed/)
+* Notes: Supply `./files/0079_keylog.txt` as argument and `problem79.ed` as piped standard input.
 
 ### Euler 80
 * File: [problem80.wyv](problem80.wyv)
