@@ -1,0 +1,12 @@
+
+;; Waaaaaay too slow.
+
+(def {primes-bitmask} ##)
+
+(stow primes-bitmask "0" 0)
+(stow primes-bitmask "1" 0)
+(def {i} 2)
+(while {< i 100000000}
+  {(stow primes-bitmask (convert_string i) 1)
+   (def {i} (+ i 1))})
+(print i)
