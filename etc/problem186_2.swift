@@ -57,38 +57,33 @@ func modulo(_ a: Int, _ b: Int) -> Int {
   (a % b + b) % b
 }
 
-extension Sequence {
-    func chunkedPairs() -> some Sequence<(Element, Element)> {
-        let iterator = makeIterator()
-        return sequence(state: iterator) { iterator in
-            guard let a = iterator.next(), let b = iterator.next() else {
-                return nil
-            }
-            return (a, b)
-        }
-    }
+func nextElem(_ state: inout LaggedFibonacciState) -> Int {
+    let currentValue = state[0]
+    state[0] = (state[-24] + state[-55]) % 1000000
+    state.index += 1
+    return currentValue
 }
 
-func laggedFibonacci() -> some Sequence<Int> {
-    let startingArray = (1..<56).map { (k) in (100003 - 200003 * k + 300007 * k * k * k) % 1000000 }
-    let state = LaggedFibonacciState(array: startingArray, index: 0)
-    return sequence(state: state) { state in
-        let currentValue = state[0]
-        state[0] = (state[-24] + state[-55]) % 1000000
-        state.index += 1
-        return currentValue
-    }
+var stateArray = Array(repeating: 0, count: 55)
+for i in 1..<56 {
+  stateArray[i - 1] = (100003 - 200003 * i + 300007 * i * i * i) % 1000000
 }
+var state = LaggedFibonacciState(array: stateArray, index: 0)
 
-let calls = laggedFibonacci().chunkedPairs().lazy.filter { (a, b) in a != b }
 let minister = 524287
 var cohorts = Partition(singletons: 0..<1000000)
+var index = 0
 
-for (index, data) in calls.enumerated() {
-    let (caller, callee) = data
+while true {
+    let caller = nextElem(&state)
+    let callee = nextElem(&state)
+    if caller == callee {
+        continue
+    }
     cohorts.mergeSubsets(caller, callee)
     if cohorts.subsetLength(caller) >= 990000 {
         print(index + 1)
         break
     }
+    index += 1
 }
