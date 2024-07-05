@@ -81,7 +81,7 @@ while true {
         continue
     }
     cohorts.mergeSubsets(caller, callee)
-    if cohorts.subsetLength(caller) >= 990000 {
+    if cohorts.subsetLength(minister) >= 990000 {
         print(index + 1)
         break
     }

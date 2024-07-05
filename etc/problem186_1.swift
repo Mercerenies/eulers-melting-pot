@@ -94,7 +94,7 @@ var cohorts = Partition(singletons: 0..<1000000)
 for (index, data) in calls.enumerated() {
     let (caller, callee) = data
     cohorts.mergeSubsets(caller, callee)
-    if cohorts.subsetLength(caller) >= 990000 {
+    if cohorts.subsetLength(minister) >= 990000 {
         print(index + 1)
         break
     }
