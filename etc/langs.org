@@ -346,6 +346,9 @@
 *** Comefrom0x10 (https://esolangs.org/wiki/Comefrom0x10)              :used:
 *** COMPLEX                                                            :used:
 *** Connery (https://esolangs.org/wiki/Connery)
+    + Interpreter is very slow
+    + Use the Docker implementation
+    + Dictionaries are mutable, no arrays (only linked lists)
 *** Cubix                                                              :used:
 *** Cy (https://github.com/cyoce/Cy)
 *** ed                                                                 :used:
@@ -452,6 +455,10 @@
 *** Whispers (https://github.com/cairdcoinheringaahing/Whispers)
 *** Whitespace                                                         :used:
 ** UNUSABLE
+*** A+
+    The Wayback Machine has [[https://web.archive.org/web/20220103110240/http://www.aplusdev.org/Download/aplus-fsf-4.18-8.i386.tar.gz][the interpreter]], but it depends on some
+    ancient Linux dynamic libraries that I can't get to run on a
+    modern machine.
 *** ActionScript
     Flash is end-of-life and all of the other Adobe products seem to
     either be paid or not support my OS. I also can't seem to get the
@@ -611,6 +618,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Minus (http://www.golfscript.com/)
 *** Monte (https://github.com/monte-language/monte)
 *** Mojo (https://www.modular.com/mojo)
+*** Nial (https://www.nial-array-language.org/)
 *** Nibbles (http://www.golfscript.com/)
 *** Noop (https://en.wikipedia.org/wiki/Noop)
 *** Occam
