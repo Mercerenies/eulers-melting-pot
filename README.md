@@ -135,6 +135,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Oberon-07
 * Objective-C
 * OCaml
+* Odin
 * Pascal
 * Parrot IR
 * PASM
@@ -1304,6 +1305,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Potassco](https://potassco.org/)
 * Compiler / Interpreter: [clingo](https://potassco.org/clingo/)
 * Notes: The answer outputs `correct(N, X)`, where `X` is the `N`th digit in the result.
+
+### Euler 186
+* File: [problem186.odin](problem186.odin)
+* Language: [Odin](https://odin-lang.org/)
+* Compiler / Interpreter: [Odin dev-2024-07](https://github.com/odin-lang/Odin/releases/tag/dev-2024-07)
+* Notes: Compiler may require [a patch](https://github.com/odin-lang/Odin/issues/2271#issuecomment-1959009449) on some Linux systems.
 
 ## Valid Languages
 

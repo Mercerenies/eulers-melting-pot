@@ -201,7 +201,7 @@
 *** Nit                                                                :used:
 *** Oasis (https://github.com/oasis-lang/)                             :used:
     + Have to run as Jar; ~gradle run~ command is broken.
-*** Odin (https://odin-lang.org/docs/)
+*** Odin (https://odin-lang.org/docs/)                                 :used:
 *** Picat                                                              :used:
 *** Pike                                                               :used:
 *** Pikelet
