@@ -366,7 +366,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 
 ### Euler 29
 * File: [problem29.srs](problem29.srs)
-* Language: [Seriously](https://github.com/Mego/Seriously)
+* Language: [Seriously](https://github.com/Mego/Seriously/tree/v1)
 * Compiler / Interpreter: [TIO Nexus](http://tio.run/#seriously)
 * Notes: The seemingly pointless union with the empty list at the end serves to remove duplicates.
 
