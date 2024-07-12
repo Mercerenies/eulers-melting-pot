@@ -157,6 +157,7 @@
     + No arrays
 *** 🆒                                                                 :used:
 *** Dafny                                                              :used:
+*** Dale (https://github.com/tomhrr/dale)
 *** Dhall (https://dhall-lang.org/#)                                   :used:
     + Subturing, loops must be finitely bounded
     + Loops only available via map, fold, etc.
@@ -202,6 +203,7 @@
 *** Oasis (https://github.com/oasis-lang/)                             :used:
     + Have to run as Jar; ~gradle run~ command is broken.
 *** Odin (https://odin-lang.org/docs/)                                 :used:
+*** Oxide (https://github.com/tuqqu/oxide-lang)
 *** Picat                                                              :used:
 *** Pike                                                               :used:
 *** Pikelet
@@ -322,6 +324,9 @@
 *** 05AB1E                                                             :used:
 *** 1.1                                                                :used:
 *** ><>                                                                :used:
+*** Actually (https://github.com/Mego/Seriously)
+    + The repo is for Seriously, but the master branch is for the
+      successor language Actually.
 *** AGSPL (https://esolangs.org/wiki/AGSPL)                            :used:
 *** Alice (m-ender)                                                    :used:
 *** Anti-Array                                                         :used:
@@ -384,6 +389,7 @@
 *** Grocery List                                                       :used:
 *** Gwion                                                              :used:
 *** HAN (https://github.com/ARYANTECH123/HAN)
+    + No arrays
 *** Hanabi                                                             :used:
 *** Hexagony                                                           :used:
 *** Inform 7
@@ -400,13 +406,13 @@
 *** MontiLang                                                          :used:
 *** Mouse-2002                                                         :used:
 *** Muriel (https://esolangs.org/wiki/Muriel)
-*** Myby (https://github.com/ConorOBrien-Foxx/Myby/)
 *** naz (https://github.com/sporeball/naz)                             :used:
     + Short list
 *** NICE (https://esolangs.org/wiki/NICE)
 *** Oblivion (https://jweinst1.github.io/OblivionWebsite/)
     + Double-precision floats
     + Non-constant loops are recursion
+    + Arrays are immutable
 *** Orthagonal (https://github.com/m-ender/orthagonal)
 *** Perchance                                                          :used:
 *** Pickle (Python)                                                    :used:
@@ -426,7 +432,7 @@
 *** Rpg (https://esolangs.org/wiki/Rpg)
 *** Runic Enchantments (https://github.com/Draco18s/RunicEnchantments/tree/Console)
 *** Secretary (https://esolangs.org/wiki/Secretary)
-*** Seriously                                                          :used:
+*** Seriously (https://github.com/Mego/Seriously/tree/v1)              :used:
 *** Shakespeare                                                        :used:
 *** Snowman                                                            :used:
 *** SNUSP (https://esolangs.org/wiki/SNUSP)
@@ -544,6 +550,11 @@
     The interpreter seems to be using lots of implementation-defined
     C++ behavior and, as a result, I can only use a small subset of
     the defined commands without segfaulting at random.
+*** Myby (https://github.com/ConorOBrien-Foxx/Myby/)
+    Interpreter is written in D and produces a ton of errors when I
+    try to compile it. Some of them seem to be integer coercion issues
+    (~uint~ used where ~ulong~ should've been used instead), but many
+    are not.
 *** Noether (https://github.com/noether-lang/noether)
     Unimplemented
 *** Orthogonal
@@ -592,7 +603,6 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Cubically (https://github.com/aaronryank/cubically)
 *** Crystal
 *** Curl (https://www.curl.com/products/prod/language/)
-*** Dale (https://github.com/tomhrr/dale)
 *** Dart
 *** E
 *** EGL
@@ -626,7 +636,6 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Ohm
 *** Orc
 *** Orion (https://github.com/wafelack/orion/)
-*** Oxide (https://github.com/tuqqu/oxide-lang)
 *** Oz (https://en.wikipedia.org/wiki/Oz_(programming_language))
 *** Paperscript
 *** PARI/GP (https://en.wikipedia.org/wiki/PARI/GP)
