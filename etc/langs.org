@@ -327,6 +327,7 @@
 *** Actually (https://github.com/Mego/Seriously)
     + The repo is for Seriously, but the master branch is for the
       successor language Actually.
+    + Interpreter is quite slow, unfortunately.
 *** AGSPL (https://esolangs.org/wiki/AGSPL)                            :used:
 *** Alice (m-ender)                                                    :used:
 *** Anti-Array                                                         :used:
@@ -391,6 +392,7 @@
 *** HAN (https://github.com/ARYANTECH123/HAN)
     + No arrays
 *** Hanabi                                                             :used:
+*** hello, world! (https://github.com/histocrat/hello_world)
 *** Hexagony                                                           :used:
 *** Inform 7
     + Short List
@@ -427,6 +429,7 @@
 *** Quark (https://github.com/henrystanley/Quark/)
 *** reMorse (https://esolangs.org/wiki/ReMorse)
     + Values are 1 byte
+*** Rail (https://esolangs.org/wiki/Rail)
 *** Retina (https://esolangs.org/wiki/Retina)
 *** Rockstar                                                           :used:
 *** Rpg (https://esolangs.org/wiki/Rpg)
@@ -442,6 +445,8 @@
     + ~put~ command appears to be completely broken, can't modify
       stack at random.
     + Executable notes: Must run from ~vendor~ directory: ~./egel -I '../include' ../../soul/src/soul.eg <../../../filename.soul~
+*** Stack Cats (https://github.com/m-ender/stackcats)
+    + Reversible
 *** Stuck                                                              :used:
 *** Taxi                                                               :used:
 *** Tome                                                               :used:
@@ -644,6 +649,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** PPL
 *** Processing (https://en.wikipedia.org/wiki/Processing_(programming_language))
 *** Reason (https://reasonml.github.io/)
+*** Ring (https://ring-lang.github.io/doc1.20/index.html)
 *** Seph (https://github.com/seph-lang/seph)
 *** Skript (https://docs.skriptlang.org/)
 *** SLOBIL (https://www.reddit.com/r/ProgrammingLanguages/comments/1atnmbk/slobil_slot_and_object_based_interactive_language/)
