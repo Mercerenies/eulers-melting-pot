@@ -374,7 +374,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem30.stk](problem30.stk)
 * Language: [Stuck](https://github.com/kade-robertson/stuck)
 * Compiler / Interpreter: [The official interpreter](https://github.com/kade-robertson/stuck)
-* Notes: The interpreter seems to require some minor modification to work with Unicode on some systems.
+* Notes: The interpreter seems to require some minor modification to work with Unicode on some systems, a somewhat slow solution.
 
 ### Euler 31
 * File: [problem31.sml](problem31.sml)
