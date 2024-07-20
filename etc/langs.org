@@ -324,6 +324,8 @@
 *** 05AB1E                                                             :used:
 *** 1.1                                                                :used:
 *** ><>                                                                :used:
+*** ><>\\.:.
+    + Some people can't be trusted with naming rights to languages :)
 *** Actually (https://github.com/Mego/Seriously)
     + The repo is for Seriously, but the master branch is for the
       successor language Actually.
@@ -406,10 +408,14 @@
 *** Math++                                                             :used:
 *** MATL                                                               :used:
 *** MontiLang                                                          :used:
+*** Mornington Crescent (https://esolangs.org/wiki/Mornington_Crescent)
 *** Mouse-2002                                                         :used:
 *** Muriel (https://esolangs.org/wiki/Muriel)
 *** naz (https://github.com/sporeball/naz)                             :used:
     + Short list
+*** Ndim (https://esolangs.org/wiki/Ndim)
+    + 2D (and >2D) lang, but can only modify near the instruction
+      pointer.
 *** NICE (https://esolangs.org/wiki/NICE)
 *** Oblivion (https://jweinst1.github.io/OblivionWebsite/)
     + Double-precision floats
