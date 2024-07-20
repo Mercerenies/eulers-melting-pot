@@ -33,6 +33,7 @@ long count_bits(_bool* bits, long size) {
       count++;
     }
   }
+  return count;
 }
 
 long* bitmask_to_array(_bool* bits, long size) {
