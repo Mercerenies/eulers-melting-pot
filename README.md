@@ -1268,7 +1268,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem179.whirl](problem179.whirl)
 * Language: [Whirl](https://web.archive.org/web/20130116204525/bigzaphod.org/whirl/)
 * Compiler / Interpreter: [Whirl-2.java](https://web.archive.org/web/20120303124619/http://www.bigzaphod.org/whirl/Whirl-2.java)
-* Notes: An incredibly slow solution.
+* Notes: An incredibly slow solution, code was written with the help of a [Racket translator program](https://github.com/Mercerenies/whirlgen).
 
 ### Euler 180
 * File: [problem180.py](problem180.py)
