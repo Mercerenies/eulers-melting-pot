@@ -94,6 +94,7 @@
 *** Icon                                                               :used:
 *** Io                                                                 :used:
 *** Ioke                                                               :used:
+*** Koi (https://koi-lang.dev/)
 *** Livescript (https://livescript.net/)
 *** Lunar (https://github.com/lunarlang/lunar)
 *** Maple
@@ -199,6 +200,7 @@
 *** Magpie (https://www.magpie-lang.org/)
     + Arrays are immutable
 *** Make                                                               :used:
+*** Nial (https://www.nial-array-language.org/)
 *** Nit                                                                :used:
 *** Oasis (https://github.com/oasis-lang/)                             :used:
     + Have to run as Jar; ~gradle run~ command is broken.
@@ -219,6 +221,7 @@
 *** S (https://en.wikipedia.org/wiki/S_(programming_language))
 *** Scratch                                                            :used:
 *** sed                                                                :used:
+*** SLOBIL (https://www.reddit.com/r/ProgrammingLanguages/comments/1atnmbk/slobil_slot_and_object_based_interactive_language/)
 *** SNOBOL                                                             :used:
 *** Stacked (https://github.com/ConorOBrien-Foxx/stacked)
 *** Streem
@@ -230,6 +233,7 @@
 *** Uiua (https://www.uiua.org/)
 *** Vala                                                               :used:
 *** Vale (https://vale.dev/)                                           :used:
+*** Vale (https://github.com/project-everest/vale)
 *** Vimscript
 *** Wenyan                                                             :used:
 *** Whiley (https://en.wikipedia.org/wiki/Whiley_(programming_language))
@@ -407,6 +411,7 @@
 *** MagiStack                                                          :used:
 *** Math++                                                             :used:
 *** MATL                                                               :used:
+*** Minus (http://www.golfscript.com/)
 *** MontiLang                                                          :used:
 *** Mornington Crescent (https://esolangs.org/wiki/Mornington_Crescent)
 *** Mouse-2002                                                         :used:
@@ -453,6 +458,8 @@
     + Executable notes: Must run from ~vendor~ directory: ~./egel -I '../include' ../../soul/src/soul.eg <../../../filename.soul~
 *** Stack Cats (https://github.com/m-ender/stackcats)
     + Reversible
+*** Story (https://github.com/soborat/story-programming-language)
+    + No arrays
 *** Stuck                                                              :used:
 *** Taxi                                                               :used:
 *** Tome                                                               :used:
@@ -471,6 +478,7 @@
 *** Wierd (sic) (https://esolangs.org/wiki/Wierd)
 *** Whispers (https://github.com/cairdcoinheringaahing/Whispers)
 *** Whitespace                                                         :used:
+*** Width (https://github.com/stestoltz/Width)
 ** UNUSABLE
 *** A+
     The Wayback Machine has [[https://web.archive.org/web/20220103110240/http://www.aplusdev.org/Download/aplus-fsf-4.18-8.i386.tar.gz][the interpreter]], but it depends on some
@@ -520,6 +528,9 @@
     Is this actually a language or just a library...?
 *** Conedy
     See Trajedy.
+*** Curl (https://www.curl.com/products/prod/language/)
+    No publicly-available interpreter. The only available interpreter
+    is blocked behind a survey-wall.
 *** Ė (https://e-dot.io/)
     Website doesn't exist anymore. I can access it on the Wayback
     Machine, but the online interpreter is broken. If there was a
@@ -603,6 +614,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Boo (https://boo-language.github.io/)
 *** Brachylog
 *** Bracmat (https://github.com/BartJongejan/Bracmat)
+*** Callisto (https://callisto.mesyeti.uk/)
 *** CandleScript
 *** Catln (https://catln.dev/)
 *** CDuce (http://www.cduce.org/)
@@ -613,7 +625,6 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Coco (https://rosettacode.org/wiki/Category:Coco)
 *** Cubically (https://github.com/aaronryank/cubically)
 *** Crystal
-*** Curl (https://www.curl.com/products/prod/language/)
 *** Dart
 *** E
 *** EGL
@@ -629,17 +640,14 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** I (https://aplwiki.com/wiki/I)
 *** IMP (https://en.wikipedia.org/wiki/IMP_(programming_language))
 *** jq (https://stedolan.github.io/jq/)
-*** Koi (https://koi-lang.dev/)
 *** Konna (https://www.reddit.com/r/ProgrammingLanguages/comments/rpe65y/konna_my_programming_language/)
 *** Lava (https://lavape.sourceforge.net/)
 *** Logtalk (https://logtalk.org/)
 *** Luau (https://github.com/luau-lang/luau)
     Further research needed: Is this different enough from Lua to
     warrant its own entry?
-*** Minus (http://www.golfscript.com/)
 *** Monte (https://github.com/monte-language/monte)
 *** Mojo (https://www.modular.com/mojo)
-*** Nial (https://www.nial-array-language.org/)
 *** Nibbles (http://www.golfscript.com/)
 *** Noop (https://en.wikipedia.org/wiki/Noop)
 *** Occam
@@ -658,24 +666,20 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Ring (https://ring-lang.github.io/doc1.20/index.html)
 *** Seph (https://github.com/seph-lang/seph)
 *** Skript (https://docs.skriptlang.org/)
-*** SLOBIL (https://www.reddit.com/r/ProgrammingLanguages/comments/1atnmbk/slobil_slot_and_object_based_interactive_language/)
 *** smodels (http://www.tcs.hut.fi/Software/smodels/)
 *** Snails
 *** Speedie (https://github.com/gamblevore/speedie/)
 *** Squirrel
-*** Story (https://github.com/soborat/story-programming-language)
 *** SuperForth (https://github.com/TheRealMichaelWang/superforth)
 *** Sweet.js
 *** Unison (https://www.unison-lang.org/)
 *** Universal Lambda (http://www.golfscript.com/)
-*** VALE (https://github.com/project-everest/vale)
 *** Verse (https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference)
 *** VHDL
 *** Vortex (https://github.com/dibsonthis/Vortex)
 *** Vyxal (https://github.com/Vyxal/Vyxal)
-*** Width (https://github.com/stestoltz/Width)
 *** XQuery
-*** XY
+*** XY (http://www.nsl.com/k/xy/xy.htm)
 *** Yuescript
     + Might be too similar to Moonscript? Investigate further.
 * RESOURCES
