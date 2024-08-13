@@ -60,8 +60,9 @@
 
 (define (infinite-loop . body)
   (let ([inner-len (code-length body)])
-    (prog body
-          (jmp-backward inner-len))))
+    (prog (comment "Infinite loop")
+          (indent 2 (prog body
+                          (jmp-backward inner-len))))))
 
 ;; do-while loop that runs at least once, then as long as the variable
 ;; is less than or equal to zero. The variable MUST NOT be `p`. `p` is
@@ -70,7 +71,10 @@
 ;; If the breaker variable is given, then that variable can be used
 ;; with the `do-last` special form inside the loop to abort future
 ;; loop iterations.
-(define (do-while-non-positive var #:breaker [breaker-var #f] . body)
+(define (do-while-non-positive var
+                               #:breaker [breaker-var #f]
+                               #:comment [loop-comment (format "Do while ~a" var)]
+                               . body)
   (define (loop-body inner-code-len)
     (prog body
           (mov-negated 'p 'v)
@@ -82,10 +86,11 @@
           (-= 'c 'Z)))
   (let* ([mock-loop-body (loop-body 1)]
          [mock-loop-len (code-length mock-loop-body)])
-    (if breaker-var
-        (prog (mov breaker-var mock-loop-len #:tmp 'p)
-              (loop-body breaker-var))
-        (loop-body mock-loop-len))))
+    (prog (comment loop-comment)
+          (indent 2 (if breaker-var
+                        (prog (mov breaker-var mock-loop-len #:tmp 'p)
+                              (loop-body breaker-var))
+                        (loop-body mock-loop-len))))))
 
 ;; Runs for each integer from the negative of the limit up to zero
 ;; (inclusive). The limit must be a positive constant, NOT a variable.
@@ -93,7 +98,7 @@
 ;; var must not be `p`. Clobbers `p`.
 (define (do-for var limit #:breaker [breaker-var #f] . body)
   (prog (mov-negated var limit)
-        (do-while-non-positive var #:breaker breaker-var
+        (do-while-non-positive var #:breaker breaker-var #:comment (format "Do for ~a from ~a to 0" var limit)
             body
             (-= var 'z))))
 
@@ -105,16 +110,17 @@
 
 ;; Runs the condition body IF the variable is positive. var must not
 ;; be `p`. Clobbers `p`.
-(define (do-if-positive var . body)
+(define (do-if-positive var #:comment [code-comment (format "Do if ~a" var)] . body)
   (let ([body-len (code-length body)])
-    (prog (mov-negated 'p 'v)
-          (mov-negated 'Z body-len)
-          (=0 'Y)
-          (=0 'p)
-          (-= 'p var)
-          (-= 'p 'v)
-          (-= 'c 'Z)
-          body)))
+    (prog (comment code-comment)
+          (indent 2 (prog (mov-negated 'p 'v)
+                          (mov-negated 'Z body-len)
+                          (=0 'Y)
+                          (=0 'p)
+                          (-= 'p var)
+                          (-= 'p 'v)
+                          (-= 'c 'Z)
+                          body)))))
 
 ;; Instruction pointer
 (define pointer 'c)
@@ -152,6 +158,14 @@
     [(list? code) (apply + (map code-length code))]
     [(source-code? code) (source-code-lines-count code)]
     [else (error "Invalid type for code-length: ~a" code)]))
+
+;; Indent the code, for pretty-printing purposes.
+(define (indent amount code)
+  (cond
+    [(list? code) (map (lambda (x) (indent amount x)) code)]
+    [(source-code? code) (struct-copy source-code code
+                                      [text (format "~a~a" (make-string amount #\space) (source-code-text code))])]
+    [else (error "Invalid type for indent: ~a" code)]))
 
 (define (print-code code)
   (display (code-text code)))
