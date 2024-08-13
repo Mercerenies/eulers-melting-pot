@@ -16,16 +16,40 @@
 ;;
 ;; Default values for predefined vars:
 ;; z = -1, y = -2, x = -10, w = -32, v = -(max value of p)
+;;
+;; I'm definitely using z and v for control flow. DO NOT touch these
+;; vars. That's 17 variables left.
+;;
+;; Free-use variables:
+;;
+;; * k, m, and n for indexing and loops
+;;
+;; * t for miscellaneous temporary storage during movs
+;;
+;; * s for the current value of an array index
+;;
+;; * d for deltas in loops
+;;
+;; * u is the total number of primes we find
+;;
+;; Unused with no initial values: abefghl
 
 (struct source-code (text lines-count))
 
 (define (comment text)
   (source-code (format "# ~a\n" text) 0))
 
+(define (code-newline)
+  (source-code "\n" 0))
+
 (define (-= a b)
   (when (and (number? b) (< b 0)) ; Just a sanity check; I'm sure I'll make this mistake a few times.
     (error "Cannot use negative number literals! Found ~a" b))
   (source-code (format "~a -= ~a\n" a b) 1))
+
+(define (+= a b #:tmp [tmp 't])
+  (prog (mov-negated tmp b)
+        (-= a tmp)))
 
 ;; Sets the variable to zero. Uses 1 line of code.
 (define (=0 a)
@@ -39,7 +63,7 @@
 
 ;; Sets the variable to the given variable or literal. Uses a third
 ;; variable as temporary storage. Uses 4 lines of code.
-(define (mov a b #:tmp tmp)
+(define (mov a b #:tmp [tmp 't])
   (prog (mov-negated tmp b)
         (mov-negated a tmp)))
 
@@ -52,7 +76,7 @@
 
 ;; Jumps to a relative position later on in the source code
 ;; unconditionally. Uses three lines of code.
-(define (jmp-forward rel #:tmp tmp)
+(define (jmp-forward rel #:tmp [tmp 't])
   (when (<= rel 0)
     (error "Expected positive rel, found ~a" rel))
   (prog (mov-negated tmp rel)
@@ -170,14 +194,45 @@
 (define (print-code code)
   (display (code-text code)))
 
+;; Sieve of Eratosthenes ranges from -50,000,000 up to (and excluding) 0.
+(define sieve-length 50000000)
+
+;; We start storing prime numbers at index 50,000,000.
+(define primes-start-index 50000000)
+
+(define sieve-of-eratosthenes
+  (prog (comment "Sieve of Eratosthenes")
+        (mov-negated 'n primes-start-index) ; Negative of index into primes array
+        (do-for 'k (- sieve-length 2)
+          (mov 'p 'k)
+          (mov-negated 'A 'z))
+        (do-for 'k (- sieve-length 2)
+          (mov 'p 'k)
+          (mov 's 'A)
+          (do-if-positive 's #:comment "If current index is prime"
+            ;; d is the negative of the prime number we're working with right now
+            (mov-negated 'd 'k)
+            (-= 'd sieve-length)
+            ;; Store the prime in the positive side of our array
+            (mov-negated 'p 'n)
+            (mov-negated 'A 'd)
+            (-= 'n 1)
+            ;; Cross out multiples of the index
+            (mov 'm 'k)
+            (do-while-non-positive 'm #:comment "Mark multiples of the index as non-prime"
+              (-= 'm 'd)
+              (mov 'p 'm)
+              (=0 'A))))
+        (comment "Set total prime count")
+        (-= 'u 'n)
+        (-= 'u primes-start-index)
+        (code-newline)))
+
 (define project-euler-187
-  (prog (mov-negated 'e 5)
-        (do-for 'd 100 #:breaker 'b
-          (do-if-positive 'e
-            (output-neg 'e)
-            (output-newline))
-          (-= 'e 'z))
-        (output-neg 7)
-        (output-newline)))
+  (prog
+    sieve-of-eratosthenes
+    (mov 'p primes-start-index)
+    (debug)))
+
 
 (print-code project-euler-187)
