@@ -50,9 +50,11 @@ long* bitmask_to_array(_bool* bits, long size) {
 }
 
 int main() {
-  _bool* primes_bitmask = sieve_of_eratosthenes(LIMIT);
-  long primes_count = count_bits(primes_bitmask, LIMIT);
-  long* primes = bitmask_to_array(primes_bitmask, LIMIT);
+  // Note: We only have to generate primes up to LIMIT / 2, since the
+  // "other" prime we're multiplying by is necessarily at least 2.
+  _bool* primes_bitmask = sieve_of_eratosthenes(LIMIT / 2);
+  long primes_count = count_bits(primes_bitmask, LIMIT / 2);
+  long* primes = bitmask_to_array(primes_bitmask, LIMIT / 2);
   free(primes_bitmask);
   long final_count = 0L;
   for (long i = 0L; i < primes_count; i++) {
