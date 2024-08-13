@@ -66,7 +66,11 @@
 ;; do-while loop that runs at least once, then as long as the variable
 ;; is less than or equal to zero. The variable MUST NOT be `p`. `p` is
 ;; clobbered at the beginning and end of each loop iteration.
-(define (do-while-non-positive var . body)
+;;
+;; If the breaker variable is given, then that variable can be used
+;; with the `do-last` special form inside the loop to abort future
+;; loop iterations.
+(define (do-while-non-positive var #:breaker [breaker-var #f] . body)
   (define (loop-body inner-code-len)
     (prog body
           (mov-negated 'p 'v)
@@ -78,17 +82,26 @@
           (-= 'c 'Z)))
   (let* ([mock-loop-body (loop-body 1)]
          [mock-loop-len (code-length mock-loop-body)])
-    (loop-body mock-loop-len)))
+    (if breaker-var
+        (prog (mov breaker-var mock-loop-len #:tmp 'p)
+              (loop-body breaker-var))
+        (loop-body mock-loop-len))))
 
 ;; Runs for each integer from the negative of the limit up to zero
 ;; (inclusive). The limit must be a positive constant, NOT a variable.
 ;;
 ;; var must not be `p`. Clobbers `p`.
-(define (do-for var limit . body)
+(define (do-for var limit #:breaker [breaker-var #f] . body)
   (prog (mov-negated var limit)
-        (do-while-non-positive var
+        (do-while-non-positive var #:breaker breaker-var
             body
             (-= var 'z))))
+
+;; Break out of a loop using a breaker-var. Note that this does NOT
+;; cancel the current loop iteration but merely stops the loop from
+;; running again.
+(define (do-last breaker-var)
+  (=0 breaker-var))
 
 ;; Runs the condition body IF the variable is positive. var must not
 ;; be `p`. Clobbers `p`.
@@ -145,7 +158,7 @@
 
 (define project-euler-187
   (prog (mov-negated 'e 5)
-        (do-for 'd 100
+        (do-for 'd 100 #:breaker 'b
           (do-if-positive 'e
             (output-neg 'e)
             (output-newline))
