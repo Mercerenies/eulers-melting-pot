@@ -22,17 +22,25 @@
 ;;
 ;; Free-use variables:
 ;;
+;; * a for final accumulated count
+;;
 ;; * k, m, and n for indexing and loops
 ;;
-;; * t for miscellaneous temporary storage during movs
+;; * t for temporary storage during movs
 ;;
-;; * s for the current value of an array index
+;; * g and h for other temporary storage during the multiplication algorithm
+;;
+;; * s and f for the current values of an array index
 ;;
 ;; * d for deltas in loops
 ;;
 ;; * u is the total number of primes we find
 ;;
-;; Unused with no initial values: abefghl
+;; * b and e for breaker variables to get out of loops early
+;;
+;; * l for output of multiplication
+;;
+;; Unused with no initial values: [We used em all :)]
 
 (struct source-code (text lines-count))
 
@@ -130,7 +138,8 @@
 ;; cancel the current loop iteration but merely stops the loop from
 ;; running again.
 (define (do-last breaker-var)
-  (=0 breaker-var))
+  (prog (comment (format "Break loop ~a" breaker-var))
+        (=0 breaker-var)))
 
 ;; Runs the condition body IF the variable is positive. var must not
 ;; be `p`. Clobbers `p`.
@@ -145,6 +154,76 @@
                           (-= 'p 'v)
                           (-= 'c 'Z)
                           body)))))
+
+(define (do-if-positive-else var true-case false-case #:comment [code-comment (format "Do if ~a" var)] #:else-comment [else-comment "Else"])
+  (let ([true-len (code-length true-case)]
+        [false-len (code-length false-case)])
+    (prog (comment code-comment)
+          (indent 2 (prog (mov-negated 'p 'v)
+                          (mov-negated 'Z (+ true-len 3)) ;; + 3 to account for the unconditional forward jump
+                          (=0 'Y)
+                          (=0 'p)
+                          (-= 'p var)
+                          (-= 'p 'v)
+                          (-= 'c 'Z)
+                          true-case
+                          (jmp-forward false-len #:tmp 'p)))
+          (comment else-comment)
+          (indent 2 (prog false-case)))))
+
+;; Takes a variable holding a negative number as input and normalizes
+;; that number to 0 or -1, where -1 indicates that the number was odd
+;; and 0 indicates that it was even. If the number was even, then half
+;; of the number (again, as a negative) is placed in output-var. If
+;; the number was odd, then the value of output-var is undefined.
+(define (calculate-parity var #:output-var output-var #:tmp [tmp 't])
+  (define (simplify-by-multiple n)
+    (prog
+      (do-while-non-positive var
+        (+= var n #:tmp tmp)
+        (-= output-var (/ n 2)))
+      (-= var n)
+      (+= output-var (/ n 2) #:tmp tmp)))
+  (prog (comment "Divide by 2")
+        (=0 output-var)
+        (simplify-by-multiple 1024)
+        (simplify-by-multiple 512)
+        (simplify-by-multiple 256)
+        (simplify-by-multiple 128)
+        (simplify-by-multiple 64)
+        (simplify-by-multiple 32)
+        (simplify-by-multiple 16)
+        (simplify-by-multiple 8)
+        (simplify-by-multiple 4)
+        (simplify-by-multiple 2)))
+
+;; Multiplication algorithm. It is recommended (but not required) that
+;; var-b be the smaller of the two numbers, for performance reasons.
+;;
+;; Both variables shall start out negative. The result shall also be
+;; negative. Clobbers both input vars.
+;;
+;; Uses 't, 'g, 'h as temporaries.
+(define (multiplication-by-repeated-squaring var-a var-b #:output-var output-var)
+  (prog (comment (format "~a = ~a * ~a" output-var var-a var-b))
+        (=0 output-var)
+        (-= var-b 'z) ; Offset by one, since our desired check is 'b <
+                      ; 0' but the while loop check is 'b <= 0'
+        (do-while-non-positive var-b
+          (-= var-b 1)
+          (mov 'g var-b)
+          (calculate-parity 'g #:output-var 'h #:tmp 't)
+          (-= 'g 'z) ; g is now 0 if odd, 1 if even
+          (do-if-positive-else 'g
+            ;; True case (even)
+            (prog (+= var-a var-a #:tmp 't)
+                  (mov var-b 'h))
+            ;; False case (odd)
+            (prog (+= output-var var-a #:tmp 't)
+                  (-= var-b 'z))
+            #:comment (format "If ~a is even" var-b)
+            #:else-comment (format "Else if ~a is odd" var-b))
+          (-= var-b 'z))))
 
 ;; Instruction pointer
 (define pointer 'c)
@@ -228,11 +307,55 @@
         (-= 'u primes-start-index)
         (code-newline)))
 
+;; Counts up semiprimes, storing the final
+(define count-semiprimes
+  (prog (comment "Count Semiprimes")
+        ;; Iterate for k from (-primes_count+1) to 0 inclusive.
+        (mov-negated 'k 'u)
+        (-= 'k 'z)
+        (do-while-non-positive 'k #:breaker 'b #:comment "For k from -u+1 to 0"
+          ;; Get the first prime
+          (mov 'p 'k)
+          (+= 'p 'u)
+          (+= 'p (- primes-start-index 1))
+          (mov 's 'A) ; 's is now the first (and smaller) prime
+
+          ;; DEBUG!!! ;;
+          (output-neg 's)
+          (output-newline)
+
+          (comment "Break loop if s >= 10,000") ; 10,000 = sqrt(100,000,000)
+          (mov 'g 's)
+          (-= 'g 9999)
+          (do-if-positive-else 'g
+            ;; True case
+            (do-last 'b)
+            ;; False case
+            (prog (mov 'm 'k)
+                  (do-while-non-positive 'm #:breaker 'e #:comment "For m from k to 0"
+                    (mov 'p 'm)
+                    (+= 'p 'u)
+                    (+= 'p (- primes-start-index 1))
+                    (mov 'f 'A) ; f is now the second (and larger) prime
+                    (comment "Check if s * f >= 100,000,000")
+                    (multiplication-by-repeated-squaring 'f 's #:output-var 'l)
+                    (-= 'l '99999999)
+                    (do-if-positive-else 'l
+                      ;; True case
+                      (do-last 'e)
+                      ;; False case
+                      (-= 'a 1)
+                      #:comment "If s * f >= 100,000,000")
+                    (-= 'm 'z)))
+             #:comment "If s >= 10,000")
+
+          (-= 'k 'z))))
+
 (define project-euler-187
   (prog
     sieve-of-eratosthenes
-    (mov 'p primes-start-index)
-    (debug)))
-
+    count-semiprimes
+    (output-neg 'a)
+    (output-newline)))
 
 (print-code project-euler-187)
