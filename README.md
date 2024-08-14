@@ -123,6 +123,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * MATL
 * Microsoft Excel
 * Minecraft
+* Minus
 * MontiLang
 * MoonScript
 * Mouse-2002
@@ -1311,6 +1312,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Odin](https://odin-lang.org/)
 * Compiler / Interpreter: [Odin dev-2024-07](https://github.com/odin-lang/Odin/releases/tag/dev-2024-07)
 * Notes: Compiler may require [a patch](https://github.com/odin-lang/Odin/issues/2271#issuecomment-1959009449) on some Linux systems.
+
+### Euler 187
+* File: [problem187.ms](problem187.ms)
+* Language: [Minus](http://www.golfscript.com/minus/index.html)
+* Compiler / Interpreter: [iminus.c](http://www.golfscript.com/minus/files/iminus.c)
+* Notes: A very slow solution, will need to increase the `memsize` constant to compile (`#define mem_size 300000000` is sufficient), code was written with the help of a [Racket translator program](etc/minusgen.rkt).
 
 ## Valid Languages
 

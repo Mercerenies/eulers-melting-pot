@@ -411,7 +411,7 @@
 *** MagiStack                                                          :used:
 *** Math++                                                             :used:
 *** MATL                                                               :used:
-*** Minus (http://www.golfscript.com/)
+*** Minus (http://www.golfscript.com/minus/index.html)                 :used:
 *** MontiLang                                                          :used:
 *** Mornington Crescent (https://esolangs.org/wiki/Mornington_Crescent)
 *** Mouse-2002                                                         :used:

@@ -40,6 +40,8 @@
 ;;
 ;; * l for output of multiplication
 ;;
+;; * y and x (which DO have predefined values but we never use them) for negations of s and f
+;;
 ;; Unused with no initial values: [We used em all :)]
 
 (struct source-code (text lines-count))
@@ -320,10 +322,6 @@
           (+= 'p (- primes-start-index 1))
           (mov 's 'A) ; 's is now the first (and smaller) prime
 
-          ;; DEBUG!!! ;;
-          (output-neg 's)
-          (output-newline)
-
           (comment "Break loop if s >= 10,000") ; 10,000 = sqrt(100,000,000)
           (mov 'g 's)
           (-= 'g 9999)
@@ -338,9 +336,18 @@
                     (+= 'p (- primes-start-index 1))
                     (mov 'f 'A) ; f is now the second (and larger) prime
                     (comment "Check if s * f >= 100,000,000")
-                    (multiplication-by-repeated-squaring 'f 's #:output-var 'l)
-                    (-= 'l '99999999)
-                    (do-if-positive-else 'l
+
+                    ;; f and s are positive; I need them negative.
+                    (mov-negated 'y 's)
+                    (mov-negated 'x 'f)
+
+                    (multiplication-by-repeated-squaring 'x 'y #:output-var 'l)
+
+                    ;; Negate l, since it's negative now and I want it positive.
+                    (mov-negated 'x 'l)
+
+                    (-= 'x 99999999)
+                    (do-if-positive-else 'x
                       ;; True case
                       (do-last 'e)
                       ;; False case
