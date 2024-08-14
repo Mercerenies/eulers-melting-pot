@@ -104,6 +104,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Japt
 * Jasmin
 * Javagony
+* Javagrid
 * Jelly
 * Joy
 * JSF\*\*k
@@ -1319,6 +1320,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Compiler / Interpreter: [iminus.c](http://www.golfscript.com/minus/files/iminus.c)
 * Notes: A very slow solution, will need to increase the `memsize` constant to compile (`#define mem_size 300000000` is sufficient), code was written with the help of a [Racket translator program](etc/minusgen.rkt).
 
+### Euler 188
+* File: [problem188.jgrid](problem188.jgrid)
+* Language: [Javagrid](https://esolangs.org/wiki/Javagrid)
+* Compiler / Interpreter: [The online interpreter](https://stefan-hering.github.io/)
+* Notes: An incredibly slow solution, [this Python script](https://gist.github.com/Mercerenies/7da15bd8663d8ccde11c5b5bb7d22bb3) can be useful for automating insertion into the web UI.
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular,
@@ -1363,6 +1370,7 @@ Currently, the slowest solutions in this repository are:
 * Problem 179 (Whirl) in ~34 minutes
 * Problem 130 (Fourier) in ~26 minutes
 * Problem 96 (Javagony) in ~20 minutes
+* Problem 188 (Javagrid) in ~18 minutes
 
 Currently, the slowest solution in this repository is Problem 130
 (Fourier), which takes roughly 26 minutes. The second slowest is

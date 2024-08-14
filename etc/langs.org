@@ -403,7 +403,7 @@
 *** Inform 7
     + Short List
 *** Japt                                                               :used:
-*** Javagrid (https://esolangs.org/wiki/Javagrid)
+*** Javagrid (https://esolangs.org/wiki/Javagrid)                      :used:
 *** Jelly                                                              :used:
 *** JSF**k                                                             :used:
 *** Labyrinth                                                          :used:
