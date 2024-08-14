@@ -116,7 +116,7 @@ int div2(int b) {
 // usually use for exponents, with a dumb division algorithm
 int even_stupider_multiplication(int a, int b) {
   int result = 0;
-  while (b > 1) {
+  while (b > 0) {
     if (mod2(b) == 0) {
       a += a;
       b = div2(b);
@@ -125,7 +125,6 @@ int even_stupider_multiplication(int a, int b) {
       b -= 1;
     }
   }
-  result += a;
   return result;
 }
 
@@ -170,6 +169,7 @@ int* bitmask_to_array(_bool* bits, int size) {
 }
 
 int main() {
+  printf("%d\n", even_stupider_multiplication(78, 122));
   // Note: We only have to generate primes up to LIMIT / 2, since the
   // "other" prime we're multiplying by is necessarily at least 2.
   _bool* primes_bitmask = sieve_of_eratosthenes(LIMIT / 2);
