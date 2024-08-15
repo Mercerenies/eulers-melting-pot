@@ -138,6 +138,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Objective-C
 * OCaml
 * Odin
+* Oxide
 * Pascal
 * Parrot IR
 * PASM
@@ -1325,6 +1326,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Javagrid](https://esolangs.org/wiki/Javagrid)
 * Compiler / Interpreter: [The online interpreter](https://stefan-hering.github.io/)
 * Notes: An incredibly slow solution, [this Python script](https://gist.github.com/Mercerenies/7da15bd8663d8ccde11c5b5bb7d22bb3) can be useful for automating insertion into the web UI.
+
+### Euler 189
+* File: [problem189.ox](problem189.ox)
+* Language: [Oxide](https://github.com/tuqqu/oxide-lang/tree/master)
+* Compiler / Interpreter: [oxide-lang at 5088a2d](https://github.com/tuqqu/oxide-lang/tree/5088a2d7278608b67114263c42f13e7206e2e338)
+* Notes: A very slow solution.
 
 ## Valid Languages
 
