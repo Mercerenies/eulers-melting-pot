@@ -16,6 +16,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * 11l
 * 42
 * \>\<\>
+* Actually
 * Ada
 * AGSPL
 * ALGOL 68
@@ -1332,6 +1333,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Oxide](https://github.com/tuqqu/oxide-lang/tree/master)
 * Compiler / Interpreter: [oxide-lang at 5088a2d](https://github.com/tuqqu/oxide-lang/tree/5088a2d7278608b67114263c42f13e7206e2e338)
 * Notes: A very slow solution.
+
+### Euler 190
+* File: [problem190.act](problem190.act)
+* Language: [Actually](https://github.com/Mego/Seriously/)
+* Compiler / Interpreter: [TIO Nexus](https://tio.run/#actually)
+* Notes: (None)
 
 ## Valid Languages
 

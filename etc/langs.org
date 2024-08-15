@@ -330,7 +330,7 @@
 *** ><>                                                                :used:
 *** ><>\\.:.
     + Some people can't be trusted with naming rights to languages :)
-*** Actually (https://github.com/Mego/Seriously)
+*** Actually (https://github.com/Mego/Seriously)                       :used:
     + The repo is for Seriously, but the master branch is for the
       successor language Actually.
     + Interpreter is quite slow, unfortunately.
