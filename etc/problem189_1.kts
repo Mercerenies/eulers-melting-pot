@@ -1,9 +1,10 @@
 
-// Naive brute-force colorings in Kotlin. I'm absolutely certain this
-// won't solve the whole problem, but I intend to get some smaller
-// sample data and maybe verify that it's not in OEIS.
+// Same as problem189.kts but without constructing the whole list. We
+// just count values instead.
+//
+// It's https://oeis.org/A166736
 
-object Problem189 {
+object Problem189_1 {
   class Graph<T> {
     private val adjacency: MutableMap<T, MutableSet<T>> = mutableMapOf();
 
@@ -71,36 +72,41 @@ object Problem189 {
     return graph
   }
 
-  // Gets all colorings, without regard to adjacent nodes. Colors
-  // range from 0 up to (and excluding) `colorCount`.
-  fun<T> getAllColorings(graph: Graph<T>, colorCount: Int): List<Map<T, Int>> {
-    val nodes = graph.nodes.toList()
-    val result: ArrayList<Map<T, Int>> = arrayListOf()
-    getAllColoringsRec(graph, colorCount, result, mapOf(), nodes, 0)
-    return result
+  // Colors range from 0 up to (and excluding) `colorCount`.
+  fun countValidColorings(graph: Graph<Coordinate>, colorCount: Int): Int {
+    // Without loss of generality, assume the top triangle has color 0
+    // and the one immediately below it has color 1. Then we'll
+    // multiply the solution count by `colorCount * (colorCount - 1)`
+    // at the end to compensate. This trick assumes that the graph has
+    // at least 2 rows.
+    val nodes = graph.nodes.toList().filter { it != Coordinate(0, 0) && it != Coordinate(1, 1) }
+    val startingColors = mutableMapOf(Coordinate(0, 0) to 0, Coordinate(1, 1) to 1)
+    return countValidColoringsRec(graph, colorCount, startingColors, nodes, 0)
   }
 
-  private fun<T> getAllColoringsRec(graph: Graph<T>, colorCount: Int, acc: MutableList<Map<T, Int>>, coloring: Map<T, Int>, nodes: List<T>, nodesIndex: Int) {
+  private fun countValidColoringsRec(graph: Graph<Coordinate>, colorCount: Int, coloring: MutableMap<Coordinate, Int>, nodes: List<Coordinate>, nodesIndex: Int): Int {
     if (nodesIndex >= nodes.size) {
-      acc.add(coloring)
-      return
+      return 1
     }
+    val currentNode = nodes[nodesIndex]
+    var count = 0
     for (color in 0 until colorCount) {
-      getAllColoringsRec(graph, colorCount, acc, coloring + (nodes[nodesIndex] to color), nodes, nodesIndex + 1)
+      if (graph.getEdges(currentNode).all { coloring[it] != color }) {
+        coloring[currentNode] = color
+        count += countValidColoringsRec(graph, colorCount, coloring, nodes, nodesIndex + 1)
+        coloring.remove(currentNode)
+      }
     }
+    return count
   }
-
-  fun<T> isValid(graph: Graph<T>, coloring: Map<T, Int>): Boolean =
-    graph.edges.all { (from, to) -> coloring[from] != coloring[to] }
 
   fun run() {
-    for (rowCount in 0..3) {
+    for (rowCount in 2..6) {
       val graph = makeGraph(rowCount)
-      val allColorings = getAllColorings(graph, 3)
-      val validColorings = allColorings.filter { isValid(graph, it) }
-      println("rowCount=$rowCount validColorings.size=${validColorings.size}")
+      val coloringsCount = 6 * countValidColorings(graph, 3)
+      println("rowCount=$rowCount coloringsCount=${coloringsCount}")
     }
   }
 }
 
-Problem189.run()
+Problem189_1.run()
