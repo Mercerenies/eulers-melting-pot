@@ -1,7 +1,7 @@
 
 #lang racket
 
-;; Generator for Emotinomicon
+;; Generator for Emoticon
 
 ;; NOTE: No attempt is made to escape the string; it MUST be a valid
 ;; non-emoticon token.
