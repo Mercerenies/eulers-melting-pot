@@ -3,18 +3,20 @@
 // to avoid special cases on the second loop. Just simplifying the
 // code for our target language as much as humanly possible.
 
-const absentOrOnTime = Array(32).fill(0);
-absentOrOnTime[0] = 1; // ???
-absentOrOnTime[1] = 1;
-absentOrOnTime[2] = 2;
-absentOrOnTime[3] = 4;
-for (let i = 4; i < 32; i++) {
+// Same approach as problem191.js, but we pre-allocate the
+// absentOrOnTime cache as an array.
+
+const absentOrOnTime = Array(31).fill(0);
+absentOrOnTime[0] = 1;
+absentOrOnTime[1] = 2;
+absentOrOnTime[2] = 4;
+for (let i = 3; i < 31; i++) {
   absentOrOnTime[i] = absentOrOnTime[i - 1] + absentOrOnTime[i - 2] + absentOrOnTime[i - 3];
 }
 console.log(absentOrOnTime);
 
-let sum = 0;
-for (let latePos = 0; latePos < 31; latePos++) {
-  sum += absentOrOnTime[latePos] * absentOrOnTime[31 - latePos];
+let sum = absentOrOnTime[30];
+for (let latePos = 0; latePos < 15; latePos++) { // Problem is symmetrical: Go to 15 but double each value.
+  sum += 2 * absentOrOnTime[latePos] * absentOrOnTime[29 - latePos];
 }
 console.log(sum);
