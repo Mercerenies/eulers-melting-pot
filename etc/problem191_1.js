@@ -9,6 +9,7 @@ absentOrOnTime[2] = 4;
 for (let i = 3; i < 31; i++) {
   absentOrOnTime[i] = absentOrOnTime[i - 1] + absentOrOnTime[i - 2] + absentOrOnTime[i - 3];
 }
+console.log(absentOrOnTime);
 
 let sum = 0;
 sum += absentOrOnTime[30];
