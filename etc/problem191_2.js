@@ -57,3 +57,6 @@ console.log(sum);
 //
 // 8. Add the two values, and pray that we can find a way to output
 // the number.
+
+// Underload didn't pan out: too slow. Trying Emoticon now, and we'll
+// write the code basically like the above code.

@@ -367,8 +367,9 @@
     + Loops are recursive
     + Short list
 *** Emmental (https://esolangs.org/wiki/Emmental)
+    + Short list
 *** Emoji                                                              :used:
-*** Emoticon
+*** Emoticon                                                           :used:
     Okay, so the PHP interpreter (which, for awhile, was offline) is
     now back online. Unfortunately, there's a new problem. It has a
     hard limit of 10,000 instructions total to be executed during the
@@ -746,3 +747,4 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
     Yeah.
 
 *** Inform 7
+*** Emmental

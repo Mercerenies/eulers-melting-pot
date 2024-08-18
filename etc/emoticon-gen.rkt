@@ -120,6 +120,17 @@
   (program (set-current-list face)
            (word word-value)))
 
+(define face-garbage ":-G") ; Used only for pop-right
+
+;; Pop rightmost of list (this is the easiest way I can see to do it...)
+(define (pop-right face)
+  (program (set-current-list face)
+           (move-right-curr-to face-garbage)
+           (set-current-list face-empty)
+           (assign-curr-to face-garbage)))
+
+;;; PROJECT EULER 181 ATTEMPT - FAILED ;;;
+
 (define face-storage-array "|8") ; Stores our data array
 (define face-40 ":.") ; Stores the constant 40
 (define face-60 ":,") ; Stores the constant 60
@@ -131,15 +142,6 @@
 (define face-black-left "8^-")
 
 (define face-temporary "::") ; Miscellaneous temporary storage
-
-(define face-garbage ":-G") ; Used only for pop-right
-
-;; Pop rightmost of list (this is the easiest way I can see to do it...)
-(define (pop-right face)
-  (program (set-current-list face)
-           (move-right-curr-to face-garbage)
-           (set-current-list face-empty)
-           (assign-curr-to face-garbage)))
 
 (define project-euler-181
   (program ;; Initialize constants
@@ -159,4 +161,52 @@
            (word 100)
            (print-and-pop-left ":::::")))
 
-(displayln project-euler-181)
+;;; END PROJECT EULER 181 ATTEMPT ;;;
+
+;;; PROJECT EULER 191 ATTEMPT ;;;
+
+(define face-main-array "|8") ; Stores our data array
+
+(define face-loop-index ":.")
+(define face-loop-bound ":..")
+(define face-sum "8S")
+(define face-one "1-") ; Stores the number 1.
+(define face-two "2-") ; Stores the number 2.
+
+(define project-euler-191
+  (program ;; Initialize main data array
+           (push-right face-one 1)
+           (push-right face-two 2)
+           (set-current-list face-main-array)
+           (word 1)
+           (word 2)
+           (word 4)
+           (push-right face-loop-bound 30)
+           (push-right face-loop-index 3)
+           (for-loop face-loop-index face-loop-bound
+             (set-current-list face-main-array)
+             (assign-curr-to face-default)
+             (maths-right "+" face-default)
+             (maths-right "+" face-default)
+             (set-current-list face-default)
+             (move-right-curr-to face-main-array))
+           (set-current-list face-main-array)
+           (move-right-curr-to face-sum)
+           (push-right face-loop-bound 14)
+           (push-right face-loop-index 0)
+           (for-loop face-loop-index face-loop-bound
+             (set-current-list face-one)
+             (rotate face-main-array)
+             (set-current-list face-main-array)
+             (move-left-curr-to face-sum)
+             (move-left-curr-to face-sum)
+             (maths-left "x" face-sum)
+             (set-current-list face-two)
+             (copy-left-curr-to face-sum)
+             (maths-left "x" face-sum)
+             (maths-left "+" face-sum))
+           (print-left face-sum)))
+
+;;; END PROJECT EULER 191 ATTEMPT ;;;
+
+(displayln project-euler-191)

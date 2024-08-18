@@ -66,6 +66,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * ELisp
 * Elixir
 * Emoji
+* Emoticon
 * Emotinomicon
 * Enchilada
 * Erlang
@@ -1338,6 +1339,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem190.act](problem190.act)
 * Language: [Actually](https://github.com/Mego/Seriously/)
 * Compiler / Interpreter: [TIO Nexus](https://tio.run/#actually)
+* Notes: (None)
+
+### Euler 191
+* File: [problem191.emot](problem191.emot)
+* Language: [Emoticon](https://esolangs.org/wiki/Emoticon)
+* Compiler / Interpreter: [teuton.org](https://www.teuton.org/~stranger/code/emoticon/interpreter.php)
 * Notes: (None)
 
 ## Valid Languages
