@@ -73,6 +73,7 @@
 *** AWK                                                                :used:
 *** Bizubee (https://bizubee.github.io/)
 *** C3 (https://c3-lang.org/primer/)
+*** Catspeak (https://www.katsaii.com/catspeak-lang/3.1.1/hom-welcome.html)
 *** COBOL                                                              :used:
 *** Delphi (https://en.wikipedia.org/wiki/Delphi_(software))
     + Verify that this is different enough from Pascal to warrant its
@@ -361,6 +362,7 @@
     + Interpreter is very slow
     + Use the Docker implementation
     + Dictionaries are mutable, no arrays (only linked lists)
+*** CPound (https://github.com/4o4hasfound/CPound-language)
 *** Cubix                                                              :used:
 *** Cy (https://github.com/cyoce/Cy)
 *** ed                                                                 :used:
@@ -644,6 +646,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Konna (https://www.reddit.com/r/ProgrammingLanguages/comments/rpe65y/konna_my_programming_language/)
 *** Lava (https://lavape.sourceforge.net/)
 *** Logtalk (https://logtalk.org/)
+*** Logoi (https://github.com/Logoi-Linguistics/Logoi-Linguistics)
 *** Luau (https://github.com/luau-lang/luau)
     Further research needed: Is this different enough from Lua to
     warrant its own entry?
