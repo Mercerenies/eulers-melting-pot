@@ -1,0 +1,116 @@
+
+import Math;
+import BigInt;
+
+const LIMIT = 1000000000000;
+
+class FiniteFrac {
+    init(var seq) {
+        this.index = seq.len() - 1;
+    }
+
+    next() {
+        if (this.index >= 1) {
+            this.index -= 1;
+            return this.seq[this.index + 1];
+        } else {
+            return nil;
+        }
+    }
+}
+
+class SqrtConvergentState {
+    init(var n) {
+        this.a0 = Math.floor(Math.sqrt(n));
+        this.a = this.a0;
+        this.r = 0;
+        this.s = 1;
+    }
+
+    next() {
+        var lastA = this.a;
+        this.r = this.a * this.s - this.r;
+        this.s = Math.floor((this.n - this.r * this.r) / this.s);
+        this.a = Math.floor((this.a0 + this.r) / this.s);
+        return lastA;
+    }
+}
+
+def cmp(a, b) {
+    var mult = 1;
+    while {
+        var aTerm = a.next();
+        var bTerm = b.next();
+        if (aTerm == nil) {
+            return mult;
+        }
+        if (bTerm == nil) {
+            return - mult;
+        }
+        if (aTerm != bTerm) {
+            return mult * (aTerm - bTerm);
+        }
+        mult *= -1;
+    }
+}
+
+def realize(convergent) {
+    var numer = convergent[-1];
+    var denom = 1;
+    for (var i = convergent.len() - 2; i >= 0; i -= 1) {
+        var curr = convergent[i];
+        var newNumer = curr * numer + denom;
+        var newDenom = numer;
+        // Note: No need to divide by gcd here. If numer and
+        // denom are coprime, then numer and (denom + X * numer)
+        // are also coprime.
+        numer = newNumer;
+        denom = newDenom;
+    }
+    return denom;
+}
+
+def generateLastConvergent(n) {
+    var convergent = [];
+    var state = SqrtConvergentState(n);
+    convergent.push(state.a);
+    while (realize(convergent) <= LIMIT) {
+        state.next();
+        convergent.push(state.a);
+    }
+    return [convergent, state];
+}
+
+def findBest(n) {
+    var tmp = generateLastConvergent(n);
+    var convergent = tmp[0];
+    var state = tmp[1];
+    var originalA = convergent[-1];
+    while (2 * convergent[-1] >= originalA) {
+        var value = realize(convergent);
+        if (2 * convergent[-1] == originalA) {
+            // Corner case for even convergents.
+            convergent[-1] = originalA;
+            var lhs = FiniteFrac(convergent);
+            if ((cmp(lhs, state) > 0) and (value <= LIMIT)) {
+                return value;
+            }
+            break;
+        }
+        if (value <= LIMIT) {
+            return value;
+        }
+        convergent[-1] -= 1;
+    }
+    convergent.pop();
+    return realize(convergent);
+}
+
+var sum = BigInt.new().unwrap();
+for (var n = 2; n <= 100000; n += 1) {
+    var a0 = Math.floor(Math.sqrt(n));
+    if (a0 * a0 != n) {
+        sum = sum.add(BigInt.new(findBest(n).toString()).unwrap()).unwrap();
+    }
+}
+print(sum);

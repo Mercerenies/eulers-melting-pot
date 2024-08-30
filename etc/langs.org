@@ -27,6 +27,7 @@
 *** Mython (https://mython.org/)
 *** OCaml                                                              :used:
 *** Perl
+*** Purescript
 *** Python
 *** Raku (Perl 6)
 *** Ruby
@@ -78,6 +79,7 @@
 *** Delphi (https://en.wikipedia.org/wiki/Delphi_(software))
     + Verify that this is different enough from Pascal to warrant its
       own slot.
+*** Dictu (https://github.com/dictu-lang/Dictu)                        :used:
 *** Dylan                                                              :used:
 *** Earl Grey                                                          :used:
 *** Eiffel                                                             :used:
@@ -160,11 +162,9 @@
     + No arrays
 *** 🆒                                                                 :used:
 *** Dafny                                                              :used:
-*** Dale (https://github.com/tomhrr/dale)
 *** Dhall (https://dhall-lang.org/#)                                   :used:
     + Subturing, loops must be finitely bounded
     + Loops only available via map, fold, etc.
-*** Dictu (https://github.com/dictu-lang/Dictu)
 *** Dip                                                                :used:
 *** Dogescript                                                         :used:
 *** Dry                                                                :used:
@@ -534,6 +534,9 @@
 *** Curl (https://www.curl.com/products/prod/language/)
     No publicly-available interpreter. The only available interpreter
     is blocked behind a survey-wall.
+*** Dale (https://github.com/tomhrr/dale)
+    Compiler on GitHub segfaults on the "Hello world" program, and I
+    don't see any available online-only interpreters.
 *** Ė (https://e-dot.io/)
     Website doesn't exist anymore. I can access it on the Wayback
     Machine, but the online interpreter is broken. If there was a
@@ -630,6 +633,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Crystal
 *** Dart
 *** E
+*** Eff (https://www.eff-lang.org/)
 *** EGL
 *** Euler
 *** F' (https://nasa.github.io/fprime/)
@@ -640,9 +644,11 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Gluon
 *** Hare (https://harelang.org/)
 *** Husk (https://github.com/barbuz/Husk)
+*** Hylo (http://github.com/hylo-lang/hylo)
 *** I (https://aplwiki.com/wiki/I)
 *** IMP (https://en.wikipedia.org/wiki/IMP_(programming_language))
 *** jq (https://stedolan.github.io/jq/)
+*** Koka (https://koka-lang.github.io/koka/doc/index.html)
 *** Konna (https://www.reddit.com/r/ProgrammingLanguages/comments/rpe65y/konna_my_programming_language/)
 *** Lava (https://lavape.sourceforge.net/)
 *** Logtalk (https://logtalk.org/)

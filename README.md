@@ -56,6 +56,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * D
 * Dafny
 * Dhall
+* Dictu
 * Dip
 * Dogescript
 * Dry
@@ -1345,6 +1346,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem191.emot](problem191.emot)
 * Language: [Emoticon](https://esolangs.org/wiki/Emoticon)
 * Compiler / Interpreter: [teuton.org](https://www.teuton.org/~stranger/code/emoticon/interpreter.php)
+* Notes: (None)
+
+### Euler 192
+* File: [problem192.du](problem192.du)
+* Language: [Dictu](https://dictu-lang.com/)
+* Compiler / Interpreter: [dictu-lang @ e43580d2](https://github.com/dictu-lang/Dictu/tree/e43580d2e1660d0215651dc94da98ae75d372a98)
 * Notes: (None)
 
 ## Valid Languages
