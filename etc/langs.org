@@ -59,7 +59,9 @@
 *** Go                                                                 :used:
 *** PHP
 *** Pizza                                                              :used:
+*** PythonQL (https://github.com/pythonql/pythonql)
 *** Rhombus (https://docs.racket-lang.org/rhombus/index.html)
+*** Sweet.js (https://www.sweetjs.org/)
 ** SILVER
    Silver languages are perfectly capable languages to solve any
    challenge, but I do not consider myself fluent in them. "Silver" is
@@ -73,6 +75,7 @@
       (~setTempRet0~) that probably doesn't work for us.
 *** AWK                                                                :used:
 *** Bizubee (https://bizubee.github.io/)
+*** Boo (https://boo-language.github.io/)
 *** C3 (https://c3-lang.org/primer/)
 *** Catspeak (https://www.katsaii.com/catspeak-lang/3.1.1/hom-welcome.html)
 *** COBOL                                                              :used:
@@ -145,6 +148,7 @@
 *** Agda                                                               :used:
 *** Alice (https://en.wikipedia.org/wiki/Alice_(software))
 *** Alloy (https://alloytools.org/)
+*** Amrit (https://github.com/Suryansh-23/amrit)
 *** APL                                                                :used:
 *** ATS (https://www.cs.bu.edu/~hwxi/atslangweb/)
 *** Attache (https://github.com/ConorOBrien-Foxx/Attache)
@@ -154,9 +158,11 @@
 *** bc                                                                 :used:
 *** BeanShell                                                          :used:
 *** BQN (https://mlochbaum.github.io/BQN/)
+*** Callisto (https://callisto.mesyeti.uk/)
 *** Cat (https://github.com/cdiggins/cat-language)
     + No arrays
 *** Claro (https://docs.clarolang.com/)
+*** Clean (https://clean.cs.ru.nl/Clean)
 *** ColdFusion (https://en.wikipedia.org/wiki/ColdFusion_Markup_Language)
 *** Container (https://github.com/odddollar/Container-lang)
     + No arrays
@@ -274,6 +280,7 @@
 *** Zsh                                                                :used:
 ** BASIC
    BASIC dialects.
+*** BaCon (http://basic-converter.org/)
 *** Chipmunk BASIC
 *** Commodore BASIC
 *** JustBASIC                                                          :used:
@@ -349,6 +356,7 @@
     + 32-bit integers
 *** Befunge                                                            :used:
 *** Befunk                                                             :used:
+*** Brachylog (https://github.com/JCumin/Brachylog)
 *** Brainf**k                                                          :used:
 *** Broccoli (https://github.com/mathieucaroff/broccoli)               :used:
 *** Burlesque (https://esolangs.org/wiki/Burlesque)                    :used:
@@ -403,6 +411,7 @@
 *** Hanabi                                                             :used:
 *** hello, world! (https://github.com/histocrat/hello_world)
 *** Hexagony                                                           :used:
+*** Husk (https://github.com/barbuz/Husk)
 *** Inform 7
     + Short List
 *** Japt                                                               :used:
@@ -553,6 +562,11 @@
     than look vaguely snazzy.
 *** Enterprise
     Could not run due to language-imposed restrictions.
+*** F' (https://nasa.github.io/fprime/)
+    Is really just a big C++ framework together with... I think a
+    build automation tool? Not a new language and doesn't have any
+    interesting syntax/semantics, so it wouldn't be fair to call it a
+    new language.
 *** GridScript
     [[https://esolangs.org/wiki/GridScript][Unimplemented]]
 *** Inca
@@ -616,18 +630,13 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Whython (https://www.pxeger.com/2021-09-19-hacking-on-cpython/)
     Unimplemented
 ** UNCLASSIFIED
-*** BaCon (http://basic-converter.org/)
-*** Boo (https://boo-language.github.io/)
-*** Brachylog
 *** Bracmat (https://github.com/BartJongejan/Bracmat)
-*** Callisto (https://callisto.mesyeti.uk/)
 *** CandleScript
 *** Catln (https://catln.dev/)
 *** CDuce (http://www.cduce.org/)
 *** Cecil
 *** Charm++ (https://en.wikipedia.org/wiki/Charm%2B%2B)
 *** ChronLang (https://github.com/DeLuxe-1337/ChronLang)
-*** Clean
 *** Coco (https://rosettacode.org/wiki/Category:Coco)
 *** Cubically (https://github.com/aaronryank/cubically)
 *** Crystal
@@ -635,15 +644,13 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** E
 *** Eff (https://www.eff-lang.org/)
 *** EGL
-*** Euler
-*** F' (https://nasa.github.io/fprime/)
+*** Euler (https://en.wikipedia.org/wiki/Euler_(programming_language))
 *** Fancy
 *** Fission
 *** Flora (https://flora.sourceforge.net/)
 *** Genesis (https://github.com/elonlit/Genesis)
 *** Gluon
 *** Hare (https://harelang.org/)
-*** Husk (https://github.com/barbuz/Husk)
 *** Hylo (http://github.com/hylo-lang/hylo)
 *** I (https://aplwiki.com/wiki/I)
 *** IMP (https://en.wikipedia.org/wiki/IMP_(programming_language))
@@ -681,7 +688,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Speedie (https://github.com/gamblevore/speedie/)
 *** Squirrel
 *** SuperForth (https://github.com/TheRealMichaelWang/superforth)
-*** Sweet.js
+*** Symbolverse (https://github.com/tearflake/symbolverse)
 *** Unison (https://www.unison-lang.org/)
 *** Universal Lambda (http://www.golfscript.com/)
 *** Verse (https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference)
