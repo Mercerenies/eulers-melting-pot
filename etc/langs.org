@@ -32,7 +32,7 @@
 *** Raku (Perl 6)
 *** Ruby
 *** Rust                                                               :used:
-*** Sage
+*** SageMath (https://www.sagemath.org/)
 *** Scala
 *** Tcl                                                                :used:
 *** Typescript                                                         :used:
@@ -119,6 +119,7 @@
 *** R
 *** Rebol                                                              :used:
 *** Red (https://www.red-lang.org/)
+*** Sage (https://adam-mcdaniel.github.io/sage-website/)
 *** Self
 *** Simula (https://en.wikipedia.org/wiki/Simula)
 *** Skib-Lang (https://github.com/AlexanderMeade/Skib-Lang)
@@ -157,6 +158,7 @@
     + Windows only
 *** bc                                                                 :used:
 *** BeanShell                                                          :used:
+*** Bimble (https://github.com/vstartups/bimble?tab=readme-ov-file)
 *** BQN (https://mlochbaum.github.io/BQN/)
 *** Callisto (https://callisto.mesyeti.uk/)
 *** Cat (https://github.com/cdiggins/cat-language)
@@ -178,6 +180,7 @@
 *** Egison (https://www.egison.org/)
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
 *** F*
+*** Fōrmulæ (https://formulae.org/)
 *** G-- (https://github.com/ReyAnthony/G--)
 *** GAP
 *** Genie                                                              :used:
@@ -196,6 +199,8 @@
 *** Kitten                                                             :used:
     + 64-bit integers (no bignums)
 *** Kobalt (https://github.com/abel0b/kobalt)
+    + Basically non-existent documentation, but from the limited
+      examples, looks like an ML dialect.
 *** K                                                                  :used:
     + No bignums
 *** λProlog
@@ -209,6 +214,7 @@
     + Arrays are immutable
 *** Make                                                               :used:
 *** Nial (https://www.nial-array-language.org/)
+    + Array-based, so array mutation is tricky.
 *** Nit                                                                :used:
 *** Oasis (https://github.com/oasis-lang/)                             :used:
     + Have to run as Jar; ~gradle run~ command is broken.
@@ -644,6 +650,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** E
 *** Eff (https://www.eff-lang.org/)
 *** EGL
+*** Eta (https://eta-lang.org/)
 *** Euler (https://en.wikipedia.org/wiki/Euler_(programming_language))
 *** Fancy
 *** Fission
@@ -682,6 +689,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Reason (https://reasonml.github.io/)
 *** Ring (https://ring-lang.github.io/doc1.20/index.html)
 *** Seph (https://github.com/seph-lang/seph)
+*** Skew (https://github.com/evanw/skew)
 *** Skript (https://docs.skriptlang.org/)
 *** smodels (http://www.tcs.hut.fi/Software/smodels/)
 *** Snails
@@ -695,6 +703,8 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** VHDL
 *** Vortex (https://github.com/dibsonthis/Vortex)
 *** Vyxal (https://github.com/Vyxal/Vyxal)
+*** Wisp (http://hg.sr.ht/~arnebab/wisp)
+*** Wisp (https://github.com/adam-mcdaniel/wisp)
 *** XQuery
 *** XY (http://www.nsl.com/k/xy/xy.htm)
 *** Yuescript
