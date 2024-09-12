@@ -1277,7 +1277,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Notes: An incredibly slow solution, code was written with the help of a [Racket translator program](https://github.com/Mercerenies/whirlgen).
 
 ### Euler 180
-* File: [problem180.py](problem180.py)
+* File: [problem180.pyf](problem180.pyf)
 * Language: [Pyf\*\*ck](https://github.com/wanqizhu/pyfuck)
 * Compiler / Interpreter: [Python 3.11.6](https://www.python.org/downloads/)
 * Notes: Code was generated with the help of the creator's [translation tool](https://github.com/wanqizhu/pyfuck/blob/master/pyfuck.py).
