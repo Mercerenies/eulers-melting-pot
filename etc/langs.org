@@ -316,6 +316,7 @@
 *** LFE (Lisp Flavored Erlang)
 *** Maclisp
 *** NewLISP
+*** Owl (https://gitlab.com/owl-lisp/owl)
 *** Racket
 *** RainLisp (https://github.com/chr1st0scli/RainLisp)
 *** Scheme
@@ -645,8 +646,11 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** ChronLang (https://github.com/DeLuxe-1337/ChronLang)
 *** Coco (https://rosettacode.org/wiki/Category:Coco)
 *** Cubically (https://github.com/aaronryank/cubically)
+*** Cricket (https://github.com/RyanBrewer317/cricket_rs)
 *** Crystal
 *** Dart
+*** DreamBerd (https://github.com/TodePond/DreamBerd)
+    + Implementation is https://github.com/vivaansinghvi07/dreamberd-interpreter/
 *** E
 *** Eff (https://www.eff-lang.org/)
 *** EGL
@@ -670,6 +674,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Luau (https://github.com/luau-lang/luau)
     Further research needed: Is this different enough from Lua to
     warrant its own entry?
+*** Maml (https://github.com/k-kahora/Maml)
 *** Monte (https://github.com/monte-language/monte)
 *** Mojo (https://www.modular.com/mojo)
 *** Nibbles (http://www.golfscript.com/)
@@ -756,6 +761,8 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
      - https://repl.it/
    + IDEOne
      - https://ideone.com/
+   + RyuGod
+     - https://www.ryugod.com/pages/ide/bash
 ** OTHER USEFUL LINKS
    + https://www.alpertron.com.ar/QUAD.HTM
 * SHORT LIST
