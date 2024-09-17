@@ -134,6 +134,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * NASM
 * naz
 * Nemerle
+* Nial
 * Nim
 * Nit
 * Oasis
@@ -1353,6 +1354,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Dictu](https://dictu-lang.com/)
 * Compiler / Interpreter: [dictu-lang @ e43580d2](https://github.com/dictu-lang/Dictu/tree/e43580d2e1660d0215651dc94da98ae75d372a98)
 * Notes: (None)
+
+### Euler 193
+* File: [problem193.ndf](problem193.ndf)
+* Language: [Nial](https://www.nial-array-language.org/)
+* Compiler / Interpreter: [Q'Nial V7.0 Aug 29 2019](https://www.nial-array-language.org/download/)
+* Notes: A very slow solution, load the source file with `-defs` then run `main` in the interactive REPL.
 
 ## Valid Languages
 

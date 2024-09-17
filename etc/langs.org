@@ -216,7 +216,7 @@
 *** Magpie (https://www.magpie-lang.org/)
     + Arrays are immutable
 *** Make                                                               :used:
-*** Nial (https://www.nial-array-language.org/)
+*** Nial (https://www.nial-array-language.org/)                        :used:
     + Array-based, so array mutation is tricky.
 *** Nit                                                                :used:
 *** Oasis (https://github.com/oasis-lang/)                             :used:
