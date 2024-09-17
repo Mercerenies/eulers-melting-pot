@@ -169,6 +169,9 @@
 *** Container (https://github.com/odddollar/Container-lang)
     + No arrays
 *** 🆒                                                                 :used:
+*** Cyclone (http://cyclone.thelanguage.org/)
+    + Lookts like there's a VirtualBox VM that runs it. It's an
+      ancient language and not maintained anymore.
 *** Dafny                                                              :used:
 *** Dhall (https://dhall-lang.org/#)                                   :used:
     + Subturing, loops must be finitely bounded
