@@ -169,9 +169,9 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Seriously
 * Shakespeare
 * Smalltalk
-* SML
 * SNOBOL
 * Snowman
+* Standard ML
 * Stuck
 * SuperCollider
 * Swift
@@ -384,8 +384,8 @@ alphabetized list of the languages that have been used in these challenges so fa
 
 ### Euler 31
 * File: [problem31.sml](problem31.sml)
-* Language: [SML](https://en.wikipedia.org/wiki/Standard_ML)
-* Compiler / Interpreter: [tutorialspoint.com](http://www.tutorialspoint.com/execute_smlnj_online.php)
+* Language: [Standard ML](https://en.wikipedia.org/wiki/Standard_ML)
+* Compiler / Interpreter: [TIO Nexus](https://tio.run/#sml-mlton)
 * Notes: (None)
 
 ### Euler 32
