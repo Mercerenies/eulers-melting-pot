@@ -346,7 +346,7 @@
 *** 05AB1E                                                             :used:
 *** 1.1                                                                :used:
 *** ><>                                                                :used:
-*** ><>\\.:.
+*** ><>\\.:.                                                           :used:
     + Some people can't be trusted with naming rights to languages :)
 *** Actually (https://github.com/Mego/Seriously)                       :used:
     + The repo is for Seriously, but the master branch is for the

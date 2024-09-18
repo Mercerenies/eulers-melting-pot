@@ -16,6 +16,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * 11l
 * 42
 * \>\<\>
+* \>\<\>\\\\.:.
 * Actually
 * Ada
 * AGSPL
@@ -1360,6 +1361,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Nial](https://www.nial-array-language.org/)
 * Compiler / Interpreter: [Q'Nial V7.0 Aug 29 2019](https://www.nial-array-language.org/download/)
 * Notes: A very slow solution, load the source file with `-defs` then run `main` in the interactive REPL.
+
+### Euler 194
+* File: [problem194.fishchips](problem194.fishchips)
+* Language: [* \>\<\>\\\\.:.](https://esolangs.org/wiki/Fish_Chips_and_Mushy_Peas)
+* Compiler / Interpreter: [FishChipsAndMushyPeas @ 52ca7307](https://github.com/More-Wrong/FishChipsAndMushyPeas/tree/52ca73077fcbff7ce279d55a9c15f3962028c152)
+* Notes: (None)
 
 ## Valid Languages
 
