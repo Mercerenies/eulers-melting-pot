@@ -27,11 +27,12 @@
 *** Mython (https://mython.org/)
 *** OCaml                                                              :used:
 *** Perl
+*** Purescript
 *** Python
 *** Raku (Perl 6)
 *** Ruby
 *** Rust                                                               :used:
-*** Sage
+*** SageMath (https://www.sagemath.org/)
 *** Scala
 *** Tcl                                                                :used:
 *** Typescript                                                         :used:
@@ -58,7 +59,9 @@
 *** Go                                                                 :used:
 *** PHP
 *** Pizza                                                              :used:
+*** PythonQL (https://github.com/pythonql/pythonql)
 *** Rhombus (https://docs.racket-lang.org/rhombus/index.html)
+*** Sweet.js (https://www.sweetjs.org/)
 ** SILVER
    Silver languages are perfectly capable languages to solve any
    challenge, but I do not consider myself fluent in them. "Silver" is
@@ -72,12 +75,15 @@
       (~setTempRet0~) that probably doesn't work for us.
 *** AWK                                                                :used:
 *** Bizubee (https://bizubee.github.io/)
+*** Boo (https://boo-language.github.io/)
 *** Borgo (https://github.com/borgo-lang/borgo)
 *** C3 (https://c3-lang.org/primer/)
+*** Catspeak (https://www.katsaii.com/catspeak-lang/3.1.1/hom-welcome.html)
 *** COBOL                                                              :used:
 *** Delphi (https://en.wikipedia.org/wiki/Delphi_(software))
     + Verify that this is different enough from Pascal to warrant its
       own slot.
+*** Dictu (https://github.com/dictu-lang/Dictu)                        :used:
 *** Dylan                                                              :used:
 *** Earl Grey                                                          :used:
 *** Eiffel                                                             :used:
@@ -95,6 +101,7 @@
 *** Icon                                                               :used:
 *** Io                                                                 :used:
 *** Ioke                                                               :used:
+*** Koi (https://koi-lang.dev/)
 *** Livescript (https://livescript.net/)
 *** Lunar (https://github.com/lunarlang/lunar)
 *** Maple
@@ -107,11 +114,13 @@
 *** Nim                                                                :used:
 *** Oberon-07                                                          :used:
 *** Objective-C                                                        :used:
+*** Oxide (https://github.com/tuqqu/oxide-lang)                        :used:
 *** Pascal                                                             :used:
 *** Pyret (https://pyret.org/index.html)
 *** R
 *** Rebol                                                              :used:
 *** Red (https://www.red-lang.org/)
+*** Sage (https://adam-mcdaniel.github.io/sage-website/)
 *** Self
 *** Simula (https://en.wikipedia.org/wiki/Simula)
 *** Skib-Lang (https://github.com/AlexanderMeade/Skib-Lang)
@@ -136,11 +145,12 @@
    Silver language.
 *** 11l (http://rosettacode.org/wiki/Category:11l)                     :used:
     + Dictionaries / sets / advanced data structures are flaky
-*** 42 (https://forty2.is/)
+*** 42 (https://forty2.is/)                                            :used:
 *** ABAP (https://en.wikipedia.org/wiki/ABAP)
 *** Agda                                                               :used:
 *** Alice (https://en.wikipedia.org/wiki/Alice_(software))
 *** Alloy (https://alloytools.org/)
+*** Amrit (https://github.com/Suryansh-23/amrit)
 *** APL                                                                :used:
 *** ATS (https://www.cs.bu.edu/~hwxi/atslangweb/)
 *** Attache (https://github.com/ConorOBrien-Foxx/Attache)
@@ -149,19 +159,24 @@
     + Windows only
 *** bc                                                                 :used:
 *** BeanShell                                                          :used:
+*** Bimble (https://github.com/vstartups/bimble?tab=readme-ov-file)
 *** BQN (https://mlochbaum.github.io/BQN/)
+*** Callisto (https://callisto.mesyeti.uk/)
 *** Cat (https://github.com/cdiggins/cat-language)
     + No arrays
 *** Claro (https://docs.clarolang.com/)
+*** Clean (https://clean.cs.ru.nl/Clean)
 *** ColdFusion (https://en.wikipedia.org/wiki/ColdFusion_Markup_Language)
 *** Container (https://github.com/odddollar/Container-lang)
     + No arrays
 *** 🆒                                                                 :used:
+*** Cyclone (http://cyclone.thelanguage.org/)
+    + Lookts like there's a VirtualBox VM that runs it. It's an
+      ancient language and not maintained anymore.
 *** Dafny                                                              :used:
 *** Dhall (https://dhall-lang.org/#)                                   :used:
     + Subturing, loops must be finitely bounded
     + Loops only available via map, fold, etc.
-*** Dictu (https://github.com/dictu-lang/Dictu)
 *** Dip                                                                :used:
 *** Dogescript                                                         :used:
 *** Dry                                                                :used:
@@ -169,6 +184,7 @@
 *** Egison (https://www.egison.org/)
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
 *** F*
+*** Fōrmulæ (https://formulae.org/)
 *** G-- (https://github.com/ReyAnthony/G--)
 *** GAP
 *** Genie                                                              :used:
@@ -187,6 +203,8 @@
 *** Kitten                                                             :used:
     + 64-bit integers (no bignums)
 *** Kobalt (https://github.com/abel0b/kobalt)
+    + Basically non-existent documentation, but from the limited
+      examples, looks like an ML dialect.
 *** K                                                                  :used:
     + No bignums
 *** λProlog
@@ -199,10 +217,12 @@
 *** Magpie (https://www.magpie-lang.org/)
     + Arrays are immutable
 *** Make                                                               :used:
+*** Nial (https://www.nial-array-language.org/)                        :used:
+    + Array-based, so array mutation is tricky.
 *** Nit                                                                :used:
 *** Oasis (https://github.com/oasis-lang/)                             :used:
     + Have to run as Jar; ~gradle run~ command is broken.
-*** Odin (https://odin-lang.org/docs/)
+*** Odin (https://odin-lang.org/docs/)                                 :used:
 *** Picat                                                              :used:
 *** Pike                                                               :used:
 *** Pikelet
@@ -218,6 +238,7 @@
 *** S (https://en.wikipedia.org/wiki/S_(programming_language))
 *** Scratch                                                            :used:
 *** sed                                                                :used:
+*** SLOBIL (https://www.reddit.com/r/ProgrammingLanguages/comments/1atnmbk/slobil_slot_and_object_based_interactive_language/)
 *** SNOBOL                                                             :used:
 *** Stacked (https://github.com/ConorOBrien-Foxx/stacked)
 *** Streem
@@ -229,6 +250,7 @@
 *** Uiua (https://www.uiua.org/)
 *** Vala                                                               :used:
 *** Vale (https://vale.dev/)                                           :used:
+*** Vale (https://github.com/project-everest/vale)
 *** Vimscript
 *** Wenyan                                                             :used:
 *** Whiley (https://en.wikipedia.org/wiki/Whiley_(programming_language))
@@ -268,6 +290,7 @@
 *** Zsh                                                                :used:
 ** BASIC
    BASIC dialects.
+*** BaCon (http://basic-converter.org/)
 *** Chipmunk BASIC
 *** Commodore BASIC
 *** JustBASIC                                                          :used:
@@ -297,6 +320,7 @@
 *** LFE (Lisp Flavored Erlang)
 *** Maclisp
 *** NewLISP
+*** Owl (https://gitlab.com/owl-lisp/owl)
 *** Racket
 *** RainLisp (https://github.com/chr1st0scli/RainLisp)
 *** Scheme
@@ -323,6 +347,12 @@
 *** 05AB1E                                                             :used:
 *** 1.1                                                                :used:
 *** ><>                                                                :used:
+*** ><>\\.:.                                                           :used:
+    + Some people can't be trusted with naming rights to languages :)
+*** Actually (https://github.com/Mego/Seriously)                       :used:
+    + The repo is for Seriously, but the master branch is for the
+      successor language Actually.
+    + Interpreter is quite slow, unfortunately.
 *** AGSPL (https://esolangs.org/wiki/AGSPL)                            :used:
 *** Alice (m-ender)                                                    :used:
 *** Anti-Array                                                         :used:
@@ -337,6 +367,7 @@
     + 32-bit integers
 *** Befunge                                                            :used:
 *** Befunk                                                             :used:
+*** Brachylog (https://github.com/JCumin/Brachylog)
 *** Brainf**k                                                          :used:
 *** Broccoli (https://github.com/mathieucaroff/broccoli)               :used:
 *** Burlesque (https://esolangs.org/wiki/Burlesque)                    :used:
@@ -347,14 +378,19 @@
 *** Comefrom0x10 (https://esolangs.org/wiki/Comefrom0x10)              :used:
 *** COMPLEX                                                            :used:
 *** Connery (https://esolangs.org/wiki/Connery)
+    + Interpreter is very slow
+    + Use the Docker implementation
+    + Dictionaries are mutable, no arrays (only linked lists)
+*** CPound (https://github.com/4o4hasfound/CPound-language)
 *** Cubix                                                              :used:
 *** Cy (https://github.com/cyoce/Cy)
-*** ed
+*** ed                                                                 :used:
     + Loops are recursive
     + Short list
 *** Emmental (https://esolangs.org/wiki/Emmental)
+    + Short list
 *** Emoji                                                              :used:
-*** Emoticon
+*** Emoticon                                                           :used:
     Okay, so the PHP interpreter (which, for awhile, was offline) is
     now back online. Unfortunately, there's a new problem. It has a
     hard limit of 10,000 instructions total to be executed during the
@@ -382,12 +418,15 @@
 *** Grocery List                                                       :used:
 *** Gwion                                                              :used:
 *** HAN (https://github.com/ARYANTECH123/HAN)
+    + No arrays
 *** Hanabi                                                             :used:
+*** hello, world! (https://github.com/histocrat/hello_world)
 *** Hexagony                                                           :used:
+*** Husk (https://github.com/barbuz/Husk)
 *** Inform 7
     + Short List
 *** Japt                                                               :used:
-*** Javagrid (https://esolangs.org/wiki/Javagrid)
+*** Javagrid (https://esolangs.org/wiki/Javagrid)                      :used:
 *** Jelly                                                              :used:
 *** JSF**k                                                             :used:
 *** Labyrinth                                                          :used:
@@ -395,16 +434,21 @@
 *** MagiStack                                                          :used:
 *** Math++                                                             :used:
 *** MATL                                                               :used:
+*** Minus (http://www.golfscript.com/minus/index.html)                 :used:
 *** MontiLang                                                          :used:
+*** Mornington Crescent (https://esolangs.org/wiki/Mornington_Crescent)
 *** Mouse-2002                                                         :used:
 *** Muriel (https://esolangs.org/wiki/Muriel)
-*** Myby (https://github.com/ConorOBrien-Foxx/Myby/)
 *** naz (https://github.com/sporeball/naz)                             :used:
     + Short list
+*** Ndim (https://esolangs.org/wiki/Ndim)
+    + 2D (and >2D) lang, but can only modify near the instruction
+      pointer.
 *** NICE (https://esolangs.org/wiki/NICE)
 *** Oblivion (https://jweinst1.github.io/OblivionWebsite/)
     + Double-precision floats
     + Non-constant loops are recursion
+    + Arrays are immutable
 *** Orthagonal (https://github.com/m-ender/orthagonal)
 *** Perchance                                                          :used:
 *** Pickle (Python)                                                    :used:
@@ -419,13 +463,14 @@
 *** Quark (https://github.com/henrystanley/Quark/)
 *** reMorse (https://esolangs.org/wiki/ReMorse)
     + Values are 1 byte
+*** Rail (https://esolangs.org/wiki/Rail)
 *** Retina (https://esolangs.org/wiki/Retina)
 *** Rockstar                                                           :used:
 *** RowLang (https://github.com/tommasocerruti/rowlang)
 *** Rpg (https://esolangs.org/wiki/Rpg)
 *** Runic Enchantments (https://github.com/Draco18s/RunicEnchantments/tree/Console)
 *** Secretary (https://esolangs.org/wiki/Secretary)
-*** Seriously                                                          :used:
+*** Seriously (https://github.com/Mego/Seriously/tree/v1)              :used:
 *** Shakespeare                                                        :used:
 *** Snowman                                                            :used:
 *** SNUSP (https://esolangs.org/wiki/SNUSP)
@@ -435,6 +480,10 @@
     + ~put~ command appears to be completely broken, can't modify
       stack at random.
     + Executable notes: Must run from ~vendor~ directory: ~./egel -I '../include' ../../soul/src/soul.eg <../../../filename.soul~
+*** Stack Cats (https://github.com/m-ender/stackcats)
+    + Reversible
+*** Story (https://github.com/soborat/story-programming-language)
+    + No arrays
 *** Stuck                                                              :used:
 *** Taxi                                                               :used:
 *** Tome                                                               :used:
@@ -453,7 +502,12 @@
 *** Wierd (sic) (https://esolangs.org/wiki/Wierd)
 *** Whispers (https://github.com/cairdcoinheringaahing/Whispers)
 *** Whitespace                                                         :used:
+*** Width (https://github.com/stestoltz/Width)
 ** UNUSABLE
+*** A+
+    The Wayback Machine has [[https://web.archive.org/web/20220103110240/http://www.aplusdev.org/Download/aplus-fsf-4.18-8.i386.tar.gz][the interpreter]], but it depends on some
+    ancient Linux dynamic libraries that I can't get to run on a
+    modern machine.
 *** ActionScript
     Flash is end-of-life and all of the other Adobe products seem to
     either be paid or not support my OS. I also can't seem to get the
@@ -498,6 +552,12 @@
     Is this actually a language or just a library...?
 *** Conedy
     See Trajedy.
+*** Curl (https://www.curl.com/products/prod/language/)
+    No publicly-available interpreter. The only available interpreter
+    is blocked behind a survey-wall.
+*** Dale (https://github.com/tomhrr/dale)
+    Compiler on GitHub segfaults on the "Hello world" program, and I
+    don't see any available online-only interpreters.
 *** Ė (https://e-dot.io/)
     Website doesn't exist anymore. I can access it on the Wayback
     Machine, but the online interpreter is broken. If there was a
@@ -514,6 +574,11 @@
     than look vaguely snazzy.
 *** Enterprise
     Could not run due to language-imposed restrictions.
+*** F' (https://nasa.github.io/fprime/)
+    Is really just a big C++ framework together with... I think a
+    build automation tool? Not a new language and doesn't have any
+    interesting syntax/semantics, so it wouldn't be fair to call it a
+    new language.
 *** GridScript
     [[https://esolangs.org/wiki/GridScript][Unimplemented]]
 *** Inca
@@ -539,6 +604,11 @@
     The interpreter seems to be using lots of implementation-defined
     C++ behavior and, as a result, I can only use a small subset of
     the defined commands without segfaulting at random.
+*** Myby (https://github.com/ConorOBrien-Foxx/Myby/)
+    Interpreter is written in D and produces a ton of errors when I
+    try to compile it. Some of them seem to be integer coercion issues
+    (~uint~ used where ~ulong~ should've been used instead), but many
+    are not.
 *** Noether (https://github.com/noether-lang/noether)
     Unimplemented
 *** Orthogonal
@@ -572,10 +642,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Whython (https://www.pxeger.com/2021-09-19-hacking-on-cpython/)
     Unimplemented
 ** UNCLASSIFIED
-*** BaCon (http://basic-converter.org/)
 *** Bend (https://github.com/HigherOrderCO/bend)
-*** Boo (https://boo-language.github.io/)
-*** Brachylog
 *** Bracmat (https://github.com/BartJongejan/Bracmat)
 *** CandleScript
 *** Catln (https://catln.dev/)
@@ -583,35 +650,37 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Cecil
 *** Charm++ (https://en.wikipedia.org/wiki/Charm%2B%2B)
 *** ChronLang (https://github.com/DeLuxe-1337/ChronLang)
-*** Clean
 *** Coco (https://rosettacode.org/wiki/Category:Coco)
 *** Cubically (https://github.com/aaronryank/cubically)
+*** Cricket (https://github.com/RyanBrewer317/cricket_rs)
 *** Crystal
-*** Curl (https://www.curl.com/products/prod/language/)
-*** Dale (https://github.com/tomhrr/dale)
 *** Dart
+*** DreamBerd (https://github.com/TodePond/DreamBerd)
+    + Implementation is https://github.com/vivaansinghvi07/dreamberd-interpreter/
 *** E
+*** Eff (https://www.eff-lang.org/)
 *** EGL
-*** Euler
-*** F' (https://nasa.github.io/fprime/)
+*** Eta (https://eta-lang.org/)
+*** Euler (https://en.wikipedia.org/wiki/Euler_(programming_language))
 *** Fancy
 *** Fission
 *** Flora (https://flora.sourceforge.net/)
 *** Genesis (https://github.com/elonlit/Genesis)
 *** Gluon
 *** Hare (https://harelang.org/)
-*** Husk (https://github.com/barbuz/Husk)
+*** Hylo (http://github.com/hylo-lang/hylo)
 *** I (https://aplwiki.com/wiki/I)
 *** IMP (https://en.wikipedia.org/wiki/IMP_(programming_language))
 *** jq (https://stedolan.github.io/jq/)
-*** Koi (https://koi-lang.dev/)
+*** Koka (https://koka-lang.github.io/koka/doc/index.html)
 *** Konna (https://www.reddit.com/r/ProgrammingLanguages/comments/rpe65y/konna_my_programming_language/)
 *** Lava (https://lavape.sourceforge.net/)
 *** Logtalk (https://logtalk.org/)
+*** Logoi (https://github.com/Logoi-Linguistics/Logoi-Linguistics)
 *** Luau (https://github.com/luau-lang/luau)
     Further research needed: Is this different enough from Lua to
     warrant its own entry?
-*** Minus (http://www.golfscript.com/)
+*** Maml (https://github.com/k-kahora/Maml)
 *** Monte (https://github.com/monte-language/monte)
 *** Mojo (https://www.modular.com/mojo)
 *** Nibbles (http://www.golfscript.com/)
@@ -621,7 +690,6 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Ohm
 *** Orc
 *** Orion (https://github.com/wafelack/orion/)
-*** Oxide (https://github.com/tuqqu/oxide-lang)
 *** Oz (https://en.wikipedia.org/wiki/Oz_(programming_language))
 *** Paperscript
 *** PARI/GP (https://en.wikipedia.org/wiki/PARI/GP)
@@ -630,25 +698,28 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** PPL
 *** Processing (https://en.wikipedia.org/wiki/Processing_(programming_language))
 *** Reason (https://reasonml.github.io/)
+*** Ring (https://ring-lang.github.io/doc1.20/index.html)
+*** Seph (https://github.com/seph-lang/seph)
+*** Skew (https://github.com/evanw/skew)
 *** Skript (https://docs.skriptlang.org/)
-*** SLOBIL (https://www.reddit.com/r/ProgrammingLanguages/comments/1atnmbk/slobil_slot_and_object_based_interactive_language/)
 *** smodels (http://www.tcs.hut.fi/Software/smodels/)
 *** Snails
 *** Speedie (https://github.com/gamblevore/speedie/)
 *** Squirrel
-*** Story (https://github.com/soborat/story-programming-language)
 *** SuperForth (https://github.com/TheRealMichaelWang/superforth)
-*** Sweet.js
+*** Symbolverse (https://github.com/tearflake/symbolverse)
 *** Unison (https://www.unison-lang.org/)
 *** Universal Lambda (http://www.golfscript.com/)
-*** VALE (https://github.com/project-everest/vale)
 *** Verse (https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference)
+*** VHDL
 *** Vortex (https://github.com/dibsonthis/Vortex)
 *** Vyxal (https://github.com/Vyxal/Vyxal)
 *** Width (https://github.com/stestoltz/Width)
 *** Wisnia (https://github.com/belijzajac/WisniaLang)
+*** Wisp (http://hg.sr.ht/~arnebab/wisp)
+*** Wisp (https://github.com/adam-mcdaniel/wisp)
 *** XQuery
-*** XY
+*** XY (http://www.nsl.com/k/xy/xy.htm)
 *** Yuescript
     + Might be too similar to Moonscript? Investigate further.
 * RESOURCES
@@ -698,6 +769,8 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
      - https://repl.it/
    + IDEOne
      - https://ideone.com/
+   + RyuGod
+     - https://www.ryugod.com/pages/ide/bash
 ** OTHER USEFUL LINKS
    + https://www.alpertron.com.ar/QUAD.HTM
 * SHORT LIST
@@ -715,4 +788,4 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
     Yeah.
 
 *** Inform 7
-*** ed
+*** Emmental

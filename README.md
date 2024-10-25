@@ -14,7 +14,10 @@ alphabetized list of the languages that have been used in these challenges so fa
 * 05AB1E
 * 1.1
 * 11l
+* 42
 * \>\<\>
+* \>\<\>\\\\.:.
+* Actually
 * Ada
 * AGSPL
 * ALGOL 68
@@ -54,15 +57,18 @@ alphabetized list of the languages that have been used in these challenges so fa
 * D
 * Dafny
 * Dhall
+* Dictu
 * Dip
 * Dogescript
 * Dry
 * Dylan
 * Earl Grey
+* ed
 * Eiffel
 * ELisp
 * Elixir
 * Emoji
+* Emoticon
 * Emotinomicon
 * Enchilada
 * Erlang
@@ -102,6 +108,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Japt
 * Jasmin
 * Javagony
+* Javagrid
 * Jelly
 * Joy
 * JSF\*\*k
@@ -121,18 +128,22 @@ alphabetized list of the languages that have been used in these challenges so fa
 * MATL
 * Microsoft Excel
 * Minecraft
+* Minus
 * MontiLang
 * MoonScript
 * Mouse-2002
 * NASM
 * naz
 * Nemerle
+* Nial
 * Nim
 * Nit
 * Oasis
 * Oberon-07
 * Objective-C
 * OCaml
+* Odin
+* Oxide
 * Pascal
 * Parrot IR
 * PASM
@@ -160,9 +171,9 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Seriously
 * Shakespeare
 * Smalltalk
-* SML
 * SNOBOL
 * Snowman
+* Standard ML
 * Stuck
 * SuperCollider
 * Swift
@@ -353,7 +364,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem27.ik](problem27.ik)
 * Language: [Ioke](https://ioke.org/)
 * Compiler / Interpreter: [Ioke for the JVM](https://ioke.org/download.html)
-* Notes: A very slow solution.
+* Notes: A somewhat slow solution.
 
 ### Euler 28
 * File: [problem28.bf](problem28.bf)
@@ -363,7 +374,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 
 ### Euler 29
 * File: [problem29.srs](problem29.srs)
-* Language: [Seriously](https://github.com/Mego/Seriously)
+* Language: [Seriously](https://github.com/Mego/Seriously/tree/v1)
 * Compiler / Interpreter: [TIO Nexus](http://tio.run/#seriously)
 * Notes: The seemingly pointless union with the empty list at the end serves to remove duplicates.
 
@@ -371,12 +382,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem30.stk](problem30.stk)
 * Language: [Stuck](https://github.com/kade-robertson/stuck)
 * Compiler / Interpreter: [The official interpreter](https://github.com/kade-robertson/stuck)
-* Notes: The interpreter seems to require some minor modification to work with Unicode on some systems.
+* Notes: The interpreter seems to require some minor modification to work with Unicode on some systems, a somewhat slow solution.
 
 ### Euler 31
 * File: [problem31.sml](problem31.sml)
-* Language: [SML](https://en.wikipedia.org/wiki/Standard_ML)
-* Compiler / Interpreter: [tutorialspoint.com](http://www.tutorialspoint.com/execute_smlnj_online.php)
+* Language: [Standard ML](https://en.wikipedia.org/wiki/Standard_ML)
+* Compiler / Interpreter: [TIO Nexus](https://tio.run/#sml-mlton)
 * Notes: (None)
 
 ### Euler 32
@@ -662,10 +673,10 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Notes: (None)
 
 ### Euler 79
-* File: [problem79.lp](problem79.lp)
-* Language: [Potassco](https://potassco.org/)
-* Compiler / Interpreter: [clingo](https://potassco.org/clingo/)
-* Notes: The answer outputs `pos(N, X)`, where `X` is the `N`th digit in the result.
+* File: [problem79.ed](problem79.ed)
+* Language: [ed](https://www.gnu.org/software/ed/manual/ed_manual.html)
+* Compiler / Interpreter: [GNU ed 1.18](https://www.gnu.org/software/ed/)
+* Notes: Supply `./files/0079_keylog.txt` as argument and `problem79.ed` as piped standard input.
 
 ### Euler 80
 * File: [problem80.wyv](problem80.wyv)
@@ -1265,10 +1276,10 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem179.whirl](problem179.whirl)
 * Language: [Whirl](https://web.archive.org/web/20130116204525/bigzaphod.org/whirl/)
 * Compiler / Interpreter: [Whirl-2.java](https://web.archive.org/web/20120303124619/http://www.bigzaphod.org/whirl/Whirl-2.java)
-* Notes: An incredibly slow solution.
+* Notes: An incredibly slow solution, code was written with the help of a [Racket translator program](https://github.com/Mercerenies/whirlgen).
 
 ### Euler 180
-* File: [problem180.py](problem180.py)
+* File: [problem180.pyf](problem180.pyf)
 * Language: [Pyf\*\*ck](https://github.com/wanqizhu/pyfuck)
 * Compiler / Interpreter: [Python 3.11.6](https://www.python.org/downloads/)
 * Notes: Code was generated with the help of the creator's [translation tool](https://github.com/wanqizhu/pyfuck/blob/master/pyfuck.py).
@@ -1290,6 +1301,72 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Pyramid Scheme](https://github.com/ConorOBrien-Foxx/Pyramid-Scheme)
 * Compiler / Interpreter: [Pyramid-Scheme @ fd183d29](https://github.com/ConorOBrien-Foxx/Pyramid-Scheme/tree/fd183d296f08e0cba8bf55da907697eaf412f6a7)
 * Notes: Code was written with the help of a [Scala translator program](https://github.com/Mercerenies/pyramid-scheme-generator).
+
+### Euler 184
+* File: [problem184.L42](problem184.L42)
+* Language: [42](https://forty2.is/index.xhtml)
+* Compiler / Interpreter: [L42PortableLinux.zip](https://forty2.is/download.xhtml)
+* Notes: `./etc/build184.sh` may be helpful in building the source.
+
+### Euler 185
+* File: [problem185.lp](problem185.lp)
+* Language: [Potassco](https://potassco.org/)
+* Compiler / Interpreter: [clingo](https://potassco.org/clingo/)
+* Notes: The answer outputs `correct(N, X)`, where `X` is the `N`th digit in the result.
+
+### Euler 186
+* File: [problem186.odin](problem186.odin)
+* Language: [Odin](https://odin-lang.org/)
+* Compiler / Interpreter: [Odin dev-2024-07](https://github.com/odin-lang/Odin/releases/tag/dev-2024-07)
+* Notes: Compiler may require [a patch](https://github.com/odin-lang/Odin/issues/2271#issuecomment-1959009449) on some Linux systems.
+
+### Euler 187
+* File: [problem187.ms](problem187.ms)
+* Language: [Minus](http://www.golfscript.com/minus/index.html)
+* Compiler / Interpreter: [iminus.c](http://www.golfscript.com/minus/files/iminus.c)
+* Notes: A very slow solution, will need to increase the `memsize` constant to compile (`#define mem_size 300000000` is sufficient), code was written with the help of a [Racket translator program](etc/minusgen.rkt).
+
+### Euler 188
+* File: [problem188.jgrid](problem188.jgrid)
+* Language: [Javagrid](https://esolangs.org/wiki/Javagrid)
+* Compiler / Interpreter: [The online interpreter](https://stefan-hering.github.io/)
+* Notes: An incredibly slow solution, [this Python script](https://gist.github.com/Mercerenies/7da15bd8663d8ccde11c5b5bb7d22bb3) can be useful for automating insertion into the web UI.
+
+### Euler 189
+* File: [problem189.ox](problem189.ox)
+* Language: [Oxide](https://github.com/tuqqu/oxide-lang/tree/master)
+* Compiler / Interpreter: [oxide-lang at 5088a2d](https://github.com/tuqqu/oxide-lang/tree/5088a2d7278608b67114263c42f13e7206e2e338)
+* Notes: A very slow solution.
+
+### Euler 190
+* File: [problem190.act](problem190.act)
+* Language: [Actually](https://github.com/Mego/Seriously/)
+* Compiler / Interpreter: [TIO Nexus](https://tio.run/#actually)
+* Notes: (None)
+
+### Euler 191
+* File: [problem191.emot](problem191.emot)
+* Language: [Emoticon](https://esolangs.org/wiki/Emoticon)
+* Compiler / Interpreter: [teuton.org](https://www.teuton.org/~stranger/code/emoticon/interpreter.php)
+* Notes: (None)
+
+### Euler 192
+* File: [problem192.du](problem192.du)
+* Language: [Dictu](https://dictu-lang.com/)
+* Compiler / Interpreter: [dictu-lang @ e43580d2](https://github.com/dictu-lang/Dictu/tree/e43580d2e1660d0215651dc94da98ae75d372a98)
+* Notes: (None)
+
+### Euler 193
+* File: [problem193.ndf](problem193.ndf)
+* Language: [Nial](https://www.nial-array-language.org/)
+* Compiler / Interpreter: [Q'Nial V7.0 Aug 29 2019](https://www.nial-array-language.org/download/)
+* Notes: A very slow solution, load the source file with `-defs` then run `main` in the interactive REPL.
+
+### Euler 194
+* File: [problem194.fishchips](problem194.fishchips)
+* Language: [* \>\<\>\\\\.:.](https://esolangs.org/wiki/Fish_Chips_and_Mushy_Peas)
+* Compiler / Interpreter: [FishChipsAndMushyPeas @ 52ca7307](https://github.com/More-Wrong/FishChipsAndMushyPeas/tree/52ca73077fcbff7ce279d55a9c15f3962028c152)
+* Notes: (None)
 
 ## Valid Languages
 
@@ -1335,6 +1412,7 @@ Currently, the slowest solutions in this repository are:
 * Problem 179 (Whirl) in ~34 minutes
 * Problem 130 (Fourier) in ~26 minutes
 * Problem 96 (Javagony) in ~20 minutes
+* Problem 188 (Javagrid) in ~18 minutes
 
 Currently, the slowest solution in this repository is Problem 130
 (Fourier), which takes roughly 26 minutes. The second slowest is

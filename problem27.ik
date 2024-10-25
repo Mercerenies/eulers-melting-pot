@@ -1,29 +1,31 @@
 
 pdict = dict()
 
-isPrime = method(x0,
-                 if(pdict key?(x0),
-                    pdict[x0],
-                    if(x0 < 1,
-                       false,
-                       isP = true
-                       (2..(x0-1)) select(val,
-                                          if(x0 % val == 0,
-                                             isP = false,
-                                             nil))
-                       pdict[x0] = isP)))
+Number isPrime = method(
+  if(pdict key?(self),
+    pdict[self],
+    pdict[self] = case(self,
+      fn(x, x < 2), false,
+      2, true,
+      else, (2..(self-1)) takeWhile(val, val * val <= self) all?(val, self % val != 0),
+    )
+  )
+)
 
 maxa = 0
 maxb = 0
 streak = 0
-(-999..999) select(a,
-                   (-1000..1000) select(b,
-                                        curr = 0
-                                        while(isPrime((curr * curr + a * curr + b) abs),
-                                              curr++)
-                                        if(curr > streak,
-                                           maxa = a
-                                           maxb = b
-                                           streak = curr,
-                                           nil)))
+(2..1000) filter(isPrime) each(b,
+  (-999..999) each(a,
+    curr = 0
+    while((curr * curr + a * curr + b) isPrime,
+      curr++
+    )
+    if(curr > streak,
+      maxa = a
+      maxb = b
+      streak = curr
+    )
+  )
+)
 (maxa * maxb) println

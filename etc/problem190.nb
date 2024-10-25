@@ -1,0 +1,39 @@
+Notebook[{Cell[
+TextData[{"Start"," ","with"," ","x1","+","x2","+...+","xm","=","m",StyleBox[
+RowBox[{"."," "}]],"We"," ","want"," ","to"," ","maximize"," ","x1","*","x2","^","2","*...*","xm","^","m",".","\n","\n","Solve"," ","the"," ","first"," ","equation"," ","for"," ","x1",StyleBox[
+RowBox[{"."," "}]],"We"," ","get"," ","m","-","x2","-...-","xm",StyleBox[RowBox[{" ","="," "}]],"x1",StyleBox[
+RowBox[{"."," "}]],"Then"," ","substitute"," ","in",StyleBox[RowBox[{"."," "}]],"We"," ","want"," ","to"," ","maximize"," ","f","(","X",")=(","m","-","x2","-...-","xm",")*","x2","^","2","*...*","xm","^","m",StyleBox[
+RowBox[{"."," "}]],"The"," ","partial"," ","derivative"," ","of"," ","this"," ","in"," ","terms"," ","of"," ","xi"," ","is"," ","df","/","dxi",StyleBox[
+RowBox[{" ","="," "}]],"i",StyleBox[RowBox[{" ","("}]],"m","-","x2","-...-","xm",")*","x2","^","2","*...*","xi","^(","i","-","1",")*...*","xm","^","m",StyleBox[
+RowBox[{" ","-"," "}]],"x2","^","2","*...*","xm","^","m",StyleBox[RowBox[{"."," "}]],"To"," ","maximize"," ","the"," ","function",StyleBox[
+RowBox[{","," "}]],"all"," ","partial"," ","derivatives"," ","shall"," ","be"," ","zero",StyleBox[
+RowBox[{"."," "}]],"Looks"," ","complicated",StyleBox[RowBox[{","," "}]],"but"," ","all"," ","xi"," ","are"," ","strictly"," ","positive",StyleBox[
+RowBox[{","," "}]],"so"," ","we"," ","can"," ","divide"," ","by"," ","x2","^","2","*","x3","^","3","*...*","xi","^(","i","-","1",")*...*","xm","^","m",".","\n","\n","We"," ","get"," ","0",StyleBox[
+RowBox[{" ","="," "}]],"i",StyleBox[RowBox[{" ","("}]],"m",StyleBox[RowBox[{" ","-"," "}]],"x2",StyleBox[
+RowBox[{" ","-"," ","..."," ","-"," "}]],"xm",StyleBox[RowBox[{")"," ","+"," "}]],"xi",StyleBox[
+RowBox[{"."," "}]],"Distribute"," ","and"," ","simplify"," ","to"," ","get"," ","i"," ","x2",StyleBox[
+RowBox[{" ","+"," "}]],"i"," ","x3",StyleBox[RowBox[{" ","+"," ","..."," ","+"," ","("}]],"i","+","1",StyleBox[
+RowBox[{")"," "}]],"xi",StyleBox[RowBox[{" ","+"," ","..."," ","+"," "}]],"i"," ","xm",StyleBox[
+RowBox[{" ","="," "}]],"m",StyleBox[RowBox[{"."," "}]],"Now"," ","we"," ","can"," ","phrase"," ","this"," ","as"," ","a"," ","linear"," ","algebra"," ","problem","."}],
+"Text",ExpressionUUID -> "517dd5c3-a1d2-48bc-86ec-f4e6bf9c1e93"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{RowBox[{RowBox[{"weightsMatrix","[","m_","]"}],":=",RowBox[{"Table","[",RowBox[
+{RowBox[{"If","[",RowBox[{RowBox[{"r","==","c"}],",",RowBox[{"r","+","1"}],",","r"}],"]"}],",",RowBox[
+{"{",RowBox[{"r",",","2",",","m"}],"}"}],",",RowBox[{"{",RowBox[{"c",",","2",",","m"}],"}"}]}],"]"}]}],"\n",RowBox[
+{RowBox[{"rightHandCoefficients","[","m_","]"}],":=",RowBox[{"Table","[",RowBox[{RowBox[
+{"r"," ","m"}],",",RowBox[{"{",RowBox[{"r",",","2",",","m"}],"}"}]}],"]"}]}],"\n",RowBox[
+{RowBox[{"bestXs","[","m_","]"}],":=",RowBox[{"LinearSolve","[",RowBox[{RowBox[{"weightsMatrix","[","m","]"}],",",RowBox[
+{"rightHandCoefficients","[","m","]"}]}],"]"}]}],"\n",RowBox[{RowBox[{"x1","[",RowBox[
+{"m_",",","xs_"}],"]"}],":=",RowBox[{"m","-",RowBox[{"Total","[","xs","]"}]}]}],"\n",RowBox[
+{RowBox[{"p","[","m_","]"}],":=",RowBox[{"With","[",RowBox[{RowBox[{"{",RowBox[{"xs","=",RowBox[
+{"bestXs","[","m","]"}]}],"}"}],",",RowBox[{RowBox[{"x1","[",RowBox[{"m",",","xs"}],"]"}],RowBox[
+{"Times","@@",RowBox[{"MapIndexed","[",RowBox[{RowBox[{RowBox[{"(",RowBox[{"#1","^",RowBox[
+{"(",RowBox[{RowBox[{"First","[","#2","]"}],"+","1"}],")"}]}],")"}],"&"}],",","xs"}],"]"}]}]}]}],"]"}]}],"\n",RowBox[
+{"Sum","[",RowBox[{RowBox[{"Floor","[",RowBox[{"p","[","m","]"}],"]"}],",",RowBox[
+{"{",RowBox[{"m",",","2",",","15"}],"}"}]}],"]"}]}],"Input",CellLabel -> "In[91]:= ",
+ExpressionUUID -> "820d7c8e-f3d9-4aba-88f7-3117c7c253f8"],Cell[
+BoxData["371048281",
+StandardForm],"Output",CellLabel -> "Out[96]= ",ExpressionUUID -> "c5b97e8b-2785-4dcc-b4d0-cca51718566b"]},
+Open],ExpressionUUID -> "fbcb3d75-0350-4335-a71d-1b47692b2591"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "14.1 for Wolfram Cloud 1.69 (July 16, 2024)"]

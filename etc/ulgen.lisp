@@ -1,5 +1,10 @@
 
 ;; Underload
+;;
+;; NOTE: A much more advanced Underload code generator is available in
+;; a separate repo as
+;; https://github.com/Mercerenies/underload-generator. This file is
+;; mostly obsolete.
 
 (defparameter *commands*
   '((swap . "~")

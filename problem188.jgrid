@@ -1,0 +1,9 @@
+right(1, 0)                               | res:number, i:number                     | res:number
+                                          | i > 1854 right(res)                      | print(res)
+                                          | down(1777, res, 1, i)                    | end()
+------------------------------------------@------------------------------------------@-----------------------------------------
+a:number, b:number, pow:number, i:number  | a:number, b:number, pow:number, i:number | a:number, b:number, pow:number, i:number
+right((a * a) % 100000000, b / 2, pow, i) | b < 1 up(pow, i + 1)                     | left(a, b - 1, (pow * a) % 100000000, i)
+                                          | b % 2 = 0 left(a, b, pow, i)             |
+                                          | right(a, b, pow, i)                      |
+                                          |                                          |

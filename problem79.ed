@@ -1,0 +1,273 @@
+# Generate sequences of 2-digit constraints
+1,$s/\(.\)\(.\)\(.\)/\1\2\
+\2\3/
+# Concatenate all lines
+1,$s/$/,/
+1,$j
+# Make a list of valid characters
+0a
+01236789
+.
+# Find a valid character to use next (8 to go)
+1t1
+3t2
+2s/$/ /
+2,3j
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/ .*$//
+m$
+# Remove the character from the valid characters list
+1s/\(.\)/\1\
+/g
+$t8
+8,9j
+$t7
+7,8j
+$t6
+6,7j
+$t5
+5,6j
+$t4
+4,5j
+$t3
+3,4j
+$t2
+2,3j
+$t1
+1,2j
+1,8g/\(.\)\1/d
+1,7s/.$//
+1,7j
+2d
+# Remove the character from any constraints
+2s/,/\
+/g
+$y
+2,/^$/-1g/.*/x
+2,/^$/-1g/../j
+2,/^$/-1g/\(.\).\1/d
+2,/^$/-1g/.../s/.$/,/
+2,/^$/j
+# Find a valid character to use next (7 to go)
+1t1
+3t2
+2s/$/ /
+2,3j
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/ .*$//
+m$
+# Remove the character from the valid characters list
+1s/\(.\)/\1\
+/g
+$t7
+7,8j
+$t6
+6,7j
+$t5
+5,6j
+$t4
+4,5j
+$t3
+3,4j
+$t2
+2,3j
+$t1
+1,2j
+1,7g/\(.\)\1/d
+1,6s/.$//
+1,6j
+2d
+# Remove the character from any constraints
+2s/,/\
+/g
+$y
+2,/^$/-1g/.*/x
+2,/^$/-1g/../j
+2,/^$/-1g/\(.\).\1/d
+2,/^$/-1g/.../s/.$/,/
+2,/^$/j
+# Find a valid character to use next (6 to go)
+1t1
+3t2
+2s/$/ /
+2,3j
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/ .*$//
+m$
+# Remove the character from the valid characters list
+1s/\(.\)/\1\
+/g
+$t6
+6,7j
+$t5
+5,6j
+$t4
+4,5j
+$t3
+3,4j
+$t2
+2,3j
+$t1
+1,2j
+1,6g/\(.\)\1/d
+1,5s/.$//
+1,5j
+2d
+# Remove the character from any constraints
+2s/,/\
+/g
+$y
+2,/^$/-1g/.*/x
+2,/^$/-1g/../j
+2,/^$/-1g/\(.\).\1/d
+2,/^$/-1g/.../s/.$/,/
+2,/^$/j
+# Find a valid character to use next (5 to go)
+1t1
+3t2
+2s/$/ /
+2,3j
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/ .*$//
+m$
+# Remove the character from the valid characters list
+1s/\(.\)/\1\
+/g
+$t5
+5,6j
+$t4
+4,5j
+$t3
+3,4j
+$t2
+2,3j
+$t1
+1,2j
+1,5g/\(.\)\1/d
+1,4s/.$//
+1,4j
+2d
+# Remove the character from any constraints
+2s/,/\
+/g
+$y
+2,/^$/-1g/.*/x
+2,/^$/-1g/../j
+2,/^$/-1g/\(.\).\1/d
+2,/^$/-1g/.../s/.$/,/
+2,/^$/j
+# Find a valid character to use next (4 to go)
+1t1
+3t2
+2s/$/ /
+2,3j
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/ .*$//
+m$
+# Remove the character from the valid characters list
+1s/\(.\)/\1\
+/g
+$t4
+4,5j
+$t3
+3,4j
+$t2
+2,3j
+$t1
+1,2j
+1,4g/\(.\)\1/d
+1,3s/.$//
+1,3j
+2d
+# Remove the character from any constraints
+2s/,/\
+/g
+$y
+2,/^$/-1g/.*/x
+2,/^$/-1g/../j
+2,/^$/-1g/\(.\).\1/d
+2,/^$/-1g/.../s/.$/,/
+2,/^$/j
+# Find a valid character to use next (3 to go)
+1t1
+3t2
+2s/$/ /
+2,3j
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/ .*$//
+m$
+# Remove the character from the valid characters list
+1s/\(.\)/\1\
+/g
+$t3
+3,4j
+$t2
+2,3j
+$t1
+1,2j
+1,3g/\(.\)\1/d
+1,2s/.$//
+1,2j
+2d
+# Remove the character from any constraints
+2s/,/\
+/g
+$y
+2,/^$/-1g/.*/x
+2,/^$/-1g/../j
+2,/^$/-1g/\(.\).\1/d
+2,/^$/-1g/.../s/.$/,/
+2,/^$/j
+# Find a valid character to use next (2 to go)
+1t1
+3t2
+2s/$/ /
+2,3j
+s/\(.\)\(.*\) \(.*\)\1,/\2 \3\1,/
+s/ .*$//
+m$
+# Remove the character from the valid characters list
+1s/\(.\)/\1\
+/g
+$t2
+2,3j
+$t1
+1,2j
+1,2g/\(.\)\1/d
+1,1s/.$//
+1,1j
+2d
+# Remove the character from any constraints
+2s/,/\
+/g
+$y
+2,/^$/-1g/.*/x
+2,/^$/-1g/../j
+2,/^$/-1g/\(.\).\1/d
+2,/^$/j
+# Clean up the output
+2d
+1m$
+1,$jp
+Q

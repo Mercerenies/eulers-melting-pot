@@ -1,0 +1,60 @@
+
+reuse [L42.is/AdamsTowel]
+
+Point = Data:{
+  Num x
+  Num y
+}
+
+Problem184 = {
+  class method
+  I otherLimitFor(I radius, I y) = {
+    return ((radius * radius) - (y * y)).toDouble().pow(exp=Double"0.5").ceil().toI()
+  }
+
+  class method
+  Num countQuads(I radius, I pointsInOneQuad, Point a) = {
+    var I bLines = 0I
+    var I cLines = 0I
+    for bY in Range(0I, to=radius) (
+      I bLimit = Problem184.otherLimitFor(radius=radius, y=bY)
+      Num bPivot = (a.x() * bY.toNum()) / a.y()
+      if bPivot < 1Num (
+        bLines := bLines + (bLimit - 1I)
+      ) else (
+        if bPivot > bLimit.toNum() - 1Num (
+          cLines := cLines + (bLimit - 1I)
+        ) else (
+          if bPivot.toI().toNum() == bPivot (
+            bLines := bLines + (bLimit - bPivot.toI() - 1I)
+            cLines := cLines + (bPivot.toI() - 1I)
+          ) else (
+            bLines := bLines + (bLimit - bPivot.ceil().toI())
+            cLines := cLines + bPivot.floor().toI()
+          )
+        )
+      )
+    )
+    return bLines.toNum() * (cLines.toNum() + pointsInOneQuad.toNum())
+  }
+
+  class method
+  Num run(I radius) = {
+    var I pointsInOneQuadrant = 0I
+    for y in Range(0I, to=radius) (
+      pointsInOneQuadrant := pointsInOneQuadrant + (Problem184.otherLimitFor(radius=radius, y=y) - 1I)
+    )
+
+    var Num count = 0Num
+    for aX in Range(1I, to=radius) (
+      I aLimit = Problem184.otherLimitFor(radius=radius, y=aX)
+      for aY in Range(1I, to=aLimit) (
+        Point a = Point(x=aX.toNum(), y=aY.toNum())
+        count := count + Problem184.countQuads(radius=radius, pointsInOneQuad=pointsInOneQuadrant, a=a)
+      )
+    )
+    return count * 4Num
+  }
+}
+
+Main = Debug(Problem184.run(radius=105I))

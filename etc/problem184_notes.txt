@@ -1,0 +1,33 @@
+;; This buffer is for text that is not saved, and for Lisp evaluation.
+;; To create a file, visit it with C-x C-f and enter text in its buffer.
+
+b × a
+c × b
+a × c
+
+b.x * a.y - b.y * a.x > 0
+c.x * b.y - c.y * b.x > 0
+a.x * c.y - a.y * c.x > 0
+
+b.x * a.y > b.y * a.x
+c.x * b.y > c.y * b.x
+a.x * c.y > a.y * c.x
+
+1 0
+2 8
+3 360
+4 2768
+5 10600
+6 45976
+7 111368
+8 270720
+9 591152
+10 1101232
+11 2039688
+12 3299992
+13 5499008
+14 9058544
+15 13638120
+
+
+b.y * a.x < b.x * a.y
