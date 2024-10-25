@@ -72,6 +72,7 @@
       (~setTempRet0~) that probably doesn't work for us.
 *** AWK                                                                :used:
 *** Bizubee (https://bizubee.github.io/)
+*** Borgo (https://github.com/borgo-lang/borgo)
 *** C3 (https://c3-lang.org/primer/)
 *** COBOL                                                              :used:
 *** Delphi (https://en.wikipedia.org/wiki/Delphi_(software))
@@ -420,6 +421,7 @@
     + Values are 1 byte
 *** Retina (https://esolangs.org/wiki/Retina)
 *** Rockstar                                                           :used:
+*** RowLang (https://github.com/tommasocerruti/rowlang)
 *** Rpg (https://esolangs.org/wiki/Rpg)
 *** Runic Enchantments (https://github.com/Draco18s/RunicEnchantments/tree/Console)
 *** Secretary (https://esolangs.org/wiki/Secretary)
@@ -571,6 +573,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
     Unimplemented
 ** UNCLASSIFIED
 *** BaCon (http://basic-converter.org/)
+*** Bend (https://github.com/HigherOrderCO/bend)
 *** Boo (https://boo-language.github.io/)
 *** Brachylog
 *** Bracmat (https://github.com/BartJongejan/Bracmat)
@@ -643,6 +646,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Vortex (https://github.com/dibsonthis/Vortex)
 *** Vyxal (https://github.com/Vyxal/Vyxal)
 *** Width (https://github.com/stestoltz/Width)
+*** Wisnia (https://github.com/belijzajac/WisniaLang)
 *** XQuery
 *** XY
 *** Yuescript
