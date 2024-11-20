@@ -660,6 +660,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** E
 *** Eff (https://www.eff-lang.org/)
 *** EGL
+*** emiT (https://www.reddit.com/r/ProgrammingLanguages/comments/1golfwz/emit_a_time_travelling_programming_language/)
 *** Eta (https://eta-lang.org/)
 *** Euler (https://en.wikipedia.org/wiki/Euler_(programming_language))
 *** Fancy
@@ -669,6 +670,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Gluon
 *** Gren (https://gren-lang.org/)
 *** Hare (https://harelang.org/)
+*** Helix (https://www.reddit.com/r/ProgrammingLanguages/comments/1god9l6/new_programming_language_helix/)
 *** Hylo (http://github.com/hylo-lang/hylo)
 *** I (https://aplwiki.com/wiki/I)
 *** IMP (https://en.wikipedia.org/wiki/IMP_(programming_language))
