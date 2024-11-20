@@ -19,6 +19,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * \>\<\>\\\\.:.
 * Actually
 * Ada
+* Agda
 * AGSPL
 * ALGOL 68
 * Alice
@@ -112,6 +113,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Jelly
 * Joy
 * JSF\*\*k
+* Julia
 * JustBASIC
 * K
 * Kitten
