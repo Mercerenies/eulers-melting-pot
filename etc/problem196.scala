@@ -19,8 +19,12 @@ extension[A] (iter: Iterable[A])
       iterator.take(size).toList
     }
 
-  def indices(pred: (A) => Boolean): Iterable[Int] =
+  def indicesWhere(pred: (A) => Boolean): Iterable[Int] =
     iter.view.zipWithIndex.flatMap { (a, i) => Some(i).guard(pred(a)) }
+
+extension (iter: Iterable[Boolean])
+  def indicesTrue: Iterable[Int] =
+    iter.indicesWhere { b => b }
 
 def triangularNumber(n: Long): Long =
   n * (n + 1) / 2
@@ -68,7 +72,9 @@ class PrimesSet private (
   private val upperBound: Long,
 ) extends PrimalityChecker {
   def apply(n: Long): Boolean =
-    if (n < lowerBound) {
+    if (n < 2) {
+      false
+    } else if (n < lowerBound) {
       throw RuntimeException(f"Out of bounds index ${n} for PrimesSet (n < ${lowerBound})")
     } else if (n >= upperBound) {
       throw RuntimeException(f"Out of bounds index ${n} for PrimesSet (n >= ${upperBound})")
@@ -85,7 +91,7 @@ object PrimesSet {
     applyUnchecked(knownPrimes, 0L, upperBound)
 
   def fromMaskUnchecked(primesMask: Iterable[Boolean]): PrimesSet =
-    applyUnchecked(knownPrimes = primesMask.indices { p => p }.map(_.toLong).toSet, upperBound = primesMask.size)
+    applyUnchecked(knownPrimes = primesMask.indicesTrue.map(_.toLong).toSet, upperBound = primesMask.size)
 }
 
 object SieveOfEratosthenes {
@@ -99,7 +105,9 @@ object SieveOfEratosthenes {
     primesMask(1) = false
     for (i <- 2 to upperBound / 2) {
       if (primesMask(i)) {
-        var j = i * 2;
+        // Anything less than i * i will be marked already by an
+        // earlier iteration of this loop.
+        var j = i * i
         while (j < upperBound) {
           primesMask(j) = false
           j += i
@@ -139,7 +147,35 @@ object SegmentedSieveOfEratosthenes {
   }
 
   private def addKnownPrimes(knownPrimes: HashSet[Long], startingPoint: Long, primesMask: Iterable[Boolean]): Unit =
-    knownPrimes ++= primesMask.indices { p => p }.map { startingPoint + _ }
+    knownPrimes ++= primesMask.indicesTrue.map { startingPoint + _ }
+}
+
+// Modified version of segmented Sieve for when we have a lower bound.
+// If we want the primes in a..b, then we don't need to ever look at
+// any of the numbers between sqrt(b) and a, since those numbers are
+// less than a and their squares are greater than b.
+object PartialSieveOfEratosthenes {
+  def apply(lowerBound: Long, upperBound: Long): PrimalityChecker = {
+    val s = math.sqrt(upperBound.toDouble).toLong + 1L
+    val lowPrimes = ArrayBuffer.fill(s.toInt) { true }
+    val highPrimes = ArrayBuffer.fill((upperBound - lowerBound).toInt) { true }
+    for (i <- 2L until s) {
+      if (lowPrimes(i.toInt)) {
+        var j = i * i
+        while (j < s) {
+          lowPrimes(j.toInt) = false
+          j += i
+        }
+        j = lowerBound + ((-lowerBound) mod i)
+        while (j < upperBound) {
+          highPrimes((j - lowerBound).toInt) = false
+          j += i
+        }
+      }
+    }
+    val knownPrimesInRange = highPrimes.indicesTrue.map(lowerBound + _).toSet
+    PrimesSet.applyUnchecked(knownPrimesInRange, lowerBound = lowerBound, upperBound = upperBound)
+  }
 }
 
 class Triangle(
@@ -150,8 +186,14 @@ class Triangle(
 
   def apply(pos: Pos): Long = apply(pos.y, pos.x)
 
-  def rowCount: Long =
+  def rowCount: Int =
     rows.size
+
+  def rowWidth(row: Int): Int =
+    rows.lift(row) map { _.size } getOrElse 0
+
+  def min: Long =
+    rows.map(_.min).min
 
   def max: Long =
     rows.map(_.max).max
@@ -180,7 +222,7 @@ class TriangleWithTriplets private(
   val triangle: Triangle,
   private val tripletsMask: Seq[Seq[Boolean]],
 ) {
-  export triangle.{apply, rowCount, max}
+  export triangle.{apply, rowCount, min, max}
 
   def inPrimeTriplet(pos: Pos): Boolean =
     tripletsMask.lift(pos.y) flatMap { _.lift(pos.x) } getOrElse false
@@ -192,7 +234,7 @@ class TriangleWithTriplets private(
     if (row >= rowCount - 1) { // Need an extra row since we're checking adjacencies.
       throw IndexOutOfBoundsException(f"${row} > ${rowCount - 1}")
     }
-    (0 to row)
+    (0 to triangle.rowWidth(row))
       .filter { col => inPrimeTriplet(Pos(y = row, x = col)) }
       .map { col => this(y = row, x = col) }
       .sum
@@ -200,7 +242,7 @@ class TriangleWithTriplets private(
 
 object TriangleWithTriplets {
   def apply(triangle: Triangle): TriangleWithTriplets = {
-    val isPrime = SegmentedSieveOfEratosthenes(triangle.max + 1)
+    val isPrime = PartialSieveOfEratosthenes(triangle.min, triangle.max + 1)
     val indices = triangle.indices
     val mask = indices
       .map(row => ArrayBuffer.fill(row.size) { false })
@@ -243,8 +285,12 @@ def s(n: Int): Long = {
 
 object problem196 {
   @main def main() = {
-    for (i <- 1 to 100) {
-      println(f"s(${i}) = ${s(i)}")
-    }
+    println(s(5678027) + s(7208785))
+    //println(s(1000000))
+    //for (i <- 1 to 10001) {
+    //  if (s(i) > 0) {
+    //    println(f"s(${i}) = ${s(i)}")
+    //  }
+    //}
   }
 }
