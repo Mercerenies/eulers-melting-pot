@@ -1,0 +1,102 @@
+// -*- C -*-
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef long long llong;
+
+typedef $(llong, llong, llong) Triangle;
+
+llong gcd(llong a, llong b) {
+  while (b != 0) {
+    let tmp = b;
+    b = a % b;
+    a = tmp;
+  }
+  return a;
+}
+
+llong llabs(llong a) {
+  if (a > 0) {
+    return a;
+  } else {
+    return -a;
+  }
+}
+
+double semiperimeter(Triangle *@notnull t) {
+  return ((*t)[0] + (*t)[1] + (*t)[2]) / 2.0;
+}
+
+double inradius_squared(Triangle *@notnull t) {
+  let s = semiperimeter(t);
+  return (s - (*t)[0]) * (s - (*t)[1]) * (s - (*t)[2]) / s;
+}
+
+Triangle make_triangle(llong kappa, llong lambda, llong d) {
+  let a = d * kappa * lambda;
+  let b = d * (3 * kappa * kappa + lambda * lambda) / 4;
+  let c = d * (2 * kappa * lambda + llabs(3 * kappa * kappa - lambda * lambda)) / 4;
+  return $(a, b, c);
+}
+
+llong find_variable_bound(llong limit_squared) {
+  llong k = 1;
+  while (1) {
+    let t = make_triangle(k, 1, 1);
+    if (inradius_squared(&t) > limit_squared) {
+      break;
+    }
+    k++;
+  }
+  return k + 1;
+}
+
+// TIO Interpreter can't link libm (for math functions). So we write a
+// naive sqrt here. I mean, a *really* naive sqrt.
+llong sqrt(llong x) {
+  llong i = 0;
+  while (i * i <= x) {
+    i++;
+  }
+  return i - 1;
+}
+
+int main() {
+  llong limit = 1053779;
+  let limit_squared = limit * limit;
+  let var_bound = find_variable_bound(limit_squared);
+  llong solutions_count = 0;
+  for (llong kappa = 1; kappa < var_bound; kappa++) {
+    let found_k_solutions = 0;
+    for (llong lambda = 1; lambda < var_bound; lambda++) {
+      if (gcd(kappa, lambda) != 1) {
+        continue;
+      }
+      if ((lambda > kappa) && (lambda <= 3 * kappa)) {
+        continue;
+      }
+      if ((kappa == 1) && (lambda == 1 || lambda == 3)) {
+        continue;
+      }
+      llong d = ((kappa + lambda) % 2 == 1) ? 4 : 1;
+      let t = make_triangle(kappa, lambda, d);
+      let r_squared = inradius_squared(&t);
+      if (r_squared <= limit_squared) {
+        found_k_solutions = 1;
+        solutions_count += sqrt((llong)(limit_squared / r_squared));
+        if (lambda % 3 != 0) {
+          let largest_d = sqrt((llong)(limit_squared / r_squared));
+          solutions_count -= largest_d / 3;
+        }
+      } else if (lambda % 2 == 1) {
+        break;
+      }
+    }
+    if ((!found_k_solutions) && (kappa % 2 == 1)) {
+      break;
+    }
+  }
+  printf("%ld\n", (long)solutions_count);
+  return 0;
+}

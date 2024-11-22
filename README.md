@@ -55,6 +55,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * 🆒
 * Csh
 * Cubix
+* Cyclone
 * D
 * Dafny
 * Dhall
@@ -1368,6 +1369,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem194.fishchips](problem194.fishchips)
 * Language: [* \>\<\>\\\\.:.](https://esolangs.org/wiki/Fish_Chips_and_Mushy_Peas)
 * Compiler / Interpreter: [FishChipsAndMushyPeas @ 52ca7307](https://github.com/More-Wrong/FishChipsAndMushyPeas/tree/52ca73077fcbff7ce279d55a9c15f3962028c152)
+* Notes: (None)
+
+### Euler 195
+* File: [problem195.cyc](problem195.cyc)
+* Language: [Cyclone](https://cyclone.thelanguage.org/)
+* Compiler / Interpreter: [TIO Nexus](https://tio.run/#cyclone)
 * Notes: (None)
 
 ## Valid Languages
