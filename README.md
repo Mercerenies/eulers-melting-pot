@@ -1327,7 +1327,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem187.ms](problem187.ms)
 * Language: [Minus](http://www.golfscript.com/minus/index.html)
 * Compiler / Interpreter: [iminus.c](http://www.golfscript.com/minus/files/iminus.c)
-* Notes: A very slow solution, will need to increase the `memsize` constant to compile (`#define mem_size 300000000` is sufficient), code was written with the help of a [Racket translator program](etc/minusgen.rkt).
+* Notes: A very slow solution, will need to increase the `mem_size` constant to compile (`#define mem_size 300000000` is sufficient), code was written with the help of a [Racket translator program](etc/minusgen.rkt).
 
 ### Euler 188
 * File: [problem188.jgrid](problem188.jgrid)
