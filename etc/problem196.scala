@@ -1,5 +1,8 @@
 
 // Does not appear to be in OEIS.
+//
+// Runs for 10,000 in under 2 seconds, but we run out of heap memory
+// for the real problem.
 
 import scala.collection.mutable.{ArrayBuffer, HashMap, HashSet}
 import scala.collection.{Seq, Set}
@@ -285,8 +288,8 @@ def s(n: Int): Long = {
 
 object problem196 {
   @main def main() = {
-    println(s(5678027) + s(7208785))
-    //println(s(1000000))
+    //println(s(5678027) + s(7208785))
+    println(s(10000))
     //for (i <- 1 to 10001) {
     //  if (s(i) > 0) {
     //    println(f"s(${i}) = ${s(i)}")
