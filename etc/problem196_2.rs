@@ -1,6 +1,9 @@
 
 // Identical approach to problem196_1.scala. 23 seconds in Rust. Twice
 // as fast as Scala, but not as fast as I was hoping.
+//
+// Never mind, 2 seconds with -O. Always turn on optimizations, kids.
+// :)
 
 use std::ops::{Add, Sub, Neg};
 use std::collections::HashSet;
