@@ -187,6 +187,7 @@
 *** F*
 *** Fōrmulæ (https://formulae.org/)
 *** G-- (https://github.com/ReyAnthony/G--)
+    + Everything is stringy
 *** GAP
 *** Genie                                                              :used:
 *** Giml (https://giml-lang.org/)
@@ -203,9 +204,6 @@
 *** Joy                                                                :used:
 *** Kitten                                                             :used:
     + 64-bit integers (no bignums)
-*** Kobalt (https://github.com/abel0b/kobalt)
-    + Basically non-existent documentation, but from the limited
-      examples, looks like an ML dialect.
 *** K                                                                  :used:
     + No bignums
 *** λProlog
@@ -213,7 +211,6 @@
 *** Lean (https://leanprover-community.github.io/)                     :used:
 *** LilyPond                                                           :used:
 *** Lox (https://github.com/munificent/craftinginterpreters/wiki/Lox-implementations)
-*** Luna (http://staging.luna-lang.org/)
 *** m4                                                                 :used:
 *** Magpie (https://www.magpie-lang.org/)
     + Arrays are immutable
@@ -236,7 +233,6 @@
 *** PROMAL
 *** Redscript (https://wiki.redmodding.org/redscript)
 *** Roy                                                                :used:
-*** S (https://en.wikipedia.org/wiki/S_(programming_language))
 *** Scratch                                                            :used:
 *** sed                                                                :used:
 *** SLOBIL (https://www.reddit.com/r/ProgrammingLanguages/comments/1atnmbk/slobil_slot_and_object_based_interactive_language/)
@@ -596,9 +592,20 @@
     It's too similar to vanilla JS for my tastes.
 *** Keg
     Cannot find this language again.
+*** Kobalt (https://github.com/abel0b/kobalt)
+    + Basically non-existent documentation, but from the limited
+      examples, looks like an ML dialect.
+    + Language could be cool one day, but it looks incomplete. No
+      documentation, a lot of things seem to just hang the
+      interpreter, and I have better things to do than
+      reverse-engineer all of the semantics of this engine.
 *** Leafscript
     The only interpreter segfaults when running any of the example
     programs.
+*** Luna (http://staging.luna-lang.org/)
+    Website has been sold to some shady analytics company. Can't find
+    any source code or much more than the main page on Wayback
+    Machine. Calling it unusable.
 *** Lunar (http://users.rcn.com/david-moon/Lunar/)
     Unimplemented
 *** minaac
@@ -624,6 +631,11 @@
     correctly at top-level, etc., etc.
 *** Rio
     Can't find it again.
+*** S (https://en.wikipedia.org/wiki/S_(programming_language))
+    No interpreter exists. It looks like Bell Labs sold exclusive
+    rights to some company, which eventually got purchased (very
+    indirectly) by Mathcad. The actual interpreter is likely lost to
+    time.
 *** Skastic
     Looks like a /super/ cool idea, but it's woefully incomplete to
     the point of possibly not even being Turing complete.
