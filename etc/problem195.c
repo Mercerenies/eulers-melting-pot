@@ -1,4 +1,8 @@
 
+// Too slow to even get through when a = 1.
+//
+// Also, forgot to check that c is an integer.
+
 #include <stdio.h>
 #include <math.h>
 
