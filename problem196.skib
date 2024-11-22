@@ -1,0 +1,127 @@
+
+bussin "math" math
+
+skibidi triangular(n) {
+    lowtaperfade n * (n + 1) ohio"//" 2
+}
+
+skibidi makearray(elem, n) {
+    rizz arr = []
+    rizz i = 1
+    gyatt {
+        sus i > n caseoh
+        arr[i] = elem
+        i = i + 1
+    }
+    lowtaperfade arr
+}
+
+skibidi partialsieve(lower, upper) {
+    rizz s = math.floor(math.sqrt(upper)) + 1
+    rizz a = makearray(true, s)
+    rizz b = makearray(true, upper - lower)
+    rizz i = 2
+    gyatt {
+        sus i >= s caseoh
+        sus a[i] {
+            rizz j = i * i
+            gyatt {
+                sus j >= s caseoh
+                a[j] = false
+                j = j + i
+            }
+            j = lower + ((- lower) % i)
+            gyatt {
+                sus j >= upper caseoh
+                b[j - lower + 1] = false
+                j = j + i
+            }
+        }
+        i = i + 1
+    }
+    rizz primes = []
+    i = lower
+    gyatt {
+        sus i >= upper caseoh
+        sus b[i - lower + 1] {
+          primes[i] = true
+        }
+        i = i + 1
+    }
+    lowtaperfade primes
+}
+
+skibidi triangleval(y, x) {
+    sus y < 0 || x < 0 || x >= y + 1 lowtaperfade 0
+    rizz last = triangular(y)
+    lowtaperfade last + x + 1
+}
+
+skibidi iscenter(primestable, y, x) {
+    sus !primestable[triangleval(y, x)] lowtaperfade false
+    rizz nearby = 0
+    rizz yy = y - 1
+    gyatt {
+        sus yy > y + 1 caseoh
+        rizz xx = x - 1
+        gyatt {
+            sus xx > x + 1 caseoh
+            sus primestable[triangleval(yy, xx)] {
+                nearby = nearby + 1
+            }
+            xx = xx + 1
+        }
+        yy = yy + 1
+    }
+    lowtaperfade nearby >= 3
+}
+
+skibidi s(row) {
+    rizz minall = triangleval(row - 2, 0)
+    rizz maxall = triangleval(row + 2, row + 2)
+    rizz primes = partialsieve(minall, maxall)
+    rizz minrow = triangleval(row, 0)
+    rizz maxrow = triangleval(row, row)
+    rizz targetprimes = []
+    rizz y = row - 1
+    gyatt {
+        sus y > row + 1 caseoh
+        rizz x = 0
+        gyatt {
+            sus x > y caseoh
+            sus iscenter(primes, y, x) {
+                rizz yy = y - 1
+                gyatt {
+                    sus yy > y + 1 caseoh
+                    rizz xx = x - 1
+                    gyatt {
+                        sus xx > x + 1 caseoh
+                        rizz k = triangleval(yy, xx)
+                        sus primes[k] && k >= minrow && k <= maxrow {
+                            targetprimes[k] = true
+                        }
+                        xx = xx + 1
+                    }
+                    yy = yy + 1
+                }
+            }
+            x = x + 1
+        }
+        y = y + 1
+    }
+    tiktokrizzparty SkibLang has no 'for' loops. We could use `ohio` to do this, but it's
+    tiktokrizzparty more obnoxious to do the iterator manually, so we're doing it that way :)
+    rizz sum = 0
+    rizz iter = nil
+    rizz state = nil
+    rizz v = nil
+    ohio "iter, state, v =" pairs(targetprimes)
+    gyatt {
+        v = iter(state, v)
+        sus v == nil caseoh
+        sum = sum + v
+    }
+    lowtaperfade sum
+}
+
+print(s(5678026) + s(7208784))

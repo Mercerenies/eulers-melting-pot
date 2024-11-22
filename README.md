@@ -173,6 +173,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * sed
 * Seriously
 * Shakespeare
+* Skib-Lang
 * Smalltalk
 * SNOBOL
 * Snowman
@@ -1375,6 +1376,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem195.cyc](problem195.cyc)
 * Language: [Cyclone](https://cyclone.thelanguage.org/)
 * Compiler / Interpreter: [TIO Nexus](https://tio.run/#cyclone)
+* Notes: (None)
+
+### Euler 196
+* File: [problem196.skib](problem196.skib)
+* Language: [Skib-Lang](https://github.com/alexandermeade/Skib-Lang/tree/main)
+* Compiler / Interpreter: [alexandermeade/Skib-Lang @ abc4d401](https://github.com/alexandermeade/Skib-Lang/tree/abc4d4014f7f7549cb514b43ba1cd748de4ab496)
 * Notes: (None)
 
 ## Valid Languages

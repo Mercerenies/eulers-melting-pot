@@ -123,8 +123,12 @@
 *** Sage (https://adam-mcdaniel.github.io/sage-website/)
 *** Self
 *** Simula (https://en.wikipedia.org/wiki/Simula)
-*** Skib-Lang (https://github.com/AlexanderMeade/Skib-Lang)
-    + Superset of Lua
+*** Skib-Lang (https://github.com/AlexanderMeade/Skib-Lang)            :used:
+    + +Superset of Lua+
+      - Well, not really. It's advertized as a superset of Lua, but
+        now that I dive into it, it's really, really not. It's its own
+        language and while it does compile to Lua, it's /very/ much
+        not a superset.
 *** Skip (https://skiplang.com/)
 *** Smalltalk                                                          :used:
 *** SML                                                                :used:
