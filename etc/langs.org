@@ -368,7 +368,7 @@
     + 32-bit integers
 *** Befunge                                                            :used:
 *** Befunk                                                             :used:
-*** Brachylog (https://github.com/JCumin/Brachylog)
+*** Brachylog (https://github.com/JCumin/Brachylog)                    :used:
 *** Brainf**k                                                          :used:
 *** Broccoli (https://github.com/mathieucaroff/broccoli)               :used:
 *** Burlesque (https://esolangs.org/wiki/Burlesque)                    :used:

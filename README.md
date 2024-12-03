@@ -39,6 +39,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Befreak
 * Befunge
 * Befunk
+* Brachylog
 * Brainf\*\*k
 * Brat
 * Broccoli
@@ -1382,6 +1383,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem196.skib](problem196.skib)
 * Language: [Skib-Lang](https://github.com/alexandermeade/Skib-Lang/tree/main)
 * Compiler / Interpreter: [alexandermeade/Skib-Lang @ abc4d401](https://github.com/alexandermeade/Skib-Lang/tree/abc4d4014f7f7549cb514b43ba1cd748de4ab496)
+* Notes: (None)
+
+### Euler 197
+* File: [problem197.brachylog](problem197.brachylog)
+* Language: [Brachylog](https://github.com/JCumin/Brachylog)
+* Compiler / Interpreter: [TIO Nexus](https://tio.run/#brachylog2)
 * Notes: (None)
 
 ## Valid Languages
