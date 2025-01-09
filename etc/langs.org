@@ -197,6 +197,7 @@
 *** Giml (https://giml-lang.org/)
     + Division is broken, no modulo
 *** Glava                                                              :used:
+*** Goboscript (https://github.com/aspizu/goboscript)
 *** Hyperscript (https://hyperscript.org/)                             :used:
 *** i (https://github.com/Qlova/ilang)                                 :used:
 *** IMPS (https://imps.mcmaster.ca/)
@@ -316,6 +317,7 @@
 *** ELisp                                                              :used:
 *** Guile
 *** Hy (https://en.wikipedia.org/wiki/Hy)                              :used:
+*** Janet (https://janet-lang.org/docs/index.html)
 *** Kawa
 *** Kernel (Klisp)
 *** LFE (Lisp Flavored Erlang)
@@ -375,6 +377,7 @@
 *** Bussin (https://github.com/face-hh/bussin)                         :used:
 *** Brat                                                               :used:
 *** Chef                                                               :used:
+*** ChoiceScript (https://github.com/dfabulich/choicescript/)
 *** CJam                                                               :used:
 *** Comefrom0x10 (https://esolangs.org/wiki/Comefrom0x10)              :used:
 *** COMPLEX                                                            :used:
@@ -703,6 +706,8 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Maml (https://github.com/k-kahora/Maml)
 *** Monte (https://github.com/monte-language/monte)
 *** Mojo (https://www.modular.com/mojo)
+*** Neat (https://neat-lang.github.io/)
+*** Neva (https://github.com/nevalang/neva/)
 *** Nibbles (http://www.golfscript.com/)
 *** Noop (https://en.wikipedia.org/wiki/Noop)
 *** Occam
@@ -729,6 +734,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Squirrel
 *** SuperForth (https://github.com/TheRealMichaelWang/superforth)
 *** Symbolverse (https://github.com/tearflake/symbolverse)
+*** Tree Calculus (https://treecalcul.us/)
 *** Unison (https://www.unison-lang.org/)
 *** Universal Lambda (http://www.golfscript.com/)
 *** Verse (https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference)
