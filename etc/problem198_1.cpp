@@ -12,10 +12,13 @@
 // n. Then consider the nth Farey sequence F_n. The two rational
 // approximations necessarily appear adjacent to each other in F_n,
 // and w is their arithmetic mean.
+//
+// Can't even do up to denominator 20,000. Definitely too slow.
 
 #include <list>
 #include <ostream>
 #include <iostream>
+#include <unordered_set>
 
 template <typename C>
 class PrintableList {
@@ -44,6 +47,18 @@ struct Fraction {
   int d;
 };
 
+Fraction reduce(Fraction ab);
+
+template <>
+struct std::hash<Fraction> {
+  std::size_t operator()(const Fraction& frac) const noexcept {
+    auto frac1 = reduce(frac);
+    auto h1 = std::hash<int>{}(frac1.n);
+    auto h2 = std::hash<int>{}(frac1.d);
+    return h1 ^ (h2 << 1);
+  }
+};
+
 std::ostream& operator<<(std::ostream& out, Fraction ab) {
   return out << ab.n << "/" << ab.d;
 }
@@ -52,6 +67,10 @@ auto operator<=>(Fraction ab, Fraction cd) {
   auto [a, b] = ab;
   auto [c, d] = cd;
   return a * d <=> b * c;
+}
+
+bool operator==(Fraction ab, Fraction cd) {
+  return ab <=> cd == 0;
 }
 
 int gcd(int a, int b) {
@@ -93,7 +112,7 @@ Fraction mean(Fraction ab, Fraction cd) {
 }
 
 // upper_limit is exclusive.
-void generate_next_row(std::list<Fraction>& row, int max_denom, Fraction upper_limit) {
+void generate_next_row(std::list<Fraction>& row, int max_denom) {
   // Generate the new terms.
   auto iter = std::begin(row);
   auto end = std::end(row);
@@ -108,29 +127,38 @@ void generate_next_row(std::list<Fraction>& row, int max_denom, Fraction upper_l
       row.insert(iter_b, mid);
     }
   }
-  // If the last "new" element is outside the range, then we can chop
-  // off the previous "maximum".
-  --end;
-  --end;
-  if (*end >= upper_limit) {
-    row.pop_back();
-  }
 }
 
-std::list<Fraction> starting_farey_sequence() {
-  std::list<Fraction> result;
-  result.push_back({.n = 0, .d = 1});
-  result.push_back({.n = 1, .d = 1});
-  return result;
+void find_means(std::unordered_set<Fraction>& ambiguous_numbers,
+                const std::list<Fraction>& row,
+                Fraction upper_limit) {
+  auto iter = std::begin(row);
+  auto end = std::end(row);
+  while (iter != end) {
+    auto iter_a = iter;
+    auto iter_b = ++iter;
+    auto mid = mean(*iter_a, *iter_b);
+    if (mid < upper_limit) {
+      ambiguous_numbers.insert(mid);
+    }
+  }
 }
 
 int main() {
-  Fraction upper_limit { 1, 100 };
-  auto sequence = starting_farey_sequence();
-  int denom = 1;
-  for (int i = 0; i < 5; i++) {
+  std::unordered_set<Fraction> ambiguous_numbers;
+  std::list<Fraction> sequence {
+    { 0, 1 },
+    { 1, 50 }, // Start at 1/50, since the average of this and 0 is
+               // our actual upper bound of 1/100.
+  };
+  int denom = 50;
+  while (denom < 20000) {
+    if (denom % 100 == 0) {
+      std::cout << denom << std::endl;
+    }
     ++denom;
-    generate_next_row(sequence, denom, upper_limit);
+    generate_next_row(sequence, denom);
+    find_means(ambiguous_numbers, sequence, Fraction{1, 100});
   }
-  std::cout << PrintableList(sequence) << std::endl;
+  std::cout << ambiguous_numbers.size() << std::endl;
 }
