@@ -72,8 +72,34 @@ Fraction mediant(Fraction ab, Fraction cd) {
   return {.n = a + c, .d = b + d};
 }
 
-// TODO Why do we not need to reduce the mean in our case? Why is the
-// mean of two adjacent Farey numbers already in reduced form?
+// Claim: As long as we're taking means of adjacent numbers in some
+// Farey sequence, then we don't need to reduce the fraction. Put
+// another way, the fraction will always have (reduced) denominator
+// 2bd.
+//
+// Lemma: Let a/b and c/d be adjacent numbers in some Farey sequence.
+// Then ad-bc = 1.
+//
+// Proof (Lemma): Theorem 1 in
+// https://www.whitman.edu/Documents/Academics/Mathematics/2016/Zukin.pdf
+//
+// Proof (Claim): The mean of a/b and c/d is written as (ad+bc)/2bd.
+// Suppose, for the sake of contradiction, that this fraction is
+// reducible. Then there is a prime q which divides both the numerator
+// and the denominator. Rewrite the fraction: (ad-bc+2bc)/2bd. By the
+// lemma, this is (1+2bc)/2bd.
+//
+// From this form, we clearly see that the prime q cannot be 2, since
+// the numerator is odd. The prime q must divide either b or d then.
+// It cannot divide b, for the numerator is 1 plus a multiple of b
+// (hence, in that case, 1 plus a multiple of q). So q divides d.
+//
+// Now consider the original fraction again: (ad+bc)/2bd. q divides
+// the numerator and also divides ad, so q divides bc. q cannot divide
+// c since c/d is already in reduced terms (hence c and d are
+// coprime), so we conclude c divides b. But we already proved that c
+// cannot divide b, hence contradiction. Thus, we need not reduce the
+// fraction. Q.E.D
 Fraction mean(Fraction ab, Fraction cd) {
   auto [a, b] = ab;
   auto [c, d] = cd;
@@ -104,8 +130,12 @@ int main() {
     }
 
     auto avg = mean(next.lower, next.upper);
-    // TODO Why can we short-circuit out here? Why do these
-    // denominators of means only strictly increase?
+    // See the above proof for the claim on mean(). The denominator of
+    // avg (in reduced terms) is always 2bd, so as the denominators of
+    // our Farey numbers increase, so does the denominator of the
+    // mean. Hence, if this denominator is too big, then continuing
+    // our search down this branch will only lead to means with larger
+    // denominators.
     if (avg.d > DENOMINATOR_BOUND) {
       continue;
     }
