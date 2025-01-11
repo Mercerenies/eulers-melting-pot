@@ -1,8 +1,8 @@
 
-// Same as problem198_1.cpp but using a sort of breadth-first search
+// Same as problem198_1.cpp but using a sort of depth-first search
 // approach so we don't unnecessarily iterate way too many times.
 //
-// Runs in 8 seconds.
+// Runs in 2 seconds.
 
 #include <stack>
 #include <ostream>
@@ -115,7 +115,22 @@ struct SearchPoint {
 int main() {
   constexpr long DENOMINATOR_BOUND = 100000000;
   constexpr Fraction UPPER_BOUND { 1, 100 };
+
+  // Claim: We will never double-count an ambiguous number with this
+  // algorithm (hence, we just need a long, not a hashset, here).
+  //
+  // Proof: Let (x, y) be the adjacent Farey numbers by which we first
+  // encounter an ambiguous number k. Then, per the discussion above
+  // the mean() function, if the denominators of x and y are b and d
+  // (respectively) then the denominator of k (in reduced form) is
+  // 2bd. As we continue to iterate down in the (x, y) range, we will
+  // get strictly larger denominators, and thus the denominators of
+  // the means will be larger than 2bd. Hence, we cannot generate the
+  // number k again. And this is the only branch in the tree capable
+  // of producing this number, since this is the only branch which
+  // contains numbers in the interval (x, y). Q.E.D
   long ambiguous_numbers = 0L;
+
   std::stack<SearchPoint> frontier;
 
   frontier.push({.lower = {0, 1}, .upper = {1, 50}});
