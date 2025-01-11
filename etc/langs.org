@@ -196,6 +196,7 @@
 *** Genie                                                              :used:
 *** Giml (https://giml-lang.org/)
     + Division is broken, no modulo
+    + Ignore the build instructions and just use ~stack~.
 *** Glava                                                              :used:
 *** Goboscript (https://github.com/aspizu/goboscript)
 *** Hyperscript (https://hyperscript.org/)                             :used:
@@ -228,7 +229,7 @@
 *** Odin (https://odin-lang.org/docs/)                                 :used:
 *** Picat                                                              :used:
 *** Pike                                                               :used:
-*** Pikelet
+*** Pikelet (https://github.com/pikelet-lang/pikelet)
     + No IO
 *** Pikt (https://web.archive.org/web/20080716033727/http://pikt.org/pikt/intro/intro.html)
 *** Pikt (https://github.com/iAmGio/pikt)                              :used:
@@ -382,6 +383,7 @@
 *** Brat                                                               :used:
 *** Chef                                                               :used:
 *** ChoiceScript (https://github.com/dfabulich/choicescript/)
+    + See also https://www.choiceofgames.com/make-your-own-games/choicescript-intro/
 *** CJam                                                               :used:
 *** Comefrom0x10 (https://esolangs.org/wiki/Comefrom0x10)              :used:
 *** COMPLEX                                                            :used:
