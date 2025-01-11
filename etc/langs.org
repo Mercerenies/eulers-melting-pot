@@ -318,6 +318,10 @@
 *** Guile
 *** Hy (https://en.wikipedia.org/wiki/Hy)                              :used:
 *** Janet (https://janet-lang.org/docs/index.html)
+*** Jank (https://jank-lang.org/)
+    + Currently (as of 1/10/25) unreleased, but worth keeping an eye
+      on.
+    + Clojure dialect built for native.
 *** Kawa
 *** Kernel (Klisp)
 *** LFE (Lisp Flavored Erlang)
