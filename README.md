@@ -46,6 +46,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Burlesque
 * Bussin
 * C#
+* Ceylon
 * Chef
 * CIL
 * CJam
@@ -1389,6 +1390,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem197.brachylog](problem197.brachylog)
 * Language: [Brachylog](https://github.com/JCumin/Brachylog)
 * Compiler / Interpreter: [TIO Nexus](https://tio.run/#brachylog2)
+* Notes: (None)
+
+### Euler 198
+* File: [problem198.ceylon](problem198.ceylon)
+* Language: [Ceylon](http://web.mit.edu/ceylon_v1.3.3/ceylon-1.3.3/doc/en/spec/html_single/)
+* Compiler / Interpreter: [TIO Nexus](https://tio.run/#ceylon)
 * Notes: (None)
 
 ## Valid Languages

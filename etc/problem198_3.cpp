@@ -55,3 +55,16 @@ int main() {
 
   std::cout << ambiguous_numbers << std::endl;
 }
+
+// Note on Ceylon implementation: Maximum stack size required is
+// 20,001. Every time we go deeper into the recursion, we push (lower,
+// mid) and (mid, upper) onto the stack, but the latter will be
+// immediately popped, so we effectively add upper.d to the
+// denominator of lower each time. The "worst case" depth for this
+// program occurs when the upper denominator is as small as possible,
+// and this occurs at the very beginning: when the denominator is 50.
+// Hence, the denominator of mid will increase by 50 every iteration.
+// After 20,000 iterations, the element at the top of the stack
+// (element 20,001) is 20,000/1,000,001 and 1/50. The arithmetic mean
+// has denominator 1,000,001 * 50 * 2 = 100,000,100, which is larger
+// than our denominator bound, so we stop recursing.
