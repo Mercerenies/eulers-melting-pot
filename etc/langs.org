@@ -52,10 +52,12 @@
     + Doc links:
       - http://web.mit.edu/ceylon_v1.3.3/ceylon-1.3.3/doc/en/spec/html_single/
       - https://saylong.org/documentation/
+*** Crystal (https://crystal-lang.org/)
 *** D                                                                  :used:
 *** Elixir                                                             :used:
-*** Elm
+*** Elm (https://elm-lang.org/)
 *** Erlang                                                             :used:
+*** Eta (https://eta-lang.org/)
 *** Factor                                                             :used:
 *** Fennel                                                             :used:
 *** Frege (https://github.com/Frege/frege)
@@ -83,6 +85,7 @@
 *** C3 (https://c3-lang.org/primer/)
 *** Catspeak (https://www.katsaii.com/catspeak-lang/3.1.1/hom-welcome.html)
 *** COBOL                                                              :used:
+*** Dart (https://dart.dev/)
 *** Delphi (https://en.wikipedia.org/wiki/Delphi_(software))
     + Verify that this is different enough from Pascal to warrant its
       own slot.
@@ -107,11 +110,11 @@
 *** Koi (https://koi-lang.dev/)
 *** Livescript (https://livescript.net/)
 *** Lunar (https://github.com/lunarlang/lunar)
-*** Maple
+*** Maple (https://www.maplesoft.com/products/Maple/personal_edition/)
 *** MATLAB / Octave                                                    :used:
 *** Mercury (https://www.mercurylang.org/)
-*** Modula
-*** Modula-2
+*** Modula (https://en.wikipedia.org/wiki/Modula)
+*** Modula-2 (https://www.modula2.org/)
 *** MoonScript                                                         :used:
 *** Nemerle                                                            :used:
 *** Nim                                                                :used:
@@ -120,11 +123,11 @@
 *** Oxide (https://github.com/tuqqu/oxide-lang)                        :used:
 *** Pascal                                                             :used:
 *** Pyret (https://pyret.org/index.html)
-*** R
+*** R (https://www.r-project.org/)
 *** Rebol                                                              :used:
 *** Red (https://www.red-lang.org/)
 *** Sage (https://adam-mcdaniel.github.io/sage-website/)
-*** Self
+*** Self (https://selflanguage.org/)
 *** Simula (https://en.wikipedia.org/wiki/Simula)
 *** Skib-Lang (https://github.com/AlexanderMeade/Skib-Lang)            :used:
     + +Superset of Lua+
@@ -135,7 +138,8 @@
 *** Skip (https://skiplang.com/)
 *** Smalltalk                                                          :used:
 *** SML                                                                :used:
-*** Squeak
+*** SML# (https://smlsharp.github.io/en/)
+*** Squeak (https://squeak.org/)
 *** Swift                                                              :used:
 *** Unicon (http://www.unicon.org/)
 *** Verilog                                                            :used:
@@ -177,6 +181,7 @@
 *** Container (https://github.com/odddollar/Container-lang)
     + No arrays
 *** 🆒                                                                 :used:
+*** Cricket (https://github.com/RyanBrewer317/cricket_rs)
 *** Cyclone (http://cyclone.thelanguage.org/)                          :used:
     + Lookts like there's a VirtualBox VM that runs it. It's an
       ancient language and not maintained anymore.
@@ -191,11 +196,11 @@
 *** Egel (https://egel-lang.github.io/)
 *** Egison (https://www.egison.org/)
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
-*** F*
+*** F* (https://fstar-lang.org/)
 *** Fōrmulæ (https://formulae.org/)
 *** G-- (https://github.com/ReyAnthony/G--)
     + Everything is stringy
-*** GAP
+*** GAP (https://www.gap-system.org/)
 *** Genie                                                              :used:
 *** Giml (https://giml-lang.org/)
     + Division is broken, no modulo
@@ -215,7 +220,7 @@
     + 64-bit integers (no bignums)
 *** K                                                                  :used:
     + No bignums
-*** λProlog
+*** λProlog (https://www.lix.polytechnique.fr/Labo/Dale.Miller/lProlog/)
 *** LaTeX                                                              :used:
 *** Lean (https://leanprover-community.github.io/)                     :used:
 *** LilyPond                                                           :used:
@@ -239,7 +244,7 @@
 *** Pony                                                               :used:
 *** Potassco                                                           :used:
 *** Prolog                                                             :used:
-*** PROMAL
+*** PROMAL (https://en.wikipedia.org/wiki/PROMAL)
 *** Redscript (https://wiki.redmodding.org/redscript)
 *** Roy                                                                :used:
 *** Scratch                                                            :used:
@@ -247,7 +252,7 @@
 *** SLOBIL (https://www.reddit.com/r/ProgrammingLanguages/comments/1atnmbk/slobil_slot_and_object_based_interactive_language/)
 *** SNOBOL                                                             :used:
 *** Stacked (https://github.com/ConorOBrien-Foxx/stacked)
-*** Streem
+*** Streem (https://github.com/matz/streem)
 *** Strema (https://gilmi.gitlab.io/strema/)
     + Division is broken, no modulo
 *** SuperCollider                                                      :used:
@@ -257,7 +262,7 @@
 *** Vala                                                               :used:
 *** Vale (https://vale.dev/)                                           :used:
 *** Vale (https://github.com/project-everest/vale)
-*** Vimscript
+*** Vimscript (https://learnxinyminutes.com/vimscript/)
 *** Wenyan                                                             :used:
 *** Whiley (https://en.wikipedia.org/wiki/Whiley_(programming_language))
     + No floating points, only integers
@@ -290,49 +295,49 @@
 *** Dash
 *** Fish                                                               :used:
 *** Ksh
-*** Oilshell
+*** Oils (https://oils.pub/)
 *** Powershell
 *** Scsh
 *** Zsh                                                                :used:
 ** BASIC
    BASIC dialects.
 *** BaCon (http://basic-converter.org/)
-*** Chipmunk BASIC
-*** Commodore BASIC
+*** Chipmunk BASIC (http://www.nicholson.com/rhn/basic/)
+*** Commodore BASIC (https://www.c64-wiki.com/wiki/BASIC)
 *** JustBASIC                                                          :used:
-*** Microsoft SmallBasic
+*** Microsoft SmallBasic (https://smallbasic-publicwebsite.azurewebsites.net/)
 *** QBASIC                                                             :used:
-*** Quite BASIC
+*** Quite BASIC (http://www.quitebasic.com/)
 *** TI BASIC
 *** VBA                                                                :used:
 *** Visual Basic .NET                                                  :used:
-*** XC=BASIC
+*** XC=BASIC (https://xc-basic.net/doku.php?id=v3:start)
 ** LISP
    Lisp dialects.
 *** Arc (https://en.wikipedia.org/wiki/Arc_(programming_language))     :used:
 *** ArkScript (https://github.com/ArkScript-lang/Ark/)                 :used:
-*** AutoLISP
+*** AutoLISP (https://help.autodesk.com/view/OARX/2023/ENU/?guid=GUID-265AADB3-FB89-4D34-AA9D-6ADF70FF7D4B)
 *** Bel (http://www.paulgraham.com/bel.html)
     + Possible interpreter: https://github.com/ajlopez/beljs
-*** Carp
-*** Clojure
-*** ClojureScript
+*** Carp (https://github.com/carp-lang/Carp)
+*** Clojure (https://clojure.org/)
+*** ClojureScript (https://clojurescript.org/)
 *** Common Lisp
 *** ELisp                                                              :used:
-*** Guile
+*** Guile (https://www.gnu.org/software/guile/)
 *** Hy (https://en.wikipedia.org/wiki/Hy)                              :used:
 *** Janet (https://janet-lang.org/docs/index.html)
 *** Jank (https://jank-lang.org/)
     + Currently (as of 1/10/25) unreleased, but worth keeping an eye
       on.
     + Clojure dialect built for native.
-*** Kawa
-*** Kernel (Klisp)
-*** LFE (Lisp Flavored Erlang)
-*** Maclisp
-*** NewLISP
+*** Kawa Scheme (https://www.gnu.org/software/kawa/index.html)
+*** Kernel (Klisp) (https://klisp.org/)
+*** LFE (Lisp Flavored Erlang) (https://lfe.io/)
+*** MACLISP (http://www.maclisp.info/)
+*** newLISP (http://www.newlisp.org/)
 *** Owl (https://gitlab.com/owl-lisp/owl)
-*** Racket
+*** Racket (https://racket-lang.org/)
 *** RainLisp (https://github.com/chr1st0scli/RainLisp)
 *** Scheme
 ** GAMES
@@ -397,6 +402,8 @@
 *** CPound (https://github.com/4o4hasfound/CPound-language)
 *** Cubix                                                              :used:
 *** Cy (https://github.com/cyoce/Cy)
+*** DreamBerd (https://github.com/TodePond/DreamBerd)
+    + Implementation is https://github.com/vivaansinghvi07/dreamberd-interpreter/
 *** ed                                                                 :used:
     + Loops are recursive
     + Short list
@@ -417,8 +424,10 @@
 *** FiM++                                                              :used:
 *** Folders (https://esolangs.org/wiki/Folders)                        :used:
 *** Fourier                                                            :used:
-*** FRACTRAN
+*** FRACTRAN (https://en.wikipedia.org/wiki/FRACTRAN)
     + Short list
+    + A very fast compiled interpreter is available here:
+      https://pimlu.github.io/fractran/
 *** Funciton                                                           :used:
 *** Fuzzy Octo Guacamole (https://codereview.stackexchange.com/questions/124736/fuzzy-octo-guacamole-interpreter)
     + No arrays
@@ -436,7 +445,7 @@
 *** hello, world! (https://github.com/histocrat/hello_world)
 *** Hexagony                                                           :used:
 *** Husk (https://github.com/barbuz/Husk)
-*** Inform 7
+*** Inform 7 (https://www.ifwiki.org/Inform_7)
     + Short List
 *** Japt                                                               :used:
 *** Javagrid (https://esolangs.org/wiki/Javagrid)                      :used:
@@ -672,6 +681,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
     Unimplemented
 ** UNCLASSIFIED
 *** Bend (https://github.com/HigherOrderCO/bend)
+*** Blombly (https://blombly.readthedocs.io/en/latest/)
 *** Bracmat (https://github.com/BartJongejan/Bracmat)
 *** CandleScript
 *** Catln (https://catln.dev/)
@@ -681,16 +691,10 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** ChronLang (https://github.com/DeLuxe-1337/ChronLang)
 *** Coco (https://rosettacode.org/wiki/Category:Coco)
 *** Cubically (https://github.com/aaronryank/cubically)
-*** Cricket (https://github.com/RyanBrewer317/cricket_rs)
-*** Crystal
-*** Dart
-*** DreamBerd (https://github.com/TodePond/DreamBerd)
-    + Implementation is https://github.com/vivaansinghvi07/dreamberd-interpreter/
-*** E
+*** E (http://erights.org/elang/index.html)
 *** Eff (https://www.eff-lang.org/)
-*** EGL
+*** EGL (https://www.ibm.com/docs/en/rbd/9.5.1?topic=applications-egl-language-reference)
 *** emiT (https://www.reddit.com/r/ProgrammingLanguages/comments/1golfwz/emit_a_time_travelling_programming_language/)
-*** Eta (https://eta-lang.org/)
 *** Euler (https://en.wikipedia.org/wiki/Euler_(programming_language))
 *** Fancy
 *** Finite Field Assembly (https://github.com/LeetArxiv/Finite-Field-Assembly)
@@ -737,7 +741,6 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Seph (https://github.com/seph-lang/seph)
 *** Skew (https://github.com/evanw/skew)
 *** Skript (https://docs.skriptlang.org/)
-*** SML# (https://smlsharp.github.io/en/)
 *** smodels (http://www.tcs.hut.fi/Software/smodels/)
 *** Snails
 *** Speedie (https://github.com/gamblevore/speedie/)
