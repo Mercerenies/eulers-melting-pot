@@ -4,6 +4,10 @@
 // as a circle with negative curvature.
 //
 // https://en.wikipedia.org/wiki/Descartes%27_theorem#Statement
+//
+// And... no optimizations necessary, takes 1.3 seconds in Swift. I
+// may try some optimizations anyway just to see how far this rabbit
+// hole goes, but this works.
 
 struct Circle: Equatable, Hashable {
     var radius: Double
@@ -70,7 +74,8 @@ let outerGap = Gap(outerCircle, initialInnerCircle, initialInnerCircle)
 
 var gaps = [WithCoefficient(value: outerGap, coefficient: 3), WithCoefficient(value: centerGap, coefficient: 1)]
 var areaCovered = initialInnerCircle.area * 3
-for _ in 0..<3 {
+for _ in 0..<10 {
     gaps = iterate(gaps: gaps, areaCovered: &areaCovered)
 }
-print((totalArea - areaCovered) / totalArea)
+let areaFraction = (totalArea - areaCovered) / totalArea
+print((areaFraction * 1e8).rounded() / 1e8)
