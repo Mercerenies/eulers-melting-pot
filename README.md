@@ -48,6 +48,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * C#
 * Ceylon
 * Chef
+* ChoiceScript
 * CIL
 * CJam
 * COBOL
@@ -1398,6 +1399,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Compiler / Interpreter: [TIO Nexus](https://tio.run/#ceylon)
 * Notes: (None)
 
+### Euler 199
+* File: [problem199.txt](problem199.txt)
+* Language: [ChoiceScript](https://choicescriptdev.fandom.com/wiki/ChoiceScript_Wiki)
+* Compiler / Interpreter: [dfabulich/choicescript @ 2fdd1d3](https://github.com/dfabulich/choicescript/tree/2fdd1d3fc2cd037b23495710b518cae5c7837159)
+* Notes: An incredibly slow solution, `./etc/build199.sh` may be helpful in building the source.
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular,
@@ -1441,6 +1448,7 @@ estimates, so take them with a grain of salt.
 Currently, the slowest solutions in this repository are:
 * Problem 179 (Whirl) in ~34 minutes
 * Problem 130 (Fourier) in ~26 minutes
+* Problem 199 (ChoiceScript) in ~25 minutes
 * Problem 96 (Javagony) in ~20 minutes
 * Problem 188 (Javagrid) in ~18 minutes
 

@@ -1,0 +1,186 @@
+
+*create_array gaps 708588 0
+*create_array new_gaps 708588 0
+*create initial_inner_circle 0.46410161514
+*create pi 3.1415926535897932384626433832795028841971693993751058209749445923078164062862
+*create area_left 0.0
+*create area_covered 0.0
+*create elem_count 1
+*create tmp0 0.0
+*create tmp1 0.0
+*create tmp2 0.0
+*create i 1
+*create j 1
+*create m 1
+*create s 0.0
+*create x 0.0
+*create k1 0.0
+*create k2 0.0
+*create k3 0.0
+*create k4 0.0
+
+*comment Disable loop limit
+*looplimit 0
+
+*set tmp0 initial_inner_circle
+*set tmp0 * initial_inner_circle
+*set tmp0 * pi
+*set tmp0 * 3
+*set area_left pi
+*set area_left - tmp0
+
+*set gaps[1] initial_inner_circle
+*set gaps[2] initial_inner_circle
+*set gaps[3] initial_inner_circle
+
+*set elem_count 1
+*set j 1
+*set area_covered 0.0
+*label loop1
+*gosub iterate
+*set elem_count * 3
+*gosub move_array
+*set j + 1
+*if j <= 10
+    *goto loop1
+*set area_left - area_covered
+
+*set gaps[1] 0
+*set gaps[1] - 1
+*set gaps[2] initial_inner_circle
+*set gaps[3] initial_inner_circle
+
+*set elem_count 1
+*set j 1
+*set area_covered 0.0
+*label loop2
+*gosub iterate
+*set elem_count * 3
+*gosub move_array
+*set j + 1
+*if j <= 10
+    *goto loop2
+*set tmp0 3
+*set tmp0 * area_covered
+*set area_left - tmp0
+
+*set area_left / pi
+*set area_left * 100000000
+*set area_left round(area_left)
+*set area_left / 100000000
+${area_left}
+
+*finish
+
+*comment Moves from gaps to new_gaps, clobbers i, m, tmp0, tmp1, tmp2, s, x, k1, k2, k3, k4. Adds to area_covered.
+*label iterate
+*set i 0
+*label iterate_loop
+
+*set tmp0 3
+*set tmp0 * i
+
+*set k1 1.0
+*set tmp0 + 1
+*set tmp1 gaps[tmp0]
+*set k1 / tmp1
+
+*set k2 1.0
+*set tmp0 + 1
+*set tmp1 gaps[tmp0]
+*set k2 / tmp1
+
+*set k3 1.0
+*set tmp0 + 1
+*set tmp1 gaps[tmp0]
+*set k3 / tmp1
+
+*set k4 k1
+*set k4 + k2
+*set k4 + k3
+*set s k1
+*set s * k2
+*set tmp0 k2
+*set tmp0 * k3
+*set s + tmp0
+*set tmp0 k1
+*set tmp0 * k3
+*set s + tmp0
+*gosub sqrt
+*set x * 2
+*set k4 + x
+*set tmp0 pi
+*set tmp0 / k4
+*set tmp0 / k4
+*set area_covered + tmp0
+
+*set tmp0 i
+*set tmp0 * 9
+*set tmp0 + 1
+*set new_gaps[tmp0] 1
+*set new_gaps[tmp0] / k4
+
+*set tmp0 + 1
+*set tmp1 i
+*set tmp1 * 3
+*set tmp1 + 1
+*set new_gaps[tmp0] gaps[tmp1]
+
+*set tmp0 + 1
+*set tmp1 + 1
+*set new_gaps[tmp0] gaps[tmp1]
+
+*set tmp0 + 1
+*set new_gaps[tmp0] 1
+*set new_gaps[tmp0] / k4
+
+*set tmp0 + 1
+*set new_gaps[tmp0] gaps[tmp1]
+
+*set tmp0 + 1
+*set tmp1 + 1
+*set new_gaps[tmp0] gaps[tmp1]
+
+*set tmp0 + 1
+*set new_gaps[tmp0] 1
+*set new_gaps[tmp0] / k4
+
+*set tmp0 + 1
+*set new_gaps[tmp0] gaps[tmp1]
+
+*set tmp0 + 1
+*set tmp1 - 2
+*set new_gaps[tmp0] gaps[tmp1]
+
+*set i + 1
+*if i < elem_count
+    *goto iterate_loop
+*return
+
+*comment Takes argument in s, returns in x. Clobbers m and tmp0
+*label sqrt
+*set x s
+*set x / 2
+*set m 1
+*label sqrt_loop
+*set tmp0 s
+*set tmp0 / x
+*set tmp0 + x
+*set tmp0 / 2.0
+*set x tmp0
+*set m + 1
+*if m < 200
+    *goto sqrt_loop
+*return
+
+*comment Takes elem_count. Clobbers m and tmp0. Moves from new_gaps to gaps.
+*label move_array
+*set m 1
+*set tmp0 3
+*set tmp0 * elem_count
+*label move_array_loop
+*set gaps[m] new_gaps[m]
+*set m + 1
+*if m <= tmp0
+    *goto move_array_loop
+*return
