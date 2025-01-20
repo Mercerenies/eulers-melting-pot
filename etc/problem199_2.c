@@ -1,5 +1,7 @@
 
 // Extremely low-level version of problem199.swift
+//
+// Instantaneous in C with default optimization level.
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -7,23 +9,15 @@
 const int MAX_ARRAY_SIZE = 708588; // = 3 * 4 * 3^10
 const double PI = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862;
 
-const int TAYLOR_SERIES_TERMS = 10;
+const int HERONS_METHOD_ITERATIONS = 200;
 
-// https://math.stackexchange.com/a/732660/84460
-double sqrt_approx(double x) {
-  double sum = 1.0;
-  for (int k = 0; k < TAYLOR_SERIES_TERMS; k++) {
-    double product = 2.0 / (k + 1.0);
-    for (int j = 1; j <= k; j++) {
-      product *= (k + j) / j;
-    }
-    for (int j = 0; j < k + 1; j++) {
-      product *= (- (x - 1.0) / 4.0);
-    }
-    printf("%f\n", product);
-    sum -= product;
+// Heron's Method (https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Heron's_method)
+double sqrt_approx(double s) {
+  double x = s / 2;
+  for (int i = 0; i < HERONS_METHOD_ITERATIONS; i++) {
+    x = (s / x + x) / 2.0;
   }
-  return sum;
+  return x;
 }
 
 double iterate(double* in, double* out, int input_count) {
@@ -48,9 +42,6 @@ double iterate(double* in, double* out, int input_count) {
 }
 
 int main() {
-  printf("%f\n", sqrt_approx(4.0));
-  return 0;
-
   double outer_circle = -1.0;
   double initial_inner_circle = 0.46410161514; // = 2 sqrt(3) - 3
   double* gaps = malloc(MAX_ARRAY_SIZE * sizeof(double));
