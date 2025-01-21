@@ -79,6 +79,8 @@ def is_prime_proof(n: int) -> bool:
         for i in range(len(digits)):
             original_value = digits[i]
             for d in '0123456789':
+                if d == '0' and i == 0:
+                    continue  # Can't replace leading digit with zero.
                 digits[i] = d
                 if is_prime(int(''.join(digits))):
                     return False
@@ -87,17 +89,12 @@ def is_prime_proof(n: int) -> bool:
 
 
 if __name__ == "__main__":
-    for i in range(1000):
-        if is_prime_proof(i):
-            print(i)
-
-    '''
-    desired_sqube_count = 10
+    desired_sqube_count = 30
     substr = '200'
     for sqube in all_squbes():
         if is_prime_proof(sqube.value) and substr in str(sqube.value):
             desired_sqube_count -= 1
+            print(sqube.value)
             if not desired_sqube_count:
                 break
     print(sqube.value)
-    '''
