@@ -1,5 +1,10 @@
 
-"""Naive solution, just to get a feel for the pattern."""
+"""Naive solution, just to get a feel for the pattern.
+
+Okay, naive solution works in 9.5 minutes, assuming we go with my fast
+prime-proof checker (which I haven't proven why it works yet).
+
+"""
 
 from __future__ import annotations
 
@@ -88,13 +93,24 @@ def is_prime_proof(n: int) -> bool:
         return True
 
 
+def is_prime_proof_fast(n: int) -> bool:
+    # I don't know if this works, but I'm conjecturing that it's
+    # equivalent.
+    if n % 10 not in (0, 2, 4, 5, 6, 8):
+        return False
+    n = (n // 10) * 10
+    if is_prime(n + 1) or is_prime(n + 3) or is_prime(n + 7) or is_prime(n + 9):  # noqa
+        return False
+    return True
+
+
 if __name__ == "__main__":
-    desired_sqube_count = 30
+    desired_sqube_count = 200
     substr = '200'
     for sqube in all_squbes():
-        if is_prime_proof(sqube.value) and substr in str(sqube.value):
+        if is_prime_proof_fast(sqube.value) and substr in str(sqube.value):
             desired_sqube_count -= 1
-            print(sqube.value)
+            print(desired_sqube_count, sqube.value)
             if not desired_sqube_count:
                 break
     print(sqube.value)
