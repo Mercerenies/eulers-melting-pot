@@ -1,8 +1,7 @@
 
 """Naive solution, just to get a feel for the pattern.
 
-Okay, naive solution works in 9.5 minutes, assuming we go with my fast
-prime-proof checker (which I haven't proven why it works yet).
+Okay, naive solution works in 40 seconds.
 
 """
 
@@ -71,16 +70,16 @@ def is_prime_proof(n: int) -> bool:
     digit of n. Precondition: n is itself non-prime.
 
     """
-    digits = list(str(n))
-    if digits[-1] in '024568':
+    if n % 10 in (0, 2, 4, 5, 6, 8):
         # Easy case: We only need to check the final digit.
-        for d in '0123456789':
-            digits[-1] = d
-            if is_prime(int(''.join(digits))):
+        n = (n // 10) * 10
+        for k in (1, 3, 7, 9):
+            if is_prime(n + k):
                 return False
         return True
     else:
         # Hard case: Check all digits.
+        digits = list(str(n))
         for i in range(len(digits)):
             original_value = digits[i]
             for d in '0123456789':
@@ -108,7 +107,7 @@ if __name__ == "__main__":
     desired_sqube_count = 200
     substr = '200'
     for sqube in all_squbes():
-        if is_prime_proof_fast(sqube.value) and substr in str(sqube.value):
+        if substr in str(sqube.value) and is_prime_proof(sqube.value):
             desired_sqube_count -= 1
             print(desired_sqube_count, sqube.value)
             if not desired_sqube_count:
