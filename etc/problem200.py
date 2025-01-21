@@ -70,6 +70,10 @@ def is_prime_proof(n: int) -> bool:
     digit of n. Precondition: n is itself non-prime.
 
     """
+
+    # Amusingly, it seems like all of the squbes containing 200 within
+    # our domain space are actually in the "easy case". But that's not
+    # true of squbes in general, so I can't exploit that fact here.
     if n % 10 in (0, 2, 4, 5, 6, 8):
         # Easy case: We only need to check the final digit.
         n = (n // 10) * 10
@@ -90,17 +94,6 @@ def is_prime_proof(n: int) -> bool:
                     return False
             digits[i] = original_value
         return True
-
-
-def is_prime_proof_fast(n: int) -> bool:
-    # I don't know if this works, but I'm conjecturing that it's
-    # equivalent.
-    if n % 10 not in (0, 2, 4, 5, 6, 8):
-        return False
-    n = (n // 10) * 10
-    if is_prime(n + 1) or is_prime(n + 3) or is_prime(n + 7) or is_prime(n + 9):  # noqa
-        return False
-    return True
 
 
 if __name__ == "__main__":
