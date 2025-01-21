@@ -1,26 +1,73 @@
 
-"""Naive solution, just to get a feel for the pattern.
+"""Adding Miller Rabin prime test.
 
-Okay, naive solution works in 40 seconds.
+6 seconds in Python.
 
 """
 
 from __future__ import annotations
 
-from functools import cache, total_ordering
+from functools import total_ordering
 from dataclasses import dataclass, field, replace
 from queue import PriorityQueue
 from typing import Iterator
 
 
-@cache
-def is_prime(x: int) -> bool:
+def is_prime_naive(x: int) -> bool:
     """Naive primality checker."""
     i = 2
     while i * i <= x:
         if x % i == 0:
             return False
         i += 1
+    return True
+
+
+def pow_mod(a, b, n):
+    if b == 0:
+        return 1
+    elif b % 2 == 0:
+        x = pow_mod(a, b // 2, n)
+        return (x * x) % n
+    else:
+        return (pow_mod(a, b - 1, n) * a) % n
+
+
+def miller_rabin_test(n, d, r, a):
+    x = pow_mod(a, d, n)
+    if x == 1 or x == n - 1:
+        return True
+    for _i in range(r):
+        x = (x * x) % n
+        if x == n - 1:
+            return True
+    return False
+
+
+def is_prime(n: int) -> bool:
+    if n < 2:
+        return False
+    if n == 2 or n == 3 or n == 5 or n == 13 or n == 23 or n == 1662803:
+        return True
+    if n % 2 == 0 or n % 3 == 0 or n % 5 == 0:
+        return False
+    if n >= 1_122_004_669_633:
+        return is_prime_naive(n)
+
+    d = n - 1
+    r = 0
+    while d % 2 == 0:
+        d //= 2
+        r += 1
+
+    if not miller_rabin_test(n, d, r, 2):
+        return False
+    if not miller_rabin_test(n, d, r, 13):
+        return False
+    if not miller_rabin_test(n, d, r, 23):
+        return False
+    if not miller_rabin_test(n, d, r, 1662803):
+        return False
     return True
 
 
