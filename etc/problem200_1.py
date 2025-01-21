@@ -3,6 +3,8 @@
 
 6 seconds in Python.
 
+Down to 4 seconds with better iteration order in squbes generation.
+
 """
 
 from __future__ import annotations
@@ -96,20 +98,17 @@ class Sqube:
 
 
 def all_squbes() -> Iterator[Sqube]:
-    visited = set()
     frontier: PriorityQueue[Sqube] = PriorityQueue()
     frontier.put(Sqube(2, 2))
     while True:
         next_value = frontier.get()
-        if next_value in visited:
-            continue
-        visited.add(next_value)
         if next_value.is_proper():
             yield next_value
         p1 = next_prime(next_value.p + 1)
-        q1 = next_prime(next_value.q + 1)
         frontier.put(replace(next_value, p=p1))
-        frontier.put(replace(next_value, q=q1))
+        if next_value.p == 2:
+            q1 = next_prime(next_value.q + 1)
+            frontier.put(replace(next_value, q=q1))
 
 
 def is_prime_proof(n: int) -> bool:
