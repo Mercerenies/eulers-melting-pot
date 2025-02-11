@@ -80,6 +80,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * 𝔼𝕊𝕄𝕚𝕟
 * Factor
 * Factorio
+* Falcon
 * FALSE
 * Fennel
 * FiM++
@@ -1404,6 +1405,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [ChoiceScript](https://choicescriptdev.fandom.com/wiki/ChoiceScript_Wiki)
 * Compiler / Interpreter: [dfabulich/choicescript @ 2fdd1d3](https://github.com/dfabulich/choicescript/tree/2fdd1d3fc2cd037b23495710b518cae5c7837159)
 * Notes: An incredibly slow solution, `./etc/build199.sh` may be helpful in building the source.
+
+### Euler 200
+* File: [problem200.fal](problem200.fal)
+* Language: [Falcon](http://kib2.free.fr/Falcon/sg/Falcon's%20Survival%20Guide.html)
+* Compiler / Interpreter: [falcon 0.9.6.9 (Chimera) @ fc403c6](https://github.com/falconpl/falcon/tree/fc403c6e8c1f3d8c2a5a6ebce5db6f1b3e355808)
+* Notes: (None)
 
 ## Valid Languages
 

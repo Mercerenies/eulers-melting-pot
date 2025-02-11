@@ -63,7 +63,7 @@ class PriorityQueue[T: Ordered]:
             if left_index < len(self._tree) and self._tree[left_index] < self._tree[curr_index]:
                 smaller_index = left_index
             if right_index < len(self._tree) and self._tree[right_index] < self._tree[curr_index]:
-                if smaller_index == -1 or self._tree[right_index] < self._tree[left_index]:
+                if smaller_index == -1 or self._tree[right_index] < self._tree[smaller_index]:
                     smaller_index = right_index
             if smaller_index == -1:
                 break  # Done swapping.
@@ -204,7 +204,14 @@ if __name__ == "__main__":
     substr = '200'
     for sqube in all_squbes():
         if substr in str(sqube.value) and is_prime_proof(sqube.value):
+            print(sqube.value)
             desired_sqube_count -= 1
             if not desired_sqube_count:
                 break
     print(sqube.value)
+
+# So, notes on problem200.fal: Miller Rabin overflows 64-bit integers
+# but naive primality works. I can't believe I wrote like six Miller
+# Rabin checks for this when I didn't need any of them.
+#
+# Old Falcon code for Miller Rabin is at problem200_millerrabin.fal

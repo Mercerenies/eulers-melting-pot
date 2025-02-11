@@ -95,9 +95,14 @@
 *** Earl Grey                                                          :used:
 *** Eiffel                                                             :used:
 *** F#
-*** Falcon (https://rosettacode.org/wiki/Category:Falcon)
+*** Falcon (https://rosettacode.org/wiki/Category:Falcon)              :used:
     + This website probably has the most up-to-date interpreters:
       http://falconpl.org/
+      - This site is only on archive.org
+    + Another (possibly unofficial) mirror of the above:
+      http://kib2.free.fr/Falcon/sg/Falcon's%20Survival%20Guide.html
+    + Run from build directory as
+      - ~LD_LIBRARY_PATH=./lib time ./bin/falcon ../../../<filename>.fal~
 *** Fantom (https://www.fantom.org/)
 *** Flix (https://github.com/flix/flix)
 *** Forth                                                              :used:
@@ -184,7 +189,7 @@
 *** 🆒                                                                 :used:
 *** Cricket (https://github.com/RyanBrewer317/cricket_rs)
 *** Cyclone (http://cyclone.thelanguage.org/)                          :used:
-    + Lookts like there's a VirtualBox VM that runs it. It's an
+    + Looks like there's a VirtualBox VM that runs it. It's an
       ancient language and not maintained anymore.
     + Also, it's just on TIO. I should've checked that first >.>
 *** Dafny                                                              :used:
