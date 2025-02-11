@@ -35,6 +35,7 @@
 *** SageMath (https://www.sagemath.org/)
 *** Scala
 *** Tcl                                                                :used:
+*** Teal (https://github.com/teal-language/tl)
 *** Typescript                                                         :used:
 *** Zig                                                                :used:
 ** GOLD
