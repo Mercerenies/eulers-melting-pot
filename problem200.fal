@@ -1,0 +1,186 @@
+
+// Array that can dynamically expand to the right.
+class ArrayList()
+    content = arrayBuffer(100)
+    size = 0
+
+    function len()
+        return self.size
+    end
+
+    function __getIndex( index )
+        if index < 0 or index >= self.size
+            raise AccessError()
+        else
+            return self.content[index]
+        end
+    end
+
+    function __setIndex( index, value )
+        if index < 0 or index >= self.size
+            raise AccessError()
+        else
+            self.content[index] = value
+        end
+    end
+
+    function push( value )
+        if self.size >= self.content.len()
+            self.content += arrayBuffer(self.content.len())
+        end
+        self.content[self.size] = value
+        self.size += 1
+    end
+
+    function pop( value )
+        if self.size == 0
+            raise AccessError()
+        end
+        result = self.content[self.size - 1]
+        self.size -= 1
+        self.content[self.size] = nil
+        return result
+    end
+end
+
+class PriorityQueue()
+    tree = ArrayList()
+
+    function put( value )
+        curr_index = self.tree.len()
+        self.tree.push( value )
+        while curr_index != 0
+            parent_index = floor((curr_index + 1) / 2) - 1
+            if self.tree[parent_index] <= self.tree[curr_index]
+                break
+            end
+            curr_index = parent_index
+        end
+    end
+
+    function pop()
+        if self.tree.len() == 0
+            raise AccessError()
+        end
+        return_value = self.tree[0]
+        if self.tree.len() == 1
+            // Tree is a singleton, so empty the list.
+            self.tree.pop()
+            return return_value
+        end
+        self.tree[0] = self.tree.pop()
+        curr_index = 0
+        while curr_index <= self.tree.len()
+            left_index = (curr_index + 1) * 2 - 1
+            right_index = (curr_index + 1) * 2
+            smaller_index = -1
+            if left_index < self.tree.len() and self.tree[left_index] < self.tree[curr_index]
+                smaller_index = left_index
+            end
+            if right_index < self.tree.len() and self.tree[right_index] < self.tree[curr_index]
+                if smaller_index == -1 or self.tree[right_index] < self.tree[smaller_index]
+                    smaller_index = right_index
+                end
+            end
+            if smaller_index == -1
+                break // Done swapping
+            end
+            tmp = self.tree[smaller_index]
+            self.tree[smaller_index] = self.tree[curr_index]
+            self.tree[curr_index] = tmp
+            curr_index = smaller_index
+        end
+        return return_value
+    end
+end
+
+class Sqube( p, q )
+    p = p
+    q = q
+    value = p * p * q * q * q
+
+    function compare( item )
+        return self.value.compare( item.value )
+    end
+
+    function isProper()
+        return self.p != self.q
+    end
+end
+
+function isPrime( x )
+    i = 2
+    while i * i <= x
+        if x % i == 0
+            return false
+        end
+        i += 1
+    end
+    return true
+end
+
+function nextPrime( n )
+    while not isPrime( n )
+        n += 1
+    end
+    return n
+end
+
+function strToInt( s )
+    n = 0
+    for i in [0:s.len()]
+        n = n * 10 + (ord(s[i]) - ord("0"))
+    end
+    return n
+end
+
+function isPrimeProof( n )
+    if n % 10 in [0, 2, 4, 5, 6, 8]
+        n = floor(n / 10) * 10
+        for k in [1, 3, 7, 9]
+            if isPrime( n + k )
+                return false
+            end
+        end
+        return true
+    else
+        digits = n.toString()
+        for i in [0:digits.len()]
+            original_value = digits[i]
+            for d in [0:10]
+                if d == 0 and i == 0
+                    continue // Can't replace leading digit with zero
+                end
+                digits[i] = chr(d + ord("0"))
+                if isPrime( strToInt( digits ) )
+                    return false
+                end
+            end
+            digits[i] = original_value
+        end
+        return true
+    end
+end
+
+frontier = PriorityQueue()
+frontier.put( Sqube(2, 2) )
+desired_sqube_count = 200
+while true
+    next_value = frontier.pop()
+    if next_value.isProper()
+        if ("200" in next_value.value.toString()) and isPrimeProof( next_value.value )
+            desired_sqube_count -= 1
+            if desired_sqube_count <= 0
+                break
+            end
+        end
+    end
+    p1 = nextPrime( next_value.p + 1 )
+    frontier.put( Sqube(p1, next_value.q) )
+    if next_value.p == 2
+        q1 = nextPrime( next_value.q + 1 )
+        frontier.put( Sqube(2, q1) )
+    end
+end
+
+> next_value.value

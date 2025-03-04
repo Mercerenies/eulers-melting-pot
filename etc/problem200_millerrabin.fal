@@ -1,0 +1,43 @@
+function millerRabinTest( n, d, r, a )
+    x = powMod( a, d, n )
+    if x == 1 or x == n - 1
+        return true
+    end
+    for i in [0:r]
+        x = ( x * x ) % n
+        if x == n - 1
+            return true
+        end
+    end
+    return false
+end
+
+function isPrime( n )
+    if n < 2
+        return false
+    elif n == 2 or n == 3 or n == 5 or n == 13 or n == 23 or n == 1662803
+        return true
+    elif n % 2 == 0 or n % 3 == 0 or n % 5 == 0
+        return false
+    elif n >= 1122004669633
+        return isPrimeNaive( n )
+    else
+        d = n - 1
+        r = 0
+        while d % 2 == 0
+            d /= 2
+            r += 1
+        end
+        if not millerRabinTest( n, d, r, 2 )
+            return false
+        elif not millerRabinTest( n, d, r, 13 )
+            return false
+        elif not millerRabinTest( n, d, r, 23 )
+            return false
+        elif not millerRabinTest( n, d, r, 1662803 )
+            return false
+        else
+            return true
+        end
+    end
+end
