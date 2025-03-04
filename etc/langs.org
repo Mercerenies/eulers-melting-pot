@@ -188,6 +188,7 @@
     + No arrays
 *** 🆒                                                                 :used:
 *** Cricket (https://github.com/RyanBrewer317/cricket_rs)
+*** CUE (https://cuelang.org/)
 *** Cyclone (http://cyclone.thelanguage.org/)                          :used:
     + Looks like there's a VirtualBox VM that runs it. It's an
       ancient language and not maintained anymore.
@@ -697,6 +698,8 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Charm++ (https://en.wikipedia.org/wiki/Charm%2B%2B)
 *** ChronLang (https://github.com/DeLuxe-1337/ChronLang)
 *** Coco (https://rosettacode.org/wiki/Category:Coco)
+*** Concrete (https://github.com/lambdaclass/concrete)
+    + Looks pretty early in development, but promising
 *** Cubically (https://github.com/aaronryank/cubically)
 *** E (http://erights.org/elang/index.html)
 *** Eff (https://www.eff-lang.org/)
@@ -761,6 +764,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Tree Calculus (https://treecalcul.us/)
 *** Unison (https://www.unison-lang.org/)
 *** Universal Lambda (http://www.golfscript.com/)
+*** uza (https://github.com/msanlop/uza)
 *** Verse (https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference)
 *** VHDL
 *** Vortex (https://github.com/dibsonthis/Vortex)
