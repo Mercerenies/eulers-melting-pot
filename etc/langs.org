@@ -704,6 +704,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** E (http://erights.org/elang/index.html)
 *** Eff (https://www.eff-lang.org/)
 *** EGL (https://www.ibm.com/docs/en/rbd/9.5.1?topic=applications-egl-language-reference)
+*** Elk (https://github.com/PaddiM8/elk)
 *** emiT (https://www.reddit.com/r/ProgrammingLanguages/comments/1golfwz/emit_a_time_travelling_programming_language/)
 *** Euler (https://en.wikipedia.org/wiki/Euler_(programming_language))
 *** Fancy
@@ -727,6 +728,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Lava (https://lavape.sourceforge.net/)
 *** Logtalk (https://logtalk.org/)
 *** Logoi (https://github.com/Logoi-Linguistics/Logoi-Linguistics)
+*** Lotus (https://github.com/ScrumboardCompany/Lotus)
 *** Luau (https://github.com/luau-lang/luau)
     Further research needed: Is this different enough from Lua to
     warrant its own entry?
