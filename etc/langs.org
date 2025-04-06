@@ -754,6 +754,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** SuperForth (https://github.com/TheRealMichaelWang/superforth)
 *** Symbolverse (https://github.com/tearflake/symbolverse)
 *** Tailspin (https://github.com/tobega/tailspin-v0/)
+*** TomatoScript (https://github.com/cmspeedrunner/Tomato)
 *** Tree Calculus (https://treecalcul.us/)
 *** Unison (https://www.unison-lang.org/)
 *** Universal Lambda (http://www.golfscript.com/)
