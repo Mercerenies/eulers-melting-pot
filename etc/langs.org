@@ -188,6 +188,7 @@
     + No arrays
 *** 🆒                                                                 :used:
 *** Cricket (https://github.com/RyanBrewer317/cricket_rs)
+*** CUE (https://cuelang.org/)
 *** Cyclone (http://cyclone.thelanguage.org/)                          :used:
     + Looks like there's a VirtualBox VM that runs it. It's an
       ancient language and not maintained anymore.
@@ -308,6 +309,7 @@
 ** BASIC
    BASIC dialects.
 *** BaCon (http://basic-converter.org/)
+*** Blitz BASIC (https://en.wikipedia.org/wiki/Blitz_BASIC)
 *** Chipmunk BASIC (http://www.nicholson.com/rhn/basic/)
 *** Commodore BASIC (https://www.c64-wiki.com/wiki/BASIC)
 *** JustBASIC                                                          :used:
@@ -696,10 +698,13 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Charm++ (https://en.wikipedia.org/wiki/Charm%2B%2B)
 *** ChronLang (https://github.com/DeLuxe-1337/ChronLang)
 *** Coco (https://rosettacode.org/wiki/Category:Coco)
+*** Concrete (https://github.com/lambdaclass/concrete)
+    + Looks pretty early in development, but promising
 *** Cubically (https://github.com/aaronryank/cubically)
 *** E (http://erights.org/elang/index.html)
 *** Eff (https://www.eff-lang.org/)
 *** EGL (https://www.ibm.com/docs/en/rbd/9.5.1?topic=applications-egl-language-reference)
+*** Elk (https://github.com/PaddiM8/elk)
 *** emiT (https://www.reddit.com/r/ProgrammingLanguages/comments/1golfwz/emit_a_time_travelling_programming_language/)
 *** Euler (https://en.wikipedia.org/wiki/Euler_(programming_language))
 *** Fancy
@@ -708,6 +713,9 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Flora (https://flora.sourceforge.net/)
 *** Genesis (https://github.com/elonlit/Genesis)
 *** Gluon
+*** Gofer (https://en.wikipedia.org/wiki/Gofer_(programming_language))
+    + Early Haskell-like language; hard part will probably be finding
+      an interpreter that will run on modern hardware
 *** Gren (https://gren-lang.org/)
 *** Hare (https://harelang.org/)
 *** Helix (https://www.reddit.com/r/ProgrammingLanguages/comments/1god9l6/new_programming_language_helix/)
@@ -720,6 +728,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Lava (https://lavape.sourceforge.net/)
 *** Logtalk (https://logtalk.org/)
 *** Logoi (https://github.com/Logoi-Linguistics/Logoi-Linguistics)
+*** Lotus (https://github.com/ScrumboardCompany/Lotus)
 *** Luau (https://github.com/luau-lang/luau)
     Further research needed: Is this different enough from Lua to
     warrant its own entry?
@@ -758,6 +767,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Tree Calculus (https://treecalcul.us/)
 *** Unison (https://www.unison-lang.org/)
 *** Universal Lambda (http://www.golfscript.com/)
+*** uza (https://github.com/msanlop/uza)
 *** Verse (https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference)
 *** VHDL
 *** Vortex (https://github.com/dibsonthis/Vortex)
