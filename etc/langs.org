@@ -462,6 +462,7 @@
 *** Labyrinth                                                          :used:
 *** LOLCODE (https://en.wikipedia.org/wiki/LOLCODE)
 *** MagiStack                                                          :used:
+*** Mao (https://github.com/BradenEverson/mao)
 *** Math++                                                             :used:
 *** MATL                                                               :used:
 *** Minus (http://www.golfscript.com/minus/index.html)                 :used:
