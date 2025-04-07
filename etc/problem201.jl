@@ -2,6 +2,10 @@
 # We take the sums one step at a time. Each partial sum is stored as a
 # pair containing the largest number used in the sum so far, as well
 # as a Boolean indicating whether or not we've found duplicates.
+#
+# Undercounts: We lose solutions when we count something as non-unique
+# and then a unique sum is formed of it (essentially we're poisoning
+# too many values)
 
 struct PartialSum
     largestindex::Int
