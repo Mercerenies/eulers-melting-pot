@@ -92,5 +92,5 @@ function bruteforce()
     return sum(results)
 end
 
-#println(bruteforce())
-println(uniquesums(50, 100))
+println(bruteforce())
+#println(uniquesums(50, 100))
