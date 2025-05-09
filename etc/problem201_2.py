@@ -51,4 +51,4 @@ def unique_sums(addends: int, max_index: int) -> int:
 
 
 if __name__ == "__main__":
-    print(unique_sums(20, 40))
+    print(unique_sums(10, 20))
