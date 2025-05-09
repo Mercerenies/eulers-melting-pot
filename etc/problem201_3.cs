@@ -1,4 +1,6 @@
 
+// 12ish seconds, success.
+
 using System;
 using System.Collections.Generic;
 
@@ -13,14 +15,16 @@ public class problem201_4 {
     long totalSum = 0;
     // 42,925 = sum of first 50 squares, 295,425 = sum of next 50 squares
     for (long i = 42_925; i <= 295_425; i++) {
-      if (i % 1000 == 0) {
-        Console.WriteLine(i);
-      }
+      //if (i % 1000 == 0) {
+      //  Console.WriteLine(i);
+      //}
       if (canUniquelySumTo(i, 100, 50)) {
         //Console.WriteLine(i);
         totalSum += i;
       }
     }
+    Console.WriteLine(cache.Count);
+    Console.WriteLine(uniqueCache.Count);
     Console.WriteLine(totalSum);
   }
 
