@@ -169,6 +169,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Pyth
 * Pyramid Scheme
 * QBASIC
+* R
 * Rebol
 * Rockstar
 * Roy
@@ -1412,6 +1413,13 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Compiler / Interpreter: [falcon 0.9.6.9 (Chimera) @ fc403c6](https://github.com/falconpl/falcon/tree/fc403c6e8c1f3d8c2a5a6ebce5db6f1b3e355808)
 * Notes: (None)
 
+
+### Euler 201
+* File: [problem201.R](problem201.R)
+* Language: [R](https://www.r-project.org/)
+* Compiler / Interpreter: [R version 4.4.1 (2024-06-14) -- "Race for Your Life"](https://svn.r-project.org/R/branches/R-4-4-branch/)
+* Notes: An incredibly slow solution.
+
 ## Valid Languages
 
 Mostly, I am just using common sense to determine what constitutes a "language". In particular,
@@ -1453,6 +1461,7 @@ estimates, so take them with a grain of salt.
 * More than 10min: "An incredibly slow solution"
 
 Currently, the slowest solutions in this repository are:
+* Problem 201 (R) in ~73 minutes
 * Problem 179 (Whirl) in ~34 minutes
 * Problem 130 (Fourier) in ~26 minutes
 * Problem 199 (ChoiceScript) in ~25 minutes

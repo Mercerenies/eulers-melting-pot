@@ -129,7 +129,7 @@
 *** Oxide (https://github.com/tuqqu/oxide-lang)                        :used:
 *** Pascal                                                             :used:
 *** Pyret (https://pyret.org/index.html)
-*** R (https://www.r-project.org/)
+*** R (https://www.r-project.org/)                                     :used:
 *** Rebol                                                              :used:
 *** Red (https://www.red-lang.org/)
 *** Sage (https://adam-mcdaniel.github.io/sage-website/)
@@ -146,6 +146,7 @@
 *** SML                                                                :used:
 *** SML# (https://smlsharp.github.io/en/)
 *** Squeak (https://squeak.org/)
+    + Arguably just a Smalltalk dialect.
 *** Swift                                                              :used:
 *** Unicon (http://www.unicon.org/)
 *** Verilog                                                            :used:
@@ -274,6 +275,9 @@
 *** Whiley (https://en.wikipedia.org/wiki/Whiley_(programming_language))
     + No floating points, only integers
     + Compiles to JVM
+    + Slow-ish
+    + The container library seems to give spurious errors; we might
+      not have hash maps
 *** Wren                                                               :used:
 *** Wyvern                                                             :used:
 *** XSLT                                                               :used:
