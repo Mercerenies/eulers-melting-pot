@@ -1,0 +1,31 @@
+let y is 2
+let count is 0
+let t is 0
+mod $t is $y and 5
+skipif $t > 0 1
+goto 26
+mod $t is $y and 11
+skipif $t > 0 1
+goto 26
+mod $t is $y and 17
+skipif $t > 0 1
+goto 26
+mod $t is $y and 23
+skipif $t > 0 1
+goto 26
+mod $t is $y and 29
+skipif $t > 0 1
+goto 26
+mod $t is $y and 41
+skipif $t > 0 1
+goto 26
+mod $t is $y and 47
+skipif $t > 0 1
+goto 26
+add $count is $count and 1
+add $y is $y and 3
+skipif $y >= 100000 1
+goto 4
+let tmp is 0
+mul $tmp is 2 and $count
+pr $tmp
