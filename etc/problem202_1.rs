@@ -58,6 +58,9 @@
 // only necessary to test y < x / 2 and then multiply the result by 2.
 //
 // 2m19s in Rust with -O. It's correct.
+//
+// count_ways_new (using information about prime factors) runs in 2
+// seconds.
 
 fn gcd(mut a: i64, mut b: i64) -> i64 {
   while b != 0 {
@@ -69,11 +72,14 @@ fn gcd(mut a: i64, mut b: i64) -> i64 {
 }
 
 fn count_ways(refl: i64) -> i64 {
+  if refl == 1 {
+    return 1; // Degenerate case
+  }
   if refl % 2 == 0 {
     return 0; // No solutions
   }
   let x = (refl + 3) / 2;
-  let mut y = (3 - x) % 3;
+  let mut y = (3 - (x % 3)) % 3;
   let mut count = 0;
   while y < x / 2 {
     if (x + y) % 99999999 == 0 { // Needs to hit 120
@@ -87,6 +93,27 @@ fn count_ways(refl: i64) -> i64 {
   2 * count
 }
 
+fn count_ways_new() -> i64 {
+  // When refl = 12017639147, then x = 6008819575. The distinct prime
+  // factors of x are (5, 11, 17, 23, 29, 41, 47). So to determine if
+  // a number is coprime to x, check if it has any prime factors in
+  // common.
+  let factors = [5, 11, 17, 23, 29, 41, 47];
+  let x: i64 = 6008819575;
+  let mut y = (3 - (x % 3)) % 3;
+  let mut count = 0;
+  while y < x / 2 {
+    if !factors.iter().any(|&f| y % f == 0) {
+      count += 1;
+    }
+    y += 3;
+  }
+  2 * count
+}
+
 fn main() {
-  println!("{}", count_ways(12017639147));
+  //for i in (1..1000).step_by(2) {
+  //  println!("f({}) = {} (x = {})", i, count_ways(i), (i + 3) / 2);
+  //}
+  println!("{}", count_ways_new());
 }
