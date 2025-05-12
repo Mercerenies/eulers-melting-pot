@@ -1,0 +1,24 @@
+;; This buffer is for text that is not saved, and for Lisp evaluation.
+;; To create a file, visit it with C-x C-f and enter text in its buffer.
+
+Think about it in terms of coordinate grid. Let C be (0, 0), and A/B
+be (1,0)/(0,1). Then just treat the laser as a line. The "top" bar is
+now this funny diamond-shaped thing, and the tricky part is figuring
+out how often we cross that.
+
+x + y MUST be even, for us to exit on C. If it's odd then we exit on A or B
+
+(x - 1)
++
+(y - 1)
++
+(x + y - 1)
+
+
+2x + 2y - 3 = refl
+
+For refl = 11
+2x + 2y = 8
+x + y = 4 w/ x and y coprime
+
+ALSO, if x + y is odd
