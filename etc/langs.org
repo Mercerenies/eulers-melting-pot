@@ -402,7 +402,7 @@
 *** Bussin (https://github.com/face-hh/bussin)                         :used:
 *** Brat                                                               :used:
 *** Chef                                                               :used:
-*** ChoiceScript (https://github.com/dfabulich/choicescript/)
+*** ChoiceScript (https://github.com/dfabulich/choicescript/)          :used:
     + See also https://www.choiceofgames.com/make-your-own-games/choicescript-intro/
 *** CJam                                                               :used:
 *** Comefrom0x10 (https://esolangs.org/wiki/Comefrom0x10)              :used:
@@ -411,7 +411,6 @@
     + Interpreter is very slow
     + Use the Docker implementation
     + Dictionaries are mutable, no arrays (only linked lists)
-*** CPound (https://github.com/4o4hasfound/CPound-language)
 *** Cubix                                                              :used:
 *** Cy (https://github.com/cyoce/Cy)
 *** DreamBerd (https://github.com/TodePond/DreamBerd)
@@ -519,6 +518,8 @@
     + Reversible
 *** Story (https://github.com/soborat/story-programming-language)
     + No arrays
+    + Only supports integers from 0 to 99. No, I'm serious. There's a
+      specific error message for going out of this range.
 *** Stuck                                                              :used:
 *** Taxi                                                               :used:
 *** Tome                                                               :used:
@@ -537,7 +538,7 @@
 *** Wierd (sic) (https://esolangs.org/wiki/Wierd)
 *** Whispers (https://github.com/cairdcoinheringaahing/Whispers)
 *** Whitespace                                                         :used:
-*** Width (https://github.com/stestoltz/Width)
+*** Width (https://github.com/stestoltz/Width)                         :used:
 ** UNUSABLE
 *** A+
     The Wayback Machine has [[https://web.archive.org/web/20220103110240/http://www.aplusdev.org/Download/aplus-fsf-4.18-8.i386.tar.gz][the interpreter]], but it depends on some
@@ -587,6 +588,11 @@
     Is this actually a language or just a library...?
 *** Conedy
     See Trajedy.
+*** CPound (https://github.com/4o4hasfound/CPound-language)
+    Interpreter is supposedly made for Windows, which requires some
+    modification to work on Linux. Even after getting it to compile,
+    the interpreter won't see /any/ input files and views every file
+    as empty. Presumably rampant UB in the interpreter source code.
 *** Curl (https://www.curl.com/products/prod/language/)
     No publicly-available interpreter. The only available interpreter
     is blocked behind a survey-wall.

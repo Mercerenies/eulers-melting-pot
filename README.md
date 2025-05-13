@@ -202,6 +202,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Wenyan
 * Whirl
 * Whitespace
+* Width
 * Wren
 * Wyvern
 * X10
@@ -1419,6 +1420,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [R](https://www.r-project.org/)
 * Compiler / Interpreter: [R version 4.4.1 (2024-06-14) -- "Race for Your Life"](https://svn.r-project.org/R/branches/R-4-4-branch/)
 * Notes: An incredibly slow solution.
+
+### Euler 202
+* File: [problem202.width](problem202.width)
+* Language: [Width](https://github.com/stestoltz/Width)
+* Compiler / Interpreter: [Width @ 5debe5b7](https://github.com/stestoltz/Width/tree/5debe5b7cf40f7b9b79e33f0b87dd18bd6ceb22f)
+* Notes: code was written with the help of a [Racket translator program](etc/width-gen.rkt).
 
 ## Valid Languages
 
