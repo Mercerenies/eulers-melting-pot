@@ -412,7 +412,7 @@
     + Use the Docker implementation
     + Dictionaries are mutable, no arrays (only linked lists)
 *** Cubix                                                              :used:
-*** Cy (https://github.com/cyoce/Cy)
+*** Cy (https://github.com/cyoce/Cy)                                   :used:
 *** DreamBerd (https://github.com/TodePond/DreamBerd)
     + Implementation is https://github.com/vivaansinghvi07/dreamberd-interpreter/
 *** ed                                                                 :used:

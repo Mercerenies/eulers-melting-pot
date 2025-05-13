@@ -58,6 +58,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * 🆒
 * Csh
 * Cubix
+* Cy
 * Cyclone
 * D
 * Dafny
@@ -1426,6 +1427,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Width](https://github.com/stestoltz/Width)
 * Compiler / Interpreter: [Width @ 5debe5b7](https://github.com/stestoltz/Width/tree/5debe5b7cf40f7b9b79e33f0b87dd18bd6ceb22f)
 * Notes: Code was written with the help of a [Racket translator program](etc/width-gen.rkt).
+
+### Euler 203
+* File: [problem203.cy](problem203.cy)
+* Language: [Cy](https://github.com/cyoce/Cy)
+* Compiler / Interpreter: [Cy @ 1c499f6](https://github.com/cyoce/Cy/tree/1c499f6a0bae00659c77b4c4eef180b33ea4ae52)
+* Notes: (None)
 
 ## Valid Languages
 
