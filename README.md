@@ -1425,7 +1425,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem202.width](problem202.width)
 * Language: [Width](https://github.com/stestoltz/Width)
 * Compiler / Interpreter: [Width @ 5debe5b7](https://github.com/stestoltz/Width/tree/5debe5b7cf40f7b9b79e33f0b87dd18bd6ceb22f)
-* Notes: code was written with the help of a [Racket translator program](etc/width-gen.rkt).
+* Notes: Code was written with the help of a [Racket translator program](etc/width-gen.rkt).
 
 ## Valid Languages
 
