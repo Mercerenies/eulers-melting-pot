@@ -1,0 +1,33 @@
+
+;; Doesn't work: I need a large loop in is-squarefree to be able to
+;; calculate if (51 nCr 25) is squarefree, but Connery segfaults on
+;; loops bigger than like 1000 iterations.
+
+;; Note: The language seems to half-expose cons cells and half treat
+;; lists as some opaque weirdness. So I'm defining cons cells on top
+;; of lists. Specifically, my "lists" are (list 1 (list 2 (list 3
+;; ()))). Accessing the head is 'first' and the tail is 'second'.
+
+;; Note: Dictionaries segfault if you access a key that does not
+;; exist. There is no way to check for key existence, short of
+;; segfaulting.
+
+;; Note: Because the only way to run the Docker container
+;; is in interactive mode, every top-level expression must
+;; be a one-liner.
+
+;; Note: returning from a function doesn't work if the
+;; function has multiple expressions in it, so we set a
+;; global variable 'r' instead.
+
+(fun {is-squarefree n} {(def {i} 2) (while {and (<= (* i i) n) (!= (mod n (* i i)) 0)} {def {i} (+ i 1)}) (def {r} (!= (mod n (* i i)) 0))})
+
+(fun {next-pascal-impl lst} {if (== (second lst) ()) {list 1 ()} {list (+ (first lst) (first (second lst))) (next-pascal-impl (second lst))}})
+
+(fun {next-pascal lst} {list 1 (next-pascal-impl lst)})
+
+(fun {contains x lst} {if (== lst ()) {False} {if (== x (first lst)) {True} {contains x (second lst)}}})
+
+(def {visited} ())
+
+(fun {iterate lst} {(if (== lst ()) {()} {if (and (is-squarefree (first lst)) (not (contains (first lst) visited))) {def {visited} (list (first lst) visited)} {()}}) (if (== lst ()) {()} {iterate (second lst)})})
