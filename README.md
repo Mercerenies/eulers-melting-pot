@@ -404,7 +404,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 ### Euler 32
 * File: [problem32.cbl](problem32.cbl)
 * Language: [COBOL](https://en.wikipedia.org/wiki/COBOL)
-* Compiler / Interpreter: [tutorialspoint.com](http://www.tutorialspoint.com/compile_cobol_online.php)
+* Compiler / Interpreter: [tutorialspoint.com](https://www.tutorialspoint.com/compile_cobol_online.php)
 * Notes: (None)
 
 ### Euler 33
