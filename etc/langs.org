@@ -456,6 +456,10 @@
 *** hello, world! (https://github.com/histocrat/hello_world)
 *** Hexagony                                                           :used:
 *** Husk (https://github.com/barbuz/Husk)
+    + Haskell-like functional golfing
+    + Statically-typed with a really weird type inference engine. The
+      type inference engine hits an infinite loop somewhere in the
+      code if I do any nontrivial recursion.
 *** Inform 7 (https://www.ifwiki.org/Inform_7)
     + Short List
 *** Japt                                                               :used:
@@ -756,6 +760,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Orc
 *** Orion (https://github.com/wafelack/orion/)
 *** Oz (https://en.wikipedia.org/wiki/Oz_(programming_language))
+*** Paijorot (https://github.com/lordpaijo/paijorot)
 *** Paperscript
 *** PARI/GP (https://en.wikipedia.org/wiki/PARI/GP)
 *** Peg (https://github.com/HackerFoo/peg)
