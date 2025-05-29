@@ -14,7 +14,7 @@
 	01	StrC PIC X(20).
 	01	Temp PIC 9.
 	01	TempS PIC X(1).
-	01	Tally PIC 99.
+	01	SumTotal PIC 99.
 	01	Okay PIC 9.
 
 	PROCEDURE DIVISION.
@@ -37,16 +37,16 @@
 					MOVE 1 TO Okay
 					PERFORM VARYING Temp FROM 1 BY 1 UNTIL 8 < Temp
 						MOVE Temp TO TempS
-						MOVE 0 TO Tally
-						INSPECT StrC TALLYING Tally FOR ALL TempS
-						IF Tally NOT = 1
+						MOVE 0 TO SumTotal
+						INSPECT StrC TALLYING SumTotal FOR ALL TempS
+						IF SumTotal NOT = 1
 						   MOVE 0 TO Okay
 						END-IF
 					END-PERFORM
 					MOVE Temp TO TempS
-					MOVE 0 TO Tally
-					INSPECT StrC TALLYING Tally FOR ALL TempS
-					IF Tally NOT = 1
+					MOVE 0 TO SumTotal
+					INSPECT StrC TALLYING SumTotal FOR ALL TempS
+					IF SumTotal NOT = 1
 					   MOVE 0 TO Okay
 					END-IF
 					IF Okay = 1
