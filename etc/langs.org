@@ -526,6 +526,9 @@
       specific error message for going out of this range.
 *** Stuck                                                              :used:
 *** Taxi                                                               :used:
+*** TLTSS (https://github.com/skearya/tltss/)
+    + Announcement blog post: https://skeary.me/blog/tltss
+    + Addition is unary
 *** Tome                                                               :used:
 *** Tovie (https://github.com/Jaysmito101/tovie)                       :used:
 *** TRANSCRIPT                                                         :used:
