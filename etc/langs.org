@@ -415,6 +415,8 @@
 *** Cy (https://github.com/cyoce/Cy)                                   :used:
 *** DreamBerd (https://github.com/TodePond/DreamBerd)
     + Implementation is https://github.com/vivaansinghvi07/dreamberd-interpreter/
+    + Very slow interpreter
+    + Negative indexing on arrays appears to be broken
 *** ed                                                                 :used:
     + Loops are recursive
     + Short list

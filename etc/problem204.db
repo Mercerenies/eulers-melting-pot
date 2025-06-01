@@ -1,0 +1,19 @@
+
+const const primes = [0, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]!
+const const limit = 1e9 - 0!
+
+      unction enumerate_hamming_numbers (primes, limit, base, index) => {
+   if (base > limit) {
+return 0!
+   }
+   if (index >= primes.length-1) {
+return 1!
+   }
+   const const p = primes[index]!
+   const const a = enumerate_hamming_numbers(primes, limit, base, index+1)!
+   const const b = enumerate_hamming_numbers(primes, limit, base*p, index)!
+   return a + b!
+      }
+
+var var result = enumerate_hamming_numbers(primes, limit, 1, 0)!
+print(result)!

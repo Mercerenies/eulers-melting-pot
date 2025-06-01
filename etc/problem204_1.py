@@ -19,3 +19,8 @@ def enumerate_hamming_numbers(base: int, index: int) -> int:
 
 if __name__ == "__main__":
     print(enumerate_hamming_numbers(base=1, index=0))
+
+# Dreamberd notes:
+# * Subtracting zero coerces to a number
+# * Negative indexing is broken so we pad the array
+# * I mean, it's Dreamberd; everything is broken
