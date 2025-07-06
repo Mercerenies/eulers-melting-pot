@@ -177,9 +177,8 @@
     + Windows only
 *** bc                                                                 :used:
 *** BeanShell                                                          :used:
-*** Bimble (https://github.com/vstartups/bimble?tab=readme-ov-file)
 *** BQN (https://mlochbaum.github.io/BQN/)
-*** Callisto (https://callisto.mesyeti.uk/)
+*** Callisto (https://callisto.mesyeti.uk/)                            :used:
 *** Cat (https://github.com/cdiggins/cat-language)
     + No arrays
 *** Claro (https://docs.clarolang.com/)
@@ -584,6 +583,13 @@
 *** Basis
     The [[https://esolangs.org/wiki/Basis#Reference_implementation_.28WIP.29][only implementation]] is incomplete and does not have enough
     features to perform any sort of nontrivial computation.
+*** Bimble (https://github.com/vstartups/bimble?tab=readme-ov-file)
+    Far as I can tell, this is a startup scam marketed as a
+    programming language. The language is 99% marketing, 1% content.
+    It looks like it supports print statements, input statements, and
+    function declarations. No, seriously, that's it. No control flow,
+    no arithmetic, nothing. Just... integers and strings that can be
+    assigned to variables and then forgotten about.
 *** Charm (https://en.wikipedia.org/wiki/Charm_(programming_language))
     + Older, designed for ARM. I'll probably need to emulate so it'll
       likely be slow.

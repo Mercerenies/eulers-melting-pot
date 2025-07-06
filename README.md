@@ -46,6 +46,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Burlesque
 * Bussin
 * C#
+* Callisto
 * Ceylon
 * Chef
 * ChoiceScript
@@ -1432,6 +1433,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * File: [problem203.cy](problem203.cy)
 * Language: [Cy](https://github.com/cyoce/Cy)
 * Compiler / Interpreter: [Cy @ 1c499f6](https://github.com/cyoce/Cy/tree/1c499f6a0bae00659c77b4c4eef180b33ea4ae52)
+* Notes: (None)
+
+### Euler 204
+* File: [problem204.cal](problem204.cal)
+* Language: [Callisto](https://callisto.mesyeti.uk/)
+* Compiler / Interpreter: [Callisto/compiler @ 758c41f](https://github.com/callisto-lang/compiler/tree/758c41fd274c020ccd9b482689037afe1bea34a5)
 * Notes: (None)
 
 ## Valid Languages
