@@ -721,6 +721,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Concrete (https://github.com/lambdaclass/concrete)
     + Looks pretty early in development, but promising
 *** Cubically (https://github.com/aaronryank/cubically)
+*** Darklang (https://darklang.com/)
 *** E (http://erights.org/elang/index.html)
 *** Eff (https://www.eff-lang.org/)
 *** EGL (https://www.ibm.com/docs/en/rbd/9.5.1?topic=applications-egl-language-reference)
@@ -731,6 +732,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Finite Field Assembly (https://github.com/LeetArxiv/Finite-Field-Assembly)
 *** Fission
 *** Flora (https://flora.sourceforge.net/)
+*** Futhark (https://futhark-lang.org/)
 *** Genesis (https://github.com/elonlit/Genesis)
 *** Gluon
 *** Gofer (https://en.wikipedia.org/wiki/Gofer_(programming_language))
