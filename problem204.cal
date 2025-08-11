@@ -1,0 +1,52 @@
+include "cores/select.cal"
+include "std/io.cal"
+include "std/array.cal"
+include "std/vector.cal"
+
+func isPrime i64 n -> bool result begin
+  let i64 d
+  2 -> d
+  while d d * n <= do
+    if n d % 0 = then
+      false return
+    end
+    d 1 + -> d
+  end
+  true
+end
+
+func primesUpTo i64 limit ptr Vector out begin
+  # The realloc function in Callisto's std (at least on Linux) is
+  # broken. It zeroes out old values in the vector upon resize.
+  # So we just ensure up-front that we have enough capacity to
+  # never trigger a realloc.
+  1000 -> out.capacity
+  out alloc_vec_capacity
+
+  let i64 i
+  2 -> i
+  while i limit <= do
+    if i isPrime then
+      i out vec_push
+    end
+    i 1 + -> i
+  end
+end
+
+func enumerateHammingNumbers ptr Array primes i64 index i64 acc i64 limit -> i64 answer begin
+  if acc limit > then
+    0 return
+  end
+  if index primes.length >= then
+    1 return
+  end
+  primes 1 index + acc limit enumerateHammingNumbers
+  primes index acc index primes a@ * limit enumerateHammingNumbers
+  +
+end
+
+let Vector primes
+i64.sizeOf &primes init_vec
+100 &primes primesUpTo
+
+&primes 0 1 1000000000 enumerateHammingNumbers print_dec "\n" print_str
