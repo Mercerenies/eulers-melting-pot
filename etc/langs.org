@@ -751,6 +751,9 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Hylo (http://github.com/hylo-lang/hylo)
 *** I (https://aplwiki.com/wiki/I)
 *** IMP (https://en.wikipedia.org/wiki/IMP_(programming_language))
+*** Jai (https://inductive.no/jai/)
+    + Currently (as of 8/10/25) unreleased. But worth keeping an eye
+      on.
 *** jq (https://stedolan.github.io/jq/)
 *** Koka (https://koka-lang.github.io/koka/doc/index.html)
 *** Konna (https://www.reddit.com/r/ProgrammingLanguages/comments/rpe65y/konna_my_programming_language/)
@@ -771,6 +774,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Occam
 *** Occam-π
 *** Ohm
+*** Onion (https://github.com/sjrsjz/onion-lang)
 *** Orc
 *** Orion (https://github.com/wafelack/orion/)
 *** Oz (https://en.wikipedia.org/wiki/Oz_(programming_language))
@@ -799,6 +803,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Unison (https://www.unison-lang.org/)
 *** Universal Lambda (http://www.golfscript.com/)
 *** uza (https://github.com/msanlop/uza)
+*** Vector (https://github.com/ynewmark/vector-lang)
 *** Verse (https://dev.epicgames.com/documentation/en-us/uefn/verse-language-reference)
 *** VHDL
 *** Vortex (https://github.com/dibsonthis/Vortex)
@@ -811,6 +816,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** XY (http://www.nsl.com/k/xy/xy.htm)
 *** Yuescript
     + Might be too similar to Moonscript? Investigate further.
+*** Я (Ya; https://muratkasimov.art/Ya)
 * RESOURCES
 ** LISTS OF LANGUAGES
   Here are several online resources that I've found to be useful for finding various languages.
