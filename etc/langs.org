@@ -333,6 +333,7 @@
 *** Carp (https://github.com/carp-lang/Carp)
 *** Clojure (https://clojure.org/)
 *** ClojureScript (https://clojurescript.org/)
+*** Coalton (https://github.com/coalton-lang/coalton)
 *** Common Lisp
 *** ELisp                                                              :used:
 *** Guile (https://www.gnu.org/software/guile/)
