@@ -1213,7 +1213,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Notes: Indented version is available at [etc/problem166_indented.rock](etc/problem166_indented.rock).
 
 ### Euler 167
-* File: [problem167.zig](problem167.zip)
+* File: [problem167.zig](problem167.zig)
 * Language: [Zig](https://ziglang.org/documentation/master/)
 * Compiler / Interpreter: [0.12.0-dev.1200+5f92b070b](https://ziglang.org/download/)
 * Notes: A very slow solution, recommended to be compiled with `-OReleaseFast`.
