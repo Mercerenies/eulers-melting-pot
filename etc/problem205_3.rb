@@ -59,12 +59,11 @@ for colin_a in 1..6
             DIGITS.times do
               numerator.shift
               numerator << 0
-              b_flipped = TOTAL.map { |x| 1 - x }
               diff = []
               carry = 1
               for i in 0...TOTAL_DIGITS
                 a_digit = numerator[- i - 1]
-                b_f_digit = b_flipped[- i - 1]
+                b_f_digit = 1 - TOTAL[- i - 1]
                 diff << ((a_digit + b_f_digit + carry) % 2)
                 carry = (a_digit + b_f_digit + carry) / 2
               end
