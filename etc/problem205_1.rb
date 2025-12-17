@@ -1,6 +1,6 @@
 
 # Dumbing down problem205.rs in preparation for Inform 7. Our arrays
-# are only allowed to add and remove, not to replace.
+# are only allowed to add and remove, not to insert.
 
 TOTAL = 12230590464
 
