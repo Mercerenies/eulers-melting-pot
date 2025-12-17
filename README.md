@@ -1489,10 +1489,6 @@ Currently, the slowest solutions in this repository are:
 * Problem 96 (Javagony) in ~20 minutes
 * Problem 188 (Javagrid) in ~18 minutes
 
-Currently, the slowest solution in this repository is Problem 130
-(Fourier), which takes roughly 26 minutes. The second slowest is
-Problem 96 (Javagony), at roughly 20 minutes.
-
 I do not have an explicit upper bound on the runtime of a correct
 algorithm. I will not leave code unattended overnight or for days on
 end, and the code written must *actually* terminate on a machine I
