@@ -13,85 +13,6 @@
 TOTAL = [0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] # = 12,230,590,464
 TOTAL_DIGITS = 35
 
-# Note: Assumes both numbers have the same length (as arrays). Output
-# will have that length. Any extra bits are truncated.
-def addition(a, b, carry)
-  result = []
-  for i in 0...a.length
-    a_digit = a[- i - 1]
-    b_digit = b[- i - 1]
-    result << ((a_digit + b_digit + carry) % 2)
-    carry = (a_digit + b_digit + carry) / 2
-  end
-  result.reverse
-end
-
-# Assumes a and b are integers and a << b. Outputs *only* bits after
-# the decimal point. Clobbers a.
-def division(a, b, output_prec)
-  digits = []
-  output_prec.times do
-    a.shift  # Keep the numbers the same length
-    a << 0
-    b_flipped = b.map { |x| 1 - x }
-    diff = []
-    carry = 1
-    for i in 0...TOTAL_DIGITS
-      a_digit = a[- i - 1]
-      b_f_digit = b_flipped[- i - 1]
-      diff << ((a_digit + b_f_digit + carry) % 2)
-      carry = (a_digit + b_f_digit + carry) / 2
-    end
-    diff.reverse!
-    if diff[0] == 0
-      digits << 1
-      a = diff
-    else
-      digits << 0
-    end
-  end
-  digits
-end
-
-# Assumption: We have at least 29 binary digits.
-def bin_to_decimal(frac_digits)
-  (
-    frac_digits[ 0] * 500_000_000 +
-    frac_digits[ 1] * 250_000_000 +
-    frac_digits[ 2] * 125_000_000 +
-    frac_digits[ 3] *  62_500_000 +
-    frac_digits[ 4] *  31_250_000 +
-    frac_digits[ 5] *  15_625_000 +
-    frac_digits[ 6] *   7_812_500 +
-    frac_digits[ 7] *   3_906_250 +
-    frac_digits[ 8] *   1_953_125 +
-    frac_digits[ 9] *     976_562 +
-    frac_digits[10] *     488_281 +
-    frac_digits[11] *     244_140 +
-    frac_digits[12] *     122_070 +
-    frac_digits[13] *      61_035 +
-    frac_digits[14] *      30_517 +
-    frac_digits[15] *      15_258 +
-    frac_digits[16] *       7_629 +
-    frac_digits[17] *       3_814 +
-    frac_digits[18] *       1_907 +
-    frac_digits[19] *         953 +
-    frac_digits[20] *         476 +
-    frac_digits[21] *         238 +
-    frac_digits[22] *         119 +
-    frac_digits[23] *          59 +
-    frac_digits[24] *          29 +
-    frac_digits[25] *          14 +
-    frac_digits[26] *           7 +
-    frac_digits[27] *           3 +
-    frac_digits[28] *           1
-  )
-end
-
-def print_dec(dec_digits)
-  p "0.#{dec_digits}"
-end
-
 possible_peter_wins = Array.new(37, 0)
 for peter_a in 1..4
   for peter_b in 1..4
@@ -134,7 +55,37 @@ for colin_a in 1..6
               n = n / 2
             end
             numerator.reverse!
-            peter_wins = addition(peter_wins, division(numerator, TOTAL, DIGITS), 0)
+            quotient = []
+            DIGITS.times do
+              numerator.shift
+              numerator << 0
+              b_flipped = TOTAL.map { |x| 1 - x }
+              diff = []
+              carry = 1
+              for i in 0...TOTAL_DIGITS
+                a_digit = numerator[- i - 1]
+                b_f_digit = b_flipped[- i - 1]
+                diff << ((a_digit + b_f_digit + carry) % 2)
+                carry = (a_digit + b_f_digit + carry) / 2
+              end
+              diff.reverse!
+              if diff[0] == 0
+                quotient << 1
+                numerator = diff
+              else
+                quotient << 0
+              end
+            end
+            new_peter_wins = []
+            carry = 0
+            for i in 0...DIGITS
+              a_digit = peter_wins[- i - 1]
+              b_digit = quotient[- i - 1]
+              new_peter_wins << ((a_digit + b_digit + carry) % 2)
+              carry = (a_digit + b_digit + carry) / 2
+            end
+            new_peter_wins.reverse!
+            peter_wins = new_peter_wins
           end
         end
       end
@@ -142,8 +93,36 @@ for colin_a in 1..6
   end
 end
 
-p peter_wins
-peter_wins_dec = bin_to_decimal(peter_wins)
+peter_wins_dec = 0
+peter_wins_dec += peter_wins[ 0] * 500_000_000
+peter_wins_dec += peter_wins[ 1] * 250_000_000
+peter_wins_dec += peter_wins[ 2] * 125_000_000
+peter_wins_dec += peter_wins[ 3] *  62_500_000
+peter_wins_dec += peter_wins[ 4] *  31_250_000
+peter_wins_dec += peter_wins[ 5] *  15_625_000
+peter_wins_dec += peter_wins[ 6] *   7_812_500
+peter_wins_dec += peter_wins[ 7] *   3_906_250
+peter_wins_dec += peter_wins[ 8] *   1_953_125
+peter_wins_dec += peter_wins[ 9] *     976_562
+peter_wins_dec += peter_wins[10] *     488_281
+peter_wins_dec += peter_wins[11] *     244_140
+peter_wins_dec += peter_wins[12] *     122_070
+peter_wins_dec += peter_wins[13] *      61_035
+peter_wins_dec += peter_wins[14] *      30_517
+peter_wins_dec += peter_wins[15] *      15_258
+peter_wins_dec += peter_wins[16] *       7_629
+peter_wins_dec += peter_wins[17] *       3_814
+peter_wins_dec += peter_wins[18] *       1_907
+peter_wins_dec += peter_wins[19] *         953
+peter_wins_dec += peter_wins[20] *         476
+peter_wins_dec += peter_wins[21] *         238
+peter_wins_dec += peter_wins[22] *         119
+peter_wins_dec += peter_wins[23] *          59
+peter_wins_dec += peter_wins[24] *          29
+peter_wins_dec += peter_wins[25] *          14
+peter_wins_dec += peter_wins[26] *           7
+peter_wins_dec += peter_wins[27] *           3
+peter_wins_dec += peter_wins[28] *           1
 # Round off to 7 places
 peter_wins_dec += 50
 peter_wins_dec = peter_wins_dec / 100

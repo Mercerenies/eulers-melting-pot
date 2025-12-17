@@ -5,13 +5,13 @@
 
 The Casino is a room. "A casino full of bright lights and dice of different shapes."
 
-Pyramidal Peter is a person in the Casino. Understand "Peter" as  Pyramidal Peter.
+Pyramidal Peter is a person in the Casino. Understand "Peter" as Pyramidal Peter.
 
 Cubic Colin is a person in the Casino. Understand "Colin" as Cubic Colin.
 
 Playing dice is an action applying to nothing. Understand "play dice" as playing dice.
 
-Total outcomes is a number variable. Total outcomes is 12230590464.
+Total outcomes is a list of numbers that varies.
 
 Peter's win set is a list of numbers that varies.
 
@@ -20,6 +20,8 @@ Dice value is a number that varies.
 Peter's win count is a real number that varies.
 
 When play begins:
+	
+
 	say total outcomes to 10 decimal places in decimal notation;
 	repeat with index running from 1 to 36:
 		add 0 to Peter's win set.
