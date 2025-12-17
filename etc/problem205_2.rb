@@ -4,8 +4,11 @@
 #
 # Dumbing down problem205_1.rb even more to try to get floating point
 # numbers to agree with us.
+#
+# Scratch that, we're not using floats. Where we're going, floats
+# can't save us.
 
-TOTAL6 = 2038431744
+TOTAL = 12230590464.0
 
 possible_peter_wins = Array.new(37, 0)
 for peter_a in 1..4
@@ -35,24 +38,22 @@ end
 
 p possible_peter_wins
 
-peter_wins_frac = 0
+peter_wins = 0.0
 for colin_a in 1..6
-  peter_wins = 0
   for colin_b in 1..6
     for colin_c in 1..6
       for colin_d in 1..6
         for colin_e in 1..6
           for colin_f in 1..6
             colin = colin_a + colin_b + colin_c + colin_d + colin_e + colin_f
-            peter_wins += possible_peter_wins[colin]
+            peter_wins += possible_peter_wins[colin] / TOTAL
           end
         end
       end
     end
   end
-  peter_wins_frac += peter_wins.to_f / TOTAL6
 end
 
-p (peter_wins_frac / 6.0)
+p peter_wins
 
 # Inform 7 notes: e is not a valid var name (b/c it's a math constant), so we use ee.
