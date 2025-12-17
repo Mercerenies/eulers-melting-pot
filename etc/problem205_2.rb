@@ -8,7 +8,7 @@
 # Scratch that, we're not using floats. Where we're going, floats
 # can't save us.
 
-TOTAL = [1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] # = 12,230,590,464
+TOTAL = [0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] # = 12,230,590,464
 
 def integer_to_bin(x, length)
   res = []
@@ -103,12 +103,6 @@ def print_dec(dec_digits)
   p "0.#{dec_digits}"
 end
 
-thirty_four = integer_to_bin(34, 8)
-ten = integer_to_bin(10, 8)
-p division(ten, thirty_four, 10)
-p print_dec(bin_to_decimal([1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
-exit
-
 possible_peter_wins = Array.new(37, 0)
 for peter_a in 1..4
   for peter_b in 1..4
@@ -135,9 +129,8 @@ for peter_a in 1..4
   end
 end
 
-p possible_peter_wins
-
-peter_wins = 0.0
+DIGITS = 40
+peter_wins = [0] * DIGITS
 for colin_a in 1..6
   for colin_b in 1..6
     for colin_c in 1..6
@@ -145,7 +138,8 @@ for colin_a in 1..6
         for colin_e in 1..6
           for colin_f in 1..6
             colin = colin_a + colin_b + colin_c + colin_d + colin_e + colin_f
-            peter_wins += possible_peter_wins[colin] / TOTAL
+            numerator = integer_to_bin(possible_peter_wins[colin], TOTAL.length)
+            peter_wins = add_integers(peter_wins, division(numerator, TOTAL, DIGITS))
           end
         end
       end
@@ -154,5 +148,12 @@ for colin_a in 1..6
 end
 
 p peter_wins
+peter_wins_dec = bin_to_decimal(peter_wins)
+# Round off to 7 places
+peter_wins_dec += 50
+peter_wins_dec = peter_wins_dec / 100
+
+# Assumes the first digit is nonzero, which we all know it is.
+print "0.#{peter_wins_dec}"
 
 # Inform 7 notes: e is not a valid var name (b/c it's a math constant), so we use ee.
