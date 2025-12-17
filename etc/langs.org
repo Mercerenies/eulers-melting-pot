@@ -485,6 +485,7 @@
     + 2D (and >2D) lang, but can only modify near the instruction
       pointer.
 *** NICE (https://esolangs.org/wiki/NICE)
+    + No interpreters
 *** Oblivion (https://jweinst1.github.io/OblivionWebsite/)
     + Double-precision floats
     + Non-constant loops are recursion
