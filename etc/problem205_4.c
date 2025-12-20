@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <math.h>
 
-#define TOTAL6 2038431744
+#define TOTAL6 ((float)2038431744.0)
 
 int main() {
   int possible_peter_wins[37] = {0};
@@ -35,6 +35,8 @@ int main() {
     printf("%d\n", possible_peter_wins[i]);
   }
 
+  printf("%f\n", (float)12230590.464);
+
   float peter_wins = 0.0;
   float peter_wins_low_bits = 0.0;
   for (int colin_a = 1; colin_a <= 6; colin_a++) {
@@ -45,13 +47,17 @@ int main() {
             for (int colin_f = 1; colin_f <= 6; colin_f++) {
               int colin = colin_a + colin_b + colin_c + colin_d + colin_e + colin_f;
               peter_wins += possible_peter_wins[colin];
-              peter_wins_low_bits += fmod(possible_peter_wins[colin], 0.001);
+              peter_wins_low_bits += fmod(possible_peter_wins[colin] / TOTAL6 / 6.0, 0.0001);
+              peter_wins_low_bits = fmod(peter_wins_low_bits, 0.0001);
             }
           }
         }
       }
     }
   }
-  printf("%.9f\n", peter_wins / TOTAL6 / 6.0);
-  printf("%.9f\n", peter_wins_low_bits / TOTAL6 / 6.0);
+  float answer_first_half = (int)((peter_wins / TOTAL6 / 6.0) / 0.0001) * 0.0001;
+  float answer_second_half = peter_wins_low_bits + 0.00000005;
+  printf("%.4f", answer_first_half);
+  // Print the remaining three decimals that we need from answer_second_half.
+  printf("%d%d%d\n", (int)(answer_second_half * 100000) % 10, (int)(answer_second_half * 1000000) % 10, (int)(answer_second_half * 10000000) % 10);
 }
