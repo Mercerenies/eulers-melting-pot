@@ -109,6 +109,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Hyperscript
 * i
 * Icon
+* Inform 7
 * IntercalScript
 * Io
 * Ioke
@@ -1440,6 +1441,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Callisto](https://callisto.mesyeti.uk/)
 * Compiler / Interpreter: [Callisto/compiler @ 758c41f](https://github.com/callisto-lang/compiler/tree/758c41fd274c020ccd9b482689037afe1bea34a5)
 * Notes: (None)
+
+### Euler 205
+* File: [problem205.ni](problem205.ni)
+* Language: [Inform 7](https://ganelson.github.io/inform-website/)
+* Compiler / Interpreter: [Inform 7 App 2.0.0](https://github.com/ganelson/inform/releases)
+* Notes: A very slow solution.
 
 ## Valid Languages
 

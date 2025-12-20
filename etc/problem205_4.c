@@ -35,7 +35,7 @@ int main() {
     printf("%d\n", possible_peter_wins[i]);
   }
 
-  printf("%f\n", (float)12230590.464);
+  printf("%f\n", (float)2038431744.0);
 
   float peter_wins = 0.0;
   float peter_wins_low_bits = 0.0;

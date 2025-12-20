@@ -49,3 +49,5 @@ end
 p peter_wins.to_f / TOTAL
 
 # Inform 7 notes: e is not a valid var name (b/c it's a math constant), so we use ee.
+#
+# Other Inform 7 notes: division is right associative. yes, you read that right.
