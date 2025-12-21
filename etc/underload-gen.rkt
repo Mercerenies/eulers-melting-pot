@@ -54,14 +54,15 @@
     (apply string-append
            (quoted init)
            (for/list ([arg args])
-             (if (eq? arg '_)
-                 (program (swap) (cat))
-                 (program (quoted arg) (cat)))))))
+             (cond
+               [(eq? arg '_) (program (swap) (cat))]
+               [(eq? arg '<_>) (program (swap) (enclose) (cat))]
+               [else (program (quoted arg) (cat))])))))
 
 (define-syntax (fry stx)
   (define (underscore? a)
     (and (syntax? a)
-         (eq? (syntax-e a) '_)))
+         (memq (syntax-e a) '(_ <_>))))
 
   (define (by-is-underscore a b)
     (eq? (string? (syntax-e a)) (string? (syntax-e b))))
@@ -72,7 +73,7 @@
         lst))
 
   (define (protect-syntax a)
-    (if (underscore? a) #'(quote _) a))
+    (if (underscore? a) #`(quote #,(syntax-e a)) a))
 
   (let ([args (~> (cdr (syntax->list stx))
                   (slice-by by-is-underscore _)
@@ -145,19 +146,21 @@
 ;  (fry 
 
 (define euler206
-  (program (quoted "first\n") (quoted "second\n")
+  (program (quoted "1\n") (quoted "2\n") (quoted (discard)) (fry (swap) _) (eval) (output) ; 2
+           (quoted "\n") (quoted "7") (quoted (discard)) (fry (swap) <_>) (eval) (swap) (cat) (cat) (output) ; 7!
+           (quoted "first\n") (quoted "second\n")
            (pair)
-           (eval) (output) (output)
+           (eval) (output) (output) ; second first
            (quoted true)
-           (if-stmt (quoted "true\n") (quoted "false\n"))
+           (if-stmt (quoted "true\n") (quoted "false\n")) ; true
            (output)
            (quoted false)
-           (if-stmt (quoted "true\n") (quoted "false\n"))
+           (if-stmt (quoted "true\n") (quoted "false\n")) ; false
            (output)
            (quoted *2)
            (quoted *3)
            (add)
-           (quoted "hello!\n")
+           (quoted "hello!\n") ; hello 5 times
            (swap)
            (eval)
            (output)))
