@@ -157,9 +157,16 @@
 ;;
 ;; See Wikipedia for the magic sauce
 ;; https://en.wikipedia.org/wiki/Church_encoding#Predecessor_function
-;(define (pred)
-;  ;; Hand-fried quotation because I don't have nested fries.
-;  (fry 
+(define (pred)
+  (fry ;; Create the function that we'll apply (this is fried against
+       ;; the string we're catenating)
+       (fry (swap) (discard) (dup) <_> (cat))
+       ;; Repeat operation
+       _
+       ;; Create accumulator strings and run
+       (quoted) (swap) (quoted) (swap) (eval)
+       ;; Drop the "top" value
+       (discard)))
 
 (define euler206
   (program (quoted "a\n") (quoted "b") (quoted "c") (quoted "d") (quoted "e") (quoted (discard)) (fry (quoted (swap) _) (dup) (cat) (eval)) (eval)
@@ -181,9 +188,15 @@
            (quoted "hello!\n")
            (swap)
            (eval)
-           (output))) ; hello 5 times
+           (output) ; hello 5 times
+           (quoted "hi\n")
+           (quoted *4)
+           (pred)
+           (eval)
+           (output))) ; hi 3 times
 
 (displayln euler206)
+;(displayln (pred))
 ;(displayln (count-fry-args #'(_ a b (d _ e <_>) c _)))
 
 ;(println (program (fry "A" "B" _ "C" "D" <_> "E" "F")))
