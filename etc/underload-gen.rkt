@@ -401,6 +401,36 @@
            ;; ( default n )
            (discard)))
 
+;; ( n -- ... )
+;;
+;; Inner function sees ( i -- ... )
+(define (for-range . body)
+  (program
+   (quoted *0) (swap) (2dup) (op==)
+   ;; Stack: ( 0 n 0==n )
+   (while ;; Stack: ( i n )
+          (dip (dup) (dip body) (succ))
+          (2dup) (op==))))
+
+;; ( n m -- k )
+(define (max-v)
+  (program (2dup) (op>=) (if-stmt (discard) (program (swap) (discard)))))
+
+;; ( lst1 lst2 -- ... )
+;;
+;; Inner function sees ( lst1 lst2 x y -- ... )
+;;
+;; Zips to longest, padding is used if out of bounds.
+;(define (foreach-zipped #:padding padding . body)
+;  (let ([body (apply program body)])
+;    (program
+;     (2dup) (llength) (swap) (llength) (max-v)
+;     ;; Stack is ( lst1 lst2 longlen )
+;     (for-range
+;      ;; Stack is ( lst1 lst2 i )
+;      (dip (2dup) (fry (dup) _ (lindex) (swap) _ (lindex) (swap))) (swap) (eval)
+;      ;; Stack is ( lst1 lst2 x y )
+
 (define practice
   (program (quoted "a\n") (quoted "b") (quoted "c") (quoted "d") (quoted "e") (quoted (discard)) (fry (quoted (swap) _) (dup) (cat) (eval)) (eval)
            (output) (output) (output) ; eba
