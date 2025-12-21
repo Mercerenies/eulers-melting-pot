@@ -18,7 +18,17 @@
 (define (cat) "*")
 (define (enclose) "a")
 (define (eval) "^")
-(define (output) "S")
+(define (output-prim) "S")
+
+;; Convenience wrapper that can output constant text.
+;;
+;; With no argument: ( x -- )
+;;
+;; With Racket-side argument: ( -- )
+(define (output [text #f])
+  (if text
+      (program (quoted text) (output-prim))
+      (output-prim)))
 
 (define (quoted . s)
   (format "(~a)" (apply string-append s)))
@@ -299,23 +309,23 @@
            (output)
 
            (quoted *4)
-           (do-while (quoted "loop") (output) (pred) (dup) (!=0))
-           (quoted "\n") (output) ; looplooplooploop
+           (do-while (output "loop") (pred) (dup) (!=0))
+           (output "\n") ; looplooplooploop
 
            (quoted *4)
            (quoted true)
-           (while (quoted "w") (output) (pred) (dup) (!=0))
-           (quoted "\n") (output) ; wwww
+           (while (output "w") (pred) (dup) (!=0))
+           (output "\n") ; wwww
 
            (quoted *3)
            (quoted *2)
            (mul)
            (output-digit)
-           (quoted "\n") (output) ; 6
+           (output "\n") ; 6
 
            (comment "LIST START\n")
            (push-list *1 *2 *3 *4)
-           (foreach (output-digit) (quoted "\n") (output)) ; 1 2 3 4
+           (foreach (output-digit) (output "\n")) ; 1 2 3 4
 
            (quoted *2)
            (quoted *3)
