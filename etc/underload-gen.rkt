@@ -37,6 +37,20 @@
 (define *8 (program *4 *2))
 (define *9 (program *3 *3))
 
+;; Church Booleans
+
+;; ( x y -- x )
+(define true (program (discard)))
+
+;; ( x y -- y )
+(define false (program (swap) (discard)))
+
+(define (choose-by-bool true-val false-val)
+  (program (quoted true-val) (swap) (quoted false-val) (swap) (eval)))
+
+(define (if-stmt true-case false-case)
+  (choose-by-bool true-case false-case) (eval))
+
 ;; Flat fried quotations, top level only. No nesting. Parameters are
 ;; read in FIFO order, so the first fry uses the top of the stack
 ;; (this is opposite of Factor's convention).
@@ -98,7 +112,13 @@
 (define (add) (fry (dup) _ (swap) _ (cat)))
 
 (define euler206
-  (program (quoted *2)
+  (program (quoted true)
+           (choose-by-bool (quoted "true\n") (quoted "false\n"))
+           (output)
+           (quoted false)
+           (choose-by-bool (quoted "true\n") (quoted "false\n"))
+           (output)
+           (quoted *2)
            (quoted *3)
            (add)
            (quoted "hello!\n")
