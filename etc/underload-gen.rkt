@@ -37,20 +37,6 @@
 (define *8 (program *4 *2))
 (define *9 (program *3 *3))
 
-;; Church Booleans
-
-;; ( x y -- x )
-(define true (program (discard)))
-
-;; ( x y -- y )
-(define false (program (swap) (discard)))
-
-(define (choose-by-bool true-val false-val)
-  (program (quoted true-val) (swap) (quoted false-val) (swap) (eval)))
-
-(define (if-stmt true-case false-case)
-  (choose-by-bool true-case false-case) (eval))
-
 ;; Flat fried quotations, top level only. No nesting. Parameters are
 ;; read in FIFO order, so the first fry uses the top of the stack
 ;; (this is opposite of Factor's convention).
@@ -95,6 +81,34 @@
                   (map protect-syntax _))])
     #`(compile-fry (list #,@args))))
 
+;; Church Booleans
+
+;; ( x y -- x )
+(define true (program (discard)))
+
+;; ( x y -- y )
+(define false (program (swap) (discard)))
+
+(define (choose-by-bool true-val false-val)
+  (program (quoted true-val) (swap) (quoted false-val) (swap) (eval)))
+
+(define (if-stmt true-case false-case)
+  (program (choose-by-bool true-case false-case)
+           (eval)))
+
+;; Church Pairs.
+;;
+;; We encode pairs as simply programs that push both values to the
+;; stack. This is easier than the "usual" Church encoding since we're
+;; in a stack-based language and can easily "return" two values.
+
+;; ( x y -- pair )
+(define (pair)
+  (program (enclose)
+           (swap)
+           (enclose)
+           (fry _ _)))
+
 (define (dip . inner)
   (let ([inner (apply string-append inner)])
     (program (enclose)
@@ -112,11 +126,14 @@
 (define (add) (fry (dup) _ (swap) _ (cat)))
 
 (define euler206
-  (program (quoted true)
-           (choose-by-bool (quoted "true\n") (quoted "false\n"))
+  (program (quoted "first\n") (quoted "second\n")
+           (pair)
+           (eval) (output) (output)
+           (quoted true)
+           (if-stmt (quoted "true\n") (quoted "false\n"))
            (output)
            (quoted false)
-           (choose-by-bool (quoted "true\n") (quoted "false\n"))
+           (if-stmt (quoted "true\n") (quoted "false\n"))
            (output)
            (quoted *2)
            (quoted *3)
