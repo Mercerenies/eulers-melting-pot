@@ -76,10 +76,10 @@
 
   (define (underscore? a)
     (and (syntax? a)
-         (memq (syntax-e a) '(_ <_>))))
+         (not (eq? #f (memq (syntax-e a) '(_ <_>))))))
 
   (define (by-is-underscore a b)
-    (eq? (string? (syntax-e a)) (string? (syntax-e b))))
+    (eq? (underscore? a) (underscore? b)))
 
   (define (concatenate-if-not-underscores lst)
     (if (andmap (lambda (x) (not (underscore? x))) lst)
@@ -178,12 +178,12 @@
            (quoted *2)
            (quoted *3)
            (add)
-           (quoted "hello!\n") ; hello 5 times
+           (quoted "hello!\n")
            (swap)
            (eval)
-           (output)))
+           (output))) ; hello 5 times
 
 (displayln euler206)
 ;(displayln (count-fry-args #'(_ a b (d _ e <_>) c _)))
 
-;(println (syntax->datum (expand #'(fry (quoted (swap) _) (dup) (eval)))))
+;(println (program (fry "A" "B" _ "C" "D" <_> "E" "F")))
