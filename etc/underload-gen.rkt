@@ -192,6 +192,8 @@
 
 (define (add) (fry (dup) _ (swap) _ (cat)))
 
+(define (succ) (fry (dup) _ (cat)))
+
 ;; Predecessor function ( n -- n' ): Returns max(n - 1, 0)
 ;;
 ;; See Wikipedia for the magic sauce
@@ -216,6 +218,12 @@
   (program (dupd)
            (dup)
            (dip (swap))))
+
+;; ( x y z -- x y z x y z )
+(define (3dup)
+  (program (dip (2dup))
+           (dup)
+           (dip (swap) (dip (swap)))))
 
 ;; ( x y -- x y x)
 (define (over)
@@ -264,6 +272,28 @@
            (dip (op>=))
            (and-v)))
 
+;; ( x y -- floor(x/y) x%y )
+(define (divmod)
+  (program
+   ;; Stack is going to be ( x/y x%y y )
+   (2dip (quoted *0))
+   (2dup) (op>=)
+   (while (dup) (dip (monus)) (2dip (succ)) (2dup) (op>=))
+   (discard)))
+
+
+;; ( x y -- x%y )
+(define (mod)
+  (program
+   (2dup) (op>=)
+   (while (dup) (dip (monus)) (2dup) (op>=))
+   (discard)))
+
+;; ( x y -- floor(x/y) )
+(define (div)
+  (program (divmod) (discard)))
+
+
 ;; ( x -- ... )
 ;;
 ;; The first N cases are for zero, then one, then two, etc. The
@@ -296,11 +326,25 @@
 
 ;; Church lists...ish, we're using the Underload method:
 ;; https://esolangs.org/wiki/Underload#Lists_and_tuples
+;;
+;; (x)~^(y)~^(z)~^...
 
 (define (push-list . elems)
   (define (list-elem x) (program (quoted x) (swap) (eval)))
 
   (apply quoted (flatten (map list-elem elems))))
+
+;; ( x -- lst )
+(define (singleton)
+  (program (enclose) (quoted (swap) (eval)) (cat)))
+
+;; ( x lst -- lst' )
+(define (lcons)
+  (program (swap) (singleton) (swap) (cat)))
+
+;; ( lst x -- lst' )
+(define (lsnoc)
+  (program (singleton) (cat)))
 
 ;; ( lst -- ... )
 ;;
@@ -315,6 +359,34 @@
      (eval)
      ;; Stack is now ( ... payload payload )
      (discard) (discard))))
+
+;; ( lst -- lst )
+(define (reverse-list)
+  (program
+   (quoted) (swap)
+   (foreach (swap) (lcons))))
+
+(define (output-list-of-digits)
+  (program (foreach (output-digit)) (output "\n")))
+
+;; ( lst -- ... )
+;;
+;; Inner function sees ( n elt -- ... )
+(define (foreach-with-index . body)
+  (let ([body (apply program body)])
+    (program
+     ;; Index counter
+     (quoted *0) (swap)
+     (foreach
+      ;; Stack is ( index elt ) right now
+      (over) (dip body) (succ))
+     ;; Stack is now ( ... index )
+     (discard))))
+
+;; ( lst -- n )
+(define (llength)
+  (program (quoted *0) (swap)
+           (foreach (discard) (succ))))
 
 (define practice
   (program (quoted "a\n") (quoted "b") (quoted "c") (quoted "d") (quoted "e") (quoted (discard)) (fry (quoted (swap) _) (dup) (cat) (eval)) (eval)
@@ -335,10 +407,16 @@
            (do-while (output "loop") (pred) (dup) (!=0))
            (output "\n") ; looplooplooploop
 
+           (push-list *7 *7 *7 *7 *7)
+           (llength) (output-digit) (output "\n") ; 5
+
            (quoted *4)
            (quoted true)
            (while (output "w") (pred) (dup) (!=0))
            (output "\n") ; wwww
+
+           (push-list *5 *6 *7 *8)
+           (foreach-with-index (swap) (output-digit) (output-digit)) (output "\n") ; 05162738
 
            (quoted *3)
            (quoted *2)
@@ -349,6 +427,16 @@
            (comment "LIST START\n")
            (push-list *1 *2 *3 *4)
            (foreach (output-digit) (output "\n")) ; 1 2 3 4
+
+           (quoted *5) (succ) (output-digit) (output "\n") ; 6
+
+           (quoted *7) (quoted *7) (mul)
+           (quoted *10) (mod)
+           (output-digit) (output "\n") ; 9
+
+           (quoted *7) (quoted *7) (mul)
+           (quoted *10) (div)
+           (output-digit) (output "\n") ; 4
 
            (quoted *2)
            (quoted *3)
@@ -363,6 +451,14 @@
            (monus)
            (eval)
            (output) ; hi 3 times
+
+           (push-list *3 *4 *5 *6)
+           (output-list-of-digits) ; 3456
+
+           (push-list *3 *4 *5 *6)
+           (reverse-list)
+           (output-list-of-digits) ; 6543
+
            (quoted true) (quoted false) (and-v) (output-bool) ; false
            (quoted false) (quoted true) (and-v) (output-bool) ; false
            (quoted true) (quoted true) (and-v) (output-bool) ; true
