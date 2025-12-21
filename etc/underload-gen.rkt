@@ -388,6 +388,19 @@
   (program (quoted *0) (swap)
            (foreach (discard) (succ))))
 
+;; ( n lst -- elem )
+(define (lindex #:default [default (program)])
+  (program (2dip (quoted default))
+           ;; Stack is ( default n lst )
+           (foreach-with-index
+            ;; ( default n i elem )
+            (dip (over) (op==))
+            ;; (default n is-equal elem )
+            (swap) (if-stmt (program (2dip (discard)) (swap))
+                            (program (discard))))
+           ;; ( default n )
+           (discard)))
+
 (define practice
   (program (quoted "a\n") (quoted "b") (quoted "c") (quoted "d") (quoted "e") (quoted (discard)) (fry (quoted (swap) _) (dup) (cat) (eval)) (eval)
            (output) (output) (output) ; eba
@@ -417,6 +430,15 @@
 
            (push-list *5 *6 *7 *8)
            (foreach-with-index (swap) (output-digit) (output-digit)) (output "\n") ; 05162738
+
+           (quoted "XXXX\n") (output) ; XXXX
+           (quoted *2)
+           (push-list *5 *6 *7 *8)
+           (lindex #:default *9) (output-digit) (output "\n") ; 7
+
+           (quoted *4)
+           (push-list *5 *6 *7 *8)
+           (lindex #:default *9) (output-digit) (output "\n") ; 9
 
            (quoted *3)
            (quoted *2)
