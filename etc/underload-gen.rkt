@@ -228,6 +228,36 @@
 (define (op<)
   (program (swap) (op>)))
 
+;; ( x -- ... )
+;;
+;; The first N cases are for zero, then one, then two, etc. The
+;; else-case, if provided, is for any other numeral.
+;;
+;; Example: If we get 3 arguments, we push `else-case id 2case 2drop
+;; 1case 2drop 0case 2drop`. Then we run `dup eval` N times and exec
+;; whatever happens to end up one down on the stack after that. Each
+;; case has instructions to nuke everything under it.
+(define (branch-on-small-numeral #:else [else-case (program)] . cases)
+  (define (2drop) (program (discard) (discard)))
+
+  (define (id) (program))
+
+  (program (dip (quoted else-case)
+                (quoted (id))
+                (apply string-append (for/list ([case (reverse cases)]
+                                                [pops-needed (in-range 2 +inf.0 2)])
+                                       (program (quoted (string-append (apply string-append (make-list pops-needed (discard)))
+                                                                       case))
+                                                (quoted (2drop)))))
+                (quoted (dup) (eval)))
+           (eval) (eval) (discard) (eval)))
+
+(define (output-digit)
+  (program (branch-on-small-numeral (quoted "0") (quoted "1") (quoted "2") (quoted "3") (quoted "4")
+                                    (quoted "5") (quoted "6") (quoted "7") (quoted "8") (quoted "9")
+                                    #:else (quoted "#"))
+           (output)))
+
 (define practice
   (program (quoted "a\n") (quoted "b") (quoted "c") (quoted "d") (quoted "e") (quoted (discard)) (fry (quoted (swap) _) (dup) (cat) (eval)) (eval)
            (output) (output) (output) ; eba
@@ -251,6 +281,12 @@
            (quoted true)
            (while (quoted "w") (output) (pred) (dup) (!=0))
            (quoted "\n") (output) ; wwww
+
+           (quoted *3)
+           (quoted *2)
+           (mul)
+           (output-digit)
+           (quoted "\n") (output) ; 6
 
            (quoted *2)
            (quoted *3)
