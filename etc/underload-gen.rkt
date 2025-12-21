@@ -98,6 +98,17 @@
                   (map protect-syntax _))])
     #`(compile-fry (list #,@args))))
 
+(define (dip . inner)
+  (let ([inner (apply string-append inner)])
+    (program (enclose)
+             (quoted inner)
+             (swap)
+             (cat)
+             (eval))))
+
+(define (2dip . inner)
+  (dip (apply dip inner)))
+
 ;; Church Booleans
 
 ;; ( x y -- x )
@@ -112,6 +123,20 @@
 (define (if-stmt true-case false-case)
   (program (choose-by-bool true-case false-case)
            (eval)))
+
+;; ( ? ? -- ? )
+(define (and-v)
+  (program (quoted false) (swap)
+           (eval)))
+
+;; ( ? ? -- ? )
+(define (or-v)
+  (program (dip (quoted true) (swap))
+           (eval)))
+
+;; ( ? -- )
+(define (output-bool)
+  (program (choose-by-bool "true\n" "false\n") (output)))
 
 ;; Church Pairs.
 ;;
@@ -137,17 +162,6 @@
            (swap)
            (discard)))
 
-(define (dip . inner)
-  (let ([inner (apply string-append inner)])
-    (program (enclose)
-             (quoted inner)
-             (swap)
-             (cat)
-             (eval))))
-
-(define (2dip . inner)
-  (dip (apply dip inner)))
-
 (define (mul) (cat))
 (define (exp) (eval))
 
@@ -167,6 +181,41 @@
        (quoted) (swap) (quoted) (swap) (eval)
        ;; Drop the "top" value
        (discard)))
+
+;; ( x y -- x-y )
+(define (monus)
+  (program (quoted (pred))
+           (swap)
+           (eval)
+           (eval)))
+
+;; ( x -- ? )
+(define (==0)
+  (program (quoted true) (swap)
+           (quoted (discard) (quoted false)) (swap)
+           (eval) (eval)))
+
+;; ( x -- ? )
+(define (!=0)
+  (program (quoted false) (swap)
+           (quoted (discard) (quoted true)) (swap)
+           (eval) (eval)))
+
+;; ( x y -- ? )
+(define (op>)
+  (program (monus) (!=0)))
+
+;; ( x y -- ? )
+(define (op<=)
+  (program (monus) (==0)))
+
+;; ( x y -- ? )
+(define (op>=)
+  (program (swap) (op<=)))
+
+;; ( x y -- ? )
+(define (op<)
+  (program (swap) (op>)))
 
 (define euler206
   (program (quoted "a\n") (quoted "b") (quoted "c") (quoted "d") (quoted "e") (quoted (discard)) (fry (quoted (swap) _) (dup) (cat) (eval)) (eval)
@@ -190,10 +239,21 @@
            (eval)
            (output) ; hello 5 times
            (quoted "hi\n")
+           (quoted *7)
            (quoted *4)
-           (pred)
+           (monus)
            (eval)
-           (output))) ; hi 3 times
+           (output) ; hi 3 times
+           (quoted true) (quoted false) (and-v) (output-bool) ; false
+           (quoted false) (quoted true) (and-v) (output-bool) ; false
+           (quoted true) (quoted true) (and-v) (output-bool) ; true
+           (quoted false) (quoted false) (and-v) (output-bool) ; false
+           (quoted true) (quoted false) (or-v) (output-bool) ; true
+           (quoted false) (quoted true) (or-v) (output-bool) ; true
+           (quoted true) (quoted true) (or-v) (output-bool) ; true
+           (quoted false) (quoted false) (or-v) (output-bool) ; false
+           (quoted *3) (==0) (if-stmt (quoted "3==0\n") (quoted "3!=0\n")) (output) ; 3!=0
+           (quoted *3) (!=0) (if-stmt (quoted "3!=0\n") (quoted "3==0\n")) (output))) ; 3!=0
 
 (displayln euler206)
 ;(displayln (pred))
