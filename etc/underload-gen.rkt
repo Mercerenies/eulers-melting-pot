@@ -46,7 +46,7 @@
 
 (define (compile-fry args)
   (define (calc-init args)
-    (if (or (null? args) (eq? (car args) '_))
+    (if (or (null? args) (memq (car args) '(_ <_>)))
         (values "" args)
         (values (car args) (cdr args))))
 
@@ -59,7 +59,21 @@
                [(eq? arg '<_>) (program (swap) (enclose) (cat))]
                [else (program (quoted arg) (cat))])))))
 
+(define-for-syntax (count-fry-args args)
+  (define (underscore? a)
+    (memq a '(_ <_>)))
+
+  (let ([args (flatten (syntax->datum args))])
+    (count underscore? args)))
+
 (define-syntax (fry stx)
+  (define (preprocess-nested-fry a)
+    (let ([a-expr (syntax-e a)])
+      (if (and (pair? a-expr) (syntax? (car a-expr)) (eq? (syntax-e (car a-expr)) 'quoted))
+          (let ([fry-count (count-fry-args a)])
+            (append (make-list fry-count #'<_>) (list #`(fry #,@(cdr a-expr)))))
+          a)))
+
   (define (underscore? a)
     (and (syntax? a)
          (memq (syntax-e a) '(_ <_>))))
@@ -76,6 +90,8 @@
     (if (underscore? a) #`(quote #,(syntax-e a)) a))
 
   (let ([args (~> (cdr (syntax->list stx))
+                  (map preprocess-nested-fry _)
+                  flatten
                   (slice-by by-is-underscore _)
                   (map concatenate-if-not-underscores _)
                   flatten
@@ -146,7 +162,9 @@
 ;  (fry 
 
 (define euler206
-  (program (quoted "1\n") (quoted "2\n") (quoted (discard)) (fry (swap) _) (eval) (output) ; 2
+  (program (quoted "a\n") (quoted "b") (quoted "c") (quoted "d") (quoted "e") (quoted (discard)) (fry (quoted (swap) _) (dup) (cat) (eval)) (eval)
+           (output) (output) (output) ; eba
+           (quoted "1\n") (quoted "2\n") (quoted (discard)) (fry (swap) _) (eval) (output) ; 2
            (quoted "\n") (quoted "7") (quoted (discard)) (fry (swap) <_>) (eval) (swap) (cat) (cat) (output) ; 7!
            (quoted "first\n") (quoted "second\n")
            (pair)
@@ -166,3 +184,6 @@
            (output)))
 
 (displayln euler206)
+;(displayln (count-fry-args #'(_ a b (d _ e <_>) c _)))
+
+;(println (syntax->datum (expand #'(fry (quoted (swap) _) (dup) (eval)))))
