@@ -49,6 +49,7 @@
 (define *7 (program (dup) (dup) (dup) (cat) (cat) (dup) (cat) (cat)))
 (define *8 (program *4 *2))
 (define *9 (program *3 *3))
+(define *10 (program *5 *2))
 
 ;; Flat fried quotations, top level only. No nesting. Parameters are
 ;; read in FIFO order, so the first fry uses the top of the stack
@@ -206,6 +207,21 @@
        ;; Drop the "top" value
        (discard)))
 
+;; ( x y -- x x y )
+(define (dupd)
+  (dip (dup)))
+
+;; ( x y -- x y x y )
+(define (2dup)
+  (program (dupd)
+           (dup)
+           (dip (swap))))
+
+;; ( x y -- x y x)
+(define (over)
+  (program (dupd)
+           (swap)))
+
 ;; ( x y -- x-y )
 (define (monus)
   (program (quoted (pred))
@@ -240,6 +256,13 @@
 ;; ( x y -- ? )
 (define (op<)
   (program (swap) (op>)))
+
+;; ( x y -- ? )
+(define (op==)
+  (program (2dup)
+           (op<=)
+           (dip (op>=))
+           (and-v)))
 
 ;; ( x -- ... )
 ;;
@@ -348,6 +371,10 @@
            (quoted false) (quoted true) (or-v) (output-bool) ; true
            (quoted true) (quoted true) (or-v) (output-bool) ; true
            (quoted false) (quoted false) (or-v) (output-bool) ; false
+           (output "--\n") ;; --
+           (quoted *3) (quoted *3) (op==) (output-bool) ; true
+           (quoted *3) (quoted *4) (op==) (output-bool) ; false
+           (quoted *4) (quoted *3) (op==) (output-bool) ; false
            (quoted *3) (==0) (if-stmt (quoted "3==0\n") (quoted "3!=0\n")) (output) ; 3!=0
            (quoted *3) (!=0) (if-stmt (quoted "3!=0\n") (quoted "3==0\n")) (output))) ; 3!=0
 
