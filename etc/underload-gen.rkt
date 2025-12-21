@@ -109,6 +109,17 @@
            (enclose)
            (fry _ _)))
 
+;; ( xy -- x )
+(define (pair-first)
+  (program (eval)
+           (discard)))
+
+;; ( xy -- y )
+(define (pair-second)
+  (program (eval)
+           (swap)
+           (discard)))
+
 (define (dip . inner)
   (let ([inner (apply string-append inner)])
     (program (enclose)
@@ -124,6 +135,14 @@
 (define (exp) (eval))
 
 (define (add) (fry (dup) _ (swap) _ (cat)))
+
+;; Predecessor function ( n -- n' ): Returns max(n - 1, 0)
+;;
+;; See Wikipedia for the magic sauce
+;; https://en.wikipedia.org/wiki/Church_encoding#Predecessor_function
+;(define (pred)
+;  ;; Hand-fried quotation because I don't have nested fries.
+;  (fry 
 
 (define euler206
   (program (quoted "first\n") (quoted "second\n")
