@@ -124,6 +124,13 @@
   (program (choose-by-bool true-case false-case)
            (eval)))
 
+(define (do-while . body)
+  (let ([body (apply program body)])
+    (program (quoted (dip body)
+                     (swap) (quoted (discard)) (swap)
+                     (eval) (dup) (eval))
+             (dup) (eval))))
+
 ;; ( ? ? -- ? )
 (define (and-v)
   (program (quoted false) (swap)
@@ -217,7 +224,7 @@
 (define (op<)
   (program (swap) (op>)))
 
-(define euler206
+(define practice
   (program (quoted "a\n") (quoted "b") (quoted "c") (quoted "d") (quoted "e") (quoted (discard)) (fry (quoted (swap) _) (dup) (cat) (eval)) (eval)
            (output) (output) (output) ; eba
            (quoted "1\n") (quoted "2\n") (quoted (discard)) (fry (swap) _) (eval) (output) ; 2
@@ -231,6 +238,11 @@
            (quoted false)
            (if-stmt (quoted "true\n") (quoted "false\n")) ; false
            (output)
+
+           (quoted *4)
+           (do-while (quoted "loop") (output) (pred) (dup) (!=0))
+           (quoted "\n") (output) ; looplooplooploop
+
            (quoted *2)
            (quoted *3)
            (add)
@@ -255,7 +267,7 @@
            (quoted *3) (==0) (if-stmt (quoted "3==0\n") (quoted "3!=0\n")) (output) ; 3!=0
            (quoted *3) (!=0) (if-stmt (quoted "3!=0\n") (quoted "3==0\n")) (output))) ; 3!=0
 
-(displayln euler206)
+(displayln practice)
 ;(displayln (pred))
 ;(displayln (count-fry-args #'(_ a b (d _ e <_>) c _)))
 
