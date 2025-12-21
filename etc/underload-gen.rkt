@@ -25,6 +25,9 @@
 
 (define (nop) (program (quoted "") (discard)))
 
+(define (comment text)
+  (program (quoted text) (discard)))
+
 ;; Small numerals
 (define *0 (program (discard) (quoted "")))
 (define *1 (program (nop)))
@@ -258,6 +261,28 @@
                                     #:else (quoted "#"))
            (output)))
 
+;; Church lists...ish, we're using the Underload method:
+;; https://esolangs.org/wiki/Underload#Lists_and_tuples
+
+(define (push-list . elems)
+  (define (list-elem x) (program (quoted x) (swap) (eval)))
+
+  (apply quoted (flatten (map list-elem elems))))
+
+;; ( lst -- ... )
+;;
+;; Inner function sees ( elt -- ... )
+(define (foreach . body)
+  (let ([body (apply program body)])
+    (program
+     ;; Set up a self-reproducing payload. Payload sees ( payload elt -- ... payload payload )
+     (quoted (swap) (dip body) (dup))
+     (swap) (dip (dup))
+     ;; Stack is now ( payload payload lst )
+     (eval)
+     ;; Stack is now ( ... payload payload )
+     (discard) (discard))))
+
 (define practice
   (program (quoted "a\n") (quoted "b") (quoted "c") (quoted "d") (quoted "e") (quoted (discard)) (fry (quoted (swap) _) (dup) (cat) (eval)) (eval)
            (output) (output) (output) ; eba
@@ -287,6 +312,10 @@
            (mul)
            (output-digit)
            (quoted "\n") (output) ; 6
+
+           (comment "LIST START\n")
+           (push-list *1 *2 *3 *4)
+           (foreach (output-digit) (quoted "\n") (output)) ; 1 2 3 4
 
            (quoted *2)
            (quoted *3)
