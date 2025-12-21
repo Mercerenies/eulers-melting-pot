@@ -131,6 +131,10 @@
                      (eval) (dup) (eval))
              (dup) (eval))))
 
+(define (while . body)
+  (let ([body (apply program body)])
+    (if-stmt (do-while body) (program))))
+
 ;; ( ? ? -- ? )
 (define (and-v)
   (program (quoted false) (swap)
@@ -242,6 +246,11 @@
            (quoted *4)
            (do-while (quoted "loop") (output) (pred) (dup) (!=0))
            (quoted "\n") (output) ; looplooplooploop
+
+           (quoted *4)
+           (quoted true)
+           (while (quoted "w") (output) (pred) (dup) (!=0))
+           (quoted "\n") (output) ; wwww
 
            (quoted *2)
            (quoted *3)
