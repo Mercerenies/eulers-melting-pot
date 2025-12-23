@@ -487,6 +487,21 @@
            (discard)
            (dup) (==0) (if-stmt (discard) (program (swap) (lcons)))))
 
+;; ( a-list b-list -- a*b-list )
+;;
+;; Multiplies two lists of numerals.
+(define (mul-numerals)
+  (program (2dip (quoted *0))
+           ;; Stack is ( accum a-list b-list )
+           (foreach
+            ;; Stack is ( accum a-list b-digit )
+            (over)
+            (dip ;; Stack is ( accum a-list b-digit ), dipspace is ( a-list )
+                 (mul-by-digit)
+                 (swap) (quoted *0) (lsnoc) (add-numerals)))
+           ;; Stack is ( accum a-list )
+           (discard)))
+
 
 (define practice
   (program (output "*****\n") ; *****
@@ -502,6 +517,14 @@
            (push-list *5 *2 *5) (quoted *5)
            (mul-by-digit)
            (output-list-of-digits) ; 2625
+
+           (push-list *3 *7 *9) (quoted *8)
+           (mul-by-digit)
+           (output-list-of-digits) ; 3032
+
+           (push-list *3 *7 *9) (push-list *1 *8 *9 *2)
+           (mul-numerals)
+           (output-list-of-digits) ; 717068
 
            (quoted "a\n") (quoted "b") (quoted "c") (quoted "d") (quoted "e") (quoted (discard)) (fry (quoted (swap) _) (dup) (cat) (eval)) (eval)
            (output) (output) (output) ; eba
