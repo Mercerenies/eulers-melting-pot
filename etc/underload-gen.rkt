@@ -421,7 +421,8 @@
      ;; Stack: ( 0 n 0<n )
      (while ;; Stack: ( i n )
             (dip (dup) (dip body) (succ))
-            (2dup) (op<)))))
+            (2dup) (op<))
+     (discard) (discard))))
 
 ;; ( n m -- k )
 (define (max-v)
@@ -452,16 +453,57 @@
 ;;
 ;; Adds two numbers, represented as lists of base 10 Church-encoded
 ;; numerals.
-;(define (add-numerals)
-;  (program (reverse-list) (swap) (reverse-list)
-;           (2dip
-;            (quoted *0) ;; Carry bit
-;            (push-list)) ;; Sum digits (in reverse order)
-;           ;; Stack is ( carry result b a )
+(define (add-numerals)
+  (program (reverse-list) (swap) (reverse-list)
+           (2dip
+            (quoted *0) ;; Carry bit
+            (push-list)) ;; Sum digits
+           ;; Stack is ( carry result b a )
+           (foreach-zipped #:padding *0
+             ;; Stack is ( carry result bdigit adigit )
+             (add)
+             (dip (swap))
+             (add)
+             ;; Stack is ( result carry+bd+ad )
+             (quoted *10) (divmod) (dip (swap))
+             ;; Stack is ( carry result nextdigit )
+             (swap) (lcons))
+           ;; Stack is ( carry result )
+           (swap) (dup) (==0) (if-stmt (discard) (program (swap) (lcons)))))
+
+;; ( a-list b-digit -- a*b-list )
+;;
+;; Multiplies a list-of-numerals number by a single digit.
+(define (mul-by-digit)
+  (program (swap) (2dip (push-list) (quoted *0)) (reverse-list)
+           ;; Stack is ( result carry b-digit a-list )
+           (foreach
+            ;; Stack is ( result carry b-digit a-digit )
+            (over)
+            (dip (mul) (add) (quoted *10) (divmod)
+                 ;; Stack is ( result carry next-digit ), dipspace is ( b-digit )
+                 (rot-down) (dip (lcons))))
+           ;; Stack is ( result carry b-digit )
+           (discard)
+           (dup) (==0) (if-stmt (discard) (program (swap) (lcons)))))
 
 
 (define practice
-  (program (quoted "a\n") (quoted "b") (quoted "c") (quoted "d") (quoted "e") (quoted (discard)) (fry (quoted (swap) _) (dup) (cat) (eval)) (eval)
+  (program (output "*****\n") ; *****
+           (push-list *8 *1 *2 *3 *6)
+           (push-list *2 *5 *5 *4 *4)
+           (add-numerals)
+           (output-list-of-digits) ; 106780
+
+           (push-list *1 *2 *5) (quoted *2)
+           (mul-by-digit)
+           (output-list-of-digits) ; 250
+
+           (push-list *5 *2 *5) (quoted *5)
+           (mul-by-digit)
+           (output-list-of-digits) ; 2625
+
+           (quoted "a\n") (quoted "b") (quoted "c") (quoted "d") (quoted "e") (quoted (discard)) (fry (quoted (swap) _) (dup) (cat) (eval)) (eval)
            (output) (output) (output) ; eba
            (quoted "1\n") (quoted "2\n") (quoted (discard)) (fry (swap) _) (eval) (output) ; 2
            (quoted "\n") (quoted "7") (quoted (discard)) (fry (swap) <_>) (eval) (swap) (cat) (cat) (output) ; 7!
