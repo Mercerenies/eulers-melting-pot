@@ -449,6 +449,195 @@
      ;; Stack is ( lst1 lst2 )
      (discard) (discard))))
 
+(define (two-digit-num a b)
+  (program (quoted a) (quoted b)))
+
+;; ( x y -- tens ones )
+(define (mul-from-table)
+  (branch-on-small-numeral
+   ;; 0
+   (program (discard) (two-digit-num *0 *0))
+   ;; 1
+   (program (quoted *0) (swap))
+   ;; 2
+   (branch-on-small-numeral
+    ;; 2 * 0
+    (two-digit-num *0 *0)
+    ;; 2 * 1
+    (two-digit-num *0 *2)
+    ;; 2 * 2
+    (two-digit-num *0 *4)
+    ;; 2 * 3
+    (two-digit-num *0 *6)
+    ;; 2 * 4
+    (two-digit-num *0 *8)
+    ;; 2 * 5
+    (two-digit-num *1 *0)
+    ;; 2 * 6
+    (two-digit-num *1 *2)
+    ;; 2 * 7
+    (two-digit-num *1 *4)
+    ;; 2 * 8
+    (two-digit-num *1 *6)
+    ;; 2 * 9
+    (two-digit-num *1 *8))
+   ;; 3
+   (branch-on-small-numeral
+    ;; 3 * 0
+    (two-digit-num *0 *0)
+    ;; 3 * 1
+    (two-digit-num *0 *3)
+    ;; 3 * 2
+    (two-digit-num *0 *6)
+    ;; 3 * 3
+    (two-digit-num *0 *9)
+    ;; 3 * 4
+    (two-digit-num *1 *2)
+    ;; 3 * 5
+    (two-digit-num *1 *5)
+    ;; 3 * 6
+    (two-digit-num *1 *8)
+    ;; 3 * 7
+    (two-digit-num *2 *1)
+    ;; 3 * 8
+    (two-digit-num *2 *4)
+    ;; 3 * 9
+    (two-digit-num *2 *7))
+   ;; 4
+   (branch-on-small-numeral
+    ;; 4 * 0
+    (two-digit-num *0 *0)
+    ;; 4 * 1
+    (two-digit-num *0 *4)
+    ;; 4 * 2
+    (two-digit-num *0 *8)
+    ;; 4 * 3
+    (two-digit-num *1 *2)
+    ;; 4 * 4
+    (two-digit-num *1 *6)
+    ;; 4 * 5
+    (two-digit-num *2 *0)
+    ;; 4 * 6
+    (two-digit-num *2 *4)
+    ;; 4 * 7
+    (two-digit-num *2 *8)
+    ;; 4 * 8
+    (two-digit-num *3 *2)
+    ;; 4 * 9
+    (two-digit-num *3 *6))
+   ;; 5
+   (branch-on-small-numeral
+    ;; 5 * 0
+    (two-digit-num *0 *0)
+    ;; 5 * 1
+    (two-digit-num *0 *5)
+    ;; 5 * 2
+    (two-digit-num *1 *0)
+    ;; 5 * 3
+    (two-digit-num *1 *5)
+    ;; 5 * 4
+    (two-digit-num *2 *0)
+    ;; 5 * 5
+    (two-digit-num *2 *5)
+    ;; 5 * 6
+    (two-digit-num *3 *0)
+    ;; 5 * 7
+    (two-digit-num *3 *5)
+    ;; 5 * 8
+    (two-digit-num *4 *0)
+    ;; 5 * 9
+    (two-digit-num *4 *5))
+   ;; 6
+   (branch-on-small-numeral
+    ;; 6 * 0
+    (two-digit-num *0 *0)
+    ;; 6 * 1
+    (two-digit-num *0 *6)
+    ;; 6 * 2
+    (two-digit-num *1 *2)
+    ;; 6 * 3
+    (two-digit-num *1 *8)
+    ;; 6 * 4
+    (two-digit-num *2 *4)
+    ;; 6 * 5
+    (two-digit-num *3 *0)
+    ;; 6 * 6
+    (two-digit-num *3 *6)
+    ;; 6 * 7
+    (two-digit-num *4 *2)
+    ;; 6 * 8
+    (two-digit-num *4 *8)
+    ;; 6 * 9
+    (two-digit-num *5 *4))
+   ;; 7
+   (branch-on-small-numeral
+    ;; 7 * 0
+    (two-digit-num *0 *0)
+    ;; 7 * 1
+    (two-digit-num *0 *7)
+    ;; 7 * 2
+    (two-digit-num *1 *4)
+    ;; 7 * 3
+    (two-digit-num *2 *1)
+    ;; 7 * 4
+    (two-digit-num *2 *8)
+    ;; 7 * 5
+    (two-digit-num *3 *5)
+    ;; 7 * 6
+    (two-digit-num *4 *2)
+    ;; 7 * 7
+    (two-digit-num *4 *9)
+    ;; 7 * 8
+    (two-digit-num *5 *6)
+    ;; 7 * 9
+    (two-digit-num *6 *3))
+   ;; 8
+   (branch-on-small-numeral
+    ;; 8 * 0
+    (two-digit-num *0 *0)
+    ;; 8 * 1
+    (two-digit-num *0 *8)
+    ;; 8 * 2
+    (two-digit-num *1 *6)
+    ;; 8 * 3
+    (two-digit-num *2 *4)
+    ;; 8 * 4
+    (two-digit-num *3 *2)
+    ;; 8 * 5
+    (two-digit-num *4 *0)
+    ;; 8 * 6
+    (two-digit-num *4 *8)
+    ;; 8 * 7
+    (two-digit-num *5 *6)
+    ;; 8 * 8
+    (two-digit-num *6 *4)
+    ;; 8 * 9
+    (two-digit-num *7 *2))
+   ;; 9
+   (branch-on-small-numeral
+    ;; 9 * 0
+    (two-digit-num *0 *0)
+    ;; 9 * 1
+    (two-digit-num *0 *9)
+    ;; 9 * 2
+    (two-digit-num *1 *8)
+    ;; 9 * 3
+    (two-digit-num *2 *7)
+    ;; 9 * 4
+    (two-digit-num *3 *6)
+    ;; 9 * 5
+    (two-digit-num *4 *5)
+    ;; 9 * 6
+    (two-digit-num *5 *4)
+    ;; 9 * 7
+    (two-digit-num *6 *3)
+    ;; 9 * 8
+    (two-digit-num *7 *2)
+    ;; 9 * 9
+    (two-digit-num *8 *1))))
+
+
+
 ;; ( a b -- a+b )
 ;;
 ;; Adds two numbers, represented as lists of base 10 Church-encoded
@@ -480,7 +669,7 @@
            (foreach
             ;; Stack is ( result carry b-digit a-digit )
             (over)
-            (dip (mul) (add) (quoted *10) (divmod)
+            (dip (mul-from-table) (dip (swap)) (add) (quoted *10) (divmod) (dip (add))
                  ;; Stack is ( result carry next-digit ), dipspace is ( b-digit )
                  (rot-down) (dip (lcons))))
            ;; Stack is ( result carry b-digit )
@@ -505,6 +694,7 @@
 
 (define practice
   (program (output "*****\n") ; *****
+           (quoted *3) (quoted *4) (mul-from-table) (output-digit) (output-digit) (output "\n")
            (push-list *8 *1 *2 *3 *6)
            (push-list *2 *5 *5 *4 *4)
            (add-numerals)
@@ -631,3 +821,5 @@
 ;(displayln (count-fry-args #'(_ a b (d _ e <_>) c _)))
 
 ;(println (program (fry "A" "B" _ "C" "D" <_> "E" "F")))
+
+(displayln (mul-numerals))
