@@ -230,6 +230,16 @@
   (program (dupd)
            (swap)))
 
+;; ( x y z -- y z x )
+(define (rot-up)
+  (program (dip (swap))
+           (swap)))
+
+;; ( x y z - z x y )
+(define (rot-down)
+  (program (swap)
+           (dip (swap))))
+
 ;; ( x y -- x-y )
 (define (monus)
   (program (quoted (pred))
@@ -405,12 +415,13 @@
 ;;
 ;; Inner function sees ( i -- ... )
 (define (for-range . body)
-  (program
-   (quoted *0) (swap) (2dup) (op==)
-   ;; Stack: ( 0 n 0==n )
-   (while ;; Stack: ( i n )
-          (dip (dup) (dip body) (succ))
-          (2dup) (op==))))
+  (let ([body (apply program body)])
+    (program
+     (quoted *0) (swap) (2dup) (op<)
+     ;; Stack: ( 0 n 0<n )
+     (while ;; Stack: ( i n )
+            (dip (dup) (dip body) (succ))
+            (2dup) (op<)))))
 
 ;; ( n m -- k )
 (define (max-v)
@@ -418,18 +429,36 @@
 
 ;; ( lst1 lst2 -- ... )
 ;;
-;; Inner function sees ( lst1 lst2 x y -- ... )
+;; Inner function sees ( x y -- ... )
 ;;
 ;; Zips to longest, padding is used if out of bounds.
-;(define (foreach-zipped #:padding padding . body)
-;  (let ([body (apply program body)])
-;    (program
-;     (2dup) (llength) (swap) (llength) (max-v)
-;     ;; Stack is ( lst1 lst2 longlen )
-;     (for-range
-;      ;; Stack is ( lst1 lst2 i )
-;      (dip (2dup) (fry (dup) _ (lindex) (swap) _ (lindex) (swap))) (swap) (eval)
-;      ;; Stack is ( lst1 lst2 x y )
+(define (foreach-zipped #:padding padding . body)
+  (let ([body (apply program body)])
+    (program
+     (2dup) (llength) (swap) (llength) (max-v)
+     ;; Stack is ( lst1 lst2 longlen )
+     (for-range
+      ;; Stack is ( lst1 lst2 i )
+      (rot-down) (2dup)
+      (2dip
+       ;; Stack is ( i lst1 lst2 ) with ( lst1 lst2 ) stored in dipspace
+       (fry (dup) <_> (lindex #:default padding) (swap) <_> (lindex #:default padding) (swap)) (eval)
+       ;; Stack is ( x y ) with ( lst1 lst2 ) stored in dipspace
+       body))
+     ;; Stack is ( lst1 lst2 )
+     (discard) (discard))))
+
+;; ( a b -- a+b )
+;;
+;; Adds two numbers, represented as lists of base 10 Church-encoded
+;; numerals.
+;(define (add-numerals)
+;  (program (reverse-list) (swap) (reverse-list)
+;           (2dip
+;            (quoted *0) ;; Carry bit
+;            (push-list)) ;; Sum digits (in reverse order)
+;           ;; Stack is ( carry result b a )
+
 
 (define practice
   (program (quoted "a\n") (quoted "b") (quoted "c") (quoted "d") (quoted "e") (quoted (discard)) (fry (quoted (swap) _) (dup) (cat) (eval)) (eval)
@@ -475,6 +504,12 @@
            (mul)
            (output-digit)
            (output "\n") ; 6
+
+           (quoted "----\n") (output) ; ----
+           (push-list *1 *2 *3)
+           (push-list *4 *5 *6 *7 *8)
+           (foreach-zipped (output-digit) (output-digit) #:padding *0) ; 4152637080
+           (output "\n")
 
            (comment "LIST START\n")
            (push-list *1 *2 *3 *4)
