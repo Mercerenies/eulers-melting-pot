@@ -698,6 +698,9 @@
            ;; Stack is ( accum a-list )
            (discard)))
 
+(define-syntax-rule (for-unrolled (terms ...) body ...)
+  (program (program terms body ...) ...))
+
 
 (define practice
   (program (output "*****\n") ; *****
@@ -823,50 +826,68 @@
            (quoted *3) (==0) (if-stmt (quoted "3==0\n") (quoted "3!=0\n")) (output) ; 3!=0
            (quoted *3) (!=0) (if-stmt (quoted "3!=0\n") (quoted "3==0\n")) (output))) ; 3!=0
 
+;; Fact 1: I know, for fact, that the last digit is 0. That means the
+;; last two digits of our squared number are zero, so just forget
+;; about them entirely and do the whole thing for 1_2_3_4_5_6_7_8_9.
+;; We'll tack on a pair of zeroes at the end.
+;;
+;; Fact 2: The first digit is 1. To get a nineteen-digit product, we
+;; need a ten-digit number. Nine-digit numbers can only multiply to
+;; eighteen digits and eleven-digit numbers are minimum 21 digits. The
+;; first digit cannot be zero, since we would then have a nine-digit
+;; number which is too small. If the first digit is 2, the first digit
+;; of the result is at minimum 4 (possibly more with a carry). If the
+;; first digit is 3, then the first digit of the result is at minimum
+;; 9. And if the first digit is 4 or larger, then the result shall
+;; have too many digits.
+;;
+;; Fact 3: Since the final digit is 0, the second digit is *either* 3
+;; or 7. Ignoring the final two zeroes in the squared number, we want
+;; the final digit of our squared number to be 9. Three and seven are
+;; the only numbers whose square (mod 10) is 9. This is easily seen by
+;; brute force.
+;;
+;; Fact 4: The second digit is 0, 1, 2, or 3. If the second digit is 4
+;; or higher, then our number is at least 1.4e9. The square of 1.4e9
+;; is 1.96e18. It is now impossible to start with the prefix 1_2, as
+;; the 96 ensures that either the third digit is 6, 7, 8, or 9, or we
+;; have too many digits in total.
+;;
+;; Summary: Our answer is 1X______Y0 with X in {0, 1, 2, 3} and Y in
+;; {3, 7}.
+
 (define project-euler-206
-  (program (quoted *10)
-           (for-range ; j loop
-            (dup) (dup) (mul-from-table) (swap) (discard)
-            ;; Stack: ( j digit )
-            (!=0)
-            (if-stmt
-             (program (discard)) ; continue
-             (program
-              (singleton)
-              ;; Stack: jaccum
-              (quoted *10)
-              (for-range ; i loop
-               (over) (lcons)
-               ;; Stack: jaccum iaccum
+  (program (for-unrolled ((quoted *3) (quoted *7)) ; i loop
+            (singleton)
+            ;; Stack: iaccum
+            (quoted *10)
+            (for-range ; h loop
+             ;; Stack: ( iaccum h )
+             (over) (lcons)
+             ;; Stack: ( iaccum haccum )
+             (dup) (dup) (mul-numerals) (reverse-list) (quoted *0) (swap) (lindex)
+             (quoted *9) (op!=)
+             (if-stmt
+              (program (discard)) ; continue
+              (program
                (quoted *10)
-               (for-range ; h loop
-                ;; Stack: ( jaccum iaccum h )
+               (for-range ; g loop
                 (over) (lcons)
-                ;; Stack: (jaccum iaccum haccum )
-                (dup) (dup) (mul-numerals) (reverse-list) (quoted *2) (swap) (lindex)
-                (quoted *9) (op!=)
-                (if-stmt
-                 (program (discard)) ; continue
-                 (program
-                  (quoted *10)
-                  (for-range ; g loop
-                   (over) (lcons)
-                   ;; Stack: jaccum iaccum haccum gaccum
-                   (quoted *10)
-                   (for-range ; f loop
-                    (over) (lcons)
-                    ;; Stack: jaccum iaccum haccum gaccum faccum
-                    (dup) (dup) (mul-numerals) (reverse-list) (quoted *4) (swap) (lindex)
-                    (quoted *8) (op!=)
-                    (if-stmt
-                     (program (discard)) ; continue
-                     (program
-                      (dup) (output-list-of-digits) ; DEBUG
-                      (discard))))
-                   (discard))
-                  (discard))))
-               (discard))
-              (discard))))))
+                ;; Stack: iaccum haccum gaccum
+                (quoted *10)
+                (for-range ; f loop
+                 (over) (lcons)
+                 ;; Stack: iaccum haccum gaccum faccum
+                 (dup) (dup) (mul-numerals) (reverse-list) (quoted *2) (swap) (lindex)
+                 (quoted *8) (op!=)
+                 (if-stmt
+                  (program (discard)) ; continue
+                  (program
+                   (dup) (output-list-of-digits) ; DEBUG
+                   (discard))))
+                (discard))
+               (discard))))
+            (discard))))
 
 (define project-euler-206-small
   (program (quoted *10)
@@ -898,5 +919,5 @@
                (discard))
               (discard))))))
 
-(displayln project-euler-206-small)
+(displayln project-euler-206)
 ;(displayln practice)
