@@ -282,6 +282,13 @@
            (dip (op>=))
            (and-v)))
 
+;; ( x y -- ? )
+(define (op!=)
+  (program (2dup)
+           (op<)
+           (dip (op>))
+           (or-v)))
+
 ;; ( x y -- floor(x/y) x%y )
 (define (divmod)
   (program
@@ -816,10 +823,49 @@
            (quoted *3) (==0) (if-stmt (quoted "3==0\n") (quoted "3!=0\n")) (output) ; 3!=0
            (quoted *3) (!=0) (if-stmt (quoted "3!=0\n") (quoted "3==0\n")) (output))) ; 3!=0
 
-(displayln practice)
-;(displayln (pred))
-;(displayln (count-fry-args #'(_ a b (d _ e <_>) c _)))
+(define project-euler-206
+  (program (quoted *10)
+           (for-range ; j loop
+            (dup) (dup) (mul-from-table) (swap) (discard)
+            ;; Stack: ( j digit )
+            (!=0)
+            (if-stmt
+             (program (discard)) ; continue
+             (program
+              (singleton)
+              ;; Stack: jaccum
+              (quoted *10)
+              (for-range ; i loop
+               (over) (lcons)
+               ;; Stack: jaccum iaccum
+               (quoted *10)
+               (for-range ; h loop
+                ;; Stack: ( jaccum iaccum h )
+                (over) (lcons)
+                ;; Stack: (jaccum iaccum haccum )
+                (dup) (dup) (mul-numerals) (reverse-list) (quoted *2) (swap) (lindex)
+                (quoted *9) (op!=)
+                (if-stmt
+                 (program (discard)) ; continue
+                 (program
+                  (quoted *10)
+                  (for-range ; g loop
+                   (over) (lcons)
+                   ;; Stack: jaccum iaccum haccum gaccum
+                   (quoted *10)
+                   (for-range ; f loop
+                    (over) (lcons)
+                    ;; Stack: jaccum iaccum haccum gaccum faccum
+                    (dup) (dup) (mul-numerals) (reverse-list) (quoted *4) (swap) (lindex)
+                    (quoted *8) (op!=)
+                    (if-stmt
+                     (program (discard)) ; continue
+                     (program
+                      (dup) (output-list-of-digits) ; DEBUG
+                      (discard))))
+                   (discard))
+                  (discard))))
+               (discard))
+              (discard))))))
 
-;(println (program (fry "A" "B" _ "C" "D" <_> "E" "F")))
-
-(displayln (mul-numerals))
+(displayln project-euler-206)
