@@ -868,4 +868,35 @@
                (discard))
               (discard))))))
 
-(displayln project-euler-206)
+(define project-euler-206-small
+  (program (quoted *10)
+           (for-range ; j loop
+            (dup) (dup) (mul-from-table) (swap) (discard)
+            ;; Stack: ( j digit )
+            (!=0)
+            (if-stmt
+             (program (discard)) ; continue
+             (program
+              (singleton)
+              ;; Stack: jaccum
+              (quoted *10)
+              (for-range ; i loop
+               (over) (lcons)
+               ;; Stack: jaccum iaccum
+               (quoted *10)
+               (for-range ; h loop
+                ;; Stack: ( jaccum iaccum h )
+                (over) (lcons)
+                ;; Stack: (jaccum iaccum haccum )
+                (dup) (dup) (mul-numerals) (reverse-list) (quoted *2) (swap) (lindex)
+                (quoted *9) (op!=)
+                (if-stmt
+                 (program (discard)) ; continue
+                 (program
+                  (dup) (output-list-of-digits)
+                  (discard))))
+               (discard))
+              (discard))))))
+
+(displayln project-euler-206-small)
+;(displayln practice)
