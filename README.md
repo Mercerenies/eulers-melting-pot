@@ -411,7 +411,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 
 ### Euler 33
 * File: [problem33.xsl](problem33.xsl)
-* Language: [XSLT](http://www.w3schools.com/xsl/)
+* Language: [XSLT](https://www.w3schools.com/xml/xsl_intro.asp)
 * Compiler / Interpreter: [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
 * Notes: Load `./files/p33.xml` to run the XSLT code; requires disabling `security.fileuri.strict_origin_policy` on Firefox due to local system security constraints.
 
