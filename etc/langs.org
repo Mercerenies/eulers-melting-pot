@@ -447,6 +447,10 @@
     + No arrays
     + Probably can't nest loops, unless we figure out some really neat
       tech
+    + The "rotate the stack" instruction is actually bugged and
+      unusable, so we don't have random access to the stack either,
+      just the top couple of elements and (separately) the bottom
+      couple.
 *** Gibberish                                                          :used:
 *** Golfscript                                                         :used:
 *** Grocery List                                                       :used:
