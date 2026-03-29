@@ -853,6 +853,10 @@
 ;; the 96 ensures that either the third digit is 6, 7, 8, or 9, or we
 ;; have too many digits in total.
 ;;
+;; Fact 5: Similar to Fact 4, the maximum value of this number in
+;; total is 1389244399, for any value greater would have square at
+;; least 1939999999999999999, which is too large for the prefix 1_2.
+;;
 ;; Summary: Our answer is 1X______Y0 with X in {0, 1, 2, 3} and Y in
 ;; {3, 7}.
 
