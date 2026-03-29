@@ -141,6 +141,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Minus
 * MontiLang
 * MoonScript
+* Mornington Crescent
 * Mouse-2002
 * NASM
 * naz
@@ -1447,6 +1448,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Inform 7](https://ganelson.github.io/inform-website/)
 * Compiler / Interpreter: [Inform 7 App 2.0.0](https://github.com/ganelson/inform/releases)
 * Notes: A very slow solution.
+
+### Euler 206
+* File: [problem206.mcresc](problem206.mcresc)
+* Language: [Mornington Crescent](https://esolangs.org/wiki/Mornington_Crescent)
+* Compiler / Interpreter: [Esoterpret @ 084c76d](https://github.com/tophcodes/esoterpret/tree/084c76d68f74a7990a7761d5d65c29ddc12116f5/modules/morningtoncrescent)
+* Notes: Code was written with the help of a [Racket translator program](https://github.com/Mercerenies/mornington-crescent-builder).
 
 ## Valid Languages
 
