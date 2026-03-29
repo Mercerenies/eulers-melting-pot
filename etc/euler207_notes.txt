@@ -1,0 +1,12 @@
+;; This buffer is for text that is not saved, and for Lisp evaluation.
+;; To create a file, visit it with ‘C-x C-f’ and enter text in its buffer.
+
+4^t = 2^t + k
+
+For k to be an integer, it must be the case that t = log_2(w) for some integer w
+
+w (w - 1) = k
+
+The k is perfect iff w is a power of 2
+
+
