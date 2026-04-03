@@ -146,8 +146,17 @@ atomicCommand f = do
 -- to clean up the output.
 clearFinalLabel :: Fractran ()
 clearFinalLabel = do
-  lastLabel <- Fractran $ gets stateLastLabel
-  rawFraction $ mempty %% singleton (getLabel lastLabel)
+  Label lastLabel <- Fractran $ gets stateLastLabel
+  rawFraction $ mempty %% singleton lastLabel
+
+-- a += N c; b += N c; c = 0;
+drainAndAddWithTwo :: Var -> Var -> Var -> Integer -> Fractran ()
+drainAndAddWithTwo (Var a) (Var b) (Var c) n =
+    atomicCommand $ \lastLabel nextLabel -> do
+      tmp <- rawReserveValue
+      rawFraction $ number [(a, n), (b, n), (tmp, 1)] %% singleton c <> singleton (getLabel lastLabel)
+      rawFraction $ singleton (getLabel lastLabel) %% singleton tmp
+      rawFraction $ singleton (getLabel nextLabel) %% singleton (getLabel lastLabel)
 
 -- a += N b; b = 0;
 drainAndAddWith :: Var -> Var -> Integer -> Fractran ()
@@ -207,7 +216,7 @@ symmDiff (Var a) (Var b) =
       rawFraction $ singleton lastLabel %% singleton tmp
       rawFraction $ singleton nextLabel %% singleton lastLabel
 
--- while (--a > 0) { body ... }
+-- while (a > 0) { a -= 1; body ... }
 whilePositive :: Var -> Fractran () -> Fractran ()
 whilePositive (Var a) body =
     atomicCommand $ \(Label lastLabel) (Label nextLabel) -> do
@@ -221,27 +230,82 @@ whilePositive (Var a) body =
       Label bodyEndLabel <- getLastLabel
       rawFraction $ singleton conditionCheckLabel %% singleton bodyEndLabel
 
+-- a = b;
+mov :: Var -> Var -> Fractran ()
+mov a b = do
+  tmp <- reserveVar
+  zeroOut a
+  zeroOut tmp
+  drainAndAdd tmp b
+  drainAndAddWithTwo a b tmp 1
+
+-- Because the interpreter insists on fully evaluating the program
+-- constants and then factoring them, we can't just write p^12345 and
+-- expect it to work. So we have to get clever and produce this number
+-- some other way.
+produce12345 :: Var -> Fractran ()
+produce12345 outVar = do
+  zeroOut outVar
+  tmp1 <- reserveVar
+  tmp2 <- reserveVar
+  putConst tmp1 123
+  putConst tmp2 100
+  drainAndMultiply outVar tmp1 tmp2
+  addConst outVar 45
+  zeroOut tmp2
+
+problem207 :: Fractran ()
+problem207 = do
+  n <- reserveVar
+  twoN <- reserveVar
+  left <- reserveVar
+  right <- reserveVar
+  constant <- reserveVar
+
+  putConst n 1
+  putConst twoN 2
+
+  produce12345 constant
+  zeroOut left
+  drainAndMultiply left constant n
+  mov right twoN
+  satSub1 right
+  symmDiff left right
+  whilePositive left $ do
+    addConst left 1 -- Counteract the implicit 'a--' of the while loop
+    addConst n 1
+    mov left twoN
+    drainAndAdd twoN left
+
+    produce12345 constant
+    zeroOut left
+    drainAndMultiply left constant n
+    mov right twoN
+    satSub1 right
+    symmDiff left right
+
+  --zeroOut twoN
+  --zeroOut right
+
+  --satSub1 n
+  --produce12345 constant
+  --drainAndMultiply left constant n -- w(left) = 12345 * (n - 1)
+  --addConst left 2
+  --mov constant left -- constant = w - 1
+  --drainAndMultiply outputVar constant left
+
+  clearFinalLabel
+
 sampleProgram :: Fractran ()
 sampleProgram = do
   a <- reserveVar
   b <- reserveVar
-  --putConst a 10
-  --putConst b 11
-  --drainAndMultiply outputVar a b
-
-  --putConst a 15
-  --putConst b 12
-  --symmDiff a b
-
-  putConst a 10
-  putConst b 3
-  whilePositive a $ do
-    drainAndAdd outputVar b
-    putConst b 4
-
+  putConst b 9
+  mov a b
   clearFinalLabel
 
 main :: IO ()
 main = do
   putStrLn $ "Input: [2, 1]"
-  printFractran sampleProgram
+  printFractran problem207
+  --printFractran sampleProgram
