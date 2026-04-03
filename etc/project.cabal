@@ -1,0 +1,12 @@
+cabal-version: 2.4
+
+-- Started using this on Problem 208, so any problems older may need
+-- to modify this to get dependency management right.
+
+name: eulers-melting-pot-haskell
+version: 0.1.0.0
+
+executable 208_analysis
+  main-is: 208_analysis.hs
+  build-depends: base, unordered-containers, hashable, mtl
+  default-language: Haskell2010

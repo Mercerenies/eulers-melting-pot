@@ -1,4 +1,4 @@
-{-# LANGUAGE ViewPatterns #-}
+{-# LANGUAGE ViewPatterns, ScopedTypeVariables, RankNTypes #-}
 
 -- Analysis of Problem 208. (all angles are degrees)
 --
@@ -99,6 +99,12 @@
 
 import Data.List
 import Data.Maybe
+import Data.Hashable (Hashable)
+import Data.HashMap.Strict (HashMap)
+import qualified Data.HashMap.Strict as HashMap
+import Control.Monad.State
+
+import Debug.Trace
 
 data ZModule = ZModule Integer Integer Integer Integer
                deriving (Eq)
@@ -205,8 +211,38 @@ applyMoves = foldl' (flip applyMove)
 applyMovesToStart :: [Move] -> RobotPosition
 applyMovesToStart = applyMoves startPosition
 
+-- The problem description does not make it clear whether or not "back
+-- at the start position" means it must be facing the correct
+-- direction too. I may change this definition later. I'm assuming
+-- "yes" for now.
+isStartPosition :: RobotPosition -> Bool
+isStartPosition = (== startPosition)
+
+-- General purpose memoization of a single function argument.
+memo :: forall a b. (Show a, Show b, Hashable a) => (forall m. Applicative m => (a -> m b) -> a -> m b) -> a -> State (HashMap a b) b
+memo f = f'
+    where f' :: Hashable a => a -> State (HashMap a b) b
+          f' a = do
+            m <- get
+            case HashMap.lookup a m of
+              Just b -> pure b
+              Nothing -> do
+                   b <- f f' a
+                   modify $ HashMap.insert a b
+                   return b
+
+-- Making sure the memoization works with a simple Fibonacci function.
+fiboN :: Applicative m => (Integer -> m Integer) -> Integer -> m Integer
+fiboN _ 0 = pure 0
+fiboN _ 1 = pure 1
+fiboN f n = (+) <$> f (n - 1) <*> f (n - 2)
+
+fibo :: Integer -> Integer
+fibo = flip evalState mempty . memo fiboN
+
 main :: IO ()
 main = do
+  print $ fibo 1000
   print startPosition
   print $ applyMovesToStart [Anticlockwise, Clockwise, Clockwise, Anticlockwise]
   print $ applyMovesToStart [Clockwise, Anticlockwise, Anticlockwise, Clockwise]
