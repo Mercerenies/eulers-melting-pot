@@ -175,13 +175,22 @@ drainAndMultiply (Var a) (Var b) (Var c) = atomicCommand $ \(Label lastLabel) (L
                                              rawFraction $ singleton tmp7 %% singleton b <> singleton lastLabel
                                              rawFraction $ singleton nextLabel %% singleton lastLabel
 
+-- a = 0;
+zeroOut :: Var -> Fractran ()
+zeroOut (Var a) = atomicCommand $ \lastLabel nextLabel -> do
+                    tmp <- rawReserveValue
+                    rawFraction $ singleton tmp %% singleton a <> singleton (getLabel lastLabel)
+                    rawFraction $ singleton (getLabel lastLabel) %% singleton tmp
+                    rawFraction $ singleton (getLabel nextLabel) %% singleton (getLabel lastLabel)
+
+-- a += CONSTANT
+addConst :: Var -> Integer -> Fractran ()
+addConst (Var a) value = atomicCommand $ \lastLabel nextLabel -> do
+                           rawFraction $ number [(a, value), (getLabel nextLabel, 1)] %% singleton (getLabel lastLabel)
+
 -- a = CONSTANT
 putConst :: Var -> Integer -> Fractran ()
-putConst (Var a) value = atomicCommand $ \lastLabel nextLabel -> do
-                           tmp <- rawReserveValue
-                           rawFraction $ singleton tmp %% singleton a <> singleton (getLabel lastLabel)
-                           rawFraction $ singleton (getLabel lastLabel) %% singleton tmp
-                           rawFraction $ number [(a, value), (getLabel nextLabel, 1)] %% singleton (getLabel lastLabel)
+putConst a value = zeroOut a >> addConst a value
 
 -- a -= 1 (saturating sub)
 satSub1 :: Var -> Fractran ()
