@@ -91,6 +91,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Forth
 * Fortran
 * Fourier
+* FRACTRAN
 * Funciton
 * Game Builder Garage
 * Genie
@@ -1454,6 +1455,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Mornington Crescent](https://esolangs.org/wiki/Mornington_Crescent)
 * Compiler / Interpreter: [Esoterpret @ 084c76d](https://github.com/tophcodes/esoterpret/tree/084c76d68f74a7990a7761d5d65c29ddc12116f5/modules/morningtoncrescent)
 * Notes: Code was written with the help of a [Racket translator program](https://github.com/Mercerenies/mornington-crescent-builder).
+
+### Euler 207
+* File: [problem207.fr](problem207.fr)
+* Language: [FRACTRAN](https://en.wikipedia.org/wiki/FRACTRAN)
+* Compiler / Interpreter: [Fast FRACTRAN Interpreter](https://pimlu.github.io/fractran/)
+* Notes: A very slow solution, use input `[2, 1]`, program outputs as exponent to `3`, code was written with the help of a [Haskell translator program](etc/fractran_gen.hs), turning up cycle count can help with speed.
 
 ## Valid Languages
 
