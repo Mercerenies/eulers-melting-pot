@@ -262,37 +262,41 @@ problem207 = do
   right <- reserveVar
   constant <- reserveVar
 
-  putConst n 1
-  putConst twoN 2
+  putConst n 1 -- n = 1
+  putConst twoN 2 -- twoN = 2
 
   produce12345 constant
   zeroOut left
-  drainAndMultiply left constant n
+  drainAndMultiply left constant n -- left = 12345 * n
   mov right twoN
-  satSub1 right
+  satSub1 right -- right = twoN - 1
   symmDiff left right
   whilePositive left $ do
     addConst left 1 -- Counteract the implicit 'a--' of the while loop
-    addConst n 1
+    addConst n 1 -- n += 1
     mov left twoN
-    drainAndAdd twoN left
+    drainAndAdd twoN left -- twoN *= 2
 
     produce12345 constant
     zeroOut left
-    drainAndMultiply left constant n
+    drainAndMultiply left constant n -- left = 12345 * n
     mov right twoN
-    satSub1 right
+    satSub1 right -- right = twoN - 1
     symmDiff left right
 
-  --zeroOut twoN
-  --zeroOut right
+  zeroOut twoN -- twoN = 0
+  zeroOut right -- right = 0
 
-  --satSub1 n
-  --produce12345 constant
-  --drainAndMultiply left constant n -- w(left) = 12345 * (n - 1)
-  --addConst left 2
-  --mov constant left -- constant = w - 1
-  --drainAndMultiply outputVar constant left
+  satSub1 n
+  produce12345 constant
+  drainAndMultiply left constant n -- w(left) = 12345 * (n - 1)
+  addConst left 2 -- w += 2
+  mov constant left >> satSub1 constant -- constant = w - 1
+  drainAndMultiply outputVar constant left
+
+  -- Clean up
+  zeroOut left
+  zeroOut n
 
   clearFinalLabel
 
