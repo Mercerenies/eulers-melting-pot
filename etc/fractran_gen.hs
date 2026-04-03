@@ -121,15 +121,26 @@ reserveVar = fmap Var rawReserveValue
 reserveLabel :: Fractran Label
 reserveLabel = fmap Label rawReserveValue
 
+getLastLabel :: Fractran Label
+getLastLabel = Fractran $ gets stateLastLabel
+
+putLastLabel :: Label -> Fractran ()
+putLastLabel l = Fractran . modify $ \st -> st { stateLastLabel = l }
+
 -- Execute a command. That command must assume that the first label
 -- starts at value 1 and must set the second to value 1 when it's
--- done. The command must NOT read or modify stateLastLabel.
+-- done.
+--
+-- The command must not use the first label nontrivially, but it may
+-- use the second label as part of its control flow. This asymmetry is
+-- necessary since if commands could use BOTH labels, then multiple
+-- adjacent commands could clobber each other without knowing it.
 atomicCommand :: (Label -> Label -> Fractran ()) -> Fractran ()
 atomicCommand f = do
-  lastLabel <- Fractran $ gets stateLastLabel
+  lastLabel <- getLastLabel
   nextLabel <- reserveLabel
-  Fractran . modify $ \st -> st { stateLastLabel = nextLabel }
   f lastLabel nextLabel
+  putLastLabel nextLabel
 
 -- Run at the end of the program once to clear the final label, just
 -- to clean up the output.
@@ -138,13 +149,17 @@ clearFinalLabel = do
   lastLabel <- Fractran $ gets stateLastLabel
   rawFraction $ mempty %% singleton (getLabel lastLabel)
 
+-- a += N b; b = 0;
+drainAndAddWith :: Var -> Var -> Integer -> Fractran ()
+drainAndAddWith (Var a) (Var b) n = atomicCommand $ \lastLabel nextLabel -> do
+                                      tmp <- rawReserveValue
+                                      rawFraction $ number [(a, n), (tmp, 1)] %% singleton b <> singleton (getLabel lastLabel)
+                                      rawFraction $ singleton (getLabel lastLabel) %% singleton tmp
+                                      rawFraction $ singleton (getLabel nextLabel) %% singleton (getLabel lastLabel)
+
 -- a += b; b = 0;
 drainAndAdd :: Var -> Var -> Fractran ()
-drainAndAdd (Var a) (Var b) = atomicCommand $ \lastLabel nextLabel -> do
-                                tmp <- rawReserveValue
-                                rawFraction $ singleton a <> singleton tmp %% singleton b <> singleton (getLabel lastLabel)
-                                rawFraction $ singleton (getLabel lastLabel) %% singleton tmp
-                                rawFraction $ singleton (getLabel nextLabel) %% singleton (getLabel lastLabel)
+drainAndAdd a b = drainAndAddWith a b 1
 
 -- a += b*c; b = 0
 -- Mostly copied from the Esolang page example.
@@ -168,13 +183,53 @@ putConst (Var a) value = atomicCommand $ \lastLabel nextLabel -> do
                            rawFraction $ singleton (getLabel lastLabel) %% singleton tmp
                            rawFraction $ number [(a, value), (getLabel nextLabel, 1)] %% singleton (getLabel lastLabel)
 
+-- a -= 1 (saturating sub)
+satSub1 :: Var -> Fractran ()
+satSub1 (Var a) = atomicCommand $ \(Label lastLabel) (Label nextLabel) -> do
+                    rawFraction $ singleton nextLabel %% singleton a <> singleton lastLabel
+                    rawFraction $ singleton nextLabel %% singleton lastLabel
+
+-- a = max(a-b, 0); b = max(b-a, 0);
+symmDiff :: Var -> Var -> Fractran ()
+symmDiff (Var a) (Var b) =
+    atomicCommand $ \(Label lastLabel) (Label nextLabel) -> do
+      tmp <- rawReserveValue
+      rawFraction $ singleton tmp %% singleton a <> singleton b <> singleton lastLabel
+      rawFraction $ singleton lastLabel %% singleton tmp
+      rawFraction $ singleton nextLabel %% singleton lastLabel
+
+-- while (--a > 0) { body ... }
+whilePositive :: Var -> Fractran () -> Fractran ()
+whilePositive (Var a) body =
+    atomicCommand $ \(Label lastLabel) (Label nextLabel) -> do
+      Label conditionCheckLabel <- reserveLabel
+      Label innerLoopLabel <- reserveLabel
+      rawFraction $ singleton conditionCheckLabel %% singleton lastLabel
+      rawFraction $ singleton innerLoopLabel %% singleton conditionCheckLabel <> singleton a
+      rawFraction $ singleton nextLabel %% singleton conditionCheckLabel
+      putLastLabel (Label innerLoopLabel)
+      body
+      Label bodyEndLabel <- getLastLabel
+      rawFraction $ singleton conditionCheckLabel %% singleton bodyEndLabel
+
 sampleProgram :: Fractran ()
 sampleProgram = do
   a <- reserveVar
   b <- reserveVar
+  --putConst a 10
+  --putConst b 11
+  --drainAndMultiply outputVar a b
+
+  --putConst a 15
+  --putConst b 12
+  --symmDiff a b
+
   putConst a 10
-  putConst b 11
-  drainAndMultiply outputVar a b
+  putConst b 3
+  whilePositive a $ do
+    drainAndAdd outputVar b
+    putConst b 4
+
   clearFinalLabel
 
 main :: IO ()
