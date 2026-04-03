@@ -771,6 +771,7 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Maml (https://github.com/k-kahora/Maml)
 *** Monte (https://github.com/monte-language/monte)
 *** Mojo (https://www.modular.com/mojo)
+*** Nature (https://nature-lang.org/)
 *** Neat (https://neat-lang.github.io/)
 *** Neva (https://github.com/nevalang/neva/)
 *** Nibbles (http://www.golfscript.com/)
