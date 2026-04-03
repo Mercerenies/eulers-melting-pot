@@ -114,6 +114,7 @@
 *** Io                                                                 :used:
 *** Ioke                                                               :used:
 *** Koi (https://koi-lang.dev/)
+*** Koka (https://koka-lang.github.io/koka/doc/index.html)
 *** Livescript (https://livescript.net/)
 *** Lunar (https://github.com/lunarlang/lunar)
 *** Maple (https://www.maplesoft.com/products/Maple/personal_edition/)
@@ -469,6 +470,7 @@
 *** Japt                                                               :used:
 *** Javagrid (https://esolangs.org/wiki/Javagrid)                      :used:
 *** Jelly                                                              :used:
+*** jq (https://stedolan.github.io/jq/)
 *** JSF**k                                                             :used:
 *** Labyrinth                                                          :used:
 *** LOLCODE (https://en.wikipedia.org/wiki/LOLCODE)
@@ -758,8 +760,6 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
 *** Jai (https://inductive.no/jai/)
     + Currently (as of 8/10/25) unreleased. But worth keeping an eye
       on.
-*** jq (https://stedolan.github.io/jq/)
-*** Koka (https://koka-lang.github.io/koka/doc/index.html)
 *** Konna (https://www.reddit.com/r/ProgrammingLanguages/comments/rpe65y/konna_my_programming_language/)
 *** Lava (https://lavape.sourceforge.net/)
 *** Logtalk (https://logtalk.org/)
