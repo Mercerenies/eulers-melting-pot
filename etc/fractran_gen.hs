@@ -1,7 +1,7 @@
 
 -- New FRACTRAN generator, for Problem 207
 
-import Data.List
+import Data.List hiding (singleton)
 import Data.Function
 import Control.Monad.RWS
 
@@ -14,13 +14,23 @@ data Fraction = Fraction Number Number
                 deriving (Eq)
 
 data FractranState = FractranState {
-      stateNextIndex :: Int
+      stateNextIndex :: Int,
+      stateLastLabel :: Label
     } deriving (Show)
 
 number :: [(Int, Integer)] -> Number
 number xs = Number xs'
     where xs' = filter (\(_, p) -> p /= 0) . map collect . groupBy ((==) `on` fst) $ sort xs
           collect xs = (fst (head xs), sum (map snd xs))
+
+singleton :: Int -> Number
+singleton i = Number [(i, 1)]
+
+instance Semigroup Number where
+    Number xs <> Number ys = number (xs ++ ys)
+
+instance Monoid Number where
+    mempty = Number []
 
 newtype Fractran a = Fractran { runFractran :: RWS () [Fraction] FractranState a }
     deriving (Functor, Applicative, Monad)
@@ -48,8 +58,22 @@ fraction n d = let (n', d') = normalForm n d in
               let (xs', ys') = mergeBy (compare `on` fst) (\(xi, xp) (_, yp) -> ((xi, max (xp - yp) 0), (xi, max (yp - xp) 0))) xs ys in
               (number xs', number ys')
 
+(%%) :: Number -> Number -> Fraction
+(%%) = fraction
+
+infix 5 %%
+
 newtype Var = Var Int
     deriving (Show, Eq)
+
+newtype Label = Label Int
+    deriving (Show, Eq)
+
+getVar :: Var -> Int
+getVar (Var i) = i
+
+getLabel :: Label -> Int
+getLabel (Label i) = i
 
 instance Show Number where
     showsPrec _ (Number []) = ("1" ++)
@@ -65,8 +89,18 @@ allPrimes = filter isPrime [2..]
 
 newState :: FractranState
 newState = FractranState {
-             stateNextIndex = 0
+             stateNextIndex = 2,
+             stateLastLabel = startLabel
            }
+
+-- It is assumed that the program starts with the minimal input [2, 1].
+startLabel :: Label
+startLabel = Label 0
+
+-- Reserve the output variable in advance, so we know where to look
+-- for the final result.
+outputVar :: Var
+outputVar = Var 1
 
 rawFraction :: Fraction -> Fractran ()
 rawFraction r = Fractran $ tell [r]
@@ -75,18 +109,75 @@ printFractran :: Fractran () -> IO ()
 printFractran program = let ((), _, out) = runRWS (runFractran program) () newState in
                         mapM_ print out
 
+rawReserveValue :: Fractran Int
+rawReserveValue = Fractran $ do
+                    value <- gets stateNextIndex
+                    modify $ \st -> st { stateNextIndex = stateNextIndex st + 1 }
+                    return value
+
 reserveVar :: Fractran Var
-reserveVar = Fractran $ do
-               varValue <- gets stateNextIndex
-               modify $ \st -> st { stateNextIndex = stateNextIndex st + 1 }
-               return $ Var varValue
+reserveVar = fmap Var rawReserveValue
+
+reserveLabel :: Fractran Label
+reserveLabel = fmap Label rawReserveValue
+
+-- Execute a command. That command must assume that the first label
+-- starts at value 1 and must set the second to value 1 when it's
+-- done. The command must NOT read or modify stateLastLabel.
+atomicCommand :: (Label -> Label -> Fractran ()) -> Fractran ()
+atomicCommand f = do
+  lastLabel <- Fractran $ gets stateLastLabel
+  nextLabel <- reserveLabel
+  Fractran . modify $ \st -> st { stateLastLabel = nextLabel }
+  f lastLabel nextLabel
+
+-- Run at the end of the program once to clear the final label, just
+-- to clean up the output.
+clearFinalLabel :: Fractran ()
+clearFinalLabel = do
+  lastLabel <- Fractran $ gets stateLastLabel
+  rawFraction $ mempty %% singleton (getLabel lastLabel)
+
+-- a += b; b = 0;
+drainAndAdd :: Var -> Var -> Fractran ()
+drainAndAdd (Var a) (Var b) = atomicCommand $ \lastLabel nextLabel -> do
+                                tmp <- rawReserveValue
+                                rawFraction $ singleton a <> singleton tmp %% singleton b <> singleton (getLabel lastLabel)
+                                rawFraction $ singleton (getLabel lastLabel) %% singleton tmp
+                                rawFraction $ singleton (getLabel nextLabel) %% singleton (getLabel lastLabel)
+
+-- a += b*c; b = 0
+-- Mostly copied from the Esolang page example.
+drainAndMultiply :: Var -> Var -> Var -> Fractran ()
+drainAndMultiply (Var a) (Var b) (Var c) = atomicCommand $ \(Label lastLabel) (Label nextLabel) -> do
+                                             tmp13 <- rawReserveValue
+                                             tmp11 <- rawReserveValue
+                                             tmp7 <- rawReserveValue
+                                             rawFraction $ singleton tmp13 %% singleton tmp7 <> singleton c
+                                             rawFraction $ singleton a <> singleton tmp7 <> singleton tmp11 %% singleton tmp13
+                                             rawFraction $ singleton lastLabel %% singleton tmp7
+                                             rawFraction $ singleton c %% singleton tmp11
+                                             rawFraction $ singleton tmp7 %% singleton b <> singleton lastLabel
+                                             rawFraction $ singleton nextLabel %% singleton lastLabel
+
+-- a = CONSTANT
+putConst :: Var -> Integer -> Fractran ()
+putConst (Var a) value = atomicCommand $ \lastLabel nextLabel -> do
+                           tmp <- rawReserveValue
+                           rawFraction $ singleton tmp %% singleton a <> singleton (getLabel lastLabel)
+                           rawFraction $ singleton (getLabel lastLabel) %% singleton tmp
+                           rawFraction $ number [(a, value), (getLabel nextLabel, 1)] %% singleton (getLabel lastLabel)
 
 sampleProgram :: Fractran ()
 sampleProgram = do
-  rawFraction (Fraction (Number [(0, 3), (2, 4)]) (Number [(4, 2), (5, 3)]))
-  rawFraction (Fraction (Number [(1, 3), (2, 4)]) (Number [(4, 2), (5, 3)]))
+  a <- reserveVar
+  b <- reserveVar
+  putConst a 10
+  putConst b 11
+  drainAndMultiply outputVar a b
+  clearFinalLabel
 
 main :: IO ()
 main = do
+  putStrLn $ "Input: [2, 1]"
   printFractran sampleProgram
-  print $ fraction (number [(1, 2), (3, 5), (1, 1)]) (number [(1, 1)])
