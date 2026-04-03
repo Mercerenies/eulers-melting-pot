@@ -1,4 +1,5 @@
-{-# LANGUAGE ViewPatterns, ScopedTypeVariables, RankNTypes #-}
+{-# LANGUAGE ViewPatterns, ScopedTypeVariables, RankNTypes, ApplicativeDo,
+    DerivingStrategies, DeriveAnyClass, DeriveGeneric #-}
 
 -- Analysis of Problem 208. (all angles are degrees)
 --
@@ -96,6 +97,9 @@
 --
 -- This fully represents a free Z-module of length 4 with basis {c,
 -- c^2, s, s c}.
+--
+-- Runs in about 13 seconds. GHC optimizations do not appear to help
+-- or hinder.
 
 import Data.List
 import Data.Maybe
@@ -103,11 +107,13 @@ import Data.Hashable (Hashable)
 import Data.HashMap.Strict (HashMap)
 import qualified Data.HashMap.Strict as HashMap
 import Control.Monad.State
+import GHC.Generics
 
 import Debug.Trace
 
 data ZModule = ZModule Integer Integer Integer Integer
-               deriving (Eq)
+               deriving stock (Eq, Generic)
+               deriving anyclass Hashable
 
 cTerm :: ZModule -> Integer
 cTerm (ZModule c _ _ _) = c
@@ -146,7 +152,9 @@ data RobotPosition = RobotPosition {
       robotDir :: Int, -- 0 to 4 inclusive.
       robotX :: ZModule,
       robotY :: ZModule
-    } deriving (Show, Eq)
+    }
+    deriving stock (Show, Eq, Generic)
+    deriving anyclass (Hashable)
 
 instance Semigroup RobotPosition where
     RobotPosition d x y <> RobotPosition d' x' y' = RobotPosition ((d + d') `mod` 5) (x + x') (y + y')
@@ -215,6 +223,9 @@ applyMovesToStart = applyMoves startPosition
 -- at the start position" means it must be facing the correct
 -- direction too. I may change this definition later. I'm assuming
 -- "yes" for now.
+--
+-- As far as I can tell, the two definitions are equivalent for our
+-- purposes, which is fascinating.
 isStartPosition :: RobotPosition -> Bool
 isStartPosition = (== startPosition)
 
@@ -232,19 +243,37 @@ memo f = f'
                    return b
 
 -- Making sure the memoization works with a simple Fibonacci function.
-fiboN :: Applicative m => (Integer -> m Integer) -> Integer -> m Integer
-fiboN _ 0 = pure 0
-fiboN _ 1 = pure 1
-fiboN f n = (+) <$> f (n - 1) <*> f (n - 2)
+fiboF :: Applicative m => (Integer -> m Integer) -> Integer -> m Integer
+fiboF _ 0 = pure 0
+fiboF _ 1 = pure 1
+fiboF f n = (+) <$> f (n - 1) <*> f (n - 2)
 
 fibo :: Integer -> Integer
-fibo = flip evalState mempty . memo fiboN
+fibo = flip evalState mempty . memo fiboF
+
+-- The real thing
+type CountPathsInput = (RobotPosition, Int)
+
+countPathsF :: Applicative m => (CountPathsInput -> m Integer) -> CountPathsInput -> m Integer
+countPathsF _ (pos, 0) = if isStartPosition pos then pure 1 else pure 0
+countPathsF f (pos, n) = do
+  clockwise <- f (applyMove Clockwise pos, n - 1)
+  anticlockwise <- f (applyMove Anticlockwise pos, n - 1)
+  return $ clockwise + anticlockwise
+
+countPaths :: Int -> Integer
+countPaths n = memoized (startPosition, n)
+    where memoized = flip evalState mempty . memo countPathsF
 
 main :: IO ()
 main = do
+  --print $ countPaths 25
+  print $ countPaths 70
+{-
   print $ fibo 1000
   print startPosition
   print $ applyMovesToStart [Anticlockwise, Clockwise, Clockwise, Anticlockwise]
   print $ applyMovesToStart [Clockwise, Anticlockwise, Anticlockwise, Clockwise]
   -- The diagram from the problem text
   print $ applyMovesToStart [Anticlockwise, Clockwise, Anticlockwise, Anticlockwise, Anticlockwise, Clockwise, Clockwise, Clockwise, Clockwise, Anticlockwise, Clockwise, Clockwise, Anticlockwise, Clockwise, Anticlockwise, Anticlockwise, Anticlockwise, Anticlockwise, Clockwise, Anticlockwise, Anticlockwise, Clockwise, Anticlockwise, Anticlockwise, Anticlockwise]
+-}
