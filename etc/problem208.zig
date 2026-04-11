@@ -1,6 +1,8 @@
 // Simplified version of 208_analysis.hs
 //
 // 5 seconds, runs correctly. Need 64-bit ints.
+//
+// 2.5 seconds after removing "impossible scenarios"
 
 const std = @import("std");
 
@@ -94,6 +96,20 @@ fn count_paths(memo: *std.AutoHashMap(HashKey, i64), pos: RobotPosition, remaini
     } else if (memo.get(key)) |value| {
         return value;
     } else {
+        // Impossible scenarios
+        if (pos.x.c < - 2 * remaining or pos.x.c > 2 * remaining) {
+            return 0;
+        }
+        if (pos.x.c2 < - 4 * remaining or pos.x.c2 > 4 * remaining) {
+            return 0;
+        }
+        if (pos.y.s < - remaining or pos.y.s > remaining) {
+            return 0;
+        }
+        if (pos.y.sc < - 2 * remaining or pos.y.sc > 2 * remaining) {
+            return 0;
+        }
+
         const clockwise = try count_paths(memo, apply_move(4, &pos), remaining - 1);
         const anticlockwise = try count_paths(memo, apply_move(1, &pos), remaining - 1);
         try memo.put(key, clockwise + anticlockwise);
