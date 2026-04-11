@@ -108,4 +108,42 @@ pub fn main() !void {
     const start_position = RobotPosition{ .dir = 0, .x = .{ .c = 0, .c2 = 0 }, .y = .{ .s = 0, .sc = 0 } };
     const answer: i64 = try count_paths(&memo, start_position, 70);
     print("{}\n", .{answer});
+
+    // Collect statistics
+    print("Memo keys: {}\n", .{memo.count()});
+    var min_c: i64 = 0;
+    var max_c: i64 = 0;
+    var min_c2: i64 = 0;
+    var max_c2: i64 = 0;
+    var min_s: i64 = 0;
+    var max_s: i64 = 0;
+    var min_sc: i64 = 0;
+    var max_sc: i64 = 0;
+    var iter = memo.keyIterator();
+    while (iter.next()) |key| {
+        min_c = min(min_c, key.pos.x.c);
+        max_c = max(max_c, key.pos.x.c);
+        min_c2 = min(min_c2, key.pos.x.c2);
+        max_c2 = max(max_c2, key.pos.x.c2);
+        min_s = min(min_s, key.pos.y.s);
+        max_s = max(max_s, key.pos.y.s);
+        min_sc = min(min_sc, key.pos.y.sc);
+        max_sc = max(max_sc, key.pos.y.sc);
+    }
+    print("min_c = {}\n", .{min_c});
+    print("max_c = {}\n", .{max_c});
+    print("min_c2 = {}\n", .{min_c2});
+    print("max_c2 = {}\n", .{max_c2});
+    print("min_s = {}\n", .{min_s});
+    print("max_s = {}\n", .{max_s});
+    print("min_sc = {}\n", .{min_sc});
+    print("max_sc = {}\n", .{max_sc});
+}
+
+fn min(a: i64, b: i64) i64 {
+    if (a < b) return a else return b;
+}
+
+fn max(a: i64, b: i64) i64 {
+    if (a > b) return a else return b;
 }
