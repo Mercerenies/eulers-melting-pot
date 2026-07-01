@@ -1,27 +1,22 @@
 
+-- Ended up not being used, see problem209.py instead.
+
 import Data.Char
 
-newtype Var = Var Int
-    deriving (Eq)
+-- An endomorphism on a finite set.
+newtype FinEndo = FinEndo [Int]
+    deriving (Show, Eq, Ord)
 
-instance Show Var where
-    showsPrec _ (Var i) = showChar (chr (ord 'a' + i))
+appFinEndo :: FinEndo -> Int -> Int
+appFinEndo (FinEndo xs) n = xs !! n
 
-aa, bb, cc, dd, ee, ff :: Var
-aa = Var 0
-bb = Var 1
-cc = Var 2
-dd = Var 3
-ee = Var 4
-ff = Var 5
+composeFinEndo :: FinEndo -> FinEndo -> FinEndo
+composeFinEndo (FinEndo xs) (FinEndo ys) = FinEndo [appFinEndo (FinEndo ys) i | i <- xs]
 
-data Expr = EVar Var | EAnd Expr Expr | EXor Expr Expr
-            deriving (Eq)
+(.$) :: FinEndo -> Int -> Int
+(.$) = appFinEndo
 
-instance Show Expr where
-    showsPrec n (EVar v) = showsPrec n v
-    showsPrec n (EAnd e1 e2) = showParen (n > 3) $ showsPrec 3 e1 . showString " × " . showsPrec 3 e2
-    showsPrec n (EXor e1 e2) = showParen (n > 2) $ showsPrec 2 e1 . showString " + " . showsPrec 2 e2
+infixr 0 .$
 
--- A Boolean function in n arguments can be realized
-newtype BooleanPerm = BooleanPerm [Var]
+identity :: Int -> FinEndo
+identity n = FinEndo [i | i <- [0..n - 1]]
