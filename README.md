@@ -169,6 +169,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Pizza
 * Pony
 * Potassco
+* PowerShell
 * Prolog
 * Pyf\*\*ck
 * Pyth
@@ -1461,6 +1462,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [FRACTRAN](https://en.wikipedia.org/wiki/FRACTRAN)
 * Compiler / Interpreter: [Fast FRACTRAN Interpreter](https://pimlu.github.io/fractran/)
 * Notes: A very slow solution, use input `[2, 1]`, program outputs as exponent to `3`, code was written with the help of a [Haskell translator program](etc/fractran_gen.hs), turning up cycle count can help with speed.
+
+### Euler 208
+* File: [problem208.ps1](problem208.ps1)
+* Language: [PowerShell](https://learn.microsoft.com/en-us/powershell/)
+* Compiler / Interpreter: [TIO Nexus](https://tio.run/#powershell)
+* Notes: (None)
 
 ## Valid Languages
 

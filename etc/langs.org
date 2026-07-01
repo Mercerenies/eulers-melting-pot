@@ -300,7 +300,7 @@
 *** Fish                                                               :used:
 *** Ksh
 *** Oils (https://oils.pub/)
-*** Powershell
+*** PowerShell                                                         :used:
 *** Scsh
 *** Zsh                                                                :used:
 ** BASIC
