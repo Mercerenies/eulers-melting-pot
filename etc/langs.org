@@ -284,7 +284,7 @@
 *** Marie.js (https://marie.js.org/)
     + 16 bit registers
 *** MASM                                                               :used:
-*** Motorola 68000 (https://en.wikibooks.org/wiki/68000_Assembly/Registers)
+*** Motorola 68000 (https://en.wikibooks.org/wiki/68000_Assembly/Registers) :used:
     + Good simulator for it: http://www.easy68k.com/index.html
     + 32 bit registers
 *** NASM                                                               :used:

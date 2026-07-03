@@ -143,6 +143,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * MontiLang
 * MoonScript
 * Mornington Crescent
+* Motorola 68000 Assembly
 * Mouse-2002
 * NASM
 * naz
@@ -1468,6 +1469,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [PowerShell](https://learn.microsoft.com/en-us/powershell/)
 * Compiler / Interpreter: [TIO Nexus](https://tio.run/#powershell)
 * Notes: (None)
+
+### Euler 209
+* File: [problem209.asm](problem209.asm)
+* Language: [Motorola 68000 Assembly](https://en.wikipedia.org/wiki/Motorola_68000)
+* Compiler / Interpreter: [m68k-interpreter by gianlucarea @ 05e1992b](https://github.com/gianlucarea/m68k-interpreter/tree/05e1992b5e6e87e4b576082ad1843067796893d1)
+* Notes: The online version of the interpreter is locked at a high JavaScript delay; will run very slow with the default delay.
 
 ## Valid Languages
 
