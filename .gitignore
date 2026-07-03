@@ -16,3 +16,5 @@ egcache/
 __coconut_cache__/
 *.fam
 etc/dist-newstyle/
+.bsp/
+.scala-build/
