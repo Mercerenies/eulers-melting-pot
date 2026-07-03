@@ -94,7 +94,7 @@ THREE:
 FIBO:
   ;; d3;d4;d5 will hold our Fibonacci sum
   LEA.L FIBO, a1
-  MOVE.W a0, d7
+  MOVE.W #5, d7
   MULU #6, d7
   ADDA.W d7, a1
   ;; a1 is now the position of cycle_length in the array.
@@ -104,8 +104,13 @@ FIBO:
   MOVE.W (a1)+, d5
   SUBA.W #12, a1
   ADD.W -(a1), d5
-  ADDX.W -(a1), d4
-  ADDX.W -(a1), d3
+  ;; M68k is documented as supported an address offset as the first
+  ;; arg of ADDX, but the interpreter we're using balks at it. So
+  ;; indirectly move into a7 and then use a7 (which is supported).
+  MOVEA.W -(a1), a7
+  ADDX.W a7, d4
+  MOVEA.W -(a1), a7
+  ADDX.W a7, d3
   JMP LOOP_END
 
 LOOP_END:
