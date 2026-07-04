@@ -77,6 +77,22 @@ object problem210_2 {
   def integerPointsInRectangle(a: Long, b: Long): Long =
     2 * a * b - a - b + 1
 
+  // Given a sequence for whom a prefix satisfies p and the rest do
+  // not, returns the index of the first element that does not.
+  def binarySearch[A](elems: IndexedSeq[A])(p: A => Boolean): Int = {
+    var lower = 0
+    var higher = elems.size
+    while (lower < higher) {
+      val pivot = (lower + higher) / 2
+      if (p(elems(pivot))) {
+        lower = pivot + 1
+      } else {
+        higher = pivot
+      }
+    }
+    lower
+  }
+
   // Region (*): Annoying and difficult
   def region1(r: Long): Long = {
     val h = r.ceilDiv(4)
@@ -85,22 +101,16 @@ object problem210_2 {
 
     // Now hand-count the other points
     var pointsOutsideTriangle: Long = 0
-    for (x <- 1L until r) {
-      if (x % 1000 == 0) {
+    for (x <- 1L until (r / 4)) {
+      if (x % 1_000_000 == 0) {
         println(x)
       }
-      var y = r / 4 + 1
-      breakable {
-        while (x + y <= r) {
-          val t = triangle(r, Point(x.toDouble, y.toDouble))
-          if (!t.isDegenerate && t.α > Math.PI / 2 + EPSILON) {
-            pointsOutsideTriangle += 1
-            y += 1
-          } else {
-            break
-          }
-        }
+      val ys = (r / 4 + 1) to (r - x)
+      val ysWithObtuse = binarySearch(ys) { y =>
+        val t = triangle(r, Point(x.toDouble, y.toDouble))
+        !t.isDegenerate && t.α > Math.PI / 2 + EPSILON
       }
+      pointsOutsideTriangle += ysWithObtuse
     }
     // pointsOutsideTriangle only counts those with x > 0. Reflect
     // across the r = x + y line to get the other ones above y = x.
@@ -130,10 +140,15 @@ object problem210_2 {
   val UPPER = 100
 
   @main def main() = {
+    // Test binary search
+    //val seq = 1 to 10_000
+    //val index = binarySearch(seq) { _ < 100 }
+    //println(index)
+
     //for (r <- (4 to UPPER).by(4)) {
     //  println(s"n($r) = [${nByAngle(r)}] ${n(r)}")
     //}
-    //val theBigOne = 1_000_000_000L
-    //rintln(n(theBigOne))
+    val theBigOne = 1_000_000_000L
+    println(n(theBigOne))
   }
 }
