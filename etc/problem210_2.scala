@@ -2,7 +2,7 @@
 import scala.util.control.Breaks.{breakable, break}
 
 object problem210_2 {
-  val EPSILON: Double = 0.001 // Cheap and nasty but good enough for now
+  val EPSILON: Double = 0.000000001 // Cheap and nasty but good enough for now
 
   case class Point(val x: Double, val y: Double) {
     def +(that: Point) = Point(x + that.x, y + that.y)
@@ -48,6 +48,18 @@ object problem210_2 {
     def isObtuse: Boolean = angles.exists(_ > Math.PI / 2 + EPSILON)
 
     def anglesIsObtuse: List[Boolean] = angles.map(_ > Math.PI / 2 + EPSILON)
+
+    def alphaIsObtuse: Boolean = {
+      // Okay, so we want to check whether α > 90°, or eqv α > π / 2.
+      // α is defined as acos(stuff), so we want to check whether
+      // acos(stuff) > π / 2. Equivalently, we want to check that
+      // 'stuff' < 0. The denominator of 'stuff' is 2 * b * c, a
+      // positive quantity, so we equivalently want to check that its
+      // numerator is < 0, i.e. b² + c² - a² < 0. Good news! No need
+      // for square roots anymore!
+      val num = (r - q).lengthSquared + (p - r).lengthSquared - (q - p).lengthSquared
+      num < 0
+    }
   }
 
   extension(self: Boolean)
@@ -108,7 +120,7 @@ object problem210_2 {
       val ys = (r / 4 + 1) to (r - x)
       val ysWithObtuse = binarySearch(ys) { y =>
         val t = triangle(r, Point(x.toDouble, y.toDouble))
-        !t.isDegenerate && t.α > Math.PI / 2 + EPSILON
+        !t.isDegenerate && t.alphaIsObtuse
       }
       pointsOutsideTriangle += ysWithObtuse
     }
@@ -145,9 +157,9 @@ object problem210_2 {
     //val index = binarySearch(seq) { _ < 100 }
     //println(index)
 
-    //for (r <- (4 to UPPER).by(4)) {
-    //  println(s"n($r) = [${nByAngle(r)}] ${n(r)}")
-    //}
+    for (r <- (4 to UPPER).by(4)) {
+      println(s"n($r) = [${nByAngle(r)}] ${n(r)}")
+    }
     val theBigOne = 1_000_000_000L
     println(n(theBigOne))
   }
