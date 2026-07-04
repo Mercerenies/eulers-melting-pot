@@ -1,21 +1,26 @@
 
+// It takes a honking 22 minutes in *Scala* but it works... somehow.
+// Regions (**) and (***) were easy (see the diagram at
+// 210_diagram.png), but I was miscounting Region (*). It's not a
+// right triangle like I initially thought. Based on reading, it
+// appears to be a circle, but I need to figure out why that is. At
+// minimum, this version of the program brute-forces it, which is
+// really slow (esp because I have to use BigInt).
+
 import scala.util.control.Breaks.{breakable, break}
+import scala.math.BigInt
 
 object problem210_2 {
-  val EPSILON: Double = 0.000000001 // Cheap and nasty but good enough for now
-
-  case class Point(val x: Double, val y: Double) {
+  case class Point(val x: BigInt, val y: BigInt) {
     def +(that: Point) = Point(x + that.x, y + that.y)
     def -(that: Point) = Point(x - that.x, y - that.y)
     def unary_- = Point(-x, -y)
 
     def dot(that: Point) = x * that.x + y * that.y
 
-    def length: Double = Math.sqrt(x * x + y * y)
+    def lengthSquared: BigInt = x * x + y * y
 
-    def lengthSquared: Double = x * x + y * y
-
-    def distance(that: Point) = (that - this).length
+    //def distance(that: Point) = (that - this).length
   }
 
   object Point {
@@ -26,28 +31,32 @@ object problem210_2 {
   }
 
   case class Triangle(val p: Point, val q: Point, val r: Point) {
-    def a: Double = (q - p).length
-    def b: Double = (r - q).length
-    def c: Double = (p - r).length
+    //def a: Double = (q - p).length
+    //def b: Double = (r - q).length
+    //def c: Double = (p - r).length
 
-    def sideLengths: List[Double] = List(a, b, c)
+    def a2 = (q - p).lengthSquared
+    def b2 = (r - q).lengthSquared
+    def c2 = (p - r).lengthSquared
 
-    def α: Double =
-      Math.acos((b * b + c * c - a * a) / (2 * b * c))
+    //def sideLengths: List[Double] = List(a, b, c)
 
-    def β: Double =
-      Math.acos((c * c + a * a - b * b) / (2 * c * a))
+    //def α: Double =
+    //  Math.acos((b * b + c * c - a * a) / (2 * b * c))
 
-    def γ: Double =
-      Math.acos((a * a + b * b - c * c) / (2 * a * b))
+    //def β: Double =
+    //  Math.acos((c * c + a * a - b * b) / (2 * c * a))
 
-    def angles: List[Double] = List(α, β, γ)
+    //def γ: Double =
+    //  Math.acos((a * a + b * b - c * c) / (2 * a * b))
 
-    def isDegenerate: Boolean = sideLengths.exists(_ == 0) || Point.isColinear(p, q, r)
+    //def angles: List[Double] = List(α, β, γ)
 
-    def isObtuse: Boolean = angles.exists(_ > Math.PI / 2 + EPSILON)
+    def isDegenerate: Boolean = List(a2, b2, c2).exists(_ == 0) || Point.isColinear(p, q, r)
 
-    def anglesIsObtuse: List[Boolean] = angles.map(_ > Math.PI / 2 + EPSILON)
+    //def isObtuse: Boolean = angles.exists(_ > Math.PI / 2 + EPSILON)
+
+    //def anglesIsObtuse: List[Boolean] = angles.map(_ > Math.PI / 2 + EPSILON)
 
     def alphaIsObtuse: Boolean = {
       // Okay, so we want to check whether α > 90°, or eqv α > π / 2.
@@ -62,31 +71,20 @@ object problem210_2 {
     }
   }
 
-  extension(self: Boolean)
-    def toLong: Long =
-      if self then 1 else 0
-
-  extension(a: Long)
-    def ceilDiv(b: Long): Long =
+  extension(a: BigInt)
+    def ceilDiv(b: BigInt): BigInt =
       (a + b - 1) / b
 
   def point_o = Point(0, 0)
-  def point_c(r: Long) = Point(r.toDouble / 4, r.toDouble / 4)
+  def point_c(r: BigInt) = Point(r / 4, r / 4)
 
-  def s(r: Long): Seq[Point] =
-    for {
-      x <- (- r) to r
-      ylim = r - x.abs
-      y <- (- ylim) to ylim
-    } yield Point(x.toDouble, y.toDouble)
-
-  def triangle(r: Long, b: Point): Triangle =
+  def triangle(r: BigInt, b: Point): Triangle =
     Triangle(point_o, point_c(r), b)
 
-  def triangular(k: Long): Long =
+  def triangular(k: BigInt): BigInt =
     k * (k + 1) / 2
 
-  def integerPointsInRectangle(a: Long, b: Long): Long =
+  def integerPointsInRectangle(a: BigInt, b: BigInt): BigInt =
     2 * a * b - a - b + 1
 
   // Given a sequence for whom a prefix satisfies p and the rest do
@@ -106,20 +104,20 @@ object problem210_2 {
   }
 
   // Region (*): Annoying and difficult
-  def region1(r: Long): Long = {
+  def region1(r: BigInt): BigInt = {
     val h = r.ceilDiv(4)
-    val internalPoints = if (h <= 2) { 0 } else { triangular(h - 2) }
+    val internalPoints = if (h <= 2) { BigInt(0) } else { triangular(h - 2) }
     val pointsOnRightTriangle = 2 * (h - 1)
 
     // Now hand-count the other points
-    var pointsOutsideTriangle: Long = 0
-    for (x <- 1L until (r / 4)) {
+    var pointsOutsideTriangle: BigInt = 0
+    for (x <- BigInt(1) until (r / 4)) {
       if (x % 1_000_000 == 0) {
         println(x)
       }
       val ys = (r / 4 + 1) to (r - x)
       val ysWithObtuse = binarySearch(ys) { y =>
-        val t = triangle(r, Point(x.toDouble, y.toDouble))
+        val t = triangle(r, Point(x, y))
         !t.isDegenerate && t.alphaIsObtuse
       }
       pointsOutsideTriangle += ysWithObtuse
@@ -131,22 +129,22 @@ object problem210_2 {
   }
 
   // Region (**): Easy, just a rectangle
-  def region2(r: Long): Long = {
+  def region2(r: BigInt): BigInt = {
     val a = r.ceilDiv(4)
     val b = r.ceilDiv(2)
     integerPointsInRectangle(a, b) + a + b - 1
   }
 
   // Region (***): Easy, just a square
-  def region3(r: Long): Long = {
+  def region3(r: BigInt): BigInt = {
     val a = r.ceilDiv(2)
     integerPointsInRectangle(a, a) + 2 * a - 1
   }
 
-  def n(r: Long): Long =
+  def n(r: BigInt): BigInt =
     2 * (region1(r) + region2(r) + region3(r))
 
-  def nByAngle(r: Long): List[Long] =
+  def nByAngle(r: BigInt): List[BigInt] =
     List(region1(r), region2(r), region3(r))
 
   val UPPER = 100
