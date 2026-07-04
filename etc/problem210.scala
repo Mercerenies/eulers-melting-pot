@@ -1,7 +1,7 @@
 
 // Brute force for the small inputs
 
-object problem210_1 {
+object problem210 {
   val EPSILON: Double = 0.001 // Cheap and nasty but good enough for now
 
   case class Point(val x: Double, val y: Double) {
