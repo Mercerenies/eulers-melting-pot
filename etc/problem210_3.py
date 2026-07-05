@@ -42,10 +42,10 @@ def region1(r: int) -> int:
     bound = 3 * rad // 2
     y = bound
     for x in range(0, bound + 1):
-        if x < 100 or x % 1_000_000 == 0:
-            print(x)
         # Find new boundary point
         lim = 2 * rad * rad - x * x
+        if lim < 0:
+            break
         while y > 0 and y * y >= lim:
             y -= 1
         # y is the largest point that works
