@@ -38,12 +38,15 @@ def region1(r: int) -> int:
     rad = r // 8
     total = 0
     total_on_diagonal = 0
-    y = 2 * rad
-    for x in range(0, 2 * rad + 1):
+
+    bound = 3 * rad // 2
+    y = bound
+    for x in range(0, bound + 1):
         if x < 100 or x % 1_000_000 == 0:
             print(x)
         # Find new boundary point
-        while y > 0 and x * x + y * y >= 2 * rad * rad:
+        lim = 2 * rad * rad - x * x
+        while y > 0 and y * y >= lim:
             y -= 1
         # y is the largest point that works
         total += y
@@ -51,6 +54,8 @@ def region1(r: int) -> int:
         # triangle and should not be counted)
         if y >= x > 0:
             total_on_diagonal += 1
+        if y <= 0:
+            break
     # We counted everything in Quadrant 1 (including one axis). Then
     # we multiply it by 4 to get the other quadrants. But this counted
     # points on the x = y line that we shouldn't have counted, so
@@ -62,6 +67,6 @@ def n(r: int) -> int:
     return region1(r) + region2(r) + region3(r)
 
 
-for i in range(8, 100, 8):
-    print(f"n({i}) = {n(i)}")
+#for i in range(8, 100, 8):
+#    print(f"n({i}) = {n(i)}")
 print(n(1_000_000_000))
