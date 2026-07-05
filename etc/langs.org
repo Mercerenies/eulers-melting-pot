@@ -82,7 +82,7 @@
 *** AWK                                                                :used:
 *** Bizubee (https://bizubee.github.io/)
 *** Boo (https://boo-language.github.io/)
-*** Borgo (https://github.com/borgo-lang/borgo)
+*** Borgo (https://github.com/borgo-lang/borgo)                        :used:
 *** C3 (https://c3-lang.org/primer/)
 *** Catspeak (https://www.katsaii.com/catspeak-lang/3.1.1/hom-welcome.html)
 *** COBOL                                                              :used:

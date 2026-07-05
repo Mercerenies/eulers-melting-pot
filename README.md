@@ -39,6 +39,7 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Befreak
 * Befunge
 * Befunk
+* Borgo
 * Brachylog
 * Brainf\*\*k
 * Brat
@@ -1475,6 +1476,12 @@ alphabetized list of the languages that have been used in these challenges so fa
 * Language: [Motorola 68000 Assembly](https://en.wikipedia.org/wiki/Motorola_68000)
 * Compiler / Interpreter: [m68k-interpreter by gianlucarea @ 05e1992b](https://github.com/gianlucarea/m68k-interpreter/tree/05e1992b5e6e87e4b576082ad1843067796893d1)
 * Notes: The online version of the interpreter is locked at a high JavaScript delay; will run very slow with the default delay; outputs the answer into the lower 16-bit word of `d0;d1;d2` (in sequence).
+
+### Euler 210
+* File: [problem210.brg](problem210.brg)
+* Language: [Borgo](https://github.com/borgo-lang/borgo/tree/main)
+* Compiler / Interpreter: [borgo-lang.github.io](https://borgo-lang.github.io/#intro)
+* Notes: (None)
 
 ## Valid Languages
 

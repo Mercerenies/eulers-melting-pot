@@ -1,0 +1,60 @@
+// -*- Rust -*- (syntax is superficially similar)
+
+use fmt
+
+fn integerPtsInRect(a: uint64, b: uint64) -> uint64 {
+  2 * a * b - a - b + 1
+}
+
+fn region2(r: uint64) -> uint64 {
+  let a = r / 4
+  let b = r / 2
+  2 * (integerPtsInRect(a, b) + a + b - 1)
+}
+
+fn region3(r: uint64) -> uint64 {
+  let a = r / 2
+  2 * (integerPtsInRect(a, a) + 2 * a - 1)
+}
+
+// Type annotation seem to only work in function signatures, not on
+// locals. So this forces zero as a uint64.
+fn zero() -> uint64 {
+  0
+}
+
+fn region1(r: uint64) -> uint64 {
+  let rad = r / 8
+  let mut total = zero()
+  let mut totalDiag = zero()
+
+  let bound = 3 * rad / 2
+  let mut y = bound
+  let mut x = zero()
+  while x <= bound {
+    if 2 * rad * rad < x * x {
+      break
+    }
+    let lim = 2 * rad * rad - x * x
+    while y > 0 && y * y >= lim {
+      y = y - 1
+    }
+    total = total + y
+    if y >= x && x > 0 {
+      totalDiag = totalDiag + 1
+    }
+    if y <= 0 {
+      break
+    }
+    x = x + 1
+  }
+  4 * total - 2 * totalDiag
+}
+
+fn n(r: uint64) -> uint64 {
+  region1(r) + region2(r) + region3(r)
+}
+
+fn main() {
+  fmt.Println(n(1000000000))
+}
