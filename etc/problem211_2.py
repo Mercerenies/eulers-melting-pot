@@ -1,29 +1,16 @@
 
-# Too sloooow :(
-#
-# Still wrong, possible memory overflow somehow...
+# Got it down to 1m 52s using the multiplicative properties of sigma2
 
-from dataclasses import dataclass
-
-
-PERFECT_SQUARES = []
-PERFECT_SQUARES_SET = set()
-
-def is_perfect_square(n: int) -> bool:
-    while len(PERFECT_SQUARES) * len(PERFECT_SQUARES) <= n:
-        x = len(PERFECT_SQUARES) * len(PERFECT_SQUARES)
-        PERFECT_SQUARES.append(x)
-        PERFECT_SQUARES_SET.add(x)
-    return n in PERFECT_SQUARES_SET
+import math
 
 
 LIMIT = 64_000_000
 
-LARGEST_COPRIME_DIVISOR = [-1 for i in range(LIMIT)]
+SMALLEST_DIVISOR = [-1 for i in range(LIMIT)]
 SIGMA2 = [-1 for i in range(LIMIT)]
 
 for n in range(2, LIMIT):
-    if LARGEST_COPRIME_DIVISOR[n] == -1:
+    if SMALLEST_DIVISOR[n] == -1:
         # We've found a prime
         j = n
         k = 1 + n * n
@@ -34,25 +21,27 @@ for n in range(2, LIMIT):
     # Mark coprime divisors
     j = n * 2
     while j < LIMIT:
-        LARGEST_COPRIME_DIVISOR[j] = n
+        if SMALLEST_DIVISOR[j] == -1:
+            SMALLEST_DIVISOR[j] = n
         j += n
 
 print("A")
 
 # Now calculate SIGMA2 for numbers that are not prime powers.
+total = 1  # We skip over the trivial case of n = 1.
 for n in range(2, LIMIT):
-    if SIGMA2[n] != -1:
-        continue
-    a = LARGEST_COPRIME_DIVISOR[n]
-    b = n // a
-    SIGMA2[n] = SIGMA2[a] * SIGMA2[b]
+    if SIGMA2[n] == -1:
+        d = SMALLEST_DIVISOR[n]
+        a = d
+        while n % (a * d) == 0:
+            a *= d
+        b = n // a
+        SIGMA2[n] = SIGMA2[a] * SIGMA2[b]
+    s = SIGMA2[n]
+    q = round(math.sqrt(s))
+    if q * q == s:
+        total += n
 
-print("B")
+print(SIGMA2[:100])
 
-total = 0
-for i, sigma in enumerate(SIGMA2[1:], 1):
-    if i % 10000 == 0:
-        print(i)
-    if is_perfect_square(sigma):
-        total += i
 print(total)
