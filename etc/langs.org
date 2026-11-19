@@ -204,7 +204,6 @@
 *** Egison (https://www.egison.org/)
 *** 𝔼𝕊𝕄𝕚𝕟                                                              :used:
 *** F* (https://fstar-lang.org/)
-*** Fōrmulæ (https://formulae.org/)
 *** G-- (https://github.com/ReyAnthony/G--)
     + Everything is stringy
 *** GAP (https://www.gap-system.org/)
@@ -731,6 +730,8 @@ error: Explicit call type is not a function type (Producer: 'LLVM12.0.1' Reader:
    without me noticing. Generally I don't even bother to add those to
    this list, but if they get added they go here. :)
 *** CUE (https://cuelang.org/)
+*** Fōrmulæ (https://formulae.org/)
+    Looks like they used to be legit but pivoted /hard/ to AI-first.
 *** Onion (https://github.com/sjrsjz/onion-lang)
 ** UNCLASSIFIED
 *** Bend (https://github.com/HigherOrderCO/bend)
